@@ -1,11 +1,13 @@
 package com.microsoft.graph.drives.item.list.items.item;
 
 import com.microsoft.graph.drives.item.list.items.item.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.drives.item.list.items.item.createdbyuser.CreatedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.documentsetversions.DocumentSetVersionsRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.fields.FieldsRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import com.microsoft.graph.drives.item.list.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.versions.VersionsRequestBuilder;
 import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +34,11 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public CreatedByUserRequestBuilder createdByUser() {
+        return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity. */
     @javax.annotation.Nonnull
     public DocumentSetVersionsRequestBuilder documentSetVersions() {
@@ -51,6 +58,11 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
         return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public LastModifiedByUserRequestBuilder lastModifiedByUser() {
+        return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the versions property of the microsoft.graph.listItem entity. */
     @javax.annotation.Nonnull

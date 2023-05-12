@@ -2,8 +2,10 @@ package com.microsoft.graph.shares.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedDriveItem;
+import com.microsoft.graph.shares.item.createdbyuser.CreatedByUserRequestBuilder;
 import com.microsoft.graph.shares.item.driveitem.DriveItemRequestBuilder;
 import com.microsoft.graph.shares.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.shares.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.shares.item.list.ListRequestBuilder;
 import com.microsoft.graph.shares.item.listitem.ListItemRequestBuilder;
 import com.microsoft.graph.shares.item.permission.PermissionRequestBuilder;
@@ -27,6 +29,11 @@ import java.util.Objects;
  * Provides operations to manage the collection of sharedDriveItem entities.
  */
 public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public CreatedByUserRequestBuilder createdByUser() {
+        return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder driveItem() {
@@ -36,6 +43,11 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public LastModifiedByUserRequestBuilder lastModifiedByUser() {
+        return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the list property of the microsoft.graph.sharedDriveItem entity. */
     @javax.annotation.Nonnull

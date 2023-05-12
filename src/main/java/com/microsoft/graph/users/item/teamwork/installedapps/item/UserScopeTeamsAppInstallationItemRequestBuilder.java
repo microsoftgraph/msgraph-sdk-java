@@ -3,6 +3,8 @@ package com.microsoft.graph.users.item.teamwork.installedapps.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.users.item.teamwork.installedapps.item.chat.ChatRequestBuilder;
+import com.microsoft.graph.users.item.teamwork.installedapps.item.teamsapp.TeamsAppRequestBuilder;
+import com.microsoft.graph.users.item.teamwork.installedapps.item.teamsappdefinition.TeamsAppDefinitionRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +27,16 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
     @javax.annotation.Nonnull
     public ChatRequestBuilder chat() {
         return new ChatRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity. */
+    @javax.annotation.Nonnull
+    public TeamsAppRequestBuilder teamsApp() {
+        return new TeamsAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity. */
+    @javax.annotation.Nonnull
+    public TeamsAppDefinitionRequestBuilder teamsAppDefinition() {
+        return new TeamsAppDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilder and sets the default values.

@@ -1,5 +1,6 @@
 package com.microsoft.graph.drives.item.list.items.item.documentsetversions.item;
 
+import com.microsoft.graph.drives.item.list.items.item.documentsetversions.item.fields.FieldsRequestBuilder;
 import com.microsoft.graph.drives.item.list.items.item.documentsetversions.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.models.DocumentSetVersion;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -21,6 +22,11 @@ import java.util.Objects;
  * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
  */
 public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the fields property of the microsoft.graph.listItemVersion entity. */
+    @javax.annotation.Nonnull
+    public FieldsRequestBuilder fields() {
+        return new FieldsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to call the restore method. */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {

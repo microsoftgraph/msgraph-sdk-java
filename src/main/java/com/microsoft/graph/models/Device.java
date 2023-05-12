@@ -16,14 +16,20 @@ public class Device extends DirectoryObject implements Parsable {
     private OffsetDateTime approximateLastSignInDateTime;
     /** The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime complianceExpirationDateTime;
+    /** User-defined property set by Intune to automatically add devices to groups and simplify managing devices. */
+    private String deviceCategory;
     /** Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith). */
     private String deviceId;
     /** For internal use only. Set to null. */
     private String deviceMetadata;
+    /** Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal. */
+    private String deviceOwnership;
     /** For internal use only. */
     private Integer deviceVersion;
     /** The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String displayName;
+    /** Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune. */
+    private String enrollmentProfileName;
     /** The collection of open extensions defined for the device. Read-only. Nullable. */
     private java.util.List<Extension> extensions;
     /** true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not). */
@@ -50,6 +56,8 @@ public class Device extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> registeredOwners;
     /** Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> registeredUsers;
+    /** Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    private OffsetDateTime registrationDateTime;
     /** List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0). */
     private java.util.List<String> systemLabels;
     /** Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand. */
@@ -108,6 +116,14 @@ public class Device extends DirectoryObject implements Parsable {
         return this.complianceExpirationDateTime;
     }
     /**
+     * Gets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDeviceCategory() {
+        return this.deviceCategory;
+    }
+    /**
      * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @return a string
      */
@@ -124,6 +140,14 @@ public class Device extends DirectoryObject implements Parsable {
         return this.deviceMetadata;
     }
     /**
+     * Gets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDeviceOwnership() {
+        return this.deviceOwnership;
+    }
+    /**
      * Gets the deviceVersion property value. For internal use only.
      * @return a integer
      */
@@ -138,6 +162,14 @@ public class Device extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
+    }
+    /**
+     * Gets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getEnrollmentProfileName() {
+        return this.enrollmentProfileName;
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
@@ -158,10 +190,13 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("alternativeSecurityIds", (n) -> { this.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
         deserializerMap.put("approximateLastSignInDateTime", (n) -> { this.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("complianceExpirationDateTime", (n) -> { this.setComplianceExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getStringValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getStringValue()); });
+        deserializerMap.put("deviceOwnership", (n) -> { this.setDeviceOwnership(n.getStringValue()); });
         deserializerMap.put("deviceVersion", (n) -> { this.setDeviceVersion(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enrollmentProfileName", (n) -> { this.setEnrollmentProfileName(n.getStringValue()); });
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("isCompliant", (n) -> { this.setIsCompliant(n.getBooleanValue()); });
         deserializerMap.put("isManaged", (n) -> { this.setIsManaged(n.getBooleanValue()); });
@@ -175,6 +210,7 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("profileType", (n) -> { this.setProfileType(n.getStringValue()); });
         deserializerMap.put("registeredOwners", (n) -> { this.setRegisteredOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("registeredUsers", (n) -> { this.setRegisteredUsers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("systemLabels", (n) -> { this.setSystemLabels(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("trustType", (n) -> { this.setTrustType(n.getStringValue()); });
@@ -277,6 +313,14 @@ public class Device extends DirectoryObject implements Parsable {
         return this.registeredUsers;
     }
     /**
+     * Gets the registrationDateTime property value. Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getRegistrationDateTime() {
+        return this.registrationDateTime;
+    }
+    /**
      * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @return a string
      */
@@ -313,10 +357,13 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("alternativeSecurityIds", this.getAlternativeSecurityIds());
         writer.writeOffsetDateTimeValue("approximateLastSignInDateTime", this.getApproximateLastSignInDateTime());
         writer.writeOffsetDateTimeValue("complianceExpirationDateTime", this.getComplianceExpirationDateTime());
+        writer.writeStringValue("deviceCategory", this.getDeviceCategory());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceMetadata", this.getDeviceMetadata());
+        writer.writeStringValue("deviceOwnership", this.getDeviceOwnership());
         writer.writeIntegerValue("deviceVersion", this.getDeviceVersion());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("enrollmentProfileName", this.getEnrollmentProfileName());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("isCompliant", this.getIsCompliant());
         writer.writeBooleanValue("isManaged", this.getIsManaged());
@@ -330,6 +377,7 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeStringValue("profileType", this.getProfileType());
         writer.writeCollectionOfObjectValues("registeredOwners", this.getRegisteredOwners());
         writer.writeCollectionOfObjectValues("registeredUsers", this.getRegisteredUsers());
+        writer.writeOffsetDateTimeValue("registrationDateTime", this.getRegistrationDateTime());
         writer.writeCollectionOfPrimitiveValues("systemLabels", this.getSystemLabels());
         writer.writeCollectionOfObjectValues("transitiveMemberOf", this.getTransitiveMemberOf());
         writer.writeStringValue("trustType", this.getTrustType());
@@ -371,6 +419,15 @@ public class Device extends DirectoryObject implements Parsable {
         this.complianceExpirationDateTime = value;
     }
     /**
+     * Sets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+     * @param value Value to set for the deviceCategory property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDeviceCategory(@javax.annotation.Nullable final String value) {
+        this.deviceCategory = value;
+    }
+    /**
      * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the deviceId property.
      * @return a void
@@ -389,6 +446,15 @@ public class Device extends DirectoryObject implements Parsable {
         this.deviceMetadata = value;
     }
     /**
+     * Sets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     * @param value Value to set for the deviceOwnership property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDeviceOwnership(@javax.annotation.Nullable final String value) {
+        this.deviceOwnership = value;
+    }
+    /**
      * Sets the deviceVersion property value. For internal use only.
      * @param value Value to set for the deviceVersion property.
      * @return a void
@@ -405,6 +471,15 @@ public class Device extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this.displayName = value;
+    }
+    /**
+     * Sets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     * @param value Value to set for the enrollmentProfileName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEnrollmentProfileName(@javax.annotation.Nullable final String value) {
+        this.enrollmentProfileName = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
@@ -522,6 +597,15 @@ public class Device extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setRegisteredUsers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.registeredUsers = value;
+    }
+    /**
+     * Sets the registrationDateTime property value. Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @param value Value to set for the registrationDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRegistrationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.registrationDateTime = value;
     }
     /**
      * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).

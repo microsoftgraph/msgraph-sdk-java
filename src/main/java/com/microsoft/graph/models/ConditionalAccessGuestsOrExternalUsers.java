@@ -10,7 +10,7 @@ import java.util.Objects;
 public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The externalTenants property */
+    /** The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String. */
     private ConditionalAccessExternalTenants externalTenants;
     /** The guestOrExternalUserTypes property */
     private ConditionalAccessGuestOrExternalUserTypes guestOrExternalUserTypes;
@@ -43,7 +43,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
         return this.additionalData;
     }
     /**
-     * Gets the externalTenants property value. The externalTenants property
+     * Gets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
      * @return a conditionalAccessExternalTenants
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
         this.additionalData = value;
     }
     /**
-     * Sets the externalTenants property value. The externalTenants property
+     * Sets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
      * @param value Value to set for the externalTenants property.
      * @return a void
      */

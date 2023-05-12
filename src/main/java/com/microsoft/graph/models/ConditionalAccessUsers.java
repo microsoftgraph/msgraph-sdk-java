@@ -12,7 +12,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     private Map<String, Object> additionalData;
     /** Group IDs excluded from scope of policy. */
     private java.util.List<String> excludeGroups;
-    /** The excludeGuestsOrExternalUsers property */
+    /** Internal guests or external users excluded from the policy scope. Optionally populated. */
     private ConditionalAccessGuestsOrExternalUsers excludeGuestsOrExternalUsers;
     /** Role IDs excluded from scope of policy. */
     private java.util.List<String> excludeRoles;
@@ -20,7 +20,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
     private java.util.List<String> excludeUsers;
     /** Group IDs in scope of policy unless explicitly excluded. */
     private java.util.List<String> includeGroups;
-    /** The includeGuestsOrExternalUsers property */
+    /** Internal guests or external users included in the policy scope. Optionally populated. */
     private ConditionalAccessGuestsOrExternalUsers includeGuestsOrExternalUsers;
     /** Role IDs in scope of policy unless explicitly excluded. */
     private java.util.List<String> includeRoles;
@@ -63,7 +63,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
         return this.excludeGroups;
     }
     /**
-     * Gets the excludeGuestsOrExternalUsers property value. The excludeGuestsOrExternalUsers property
+     * Gets the excludeGuestsOrExternalUsers property value. Internal guests or external users excluded from the policy scope. Optionally populated.
      * @return a conditionalAccessGuestsOrExternalUsers
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
         return this.includeGroups;
     }
     /**
-     * Gets the includeGuestsOrExternalUsers property value. The includeGuestsOrExternalUsers property
+     * Gets the includeGuestsOrExternalUsers property value. Internal guests or external users included in the policy scope. Optionally populated.
      * @return a conditionalAccessGuestsOrExternalUsers
      */
     @javax.annotation.Nullable
@@ -182,7 +182,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
         this.excludeGroups = value;
     }
     /**
-     * Sets the excludeGuestsOrExternalUsers property value. The excludeGuestsOrExternalUsers property
+     * Sets the excludeGuestsOrExternalUsers property value. Internal guests or external users excluded from the policy scope. Optionally populated.
      * @param value Value to set for the excludeGuestsOrExternalUsers property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
         this.includeGroups = value;
     }
     /**
-     * Sets the includeGuestsOrExternalUsers property value. The includeGuestsOrExternalUsers property
+     * Sets the includeGuestsOrExternalUsers property value. Internal guests or external users included in the policy scope. Optionally populated.
      * @param value Value to set for the includeGuestsOrExternalUsers property.
      * @return a void
      */

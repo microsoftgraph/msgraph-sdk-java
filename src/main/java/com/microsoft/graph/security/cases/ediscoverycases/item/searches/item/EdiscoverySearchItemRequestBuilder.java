@@ -6,9 +6,9 @@ import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.add
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.addtoreviewsetoperation.AddToReviewSetOperationRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.custodiansources.CustodianSourcesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.lastestimatestatisticsoperation.LastEstimateStatisticsOperationRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecurityestimatestatistics.MicrosoftGraphSecurityEstimateStatisticsRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecuritypurgedata.MicrosoftGraphSecurityPurgeDataRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.noncustodialsources.NoncustodialSourcesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.securityestimatestatistics.SecurityEstimateStatisticsRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.searches.item.securitypurgedata.SecurityPurgeDataRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -47,20 +47,20 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
     public LastEstimateStatisticsOperationRequestBuilder lastEstimateStatisticsOperation() {
         return new LastEstimateStatisticsOperationRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to call the estimateStatistics method. */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphSecurityEstimateStatisticsRequestBuilder microsoftGraphSecurityEstimateStatistics() {
+        return new MicrosoftGraphSecurityEstimateStatisticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the purgeData method. */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphSecurityPurgeDataRequestBuilder microsoftGraphSecurityPurgeData() {
+        return new MicrosoftGraphSecurityPurgeDataRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity. */
     @javax.annotation.Nonnull
     public NoncustodialSourcesRequestBuilder noncustodialSources() {
         return new NoncustodialSourcesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the estimateStatistics method. */
-    @javax.annotation.Nonnull
-    public SecurityEstimateStatisticsRequestBuilder securityEstimateStatistics() {
-        return new SecurityEstimateStatisticsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the purgeData method. */
-    @javax.annotation.Nonnull
-    public SecurityPurgeDataRequestBuilder securityPurgeData() {
-        return new SecurityPurgeDataRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new EdiscoverySearchItemRequestBuilder and sets the default values.

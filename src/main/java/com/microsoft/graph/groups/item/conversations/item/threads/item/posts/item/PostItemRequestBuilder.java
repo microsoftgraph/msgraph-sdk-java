@@ -4,9 +4,7 @@ import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.ite
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.forward.ForwardRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.inreplyto.InReplyToRequestBuilder;
-import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.reply.ReplyRequestBuilder;
-import com.microsoft.graph.groups.item.conversations.item.threads.item.posts.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Post;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -47,20 +45,10 @@ public class PostItemRequestBuilder extends BaseRequestBuilder {
     public InReplyToRequestBuilder inReplyTo() {
         return new InReplyToRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.post entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Provides operations to call the reply method. */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.post entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new PostItemRequestBuilder and sets the default values.

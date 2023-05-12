@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.graph.print.shares.item.allowedgroups.AllowedGroupsRequestBuilder;
 import com.microsoft.graph.print.shares.item.allowedusers.AllowedUsersRequestBuilder;
+import com.microsoft.graph.print.shares.item.jobs.JobsRequestBuilder;
 import com.microsoft.graph.print.shares.item.printer.PrinterRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -32,6 +33,11 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AllowedUsersRequestBuilder allowedUsers() {
         return new AllowedUsersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the jobs property of the microsoft.graph.printerBase entity. */
+    @javax.annotation.Nonnull
+    public JobsRequestBuilder jobs() {
+        return new JobsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the printer property of the microsoft.graph.printerShare entity. */
     @javax.annotation.Nonnull

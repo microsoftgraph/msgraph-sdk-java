@@ -1,6 +1,7 @@
 package com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.item;
 
 import com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.apps.AppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.androidmanagedappprotections.item.deploymentsummary.DeploymentSummaryRequestBuilder;
 import com.microsoft.graph.models.AndroidManagedAppProtection;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +27,11 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     @javax.annotation.Nonnull
     public AppsRequestBuilder apps() {
         return new AppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppProtection entity. */
+    @javax.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the deploymentSummary property of the microsoft.graph.androidManagedAppProtection entity. */
     @javax.annotation.Nonnull

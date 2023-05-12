@@ -3,12 +3,12 @@ package com.microsoft.graph.security.cases.ediscoverycases.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryCase;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.CustodiansRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.microsoftgraphsecurityclose.MicrosoftGraphSecurityCloseRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.microsoftgraphsecurityreopen.MicrosoftGraphSecurityReopenRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.NoncustodialDataSourcesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.ReviewSetsRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.searches.SearchesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.securityclose.SecurityCloseRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.securityreopen.SecurityReopenRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.tags.TagsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -34,6 +34,16 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     public CustodiansRequestBuilder custodians() {
         return new CustodiansRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to call the close method. */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphSecurityCloseRequestBuilder microsoftGraphSecurityClose() {
+        return new MicrosoftGraphSecurityCloseRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the reopen method. */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphSecurityReopenRequestBuilder microsoftGraphSecurityReopen() {
+        return new MicrosoftGraphSecurityReopenRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull
     public NoncustodialDataSourcesRequestBuilder noncustodialDataSources() {
@@ -53,16 +63,6 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SearchesRequestBuilder searches() {
         return new SearchesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the close method. */
-    @javax.annotation.Nonnull
-    public SecurityCloseRequestBuilder securityClose() {
-        return new SecurityCloseRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the reopen method. */
-    @javax.annotation.Nonnull
-    public SecurityReopenRequestBuilder securityReopen() {
-        return new SecurityReopenRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the settings property of the microsoft.graph.security.ediscoveryCase entity. */
     @javax.annotation.Nonnull

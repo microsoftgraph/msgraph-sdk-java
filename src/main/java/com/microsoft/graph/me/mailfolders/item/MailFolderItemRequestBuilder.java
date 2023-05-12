@@ -5,8 +5,6 @@ import com.microsoft.graph.me.mailfolders.item.copy.CopyRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.messagerules.MessageRulesRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.me.mailfolders.item.move.MoveRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.multivalueextendedproperties.MultiValueExtendedPropertiesRequestBuilder;
-import com.microsoft.graph.me.mailfolders.item.singlevalueextendedproperties.SingleValueExtendedPropertiesRequestBuilder;
 import com.microsoft.graph.models.MailFolder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -51,16 +49,6 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.mailFolder entity. */
-    @javax.annotation.Nonnull
-    public MultiValueExtendedPropertiesRequestBuilder multiValueExtendedProperties() {
-        return new MultiValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.mailFolder entity. */
-    @javax.annotation.Nonnull
-    public SingleValueExtendedPropertiesRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueExtendedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new MailFolderItemRequestBuilder and sets the default values.

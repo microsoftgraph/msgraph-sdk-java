@@ -22,7 +22,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     /** The estimated size of unindexed items for the collection. */
     private Long unindexedItemsSize;
     /**
-     * Instantiates a new ediscoveryEstimateOperation and sets the default values.
+     * Instantiates a new EdiscoveryEstimateOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -32,7 +32,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryEstimateOperation
+     * @return a EdiscoveryEstimateOperation
      */
     @javax.annotation.Nonnull
     public static EdiscoveryEstimateOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

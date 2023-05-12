@@ -1,5 +1,6 @@
 package com.microsoft.graph.me.teamwork.associatedteams.item;
 
+import com.microsoft.graph.me.teamwork.associatedteams.item.team.TeamRequestBuilder;
 import com.microsoft.graph.models.AssociatedTeamInfo;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,11 @@ import java.util.Objects;
  * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
  */
 public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the team property of the microsoft.graph.teamInfo entity. */
+    @javax.annotation.Nonnull
+    public TeamRequestBuilder team() {
+        return new TeamRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AssociatedTeamInfoItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

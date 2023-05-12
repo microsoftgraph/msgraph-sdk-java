@@ -1,5 +1,8 @@
 package com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.item;
 
+import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.item.exemptapplockerfiles.ExemptAppLockerFilesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mdmwindowsinformationprotectionpolicies.item.protectedapplockerfiles.ProtectedAppLockerFilesRequestBuilder;
 import com.microsoft.graph.models.MdmWindowsInformationProtectionPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +23,21 @@ import java.util.Objects;
  * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
  */
 public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the assignments property of the microsoft.graph.windowsInformationProtection entity. */
+    @javax.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the exemptAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity. */
+    @javax.annotation.Nonnull
+    public ExemptAppLockerFilesRequestBuilder exemptAppLockerFiles() {
+        return new ExemptAppLockerFilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the protectedAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity. */
+    @javax.annotation.Nonnull
+    public ProtectedAppLockerFilesRequestBuilder protectedAppLockerFiles() {
+        return new ProtectedAppLockerFilesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new MdmWindowsInformationProtectionPolicyItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

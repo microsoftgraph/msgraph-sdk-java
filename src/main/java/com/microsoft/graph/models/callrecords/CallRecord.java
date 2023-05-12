@@ -31,7 +31,7 @@ public class CallRecord extends Entity implements Parsable {
     /** Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version. */
     private Long version;
     /**
-     * Instantiates a new callRecord and sets the default values.
+     * Instantiates a new CallRecord and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -41,7 +41,7 @@ public class CallRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callRecord
+     * @return a CallRecord
      */
     @javax.annotation.Nonnull
     public static CallRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

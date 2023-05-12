@@ -2,6 +2,10 @@ package com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinst
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.UnifiedRoleEligibilityScheduleInstance;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.item.appscope.AppScopeRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.item.directoryscope.DirectoryScopeRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.item.principal.PrincipalRequestBuilder;
+import com.microsoft.graph.rolemanagement.directory.roleeligibilityscheduleinstances.item.roledefinition.RoleDefinitionRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +24,26 @@ import java.util.Objects;
  * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
  */
 public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleScheduleInstanceBase entity. */
+    @javax.annotation.Nonnull
+    public AppScopeRequestBuilder appScope() {
+        return new AppScopeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleScheduleInstanceBase entity. */
+    @javax.annotation.Nonnull
+    public DirectoryScopeRequestBuilder directoryScope() {
+        return new DirectoryScopeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the principal property of the microsoft.graph.unifiedRoleScheduleInstanceBase entity. */
+    @javax.annotation.Nonnull
+    public PrincipalRequestBuilder principal() {
+        return new PrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleScheduleInstanceBase entity. */
+    @javax.annotation.Nonnull
+    public RoleDefinitionRequestBuilder roleDefinition() {
+        return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

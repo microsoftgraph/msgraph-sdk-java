@@ -2,8 +2,8 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewSet;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.microsoftgraphsecurityaddtoreviewset.MicrosoftGraphSecurityAddToReviewSetRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.QueriesRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.securityaddtoreviewset.SecurityAddToReviewSetRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -22,15 +22,15 @@ import java.util.Objects;
  * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
  */
 public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to call the addToReviewSet method. */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphSecurityAddToReviewSetRequestBuilder microsoftGraphSecurityAddToReviewSet() {
+        return new MicrosoftGraphSecurityAddToReviewSetRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity. */
     @javax.annotation.Nonnull
     public QueriesRequestBuilder queries() {
         return new QueriesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to call the addToReviewSet method. */
-    @javax.annotation.Nonnull
-    public SecurityAddToReviewSetRequestBuilder securityAddToReviewSet() {
-        return new SecurityAddToReviewSetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new EdiscoveryReviewSetItemRequestBuilder and sets the default values.

@@ -3,6 +3,7 @@ package com.microsoft.graph.groups.item.sites.item;
 import com.microsoft.graph.groups.item.sites.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.contenttypes.ContentTypesRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.createdbyuser.CreatedByUserRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
@@ -11,6 +12,7 @@ import com.microsoft.graph.groups.item.sites.item.getactivitiesbyintervalwithsta
 import com.microsoft.graph.groups.item.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.getbypathwithpath.GetByPathWithPathRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.items.ItemsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.ListsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.operations.OperationsRequestBuilder;
@@ -53,6 +55,11 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     public ContentTypesRequestBuilder contentTypes() {
         return new ContentTypesRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public CreatedByUserRequestBuilder createdByUser() {
+        return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Provides operations to manage the drive property of the microsoft.graph.site entity. */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
@@ -77,6 +84,11 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    @javax.annotation.Nonnull
+    public LastModifiedByUserRequestBuilder lastModifiedByUser() {
+        return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the lists property of the microsoft.graph.site entity. */
     @javax.annotation.Nonnull

@@ -8,63 +8,63 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class SharepointSettings extends Entity implements Parsable {
-    /** The allowedDomainGuidsForSyncApp property */
+    /** Collection of trusted domain GUIDs for the OneDrive sync app. */
     private java.util.List<UUID> allowedDomainGuidsForSyncApp;
-    /** The availableManagedPathsForSiteCreation property */
+    /** Collection of managed paths available for site creation. Read-only. */
     private java.util.List<String> availableManagedPathsForSiteCreation;
-    /** The deletedUserPersonalSiteRetentionPeriodInDays property */
+    /** The number of days for preserving a deleted user's OneDrive. */
     private Integer deletedUserPersonalSiteRetentionPeriodInDays;
-    /** The excludedFileExtensionsForSyncApp property */
+    /** Collection of file extensions not uploaded by the OneDrive sync app. */
     private java.util.List<String> excludedFileExtensionsForSyncApp;
-    /** The idleSessionSignOut property */
+    /** Specifies the idle session sign-out policies for the tenant. */
     private IdleSessionSignOut idleSessionSignOut;
-    /** The imageTaggingOption property */
+    /** Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced. */
     private ImageTaggingChoice imageTaggingOption;
-    /** The isCommentingOnSitePagesEnabled property */
+    /** Indicates whether comments are allowed on modern site pages in SharePoint. */
     private Boolean isCommentingOnSitePagesEnabled;
-    /** The isFileActivityNotificationEnabled property */
+    /** Indicates whether push notifications are enabled for OneDrive events. */
     private Boolean isFileActivityNotificationEnabled;
-    /** The isLegacyAuthProtocolsEnabled property */
+    /** Indicates whether legacy authentication protocols are enabled for the tenant. */
     private Boolean isLegacyAuthProtocolsEnabled;
-    /** The isLoopEnabled property */
+    /** Indicates whether if Fluid Framework is allowed on SharePoint sites. */
     private Boolean isLoopEnabled;
-    /** The isMacSyncAppEnabled property */
+    /** Indicates whether files can be synced using the OneDrive sync app for Mac. */
     private Boolean isMacSyncAppEnabled;
-    /** The isRequireAcceptingUserToMatchInvitedUserEnabled property */
+    /** Indicates whether guests must sign in using the same account to which sharing invitations are sent. */
     private Boolean isRequireAcceptingUserToMatchInvitedUserEnabled;
-    /** The isResharingByExternalUsersEnabled property */
+    /** Indicates whether guests are allowed to reshare files, folders, and sites they don't own. */
     private Boolean isResharingByExternalUsersEnabled;
-    /** The isSharePointMobileNotificationEnabled property */
+    /** Indicates whether mobile push notifications are enabled for SharePoint. */
     private Boolean isSharePointMobileNotificationEnabled;
-    /** The isSharePointNewsfeedEnabled property */
+    /** Indicates whether the newsfeed is allowed on the modern site pages in SharePoint. */
     private Boolean isSharePointNewsfeedEnabled;
-    /** The isSiteCreationEnabled property */
+    /** Indicates whether users are allowed to create sites. */
     private Boolean isSiteCreationEnabled;
-    /** The isSiteCreationUIEnabled property */
+    /** Indicates whether the UI commands for creating sites are shown. */
     private Boolean isSiteCreationUIEnabled;
-    /** The isSitePagesCreationEnabled property */
+    /** Indicates whether creating new modern pages is allowed on SharePoint sites. */
     private Boolean isSitePagesCreationEnabled;
-    /** The isSitesStorageLimitAutomatic property */
+    /** Indicates whether site storage space is automatically managed or if specific storage limits are set per site. */
     private Boolean isSitesStorageLimitAutomatic;
-    /** The isSyncButtonHiddenOnPersonalSite property */
+    /** Indicates whether the sync button in OneDrive is hidden. */
     private Boolean isSyncButtonHiddenOnPersonalSite;
-    /** The isUnmanagedSyncAppForTenantRestricted property */
+    /** Indicates whether users are allowed to sync files only on PCs joined to specific domains. */
     private Boolean isUnmanagedSyncAppForTenantRestricted;
-    /** The personalSiteDefaultStorageLimitInMB property */
+    /** The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB). */
     private Long personalSiteDefaultStorageLimitInMB;
-    /** The sharingAllowedDomainList property */
+    /** Collection of email domains that are allowed for sharing outside the organization. */
     private java.util.List<String> sharingAllowedDomainList;
-    /** The sharingBlockedDomainList property */
+    /** Collection of email domains that are blocked for sharing outside the organization. */
     private java.util.List<String> sharingBlockedDomainList;
-    /** The sharingCapability property */
+    /** Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly. */
     private SharingCapabilities sharingCapability;
-    /** The sharingDomainRestrictionMode property */
+    /** Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList. */
     private SharingDomainRestrictionMode sharingDomainRestrictionMode;
-    /** The siteCreationDefaultManagedPath property */
+    /** The value of the team site managed path. This is the path under which new team sites will be created. */
     private String siteCreationDefaultManagedPath;
-    /** The siteCreationDefaultStorageLimitInMB property */
+    /** The default storage quota for a new site upon creation. Measured in megabytes (MB). */
     private Integer siteCreationDefaultStorageLimitInMB;
-    /** The tenantDefaultTimezone property */
+    /** The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property. */
     private String tenantDefaultTimezone;
     /**
      * Instantiates a new sharepointSettings and sets the default values.
@@ -85,7 +85,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return new SharepointSettings();
     }
     /**
-     * Gets the allowedDomainGuidsForSyncApp property value. The allowedDomainGuidsForSyncApp property
+     * Gets the allowedDomainGuidsForSyncApp property value. Collection of trusted domain GUIDs for the OneDrive sync app.
      * @return a UUID
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.allowedDomainGuidsForSyncApp;
     }
     /**
-     * Gets the availableManagedPathsForSiteCreation property value. The availableManagedPathsForSiteCreation property
+     * Gets the availableManagedPathsForSiteCreation property value. Collection of managed paths available for site creation. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.availableManagedPathsForSiteCreation;
     }
     /**
-     * Gets the deletedUserPersonalSiteRetentionPeriodInDays property value. The deletedUserPersonalSiteRetentionPeriodInDays property
+     * Gets the deletedUserPersonalSiteRetentionPeriodInDays property value. The number of days for preserving a deleted user's OneDrive.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.deletedUserPersonalSiteRetentionPeriodInDays;
     }
     /**
-     * Gets the excludedFileExtensionsForSyncApp property value. The excludedFileExtensionsForSyncApp property
+     * Gets the excludedFileExtensionsForSyncApp property value. Collection of file extensions not uploaded by the OneDrive sync app.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -155,7 +155,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the idleSessionSignOut property value. The idleSessionSignOut property
+     * Gets the idleSessionSignOut property value. Specifies the idle session sign-out policies for the tenant.
      * @return a idleSessionSignOut
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.idleSessionSignOut;
     }
     /**
-     * Gets the imageTaggingOption property value. The imageTaggingOption property
+     * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
      * @return a imageTaggingChoice
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.imageTaggingOption;
     }
     /**
-     * Gets the isCommentingOnSitePagesEnabled property value. The isCommentingOnSitePagesEnabled property
+     * Gets the isCommentingOnSitePagesEnabled property value. Indicates whether comments are allowed on modern site pages in SharePoint.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isCommentingOnSitePagesEnabled;
     }
     /**
-     * Gets the isFileActivityNotificationEnabled property value. The isFileActivityNotificationEnabled property
+     * Gets the isFileActivityNotificationEnabled property value. Indicates whether push notifications are enabled for OneDrive events.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isFileActivityNotificationEnabled;
     }
     /**
-     * Gets the isLegacyAuthProtocolsEnabled property value. The isLegacyAuthProtocolsEnabled property
+     * Gets the isLegacyAuthProtocolsEnabled property value. Indicates whether legacy authentication protocols are enabled for the tenant.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -195,7 +195,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isLegacyAuthProtocolsEnabled;
     }
     /**
-     * Gets the isLoopEnabled property value. The isLoopEnabled property
+     * Gets the isLoopEnabled property value. Indicates whether if Fluid Framework is allowed on SharePoint sites.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -203,7 +203,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isLoopEnabled;
     }
     /**
-     * Gets the isMacSyncAppEnabled property value. The isMacSyncAppEnabled property
+     * Gets the isMacSyncAppEnabled property value. Indicates whether files can be synced using the OneDrive sync app for Mac.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -211,7 +211,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isMacSyncAppEnabled;
     }
     /**
-     * Gets the isRequireAcceptingUserToMatchInvitedUserEnabled property value. The isRequireAcceptingUserToMatchInvitedUserEnabled property
+     * Gets the isRequireAcceptingUserToMatchInvitedUserEnabled property value. Indicates whether guests must sign in using the same account to which sharing invitations are sent.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isRequireAcceptingUserToMatchInvitedUserEnabled;
     }
     /**
-     * Gets the isResharingByExternalUsersEnabled property value. The isResharingByExternalUsersEnabled property
+     * Gets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isResharingByExternalUsersEnabled;
     }
     /**
-     * Gets the isSharePointMobileNotificationEnabled property value. The isSharePointMobileNotificationEnabled property
+     * Gets the isSharePointMobileNotificationEnabled property value. Indicates whether mobile push notifications are enabled for SharePoint.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isSharePointMobileNotificationEnabled;
     }
     /**
-     * Gets the isSharePointNewsfeedEnabled property value. The isSharePointNewsfeedEnabled property
+     * Gets the isSharePointNewsfeedEnabled property value. Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -243,7 +243,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isSharePointNewsfeedEnabled;
     }
     /**
-     * Gets the isSiteCreationEnabled property value. The isSiteCreationEnabled property
+     * Gets the isSiteCreationEnabled property value. Indicates whether users are allowed to create sites.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -251,7 +251,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isSiteCreationEnabled;
     }
     /**
-     * Gets the isSiteCreationUIEnabled property value. The isSiteCreationUIEnabled property
+     * Gets the isSiteCreationUIEnabled property value. Indicates whether the UI commands for creating sites are shown.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -259,7 +259,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isSiteCreationUIEnabled;
     }
     /**
-     * Gets the isSitePagesCreationEnabled property value. The isSitePagesCreationEnabled property
+     * Gets the isSitePagesCreationEnabled property value. Indicates whether creating new modern pages is allowed on SharePoint sites.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -267,7 +267,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isSitePagesCreationEnabled;
     }
     /**
-     * Gets the isSitesStorageLimitAutomatic property value. The isSitesStorageLimitAutomatic property
+     * Gets the isSitesStorageLimitAutomatic property value. Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isSitesStorageLimitAutomatic;
     }
     /**
-     * Gets the isSyncButtonHiddenOnPersonalSite property value. The isSyncButtonHiddenOnPersonalSite property
+     * Gets the isSyncButtonHiddenOnPersonalSite property value. Indicates whether the sync button in OneDrive is hidden.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -283,7 +283,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isSyncButtonHiddenOnPersonalSite;
     }
     /**
-     * Gets the isUnmanagedSyncAppForTenantRestricted property value. The isUnmanagedSyncAppForTenantRestricted property
+     * Gets the isUnmanagedSyncAppForTenantRestricted property value. Indicates whether users are allowed to sync files only on PCs joined to specific domains.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -291,7 +291,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.isUnmanagedSyncAppForTenantRestricted;
     }
     /**
-     * Gets the personalSiteDefaultStorageLimitInMB property value. The personalSiteDefaultStorageLimitInMB property
+     * Gets the personalSiteDefaultStorageLimitInMB property value. The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -299,7 +299,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.personalSiteDefaultStorageLimitInMB;
     }
     /**
-     * Gets the sharingAllowedDomainList property value. The sharingAllowedDomainList property
+     * Gets the sharingAllowedDomainList property value. Collection of email domains that are allowed for sharing outside the organization.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -307,7 +307,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.sharingAllowedDomainList;
     }
     /**
-     * Gets the sharingBlockedDomainList property value. The sharingBlockedDomainList property
+     * Gets the sharingBlockedDomainList property value. Collection of email domains that are blocked for sharing outside the organization.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -315,7 +315,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.sharingBlockedDomainList;
     }
     /**
-     * Gets the sharingCapability property value. The sharingCapability property
+     * Gets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      * @return a sharingCapabilities
      */
     @javax.annotation.Nullable
@@ -323,7 +323,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.sharingCapability;
     }
     /**
-     * Gets the sharingDomainRestrictionMode property value. The sharingDomainRestrictionMode property
+     * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
      * @return a sharingDomainRestrictionMode
      */
     @javax.annotation.Nullable
@@ -331,7 +331,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.sharingDomainRestrictionMode;
     }
     /**
-     * Gets the siteCreationDefaultManagedPath property value. The siteCreationDefaultManagedPath property
+     * Gets the siteCreationDefaultManagedPath property value. The value of the team site managed path. This is the path under which new team sites will be created.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -339,7 +339,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.siteCreationDefaultManagedPath;
     }
     /**
-     * Gets the siteCreationDefaultStorageLimitInMB property value. The siteCreationDefaultStorageLimitInMB property
+     * Gets the siteCreationDefaultStorageLimitInMB property value. The default storage quota for a new site upon creation. Measured in megabytes (MB).
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -347,7 +347,7 @@ public class SharepointSettings extends Entity implements Parsable {
         return this.siteCreationDefaultStorageLimitInMB;
     }
     /**
-     * Gets the tenantDefaultTimezone property value. The tenantDefaultTimezone property
+     * Gets the tenantDefaultTimezone property value. The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -394,7 +394,7 @@ public class SharepointSettings extends Entity implements Parsable {
         writer.writeStringValue("tenantDefaultTimezone", this.getTenantDefaultTimezone());
     }
     /**
-     * Sets the allowedDomainGuidsForSyncApp property value. The allowedDomainGuidsForSyncApp property
+     * Sets the allowedDomainGuidsForSyncApp property value. Collection of trusted domain GUIDs for the OneDrive sync app.
      * @param value Value to set for the allowedDomainGuidsForSyncApp property.
      * @return a void
      */
@@ -403,7 +403,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.allowedDomainGuidsForSyncApp = value;
     }
     /**
-     * Sets the availableManagedPathsForSiteCreation property value. The availableManagedPathsForSiteCreation property
+     * Sets the availableManagedPathsForSiteCreation property value. Collection of managed paths available for site creation. Read-only.
      * @param value Value to set for the availableManagedPathsForSiteCreation property.
      * @return a void
      */
@@ -412,7 +412,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.availableManagedPathsForSiteCreation = value;
     }
     /**
-     * Sets the deletedUserPersonalSiteRetentionPeriodInDays property value. The deletedUserPersonalSiteRetentionPeriodInDays property
+     * Sets the deletedUserPersonalSiteRetentionPeriodInDays property value. The number of days for preserving a deleted user's OneDrive.
      * @param value Value to set for the deletedUserPersonalSiteRetentionPeriodInDays property.
      * @return a void
      */
@@ -421,7 +421,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.deletedUserPersonalSiteRetentionPeriodInDays = value;
     }
     /**
-     * Sets the excludedFileExtensionsForSyncApp property value. The excludedFileExtensionsForSyncApp property
+     * Sets the excludedFileExtensionsForSyncApp property value. Collection of file extensions not uploaded by the OneDrive sync app.
      * @param value Value to set for the excludedFileExtensionsForSyncApp property.
      * @return a void
      */
@@ -430,7 +430,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.excludedFileExtensionsForSyncApp = value;
     }
     /**
-     * Sets the idleSessionSignOut property value. The idleSessionSignOut property
+     * Sets the idleSessionSignOut property value. Specifies the idle session sign-out policies for the tenant.
      * @param value Value to set for the idleSessionSignOut property.
      * @return a void
      */
@@ -439,7 +439,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.idleSessionSignOut = value;
     }
     /**
-     * Sets the imageTaggingOption property value. The imageTaggingOption property
+     * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
      * @param value Value to set for the imageTaggingOption property.
      * @return a void
      */
@@ -448,7 +448,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.imageTaggingOption = value;
     }
     /**
-     * Sets the isCommentingOnSitePagesEnabled property value. The isCommentingOnSitePagesEnabled property
+     * Sets the isCommentingOnSitePagesEnabled property value. Indicates whether comments are allowed on modern site pages in SharePoint.
      * @param value Value to set for the isCommentingOnSitePagesEnabled property.
      * @return a void
      */
@@ -457,7 +457,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isCommentingOnSitePagesEnabled = value;
     }
     /**
-     * Sets the isFileActivityNotificationEnabled property value. The isFileActivityNotificationEnabled property
+     * Sets the isFileActivityNotificationEnabled property value. Indicates whether push notifications are enabled for OneDrive events.
      * @param value Value to set for the isFileActivityNotificationEnabled property.
      * @return a void
      */
@@ -466,7 +466,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isFileActivityNotificationEnabled = value;
     }
     /**
-     * Sets the isLegacyAuthProtocolsEnabled property value. The isLegacyAuthProtocolsEnabled property
+     * Sets the isLegacyAuthProtocolsEnabled property value. Indicates whether legacy authentication protocols are enabled for the tenant.
      * @param value Value to set for the isLegacyAuthProtocolsEnabled property.
      * @return a void
      */
@@ -475,7 +475,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isLegacyAuthProtocolsEnabled = value;
     }
     /**
-     * Sets the isLoopEnabled property value. The isLoopEnabled property
+     * Sets the isLoopEnabled property value. Indicates whether if Fluid Framework is allowed on SharePoint sites.
      * @param value Value to set for the isLoopEnabled property.
      * @return a void
      */
@@ -484,7 +484,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isLoopEnabled = value;
     }
     /**
-     * Sets the isMacSyncAppEnabled property value. The isMacSyncAppEnabled property
+     * Sets the isMacSyncAppEnabled property value. Indicates whether files can be synced using the OneDrive sync app for Mac.
      * @param value Value to set for the isMacSyncAppEnabled property.
      * @return a void
      */
@@ -493,7 +493,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isMacSyncAppEnabled = value;
     }
     /**
-     * Sets the isRequireAcceptingUserToMatchInvitedUserEnabled property value. The isRequireAcceptingUserToMatchInvitedUserEnabled property
+     * Sets the isRequireAcceptingUserToMatchInvitedUserEnabled property value. Indicates whether guests must sign in using the same account to which sharing invitations are sent.
      * @param value Value to set for the isRequireAcceptingUserToMatchInvitedUserEnabled property.
      * @return a void
      */
@@ -502,7 +502,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isRequireAcceptingUserToMatchInvitedUserEnabled = value;
     }
     /**
-     * Sets the isResharingByExternalUsersEnabled property value. The isResharingByExternalUsersEnabled property
+     * Sets the isResharingByExternalUsersEnabled property value. Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
      * @param value Value to set for the isResharingByExternalUsersEnabled property.
      * @return a void
      */
@@ -511,7 +511,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isResharingByExternalUsersEnabled = value;
     }
     /**
-     * Sets the isSharePointMobileNotificationEnabled property value. The isSharePointMobileNotificationEnabled property
+     * Sets the isSharePointMobileNotificationEnabled property value. Indicates whether mobile push notifications are enabled for SharePoint.
      * @param value Value to set for the isSharePointMobileNotificationEnabled property.
      * @return a void
      */
@@ -520,7 +520,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isSharePointMobileNotificationEnabled = value;
     }
     /**
-     * Sets the isSharePointNewsfeedEnabled property value. The isSharePointNewsfeedEnabled property
+     * Sets the isSharePointNewsfeedEnabled property value. Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
      * @param value Value to set for the isSharePointNewsfeedEnabled property.
      * @return a void
      */
@@ -529,7 +529,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isSharePointNewsfeedEnabled = value;
     }
     /**
-     * Sets the isSiteCreationEnabled property value. The isSiteCreationEnabled property
+     * Sets the isSiteCreationEnabled property value. Indicates whether users are allowed to create sites.
      * @param value Value to set for the isSiteCreationEnabled property.
      * @return a void
      */
@@ -538,7 +538,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isSiteCreationEnabled = value;
     }
     /**
-     * Sets the isSiteCreationUIEnabled property value. The isSiteCreationUIEnabled property
+     * Sets the isSiteCreationUIEnabled property value. Indicates whether the UI commands for creating sites are shown.
      * @param value Value to set for the isSiteCreationUIEnabled property.
      * @return a void
      */
@@ -547,7 +547,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isSiteCreationUIEnabled = value;
     }
     /**
-     * Sets the isSitePagesCreationEnabled property value. The isSitePagesCreationEnabled property
+     * Sets the isSitePagesCreationEnabled property value. Indicates whether creating new modern pages is allowed on SharePoint sites.
      * @param value Value to set for the isSitePagesCreationEnabled property.
      * @return a void
      */
@@ -556,7 +556,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isSitePagesCreationEnabled = value;
     }
     /**
-     * Sets the isSitesStorageLimitAutomatic property value. The isSitesStorageLimitAutomatic property
+     * Sets the isSitesStorageLimitAutomatic property value. Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
      * @param value Value to set for the isSitesStorageLimitAutomatic property.
      * @return a void
      */
@@ -565,7 +565,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isSitesStorageLimitAutomatic = value;
     }
     /**
-     * Sets the isSyncButtonHiddenOnPersonalSite property value. The isSyncButtonHiddenOnPersonalSite property
+     * Sets the isSyncButtonHiddenOnPersonalSite property value. Indicates whether the sync button in OneDrive is hidden.
      * @param value Value to set for the isSyncButtonHiddenOnPersonalSite property.
      * @return a void
      */
@@ -574,7 +574,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isSyncButtonHiddenOnPersonalSite = value;
     }
     /**
-     * Sets the isUnmanagedSyncAppForTenantRestricted property value. The isUnmanagedSyncAppForTenantRestricted property
+     * Sets the isUnmanagedSyncAppForTenantRestricted property value. Indicates whether users are allowed to sync files only on PCs joined to specific domains.
      * @param value Value to set for the isUnmanagedSyncAppForTenantRestricted property.
      * @return a void
      */
@@ -583,7 +583,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.isUnmanagedSyncAppForTenantRestricted = value;
     }
     /**
-     * Sets the personalSiteDefaultStorageLimitInMB property value. The personalSiteDefaultStorageLimitInMB property
+     * Sets the personalSiteDefaultStorageLimitInMB property value. The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
      * @param value Value to set for the personalSiteDefaultStorageLimitInMB property.
      * @return a void
      */
@@ -592,7 +592,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.personalSiteDefaultStorageLimitInMB = value;
     }
     /**
-     * Sets the sharingAllowedDomainList property value. The sharingAllowedDomainList property
+     * Sets the sharingAllowedDomainList property value. Collection of email domains that are allowed for sharing outside the organization.
      * @param value Value to set for the sharingAllowedDomainList property.
      * @return a void
      */
@@ -601,7 +601,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.sharingAllowedDomainList = value;
     }
     /**
-     * Sets the sharingBlockedDomainList property value. The sharingBlockedDomainList property
+     * Sets the sharingBlockedDomainList property value. Collection of email domains that are blocked for sharing outside the organization.
      * @param value Value to set for the sharingBlockedDomainList property.
      * @return a void
      */
@@ -610,7 +610,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.sharingBlockedDomainList = value;
     }
     /**
-     * Sets the sharingCapability property value. The sharingCapability property
+     * Sets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      * @param value Value to set for the sharingCapability property.
      * @return a void
      */
@@ -619,7 +619,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.sharingCapability = value;
     }
     /**
-     * Sets the sharingDomainRestrictionMode property value. The sharingDomainRestrictionMode property
+     * Sets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
      * @param value Value to set for the sharingDomainRestrictionMode property.
      * @return a void
      */
@@ -628,7 +628,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.sharingDomainRestrictionMode = value;
     }
     /**
-     * Sets the siteCreationDefaultManagedPath property value. The siteCreationDefaultManagedPath property
+     * Sets the siteCreationDefaultManagedPath property value. The value of the team site managed path. This is the path under which new team sites will be created.
      * @param value Value to set for the siteCreationDefaultManagedPath property.
      * @return a void
      */
@@ -637,7 +637,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.siteCreationDefaultManagedPath = value;
     }
     /**
-     * Sets the siteCreationDefaultStorageLimitInMB property value. The siteCreationDefaultStorageLimitInMB property
+     * Sets the siteCreationDefaultStorageLimitInMB property value. The default storage quota for a new site upon creation. Measured in megabytes (MB).
      * @param value Value to set for the siteCreationDefaultStorageLimitInMB property.
      * @return a void
      */
@@ -646,7 +646,7 @@ public class SharepointSettings extends Entity implements Parsable {
         this.siteCreationDefaultStorageLimitInMB = value;
     }
     /**
-     * Sets the tenantDefaultTimezone property value. The tenantDefaultTimezone property
+     * Sets the tenantDefaultTimezone property value. The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
      * @param value Value to set for the tenantDefaultTimezone property.
      * @return a void
      */

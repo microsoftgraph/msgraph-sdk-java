@@ -3,6 +3,7 @@ package com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SharedWithChannelTeamInfo;
 import com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item.allowedmembers.AllowedMembersRequestBuilder;
+import com.microsoft.graph.teams.item.primarychannel.sharedwithteams.item.team.TeamRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -25,6 +26,11 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
     @javax.annotation.Nonnull
     public AllowedMembersRequestBuilder allowedMembers() {
         return new AllowedMembersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the team property of the microsoft.graph.teamInfo entity. */
+    @javax.annotation.Nonnull
+    public TeamRequestBuilder team() {
+        return new TeamRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new SharedWithChannelTeamInfoItemRequestBuilder and sets the default values.

@@ -3,11 +3,11 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryCustodian;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.lastindexoperation.LastIndexOperationRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityactivate.SecurityActivateRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityapplyhold.SecurityApplyHoldRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityrelease.SecurityReleaseRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityremovehold.SecurityRemoveHoldRequestBuilder;
-import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.securityupdateindex.SecurityUpdateIndexRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.microsoftgraphsecurityactivate.MicrosoftGraphSecurityActivateRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.microsoftgraphsecurityapplyhold.MicrosoftGraphSecurityApplyHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.microsoftgraphsecurityrelease.MicrosoftGraphSecurityReleaseRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.microsoftgraphsecurityremovehold.MicrosoftGraphSecurityRemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.microsoftgraphsecurityupdateindex.MicrosoftGraphSecurityUpdateIndexRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.sitesources.SiteSourcesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.unifiedgroupsources.UnifiedGroupSourcesRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.usersources.UserSourcesRequestBuilder;
@@ -36,28 +36,28 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /** Provides operations to call the activate method. */
     @javax.annotation.Nonnull
-    public SecurityActivateRequestBuilder securityActivate() {
-        return new SecurityActivateRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityActivateRequestBuilder microsoftGraphSecurityActivate() {
+        return new MicrosoftGraphSecurityActivateRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the applyHold method. */
     @javax.annotation.Nonnull
-    public SecurityApplyHoldRequestBuilder securityApplyHold() {
-        return new SecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
+        return new MicrosoftGraphSecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the release method. */
     @javax.annotation.Nonnull
-    public SecurityReleaseRequestBuilder securityRelease() {
-        return new SecurityReleaseRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityReleaseRequestBuilder microsoftGraphSecurityRelease() {
+        return new MicrosoftGraphSecurityReleaseRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the removeHold method. */
     @javax.annotation.Nonnull
-    public SecurityRemoveHoldRequestBuilder securityRemoveHold() {
-        return new SecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
+        return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the updateIndex method. */
     @javax.annotation.Nonnull
-    public SecurityUpdateIndexRequestBuilder securityUpdateIndex() {
-        return new SecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityUpdateIndexRequestBuilder microsoftGraphSecurityUpdateIndex() {
+        return new MicrosoftGraphSecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
     @javax.annotation.Nonnull
