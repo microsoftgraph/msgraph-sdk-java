@@ -61,8 +61,9 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicyCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create new navigation property to authenticationStrengthPolicies for policies
+     * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
      * @return a CompletableFuture of authenticationStrengthPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> post(@javax.annotation.Nonnull final AuthenticationStrengthPolicy body) {
@@ -117,10 +120,11 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create new navigation property to authenticationStrengthPolicies for policies
+     * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationStrengthPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> post(@javax.annotation.Nonnull final AuthenticationStrengthPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create new navigation property to authenticationStrengthPolicies for policies
+     * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to authenticationStrengthPolicies for policies
+     * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      */
     public class GetQueryParameters {
         /** Include count of items */

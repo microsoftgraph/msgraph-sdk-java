@@ -2,6 +2,7 @@ package com.microsoft.graph.communications.onlinemeetings.item;
 
 import com.microsoft.graph.communications.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.getvirtualappointmentjoinweburl.GetVirtualAppointmentJoinWebUrlRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -31,6 +32,11 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AttendeeReportRequestBuilder attendeeReport() {
         return new AttendeeReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getVirtualAppointmentJoinWebUrl method. */
+    @javax.annotation.Nonnull
+    public GetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
+        return new GetVirtualAppointmentJoinWebUrlRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.

@@ -78,8 +78,9 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Read the properties and relationships of a caseOperation object.
      * @return a CompletableFuture of caseOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/security-caseoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CaseOperation> get() {
@@ -96,9 +97,10 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Read the properties and relationships of a caseOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of caseOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/security-caseoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CaseOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Read the properties and relationships of a caseOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Read the properties and relationships of a caseOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Read the properties and relationships of a caseOperation object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

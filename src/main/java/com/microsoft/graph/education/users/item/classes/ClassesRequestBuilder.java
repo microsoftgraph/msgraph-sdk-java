@@ -60,8 +60,9 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/classes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Classes to which the user belongs. Nullable.
+     * Get the educationClass resources an educationUser is a member of.
      * @return a CompletableFuture of EducationClassCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-classes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Classes to which the user belongs. Nullable.
+     * Get the educationClass resources an educationUser is a member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationClassCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-classes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Classes to which the user belongs. Nullable.
+     * Get the educationClass resources an educationUser is a member of.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Classes to which the user belongs. Nullable.
+     * Get the educationClass resources an educationUser is a member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Classes to which the user belongs. Nullable.
+     * Get the educationClass resources an educationUser is a member of.
      */
     public class GetQueryParameters {
         /** Include count of items */

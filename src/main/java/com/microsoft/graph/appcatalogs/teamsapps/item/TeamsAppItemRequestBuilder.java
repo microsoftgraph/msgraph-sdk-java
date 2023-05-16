@@ -47,8 +47,9 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property teamsApps for appCatalogs
+     * Delete teamsApp
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/teamsapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property teamsApps for appCatalogs
+     * Delete teamsApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/teamsapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -161,7 +163,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property teamsApps for appCatalogs
+     * Delete teamsApp
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +171,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property teamsApps for appCatalogs
+     * Delete teamsApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

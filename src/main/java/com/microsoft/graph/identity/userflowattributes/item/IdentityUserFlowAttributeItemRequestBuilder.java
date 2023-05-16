@@ -41,8 +41,9 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes/{identityUserFlowAttribute%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a CompletableFuture of identityUserFlowAttribute
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> get() {
@@ -96,9 +99,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttribute
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
      * @param body The request body
      * @return a CompletableFuture of identityUserFlowAttribute
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> patch(@javax.annotation.Nonnull final IdentityUserFlowAttribute body) {
@@ -134,10 +139,11 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttribute
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> patch(@javax.annotation.Nonnull final IdentityUserFlowAttribute body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

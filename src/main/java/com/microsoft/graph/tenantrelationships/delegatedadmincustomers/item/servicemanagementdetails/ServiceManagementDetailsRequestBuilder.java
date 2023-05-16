@@ -61,8 +61,9 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminCustomers/{delegatedAdminCustomer%2Did}/serviceManagementDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @return a CompletableFuture of DelegatedAdminServiceManagementDetailCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadmincustomer-list-servicemanagementdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetailCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminServiceManagementDetailCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadmincustomer-list-servicemanagementdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminServiceManagementDetailCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

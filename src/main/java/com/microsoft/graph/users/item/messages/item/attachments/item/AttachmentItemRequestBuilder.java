@@ -78,8 +78,9 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
+     * Read the properties, relationships, or raw contents of an attachment that is attached to a user event, message, or group post.  An attachment can be one of the following types: All these types of attachments are derived from the attachment resource. 
      * @return a CompletableFuture of attachment
+     * @see <a href="https://docs.microsoft.com/graph/api/attachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> get() {
@@ -96,9 +97,10 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
+     * Read the properties, relationships, or raw contents of an attachment that is attached to a user event, message, or group post.  An attachment can be one of the following types: All these types of attachments are derived from the attachment resource. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of attachment
+     * @see <a href="https://docs.microsoft.com/graph/api/attachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +144,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
+     * Read the properties, relationships, or raw contents of an attachment that is attached to a user event, message, or group post.  An attachment can be one of the following types: All these types of attachments are derived from the attachment resource. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +152,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
+     * Read the properties, relationships, or raw contents of an attachment that is attached to a user event, message, or group post.  An attachment can be one of the following types: All these types of attachments are derived from the attachment resource. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +178,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
+     * Read the properties, relationships, or raw contents of an attachment that is attached to a user event, message, or group post.  An attachment can be one of the following types: All these types of attachments are derived from the attachment resource. 
      */
     public class GetQueryParameters {
         /** Expand related entities */

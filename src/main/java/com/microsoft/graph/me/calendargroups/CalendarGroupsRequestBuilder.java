@@ -61,8 +61,9 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/calendarGroups{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @return a CompletableFuture of CalendarGroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroupCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CalendarGroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to calendarGroups for me
+     * Use this API to create a new CalendarGroup.
      * @param body The request body
      * @return a CompletableFuture of calendarGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroup> post(@javax.annotation.Nonnull final CalendarGroup body) {
@@ -117,10 +120,11 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to calendarGroups for me
+     * Use this API to create a new CalendarGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroup> post(@javax.annotation.Nonnull final CalendarGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to calendarGroups for me
+     * Use this API to create a new CalendarGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to calendarGroups for me
+     * Use this API to create a new CalendarGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class CalendarGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -67,8 +67,9 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get classes from education
+     * Get a list of the educationClass objects and their properties.
      * @return a CompletableFuture of EducationClassCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get() {
@@ -85,9 +86,10 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get classes from education
+     * Get a list of the educationClass objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationClassCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,9 +106,10 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to classes for education
+     * Create a new educationClass object.
      * @param body The request body
      * @return a CompletableFuture of educationClass
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> post(@javax.annotation.Nonnull final EducationClass body) {
@@ -123,10 +126,11 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to classes for education
+     * Create a new educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationClass
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> post(@javax.annotation.Nonnull final EducationClass body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +148,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get classes from education
+     * Get a list of the educationClass objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +156,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get classes from education
+     * Get a list of the educationClass objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +177,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to classes for education
+     * Create a new educationClass object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to classes for education
+     * Create a new educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +209,7 @@ public class ClassesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get classes from education
+     * Get a list of the educationClass objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -59,8 +59,9 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStores/{store%2Did}/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms/{term%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property terms for sites
+     * Delete a term object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +78,10 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property terms for sites
+     * Delete a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +98,9 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @return a CompletableFuture of term
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get() {
@@ -114,9 +117,10 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of term
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,9 +137,10 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property terms in sites
+     * Update the properties of a term object.
      * @param body The request body
      * @return a CompletableFuture of term
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> patch(@javax.annotation.Nonnull final Term body) {
@@ -152,10 +157,11 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property terms in sites
+     * Update the properties of a term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of term
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> patch(@javax.annotation.Nonnull final Term body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -173,7 +179,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property terms for sites
+     * Delete a term object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +187,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property terms for sites
+     * Delete a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +206,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +214,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +235,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property terms in sites
+     * Update the properties of a term object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -238,7 +244,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property terms in sites
+     * Update the properties of a term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,7 +272,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

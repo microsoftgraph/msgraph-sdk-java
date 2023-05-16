@@ -61,7 +61,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/items{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @return a CompletableFuture of ExternalItemCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExternalItemCollectionResponse
      */
@@ -138,7 +138,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      */
     public class GetQueryParameters {
         /** Include count of items */

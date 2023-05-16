@@ -77,8 +77,9 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property users for education
+     * Delete a user.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,9 +96,10 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property users for education
+     * Delete a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,8 +116,9 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get users from education
+     * Read the properties and relationships of an educationUser object.
      * @return a CompletableFuture of educationUser
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> get() {
@@ -132,9 +135,10 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get users from education
+     * Read the properties and relationships of an educationUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUser
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,9 +155,10 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property users in education
+     * Update the properties of an educationUser object.
      * @param body The request body
      * @return a CompletableFuture of educationUser
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body) {
@@ -170,10 +175,11 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property users in education
+     * Update the properties of an educationUser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUser
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +197,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property users for education
+     * Delete a user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -199,7 +205,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property users for education
+     * Delete a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -218,7 +224,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get users from education
+     * Read the properties and relationships of an educationUser object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -226,7 +232,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get users from education
+     * Read the properties and relationships of an educationUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -247,7 +253,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property users in education
+     * Update the properties of an educationUser object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -256,7 +262,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property users in education
+     * Update the properties of an educationUser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -284,7 +290,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get users from education
+     * Read the properties and relationships of an educationUser object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

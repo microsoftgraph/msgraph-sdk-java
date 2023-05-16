@@ -90,8 +90,9 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     * Retrieve the metadata for a specific version of a DriveItem.
      * @return a CompletableFuture of driveItemVersion
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersion> get() {
@@ -108,9 +109,10 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     * Retrieve the metadata for a specific version of a DriveItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItemVersion
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemVersion> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +196,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     * Retrieve the metadata for a specific version of a DriveItem.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +204,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     * Retrieve the metadata for a specific version of a DriveItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +262,7 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     * Retrieve the metadata for a specific version of a DriveItem.
      */
     public class GetQueryParameters {
         /** Expand related entities */

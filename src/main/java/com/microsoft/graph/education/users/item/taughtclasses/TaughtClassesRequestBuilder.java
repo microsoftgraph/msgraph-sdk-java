@@ -60,8 +60,9 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/taughtClasses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @return a CompletableFuture of EducationClassCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-taughtclasses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationClassCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-taughtclasses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClassCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class TaughtClassesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      */
     public class GetQueryParameters {
         /** Include count of items */

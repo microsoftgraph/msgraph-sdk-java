@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable {
-    /** The automaticUserConsentSettings property */
+    /** Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only. */
     private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
     /** Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
@@ -40,7 +40,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         return new CrossTenantAccessPolicyConfigurationDefault();
     }
     /**
-     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Gets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
      * @return a inboundOutboundPolicyConfiguration
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         writer.writeBooleanValue("isServiceDefault", this.getIsServiceDefault());
     }
     /**
-     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Sets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
      * @param value Value to set for the automaticUserConsentSettings property.
      * @return a void
      */

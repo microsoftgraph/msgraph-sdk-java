@@ -41,8 +41,9 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications/{delegatedPermissionClassification%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -155,7 +157,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +165,7 @@ public class DelegatedPermissionClassificationItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

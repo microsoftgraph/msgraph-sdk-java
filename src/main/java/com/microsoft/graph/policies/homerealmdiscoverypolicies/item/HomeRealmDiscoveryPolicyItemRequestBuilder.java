@@ -47,8 +47,9 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/policies/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property homeRealmDiscoveryPolicies for policies
+     * Delete a homeRealmDiscoveryPolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Delete navigation property homeRealmDiscoveryPolicies for policies
+     * Delete a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get() {
@@ -102,9 +105,10 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Update the navigation property homeRealmDiscoveryPolicies in policies
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> patch(@javax.annotation.Nonnull final HomeRealmDiscoveryPolicy body) {
@@ -140,10 +145,11 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Update the navigation property homeRealmDiscoveryPolicies in policies
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> patch(@javax.annotation.Nonnull final HomeRealmDiscoveryPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Delete navigation property homeRealmDiscoveryPolicies for policies
+     * Delete a homeRealmDiscoveryPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property homeRealmDiscoveryPolicies for policies
+     * Delete a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property homeRealmDiscoveryPolicies in policies
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property homeRealmDiscoveryPolicies in policies
+     * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

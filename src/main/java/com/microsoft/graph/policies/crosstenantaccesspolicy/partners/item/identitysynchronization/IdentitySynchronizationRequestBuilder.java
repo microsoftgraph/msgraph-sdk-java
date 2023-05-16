@@ -41,8 +41,9 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}/identitySynchronization{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property identitySynchronization for policies
+     * Delete the user synchronization policy for a partner-specific configuration.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property identitySynchronization for policies
+     * Delete the user synchronization policy for a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get identitySynchronization from policies
+     * Get the user synchronization policy of a partner-specific configuration.
      * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> get() {
@@ -96,9 +99,10 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get identitySynchronization from policies
+     * Get the user synchronization policy of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property identitySynchronization in policies
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@javax.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
@@ -134,10 +139,11 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property identitySynchronization in policies
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@javax.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property identitySynchronization for policies
+     * Delete the user synchronization policy for a partner-specific configuration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property identitySynchronization for policies
+     * Delete the user synchronization policy for a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get identitySynchronization from policies
+     * Get the user synchronization policy of a partner-specific configuration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get identitySynchronization from policies
+     * Get the user synchronization policy of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property identitySynchronization in policies
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property identitySynchronization in policies
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get identitySynchronization from policies
+     * Get the user synchronization policy of a partner-specific configuration.
      */
     public class GetQueryParameters {
         /** Expand related entities */

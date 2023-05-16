@@ -78,8 +78,9 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> get() {
@@ -96,9 +97,10 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

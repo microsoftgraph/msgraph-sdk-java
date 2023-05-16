@@ -40,9 +40,10 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/updateRecordingStatus", rawUrl);
     }
     /**
-     * Invoke action updateRecordingStatus
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @return a CompletableFuture of updateRecordingStatusOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/call-updaterecordingstatus?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusPostRequestBody body) {
@@ -59,10 +60,11 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action updateRecordingStatus
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of updateRecordingStatusOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/call-updaterecordingstatus?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action updateRecordingStatus
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action updateRecordingStatus
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

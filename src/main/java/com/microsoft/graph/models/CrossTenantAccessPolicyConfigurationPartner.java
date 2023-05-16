@@ -10,7 +10,7 @@ import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The automaticUserConsentSettings property */
+    /** Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false. */
     private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
     /** Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
@@ -20,7 +20,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
     /** Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect. */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
-    /** The identitySynchronization property */
+    /** Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another. */
     private CrossTenantIdentitySyncPolicyPartner identitySynchronization;
     /** Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations. */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
@@ -57,7 +57,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.additionalData;
     }
     /**
-     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @return a inboundOutboundPolicyConfiguration
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return deserializerMap;
     }
     /**
-     * Gets the identitySynchronization property value. The identitySynchronization property
+     * Gets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @return a crossTenantIdentitySyncPolicyPartner
      */
     @javax.annotation.Nullable
@@ -185,7 +185,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.additionalData = value;
     }
     /**
-     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Sets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @param value Value to set for the automaticUserConsentSettings property.
      * @return a void
      */
@@ -230,7 +230,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.b2bDirectConnectOutbound = value;
     }
     /**
-     * Sets the identitySynchronization property value. The identitySynchronization property
+     * Sets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @param value Value to set for the identitySynchronization property.
      * @return a void
      */

@@ -61,8 +61,9 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Learning catalog items for the provider.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @return a CompletableFuture of LearningContentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContentCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Learning catalog items for the provider.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of LearningContentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Learning catalog items for the provider.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Learning catalog items for the provider.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class LearningContentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Learning catalog items for the provider.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      */
     public class GetQueryParameters {
         /** Include count of items */

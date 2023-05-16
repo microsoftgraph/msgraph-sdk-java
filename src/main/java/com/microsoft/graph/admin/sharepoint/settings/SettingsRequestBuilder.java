@@ -78,8 +78,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get settings from admin
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @return a CompletableFuture of sharepointSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> get() {
@@ -96,9 +97,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get settings from admin
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sharepointSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property settings in admin
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @return a CompletableFuture of sharepointSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> patch(@javax.annotation.Nonnull final SharepointSettings body) {
@@ -134,10 +137,11 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property settings in admin
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sharepointSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> patch(@javax.annotation.Nonnull final SharepointSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get settings from admin
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get settings from admin
+     * Get the tenant-level settings for SharePoint and OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property settings in admin
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property settings in admin
+     * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get settings from admin
+     * Get the tenant-level settings for SharePoint and OneDrive.
      */
     public class GetQueryParameters {
         /** Expand related entities */

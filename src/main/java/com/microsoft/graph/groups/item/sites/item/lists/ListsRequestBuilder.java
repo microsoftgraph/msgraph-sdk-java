@@ -61,8 +61,9 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection of lists under this site.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include `system` in your `$select` statement.
      * @return a CompletableFuture of ListCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of lists under this site.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include `system` in your `$select` statement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ListCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to lists for groups
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @return a CompletableFuture of list
+     * @see <a href="https://docs.microsoft.com/graph/api/list-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> post(@javax.annotation.Nonnull final List body) {
@@ -117,10 +120,11 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to lists for groups
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of list
+     * @see <a href="https://docs.microsoft.com/graph/api/list-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> post(@javax.annotation.Nonnull final List body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of lists under this site.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include `system` in your `$select` statement.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of lists under this site.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include `system` in your `$select` statement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to lists for groups
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to lists for groups
+     * Create a new [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of lists under this site.
+     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include `system` in your `$select` statement.
      */
     public class GetQueryParameters {
         /** Include count of items */

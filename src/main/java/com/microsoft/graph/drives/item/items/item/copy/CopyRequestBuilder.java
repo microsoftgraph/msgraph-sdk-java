@@ -40,9 +40,10 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/copy", rawUrl);
     }
     /**
-     * Invoke action copy
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-copy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> post(@javax.annotation.Nonnull final CopyPostRequestBody body) {
@@ -59,10 +60,11 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action copy
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-copy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> post(@javax.annotation.Nonnull final CopyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action copy
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class CopyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action copy
+     * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

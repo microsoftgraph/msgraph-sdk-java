@@ -66,8 +66,9 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The groups whose users have access to print using the printer.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
      * @return a CompletableFuture of GroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get() {
@@ -84,9 +85,10 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The groups whose users have access to print using the printer.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The groups whose users have access to print using the printer.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -111,7 +113,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The groups whose users have access to print using the printer.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +134,7 @@ public class AllowedGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The groups whose users have access to print using the printer.
+     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
      */
     public class GetQueryParameters {
         /** Include count of items */

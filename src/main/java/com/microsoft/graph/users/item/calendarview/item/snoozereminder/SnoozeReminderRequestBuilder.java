@@ -39,9 +39,10 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarView/{event%2Did}/snoozeReminder", rawUrl);
     }
     /**
-     * Invoke action snoozeReminder
+     * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-snoozereminder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SnoozeReminderPostRequestBody body) {
@@ -58,10 +59,11 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action snoozeReminder
+     * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-snoozereminder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SnoozeReminderPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action snoozeReminder
+     * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class SnoozeReminderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action snoozeReminder
+     * Postpone a reminder for an event in a user calendar until a new time.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

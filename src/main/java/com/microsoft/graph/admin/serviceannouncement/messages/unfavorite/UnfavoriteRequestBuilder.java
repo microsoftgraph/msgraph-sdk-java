@@ -39,9 +39,10 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/unfavorite", rawUrl);
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a CompletableFuture of unfavoriteResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-unfavorite?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnfavoriteResponse> post(@javax.annotation.Nonnull final UnfavoritePostRequestBody body) {
@@ -58,10 +59,11 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unfavoriteResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-unfavorite?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnfavoriteResponse> post(@javax.annotation.Nonnull final UnfavoritePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class UnfavoriteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action unfavorite
+     * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

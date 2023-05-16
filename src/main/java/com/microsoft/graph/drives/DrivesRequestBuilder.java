@@ -1,6 +1,5 @@
 package com.microsoft.graph.drives;
 
-import com.microsoft.graph.drives.count.CountRequestBuilder;
 import com.microsoft.graph.drives.item.DriveItemRequestBuilder;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.DriveCollectionResponse;
@@ -23,11 +22,6 @@ import java.util.Objects;
  * Provides operations to manage the collection of drive entities.
  */
 public class DrivesRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the collection of drive entities.
      * @param driveId Unique identifier of the item
@@ -48,7 +42,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public DrivesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/drives{?%24top,%24skip,%24search,%24filter,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new DrivesRequestBuilder and sets the default values.
@@ -58,7 +52,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public DrivesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/drives{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/drives{?%24top,%24skip,%24search,%24filter,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * Get entities from drives
@@ -202,10 +196,6 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
      * Get entities from drives
      */
     public class GetQueryParameters {
-        /** Include count of items */
-        @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
-        public Boolean count;
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable

@@ -61,7 +61,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/federationConfiguration{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a CompletableFuture of InternalDomainFederationCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InternalDomainFederationCollectionResponse
      */
@@ -98,9 +98,10 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to federationConfiguration for domains
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @return a CompletableFuture of internalDomainFederation
+     * @see <a href="https://docs.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> post(@javax.annotation.Nonnull final InternalDomainFederation body) {
@@ -117,10 +118,11 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to federationConfiguration for domains
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of internalDomainFederation
+     * @see <a href="https://docs.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> post(@javax.annotation.Nonnull final InternalDomainFederation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +169,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to federationConfiguration for domains
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +178,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to federationConfiguration for domains
+     * Create a new internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +201,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      */
     public class GetQueryParameters {
         /** Include count of items */

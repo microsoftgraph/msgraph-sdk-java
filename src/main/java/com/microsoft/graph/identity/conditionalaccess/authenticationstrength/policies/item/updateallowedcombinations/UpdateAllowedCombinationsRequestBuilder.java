@@ -40,9 +40,10 @@ public class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy%2Did}/updateAllowedCombinations", rawUrl);
     }
     /**
-     * Invoke action updateAllowedCombinations
+     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
      * @param body The request body
      * @return a CompletableFuture of updateAllowedCombinationsResult
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-updateallowedcombinations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateAllowedCombinationsResult> post(@javax.annotation.Nonnull final UpdateAllowedCombinationsPostRequestBody body) {
@@ -59,10 +60,11 @@ public class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Invoke action updateAllowedCombinations
+     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of updateAllowedCombinationsResult
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-updateallowedcombinations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateAllowedCombinationsResult> post(@javax.annotation.Nonnull final UpdateAllowedCombinationsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Invoke action updateAllowedCombinations
+     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action updateAllowedCombinations
+     * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

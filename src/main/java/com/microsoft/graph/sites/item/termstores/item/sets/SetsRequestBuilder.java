@@ -61,7 +61,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStores/{store%2Did}/sets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @return a CompletableFuture of SetCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SetCollectionResponse
      */
@@ -138,7 +138,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      */
     public class GetQueryParameters {
         /** Include count of items */

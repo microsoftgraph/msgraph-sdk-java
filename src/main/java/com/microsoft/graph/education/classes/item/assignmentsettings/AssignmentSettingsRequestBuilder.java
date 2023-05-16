@@ -115,9 +115,10 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property assignmentSettings in education
+     * Update the properties of an educationAssignmentSettings object. Only Teachers can update these settings.
      * @param body The request body
      * @return a CompletableFuture of educationAssignmentSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> patch(@javax.annotation.Nonnull final EducationAssignmentSettings body) {
@@ -134,10 +135,11 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property assignmentSettings in education
+     * Update the properties of an educationAssignmentSettings object. Only Teachers can update these settings.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignmentSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentSettings> patch(@javax.annotation.Nonnull final EducationAssignmentSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -211,7 +213,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property assignmentSettings in education
+     * Update the properties of an educationAssignmentSettings object. Only Teachers can update these settings.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +222,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignmentSettings in education
+     * Update the properties of an educationAssignmentSettings object. Only Teachers can update these settings.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -41,8 +41,9 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/calendars/{calendar%2Did}/calendarView/{event%2Did}/attachments/{attachment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete an attachment from a user calendar event, mail message, or group post.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/attachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete an attachment from a user calendar event, mail message, or group post.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/attachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -115,7 +117,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete an attachment from a user calendar event, mail message, or group post.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -123,7 +125,7 @@ public class AttachmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete an attachment from a user calendar event, mail message, or group post.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

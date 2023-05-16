@@ -41,8 +41,9 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/schedule/timesOff/{timeOff%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property timesOff for me
+     * Delete a timeOff instance from a schedule.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoff-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property timesOff for me
+     * Delete a timeOff instance from a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoff-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The instances of times off in the schedule.
+     * Retrieve the properties and relationships of a timeOff object by ID.
      * @return a CompletableFuture of timeOff
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoff-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> get() {
@@ -96,9 +99,10 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The instances of times off in the schedule.
+     * Retrieve the properties and relationships of a timeOff object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOff
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoff-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property timesOff in me
+     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @return a CompletableFuture of timeOff
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoff-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> patch(@javax.annotation.Nonnull final TimeOff body) {
@@ -134,10 +139,11 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property timesOff in me
+     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOff
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoff-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> patch(@javax.annotation.Nonnull final TimeOff body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property timesOff for me
+     * Delete a timeOff instance from a schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property timesOff for me
+     * Delete a timeOff instance from a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The instances of times off in the schedule.
+     * Retrieve the properties and relationships of a timeOff object by ID.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The instances of times off in the schedule.
+     * Retrieve the properties and relationships of a timeOff object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property timesOff in me
+     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property timesOff in me
+     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class TimeOffItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The instances of times off in the schedule.
+     * Retrieve the properties and relationships of a timeOff object by ID.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */

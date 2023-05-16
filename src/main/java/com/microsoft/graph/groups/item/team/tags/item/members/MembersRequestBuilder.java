@@ -61,8 +61,9 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/tags/{teamworkTag%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Users assigned to the tag.
+     * Get a list of the members of a standard tag in a team and their properties.
      * @return a CompletableFuture of TeamworkTagMemberCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMemberCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users assigned to the tag.
+     * Get a list of the members of a standard tag in a team and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TeamworkTagMemberCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMemberCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to members for groups
+     * Create a new teamworkTagMember object in a team.
      * @param body The request body
      * @return a CompletableFuture of teamworkTagMember
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> post(@javax.annotation.Nonnull final TeamworkTagMember body) {
@@ -117,10 +120,11 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to members for groups
+     * Create a new teamworkTagMember object in a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTagMember
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> post(@javax.annotation.Nonnull final TeamworkTagMember body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users assigned to the tag.
+     * Get a list of the members of a standard tag in a team and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Users assigned to the tag.
+     * Get a list of the members of a standard tag in a team and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to members for groups
+     * Create a new teamworkTagMember object in a team.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to members for groups
+     * Create a new teamworkTagMember object in a team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Users assigned to the tag.
+     * Get a list of the members of a standard tag in a team and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

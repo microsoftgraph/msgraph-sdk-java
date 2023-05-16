@@ -41,8 +41,9 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/tags/{teamworkTag%2Did}/members/{teamworkTagMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property members for users
+     * Delete a member from a standard tag in a team.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property members for users
+     * Delete a member from a standard tag in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users assigned to the tag.
+     * Get the properties and relationships of a member of a standard tag in a team.
      * @return a CompletableFuture of teamworkTagMember
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> get() {
@@ -96,9 +99,10 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users assigned to the tag.
+     * Get the properties and relationships of a member of a standard tag in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTagMember
+     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property members for users
+     * Delete a member from a standard tag in a team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property members for users
+     * Delete a member from a standard tag in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Users assigned to the tag.
+     * Get the properties and relationships of a member of a standard tag in a team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Users assigned to the tag.
+     * Get the properties and relationships of a member of a standard tag in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +252,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Users assigned to the tag.
+     * Get the properties and relationships of a member of a standard tag in a team.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -41,8 +41,9 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/groups/{externalGroup%2Did}/members/{identity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property members for external
+     * Delete an identity resource to remove the corresponding member from an externalGroup.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-identity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property members for external
+     * Delete an identity resource to remove the corresponding member from an externalGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-identity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -155,7 +157,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property members for external
+     * Delete an identity resource to remove the corresponding member from an externalGroup.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +165,7 @@ public class IdentityItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property members for external
+     * Delete an identity resource to remove the corresponding member from an externalGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

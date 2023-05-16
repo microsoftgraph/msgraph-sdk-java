@@ -61,8 +61,9 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/children{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a CompletableFuture of TermCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TermCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to children for groups
+     * Create a new term object.
      * @param body The request body
      * @return a CompletableFuture of term
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> post(@javax.annotation.Nonnull final Term body) {
@@ -117,10 +120,11 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to children for groups
+     * Create a new term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of term
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> post(@javax.annotation.Nonnull final Term body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to children for groups
+     * Create a new term object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to children for groups
+     * Create a new term object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Children terms of set in term [store].
+     * Get the first level children of a [set] or [term] resource using the children navigation property.
      */
     public class GetQueryParameters {
         /** Include count of items */

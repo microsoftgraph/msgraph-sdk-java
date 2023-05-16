@@ -41,8 +41,9 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/namedLocations/{namedLocation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property namedLocations for identity
+     * Delete an ipNamedLocation object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/ipnamedlocation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property namedLocations for identity
+     * Delete an ipNamedLocation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/ipnamedlocation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Retrieve the properties and relationships of a countryNamedLocation object.
      * @return a CompletableFuture of namedLocation
+     * @see <a href="https://docs.microsoft.com/graph/api/countrynamedlocation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> get() {
@@ -96,9 +99,10 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Retrieve the properties and relationships of a countryNamedLocation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of namedLocation
+     * @see <a href="https://docs.microsoft.com/graph/api/countrynamedlocation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property namedLocations in identity
+     * Update the properties of an ipNamedLocation object.
      * @param body The request body
      * @return a CompletableFuture of namedLocation
+     * @see <a href="https://docs.microsoft.com/graph/api/ipnamedlocation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> patch(@javax.annotation.Nonnull final NamedLocation body) {
@@ -134,10 +139,11 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property namedLocations in identity
+     * Update the properties of an ipNamedLocation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of namedLocation
+     * @see <a href="https://docs.microsoft.com/graph/api/ipnamedlocation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> patch(@javax.annotation.Nonnull final NamedLocation body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property namedLocations for identity
+     * Delete an ipNamedLocation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property namedLocations for identity
+     * Delete an ipNamedLocation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Retrieve the properties and relationships of a countryNamedLocation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Retrieve the properties and relationships of a countryNamedLocation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property namedLocations in identity
+     * Update the properties of an ipNamedLocation object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property namedLocations in identity
+     * Update the properties of an ipNamedLocation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class NamedLocationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Retrieve the properties and relationships of a countryNamedLocation object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

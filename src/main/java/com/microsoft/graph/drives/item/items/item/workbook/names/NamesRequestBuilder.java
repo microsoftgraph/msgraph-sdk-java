@@ -73,8 +73,9 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/names{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve a list of nameditem objects.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get() {
@@ -91,9 +92,10 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve a list of nameditem objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -150,7 +152,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve a list of nameditem objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -158,7 +160,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve a list of nameditem objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +213,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve a list of nameditem objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

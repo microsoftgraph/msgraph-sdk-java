@@ -65,8 +65,9 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property connections for external
+     * Deletes an externalConnection object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -83,9 +84,10 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property connections for external
+     * Deletes an externalConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -102,8 +104,9 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get connections from external
+     * Read the properties and relationships of an externalConnection object.
      * @return a CompletableFuture of externalConnection
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> get() {
@@ -120,9 +123,10 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get connections from external
+     * Read the properties and relationships of an externalConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalConnection
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -139,9 +143,10 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property connections in external
+     * Update the properties of an externalConnection object.
      * @param body The request body
      * @return a CompletableFuture of externalConnection
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> patch(@javax.annotation.Nonnull final ExternalConnection body) {
@@ -158,10 +163,11 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property connections in external
+     * Update the properties of an externalConnection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalConnection
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> patch(@javax.annotation.Nonnull final ExternalConnection body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -179,7 +185,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property connections for external
+     * Deletes an externalConnection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -187,7 +193,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property connections for external
+     * Deletes an externalConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +212,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get connections from external
+     * Read the properties and relationships of an externalConnection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +220,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get connections from external
+     * Read the properties and relationships of an externalConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +241,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property connections in external
+     * Update the properties of an externalConnection object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -244,7 +250,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property connections in external
+     * Update the properties of an externalConnection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -272,7 +278,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get connections from external
+     * Read the properties and relationships of an externalConnection object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -61,7 +61,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar/calendarPermissions{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @return a CompletableFuture of CalendarPermissionCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CalendarPermissionCollectionResponse
      */
@@ -98,9 +98,10 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to calendarPermissions for users
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @return a CompletableFuture of calendarPermission
+     * @see <a href="https://docs.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> post(@javax.annotation.Nonnull final CalendarPermission body) {
@@ -117,10 +118,11 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to calendarPermissions for users
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarPermission
+     * @see <a href="https://docs.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> post(@javax.annotation.Nonnull final CalendarPermission body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +169,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to calendarPermissions for users
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +178,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to calendarPermissions for users
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +201,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -71,8 +71,9 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property columns for drives
+     * Deletes the column from the table.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -89,9 +90,10 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property columns for drives
+     * Deletes the column from the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -108,8 +110,9 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @return a CompletableFuture of workbookTableColumn
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> get() {
@@ -126,9 +129,10 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableColumn
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -145,9 +149,10 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property columns in drives
+     * Update the properties of tablecolumn object.
      * @param body The request body
      * @return a CompletableFuture of workbookTableColumn
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> patch(@javax.annotation.Nonnull final WorkbookTableColumn body) {
@@ -164,10 +169,11 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property columns in drives
+     * Update the properties of tablecolumn object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableColumn
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> patch(@javax.annotation.Nonnull final WorkbookTableColumn body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +191,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property columns for drives
+     * Deletes the column from the table.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -193,7 +199,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property columns for drives
+     * Deletes the column from the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +218,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +226,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -241,7 +247,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property columns in drives
+     * Update the properties of tablecolumn object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -250,7 +256,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property columns in drives
+     * Update the properties of tablecolumn object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -278,7 +284,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve the properties and relationships of tablecolumn object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

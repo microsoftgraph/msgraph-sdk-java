@@ -61,8 +61,9 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List of notes associcated with the request.
+     * Get the list of authored notes assoicated with a subject rights request. 
      * @return a CompletableFuture of AuthoredNoteCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNoteCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of notes associcated with the request.
+     * Get the list of authored notes assoicated with a subject rights request. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthoredNoteCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNoteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to notes for privacy
+     * Create a new authoredNote object.
      * @param body The request body
      * @return a CompletableFuture of authoredNote
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> post(@javax.annotation.Nonnull final AuthoredNote body) {
@@ -117,10 +120,11 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to notes for privacy
+     * Create a new authoredNote object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authoredNote
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> post(@javax.annotation.Nonnull final AuthoredNote body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of notes associcated with the request.
+     * Get the list of authored notes assoicated with a subject rights request. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of notes associcated with the request.
+     * Get the list of authored notes assoicated with a subject rights request. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to notes for privacy
+     * Create a new authoredNote object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to notes for privacy
+     * Create a new authoredNote object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of notes associcated with the request.
+     * Get the list of authored notes assoicated with a subject rights request. 
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -41,8 +41,9 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/schedule/timeOffReasons/{timeOffReason%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property timeOffReasons for me
+     * Mark a timeOffReason as inactive by setting the **isActive** property. Every team must include at least one timeoff reason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffreason-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property timeOffReasons for me
+     * Mark a timeOffReason as inactive by setting the **isActive** property. Every team must include at least one timeoff reason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffreason-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Retrieve the properties and relationships of a timeOffReason object by ID.
      * @return a CompletableFuture of timeOffReason
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffreason-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReason> get() {
@@ -96,9 +99,10 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Retrieve the properties and relationships of a timeOffReason object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOffReason
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffreason-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReason> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property timeOffReasons in me
+     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @return a CompletableFuture of timeOffReason
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffreason-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReason> patch(@javax.annotation.Nonnull final TimeOffReason body) {
@@ -134,10 +139,11 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property timeOffReasons in me
+     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOffReason
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffreason-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffReason> patch(@javax.annotation.Nonnull final TimeOffReason body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property timeOffReasons for me
+     * Mark a timeOffReason as inactive by setting the **isActive** property. Every team must include at least one timeoff reason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property timeOffReasons for me
+     * Mark a timeOffReason as inactive by setting the **isActive** property. Every team must include at least one timeoff reason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Retrieve the properties and relationships of a timeOffReason object by ID.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Retrieve the properties and relationships of a timeOffReason object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property timeOffReasons in me
+     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property timeOffReasons in me
+     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns `404 Not found`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The set of reasons for a time off in the schedule.
+     * Retrieve the properties and relationships of a timeOffReason object by ID.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */

@@ -61,8 +61,9 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/namedLocations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @return a CompletableFuture of NamedLocationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocationCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of NamedLocationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @return a CompletableFuture of namedLocation
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> post(@javax.annotation.Nonnull final NamedLocation body) {
@@ -117,10 +120,11 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of namedLocation
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NamedLocation> post(@javax.annotation.Nonnull final NamedLocation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to namedLocations for identity
+     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class NamedLocationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified named locations.
+     * Get a list of namedLocation objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -47,8 +47,9 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/appointments/{bookingAppointment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property appointments for solutions
+     * Delete a bookingAppointment in the specified bookingBusiness.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingappointment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property appointments for solutions
+     * Delete a bookingAppointment in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingappointment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The **startDateTime** and **endDateTime** properties are always returned in UTC.
      * @return a CompletableFuture of bookingAppointment
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingappointment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> get() {
@@ -102,9 +105,10 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The **startDateTime** and **endDateTime** properties are always returned in UTC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingAppointment
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingappointment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property appointments in solutions
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param body The request body
      * @return a CompletableFuture of bookingAppointment
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingappointment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> patch(@javax.annotation.Nonnull final BookingAppointment body) {
@@ -140,10 +145,11 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property appointments in solutions
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingAppointment
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingappointment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> patch(@javax.annotation.Nonnull final BookingAppointment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property appointments for solutions
+     * Delete a bookingAppointment in the specified bookingBusiness.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property appointments for solutions
+     * Delete a bookingAppointment in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The **startDateTime** and **endDateTime** properties are always returned in UTC.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The **startDateTime** and **endDateTime** properties are always returned in UTC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property appointments in solutions
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property appointments in solutions
+     * Update the properties of a bookingAppointment object in the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class BookingAppointmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The **startDateTime** and **endDateTime** properties are always returned in UTC.
      */
     public class GetQueryParameters {
         /** Expand related entities */

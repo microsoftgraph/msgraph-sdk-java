@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.users.item.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
 import com.microsoft.graph.users.item.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
+import com.microsoft.graph.users.item.onlinemeetings.item.getvirtualappointmentjoinweburl.GetVirtualAppointmentJoinWebUrlRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,6 +33,11 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     public AttendeeReportRequestBuilder attendeeReport() {
         return new AttendeeReportRequestBuilder(pathParameters, requestAdapter);
     }
+    /** Provides operations to call the getVirtualAppointmentJoinWebUrl method. */
+    @javax.annotation.Nonnull
+    public GetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
+        return new GetVirtualAppointmentJoinWebUrlRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -53,8 +59,9 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property onlineMeetings for users
+     * Delete an onlineMeeting object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,9 +78,10 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property onlineMeetings for users
+     * Delete an onlineMeeting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,8 +98,9 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get onlineMeetings from users
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @return a CompletableFuture of onlineMeeting
+     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get() {
@@ -108,9 +117,10 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get onlineMeetings from users
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onlineMeeting
+     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +137,10 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property onlineMeetings in users
+     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @return a CompletableFuture of onlineMeeting
+     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@javax.annotation.Nonnull final OnlineMeeting body) {
@@ -146,10 +157,11 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property onlineMeetings in users
+     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onlineMeeting
+     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@javax.annotation.Nonnull final OnlineMeeting body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -167,7 +179,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property onlineMeetings for users
+     * Delete an onlineMeeting object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +187,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property onlineMeetings for users
+     * Delete an onlineMeeting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +206,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get onlineMeetings from users
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +214,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get onlineMeetings from users
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +235,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property onlineMeetings in users
+     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +244,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property onlineMeetings in users
+     * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +272,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get onlineMeetings from users
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -47,8 +47,9 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/primaryChannel/filesFolder{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Metadata for the location where the channel's files are stored.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get() {
@@ -65,9 +66,10 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Metadata for the location where the channel's files are stored.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +86,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Metadata for the location where the channel's files are stored.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -92,7 +94,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Metadata for the location where the channel's files are stored.
+     * Get the metadata for the location where the files of a channel are stored. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -113,7 +115,7 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Metadata for the location where the channel's files are stored.
+     * Get the metadata for the location where the files of a channel are stored. 
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -41,8 +41,9 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/includes/{permissionGrantConditionSet%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property includes for policies
+     * Deletes a permissionGrantConditionSet from the **includes** collection of a permissionGrantPolicy.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property includes for policies
+     * Deletes a permissionGrantConditionSet from the **includes** collection of a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -155,7 +157,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property includes for policies
+     * Deletes a permissionGrantConditionSet from the **includes** collection of a permissionGrantPolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +165,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property includes for policies
+     * Deletes a permissionGrantConditionSet from the **includes** collection of a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

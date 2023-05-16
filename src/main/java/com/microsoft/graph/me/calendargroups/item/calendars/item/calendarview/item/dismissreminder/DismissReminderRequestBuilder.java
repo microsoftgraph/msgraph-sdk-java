@@ -39,8 +39,9 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView/{event%2Did}/dismissReminder", rawUrl);
     }
     /**
-     * Invoke action dismissReminder
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-dismissreminder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action dismissReminder
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-dismissreminder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action dismissReminder
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class DismissReminderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action dismissReminder
+     * Dismiss a reminder that has been triggered for an event in a user calendar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

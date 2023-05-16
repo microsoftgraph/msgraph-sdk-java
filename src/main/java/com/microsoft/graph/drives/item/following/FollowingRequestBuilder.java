@@ -60,8 +60,9 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/following{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The list of items the user is following. Only in OneDrive for Business.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      * @return a CompletableFuture of DriveItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/drive-list-following?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of items the user is following. Only in OneDrive for Business.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DriveItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/drive-list-following?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of items the user is following. Only in OneDrive for Business.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of items the user is following. Only in OneDrive for Business.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of items the user is following. Only in OneDrive for Business.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      */
     public class GetQueryParameters {
         /** Include count of items */

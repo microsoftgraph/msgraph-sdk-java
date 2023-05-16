@@ -108,8 +108,9 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         }
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstance
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleInstance> get() {
@@ -126,9 +127,10 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         }
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignmentScheduleInstance
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentScheduleInstance> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -212,7 +214,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +222,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -278,7 +280,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Instances for active role assignments.
+     * Get the instance of an active role assignment.
      */
     public class GetQueryParameters {
         /** Expand related entities */

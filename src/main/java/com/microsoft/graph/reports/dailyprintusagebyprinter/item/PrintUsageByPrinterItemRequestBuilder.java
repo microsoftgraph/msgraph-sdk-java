@@ -78,8 +78,9 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get dailyPrintUsageByPrinter from reports
+     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @return a CompletableFuture of printUsageByPrinter
+     * @see <a href="https://docs.microsoft.com/graph/api/printusagebyprinter-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByPrinter> get() {
@@ -96,9 +97,10 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get dailyPrintUsageByPrinter from reports
+     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printUsageByPrinter
+     * @see <a href="https://docs.microsoft.com/graph/api/printusagebyprinter-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByPrinter> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get dailyPrintUsageByPrinter from reports
+     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get dailyPrintUsageByPrinter from reports
+     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get dailyPrintUsageByPrinter from reports
+     * Retrieve a usage summary for a printer for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      */
     public class GetQueryParameters {
         /** Expand related entities */

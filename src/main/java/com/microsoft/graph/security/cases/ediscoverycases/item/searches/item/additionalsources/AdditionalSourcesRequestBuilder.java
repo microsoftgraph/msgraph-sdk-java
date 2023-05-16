@@ -61,8 +61,9 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/additionalSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @return a CompletableFuture of DataSourceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSourceCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DataSourceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @return a CompletableFuture of dataSource
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> post(@javax.annotation.Nonnull final DataSource body) {
@@ -117,10 +120,11 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of dataSource
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> post(@javax.annotation.Nonnull final DataSource body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to additionalSources for security
+     * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Adds an additional source to the eDiscovery search.
+     * Get the list of additional sources associated with an eDiscovery search.
      */
     public class GetQueryParameters {
         /** Include count of items */

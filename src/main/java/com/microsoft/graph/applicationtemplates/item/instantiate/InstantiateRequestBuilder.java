@@ -40,9 +40,10 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applicationTemplates/{applicationTemplate%2Did}/instantiate", rawUrl);
     }
     /**
-     * Invoke action instantiate
+     * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the **applicationTemplate** object: `8adf8e6e-67b2-4cf2-a259-e3dc5476c621`.
      * @param body The request body
      * @return a CompletableFuture of applicationServicePrincipal
+     * @see <a href="https://docs.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationServicePrincipal> post(@javax.annotation.Nonnull final InstantiatePostRequestBody body) {
@@ -59,10 +60,11 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action instantiate
+     * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the **applicationTemplate** object: `8adf8e6e-67b2-4cf2-a259-e3dc5476c621`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of applicationServicePrincipal
+     * @see <a href="https://docs.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationServicePrincipal> post(@javax.annotation.Nonnull final InstantiatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action instantiate
+     * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the **applicationTemplate** object: `8adf8e6e-67b2-4cf2-a259-e3dc5476c621`.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class InstantiateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action instantiate
+     * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the **applicationTemplate** object: `8adf8e6e-67b2-4cf2-a259-e3dc5476c621`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

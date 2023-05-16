@@ -102,8 +102,9 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @return a CompletableFuture of accessPackageAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get() {
@@ -120,9 +121,10 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -206,7 +208,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +216,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +274,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The assignment of an access package to a subject for a period of time.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

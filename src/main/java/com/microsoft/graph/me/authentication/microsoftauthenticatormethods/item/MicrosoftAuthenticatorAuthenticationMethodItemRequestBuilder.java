@@ -47,8 +47,9 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         super(requestAdapter, "{+baseurl}/me/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property microsoftAuthenticatorMethods for me
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         }
     }
     /**
-     * Delete navigation property microsoftAuthenticatorMethods for me
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         }
     }
     /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
      * @return a CompletableFuture of microsoftAuthenticatorAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftAuthenticatorAuthenticationMethod> get() {
@@ -102,9 +105,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         }
     }
     /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of microsoftAuthenticatorAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftAuthenticatorAuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +125,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         }
     }
     /**
-     * Delete navigation property microsoftAuthenticatorMethods for me
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -129,7 +133,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property microsoftAuthenticatorMethods for me
+     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,7 +152,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return requestInfo;
     }
     /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +160,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extend
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -40,9 +40,10 @@ public class UnmuteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/unmute", rawUrl);
     }
     /**
-     * Invoke action unmute
+     * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param body The request body
      * @return a CompletableFuture of unmuteParticipantOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/call-unmute?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> post(@javax.annotation.Nonnull final UnmutePostRequestBody body) {
@@ -59,10 +60,11 @@ public class UnmuteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action unmute
+     * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unmuteParticipantOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/call-unmute?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> post(@javax.annotation.Nonnull final UnmutePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class UnmuteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action unmute
+     * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class UnmuteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action unmute
+     * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

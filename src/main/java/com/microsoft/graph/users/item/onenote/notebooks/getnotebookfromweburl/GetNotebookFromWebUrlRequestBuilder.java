@@ -40,9 +40,10 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/notebooks/getNotebookFromWebUrl", rawUrl);
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body The request body
      * @return a CompletableFuture of CopyNotebookModel
+     * @see <a href="https://docs.microsoft.com/graph/api/notebook-getnotebookfromweburl?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body) {
@@ -59,10 +60,11 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CopyNotebookModel
+     * @see <a href="https://docs.microsoft.com/graph/api/notebook-getnotebookfromweburl?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class GetNotebookFromWebUrlRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getNotebookFromWebUrl
+     * Retrieve the properties and relationships of a notebook object by using its URL path. The location can be user notebooks on Microsoft 365, group notebooks, or SharePoint site-hosted team notebooks on Microsoft 365.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

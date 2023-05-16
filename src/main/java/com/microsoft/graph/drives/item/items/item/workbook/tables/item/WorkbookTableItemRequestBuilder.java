@@ -107,8 +107,9 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property tables for drives
+     * Deletes the table.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -125,9 +126,10 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tables for drives
+     * Deletes the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -144,8 +146,9 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of tables associated with the workbook. Read-only.
+     * Retrieve the properties and relationships of table object.
      * @return a CompletableFuture of workbookTable
+     * @see <a href="https://docs.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> get() {
@@ -162,9 +165,10 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of tables associated with the workbook. Read-only.
+     * Retrieve the properties and relationships of table object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTable
+     * @see <a href="https://docs.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -181,9 +185,10 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tables in drives
+     * Update the properties of table object.
      * @param body The request body
      * @return a CompletableFuture of workbookTable
+     * @see <a href="https://docs.microsoft.com/graph/api/table-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@javax.annotation.Nonnull final WorkbookTable body) {
@@ -200,10 +205,11 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tables in drives
+     * Update the properties of table object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTable
+     * @see <a href="https://docs.microsoft.com/graph/api/table-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@javax.annotation.Nonnull final WorkbookTable body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -221,7 +227,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tables for drives
+     * Deletes the table.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -229,7 +235,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tables for drives
+     * Deletes the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +254,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a collection of tables associated with the workbook. Read-only.
+     * Retrieve the properties and relationships of table object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -256,7 +262,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a collection of tables associated with the workbook. Read-only.
+     * Retrieve the properties and relationships of table object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -277,7 +283,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property tables in drives
+     * Update the properties of table object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -286,7 +292,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property tables in drives
+     * Update the properties of table object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -314,7 +320,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a collection of tables associated with the workbook. Read-only.
+     * Retrieve the properties and relationships of table object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

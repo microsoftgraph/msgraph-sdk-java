@@ -61,8 +61,9 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/sections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects.
      * @return a CompletableFuture of OnenoteSectionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSectionCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnenoteSectionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

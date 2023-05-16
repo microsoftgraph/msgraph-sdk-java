@@ -78,8 +78,9 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get dailyPrintUsageByUser from reports
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
      * @return a CompletableFuture of printUsageByUser
+     * @see <a href="https://docs.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByUser> get() {
@@ -96,9 +97,10 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get dailyPrintUsageByUser from reports
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printUsageByUser
+     * @see <a href="https://docs.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsageByUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get dailyPrintUsageByUser from reports
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get dailyPrintUsageByUser from reports
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get dailyPrintUsageByUser from reports
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
      */
     public class GetQueryParameters {
         /** Expand related entities */

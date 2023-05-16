@@ -59,8 +59,9 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/installedApps/{teamsAppInstallation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property installedApps for chats
+     * Uninstall an app installed within a chat.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +78,10 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property installedApps for chats
+     * Uninstall an app installed within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-delete-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +98,9 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * Get an app installed in a chat.
      * @return a CompletableFuture of teamsAppInstallation
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> get() {
@@ -114,9 +117,10 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * Get an app installed in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAppInstallation
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-get-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -173,7 +177,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property installedApps for chats
+     * Uninstall an app installed within a chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +185,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property installedApps for chats
+     * Uninstall an app installed within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +204,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * Get an app installed in a chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +212,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * Get an app installed in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,7 +270,7 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * Get an app installed in a chat.
      */
     public class GetQueryParameters {
         /** Expand related entities */

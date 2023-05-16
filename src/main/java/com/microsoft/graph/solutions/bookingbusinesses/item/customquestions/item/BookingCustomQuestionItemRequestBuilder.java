@@ -41,8 +41,9 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customQuestions/{bookingCustomQuestion%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @return a CompletableFuture of bookingCustomQuestion
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> get() {
@@ -96,9 +99,10 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCustomQuestion
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @return a CompletableFuture of bookingCustomQuestion
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> patch(@javax.annotation.Nonnull final BookingCustomQuestion body) {
@@ -134,10 +139,11 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCustomQuestion
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> patch(@javax.annotation.Nonnull final BookingCustomQuestion body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

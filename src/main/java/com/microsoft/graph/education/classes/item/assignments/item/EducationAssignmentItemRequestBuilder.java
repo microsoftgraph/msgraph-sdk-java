@@ -83,8 +83,9 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for education
+     * Delete an existing assignment. Only teachers within a class can delete assignments.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -101,9 +102,10 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property assignments for education
+     * Delete an existing assignment. Only teachers within a class can delete assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -120,8 +122,9 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> get() {
@@ -138,9 +141,10 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -157,9 +161,10 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property assignments in education
+     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an **assignment** with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> patch(@javax.annotation.Nonnull final EducationAssignment body) {
@@ -176,10 +181,11 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property assignments in education
+     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an **assignment** with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> patch(@javax.annotation.Nonnull final EducationAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -197,7 +203,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property assignments for education
+     * Delete an existing assignment. Only teachers within a class can delete assignments.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -205,7 +211,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for education
+     * Delete an existing assignment. Only teachers within a class can delete assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -224,7 +230,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -232,7 +238,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -253,7 +259,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property assignments in education
+     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an **assignment** with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -262,7 +268,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignments in education
+     * Update an educationAssignment object.  Only teachers can perform this action.  Alternatively, request to change the status of an **assignment** with publish action. Don't use a PATCH operation for this purpose.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -290,7 +296,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All assignments associated with this class. Nullable.
+     * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      */
     public class GetQueryParameters {
         /** Expand related entities */

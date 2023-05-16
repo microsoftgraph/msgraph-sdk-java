@@ -78,8 +78,9 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Get swapShiftsChangeRequests from groups
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @return a CompletableFuture of swapShiftsChangeRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> get() {
@@ -96,9 +97,10 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Get swapShiftsChangeRequests from groups
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of swapShiftsChangeRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get swapShiftsChangeRequests from groups
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get swapShiftsChangeRequests from groups
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get swapShiftsChangeRequests from groups
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

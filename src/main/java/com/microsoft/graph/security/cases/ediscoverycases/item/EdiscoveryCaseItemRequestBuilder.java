@@ -95,8 +95,9 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property ediscoveryCases for security
+     * Delete an ediscoveryCase object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -113,9 +114,10 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property ediscoveryCases for security
+     * Delete an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-delete-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -132,8 +134,9 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get ediscoveryCases from security
+     * Read the properties and relationships of an ediscoveryCase object.
      * @return a CompletableFuture of ediscoveryCase
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCase> get() {
@@ -150,9 +153,10 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get ediscoveryCases from security
+     * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCase
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCase> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -169,9 +173,10 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property ediscoveryCases in security
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryCase
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCase> patch(@javax.annotation.Nonnull final EdiscoveryCase body) {
@@ -188,10 +193,11 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property ediscoveryCases in security
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCase
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCase> patch(@javax.annotation.Nonnull final EdiscoveryCase body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -209,7 +215,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property ediscoveryCases for security
+     * Delete an ediscoveryCase object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -217,7 +223,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property ediscoveryCases for security
+     * Delete an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -236,7 +242,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get ediscoveryCases from security
+     * Read the properties and relationships of an ediscoveryCase object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -244,7 +250,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get ediscoveryCases from security
+     * Read the properties and relationships of an ediscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -265,7 +271,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property ediscoveryCases in security
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -274,7 +280,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property ediscoveryCases in security
+     * Update the properties of an ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -302,7 +308,7 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get ediscoveryCases from security
+     * Read the properties and relationships of an ediscoveryCase object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

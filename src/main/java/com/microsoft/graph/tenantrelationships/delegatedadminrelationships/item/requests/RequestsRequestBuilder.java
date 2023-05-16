@@ -61,8 +61,9 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/requests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      * @return a CompletableFuture of DelegatedAdminRelationshipRequestCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-requests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipRequestCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminRelationshipRequestCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-requests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to requests for tenantRelationships
+     * Create a new delegatedAdminRelationshipRequest object.
      * @param body The request body
      * @return a CompletableFuture of delegatedAdminRelationshipRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-requests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipRequest> post(@javax.annotation.Nonnull final DelegatedAdminRelationshipRequest body) {
@@ -117,10 +120,11 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to requests for tenantRelationships
+     * Create a new delegatedAdminRelationshipRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminRelationshipRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-requests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipRequest> post(@javax.annotation.Nonnull final DelegatedAdminRelationshipRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to requests for tenantRelationships
+     * Create a new delegatedAdminRelationshipRequest object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to requests for tenantRelationships
+     * Create a new delegatedAdminRelationshipRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The requests associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

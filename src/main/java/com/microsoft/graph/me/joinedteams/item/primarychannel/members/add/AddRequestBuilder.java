@@ -39,9 +39,10 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/primaryChannel/members/add", rawUrl);
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @return a CompletableFuture of addResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/conversationmembers-add?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddResponse> post(@javax.annotation.Nonnull final AddPostRequestBody body) {
@@ -58,10 +59,11 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of addResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/conversationmembers-add?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddResponse> post(@javax.annotation.Nonnull final AddPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action add
+     * Add multiple members in a single request to a team. The response provides details about which memberships could and couldn't be created.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

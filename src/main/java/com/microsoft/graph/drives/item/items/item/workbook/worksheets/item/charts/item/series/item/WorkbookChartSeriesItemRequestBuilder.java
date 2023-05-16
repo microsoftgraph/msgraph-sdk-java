@@ -90,8 +90,9 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve the properties and relationships of chartseries object.
      * @return a CompletableFuture of workbookChartSeries
+     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeries> get() {
@@ -108,9 +109,10 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve the properties and relationships of chartseries object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartSeries
+     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeries> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +129,10 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property series in drives
+     * Update the properties of chartseries object.
      * @param body The request body
      * @return a CompletableFuture of workbookChartSeries
+     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeries> patch(@javax.annotation.Nonnull final WorkbookChartSeries body) {
@@ -146,10 +149,11 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property series in drives
+     * Update the properties of chartseries object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartSeries
+     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeries> patch(@javax.annotation.Nonnull final WorkbookChartSeries body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -194,7 +198,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve the properties and relationships of chartseries object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +206,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve the properties and relationships of chartseries object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +227,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property series in drives
+     * Update the properties of chartseries object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +236,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property series in drives
+     * Update the properties of chartseries object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +264,7 @@ public class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve the properties and relationships of chartseries object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

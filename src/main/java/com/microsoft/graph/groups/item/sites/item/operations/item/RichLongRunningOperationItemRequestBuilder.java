@@ -78,8 +78,9 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get the status of a rich long-running operation on a site or a list.
      * @return a CompletableFuture of richLongRunningOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> get() {
@@ -96,9 +97,10 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get the status of a rich long-running operation on a site or a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of richLongRunningOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get the status of a rich long-running operation on a site or a list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get the status of a rich long-running operation on a site or a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of long-running operations on the site.
+     * Get the status of a rich long-running operation on a site or a list.
      */
     public class GetQueryParameters {
         /** Expand related entities */

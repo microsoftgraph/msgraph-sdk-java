@@ -69,8 +69,9 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * Retrieve a list of chart objects.
      * @return a CompletableFuture of WorkbookChartCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartCollectionResponse> get() {
@@ -87,9 +88,10 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookChartCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,9 +128,10 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return new ItemWithNameRequestBuilder(pathParameters, requestAdapter, name);
     }
     /**
-     * Create new navigation property to charts for drives
+     * Use this API to create a new Chart.
      * @param body The request body
      * @return a CompletableFuture of workbookChart
+     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> post(@javax.annotation.Nonnull final WorkbookChart body) {
@@ -145,10 +148,11 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to charts for drives
+     * Use this API to create a new Chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChart
+     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> post(@javax.annotation.Nonnull final WorkbookChart body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -166,7 +170,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * Retrieve a list of chart objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -174,7 +178,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -195,7 +199,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to charts for drives
+     * Use this API to create a new Chart.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -204,7 +208,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to charts for drives
+     * Use this API to create a new Chart.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -227,7 +231,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * Retrieve a list of chart objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

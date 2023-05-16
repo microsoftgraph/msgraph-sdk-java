@@ -102,8 +102,9 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @return a CompletableFuture of subjectRightsRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> get() {
@@ -120,9 +121,10 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subjectRightsRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -139,9 +141,10 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property subjectRightsRequests in privacy
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @return a CompletableFuture of subjectRightsRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> patch(@javax.annotation.Nonnull final SubjectRightsRequest body) {
@@ -158,10 +161,11 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property subjectRightsRequests in privacy
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subjectRightsRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> patch(@javax.annotation.Nonnull final SubjectRightsRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -206,7 +210,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +218,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Read the properties and relationships of a subjectRightsRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +239,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property subjectRightsRequests in privacy
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -244,7 +248,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property subjectRightsRequests in privacy
+     * Update the properties of a subjectRightsRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -272,7 +276,7 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Read the properties and relationships of a subjectRightsRequest object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

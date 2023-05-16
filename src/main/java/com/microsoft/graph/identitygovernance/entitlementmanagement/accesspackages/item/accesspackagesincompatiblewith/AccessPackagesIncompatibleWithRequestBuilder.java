@@ -60,8 +60,9 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/accessPackagesIncompatibleWith{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The access packages that are incompatible with this package. Read-only.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The access packages that are incompatible with this package. Read-only.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The access packages that are incompatible with this package. Read-only.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * The access packages that are incompatible with this package. Read-only.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * The access packages that are incompatible with this package. Read-only.
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      */
     public class GetQueryParameters {
         /** Include count of items */

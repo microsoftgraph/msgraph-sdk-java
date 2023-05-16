@@ -96,8 +96,9 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replies for a specified message. Supports $expand for channel messages.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @return a CompletableFuture of chatMessage
+     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> get() {
@@ -114,9 +115,10 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replies for a specified message. Supports $expand for channel messages.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
+     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -200,7 +202,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Replies for a specified message. Supports $expand for channel messages.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +210,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Replies for a specified message. Supports $expand for channel messages.
+     * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,7 +268,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Replies for a specified message. Supports $expand for channel messages.
+     * Retrieve a single message or a message reply in a channel or a chat.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -1,6 +1,5 @@
 package com.microsoft.graph.groups.item.sites.item.lists.item.items;
 
-import com.microsoft.graph.groups.item.sites.item.lists.item.items.count.CountRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.lists.item.items.item.ListItemItemRequestBuilder;
 import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.ListItemCollectionResponse;
@@ -23,11 +22,6 @@ import java.util.Objects;
  * Provides operations to manage the items property of the microsoft.graph.list entity.
  */
 public class ItemsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
-    @javax.annotation.Nonnull
-    public CountRequestBuilder count() {
-        return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param listItemId Unique identifier of the item
@@ -48,7 +42,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public ItemsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items{?%24top,%24skip,%24search,%24filter,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new ItemsRequestBuilder and sets the default values.
@@ -58,11 +52,12 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public ItemsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items{?%24top,%24skip,%24search,%24filter,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * All items contained in the list.
+     * Get the collection of [items][item] in a [list][].
      * @return a CompletableFuture of ListItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemCollectionResponse> get() {
@@ -79,9 +74,10 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All items contained in the list.
+     * Get the collection of [items][item] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ListItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +94,10 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to items for groups
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @return a CompletableFuture of listItem
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> post(@javax.annotation.Nonnull final ListItem body) {
@@ -117,10 +114,11 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to items for groups
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of listItem
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> post(@javax.annotation.Nonnull final ListItem body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +136,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All items contained in the list.
+     * Get the collection of [items][item] in a [list][].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +144,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All items contained in the list.
+     * Get the collection of [items][item] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +165,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to items for groups
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +174,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to items for groups
+     * Create a new [listItem][] in a [list][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,13 +197,9 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All items contained in the list.
+     * Get the collection of [items][item] in a [list][].
      */
     public class GetQueryParameters {
-        /** Include count of items */
-        @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
-        public Boolean count;
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable

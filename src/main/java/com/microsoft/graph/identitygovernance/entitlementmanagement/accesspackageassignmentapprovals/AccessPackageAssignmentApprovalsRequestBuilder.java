@@ -72,7 +72,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @return a CompletableFuture of ApprovalCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -90,7 +90,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ApprovalCollectionResponse
      */
@@ -149,7 +149,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -157,7 +157,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -210,7 +210,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      */
     public class GetQueryParameters {
         /** Include count of items */

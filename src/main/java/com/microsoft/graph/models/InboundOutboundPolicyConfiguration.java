@@ -10,11 +10,11 @@ import java.util.Objects;
 public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The inboundAllowed property */
+    /** Defines whether external users coming inbound are allowed. */
     private Boolean inboundAllowed;
     /** The OdataType property */
     private String odataType;
-    /** The outboundAllowed property */
+    /** Defines whether internal users are allowed to go outbound. */
     private Boolean outboundAllowed;
     /**
      * Instantiates a new inboundOutboundPolicyConfiguration and sets the default values.
@@ -55,7 +55,7 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
         return deserializerMap;
     }
     /**
-     * Gets the inboundAllowed property value. The inboundAllowed property
+     * Gets the inboundAllowed property value. Defines whether external users coming inbound are allowed.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
         return this.odataType;
     }
     /**
-     * Gets the outboundAllowed property value. The outboundAllowed property
+     * Gets the outboundAllowed property value. Defines whether internal users are allowed to go outbound.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
         this.additionalData = value;
     }
     /**
-     * Sets the inboundAllowed property value. The inboundAllowed property
+     * Sets the inboundAllowed property value. Defines whether external users coming inbound are allowed.
      * @param value Value to set for the inboundAllowed property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder,
         this.odataType = value;
     }
     /**
-     * Sets the outboundAllowed property value. The outboundAllowed property
+     * Sets the outboundAllowed property value. Defines whether internal users are allowed to go outbound.
      * @param value Value to set for the outboundAllowed property.
      * @return a void
      */

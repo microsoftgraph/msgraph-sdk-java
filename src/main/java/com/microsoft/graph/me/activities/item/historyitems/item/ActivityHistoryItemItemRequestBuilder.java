@@ -121,9 +121,10 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property historyItems in me
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @return a CompletableFuture of activityHistoryItem
+     * @see <a href="https://docs.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItem> patch(@javax.annotation.Nonnull final ActivityHistoryItem body) {
@@ -140,10 +141,11 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property historyItems in me
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of activityHistoryItem
+     * @see <a href="https://docs.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItem> patch(@javax.annotation.Nonnull final ActivityHistoryItem body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -217,7 +219,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property historyItems in me
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +228,7 @@ public class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property historyItems in me
+     * Delete an existing history item for an existing user activity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

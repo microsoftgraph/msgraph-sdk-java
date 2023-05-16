@@ -61,8 +61,9 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @return a CompletableFuture of EdiscoverySearchCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearchCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoverySearchCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearchCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to searches for security
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @return a CompletableFuture of ediscoverySearch
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearch> post(@javax.annotation.Nonnull final EdiscoverySearch body) {
@@ -117,10 +120,11 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to searches for security
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoverySearch
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-post-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearch> post(@javax.annotation.Nonnull final EdiscoverySearch body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to searches for security
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to searches for security
+     * Create a new ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class SearchesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Get the list of ediscoverySearch resources from an eDiscoveryCase object.
      */
     public class GetQueryParameters {
         /** Include count of items */

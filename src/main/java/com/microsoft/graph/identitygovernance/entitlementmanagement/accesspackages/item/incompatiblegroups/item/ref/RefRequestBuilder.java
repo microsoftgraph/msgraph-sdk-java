@@ -40,8 +40,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleGroups/{group%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Delete ref of navigation property incompatibleGroups for identityGovernance
+     * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-delete-incompatiblegroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -58,9 +59,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete ref of navigation property incompatibleGroups for identityGovernance
+     * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-delete-incompatiblegroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete ref of navigation property incompatibleGroups for identityGovernance
+     * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete ref of navigation property incompatibleGroups for identityGovernance
+     * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -105,7 +107,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete ref of navigation property incompatibleGroups for identityGovernance
+     * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
      */
     public class DeleteQueryParameters {
         /** Delete Uri */

@@ -108,8 +108,9 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Schedules for active role assignment operations.
+     * Retrieve the schedule for an active role assignment operation.
      * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> get() {
@@ -126,9 +127,10 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Schedules for active role assignment operations.
+     * Retrieve the schedule for an active role assignment operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignmentSchedule
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -212,7 +214,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Schedules for active role assignment operations.
+     * Retrieve the schedule for an active role assignment operation.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +222,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Schedules for active role assignment operations.
+     * Retrieve the schedule for an active role assignment operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -278,7 +280,7 @@ public class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Schedules for active role assignment operations.
+     * Retrieve the schedule for an active role assignment operation.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -68,8 +68,9 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve a list of notebook objects.
      * @return a CompletableFuture of NotebookCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotebookCollectionResponse> get() {
@@ -86,9 +87,10 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve a list of notebook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of NotebookCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotebookCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder(pathParameters, requestAdapter, includePersonalNotebooks);
     }
     /**
-     * Create new navigation property to notebooks for groups
+     * Create a new OneNote notebook.
      * @param body The request body
      * @return a CompletableFuture of notebook
+     * @see <a href="https://docs.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Notebook> post(@javax.annotation.Nonnull final Notebook body) {
@@ -134,10 +137,11 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to notebooks for groups
+     * Create a new OneNote notebook.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of notebook
+     * @see <a href="https://docs.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Notebook> post(@javax.annotation.Nonnull final Notebook body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve a list of notebook objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve a list of notebook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -184,7 +188,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to notebooks for groups
+     * Create a new OneNote notebook.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -193,7 +197,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to notebooks for groups
+     * Create a new OneNote notebook.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -216,7 +220,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve a list of notebook objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

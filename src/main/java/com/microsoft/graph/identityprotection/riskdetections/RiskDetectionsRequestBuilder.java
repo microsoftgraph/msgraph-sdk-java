@@ -61,8 +61,9 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskDetections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Get a list of the riskDetection objects and their properties.
      * @return a CompletableFuture of RiskDetectionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Get a list of the riskDetection objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RiskDetectionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Get a list of the riskDetection objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Get a list of the riskDetection objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Get a list of the riskDetection objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

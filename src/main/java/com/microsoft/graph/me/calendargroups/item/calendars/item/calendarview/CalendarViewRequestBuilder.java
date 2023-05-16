@@ -66,8 +66,9 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarView{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * The calendar view for the calendar. Navigation property. Read-only.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
      * @return a CompletableFuture of EventCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get() {
@@ -84,9 +85,10 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The calendar view for the calendar. Navigation property. Read-only.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EventCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The calendar view for the calendar. Navigation property. Read-only.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -111,7 +113,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The calendar view for the calendar. Navigation property. Read-only.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +134,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The calendar view for the calendar. Navigation property. Read-only.
+     * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -53,8 +53,9 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}/documentSetVersions/{documentSetVersion%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property documentSetVersions for sites
+     * Delete a version of a document set in a list.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,9 +72,10 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property documentSetVersions for sites
+     * Delete a version of a document set in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,8 +92,9 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @return a CompletableFuture of documentSetVersion
+     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersion> get() {
@@ -108,9 +111,10 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of documentSetVersion
+     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersion> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +171,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property documentSetVersions for sites
+     * Delete a version of a document set in a list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +179,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property documentSetVersions for sites
+     * Delete a version of a document set in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +198,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +206,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +264,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

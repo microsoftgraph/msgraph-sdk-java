@@ -84,8 +84,9 @@ public class FileRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Default PDF linked to this agreement.
+     * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
      * @return a CompletableFuture of agreementFile
+     * @see <a href="https://docs.microsoft.com/graph/api/agreementfile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFile> get() {
@@ -102,9 +103,10 @@ public class FileRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Default PDF linked to this agreement.
+     * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreementFile
+     * @see <a href="https://docs.microsoft.com/graph/api/agreementfile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFile> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class FileRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Default PDF linked to this agreement.
+     * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class FileRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Default PDF linked to this agreement.
+     * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class FileRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Default PDF linked to this agreement.
+     * Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

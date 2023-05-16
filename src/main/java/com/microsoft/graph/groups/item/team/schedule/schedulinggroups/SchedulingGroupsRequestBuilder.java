@@ -61,8 +61,9 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/schedulingGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select}", rawUrl);
     }
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @return a CompletableFuture of SchedulingGroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroupCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SchedulingGroupCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to schedulingGroups for groups
+     * Create a new schedulingGroup.
      * @param body The request body
      * @return a CompletableFuture of schedulingGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> post(@javax.annotation.Nonnull final SchedulingGroup body) {
@@ -117,10 +120,11 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to schedulingGroups for groups
+     * Create a new schedulingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schedulingGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> post(@javax.annotation.Nonnull final SchedulingGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to schedulingGroups for groups
+     * Create a new schedulingGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to schedulingGroups for groups
+     * Create a new schedulingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      */
     public class GetQueryParameters {
         /** Include count of items */

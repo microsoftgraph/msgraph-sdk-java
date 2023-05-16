@@ -61,8 +61,9 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/onenote/notebooks/{notebook%2Did}/sectionGroups/{sectionGroup%2Did}/sections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The sections in the section group. Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @return a CompletableFuture of OnenoteSectionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSectionCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The sections in the section group. Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnenoteSectionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to sections for groups
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @return a CompletableFuture of onenoteSection
+     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> post(@javax.annotation.Nonnull final OnenoteSection body) {
@@ -117,10 +120,11 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to sections for groups
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenoteSection
+     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> post(@javax.annotation.Nonnull final OnenoteSection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The sections in the section group. Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The sections in the section group. Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to sections for groups
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to sections for groups
+     * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The sections in the section group. Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects from the specified section group.
      */
     public class GetQueryParameters {
         /** Include count of items */

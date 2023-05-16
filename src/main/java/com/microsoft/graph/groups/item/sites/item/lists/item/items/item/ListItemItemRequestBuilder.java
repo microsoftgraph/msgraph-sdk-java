@@ -90,8 +90,9 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property items for groups
+     * Removes an item from a [list][].
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -108,9 +109,10 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property items for groups
+     * Removes an item from a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -127,8 +129,9 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All items contained in the list.
+     * Returns the metadata for an [item][] in a [list][].
      * @return a CompletableFuture of listItem
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> get() {
@@ -145,9 +148,10 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All items contained in the list.
+     * Returns the metadata for an [item][] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of listItem
+     * @see <a href="https://docs.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -218,7 +222,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property items for groups
+     * Removes an item from a [list][].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -226,7 +230,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property items for groups
+     * Removes an item from a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -245,7 +249,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All items contained in the list.
+     * Returns the metadata for an [item][] in a [list][].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -253,7 +257,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All items contained in the list.
+     * Returns the metadata for an [item][] in a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -311,7 +315,7 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All items contained in the list.
+     * Returns the metadata for an [item][] in a [list][].
      */
     public class GetQueryParameters {
         /** Expand related entities */

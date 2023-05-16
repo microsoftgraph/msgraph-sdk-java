@@ -41,8 +41,9 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/outlook/masterCategories/{outlookCategory%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property masterCategories for me
+     * Delete the specified outlookCategory object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property masterCategories for me
+     * Delete the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of categories defined for the user.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @return a CompletableFuture of outlookCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> get() {
@@ -96,9 +99,10 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of categories defined for the user.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property masterCategories in me
+     * Update the writable property, **color**, of the specified outlookCategory object. You cannot modify the **displayName** property once you have created the category.
      * @param body The request body
      * @return a CompletableFuture of outlookCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> patch(@javax.annotation.Nonnull final OutlookCategory body) {
@@ -134,10 +139,11 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property masterCategories in me
+     * Update the writable property, **color**, of the specified outlookCategory object. You cannot modify the **displayName** property once you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> patch(@javax.annotation.Nonnull final OutlookCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property masterCategories for me
+     * Delete the specified outlookCategory object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property masterCategories for me
+     * Delete the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A list of categories defined for the user.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A list of categories defined for the user.
+     * Get the properties and relationships of the specified outlookCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property masterCategories in me
+     * Update the writable property, **color**, of the specified outlookCategory object. You cannot modify the **displayName** property once you have created the category.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property masterCategories in me
+     * Update the writable property, **color**, of the specified outlookCategory object. You cannot modify the **displayName** property once you have created the category.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class OutlookCategoryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A list of categories defined for the user.
+     * Get the properties and relationships of the specified outlookCategory object.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */

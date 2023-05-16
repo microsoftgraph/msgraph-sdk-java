@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
-    /** The appId property */
+    /** The globally unique identifier of the application to which access has been granted. */
     private String appId;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
@@ -29,7 +29,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
         return new AccessReviewInstanceDecisionItemServicePrincipalResource();
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The globally unique identifier of the application to which access has been granted.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
         writer.writeStringValue("appId", this.getAppId());
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The globally unique identifier of the application to which access has been granted.
      * @param value Value to set for the appId property.
      * @return a void
      */

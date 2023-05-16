@@ -41,8 +41,9 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/administrativeUnit{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The underlying administrativeUnit for this school.
+     * Get a list of **administrativeUnits** associated with an educationSchool object.
      * @return a CompletableFuture of administrativeUnit
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-list-administrativeunit?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get() {
@@ -59,9 +60,10 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The underlying administrativeUnit for this school.
+     * Get a list of **administrativeUnits** associated with an educationSchool object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-list-administrativeunit?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +120,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The underlying administrativeUnit for this school.
+     * Get a list of **administrativeUnits** associated with an educationSchool object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -126,7 +128,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The underlying administrativeUnit for this school.
+     * Get a list of **administrativeUnits** associated with an educationSchool object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +181,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The underlying administrativeUnit for this school.
+     * Get a list of **administrativeUnits** associated with an educationSchool object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

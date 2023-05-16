@@ -53,8 +53,9 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property permissionGrantPolicies for policies
+     * Delete a permissionGrantPolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,9 +72,10 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property permissionGrantPolicies for policies
+     * Delete a permissionGrantPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,8 +92,9 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve a single permissionGrantPolicy object.
      * @return a CompletableFuture of permissionGrantPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> get() {
@@ -108,9 +111,10 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve a single permissionGrantPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +131,10 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property permissionGrantPolicies in policies
+     * Update properties of a  permissionGrantPolicy.
      * @param body The request body
      * @return a CompletableFuture of permissionGrantPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patch(@javax.annotation.Nonnull final PermissionGrantPolicy body) {
@@ -146,10 +151,11 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property permissionGrantPolicies in policies
+     * Update properties of a  permissionGrantPolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patch(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -167,7 +173,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property permissionGrantPolicies for policies
+     * Delete a permissionGrantPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +181,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property permissionGrantPolicies for policies
+     * Delete a permissionGrantPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +200,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve a single permissionGrantPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +208,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve a single permissionGrantPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +229,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property permissionGrantPolicies in policies
+     * Update properties of a  permissionGrantPolicy.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +238,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property permissionGrantPolicies in policies
+     * Update properties of a  permissionGrantPolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +266,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve a single permissionGrantPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

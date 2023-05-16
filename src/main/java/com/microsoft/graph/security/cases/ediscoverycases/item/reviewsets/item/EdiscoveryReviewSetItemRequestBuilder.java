@@ -90,8 +90,9 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Read the properties and relationships of an ediscoveryReviewSet object.
      * @return a CompletableFuture of ediscoveryReviewSet
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSet> get() {
@@ -108,9 +109,10 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Read the properties and relationships of an ediscoveryReviewSet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSet
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSet> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +196,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Read the properties and relationships of an ediscoveryReviewSet object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +204,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Read the properties and relationships of an ediscoveryReviewSet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +262,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Read the properties and relationships of an ediscoveryReviewSet object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

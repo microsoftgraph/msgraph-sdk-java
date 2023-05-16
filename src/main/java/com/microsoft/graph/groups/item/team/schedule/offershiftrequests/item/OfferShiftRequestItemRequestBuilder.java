@@ -78,8 +78,9 @@ public class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get offerShiftRequests from groups
+     * Retrieve the properties and relationships of an offerShiftRequest object.
      * @return a CompletableFuture of offerShiftRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfferShiftRequest> get() {
@@ -96,9 +97,10 @@ public class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get offerShiftRequests from groups
+     * Retrieve the properties and relationships of an offerShiftRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of offerShiftRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfferShiftRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get offerShiftRequests from groups
+     * Retrieve the properties and relationships of an offerShiftRequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get offerShiftRequests from groups
+     * Retrieve the properties and relationships of an offerShiftRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get offerShiftRequests from groups
+     * Retrieve the properties and relationships of an offerShiftRequest object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

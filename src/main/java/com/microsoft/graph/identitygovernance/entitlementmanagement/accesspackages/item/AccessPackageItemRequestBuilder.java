@@ -77,8 +77,9 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,9 +96,10 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,8 +116,9 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @return a CompletableFuture of accessPackage
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get() {
@@ -132,9 +135,10 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,9 +155,10 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a CompletableFuture of accessPackage
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body) {
@@ -170,10 +175,11 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> patch(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +197,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -199,7 +205,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -218,7 +224,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -226,7 +232,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -247,7 +253,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -256,7 +262,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -284,7 +290,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve the properties and relationships of an accessPackage object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

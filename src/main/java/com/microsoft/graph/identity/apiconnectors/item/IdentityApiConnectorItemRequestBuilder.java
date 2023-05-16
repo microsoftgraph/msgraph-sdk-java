@@ -47,8 +47,9 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/apiConnectors/{identityApiConnector%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property apiConnectors for identity
+     * Delete an identityApiConnector object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property apiConnectors for identity
+     * Delete an identityApiConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for API connectors.
+     * Read the properties of an identityApiConnector object.
      * @return a CompletableFuture of identityApiConnector
+     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> get() {
@@ -102,9 +105,10 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for API connectors.
+     * Read the properties of an identityApiConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityApiConnector
+     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property apiConnectors in identity
+     * Update the properties of an identityApiConnector object.
      * @param body The request body
      * @return a CompletableFuture of identityApiConnector
+     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> patch(@javax.annotation.Nonnull final IdentityApiConnector body) {
@@ -140,10 +145,11 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property apiConnectors in identity
+     * Update the properties of an identityApiConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityApiConnector
+     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> patch(@javax.annotation.Nonnull final IdentityApiConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property apiConnectors for identity
+     * Delete an identityApiConnector object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property apiConnectors for identity
+     * Delete an identityApiConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for API connectors.
+     * Read the properties of an identityApiConnector object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for API connectors.
+     * Read the properties of an identityApiConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property apiConnectors in identity
+     * Update the properties of an identityApiConnector object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property apiConnectors in identity
+     * Update the properties of an identityApiConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents entry point for API connectors.
+     * Read the properties of an identityApiConnector object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

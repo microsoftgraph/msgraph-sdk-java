@@ -61,8 +61,9 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents queries within the review set.
+     * Get the list of queries associated with an eDiscovery review set.
      * @return a CompletableFuture of EdiscoveryReviewSetQueryCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQueryCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents queries within the review set.
+     * Get the list of queries associated with an eDiscovery review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryReviewSetQueryCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQueryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to queries for security
+     * Create a new ediscoveryReviewSetQuery object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> post(@javax.annotation.Nonnull final EdiscoveryReviewSetQuery body) {
@@ -117,10 +120,11 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to queries for security
+     * Create a new ediscoveryReviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> post(@javax.annotation.Nonnull final EdiscoveryReviewSetQuery body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents queries within the review set.
+     * Get the list of queries associated with an eDiscovery review set.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents queries within the review set.
+     * Get the list of queries associated with an eDiscovery review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to queries for security
+     * Create a new ediscoveryReviewSetQuery object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to queries for security
+     * Create a new ediscoveryReviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents queries within the review set.
+     * Get the list of queries associated with an eDiscovery review set.
      */
     public class GetQueryParameters {
         /** Include count of items */

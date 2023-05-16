@@ -78,8 +78,9 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @return a CompletableFuture of workbookCommentReply
+     * @see <a href="https://docs.microsoft.com/graph/api/workbookcommentreply-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentReply> get() {
@@ -96,9 +97,10 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookCommentReply
+     * @see <a href="https://docs.microsoft.com/graph/api/workbookcommentreply-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentReply> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

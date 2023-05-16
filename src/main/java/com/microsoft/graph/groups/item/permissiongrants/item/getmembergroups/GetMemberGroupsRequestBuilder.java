@@ -39,9 +39,10 @@ public class GetMemberGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/permissionGrants/{resourceSpecificPermissionGrant%2Did}/getMemberGroups", rawUrl);
     }
     /**
-     * Invoke action getMemberGroups
+     * Return all the group IDs for the groups that the specified user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive.
      * @param body The request body
      * @return a CompletableFuture of getMemberGroupsResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getmembergroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsPostRequestBody body) {
@@ -58,10 +59,11 @@ public class GetMemberGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getMemberGroups
+     * Return all the group IDs for the groups that the specified user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getMemberGroupsResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getmembergroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class GetMemberGroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getMemberGroups
+     * Return all the group IDs for the groups that the specified user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class GetMemberGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getMemberGroups
+     * Return all the group IDs for the groups that the specified user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

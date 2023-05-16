@@ -102,8 +102,9 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a sectionGroup object.
      * @return a CompletableFuture of sectionGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get() {
@@ -120,9 +121,10 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a sectionGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sectionGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SectionGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -206,7 +208,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a sectionGroup object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +216,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a sectionGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +274,7 @@ public class SectionGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a sectionGroup object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

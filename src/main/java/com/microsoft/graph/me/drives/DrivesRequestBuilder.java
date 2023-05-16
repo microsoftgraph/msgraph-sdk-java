@@ -60,8 +60,9 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/drives{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of drives available for this user. Read-only.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @return a CompletableFuture of DriveCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of drives available for this user. Read-only.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DriveCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of drives available for this user. Read-only.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of drives available for this user. Read-only.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of drives available for this user. Read-only.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site.
      */
     public class GetQueryParameters {
         /** Include count of items */

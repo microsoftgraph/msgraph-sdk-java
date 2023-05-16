@@ -59,8 +59,9 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property assignmentPolicies for identityGovernance
+     * In Azure AD entitlement management, delete an accessPackageAssignmentPolicy.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +78,10 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Delete navigation property assignmentPolicies for identityGovernance
+     * In Azure AD entitlement management, delete an accessPackageAssignmentPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +98,9 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> get() {
@@ -114,9 +117,10 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -173,7 +177,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Delete navigation property assignmentPolicies for identityGovernance
+     * In Azure AD entitlement management, delete an accessPackageAssignmentPolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +185,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignmentPolicies for identityGovernance
+     * In Azure AD entitlement management, delete an accessPackageAssignmentPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +204,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +212,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,7 +270,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

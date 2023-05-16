@@ -84,8 +84,9 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a `404 Not Found` error is returned.
      * @return a CompletableFuture of accessReviewHistoryDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewhistorydefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinition> get() {
@@ -102,9 +103,10 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a `404 Not Found` error is returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewHistoryDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewhistorydefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinition> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a `404 Not Found` error is returned.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a `404 Not Found` error is returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a `404 Not Found` error is returned.
      */
     public class GetQueryParameters {
         /** Expand related entities */

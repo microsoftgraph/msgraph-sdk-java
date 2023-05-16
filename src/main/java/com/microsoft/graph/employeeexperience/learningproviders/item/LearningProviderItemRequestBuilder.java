@@ -47,8 +47,9 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property learningProviders for employeeExperience
+     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property learningProviders for employeeExperience
+     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of learning providers.
+     * Read the properties and relationships of a learningProvider object.
      * @return a CompletableFuture of learningProvider
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> get() {
@@ -102,9 +105,10 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of learning providers.
+     * Read the properties and relationships of a learningProvider object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningProvider
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property learningProviders in employeeExperience
+     * Update the properties of a learningProvider object.
      * @param body The request body
      * @return a CompletableFuture of learningProvider
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> patch(@javax.annotation.Nonnull final LearningProvider body) {
@@ -140,10 +145,11 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property learningProviders in employeeExperience
+     * Update the properties of a learningProvider object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningProvider
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> patch(@javax.annotation.Nonnull final LearningProvider body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property learningProviders for employeeExperience
+     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property learningProviders for employeeExperience
+     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of learning providers.
+     * Read the properties and relationships of a learningProvider object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of learning providers.
+     * Read the properties and relationships of a learningProvider object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property learningProviders in employeeExperience
+     * Update the properties of a learningProvider object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property learningProviders in employeeExperience
+     * Update the properties of a learningProvider object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of learning providers.
+     * Read the properties and relationships of a learningProvider object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

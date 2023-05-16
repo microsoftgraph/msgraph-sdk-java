@@ -78,8 +78,9 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @return a CompletableFuture of delegatedAdminRelationshipOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipOperation> get() {
@@ -96,9 +97,10 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminRelationshipOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

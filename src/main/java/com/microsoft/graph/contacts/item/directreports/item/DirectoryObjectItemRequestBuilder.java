@@ -53,7 +53,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/directReports/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of directoryObject
      */
     @javax.annotation.Nonnull
@@ -71,7 +71,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -90,7 +90,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -98,7 +98,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /** Expand related entities */

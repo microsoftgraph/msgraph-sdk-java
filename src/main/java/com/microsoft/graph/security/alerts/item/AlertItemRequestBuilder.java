@@ -41,8 +41,9 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/alerts/{alert%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get() {
@@ -59,9 +60,10 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,9 +80,10 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable **alert** property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> patch(@javax.annotation.Nonnull final Alert body) {
@@ -97,10 +100,11 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable **alert** property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> patch(@javax.annotation.Nonnull final Alert body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -118,7 +122,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -126,7 +130,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +151,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable **alert** property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -156,7 +160,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property alerts in security
+     * Update an editable **alert** property within any integrated solution to keep alert status and assignments in sync across solutions. This method updates any solution that has a record of the referenced alert ID.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +183,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get alerts from security
+     * Retrieve the properties and relationships of an alert object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

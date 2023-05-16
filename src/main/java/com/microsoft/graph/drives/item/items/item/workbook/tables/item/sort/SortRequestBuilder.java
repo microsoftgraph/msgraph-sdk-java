@@ -96,8 +96,9 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * Retrieve the properties and relationships of tablesort object.
      * @return a CompletableFuture of workbookTableSort
+     * @see <a href="https://docs.microsoft.com/graph/api/tablesort-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableSort> get() {
@@ -114,9 +115,10 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * Retrieve the properties and relationships of tablesort object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableSort
+     * @see <a href="https://docs.microsoft.com/graph/api/tablesort-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableSort> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -200,7 +202,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * Retrieve the properties and relationships of tablesort object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +210,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * Retrieve the properties and relationships of tablesort object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,7 +268,7 @@ public class SortRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the sorting for the table. Read-only.
+     * Retrieve the properties and relationships of tablesort object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -61,8 +61,9 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/tokenIssuancePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Get a list of tokenIssuancePolicy objects.
      * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Get a list of tokenIssuancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @return a CompletableFuture of tokenIssuancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> post(@javax.annotation.Nonnull final TokenIssuancePolicy body) {
@@ -117,10 +120,11 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenIssuancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> post(@javax.annotation.Nonnull final TokenIssuancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Get a list of tokenIssuancePolicy objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Get a list of tokenIssuancePolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to tokenIssuancePolicies for policies
+     * Create a new tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Get a list of tokenIssuancePolicy objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

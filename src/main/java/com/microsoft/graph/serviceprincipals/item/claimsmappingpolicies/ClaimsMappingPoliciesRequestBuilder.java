@@ -66,8 +66,9 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/claimsMappingPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @return a CompletableFuture of ClaimsMappingPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ClaimsMappingPolicyCollectionResponse> get() {
@@ -84,9 +85,10 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ClaimsMappingPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ClaimsMappingPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -111,7 +113,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +134,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      */
     public class GetQueryParameters {
         /** Include count of items */

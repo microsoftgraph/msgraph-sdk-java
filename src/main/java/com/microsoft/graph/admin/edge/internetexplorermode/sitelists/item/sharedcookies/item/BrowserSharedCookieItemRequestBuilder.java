@@ -41,8 +41,9 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}/sharedCookies/{browserSharedCookie%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property sharedCookies for admin
+     * Delete a browserSharedCookie from a browserSiteList.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property sharedCookies for admin
+     * Delete a browserSharedCookie from a browserSiteList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      * @return a CompletableFuture of browserSharedCookie
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> get() {
@@ -96,9 +99,10 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSharedCookie
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property sharedCookies in admin
+     * Update the properties of a browserSharedCookie object.
      * @param body The request body
      * @return a CompletableFuture of browserSharedCookie
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> patch(@javax.annotation.Nonnull final BrowserSharedCookie body) {
@@ -134,10 +139,11 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property sharedCookies in admin
+     * Update the properties of a browserSharedCookie object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSharedCookie
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> patch(@javax.annotation.Nonnull final BrowserSharedCookie body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property sharedCookies for admin
+     * Delete a browserSharedCookie from a browserSiteList.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property sharedCookies for admin
+     * Delete a browserSharedCookie from a browserSiteList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property sharedCookies in admin
+     * Update the properties of a browserSharedCookie object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property sharedCookies in admin
+     * Update the properties of a browserSharedCookie object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      */
     public class GetQueryParameters {
         /** Expand related entities */

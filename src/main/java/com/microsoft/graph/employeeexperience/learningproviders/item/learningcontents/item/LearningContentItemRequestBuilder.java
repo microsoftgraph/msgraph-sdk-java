@@ -41,8 +41,9 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents/{learningContent%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property learningContents for employeeExperience
+     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property learningContents for employeeExperience
+     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Learning catalog items for the provider.
+     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @return a CompletableFuture of learningContent
+     * @see <a href="https://docs.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> get() {
@@ -96,9 +99,10 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Learning catalog items for the provider.
+     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningContent
+     * @see <a href="https://docs.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningContent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property learningContents for employeeExperience
+     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property learningContents for employeeExperience
+     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Learning catalog items for the provider.
+     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Learning catalog items for the provider.
+     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +252,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Learning catalog items for the provider.
+     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      */
     public class GetQueryParameters {
         /** Expand related entities */

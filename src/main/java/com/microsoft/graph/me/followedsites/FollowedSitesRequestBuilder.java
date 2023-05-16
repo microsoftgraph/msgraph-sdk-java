@@ -60,8 +60,9 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/followedSites{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get followedSites from me
+     * List the sites that have been followed by the signed in user.
      * @return a CompletableFuture of SiteCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get followedSites from me
+     * List the sites that have been followed by the signed in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SiteCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get followedSites from me
+     * List the sites that have been followed by the signed in user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get followedSites from me
+     * List the sites that have been followed by the signed in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get followedSites from me
+     * List the sites that have been followed by the signed in user.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -39,8 +39,9 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/noncustodialDataSources/{ediscoveryNoncustodialDataSource%2Did}/microsoft.graph.security.release", rawUrl);
     }
     /**
-     * Invoke action release
+     * Release the non-custodial data source from the case.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Invoke action release
+     * Release the non-custodial data source from the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Invoke action release
+     * Release the non-custodial data source from the case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action release
+     * Release the non-custodial data source from the case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

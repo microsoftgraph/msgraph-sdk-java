@@ -67,8 +67,9 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/chats/{chat%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of all the members in the chat. Nullable.
+     * Retrieve a conversationMember from a chat or channel.
      * @return a CompletableFuture of ConversationMemberCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get() {
@@ -85,9 +86,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the members in the chat. Nullable.
+     * Retrieve a conversationMember from a chat or channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConversationMemberCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMemberCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,9 +106,10 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to members for me
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @return a CompletableFuture of conversationMember
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> post(@javax.annotation.Nonnull final ConversationMember body) {
@@ -123,10 +126,11 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to members for me
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> post(@javax.annotation.Nonnull final ConversationMember body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +148,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the members in the chat. Nullable.
+     * Retrieve a conversationMember from a chat or channel.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +156,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the members in the chat. Nullable.
+     * Retrieve a conversationMember from a chat or channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +177,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to members for me
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to members for me
+     * Add a conversationMember to a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +209,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the members in the chat. Nullable.
+     * Retrieve a conversationMember from a chat or channel.
      */
     public class GetQueryParameters {
         /** Include count of items */

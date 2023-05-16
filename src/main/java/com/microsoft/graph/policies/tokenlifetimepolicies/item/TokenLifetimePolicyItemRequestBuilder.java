@@ -47,8 +47,9 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/tokenLifetimePolicies/{tokenLifetimePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property tokenLifetimePolicies for policies
+     * Delete a tokenLifetimePolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tokenLifetimePolicies for policies
+     * Delete a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @return a CompletableFuture of tokenLifetimePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> get() {
@@ -102,9 +105,10 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenLifetimePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tokenLifetimePolicies in policies
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @return a CompletableFuture of tokenLifetimePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> patch(@javax.annotation.Nonnull final TokenLifetimePolicy body) {
@@ -140,10 +145,11 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tokenLifetimePolicies in policies
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenLifetimePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> patch(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tokenLifetimePolicies for policies
+     * Delete a tokenLifetimePolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tokenLifetimePolicies for policies
+     * Delete a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property tokenLifetimePolicies in policies
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property tokenLifetimePolicies in policies
+     * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

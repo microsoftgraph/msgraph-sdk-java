@@ -4,6 +4,8 @@ import com.microsoft.graph.models.callrecords.CallRecord;
 import com.microsoft.graph.models.callrecords.Segment;
 import com.microsoft.graph.models.callrecords.Session;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
+import com.microsoft.graph.models.externalconnectors.ExternalActivity;
+import com.microsoft.graph.models.externalconnectors.ExternalActivityResult;
 import com.microsoft.graph.models.externalconnectors.ExternalConnection;
 import com.microsoft.graph.models.externalconnectors.ExternalGroup;
 import com.microsoft.graph.models.externalconnectors.ExternalItem;
@@ -332,6 +334,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.extension": return new Extension();
             case "#microsoft.graph.extensionProperty": return new ExtensionProperty();
             case "#microsoft.graph.externalConnectors.connectionOperation": return new ConnectionOperation();
+            case "#microsoft.graph.externalConnectors.externalActivity": return new ExternalActivity();
+            case "#microsoft.graph.externalConnectors.externalActivityResult": return new ExternalActivityResult();
             case "#microsoft.graph.externalConnectors.externalConnection": return new ExternalConnection();
             case "#microsoft.graph.externalConnectors.externalGroup": return new ExternalGroup();
             case "#microsoft.graph.externalConnectors.externalItem": return new ExternalItem();
@@ -595,8 +599,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.serviceHealth": return new ServiceHealth();
             case "#microsoft.graph.serviceHealthIssue": return new ServiceHealthIssue();
             case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
-            case "#microsoft.graph.servicePrincipalRiskDetection": return new ServicePrincipalRiskDetection();
-            case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
         }
         return null;
     }
@@ -608,6 +610,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.servicePrincipalRiskDetection": return new ServicePrincipalRiskDetection();
+            case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
             case "#microsoft.graph.settingStateDeviceSummary": return new SettingStateDeviceSummary();
             case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
             case "#microsoft.graph.sharedInsight": return new SharedInsight();

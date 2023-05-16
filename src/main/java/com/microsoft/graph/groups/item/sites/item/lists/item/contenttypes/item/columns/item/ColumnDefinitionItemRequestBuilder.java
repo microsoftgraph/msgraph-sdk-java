@@ -47,8 +47,9 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/columns/{columnDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property columns for groups
+     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/columndefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property columns for groups
+     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/columndefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of column definitions for this contentType.
+     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
      * @return a CompletableFuture of columnDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/columndefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
@@ -102,9 +105,10 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of column definitions for this contentType.
+     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/columndefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,7 +165,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property columns for groups
+     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +173,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property columns for groups
+     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +192,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of column definitions for this contentType.
+     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of column definitions for this contentType.
+     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +258,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of column definitions for this contentType.
+     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
      */
     public class GetQueryParameters {
         /** Expand related entities */

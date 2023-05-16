@@ -17,7 +17,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     /** The type of the referenced object in the partner tenant. Read-only. */
     private String objectType;
     /**
-     * Instantiates a new directoryObjectPartnerReference and sets the default values.
+     * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -28,7 +28,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directoryObjectPartnerReference
+     * @return a DirectoryObjectPartnerReference
      */
     @javax.annotation.Nonnull
     public static DirectoryObjectPartnerReference createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

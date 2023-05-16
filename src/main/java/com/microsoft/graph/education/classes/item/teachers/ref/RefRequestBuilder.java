@@ -42,8 +42,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/teachers/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * All teachers in the class. Nullable.
+     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @return a CompletableFuture of StringCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get() {
@@ -60,9 +61,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All teachers in the class. Nullable.
+     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,9 +81,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property ref to teachers for education
+     * Add a teacher to a class.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ReferenceCreate body) {
@@ -98,10 +101,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property ref to teachers for education
+     * Add a teacher to a class.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ReferenceCreate body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -119,7 +123,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All teachers in the class. Nullable.
+     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -127,7 +131,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All teachers in the class. Nullable.
+     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,7 +152,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property ref to teachers for education
+     * Add a teacher to a class.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -157,7 +161,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property ref to teachers for education
+     * Add a teacher to a class.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +183,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All teachers in the class. Nullable.
+     * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      */
     public class GetQueryParameters {
         /** Include count of items */

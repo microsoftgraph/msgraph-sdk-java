@@ -41,8 +41,9 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/primaryChannel/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property members for groups
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property members for groups
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of membership records associated with the channel.
+     * Get a conversationMember from a channel.
      * @return a CompletableFuture of conversationMember
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get() {
@@ -96,9 +99,10 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of membership records associated with the channel.
+     * Get a conversationMember from a channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property members in groups
+     * Update the role of a conversationMember in a team or channel.
      * @param body The request body
      * @return a CompletableFuture of conversationMember
+     * @see <a href="https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@javax.annotation.Nonnull final ConversationMember body) {
@@ -134,10 +139,11 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property members in groups
+     * Update the role of a conversationMember in a team or channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember
+     * @see <a href="https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> patch(@javax.annotation.Nonnull final ConversationMember body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property members for groups
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property members for groups
+     * Delete a conversationMember from a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of membership records associated with the channel.
+     * Get a conversationMember from a channel.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of membership records associated with the channel.
+     * Get a conversationMember from a channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property members in groups
+     * Update the role of a conversationMember in a team or channel.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property members in groups
+     * Update the role of a conversationMember in a team or channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of membership records associated with the channel.
+     * Get a conversationMember from a channel.
      */
     public class GetQueryParameters {
         /** Expand related entities */

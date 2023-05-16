@@ -78,8 +78,9 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Read the properties and relationships of a servicePrincipalRiskDetection object.
      * @return a CompletableFuture of servicePrincipalRiskDetection
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipalriskdetection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalRiskDetection> get() {
@@ -96,9 +97,10 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Read the properties and relationships of a servicePrincipalRiskDetection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of servicePrincipalRiskDetection
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipalriskdetection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalRiskDetection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Read the properties and relationships of a servicePrincipalRiskDetection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Read the properties and relationships of a servicePrincipalRiskDetection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Read the properties and relationships of a servicePrincipalRiskDetection object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

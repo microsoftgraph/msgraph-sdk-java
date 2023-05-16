@@ -59,8 +59,9 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property schools for education
+     * Delete a school.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +78,10 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property schools for education
+     * Delete a school.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +98,9 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get schools from education
+     * Read the properties and relationships of an educationSchool object.
      * @return a CompletableFuture of educationSchool
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchool> get() {
@@ -114,9 +117,10 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get schools from education
+     * Read the properties and relationships of an educationSchool object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSchool
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchool> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,9 +137,10 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property schools in education
+     * Update the properties of an educationSchool object.
      * @param body The request body
      * @return a CompletableFuture of educationSchool
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchool> patch(@javax.annotation.Nonnull final EducationSchool body) {
@@ -152,10 +157,11 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property schools in education
+     * Update the properties of an educationSchool object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSchool
+     * @see <a href="https://docs.microsoft.com/graph/api/educationschool-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchool> patch(@javax.annotation.Nonnull final EducationSchool body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -173,7 +179,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property schools for education
+     * Delete a school.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +187,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property schools for education
+     * Delete a school.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +206,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get schools from education
+     * Read the properties and relationships of an educationSchool object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +214,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get schools from education
+     * Read the properties and relationships of an educationSchool object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +235,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property schools in education
+     * Update the properties of an educationSchool object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -238,7 +244,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property schools in education
+     * Update the properties of an educationSchool object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,7 +272,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get schools from education
+     * Read the properties and relationships of an educationSchool object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

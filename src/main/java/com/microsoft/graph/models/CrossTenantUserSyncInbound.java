@@ -10,7 +10,7 @@ import java.util.Objects;
 public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The isSyncAllowed property */
+    /** Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized. */
     private Boolean isSyncAllowed;
     /** The OdataType property */
     private String odataType;
@@ -52,7 +52,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the isSyncAllowed property value. The isSyncAllowed property
+     * Gets the isSyncAllowed property value. Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class CrossTenantUserSyncInbound implements AdditionalDataHolder, Parsabl
         this.additionalData = value;
     }
     /**
-     * Sets the isSyncAllowed property value. The isSyncAllowed property
+     * Sets the isSyncAllowed property value. Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
      * @param value Value to set for the isSyncAllowed property.
      * @return a void
      */

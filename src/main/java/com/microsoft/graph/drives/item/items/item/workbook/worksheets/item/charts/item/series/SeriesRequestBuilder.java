@@ -62,8 +62,9 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve a list of chartseries objects.
      * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get() {
@@ -80,9 +81,10 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve a list of chartseries objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookChartSeriesCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeriesCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,9 +111,10 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         return new ItemAtWithIndexRequestBuilder(pathParameters, requestAdapter, index);
     }
     /**
-     * Create new navigation property to series for drives
+     * Use this API to create a new ChartSeries.
      * @param body The request body
      * @return a CompletableFuture of workbookChartSeries
+     * @see <a href="https://docs.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeries> post(@javax.annotation.Nonnull final WorkbookChartSeries body) {
@@ -128,10 +131,11 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to series for drives
+     * Use this API to create a new ChartSeries.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartSeries
+     * @see <a href="https://docs.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartSeries> post(@javax.annotation.Nonnull final WorkbookChartSeries body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve a list of chartseries objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -157,7 +161,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve a list of chartseries objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to series for drives
+     * Use this API to create a new ChartSeries.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -187,7 +191,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to series for drives
+     * Use this API to create a new ChartSeries.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -210,7 +214,7 @@ public class SeriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents either a single series or collection of series in the chart. Read-only.
+     * Retrieve a list of chartseries objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

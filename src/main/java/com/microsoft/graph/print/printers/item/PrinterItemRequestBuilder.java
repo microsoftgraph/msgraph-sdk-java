@@ -71,8 +71,9 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property printers for print
+     * Delete (unregister) a printer.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -89,9 +90,10 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property printers for print
+     * Delete (unregister) a printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -108,8 +110,9 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of printers registered in the tenant.
+     * Retrieve the properties and relationships of a printer object.
      * @return a CompletableFuture of printer
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> get() {
@@ -126,9 +129,10 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of printers registered in the tenant.
+     * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printer
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -145,9 +149,10 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property printers in print
+     * Update the properties of a printer object.
      * @param body The request body
      * @return a CompletableFuture of printer
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> patch(@javax.annotation.Nonnull final Printer body) {
@@ -164,10 +169,11 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property printers in print
+     * Update the properties of a printer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printer
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Printer> patch(@javax.annotation.Nonnull final Printer body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +191,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property printers for print
+     * Delete (unregister) a printer.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -193,7 +199,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property printers for print
+     * Delete (unregister) a printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +218,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of printers registered in the tenant.
+     * Retrieve the properties and relationships of a printer object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +226,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of printers registered in the tenant.
+     * Retrieve the properties and relationships of a printer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -241,7 +247,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property printers in print
+     * Update the properties of a printer object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -250,7 +256,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property printers in print
+     * Update the properties of a printer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -278,7 +284,7 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of printers registered in the tenant.
+     * Retrieve the properties and relationships of a printer object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

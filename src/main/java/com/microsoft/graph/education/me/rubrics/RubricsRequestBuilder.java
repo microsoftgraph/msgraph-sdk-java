@@ -61,8 +61,9 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/rubrics{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * When set, the grading rubric attached to the assignment.
+     * Retrieve a list of educationRubric objects.
      * @return a CompletableFuture of EducationRubricCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubricCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * When set, the grading rubric attached to the assignment.
+     * Retrieve a list of educationRubric objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationRubricCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubricCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to rubrics for education
+     * Create a new educationRubric object.
      * @param body The request body
      * @return a CompletableFuture of educationRubric
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubric> post(@javax.annotation.Nonnull final EducationRubric body) {
@@ -117,10 +120,11 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to rubrics for education
+     * Create a new educationRubric object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationRubric
+     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubric> post(@javax.annotation.Nonnull final EducationRubric body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * When set, the grading rubric attached to the assignment.
+     * Retrieve a list of educationRubric objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * When set, the grading rubric attached to the assignment.
+     * Retrieve a list of educationRubric objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to rubrics for education
+     * Create a new educationRubric object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to rubrics for education
+     * Create a new educationRubric object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * When set, the grading rubric attached to the assignment.
+     * Retrieve a list of educationRubric objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

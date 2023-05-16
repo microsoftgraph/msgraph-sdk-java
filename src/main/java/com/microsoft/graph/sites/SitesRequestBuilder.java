@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.SiteCollectionResponse;
 import com.microsoft.graph.sites.add.AddRequestBuilder;
 import com.microsoft.graph.sites.count.CountRequestBuilder;
+import com.microsoft.graph.sites.getallsites.GetAllSitesRequestBuilder;
 import com.microsoft.graph.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.sites.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -33,6 +34,11 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getAllSites method. */
+    @javax.annotation.Nonnull
+    public GetAllSitesRequestBuilder getAllSites() {
+        return new GetAllSitesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the remove method. */
     @javax.annotation.Nonnull

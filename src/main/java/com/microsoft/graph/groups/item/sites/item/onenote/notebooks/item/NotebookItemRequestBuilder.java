@@ -96,8 +96,9 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a notebook object.
      * @return a CompletableFuture of notebook
+     * @see <a href="https://docs.microsoft.com/graph/api/notebook-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Notebook> get() {
@@ -114,9 +115,10 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a notebook object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of notebook
+     * @see <a href="https://docs.microsoft.com/graph/api/notebook-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Notebook> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -200,7 +202,7 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a notebook object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +210,7 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a notebook object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,7 +268,7 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a notebook object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

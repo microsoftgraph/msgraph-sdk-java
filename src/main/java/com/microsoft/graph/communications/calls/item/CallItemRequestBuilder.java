@@ -149,8 +149,9 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property calls for communications
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -167,9 +168,10 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property calls for communications
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -186,8 +188,9 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @return a CompletableFuture of call
+     * @see <a href="https://docs.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> get() {
@@ -204,9 +207,10 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of call
+     * @see <a href="https://docs.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -263,7 +267,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property calls for communications
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -271,7 +275,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property calls for communications
+     * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -290,7 +294,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -298,7 +302,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -356,7 +360,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

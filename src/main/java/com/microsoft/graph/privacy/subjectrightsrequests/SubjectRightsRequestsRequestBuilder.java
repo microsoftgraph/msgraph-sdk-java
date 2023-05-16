@@ -61,8 +61,9 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privacy/subjectRightsRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Get a list of subjectRightsRequest objects and their properties.
      * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Get a list of subjectRightsRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SubjectRightsRequestCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to subjectRightsRequests for privacy
+     * Create a new subjectRightsRequest object.
      * @param body The request body
      * @return a CompletableFuture of subjectRightsRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@javax.annotation.Nonnull final SubjectRightsRequest body) {
@@ -117,10 +120,11 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to subjectRightsRequests for privacy
+     * Create a new subjectRightsRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subjectRightsRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubjectRightsRequest> post(@javax.annotation.Nonnull final SubjectRightsRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Get a list of subjectRightsRequest objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Get a list of subjectRightsRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to subjectRightsRequests for privacy
+     * Create a new subjectRightsRequest object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to subjectRightsRequests for privacy
+     * Create a new subjectRightsRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get subjectRightsRequests from privacy
+     * Get a list of subjectRightsRequest objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

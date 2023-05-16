@@ -101,8 +101,9 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/contentTypes/{contentType%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property contentTypes for sites
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -119,9 +120,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property contentTypes for sites
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -138,8 +140,9 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of content types defined for this site.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @return a CompletableFuture of contentType
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get() {
@@ -156,9 +159,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of content types defined for this site.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -175,9 +179,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property contentTypes in sites
+     * Update a [content type][contentType].
      * @param body The request body
      * @return a CompletableFuture of contentType
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@javax.annotation.Nonnull final ContentType body) {
@@ -194,10 +199,11 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property contentTypes in sites
+     * Update a [content type][contentType].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@javax.annotation.Nonnull final ContentType body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -215,7 +221,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property contentTypes for sites
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -223,7 +229,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property contentTypes for sites
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -242,7 +248,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of content types defined for this site.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -250,7 +256,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of content types defined for this site.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -271,7 +277,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property contentTypes in sites
+     * Update a [content type][contentType].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -280,7 +286,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property contentTypes in sites
+     * Update a [content type][contentType].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -308,7 +314,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of content types defined for this site.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      */
     public class GetQueryParameters {
         /** Expand related entities */

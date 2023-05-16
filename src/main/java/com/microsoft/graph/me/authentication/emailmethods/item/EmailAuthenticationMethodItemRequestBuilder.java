@@ -41,8 +41,9 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/me/authentication/emailMethods/{emailAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property emailMethods for me
+     * Deletes a user's emailAuthenticationMethod object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property emailMethods for me
+     * Deletes a user's emailAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * The email address registered to a user for authentication.
+     * Retrieve a user's single email authentication method object.
      * @return a CompletableFuture of emailAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> get() {
@@ -96,9 +99,10 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * The email address registered to a user for authentication.
+     * Retrieve a user's single email authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the navigation property emailMethods in me
+     * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param body The request body
      * @return a CompletableFuture of emailAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> patch(@javax.annotation.Nonnull final EmailAuthenticationMethod body) {
@@ -134,10 +139,11 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the navigation property emailMethods in me
+     * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> patch(@javax.annotation.Nonnull final EmailAuthenticationMethod body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property emailMethods for me
+     * Deletes a user's emailAuthenticationMethod object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property emailMethods for me
+     * Deletes a user's emailAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * The email address registered to a user for authentication.
+     * Retrieve a user's single email authentication method object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * The email address registered to a user for authentication.
+     * Retrieve a user's single email authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the navigation property emailMethods in me
+     * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property emailMethods in me
+     * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The email address registered to a user for authentication.
+     * Retrieve a user's single email authentication method object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

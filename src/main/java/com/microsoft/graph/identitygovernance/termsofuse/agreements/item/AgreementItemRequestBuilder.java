@@ -59,8 +59,9 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property agreements for identityGovernance
+     * Delete an agreement object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +78,10 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property agreements for identityGovernance
+     * Delete an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +98,9 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve the properties and relationships of an agreement object.
      * @return a CompletableFuture of agreement
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get() {
@@ -114,9 +117,10 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve the properties and relationships of an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreement
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,9 +137,10 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property agreements in identityGovernance
+     * Update the properties of an agreement object.
      * @param body The request body
      * @return a CompletableFuture of agreement
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> patch(@javax.annotation.Nonnull final Agreement body) {
@@ -152,10 +157,11 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property agreements in identityGovernance
+     * Update the properties of an agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreement
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> patch(@javax.annotation.Nonnull final Agreement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -173,7 +179,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property agreements for identityGovernance
+     * Delete an agreement object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +187,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property agreements for identityGovernance
+     * Delete an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +206,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve the properties and relationships of an agreement object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +214,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve the properties and relationships of an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +235,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property agreements in identityGovernance
+     * Update the properties of an agreement object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -238,7 +244,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property agreements in identityGovernance
+     * Update the properties of an agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,7 +272,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve the properties and relationships of an agreement object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

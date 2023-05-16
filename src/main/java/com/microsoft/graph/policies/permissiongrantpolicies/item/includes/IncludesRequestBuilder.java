@@ -61,8 +61,9 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/includes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
      * @return a CompletableFuture of PermissionGrantConditionSetCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSetCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PermissionGrantConditionSetCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to includes for policies
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **includes** collection of a  permissionGrantPolicy.
      * @param body The request body
      * @return a CompletableFuture of permissionGrantConditionSet
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> post(@javax.annotation.Nonnull final PermissionGrantConditionSet body) {
@@ -117,10 +120,11 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to includes for policies
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **includes** collection of a  permissionGrantPolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantConditionSet
+     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> post(@javax.annotation.Nonnull final PermissionGrantConditionSet body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to includes for policies
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **includes** collection of a  permissionGrantPolicy.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to includes for policies
+     * Add conditions under which a permission grant event is *included* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **includes** collection of a  permissionGrantPolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
      */
     public class GetQueryParameters {
         /** Include count of items */

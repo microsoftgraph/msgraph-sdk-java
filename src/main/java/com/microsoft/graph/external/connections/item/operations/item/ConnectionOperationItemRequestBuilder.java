@@ -78,8 +78,9 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @return a CompletableFuture of connectionOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-connectionoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperation> get() {
@@ -96,9 +97,10 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectionOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-connectionoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

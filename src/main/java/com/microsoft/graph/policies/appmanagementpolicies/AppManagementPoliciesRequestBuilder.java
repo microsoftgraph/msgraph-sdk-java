@@ -61,8 +61,9 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/appManagementPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     * Retrieve a list of appManagementPolicy objects.
      * @return a CompletableFuture of AppManagementPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     * Retrieve a list of appManagementPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AppManagementPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appManagementPolicies for policies
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @return a CompletableFuture of appManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body) {
@@ -117,10 +120,11 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appManagementPolicies for policies
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     * Retrieve a list of appManagementPolicy objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     * Retrieve a list of appManagementPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to appManagementPolicies for policies
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to appManagementPolicies for policies
+     * Create an appManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     * Retrieve a list of appManagementPolicy objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

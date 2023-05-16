@@ -41,8 +41,9 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/temporaryAccessPassMethods/{temporaryAccessPassAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         }
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         }
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @return a CompletableFuture of temporaryAccessPassAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethod> get() {
@@ -96,9 +99,10 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         }
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of temporaryAccessPassAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TemporaryAccessPassAuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,7 +119,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         }
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -123,7 +127,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property temporaryAccessPassMethods for users
+     * Delete a users's temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -142,7 +146,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +154,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

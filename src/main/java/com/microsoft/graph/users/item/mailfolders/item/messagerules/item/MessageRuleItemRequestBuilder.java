@@ -41,8 +41,9 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/messageRules/{messageRule%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property messageRules for users
+     * Delete the specified messageRule object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property messageRules for users
+     * Delete the specified messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * Get the properties and relationships of a messageRule object.
      * @return a CompletableFuture of messageRule
+     * @see <a href="https://docs.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRule> get() {
@@ -96,9 +99,10 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * Get the properties and relationships of a messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of messageRule
+     * @see <a href="https://docs.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRule> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property messageRules in users
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @return a CompletableFuture of messageRule
+     * @see <a href="https://docs.microsoft.com/graph/api/messagerule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRule> patch(@javax.annotation.Nonnull final MessageRule body) {
@@ -134,10 +139,11 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property messageRules in users
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of messageRule
+     * @see <a href="https://docs.microsoft.com/graph/api/messagerule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRule> patch(@javax.annotation.Nonnull final MessageRule body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property messageRules for users
+     * Delete the specified messageRule object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property messageRules for users
+     * Delete the specified messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * Get the properties and relationships of a messageRule object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * Get the properties and relationships of a messageRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property messageRules in users
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property messageRules in users
+     * Change writable properties on a messageRule object and save the changes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class MessageRuleItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of rules that apply to the user's Inbox folder.
+     * Get the properties and relationships of a messageRule object.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */
