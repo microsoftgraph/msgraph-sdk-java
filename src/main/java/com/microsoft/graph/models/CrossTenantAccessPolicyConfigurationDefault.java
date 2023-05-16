@@ -30,7 +30,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The Automatic User Consent Settings.
-     * 
+     * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
      */
     @SerializedName(value = "automaticUserConsentSettings", alternate = {"AutomaticUserConsentSettings"})
     @Expose

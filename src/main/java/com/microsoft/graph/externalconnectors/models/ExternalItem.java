@@ -13,6 +13,7 @@ import com.microsoft.graph.externalconnectors.models.Acl;
 import com.microsoft.graph.externalconnectors.models.ExternalItemContent;
 import com.microsoft.graph.externalconnectors.models.Properties;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.externalconnectors.requests.ExternalActivityCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -56,6 +57,15 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
 	@Nullable
     public Properties properties;
 
+    /**
+     * The Activities.
+     * Returns a list of activities performed on the item. Write-only.
+     */
+    @SerializedName(value = "activities", alternate = {"Activities"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.externalconnectors.requests.ExternalActivityCollectionPage activities;
+
 
     /**
      * Sets the raw JSON object
@@ -65,5 +75,9 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("activities")) {
+            activities = serializer.deserializeObject(json.get("activities"), com.microsoft.graph.externalconnectors.requests.ExternalActivityCollectionPage.class);
+        }
     }
 }

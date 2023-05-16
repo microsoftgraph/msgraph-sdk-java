@@ -38,7 +38,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Use SSPR.
-     * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
+     * Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
      */
     @SerializedName(value = "allowedToUseSSPR", alternate = {"AllowedToUseSSPR"})
     @Expose
@@ -56,7 +56,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow Invites From.
-     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more details, see allowInvitesFrom values.
      */
     @SerializedName(value = "allowInvitesFrom", alternate = {"AllowInvitesFrom"})
     @Expose
@@ -65,7 +65,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow User Consent For Risky Apps.
-     * 
+     * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false. Default value is false.
      */
     @SerializedName(value = "allowUserConsentForRiskyApps", alternate = {"AllowUserConsentForRiskyApps"})
     @Expose
@@ -74,7 +74,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Block Msol Power Shell.
-     * To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+     * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure Active Directory Connect or Microsoft Graph.
      */
     @SerializedName(value = "blockMsolPowerShell", alternate = {"BlockMsolPowerShell"})
     @Expose

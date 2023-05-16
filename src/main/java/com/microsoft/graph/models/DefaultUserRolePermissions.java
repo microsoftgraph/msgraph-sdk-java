@@ -49,7 +49,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Create Security Groups.
-     * Indicates whether the default user role can create security groups.
+     * Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
      */
     @SerializedName(value = "allowedToCreateSecurityGroups", alternate = {"AllowedToCreateSecurityGroups"})
     @Expose
