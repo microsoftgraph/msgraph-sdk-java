@@ -84,8 +84,9 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get an attack simulation automation for a tenant.
      * @return a CompletableFuture of simulationAutomation
+     * @see <a href="https://docs.microsoft.com/graph/api/simulationautomation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomation> get() {
@@ -102,9 +103,10 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get an attack simulation automation for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of simulationAutomation
+     * @see <a href="https://docs.microsoft.com/graph/api/simulationautomation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get an attack simulation automation for a tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get an attack simulation automation for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents simulation automation created to run on a tenant.
+     * Get an attack simulation automation for a tenant.
      */
     public class GetQueryParameters {
         /** Expand related entities */

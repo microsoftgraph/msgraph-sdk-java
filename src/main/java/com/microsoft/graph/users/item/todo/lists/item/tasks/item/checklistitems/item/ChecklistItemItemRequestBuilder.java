@@ -41,8 +41,9 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/checklistItems/{checklistItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property checklistItems for users
+     * Delete a checklistItem object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/checklistitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property checklistItems for users
+     * Delete a checklistItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/checklistitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Read the properties and relationships of a checklistItem object.
      * @return a CompletableFuture of checklistItem
+     * @see <a href="https://docs.microsoft.com/graph/api/checklistitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItem> get() {
@@ -96,9 +99,10 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Read the properties and relationships of a checklistItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of checklistItem
+     * @see <a href="https://docs.microsoft.com/graph/api/checklistitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property checklistItems in users
+     * Update the properties of a checklistItem object.
      * @param body The request body
      * @return a CompletableFuture of checklistItem
+     * @see <a href="https://docs.microsoft.com/graph/api/checklistitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItem> patch(@javax.annotation.Nonnull final ChecklistItem body) {
@@ -134,10 +139,11 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property checklistItems in users
+     * Update the properties of a checklistItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of checklistItem
+     * @see <a href="https://docs.microsoft.com/graph/api/checklistitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChecklistItem> patch(@javax.annotation.Nonnull final ChecklistItem body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property checklistItems for users
+     * Delete a checklistItem object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property checklistItems for users
+     * Delete a checklistItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Read the properties and relationships of a checklistItem object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Read the properties and relationships of a checklistItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property checklistItems in users
+     * Update the properties of a checklistItem object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property checklistItems in users
+     * Update the properties of a checklistItem object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class ChecklistItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of checklistItems linked to a task.
+     * Read the properties and relationships of a checklistItem object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

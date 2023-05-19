@@ -72,8 +72,9 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get() {
@@ -90,9 +91,10 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,9 +111,10 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param body The request body
      * @return a CompletableFuture of accessPackage
+     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> post(@javax.annotation.Nonnull final AccessPackage body) {
@@ -128,10 +131,11 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
+     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackage> post(@javax.annotation.Nonnull final AccessPackage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -157,7 +161,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -187,7 +191,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -210,7 +214,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      */
     public class GetQueryParameters {
         /** Include count of items */

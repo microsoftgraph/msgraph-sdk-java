@@ -39,9 +39,10 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/permissionGrants/getAvailableExtensionProperties", rawUrl);
     }
     /**
-     * Invoke action getAvailableExtensionProperties
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:+ user+ group+ administrativeUnit+ application+ device+ organization
      * @param body The request body
      * @return a CompletableFuture of getAvailableExtensionPropertiesResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body) {
@@ -58,10 +59,11 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Invoke action getAvailableExtensionProperties
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:+ user+ group+ administrativeUnit+ application+ device+ organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getAvailableExtensionPropertiesResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Invoke action getAvailableExtensionProperties
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:+ user+ group+ administrativeUnit+ application+ device+ organization
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getAvailableExtensionProperties
+     * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:+ user+ group+ administrativeUnit+ application+ device+ organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -39,9 +39,10 @@ public class RemoveKeyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/removeKey", rawUrl);
     }
     /**
-     * Invoke action removeKey
+     * Remove a key credential from an application. This method along with addKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/application-removekey?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final RemoveKeyPostRequestBody body) {
@@ -58,10 +59,11 @@ public class RemoveKeyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action removeKey
+     * Remove a key credential from an application. This method along with addKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/application-removekey?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final RemoveKeyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class RemoveKeyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action removeKey
+     * Remove a key credential from an application. This method along with addKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class RemoveKeyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action removeKey
+     * Remove a key credential from an application. This method along with addKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

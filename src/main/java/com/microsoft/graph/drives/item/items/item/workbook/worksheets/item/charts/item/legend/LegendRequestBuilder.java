@@ -84,8 +84,9 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents the legend for the chart. Read-only.
+     * Retrieve the properties and relationships of chartlegend object.
      * @return a CompletableFuture of workbookChartLegend
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> get() {
@@ -102,9 +103,10 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents the legend for the chart. Read-only.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartLegend
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +123,10 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property legend in drives
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @return a CompletableFuture of workbookChartLegend
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> patch(@javax.annotation.Nonnull final WorkbookChartLegend body) {
@@ -140,10 +143,11 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property legend in drives
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartLegend
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> patch(@javax.annotation.Nonnull final WorkbookChartLegend body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -188,7 +192,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the legend for the chart. Read-only.
+     * Retrieve the properties and relationships of chartlegend object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the legend for the chart. Read-only.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +221,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property legend in drives
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +230,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property legend in drives
+     * Update the properties of chartlegend object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +258,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the legend for the chart. Read-only.
+     * Retrieve the properties and relationships of chartlegend object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

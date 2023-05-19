@@ -39,8 +39,9 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/me/presence/clearUserPreferredPresence", rawUrl);
     }
     /**
-     * Invoke action clearUserPreferredPresence
+     * Clear the preferred availability and activity status for a user.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Invoke action clearUserPreferredPresence
+     * Clear the preferred availability and activity status for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/presence-clearuserpreferredpresence?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Invoke action clearUserPreferredPresence
+     * Clear the preferred availability and activity status for a user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class ClearUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action clearUserPreferredPresence
+     * Clear the preferred availability and activity status for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

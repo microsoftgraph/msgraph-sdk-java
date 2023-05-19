@@ -39,8 +39,9 @@ public class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/microsoft.graph.security.activate", rawUrl);
     }
     /**
-     * Invoke action activate
+     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Invoke action activate
+     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-activate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Invoke action activate
+     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action activate
+     * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

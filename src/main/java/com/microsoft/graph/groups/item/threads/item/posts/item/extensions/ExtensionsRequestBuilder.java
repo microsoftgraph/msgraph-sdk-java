@@ -61,7 +61,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}/posts/{post%2Did}/extensions{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @return a CompletableFuture of ExtensionCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExtensionCollectionResponse
      */
@@ -138,7 +138,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      */
     public class GetQueryParameters {
         /** Include count of items */

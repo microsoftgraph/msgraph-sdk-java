@@ -41,8 +41,9 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/inferenceClassification/overrides/{inferenceClassificationOverride%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property overrides for users
+     * Delete an override specified by its ID.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/inferenceclassificationoverride-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Delete navigation property overrides for users
+     * Delete an override specified by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/inferenceclassificationoverride-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the navigation property overrides in users
+     * Change the **classifyAs** field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param body The request body
      * @return a CompletableFuture of inferenceClassificationOverride
+     * @see <a href="https://docs.microsoft.com/graph/api/inferenceclassificationoverride-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> patch(@javax.annotation.Nonnull final InferenceClassificationOverride body) {
@@ -134,10 +137,11 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the navigation property overrides in users
+     * Change the **classifyAs** field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inferenceClassificationOverride
+     * @see <a href="https://docs.microsoft.com/graph/api/inferenceclassificationoverride-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> patch(@javax.annotation.Nonnull final InferenceClassificationOverride body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Delete navigation property overrides for users
+     * Delete an override specified by its ID.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property overrides for users
+     * Delete an override specified by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the navigation property overrides in users
+     * Change the **classifyAs** field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class InferenceClassificationOverrideItemRequestBuilder extends BaseReque
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property overrides in users
+     * Change the **classifyAs** field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

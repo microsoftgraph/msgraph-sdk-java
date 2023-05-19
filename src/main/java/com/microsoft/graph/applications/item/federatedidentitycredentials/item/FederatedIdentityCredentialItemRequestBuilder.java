@@ -41,8 +41,9 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials/{federatedIdentityCredential%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property federatedIdentityCredentials for applications
+     * Delete a federatedIdentityCredential object from an application.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property federatedIdentityCredentials for applications
+     * Delete a federatedIdentityCredential object from an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Read the properties and relationships of a federatedIdentityCredential object.
      * @return a CompletableFuture of federatedIdentityCredential
+     * @see <a href="https://docs.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> get() {
@@ -96,9 +99,10 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Read the properties and relationships of a federatedIdentityCredential object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of federatedIdentityCredential
+     * @see <a href="https://docs.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property federatedIdentityCredentials in applications
+     * Update the properties of a federatedIdentityCredential object.
      * @param body The request body
      * @return a CompletableFuture of federatedIdentityCredential
+     * @see <a href="https://docs.microsoft.com/graph/api/federatedidentitycredential-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> patch(@javax.annotation.Nonnull final FederatedIdentityCredential body) {
@@ -134,10 +139,11 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property federatedIdentityCredentials in applications
+     * Update the properties of a federatedIdentityCredential object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of federatedIdentityCredential
+     * @see <a href="https://docs.microsoft.com/graph/api/federatedidentitycredential-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> patch(@javax.annotation.Nonnull final FederatedIdentityCredential body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property federatedIdentityCredentials for applications
+     * Delete a federatedIdentityCredential object from an application.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property federatedIdentityCredentials for applications
+     * Delete a federatedIdentityCredential object from an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Read the properties and relationships of a federatedIdentityCredential object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Read the properties and relationships of a federatedIdentityCredential object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property federatedIdentityCredentials in applications
+     * Update the properties of a federatedIdentityCredential object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property federatedIdentityCredentials in applications
+     * Update the properties of a federatedIdentityCredential object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Read the properties and relationships of a federatedIdentityCredential object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

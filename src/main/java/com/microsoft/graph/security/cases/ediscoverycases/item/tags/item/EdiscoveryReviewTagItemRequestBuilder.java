@@ -53,8 +53,9 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/tags/{ediscoveryReviewTag%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property tags for security
+     * Remove an ediscoveryReviewTag object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,9 +72,10 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tags for security
+     * Remove an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,8 +92,9 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @return a CompletableFuture of ediscoveryReviewTag
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> get() {
@@ -108,9 +111,10 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewTag
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +131,10 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tags in security
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryReviewTag
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewtag-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> patch(@javax.annotation.Nonnull final EdiscoveryReviewTag body) {
@@ -146,10 +151,11 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tags in security
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewTag
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewtag-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTag> patch(@javax.annotation.Nonnull final EdiscoveryReviewTag body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -167,7 +173,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tags for security
+     * Remove an ediscoveryReviewTag object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +181,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tags for security
+     * Remove an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +200,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +208,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +229,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property tags in security
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +238,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property tags in security
+     * Update the properties of an ediscoveryReviewTag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +266,7 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     * Read the properties and relationships of an ediscoveryReviewTag object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

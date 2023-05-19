@@ -110,9 +110,10 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to noncustodialDataSources for security
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-post-noncustodialdatasources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> post(@javax.annotation.Nonnull final EdiscoveryNoncustodialDataSource body) {
@@ -129,10 +130,11 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to noncustodialDataSources for security
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryNoncustodialDataSource
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-post-noncustodialdatasources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSource> post(@javax.annotation.Nonnull final EdiscoveryNoncustodialDataSource body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -179,7 +181,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to noncustodialDataSources for security
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -188,7 +190,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to noncustodialDataSources for security
+     * Create a new ediscoveryNoncustodialDataSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

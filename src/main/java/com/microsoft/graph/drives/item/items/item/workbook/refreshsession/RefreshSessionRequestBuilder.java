@@ -39,8 +39,9 @@ public class RefreshSessionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/refreshSession", rawUrl);
     }
     /**
-     * Invoke action refreshSession
+     * Use this API to refresh an existing workbook session. 
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/workbook-refreshsession?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class RefreshSessionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action refreshSession
+     * Use this API to refresh an existing workbook session. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/workbook-refreshsession?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class RefreshSessionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action refreshSession
+     * Use this API to refresh an existing workbook session. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class RefreshSessionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action refreshSession
+     * Use this API to refresh an existing workbook session. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

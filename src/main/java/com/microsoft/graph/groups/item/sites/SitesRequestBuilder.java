@@ -2,6 +2,7 @@ package com.microsoft.graph.groups.item.sites;
 
 import com.microsoft.graph.groups.item.sites.add.AddRequestBuilder;
 import com.microsoft.graph.groups.item.sites.count.CountRequestBuilder;
+import com.microsoft.graph.groups.item.sites.getallsites.GetAllSitesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.groups.item.sites.remove.RemoveRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -33,6 +34,11 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getAllSites method. */
+    @javax.annotation.Nonnull
+    public GetAllSitesRequestBuilder getAllSites() {
+        return new GetAllSitesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to call the remove method. */
     @javax.annotation.Nonnull

@@ -61,7 +61,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/presences{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get presences from communications
+     * Get a user's presence information.
      * @return a CompletableFuture of PresenceCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get presences from communications
+     * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PresenceCollectionResponse
      */
@@ -138,7 +138,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get presences from communications
+     * Get a user's presence information.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get presences from communications
+     * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get presences from communications
+     * Get a user's presence information.
      */
     public class GetQueryParameters {
         /** Include count of items */

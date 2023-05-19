@@ -84,8 +84,9 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Read the properties and relationships of a riskyUser object.
      * @return a CompletableFuture of riskyUser
+     * @see <a href="https://docs.microsoft.com/graph/api/riskyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUser> get() {
@@ -102,9 +103,10 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Read the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of riskyUser
+     * @see <a href="https://docs.microsoft.com/graph/api/riskyuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Read the properties and relationships of a riskyUser object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Read the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class RiskyUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Read the properties and relationships of a riskyUser object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -78,8 +78,9 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @return a CompletableFuture of extension
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> get() {
@@ -96,9 +97,10 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extension
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property extensions in groups
+     * Update an open extension (openTypeExtension object) with the properties in the request body: The data in an extension can be primitive types, or arrays of primitive types. See the table in the Permissions section for the list of resources that support open extensions.
      * @param body The request body
      * @return a CompletableFuture of extension
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> patch(@javax.annotation.Nonnull final Extension body) {
@@ -134,10 +137,11 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property extensions in groups
+     * Update an open extension (openTypeExtension object) with the properties in the request body: The data in an extension can be primitive types, or arrays of primitive types. See the table in the Permissions section for the list of resources that support open extensions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extension
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Extension> patch(@javax.annotation.Nonnull final Extension body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property extensions in groups
+     * Update an open extension (openTypeExtension object) with the properties in the request body: The data in an extension can be primitive types, or arrays of primitive types. See the table in the Permissions section for the list of resources that support open extensions.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property extensions in groups
+     * Update an open extension (openTypeExtension object) with the properties in the request body: The data in an extension can be primitive types, or arrays of primitive types. See the table in the Permissions section for the list of resources that support open extensions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class ExtensionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     * Get an open extension (openTypeExtension object) identified by name or fully qualified name. The table in the Permissions section lists the resources that support open extensions. The following table lists the three scenarios where you can get an open extension from a supported resource instance.
      */
     public class GetQueryParameters {
         /** Expand related entities */

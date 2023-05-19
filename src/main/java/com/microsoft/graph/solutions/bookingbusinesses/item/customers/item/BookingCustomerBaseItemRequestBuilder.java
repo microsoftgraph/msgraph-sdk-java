@@ -41,8 +41,9 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customers/{bookingCustomerBase%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property customers for solutions
+     * Delete the specified bookingCustomer object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property customers for solutions
+     * Delete the specified bookingCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomer-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the customers of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingCustomer object.
      * @return a CompletableFuture of bookingCustomerBase
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBase> get() {
@@ -96,9 +99,10 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the customers of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCustomerBase
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBase> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property customers in solutions
+     * Update the properties of a bookingCustomer object.
      * @param body The request body
      * @return a CompletableFuture of bookingCustomerBase
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBase> patch(@javax.annotation.Nonnull final BookingCustomerBase body) {
@@ -134,10 +139,11 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property customers in solutions
+     * Update the properties of a bookingCustomer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCustomerBase
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomer-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomerBase> patch(@javax.annotation.Nonnull final BookingCustomerBase body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property customers for solutions
+     * Delete the specified bookingCustomer object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property customers for solutions
+     * Delete the specified bookingCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All the customers of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingCustomer object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All the customers of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property customers in solutions
+     * Update the properties of a bookingCustomer object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customers in solutions
+     * Update the properties of a bookingCustomer object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All the customers of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingCustomer object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -41,8 +41,9 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/resources/{educationAssignmentResource%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property resources for education
+     * Delete a specific educationAssignmentResource attached to an assignment. In general, only teachers in the class can remove a resource. However, teachers cannot remove resources marked as 'distributeToStudents', after the assignment has been published to students.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property resources for education
+     * Delete a specific educationAssignmentResource attached to an assignment. In general, only teachers in the class can remove a resource. However, teachers cannot remove resources marked as 'distributeToStudents', after the assignment has been published to students.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
+     * Get the properties of an education assignment resource associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a CompletableFuture of educationAssignmentResource
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentResource> get() {
@@ -96,9 +99,10 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
+     * Get the properties of an education assignment resource associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignmentResource
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignmentresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentResource> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property resources for education
+     * Delete a specific educationAssignmentResource attached to an assignment. In general, only teachers in the class can remove a resource. However, teachers cannot remove resources marked as 'distributeToStudents', after the assignment has been published to students.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property resources for education
+     * Delete a specific educationAssignmentResource attached to an assignment. In general, only teachers in the class can remove a resource. However, teachers cannot remove resources marked as 'distributeToStudents', after the assignment has been published to students.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
+     * Get the properties of an education assignment resource associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
+     * Get the properties of an education assignment resource associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +252,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
+     * Get the properties of an education assignment resource associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      */
     public class GetQueryParameters {
         /** Expand related entities */

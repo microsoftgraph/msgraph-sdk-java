@@ -47,8 +47,9 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property queries for security
+     * Delete an ediscoveryReviewSetQuery object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-delete-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Delete navigation property queries for security
+     * Delete an ediscoveryReviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-delete-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Represents queries within the review set.
+     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
      * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> get() {
@@ -102,9 +105,10 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Represents queries within the review set.
+     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Update the navigation property queries in security
+     * Update the properties of an ediscoveryReviewSetQuery object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> patch(@javax.annotation.Nonnull final EdiscoveryReviewSetQuery body) {
@@ -140,10 +145,11 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Update the navigation property queries in security
+     * Update the properties of an ediscoveryReviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSetQuery
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> patch(@javax.annotation.Nonnull final EdiscoveryReviewSetQuery body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Delete navigation property queries for security
+     * Delete an ediscoveryReviewSetQuery object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property queries for security
+     * Delete an ediscoveryReviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Represents queries within the review set.
+     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Represents queries within the review set.
+     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property queries in security
+     * Update the properties of an ediscoveryReviewSetQuery object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property queries in security
+     * Update the properties of an ediscoveryReviewSetQuery object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents queries within the review set.
+     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

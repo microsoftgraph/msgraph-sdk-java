@@ -61,8 +61,9 @@ public class MethodsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/methods{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @return a CompletableFuture of AuthenticationMethodCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-methods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class MethodsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationMethodCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-methods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class MethodsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class MethodsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class MethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve a list of authentication methods registered to a user. The authentication methods are defined by the types derived from the authenticationMethod resource type, and only the methods supported on this API version. See Azure AD authentication methods API overview for a list of currently supported methods.
      */
     public class GetQueryParameters {
         /** Include count of items */

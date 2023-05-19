@@ -40,8 +40,9 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}/range()", rawUrl);
     }
     /**
-     * Invoke function range
+     * Gets the range object associated with the entire column.
      * @return a CompletableFuture of workbookRange
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-range?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get() {
@@ -58,9 +59,10 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke function range
+     * Gets the range object associated with the entire column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookRange
+     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-range?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke function range
+     * Gets the range object associated with the entire column.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function range
+     * Gets the range object associated with the entire column.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

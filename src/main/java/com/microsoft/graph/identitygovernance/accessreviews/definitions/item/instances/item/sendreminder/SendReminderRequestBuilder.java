@@ -39,8 +39,9 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/sendReminder", rawUrl);
     }
     /**
-     * Invoke action sendReminder
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action sendReminder
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action sendReminder
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action sendReminder
+     * Send a reminder to the reviewers of an active accessReviewInstance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -61,8 +61,9 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get ediscoveryCases from security
+     * Get a list of the ediscoveryCase objects and their properties.
      * @return a CompletableFuture of EdiscoveryCaseCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCaseCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get ediscoveryCases from security
+     * Get a list of the ediscoveryCase objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EdiscoveryCaseCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to ediscoveryCases for security
+     * Create a new ediscoveryCase object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryCase
+     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCase> post(@javax.annotation.Nonnull final EdiscoveryCase body) {
@@ -117,10 +120,11 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to ediscoveryCases for security
+     * Create a new ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCase
+     * @see <a href="https://docs.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCase> post(@javax.annotation.Nonnull final EdiscoveryCase body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get ediscoveryCases from security
+     * Get a list of the ediscoveryCase objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get ediscoveryCases from security
+     * Get a list of the ediscoveryCase objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to ediscoveryCases for security
+     * Create a new ediscoveryCase object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to ediscoveryCases for security
+     * Create a new ediscoveryCase object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get ediscoveryCases from security
+     * Get a list of the ediscoveryCase objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

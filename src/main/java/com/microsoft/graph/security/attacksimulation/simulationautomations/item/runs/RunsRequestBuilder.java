@@ -61,8 +61,9 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulationAutomations/{simulationAutomation%2Did}/runs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of simulation automation runs.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @return a CompletableFuture of SimulationAutomationRunCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomationRunCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of simulation automation runs.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SimulationAutomationRunCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SimulationAutomationRunCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of simulation automation runs.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of simulation automation runs.
+     * Get a list of the attack simulation automation runs for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of simulation automation runs.
+     * Get a list of the attack simulation automation runs for a tenant.
      */
     public class GetQueryParameters {
         /** Include count of items */

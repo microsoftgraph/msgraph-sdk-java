@@ -85,8 +85,9 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/permissionGrants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the **group**, along with the corresponding kind of resource-specific access that each app has.
      * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/group-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get() {
@@ -103,9 +104,10 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the **group**, along with the corresponding kind of resource-specific access that each app has.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/group-list-permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -162,7 +164,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the **group**, along with the corresponding kind of resource-specific access that each app has.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -170,7 +172,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the **group**, along with the corresponding kind of resource-specific access that each app has.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +225,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the **group**, along with the corresponding kind of resource-specific access that each app has.
      */
     public class GetQueryParameters {
         /** Include count of items */

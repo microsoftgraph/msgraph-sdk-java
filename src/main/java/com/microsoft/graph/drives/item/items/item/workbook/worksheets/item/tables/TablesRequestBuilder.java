@@ -68,8 +68,9 @@ public class TablesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * Retrieve a list of table objects.
      * @return a CompletableFuture of WorkbookTableCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-list-tables?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableCollectionResponse> get() {
@@ -86,9 +87,10 @@ public class TablesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * Retrieve a list of table objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookTableCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-list-tables?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +157,7 @@ public class TablesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * Retrieve a list of table objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +165,7 @@ public class TablesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * Retrieve a list of table objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -216,7 +218,7 @@ public class TablesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * Retrieve a list of table objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

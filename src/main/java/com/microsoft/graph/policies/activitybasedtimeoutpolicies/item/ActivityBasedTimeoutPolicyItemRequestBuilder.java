@@ -47,8 +47,9 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/policies/activityBasedTimeoutPolicies/{activityBasedTimeoutPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property activityBasedTimeoutPolicies for policies
+     * Delete an activityBasedTimeoutPolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Delete navigation property activityBasedTimeoutPolicies for policies
+     * Delete an activityBasedTimeoutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get the properties of an activityBasedTimeoutPolicy object.
      * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> get() {
@@ -102,9 +105,10 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get the properties of an activityBasedTimeoutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Update the navigation property activityBasedTimeoutPolicies in policies
+     * Update the properties of an activityBasedTimeoutPolicy object.
      * @param body The request body
      * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> patch(@javax.annotation.Nonnull final ActivityBasedTimeoutPolicy body) {
@@ -140,10 +145,11 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Update the navigation property activityBasedTimeoutPolicies in policies
+     * Update the properties of an activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of activityBasedTimeoutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> patch(@javax.annotation.Nonnull final ActivityBasedTimeoutPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Delete navigation property activityBasedTimeoutPolicies for policies
+     * Delete an activityBasedTimeoutPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property activityBasedTimeoutPolicies for policies
+     * Delete an activityBasedTimeoutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get the properties of an activityBasedTimeoutPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get the properties of an activityBasedTimeoutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the navigation property activityBasedTimeoutPolicies in policies
+     * Update the properties of an activityBasedTimeoutPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property activityBasedTimeoutPolicies in policies
+     * Update the properties of an activityBasedTimeoutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get the properties of an activityBasedTimeoutPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

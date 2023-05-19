@@ -84,8 +84,9 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents chart line formatting. Read-only.
+     * Retrieve the properties and relationships of chartlineformat object.
      * @return a CompletableFuture of workbookChartLineFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlineformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> get() {
@@ -102,9 +103,10 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents chart line formatting. Read-only.
+     * Retrieve the properties and relationships of chartlineformat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartLineFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlineformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +123,10 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property line in drives
+     * Update the properties of chartlineformat object.
      * @param body The request body
      * @return a CompletableFuture of workbookChartLineFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlineformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> patch(@javax.annotation.Nonnull final WorkbookChartLineFormat body) {
@@ -140,10 +143,11 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property line in drives
+     * Update the properties of chartlineformat object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartLineFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/chartlineformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> patch(@javax.annotation.Nonnull final WorkbookChartLineFormat body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -188,7 +192,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents chart line formatting. Read-only.
+     * Retrieve the properties and relationships of chartlineformat object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents chart line formatting. Read-only.
+     * Retrieve the properties and relationships of chartlineformat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +221,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property line in drives
+     * Update the properties of chartlineformat object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +230,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property line in drives
+     * Update the properties of chartlineformat object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +258,7 @@ public class LineRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents chart line formatting. Read-only.
+     * Retrieve the properties and relationships of chartlineformat object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

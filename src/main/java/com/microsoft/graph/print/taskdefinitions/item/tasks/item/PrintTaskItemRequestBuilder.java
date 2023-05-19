@@ -90,8 +90,9 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a CompletableFuture of printTask
+     * @see <a href="https://docs.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> get() {
@@ -108,9 +109,10 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTask
+     * @see <a href="https://docs.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +129,10 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tasks in print
+     * Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @return a CompletableFuture of printTask
+     * @see <a href="https://docs.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> patch(@javax.annotation.Nonnull final PrintTask body) {
@@ -146,10 +149,11 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tasks in print
+     * Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTask
+     * @see <a href="https://docs.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> patch(@javax.annotation.Nonnull final PrintTask body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -194,7 +198,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +206,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +227,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property tasks in print
+     * Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +236,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property tasks in print
+     * Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +264,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      */
     public class GetQueryParameters {
         /** Expand related entities */

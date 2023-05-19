@@ -84,8 +84,9 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of pending user consent requests. Supports $filter (eq).
+     * Read the properties and relationships of a userConsentRequest object.
      * @return a CompletableFuture of userConsentRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/userconsentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserConsentRequest> get() {
@@ -102,9 +103,10 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of pending user consent requests. Supports $filter (eq).
+     * Read the properties and relationships of a userConsentRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userConsentRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/userconsentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserConsentRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A list of pending user consent requests. Supports $filter (eq).
+     * Read the properties and relationships of a userConsentRequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A list of pending user consent requests. Supports $filter (eq).
+     * Read the properties and relationships of a userConsentRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A list of pending user consent requests. Supports $filter (eq).
+     * Read the properties and relationships of a userConsentRequest object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

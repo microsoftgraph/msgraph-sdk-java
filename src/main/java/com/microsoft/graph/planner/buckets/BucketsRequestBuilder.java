@@ -61,8 +61,9 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/buckets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve a list of **plannerbucket** objects.
      * @return a CompletableFuture of PlannerBucketCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucketCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve a list of **plannerbucket** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlannerBucketCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucketCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new plannerBucket object.
      * @param body The request body
      * @return a CompletableFuture of plannerBucket
+     * @see <a href="https://docs.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> post(@javax.annotation.Nonnull final PlannerBucket body) {
@@ -117,10 +120,11 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new plannerBucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerBucket
+     * @see <a href="https://docs.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> post(@javax.annotation.Nonnull final PlannerBucket body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve a list of **plannerbucket** objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve a list of **plannerbucket** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new plannerBucket object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new plannerBucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve a list of **plannerbucket** objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

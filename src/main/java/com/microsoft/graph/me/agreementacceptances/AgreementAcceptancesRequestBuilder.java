@@ -60,8 +60,9 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/agreementAcceptances{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-agreementacceptances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-agreementacceptances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

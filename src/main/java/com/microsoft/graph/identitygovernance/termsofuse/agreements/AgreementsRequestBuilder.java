@@ -61,8 +61,9 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/termsOfUse/agreements{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve a list of agreement objects.
      * @return a CompletableFuture of AgreementCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve a list of agreement objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AgreementCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to agreements for identityGovernance
+     * Create a new agreement object.
      * @param body The request body
      * @return a CompletableFuture of agreement
+     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> post(@javax.annotation.Nonnull final Agreement body) {
@@ -117,10 +120,11 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to agreements for identityGovernance
+     * Create a new agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreement
+     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> post(@javax.annotation.Nonnull final Agreement body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve a list of agreement objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve a list of agreement objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to agreements for identityGovernance
+     * Create a new agreement object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to agreements for identityGovernance
+     * Create a new agreement object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     * Retrieve a list of agreement objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

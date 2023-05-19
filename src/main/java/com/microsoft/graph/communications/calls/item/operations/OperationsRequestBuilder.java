@@ -61,7 +61,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a CompletableFuture of CommsOperationCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CommsOperationCollectionResponse
      */
@@ -138,7 +138,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      */
     public class GetQueryParameters {
         /** Include count of items */

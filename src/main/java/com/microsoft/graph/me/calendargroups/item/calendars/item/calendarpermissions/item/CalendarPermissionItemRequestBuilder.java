@@ -41,8 +41,9 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarPermissions/{calendarPermission%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property calendarPermissions for me
+     * Delete calendarPermission.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property calendarPermissions for me
+     * Delete calendarPermission.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @return a CompletableFuture of calendarPermission
+     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> get() {
@@ -96,9 +99,10 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarPermission
+     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property calendarPermissions in me
+     * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param body The request body
      * @return a CompletableFuture of calendarPermission
+     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> patch(@javax.annotation.Nonnull final CalendarPermission body) {
@@ -134,10 +139,11 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property calendarPermissions in me
+     * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarPermission
+     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> patch(@javax.annotation.Nonnull final CalendarPermission body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property calendarPermissions for me
+     * Delete calendarPermission.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property calendarPermissions for me
+     * Delete calendarPermission.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property calendarPermissions in me
+     * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property calendarPermissions in me
+     * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */

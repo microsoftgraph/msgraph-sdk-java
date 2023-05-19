@@ -41,8 +41,9 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/templates/{conditionalAccessTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @return a CompletableFuture of conditionalAccessTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessTemplate> get() {
@@ -59,9 +60,10 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessTemplate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +80,7 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +88,7 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +109,7 @@ public class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

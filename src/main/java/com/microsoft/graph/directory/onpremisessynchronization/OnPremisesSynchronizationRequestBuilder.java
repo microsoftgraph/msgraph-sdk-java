@@ -61,7 +61,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/directory/onPremisesSynchronization{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @return a CompletableFuture of OnPremisesDirectorySynchronizationCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnPremisesDirectorySynchronizationCollectionResponse
      */
@@ -138,7 +138,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      */
     public class GetQueryParameters {
         /** Include count of items */

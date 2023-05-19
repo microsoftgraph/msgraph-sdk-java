@@ -39,9 +39,10 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/changeScreenSharingRole", rawUrl);
     }
     /**
-     * Invoke action changeScreenSharingRole
+     * Allow applications to share screen content with the participants of a group call.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/call-changescreensharingrole?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRolePostRequestBody body) {
@@ -58,10 +59,11 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action changeScreenSharingRole
+     * Allow applications to share screen content with the participants of a group call.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/call-changescreensharingrole?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRolePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action changeScreenSharingRole
+     * Allow applications to share screen content with the participants of a group call.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action changeScreenSharingRole
+     * Allow applications to share screen content with the participants of a group call.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

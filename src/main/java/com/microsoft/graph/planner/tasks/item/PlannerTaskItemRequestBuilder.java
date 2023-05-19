@@ -65,8 +65,9 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/tasks/{plannerTask%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property tasks for planner
+     * Delete a plannerTask object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/plannertask-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -83,9 +84,10 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tasks for planner
+     * Delete a plannerTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/plannertask-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -102,8 +104,9 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified tasks
+     * Retrieve the properties and relationships of plannerTask object.
      * @return a CompletableFuture of plannerTask
+     * @see <a href="https://docs.microsoft.com/graph/api/plannertask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> get() {
@@ -120,9 +123,10 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified tasks
+     * Retrieve the properties and relationships of plannerTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTask
+     * @see <a href="https://docs.microsoft.com/graph/api/plannertask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,6 +146,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tasks in planner
      * @param body The request body
      * @return a CompletableFuture of plannerTask
+     * @see <a href="https://docs.microsoft.com/graph/api/plannertask-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> patch(@javax.annotation.Nonnull final PlannerTask body) {
@@ -162,6 +167,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTask
+     * @see <a href="https://docs.microsoft.com/graph/api/plannertask-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTask> patch(@javax.annotation.Nonnull final PlannerTask body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -179,7 +185,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tasks for planner
+     * Delete a plannerTask object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -187,7 +193,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tasks for planner
+     * Delete a plannerTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +212,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified tasks
+     * Retrieve the properties and relationships of plannerTask object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +220,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified tasks
+     * Retrieve the properties and relationships of plannerTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +278,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified tasks
+     * Retrieve the properties and relationships of plannerTask object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

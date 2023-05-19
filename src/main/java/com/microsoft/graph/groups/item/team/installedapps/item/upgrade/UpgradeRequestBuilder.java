@@ -39,8 +39,9 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/installedApps/{teamsAppInstallation%2Did}/upgrade", rawUrl);
     }
     /**
-     * Invoke action upgrade
+     * Upgrade an app installation within a chat.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-teamsappinstallation-upgrade?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action upgrade
+     * Upgrade an app installation within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-teamsappinstallation-upgrade?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action upgrade
+     * Upgrade an app installation within a chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action upgrade
+     * Upgrade an app installation within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -10,13 +10,13 @@ import java.util.Objects;
 public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The displayName property */
+    /** Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional. */
     private String displayName;
     /** The OdataType property */
     private String odataType;
-    /** The tenantId property */
+    /** Tenant identifier for the partner Azure AD organization. Read-only. */
     private String tenantId;
-    /** The userSyncInbound property */
+    /** Defines whether users can be synchronized from the partner tenant. Key. */
     private CrossTenantUserSyncInbound userSyncInbound;
     /**
      * Instantiates a new crossTenantIdentitySyncPolicyPartner and sets the default values.
@@ -45,7 +45,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         return this.additionalData;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         return this.tenantId;
     }
     /**
-     * Gets the userSyncInbound property value. The userSyncInbound property
+     * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
      * @return a crossTenantUserSyncInbound
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         this.additionalData = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -131,7 +131,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
@@ -140,7 +140,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         this.tenantId = value;
     }
     /**
-     * Sets the userSyncInbound property value. The userSyncInbound property
+     * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
      * @param value Value to set for the userSyncInbound property.
      * @return a void
      */

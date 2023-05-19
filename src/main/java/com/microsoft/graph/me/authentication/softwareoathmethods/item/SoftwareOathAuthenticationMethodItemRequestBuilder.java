@@ -41,8 +41,9 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/me/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property softwareOathMethods for me
+     * Delete a user's Software OATH token authentication method object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * Delete navigation property softwareOathMethods for me
+     * Delete a user's Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @return a CompletableFuture of softwareOathAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareOathAuthenticationMethod> get() {
@@ -96,9 +99,10 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of softwareOathAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareOathAuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,7 +119,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * Delete navigation property softwareOathMethods for me
+     * Delete a user's Software OATH token authentication method object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -123,7 +127,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property softwareOathMethods for me
+     * Delete a user's Software OATH token authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -142,7 +146,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +154,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * Retrieve a user's single Software OATH token authentication method object and its properties.
      */
     public class GetQueryParameters {
         /** Expand related entities */

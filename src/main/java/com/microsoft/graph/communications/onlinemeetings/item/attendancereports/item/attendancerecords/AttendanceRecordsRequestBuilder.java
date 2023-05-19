@@ -61,8 +61,9 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/attendanceReports/{meetingAttendanceReport%2Did}/attendanceRecords{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @return a CompletableFuture of AttendanceRecordCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/attendancerecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttendanceRecordCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttendanceRecordCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/attendancerecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttendanceRecordCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class AttendanceRecordsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

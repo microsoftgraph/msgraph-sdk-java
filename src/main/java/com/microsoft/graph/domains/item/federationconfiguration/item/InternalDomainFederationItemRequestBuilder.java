@@ -41,8 +41,9 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/federationConfiguration/{internalDomainFederation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a CompletableFuture of internalDomainFederation
+     * @see <a href="https://docs.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> get() {
@@ -96,9 +99,10 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of internalDomainFederation
+     * @see <a href="https://docs.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @return a CompletableFuture of internalDomainFederation
+     * @see <a href="https://docs.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> patch(@javax.annotation.Nonnull final InternalDomainFederation body) {
@@ -134,10 +139,11 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of internalDomainFederation
+     * @see <a href="https://docs.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederation> patch(@javax.annotation.Nonnull final InternalDomainFederation body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property federationConfiguration for domains
+     * Delete an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property federationConfiguration in domains
+     * Update the properties of an internalDomainFederation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class InternalDomainFederationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

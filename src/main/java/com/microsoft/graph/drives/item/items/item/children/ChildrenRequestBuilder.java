@@ -61,8 +61,9 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/children{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @return a CompletableFuture of DriveItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DriveItemCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,6 +103,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to children for drives
      * @param body The request body
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-post-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> post(@javax.annotation.Nonnull final DriveItem body) {
@@ -121,6 +124,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-post-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> post(@javax.annotation.Nonnull final DriveItem body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +203,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      */
     public class GetQueryParameters {
         /** Include count of items */

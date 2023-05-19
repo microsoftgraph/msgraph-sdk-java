@@ -126,8 +126,9 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A **submission** object represents a student's work for an assignment. Resources associated with the **submission** represent this work. Only the **assignedTo** student can see and modify the **submission**. A teacher or application with application permissions has full access to all **submissions**. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the **assignment** has been released.
      * @return a CompletableFuture of educationSubmission
+     * @see <a href="https://docs.microsoft.com/graph/api/educationsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmission> get() {
@@ -144,9 +145,10 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A **submission** object represents a student's work for an assignment. Resources associated with the **submission** represent this work. Only the **assignedTo** student can see and modify the **submission**. A teacher or application with application permissions has full access to all **submissions**. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the **assignment** has been released.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSubmission
+     * @see <a href="https://docs.microsoft.com/graph/api/educationsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmission> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -230,7 +232,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A **submission** object represents a student's work for an assignment. Resources associated with the **submission** represent this work. Only the **assignedTo** student can see and modify the **submission**. A teacher or application with application permissions has full access to all **submissions**. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the **assignment** has been released.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -238,7 +240,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A **submission** object represents a student's work for an assignment. Resources associated with the **submission** represent this work. Only the **assignedTo** student can see and modify the **submission**. A teacher or application with application permissions has full access to all **submissions**. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the **assignment** has been released.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -296,7 +298,7 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A **submission** object represents a student's work for an assignment. Resources associated with the **submission** represent this work. Only the **assignedTo** student can see and modify the **submission**. A teacher or application with application permissions has full access to all **submissions**. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the **assignment** has been released.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -61,8 +61,9 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/groups/{group%2Did1}/sets/{set%2Did}/relations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Indicates which terms have been pinned or reused directly under the set.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @return a CompletableFuture of RelationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RelationCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Indicates which terms have been pinned or reused directly under the set.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of RelationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RelationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Indicates which terms have been pinned or reused directly under the set.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Indicates which terms have been pinned or reused directly under the set.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Indicates which terms have been pinned or reused directly under the set.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      */
     public class GetQueryParameters {
         /** Include count of items */

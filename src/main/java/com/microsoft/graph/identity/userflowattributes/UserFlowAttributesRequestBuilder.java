@@ -61,8 +61,9 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/userFlowAttributes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @return a CompletableFuture of IdentityUserFlowAttributeCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityUserFlowAttributeCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new identityUserFlowAttribute object.
      * @param body The request body
      * @return a CompletableFuture of identityUserFlowAttribute
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> post(@javax.annotation.Nonnull final IdentityUserFlowAttribute body) {
@@ -117,10 +120,11 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttribute
+     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> post(@javax.annotation.Nonnull final IdentityUserFlowAttribute body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new identityUserFlowAttribute object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userFlowAttributes for identity
+     * Create a new identityUserFlowAttribute object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve a list of identityUserFlowAttribute objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

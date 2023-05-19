@@ -61,8 +61,9 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @return a CompletableFuture of DelegatedAdminAccessAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignmentCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminAccessAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a CompletableFuture of delegatedAdminAccessAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignment> post(@javax.annotation.Nonnull final DelegatedAdminAccessAssignment body) {
@@ -117,10 +120,11 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminAccessAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignment> post(@javax.annotation.Nonnull final DelegatedAdminAccessAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class AccessAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

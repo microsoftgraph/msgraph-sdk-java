@@ -61,8 +61,9 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of site lists to support Internet Explorer mode.
+     * Get a list of the browserSiteList objects and their properties.
      * @return a CompletableFuture of BrowserSiteListCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteListCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of site lists to support Internet Explorer mode.
+     * Get a list of the browserSiteList objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BrowserSiteListCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteListCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to siteLists for admin
+     * Create a new browserSiteList object to support Internet Explorer mode.
      * @param body The request body
      * @return a CompletableFuture of browserSiteList
+     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@javax.annotation.Nonnull final BrowserSiteList body) {
@@ -117,10 +120,11 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to siteLists for admin
+     * Create a new browserSiteList object to support Internet Explorer mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteList
+     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@javax.annotation.Nonnull final BrowserSiteList body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of site lists to support Internet Explorer mode.
+     * Get a list of the browserSiteList objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of site lists to support Internet Explorer mode.
+     * Get a list of the browserSiteList objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to siteLists for admin
+     * Create a new browserSiteList object to support Internet Explorer mode.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to siteLists for admin
+     * Create a new browserSiteList object to support Internet Explorer mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of site lists to support Internet Explorer mode.
+     * Get a list of the browserSiteList objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -102,8 +102,9 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Schedules for role eligibility operations.
+     * Retrieve the schedule for a role eligibility operation.
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> get() {
@@ -120,9 +121,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Schedules for role eligibility operations.
+     * Retrieve the schedule for a role eligibility operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -206,7 +208,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Schedules for role eligibility operations.
+     * Retrieve the schedule for a role eligibility operation.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +216,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Schedules for role eligibility operations.
+     * Retrieve the schedule for a role eligibility operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +274,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Schedules for role eligibility operations.
+     * Retrieve the schedule for a role eligibility operation.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -60,8 +60,9 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/allChannels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @return a CompletableFuture of ChannelCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChannelCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/team-list-allchannels?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class AllChannelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of channels either hosted in or shared with the team (incoming channels).
+     * Get the list of channels either in this team or shared with this team (incoming channels).
      */
     public class GetQueryParameters {
         /** Include count of items */

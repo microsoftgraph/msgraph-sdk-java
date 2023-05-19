@@ -41,8 +41,9 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/policies/{conditionalAccessPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property policies for identity
+     * Delete a conditionalAccessPolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Delete navigation property policies for identity
+     * Delete a conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      * @return a CompletableFuture of conditionalAccessPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get() {
@@ -96,9 +99,10 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the navigation property policies in identity
+     * Update the properties of a conditionalAccessPolicy object.
      * @param body The request body
      * @return a CompletableFuture of conditionalAccessPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@javax.annotation.Nonnull final ConditionalAccessPolicy body) {
@@ -134,10 +139,11 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the navigation property policies in identity
+     * Update the properties of a conditionalAccessPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@javax.annotation.Nonnull final ConditionalAccessPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Delete navigation property policies for identity
+     * Delete a conditionalAccessPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property policies for identity
+     * Delete a conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property policies in identity
+     * Update the properties of a conditionalAccessPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property policies in identity
+     * Update the properties of a conditionalAccessPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

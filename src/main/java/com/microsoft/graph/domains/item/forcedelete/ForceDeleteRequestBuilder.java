@@ -39,9 +39,10 @@ public class ForceDeleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/forceDelete", rawUrl);
     }
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/domain-forcedelete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ForceDeletePostRequestBody body) {
@@ -58,10 +59,11 @@ public class ForceDeleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/domain-forcedelete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ForceDeletePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class ForceDeleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class ForceDeleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

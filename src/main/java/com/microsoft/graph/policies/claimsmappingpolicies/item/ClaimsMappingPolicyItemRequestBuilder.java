@@ -47,8 +47,9 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/claimsMappingPolicies/{claimsMappingPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @return a CompletableFuture of claimsMappingPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> get() {
@@ -102,9 +105,10 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of claimsMappingPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @return a CompletableFuture of claimsMappingPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> patch(@javax.annotation.Nonnull final ClaimsMappingPolicy body) {
@@ -140,10 +145,11 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of claimsMappingPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> patch(@javax.annotation.Nonnull final ClaimsMappingPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

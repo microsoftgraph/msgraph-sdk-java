@@ -47,8 +47,9 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/tokenIssuancePolicies/{tokenIssuancePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property tokenIssuancePolicies for policies
+     * Delete a tokenIssuancePolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tokenIssuancePolicies for policies
+     * Delete a tokenIssuancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -121,9 +123,10 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tokenIssuancePolicies in policies
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @return a CompletableFuture of tokenIssuancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> patch(@javax.annotation.Nonnull final TokenIssuancePolicy body) {
@@ -140,10 +143,11 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tokenIssuancePolicies in policies
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenIssuancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> patch(@javax.annotation.Nonnull final TokenIssuancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +165,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tokenIssuancePolicies for policies
+     * Delete a tokenIssuancePolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +173,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tokenIssuancePolicies for policies
+     * Delete a tokenIssuancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +221,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property tokenIssuancePolicies in policies
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +230,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property tokenIssuancePolicies in policies
+     * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

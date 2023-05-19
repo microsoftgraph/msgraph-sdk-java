@@ -53,7 +53,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/transitiveMemberOf/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get transitiveMemberOf from contacts
+     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      * @return a CompletableFuture of directoryObject
      */
     @javax.annotation.Nonnull
@@ -71,7 +71,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get transitiveMemberOf from contacts
+     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -90,7 +90,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get transitiveMemberOf from contacts
+     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -98,7 +98,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get transitiveMemberOf from contacts
+     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -119,7 +119,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get transitiveMemberOf from contacts
+     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /** Expand related entities */

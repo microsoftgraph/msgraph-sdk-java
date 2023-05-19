@@ -47,8 +47,9 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/special/{driveItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Collection of common folders available in OneDrive. Read-only. Nullable.
+     * Use the special collection to access a special folder by name. Special folders provide simple aliases to access well-known folders in OneDrive without the need to look up the folder by path (which would require localization), or reference the folder with an ID. If a special folder is renamed or moved to another location within the drive, this syntax will continue to find that folder. Special folders are automatically created the first time an application attempts to write to one, if it doesn't already exist. If a user deletes one, it is recreated when written to again.
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/drive-get-specialfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get() {
@@ -65,9 +66,10 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of common folders available in OneDrive. Read-only. Nullable.
+     * Use the special collection to access a special folder by name. Special folders provide simple aliases to access well-known folders in OneDrive without the need to look up the folder by path (which would require localization), or reference the folder with an ID. If a special folder is renamed or moved to another location within the drive, this syntax will continue to find that folder. Special folders are automatically created the first time an application attempts to write to one, if it doesn't already exist. If a user deletes one, it is recreated when written to again.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
+     * @see <a href="https://docs.microsoft.com/graph/api/drive-get-specialfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +86,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of common folders available in OneDrive. Read-only. Nullable.
+     * Use the special collection to access a special folder by name. Special folders provide simple aliases to access well-known folders in OneDrive without the need to look up the folder by path (which would require localization), or reference the folder with an ID. If a special folder is renamed or moved to another location within the drive, this syntax will continue to find that folder. Special folders are automatically created the first time an application attempts to write to one, if it doesn't already exist. If a user deletes one, it is recreated when written to again.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -92,7 +94,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of common folders available in OneDrive. Read-only. Nullable.
+     * Use the special collection to access a special folder by name. Special folders provide simple aliases to access well-known folders in OneDrive without the need to look up the folder by path (which would require localization), or reference the folder with an ID. If a special folder is renamed or moved to another location within the drive, this syntax will continue to find that folder. Special folders are automatically created the first time an application attempts to write to one, if it doesn't already exist. If a user deletes one, it is recreated when written to again.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -113,7 +115,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of common folders available in OneDrive. Read-only. Nullable.
+     * Use the special collection to access a special folder by name. Special folders provide simple aliases to access well-known folders in OneDrive without the need to look up the folder by path (which would require localization), or reference the folder with an ID. If a special folder is renamed or moved to another location within the drive, this syntax will continue to find that folder. Special folders are automatically created the first time an application attempts to write to one, if it doesn't already exist. If a user deletes one, it is recreated when written to again.
      */
     public class GetQueryParameters {
         /** Expand related entities */

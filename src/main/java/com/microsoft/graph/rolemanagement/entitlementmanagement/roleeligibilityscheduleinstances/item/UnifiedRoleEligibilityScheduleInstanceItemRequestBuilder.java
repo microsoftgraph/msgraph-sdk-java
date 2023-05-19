@@ -102,8 +102,9 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         }
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instance of a role eligibility.
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> get() {
@@ -120,9 +121,10 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         }
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instance of a role eligibility.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstance
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleInstance> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -206,7 +208,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instance of a role eligibility.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +216,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instance of a role eligibility.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +274,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Instances for role eligibility requests.
+     * Get the instance of a role eligibility.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -47,8 +47,9 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/permissions/{permission%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property permissions for groups
+     * Delete a permission object on a site.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/site-delete-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property permissions for groups
+     * Delete a permission object on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/site-delete-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @return a CompletableFuture of permission
+     * @see <a href="https://docs.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> get() {
@@ -102,9 +105,10 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
+     * @see <a href="https://docs.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property permissions in groups
+     * Update an application permission object on a site. 
      * @param body The request body
      * @return a CompletableFuture of permission
+     * @see <a href="https://docs.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> patch(@javax.annotation.Nonnull final Permission body) {
@@ -140,10 +145,11 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property permissions in groups
+     * Update an application permission object on a site. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
+     * @see <a href="https://docs.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> patch(@javax.annotation.Nonnull final Permission body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property permissions for groups
+     * Delete a permission object on a site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property permissions for groups
+     * Delete a permission object on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property permissions in groups
+     * Update an application permission object on a site. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property permissions in groups
+     * Update an application permission object on a site. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      */
     public class GetQueryParameters {
         /** Expand related entities */

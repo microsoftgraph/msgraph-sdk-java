@@ -67,8 +67,9 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection of channels and messages associated with the team.
+     * Retrieve the list of channels in this team.
      * @return a CompletableFuture of ChannelCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get() {
@@ -85,9 +86,10 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of channels and messages associated with the team.
+     * Retrieve the list of channels in this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChannelCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,9 +106,10 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to channels for teams
+     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @return a CompletableFuture of channel
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> post(@javax.annotation.Nonnull final Channel body) {
@@ -123,10 +126,11 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to channels for teams
+     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of channel
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> post(@javax.annotation.Nonnull final Channel body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +148,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of channels and messages associated with the team.
+     * Retrieve the list of channels in this team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +156,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of channels and messages associated with the team.
+     * Retrieve the list of channels in this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +177,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to channels for teams
+     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to channels for teams
+     * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +209,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of channels and messages associated with the team.
+     * Retrieve the list of channels in this team.
      */
     public class GetQueryParameters {
         /** Include count of items */

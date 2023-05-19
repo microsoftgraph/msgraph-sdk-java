@@ -61,8 +61,9 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @return a CompletableFuture of bookingAppointment
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> post(@javax.annotation.Nonnull final BookingAppointment body) {
@@ -117,10 +120,11 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingAppointment
+     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> post(@javax.annotation.Nonnull final BookingAppointment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -67,8 +67,9 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}/childFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     * Get a collection of child folders under the specified contact folder.
      * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get() {
@@ -85,9 +86,10 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     * Get a collection of child folders under the specified contact folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,9 +106,10 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to childFolders for users
+     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
      * @param body The request body
      * @return a CompletableFuture of contactFolder
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> post(@javax.annotation.Nonnull final ContactFolder body) {
@@ -123,10 +126,11 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to childFolders for users
+     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactFolder
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> post(@javax.annotation.Nonnull final ContactFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +148,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     * Get a collection of child folders under the specified contact folder.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +156,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     * Get a collection of child folders under the specified contact folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +177,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to childFolders for users
+     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to childFolders for users
+     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +209,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     * Get a collection of child folders under the specified contact folder.
      */
     public class GetQueryParameters {
         /** Include count of items */

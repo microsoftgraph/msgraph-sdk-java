@@ -84,8 +84,9 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Read the properties of a delegatedAdminCustomer object.
      * @return a CompletableFuture of delegatedAdminCustomer
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadmincustomer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminCustomer> get() {
@@ -102,9 +103,10 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Read the properties of a delegatedAdminCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminCustomer
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadmincustomer-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminCustomer> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Read the properties of a delegatedAdminCustomer object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Read the properties of a delegatedAdminCustomer object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Read the properties of a delegatedAdminCustomer object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

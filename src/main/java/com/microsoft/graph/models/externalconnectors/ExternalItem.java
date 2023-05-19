@@ -10,6 +10,8 @@ import java.util.Objects;
 public class ExternalItem extends Entity implements Parsable {
     /** An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
     private java.util.List<Acl> acl;
+    /** Returns a list of activities performed on the item. Write-only. */
+    private java.util.List<ExternalActivity> activities;
     /** A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional. */
     private ExternalItemContent content;
     /** A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required. */
@@ -41,6 +43,14 @@ public class ExternalItem extends Entity implements Parsable {
         return this.acl;
     }
     /**
+     * Gets the activities property value. Returns a list of activities performed on the item. Write-only.
+     * @return a externalActivity
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ExternalActivity> getActivities() {
+        return this.activities;
+    }
+    /**
      * Gets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
      * @return a externalItemContent
      */
@@ -56,6 +66,7 @@ public class ExternalItem extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acl", (n) -> { this.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ExternalActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
         deserializerMap.put("properties", (n) -> { this.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -78,6 +89,7 @@ public class ExternalItem extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("acl", this.getAcl());
+        writer.writeCollectionOfObjectValues("activities", this.getActivities());
         writer.writeObjectValue("content", this.getContent());
         writer.writeObjectValue("properties", this.getProperties());
     }
@@ -89,6 +101,15 @@ public class ExternalItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAcl(@javax.annotation.Nullable final java.util.List<Acl> value) {
         this.acl = value;
+    }
+    /**
+     * Sets the activities property value. Returns a list of activities performed on the item. Write-only.
+     * @param value Value to set for the activities property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setActivities(@javax.annotation.Nullable final java.util.List<ExternalActivity> value) {
+        this.activities = value;
     }
     /**
      * Sets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.

@@ -61,8 +61,9 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @return a CompletableFuture of DelegatedAdminRelationshipCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminRelationshipCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @return a CompletableFuture of delegatedAdminRelationship
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantrelationship-post-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> post(@javax.annotation.Nonnull final DelegatedAdminRelationship body) {
@@ -117,10 +120,11 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminRelationship
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantrelationship-post-delegatedadminrelationships?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> post(@javax.annotation.Nonnull final DelegatedAdminRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

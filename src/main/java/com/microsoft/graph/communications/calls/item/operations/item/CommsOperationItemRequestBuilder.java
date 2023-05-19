@@ -78,8 +78,9 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a CompletableFuture of commsOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> get() {
@@ -96,9 +97,10 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of commsOperation
+     * @see <a href="https://docs.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      */
     public class GetQueryParameters {
         /** Expand related entities */

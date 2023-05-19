@@ -84,8 +84,9 @@ public class ServiceHealthItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant.
      * @return a CompletableFuture of serviceHealth
+     * @see <a href="https://docs.microsoft.com/graph/api/servicehealth-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealth> get() {
@@ -102,9 +103,10 @@ public class ServiceHealthItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of serviceHealth
+     * @see <a href="https://docs.microsoft.com/graph/api/servicehealth-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealth> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class ServiceHealthItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class ServiceHealthItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class ServiceHealthItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceHealth object. This operation provides the health information of a specified service for a tenant.
      */
     public class GetQueryParameters {
         /** Expand related entities */

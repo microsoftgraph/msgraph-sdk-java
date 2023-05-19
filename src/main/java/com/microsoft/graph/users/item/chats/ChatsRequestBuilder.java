@@ -67,8 +67,9 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get chats from users
+     * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @return a CompletableFuture of ChatCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatCollectionResponse> get() {
@@ -85,9 +86,10 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get chats from users
+     * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChatCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +146,7 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get chats from users
+     * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +154,7 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get chats from users
+     * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +207,7 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get chats from users
+     * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      */
     public class GetQueryParameters {
         /** Include count of items */

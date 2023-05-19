@@ -12,7 +12,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     private Map<String, Object> additionalData;
     /** Indicates whether the default user role can create applications. */
     private Boolean allowedToCreateApps;
-    /** Indicates whether the default user role can create security groups. */
+    /** Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal. */
     private Boolean allowedToCreateSecurityGroups;
     /** Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role. */
     private Boolean allowedToReadBitlockerKeysForOwnedDevice;
@@ -57,7 +57,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.allowedToCreateApps;
     }
     /**
-     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups.
+     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         this.allowedToCreateApps = value;
     }
     /**
-     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups.
+     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
      * @param value Value to set for the allowedToCreateSecurityGroups property.
      * @return a void
      */

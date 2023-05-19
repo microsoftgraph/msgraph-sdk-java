@@ -61,8 +61,9 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/featureRolloutPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicyCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of FeatureRolloutPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> post(@javax.annotation.Nonnull final FeatureRolloutPolicy body) {
@@ -117,10 +120,11 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> post(@javax.annotation.Nonnull final FeatureRolloutPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

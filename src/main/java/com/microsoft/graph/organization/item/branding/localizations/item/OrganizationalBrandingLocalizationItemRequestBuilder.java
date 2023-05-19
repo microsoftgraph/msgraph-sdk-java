@@ -59,8 +59,9 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property localizations for organization
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +78,10 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Delete navigation property localizations for organization
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +98,9 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Add different branding based on a locale.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of **id** in the URL.
      * @return a CompletableFuture of organizationalBrandingLocalization
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> get() {
@@ -114,9 +117,10 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Add different branding based on a locale.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of **id** in the URL.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organizationalBrandingLocalization
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,9 +137,10 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Update the navigation property localizations in organization
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param body The request body
      * @return a CompletableFuture of organizationalBrandingLocalization
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> patch(@javax.annotation.Nonnull final OrganizationalBrandingLocalization body) {
@@ -152,10 +157,11 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Update the navigation property localizations in organization
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organizationalBrandingLocalization
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> patch(@javax.annotation.Nonnull final OrganizationalBrandingLocalization body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -173,7 +179,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Delete navigation property localizations for organization
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +187,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property localizations for organization
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +206,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Add different branding based on a locale.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of **id** in the URL.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +214,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Add different branding based on a locale.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of **id** in the URL.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +235,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the navigation property localizations in organization
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -238,7 +244,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property localizations in organization
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,7 +272,7 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Add different branding based on a locale.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of **id** in the URL.
      */
     public class GetQueryParameters {
         /** Expand related entities */

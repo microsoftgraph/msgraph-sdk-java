@@ -28,7 +28,7 @@ public class Authentication extends Entity implements Parsable {
     /** Represents the Windows Hello for Business authentication method registered to a user for authentication. */
     private java.util.List<WindowsHelloForBusinessAuthenticationMethod> windowsHelloForBusinessMethods;
     /**
-     * Instantiates a new authentication and sets the default values.
+     * Instantiates a new Authentication and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -38,7 +38,7 @@ public class Authentication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authentication
+     * @return a Authentication
      */
     @javax.annotation.Nonnull
     public static Authentication createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

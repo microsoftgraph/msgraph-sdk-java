@@ -66,8 +66,9 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get tokenLifetimePolicies from applications
+     * List the tokenLifetimePolicy objects that are assigned to an application.
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get() {
@@ -84,9 +85,10 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get tokenLifetimePolicies from applications
+     * List the tokenLifetimePolicy objects that are assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get tokenLifetimePolicies from applications
+     * List the tokenLifetimePolicy objects that are assigned to an application.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -111,7 +113,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get tokenLifetimePolicies from applications
+     * List the tokenLifetimePolicy objects that are assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +134,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tokenLifetimePolicies from applications
+     * List the tokenLifetimePolicy objects that are assigned to an application.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -61,8 +61,9 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/{authenticationStrengthPolicy%2Did}/combinationConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
+     * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
      * @return a CompletableFuture of AuthenticationCombinationConfigurationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-list-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfigurationCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
+     * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationCombinationConfigurationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-list-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Create new navigation property to combinationConfigurations for policies
+     * Create a new authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be created, and these may only be created for custom authentication strength policies.
      * @param body The request body
      * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-post-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfiguration> post(@javax.annotation.Nonnull final AuthenticationCombinationConfiguration body) {
@@ -117,10 +120,11 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Create new navigation property to combinationConfigurations for policies
+     * Create a new authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be created, and these may only be created for custom authentication strength policies.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationCombinationConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-post-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfiguration> post(@javax.annotation.Nonnull final AuthenticationCombinationConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
+     * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
+     * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Create new navigation property to combinationConfigurations for policies
+     * Create a new authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be created, and these may only be created for custom authentication strength policies.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to combinationConfigurations for policies
+     * Create a new authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be created, and these may only be created for custom authentication strength policies.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
+     * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
      */
     public class GetQueryParameters {
         /** Include count of items */

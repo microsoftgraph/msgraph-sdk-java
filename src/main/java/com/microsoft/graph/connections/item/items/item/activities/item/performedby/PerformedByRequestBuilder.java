@@ -1,5 +1,6 @@
-package com.microsoft.graph.shares.item.list.items.count;
+package com.microsoft.graph.connections.item.items.item.activities.item.performedby;
 
+import com.microsoft.graph.models.externalconnectors.Identity;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -16,68 +17,68 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to count the resources in the collection.
+ * Provides operations to manage the performedBy property of the microsoft.graph.externalConnectors.externalActivity entity.
  */
-public class CountRequestBuilder extends BaseRequestBuilder {
+public class PerformedByRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CountRequestBuilder and sets the default values.
+     * Instantiates a new PerformedByRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public CountRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/$count{?%24search,%24filter}", pathParameters);
+    public PerformedByRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/items/{externalItem%2Did}/activities/{externalActivity%2Did}/performedBy{?%24select,%24expand}", pathParameters);
     }
     /**
-     * Instantiates a new CountRequestBuilder and sets the default values.
+     * Instantiates a new PerformedByRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public CountRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/$count{?%24search,%24filter}", rawUrl);
+    public PerformedByRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/connections/{externalConnection%2Did}/items/{externalItem%2Did}/activities/{externalActivity%2Did}/performedBy{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the number of the resource
-     * @return a CompletableFuture of integer
+     * Represents an identity used to identify who is responsible for the activity.
+     * @return a CompletableFuture of identity
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> get() {
+    public java.util.concurrent.CompletableFuture<Identity> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Integer.class, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Identity::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Integer> executionException = new java.util.concurrent.CompletableFuture<Integer>();
+            final java.util.concurrent.CompletableFuture<Identity> executionException = new java.util.concurrent.CompletableFuture<Identity>();
             executionException.completeExceptionally(ex);
             return executionException;
         }
     }
     /**
-     * Get the number of the resource
+     * Represents an identity used to identify who is responsible for the activity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of integer
+     * @return a CompletableFuture of identity
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Identity> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Integer.class, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, Identity::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Integer> executionException = new java.util.concurrent.CompletableFuture<Integer>();
+            final java.util.concurrent.CompletableFuture<Identity> executionException = new java.util.concurrent.CompletableFuture<Identity>();
             executionException.completeExceptionally(ex);
             return executionException;
         }
     }
     /**
-     * Get the number of the resource
+     * Represents an identity used to identify who is responsible for the activity.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +86,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the number of the resource
+     * Represents an identity used to identify who is responsible for the activity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -95,7 +96,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "text/plain");
+        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -106,17 +107,17 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the number of the resource
+     * Represents an identity used to identify who is responsible for the activity.
      */
     public class GetQueryParameters {
-        /** Filter items by property values */
-        @QueryParameter(name = "%24filter")
+        /** Expand related entities */
+        @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
-        public String filter;
-        /** Search items by search phrases */
-        @QueryParameter(name = "%24search")
+        public String[] expand;
+        /** Select properties to be returned */
+        @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
-        public String search;
+        public String[] select;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

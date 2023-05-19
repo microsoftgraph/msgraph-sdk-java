@@ -40,9 +40,10 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/edge/internetExplorerMode/siteLists/{browserSiteList%2Did}/publish", rawUrl);
     }
     /**
-     * Invoke action publish
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @return a CompletableFuture of browserSiteList
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-publish?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@javax.annotation.Nonnull final PublishPostRequestBody body) {
@@ -59,10 +60,11 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action publish
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteList
+     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-publish?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@javax.annotation.Nonnull final PublishPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action publish
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action publish
+     * Publish the specified browserSiteList for devices to download.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

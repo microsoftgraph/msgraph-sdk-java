@@ -41,8 +41,9 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/schedule/timeOffRequests/{timeOffRequest%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property timeOffRequests for me
+     * Delete a timeOffRequest object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property timeOffRequests for me
+     * Delete a timeOffRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get timeOffRequests from me
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @return a CompletableFuture of timeOffRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffRequest> get() {
@@ -96,9 +99,10 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get timeOffRequests from me
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOffRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/timeoffrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property timeOffRequests for me
+     * Delete a timeOffRequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property timeOffRequests for me
+     * Delete a timeOffRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get timeOffRequests from me
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get timeOffRequests from me
+     * Retrieve the properties and relationships of a timeoffrequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +252,7 @@ public class TimeOffRequestItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get timeOffRequests from me
+     * Retrieve the properties and relationships of a timeoffrequest object.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */

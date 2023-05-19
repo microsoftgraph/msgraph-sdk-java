@@ -61,7 +61,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/comments/{workbookComment%2Did}/replies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @return a CompletableFuture of WorkbookCommentReplyCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookCommentReplyCollectionResponse
      */
@@ -138,7 +138,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      */
     public class GetQueryParameters {
         /** Include count of items */

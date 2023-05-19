@@ -72,8 +72,9 @@ public class DirectReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/directReports{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-directreports?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -90,9 +91,10 @@ public class DirectReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-directreports?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +111,7 @@ public class DirectReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -117,7 +119,7 @@ public class DirectReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -138,7 +140,7 @@ public class DirectReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get directReports from contacts
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /** Include count of items */

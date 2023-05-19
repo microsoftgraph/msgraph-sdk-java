@@ -84,8 +84,9 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * Retrieve the properties and relationships of chartpoint object.
      * @return a CompletableFuture of workbookChartPoint
+     * @see <a href="https://docs.microsoft.com/graph/api/chartpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPoint> get() {
@@ -102,9 +103,10 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * Retrieve the properties and relationships of chartpoint object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartPoint
+     * @see <a href="https://docs.microsoft.com/graph/api/chartpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartPoint> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * Retrieve the properties and relationships of chartpoint object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * Retrieve the properties and relationships of chartpoint object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * Retrieve the properties and relationships of chartpoint object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

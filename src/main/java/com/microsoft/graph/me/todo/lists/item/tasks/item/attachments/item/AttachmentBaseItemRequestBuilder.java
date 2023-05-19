@@ -47,8 +47,9 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/attachments/{attachmentBase%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete a taskFileAttachment object from a todoTask resource.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/taskfileattachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete a taskFileAttachment object from a todoTask resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/taskfileattachment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of file attachments for the task.
+     * Read the properties and relationships of a taskFileAttachment object.
      * @return a CompletableFuture of attachmentBase
+     * @see <a href="https://docs.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentBase> get() {
@@ -102,9 +105,10 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of file attachments for the task.
+     * Read the properties and relationships of a taskFileAttachment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of attachmentBase
+     * @see <a href="https://docs.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentBase> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +125,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete a taskFileAttachment object from a todoTask resource.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -129,7 +133,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property attachments for me
+     * Delete a taskFileAttachment object from a todoTask resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,7 +152,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of file attachments for the task.
+     * Read the properties and relationships of a taskFileAttachment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +160,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of file attachments for the task.
+     * Read the properties and relationships of a taskFileAttachment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of file attachments for the task.
+     * Read the properties and relationships of a taskFileAttachment object.
      */
     public class GetQueryParameters {
         /** Select properties to be returned */

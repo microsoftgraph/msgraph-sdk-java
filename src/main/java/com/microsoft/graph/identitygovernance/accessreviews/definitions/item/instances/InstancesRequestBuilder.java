@@ -72,8 +72,9 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @return a CompletableFuture of AccessReviewInstanceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceCollectionResponse> get() {
@@ -90,9 +91,10 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessReviewInstanceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +151,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -157,7 +159,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
+     * Get a list of the accessReviewInstance objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -210,7 +212,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
+     * Get a list of the accessReviewInstance objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

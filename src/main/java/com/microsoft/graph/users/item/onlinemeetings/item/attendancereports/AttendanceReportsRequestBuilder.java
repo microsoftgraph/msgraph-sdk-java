@@ -61,8 +61,9 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/attendanceReports{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @return a CompletableFuture of MeetingAttendanceReportCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/meetingattendancereport-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingAttendanceReportCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of MeetingAttendanceReportCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/meetingattendancereport-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingAttendanceReportCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      */
     public class GetQueryParameters {
         /** Include count of items */

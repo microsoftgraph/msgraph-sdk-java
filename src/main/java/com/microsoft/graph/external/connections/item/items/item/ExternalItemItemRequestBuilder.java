@@ -1,5 +1,7 @@
 package com.microsoft.graph.external.connections.item.items.item;
 
+import com.microsoft.graph.external.connections.item.items.item.activities.ActivitiesRequestBuilder;
+import com.microsoft.graph.external.connections.item.items.item.microsoftgraphexternalconnectorsaddactivities.MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder;
 import com.microsoft.graph.models.externalconnectors.ExternalItem;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
  */
 public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the activities property of the microsoft.graph.externalConnectors.externalItem entity. */
+    @javax.annotation.Nonnull
+    public ActivitiesRequestBuilder activities() {
+        return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the addActivities method. */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder microsoftGraphExternalConnectorsAddActivities() {
+        return new MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new ExternalItemItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -41,8 +53,9 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/items/{externalItem%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property items for external
+     * Delete an externalItem object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +72,10 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property items for external
+     * Delete an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +92,9 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @return a CompletableFuture of externalItem
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItem> get() {
@@ -96,9 +111,10 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalItem
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +171,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property items for external
+     * Delete an externalItem object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +179,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property items for external
+     * Delete an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +198,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +206,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +264,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

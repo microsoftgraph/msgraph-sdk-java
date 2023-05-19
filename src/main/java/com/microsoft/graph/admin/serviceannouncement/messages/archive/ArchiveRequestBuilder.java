@@ -39,9 +39,10 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/archive", rawUrl);
     }
     /**
-     * Invoke action archive
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a CompletableFuture of archiveResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArchiveResponse> post(@javax.annotation.Nonnull final ArchivePostRequestBody body) {
@@ -58,10 +59,11 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action archive
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of archiveResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ArchiveResponse> post(@javax.annotation.Nonnull final ArchivePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action archive
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class ArchiveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action archive
+     * Archive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

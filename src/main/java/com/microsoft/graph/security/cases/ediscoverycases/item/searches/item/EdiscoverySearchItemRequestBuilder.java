@@ -83,8 +83,9 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -101,9 +102,10 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -120,8 +122,9 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @return a CompletableFuture of ediscoverySearch
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearch> get() {
@@ -138,9 +141,10 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoverySearch
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearch> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -157,9 +161,10 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @return a CompletableFuture of ediscoverySearch
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearch> patch(@javax.annotation.Nonnull final EdiscoverySearch body) {
@@ -176,10 +181,11 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoverySearch
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoverySearch> patch(@javax.annotation.Nonnull final EdiscoverySearch body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -197,7 +203,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -205,7 +211,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -224,7 +230,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -232,7 +238,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -253,7 +259,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -262,7 +268,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -290,7 +296,7 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

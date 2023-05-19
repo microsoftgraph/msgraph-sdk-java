@@ -40,8 +40,9 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/verify", rawUrl);
     }
     /**
-     * Invoke action verify
+     * Validates the ownership of the domain.
      * @return a CompletableFuture of domain
+     * @see <a href="https://docs.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Domain> post() {
@@ -58,9 +59,10 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action verify
+     * Validates the ownership of the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of domain
+     * @see <a href="https://docs.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Domain> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action verify
+     * Validates the ownership of the domain.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action verify
+     * Validates the ownership of the domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

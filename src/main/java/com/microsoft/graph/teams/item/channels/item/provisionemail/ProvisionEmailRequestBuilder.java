@@ -40,8 +40,9 @@ public class ProvisionEmailRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/provisionEmail", rawUrl);
     }
     /**
-     * Invoke action provisionEmail
+     * Provision an email address for a channel. Microsoft Teams doesn't automatically provision an email address for a **channel** by default. To have Teams provision an email address, you can call **provisionEmail**, or through the Teams user interface, select **Get email address**, which triggers Teams to generate an email address if it has not already provisioned one. To remove the email address of a **channel**, use the removeEmail method.
      * @return a CompletableFuture of provisionChannelEmailResult
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-provisionemail?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisionChannelEmailResult> post() {
@@ -58,9 +59,10 @@ public class ProvisionEmailRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action provisionEmail
+     * Provision an email address for a channel. Microsoft Teams doesn't automatically provision an email address for a **channel** by default. To have Teams provision an email address, you can call **provisionEmail**, or through the Teams user interface, select **Get email address**, which triggers Teams to generate an email address if it has not already provisioned one. To remove the email address of a **channel**, use the removeEmail method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of provisionChannelEmailResult
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-provisionemail?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisionChannelEmailResult> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class ProvisionEmailRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action provisionEmail
+     * Provision an email address for a channel. Microsoft Teams doesn't automatically provision an email address for a **channel** by default. To have Teams provision an email address, you can call **provisionEmail**, or through the Teams user interface, select **Get email address**, which triggers Teams to generate an email address if it has not already provisioned one. To remove the email address of a **channel**, use the removeEmail method.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class ProvisionEmailRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action provisionEmail
+     * Provision an email address for a channel. Microsoft Teams doesn't automatically provision an email address for a **channel** by default. To have Teams provision an email address, you can call **provisionEmail**, or through the Teams user interface, select **Get email address**, which triggers Teams to generate an email address if it has not already provisioned one. To remove the email address of a **channel**, use the removeEmail method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

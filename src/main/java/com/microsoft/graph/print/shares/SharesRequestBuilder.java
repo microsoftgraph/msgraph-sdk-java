@@ -61,8 +61,9 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve a list of **printerShares**.
      * @return a CompletableFuture of PrinterShareCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/print-list-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShareCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve a list of **printerShares**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrinterShareCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/print-list-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShareCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to shares for print
+     * Create a new **printerShare** for the specified printer.
      * @param body The request body
      * @return a CompletableFuture of printerShare
+     * @see <a href="https://docs.microsoft.com/graph/api/print-post-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> post(@javax.annotation.Nonnull final PrinterShare body) {
@@ -117,10 +120,11 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to shares for print
+     * Create a new **printerShare** for the specified printer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printerShare
+     * @see <a href="https://docs.microsoft.com/graph/api/print-post-shares?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> post(@javax.annotation.Nonnull final PrinterShare body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve a list of **printerShares**.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve a list of **printerShares**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to shares for print
+     * Create a new **printerShare** for the specified printer.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to shares for print
+     * Create a new **printerShare** for the specified printer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve a list of **printerShares**.
      */
     public class GetQueryParameters {
         /** Include count of items */

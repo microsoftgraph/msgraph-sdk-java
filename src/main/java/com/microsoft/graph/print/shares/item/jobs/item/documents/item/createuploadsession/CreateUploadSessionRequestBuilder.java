@@ -40,9 +40,10 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/jobs/{printJob%2Did}/documents/{printDocument%2Did}/createUploadSession", rawUrl);
     }
     /**
-     * Invoke action createUploadSession
+     * Create an upload session that allows an app to iteratively upload ranges of a binary file linked to the print document. As part of the response, this action returns an upload URL that can be used in subsequent sequential `PUT` queries. Request headers for each `PUT` operation can be used to specify the exact range of bytes to be uploaded. This allows transfer to be resumed, in case the network connection is dropped during upload. 
      * @param body The request body
      * @return a CompletableFuture of uploadSession
+     * @see <a href="https://docs.microsoft.com/graph/api/printdocument-createuploadsession?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UploadSession> post(@javax.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
@@ -59,10 +60,11 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action createUploadSession
+     * Create an upload session that allows an app to iteratively upload ranges of a binary file linked to the print document. As part of the response, this action returns an upload URL that can be used in subsequent sequential `PUT` queries. Request headers for each `PUT` operation can be used to specify the exact range of bytes to be uploaded. This allows transfer to be resumed, in case the network connection is dropped during upload. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of uploadSession
+     * @see <a href="https://docs.microsoft.com/graph/api/printdocument-createuploadsession?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UploadSession> post(@javax.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action createUploadSession
+     * Create an upload session that allows an app to iteratively upload ranges of a binary file linked to the print document. As part of the response, this action returns an upload URL that can be used in subsequent sequential `PUT` queries. Request headers for each `PUT` operation can be used to specify the exact range of bytes to be uploaded. This allows transfer to be resumed, in case the network connection is dropped during upload. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action createUploadSession
+     * Create an upload session that allows an app to iteratively upload ranges of a binary file linked to the print document. As part of the response, this action returns an upload URL that can be used in subsequent sequential `PUT` queries. Request headers for each `PUT` operation can be used to specify the exact range of bytes to be uploaded. This allows transfer to be resumed, in case the network connection is dropped during upload. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

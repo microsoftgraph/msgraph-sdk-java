@@ -40,8 +40,9 @@ public class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/setUpResourcesFolder", rawUrl);
     }
     /**
-     * Invoke action setUpResourcesFolder
+     * Create a SharePoint folder to upload files for a given educationAssignment. Only teachers can perform this operation. The teacher determines the resources to upload in the assignment's folder. 
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-setupresourcesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post() {
@@ -58,9 +59,10 @@ public class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action setUpResourcesFolder
+     * Create a SharePoint folder to upload files for a given educationAssignment. Only teachers can perform this operation. The teacher determines the resources to upload in the assignment's folder. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-setupresourcesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action setUpResourcesFolder
+     * Create a SharePoint folder to upload files for a given educationAssignment. Only teachers can perform this operation. The teacher determines the resources to upload in the assignment's folder. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action setUpResourcesFolder
+     * Create a SharePoint folder to upload files for a given educationAssignment. Only teachers can perform this operation. The teacher determines the resources to upload in the assignment's folder. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

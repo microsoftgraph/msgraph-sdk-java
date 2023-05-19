@@ -39,9 +39,10 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/getMemberObjects", rawUrl);
     }
     /**
-     * Invoke action getMemberObjects
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. **Note:** Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @return a CompletableFuture of getMemberObjectsResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetMemberObjectsResponse> post(@javax.annotation.Nonnull final GetMemberObjectsPostRequestBody body) {
@@ -58,10 +59,11 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getMemberObjects
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. **Note:** Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getMemberObjectsResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetMemberObjectsResponse> post(@javax.annotation.Nonnull final GetMemberObjectsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getMemberObjects
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. **Note:** Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getMemberObjects
+     * Return all IDs for the groups, administrative units, and directory roles that a user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. **Note:** Only users and role-enabled groups can be members of directory roles.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

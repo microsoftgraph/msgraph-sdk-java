@@ -84,8 +84,9 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an **incident**. 
      * @return a CompletableFuture of incident
+     * @see <a href="https://docs.microsoft.com/graph/api/security-incident-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Incident> get() {
@@ -102,9 +103,10 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an **incident**. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of incident
+     * @see <a href="https://docs.microsoft.com/graph/api/security-incident-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Incident> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +123,10 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property incidents in security
+     * Update the properties of an incident object.
      * @param body The request body
      * @return a CompletableFuture of incident
+     * @see <a href="https://docs.microsoft.com/graph/api/security-incident-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Incident> patch(@javax.annotation.Nonnull final Incident body) {
@@ -140,10 +143,11 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property incidents in security
+     * Update the properties of an incident object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of incident
+     * @see <a href="https://docs.microsoft.com/graph/api/security-incident-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Incident> patch(@javax.annotation.Nonnull final Incident body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -188,7 +192,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an **incident**. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an **incident**. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +221,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property incidents in security
+     * Update the properties of an incident object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +230,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property incidents in security
+     * Update the properties of an incident object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +258,7 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an **incident**. 
      */
     public class GetQueryParameters {
         /** Expand related entities */

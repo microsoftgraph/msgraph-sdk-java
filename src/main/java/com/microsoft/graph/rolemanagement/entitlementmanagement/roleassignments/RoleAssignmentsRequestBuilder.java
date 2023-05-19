@@ -61,8 +61,9 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @return a CompletableFuture of UnifiedRoleAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to roleAssignments for roleManagement
+     * Create a new unifiedRoleAssignment object.
      * @param body The request body
      * @return a CompletableFuture of unifiedRoleAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> post(@javax.annotation.Nonnull final UnifiedRoleAssignment body) {
@@ -117,10 +120,11 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to roleAssignments for roleManagement
+     * Create a new unifiedRoleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> post(@javax.annotation.Nonnull final UnifiedRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to roleAssignments for roleManagement
+     * Create a new unifiedRoleAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to roleAssignments for roleManagement
+     * Create a new unifiedRoleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Resource to grant access to users or groups.
+     * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      */
     public class GetQueryParameters {
         /** Include count of items */

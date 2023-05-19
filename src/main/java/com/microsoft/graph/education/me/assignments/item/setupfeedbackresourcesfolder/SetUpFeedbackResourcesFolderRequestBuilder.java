@@ -40,8 +40,9 @@ public class SetUpFeedbackResourcesFolderRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/setUpFeedbackResourcesFolder", rawUrl);
     }
     /**
-     * Invoke action setUpFeedbackResourcesFolder
+     * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-setupfeedbackresourcesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post() {
@@ -58,9 +59,10 @@ public class SetUpFeedbackResourcesFolderRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Invoke action setUpFeedbackResourcesFolder
+     * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-setupfeedbackresourcesfolder?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class SetUpFeedbackResourcesFolderRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Invoke action setUpFeedbackResourcesFolder
+     * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class SetUpFeedbackResourcesFolderRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action setUpFeedbackResourcesFolder
+     * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

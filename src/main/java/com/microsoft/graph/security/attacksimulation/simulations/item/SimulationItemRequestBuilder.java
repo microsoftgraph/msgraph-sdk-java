@@ -78,8 +78,9 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @return a CompletableFuture of simulation
+     * @see <a href="https://docs.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Simulation> get() {
@@ -96,9 +97,10 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of simulation
+     * @see <a href="https://docs.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Simulation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      */
     public class GetQueryParameters {
         /** Expand related entities */

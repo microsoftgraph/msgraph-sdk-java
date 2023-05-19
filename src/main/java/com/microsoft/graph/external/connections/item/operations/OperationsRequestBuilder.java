@@ -61,7 +61,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @return a CompletableFuture of ConnectionOperationCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ConnectionOperationCollectionResponse
      */
@@ -138,7 +138,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get operations from external
+     * Read the properties and relationships of a connectionOperation object.
      */
     public class GetQueryParameters {
         /** Include count of items */

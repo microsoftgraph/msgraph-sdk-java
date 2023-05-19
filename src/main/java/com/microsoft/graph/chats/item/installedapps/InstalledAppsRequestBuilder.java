@@ -61,8 +61,9 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/installedApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * List all app installations within a chat.
      * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallationCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * List all app installations within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to installedApps for chats
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @return a CompletableFuture of teamsAppInstallation
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> post(@javax.annotation.Nonnull final TeamsAppInstallation body) {
@@ -117,10 +120,11 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to installedApps for chats
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAppInstallation
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppInstallation> post(@javax.annotation.Nonnull final TeamsAppInstallation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * List all app installations within a chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * List all app installations within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to installedApps for chats
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to installedApps for chats
+     * Install a teamsApp to the specified chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * List all app installations within a chat.
      */
     public class GetQueryParameters {
         /** Include count of items */

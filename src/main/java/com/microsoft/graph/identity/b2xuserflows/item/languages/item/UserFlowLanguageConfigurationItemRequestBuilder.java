@@ -90,8 +90,9 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. **Note:** Language customization is enabled by default in Azure Active Directory user flows.
      * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/userflowlanguageconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> get() {
@@ -108,9 +109,10 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. **Note:** Language customization is enabled by default in Azure Active Directory user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/userflowlanguageconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +196,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. **Note:** Language customization is enabled by default in Azure Active Directory user flows.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +204,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. **Note:** Language customization is enabled by default in Azure Active Directory user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +262,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. **Note:** Language customization is enabled by default in Azure Active Directory user flows.
      */
     public class GetQueryParameters {
         /** Expand related entities */

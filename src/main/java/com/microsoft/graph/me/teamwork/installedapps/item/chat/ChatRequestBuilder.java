@@ -41,8 +41,9 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}/chat{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The chat between the user and Teams app.
+     * Retrieve the chat of the specified user and Teams app.
      * @return a CompletableFuture of chat
+     * @see <a href="https://docs.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> get() {
@@ -59,9 +60,10 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The chat between the user and Teams app.
+     * Retrieve the chat of the specified user and Teams app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chat
+     * @see <a href="https://docs.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +80,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The chat between the user and Teams app.
+     * Retrieve the chat of the specified user and Teams app.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +88,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The chat between the user and Teams app.
+     * Retrieve the chat of the specified user and Teams app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +109,7 @@ public class ChatRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The chat between the user and Teams app.
+     * Retrieve the chat of the specified user and Teams app.
      */
     public class GetQueryParameters {
         /** Expand related entities */

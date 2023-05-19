@@ -41,6 +41,45 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/identityProviders/{identityProvider%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
+     * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
+     * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete-identityproviders?view=graph-rest-1.0">Find more info here</a>
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete() {
+        try {
+            final RequestInformation requestInfo = toDeleteRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete-identityproviders?view=graph-rest-1.0">Find more info here</a>
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
      * The identity providers included in the user flow.
      * @return a CompletableFuture of identityProvider
      */
@@ -78,6 +117,33 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
+     * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        if (requestConfiguration != null) {
+            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
      * The identity providers included in the user flow.
      * @return a RequestInformation
      */
@@ -105,6 +171,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * The identity providers included in the user flow.

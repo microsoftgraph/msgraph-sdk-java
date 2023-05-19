@@ -78,8 +78,9 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     * Retrieve the properties and relationships of a **plannerAssignedToTaskBoardTaskFormat** object.
      * @return a CompletableFuture of plannerAssignedToTaskBoardTaskFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> get() {
@@ -96,9 +97,10 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     * Retrieve the properties and relationships of a **plannerAssignedToTaskBoardTaskFormat** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerAssignedToTaskBoardTaskFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,6 +120,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property assignedToTaskBoardFormat in me
      * @param body The request body
      * @return a CompletableFuture of plannerAssignedToTaskBoardTaskFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerAssignedToTaskBoardTaskFormat body) {
@@ -138,6 +141,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerAssignedToTaskBoardTaskFormat
+     * @see <a href="https://docs.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> patch(@javax.annotation.Nonnull final PlannerAssignedToTaskBoardTaskFormat body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     * Retrieve the properties and relationships of a **plannerAssignedToTaskBoardTaskFormat** object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     * Retrieve the properties and relationships of a **plannerAssignedToTaskBoardTaskFormat** object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +252,7 @@ public class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     * Retrieve the properties and relationships of a **plannerAssignedToTaskBoardTaskFormat** object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

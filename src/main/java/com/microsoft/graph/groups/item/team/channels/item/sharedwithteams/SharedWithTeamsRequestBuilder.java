@@ -61,8 +61,9 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/channels/{channel%2Did}/sharedWithTeams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @return a CompletableFuture of SharedWithChannelTeamInfoCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfoCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SharedWithChannelTeamInfoCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfoCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -132,8 +132,9 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @return a CompletableFuture of ediscoveryCustodian
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> get() {
@@ -150,9 +151,10 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryCustodian
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryCustodian> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -236,7 +238,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -244,7 +246,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -302,7 +304,7 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a list of case ediscoveryCustodian objects for this case.
+     * Read the properties and relationships of an ediscoveryCustodian object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

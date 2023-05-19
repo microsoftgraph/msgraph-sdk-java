@@ -78,8 +78,9 @@ public class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve the properties of a contentSharingSession object in a call.
      * @return a CompletableFuture of contentSharingSession
+     * @see <a href="https://docs.microsoft.com/graph/api/contentsharingsession-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentSharingSession> get() {
@@ -96,9 +97,10 @@ public class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve the properties of a contentSharingSession object in a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentSharingSession
+     * @see <a href="https://docs.microsoft.com/graph/api/contentsharingsession-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentSharingSession> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve the properties of a contentSharingSession object in a call.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve the properties of a contentSharingSession object in a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve the properties of a contentSharingSession object in a call.
      */
     public class GetQueryParameters {
         /** Expand related entities */

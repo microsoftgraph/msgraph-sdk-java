@@ -74,6 +74,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -93,6 +94,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -78,8 +78,9 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @return a CompletableFuture of adminConsentRequestPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> get() {
@@ -96,9 +97,10 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminConsentRequestPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @return a CompletableFuture of adminConsentRequestPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> patch(@javax.annotation.Nonnull final AdminConsentRequestPolicy body) {
@@ -134,10 +137,11 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminConsentRequestPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> patch(@javax.annotation.Nonnull final AdminConsentRequestPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

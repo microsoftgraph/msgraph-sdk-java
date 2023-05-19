@@ -40,8 +40,9 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/contactFolders/{contactFolder%2Did}/contacts/delta(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
     }
     /**
-     * Invoke function delta
+     * Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the contacts in that folder. This allows you to maintain and synchronize a local store of a user's contacts without having to fetch the entire set of contacts from the server every time.  
      * @return a CompletableFuture of deltaResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/contact-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeltaResponse> get() {
@@ -58,9 +59,10 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke function delta
+     * Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the contacts in that folder. This allows you to maintain and synchronize a local store of a user's contacts without having to fetch the entire set of contacts from the server every time.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deltaResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/contact-delta?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeltaResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke function delta
+     * Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the contacts in that folder. This allows you to maintain and synchronize a local store of a user's contacts without having to fetch the entire set of contacts from the server every time.  
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function delta
+     * Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the contacts in that folder. This allows you to maintain and synchronize a local store of a user's contacts without having to fetch the entire set of contacts from the server every time.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,7 +108,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke function delta
+     * Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the contacts in that folder. This allows you to maintain and synchronize a local store of a user's contacts without having to fetch the entire set of contacts from the server every time.  
      */
     public class GetQueryParameters {
         /** Include count of items */

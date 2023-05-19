@@ -39,9 +39,10 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/getPresencesByUserId", rawUrl);
     }
     /**
-     * Invoke action getPresencesByUserId
+     * Get the presence information for multiple users.
      * @param body The request body
      * @return a CompletableFuture of getPresencesByUserIdResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetPresencesByUserIdResponse> post(@javax.annotation.Nonnull final GetPresencesByUserIdPostRequestBody body) {
@@ -58,10 +59,11 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getPresencesByUserId
+     * Get the presence information for multiple users.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getPresencesByUserIdResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetPresencesByUserIdResponse> post(@javax.annotation.Nonnull final GetPresencesByUserIdPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action getPresencesByUserId
+     * Get the presence information for multiple users.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getPresencesByUserId
+     * Get the presence information for multiple users.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

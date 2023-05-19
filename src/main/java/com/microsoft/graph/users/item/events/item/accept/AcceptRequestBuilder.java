@@ -39,9 +39,10 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/events/{event%2Did}/accept", rawUrl);
     }
     /**
-     * Invoke action accept
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-accept?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final AcceptPostRequestBody body) {
@@ -58,10 +59,11 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action accept
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-accept?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final AcceptPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action accept
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class AcceptRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action accept
+     * Accept the specified event in a user calendar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

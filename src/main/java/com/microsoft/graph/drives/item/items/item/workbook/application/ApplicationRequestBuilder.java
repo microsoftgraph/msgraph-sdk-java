@@ -84,8 +84,9 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get application from drives
+     * Retrieve the properties and relationships of a workbookApplication object.
      * @return a CompletableFuture of workbookApplication
+     * @see <a href="https://docs.microsoft.com/graph/api/workbookapplication-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookApplication> get() {
@@ -102,9 +103,10 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get application from drives
+     * Retrieve the properties and relationships of a workbookApplication object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookApplication
+     * @see <a href="https://docs.microsoft.com/graph/api/workbookapplication-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookApplication> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get application from drives
+     * Retrieve the properties and relationships of a workbookApplication object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get application from drives
+     * Retrieve the properties and relationships of a workbookApplication object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get application from drives
+     * Retrieve the properties and relationships of a workbookApplication object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

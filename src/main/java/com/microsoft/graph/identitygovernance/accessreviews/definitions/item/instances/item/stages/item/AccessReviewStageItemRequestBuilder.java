@@ -90,8 +90,9 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * Retrieve the properties and relationships of an accessReviewStage object.
      * @return a CompletableFuture of accessReviewStage
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> get() {
@@ -108,9 +109,10 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * Retrieve the properties and relationships of an accessReviewStage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewStage
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +129,10 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * Update the properties of an accessReviewStage object. Only the **reviewers** and **fallbackReviewers** properties can be updated. You can only add reviewers to the **fallbackReviewers** property but can't remove existing **fallbackReviewers**. To update an **accessReviewStage**, its **status** must be `NotStarted`, `Initializing`, or `InProgress`.
      * @param body The request body
      * @return a CompletableFuture of accessReviewStage
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> patch(@javax.annotation.Nonnull final AccessReviewStage body) {
@@ -146,10 +149,11 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * Update the properties of an accessReviewStage object. Only the **reviewers** and **fallbackReviewers** properties can be updated. You can only add reviewers to the **fallbackReviewers** property but can't remove existing **fallbackReviewers**. To update an **accessReviewStage**, its **status** must be `NotStarted`, `Initializing`, or `InProgress`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewStage
+     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewStage> patch(@javax.annotation.Nonnull final AccessReviewStage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -194,7 +198,7 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * Retrieve the properties and relationships of an accessReviewStage object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +206,7 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * Retrieve the properties and relationships of an accessReviewStage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +227,7 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * Update the properties of an accessReviewStage object. Only the **reviewers** and **fallbackReviewers** properties can be updated. You can only add reviewers to the **fallbackReviewers** property but can't remove existing **fallbackReviewers**. To update an **accessReviewStage**, its **status** must be `NotStarted`, `Initializing`, or `InProgress`.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +236,7 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * Update the properties of an accessReviewStage object. Only the **reviewers** and **fallbackReviewers** properties can be updated. You can only add reviewers to the **fallbackReviewers** property but can't remove existing **fallbackReviewers**. To update an **accessReviewStage**, its **status** must be `NotStarted`, `Initializing`, or `InProgress`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +264,7 @@ public class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * Retrieve the properties and relationships of an accessReviewStage object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

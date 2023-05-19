@@ -41,8 +41,9 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/openShifts/{openShift%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property openShifts for teams
+     * Delete an openShift object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property openShifts for teams
+     * Delete an openShift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The set of open shifts in a scheduling group in the schedule.
+     * Retrieve the properties and relationships of an openshift object.
      * @return a CompletableFuture of openShift
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> get() {
@@ -96,9 +99,10 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The set of open shifts in a scheduling group in the schedule.
+     * Retrieve the properties and relationships of an openshift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of openShift
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property openShifts in teams
+     * Update the properties of an openShift object.
      * @param body The request body
      * @return a CompletableFuture of openShift
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> patch(@javax.annotation.Nonnull final OpenShift body) {
@@ -134,10 +139,11 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property openShifts in teams
+     * Update the properties of an openShift object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of openShift
+     * @see <a href="https://docs.microsoft.com/graph/api/openshift-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShift> patch(@javax.annotation.Nonnull final OpenShift body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property openShifts for teams
+     * Delete an openShift object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property openShifts for teams
+     * Delete an openShift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The set of open shifts in a scheduling group in the schedule.
+     * Retrieve the properties and relationships of an openshift object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The set of open shifts in a scheduling group in the schedule.
+     * Retrieve the properties and relationships of an openshift object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property openShifts in teams
+     * Update the properties of an openShift object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property openShifts in teams
+     * Update the properties of an openShift object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class OpenShiftItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The set of open shifts in a scheduling group in the schedule.
+     * Retrieve the properties and relationships of an openshift object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -61,8 +61,9 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/siteSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
      * @return a CompletableFuture of SiteSourceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteSourceCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SiteSourceCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteSourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to siteSources for security
+     * Create a new siteSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @return a CompletableFuture of siteSource
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteSource> post(@javax.annotation.Nonnull final SiteSource body) {
@@ -117,10 +120,11 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to siteSources for security
+     * Create a new siteSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of siteSource
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteSource> post(@javax.annotation.Nonnull final SiteSource body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to siteSources for security
+     * Create a new siteSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to siteSources for security
+     * Create a new siteSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -53,8 +53,9 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property lists for users
+     * Deletes a todoTaskList object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,9 +72,10 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property lists for users
+     * Deletes a todoTaskList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,8 +92,9 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The task lists in the users mailbox.
+     * Read the properties and relationships of a todoTaskList object.
      * @return a CompletableFuture of todoTaskList
+     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> get() {
@@ -108,9 +111,10 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The task lists in the users mailbox.
+     * Read the properties and relationships of a todoTaskList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of todoTaskList
+     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +131,10 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property lists in users
+     * Update the properties of a todoTaskList object.
      * @param body The request body
      * @return a CompletableFuture of todoTaskList
+     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> patch(@javax.annotation.Nonnull final TodoTaskList body) {
@@ -146,10 +151,11 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property lists in users
+     * Update the properties of a todoTaskList object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of todoTaskList
+     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> patch(@javax.annotation.Nonnull final TodoTaskList body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -167,7 +173,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property lists for users
+     * Deletes a todoTaskList object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +181,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property lists for users
+     * Deletes a todoTaskList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +200,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The task lists in the users mailbox.
+     * Read the properties and relationships of a todoTaskList object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +208,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The task lists in the users mailbox.
+     * Read the properties and relationships of a todoTaskList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +229,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property lists in users
+     * Update the properties of a todoTaskList object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +238,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property lists in users
+     * Update the properties of a todoTaskList object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +266,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The task lists in the users mailbox.
+     * Read the properties and relationships of a todoTaskList object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

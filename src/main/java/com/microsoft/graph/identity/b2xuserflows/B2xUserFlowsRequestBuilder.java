@@ -61,8 +61,9 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlowCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of B2xIdentityUserFlowCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlowCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @return a CompletableFuture of b2xIdentityUserFlow
+     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> post(@javax.annotation.Nonnull final B2xIdentityUserFlow body) {
@@ -117,10 +120,11 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2xIdentityUserFlow
+     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> post(@javax.annotation.Nonnull final B2xIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to b2xUserFlows for identity
+     * Create a new b2xIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class B2xUserFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve a list of b2xIdentityUserFlow objects.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -40,9 +40,10 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/messages/{message%2Did}/move", rawUrl);
     }
     /**
-     * Invoke action move
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
      * @param body The request body
      * @return a CompletableFuture of message
+     * @see <a href="https://docs.microsoft.com/graph/api/message-move?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final MovePostRequestBody body) {
@@ -59,10 +60,11 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action move
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of message
+     * @see <a href="https://docs.microsoft.com/graph/api/message-move?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final MovePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action move
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class MoveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action move
+     * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

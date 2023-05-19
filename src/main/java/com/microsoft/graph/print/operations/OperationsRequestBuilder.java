@@ -61,7 +61,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The list of print long running operations.
+     * Retrieve the properties and relationships of a printOperation object.
      * @return a CompletableFuture of PrintOperationCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of print long running operations.
+     * Retrieve the properties and relationships of a printOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrintOperationCollectionResponse
      */
@@ -138,7 +138,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of print long running operations.
+     * Retrieve the properties and relationships of a printOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of print long running operations.
+     * Retrieve the properties and relationships of a printOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of print long running operations.
+     * Retrieve the properties and relationships of a printOperation object.
      */
     public class GetQueryParameters {
         /** Include count of items */

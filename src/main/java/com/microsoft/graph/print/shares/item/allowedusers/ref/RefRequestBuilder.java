@@ -42,8 +42,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/shares/{printerShare%2Did}/allowedUsers/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * The users who have access to print using the printer.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @return a CompletableFuture of StringCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get() {
@@ -60,9 +61,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The users who have access to print using the printer.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,9 +81,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property ref to allowedUsers for print
+     * Grant the specified user access to submit print jobs to the associated printerShare.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/printershare-post-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ReferenceCreate body) {
@@ -98,10 +101,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property ref to allowedUsers for print
+     * Grant the specified user access to submit print jobs to the associated printerShare.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/printershare-post-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ReferenceCreate body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -119,7 +123,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The users who have access to print using the printer.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -127,7 +131,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The users who have access to print using the printer.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,7 +152,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property ref to allowedUsers for print
+     * Grant the specified user access to submit print jobs to the associated printerShare.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -157,7 +161,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property ref to allowedUsers for print
+     * Grant the specified user access to submit print jobs to the associated printerShare.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +183,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The users who have access to print using the printer.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      */
     public class GetQueryParameters {
         /** Include count of items */

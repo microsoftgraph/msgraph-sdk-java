@@ -53,8 +53,9 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property connectedOrganizations for identityGovernance
+     * Delete a connectedOrganization object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,9 +72,10 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property connectedOrganizations for identityGovernance
+     * Delete a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,8 +92,9 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @return a CompletableFuture of connectedOrganization
+     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectedOrganization> get() {
@@ -108,9 +111,10 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectedOrganization
+     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectedOrganization> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,9 +131,10 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property connectedOrganizations in identityGovernance
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @return a CompletableFuture of connectedOrganization
+     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectedOrganization> patch(@javax.annotation.Nonnull final ConnectedOrganization body) {
@@ -146,10 +151,11 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property connectedOrganizations in identityGovernance
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectedOrganization
+     * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectedOrganization> patch(@javax.annotation.Nonnull final ConnectedOrganization body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -167,7 +173,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property connectedOrganizations for identityGovernance
+     * Delete a connectedOrganization object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +181,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property connectedOrganizations for identityGovernance
+     * Delete a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +200,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +208,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +229,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property connectedOrganizations in identityGovernance
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -232,7 +238,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property connectedOrganizations in identityGovernance
+     * Update a connectedOrganization object to change one or more of its properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -260,7 +266,7 @@ public class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve the properties and relationships of a connectedOrganization object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

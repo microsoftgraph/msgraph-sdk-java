@@ -78,8 +78,9 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve the properties and relationships of a print service endpoint.
      * @return a CompletableFuture of printServiceEndpoint
+     * @see <a href="https://docs.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> get() {
@@ -96,9 +97,10 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve the properties and relationships of a print service endpoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printServiceEndpoint
+     * @see <a href="https://docs.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintServiceEndpoint> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve the properties and relationships of a print service endpoint.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve the properties and relationships of a print service endpoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve the properties and relationships of a print service endpoint.
      */
     public class GetQueryParameters {
         /** Expand related entities */

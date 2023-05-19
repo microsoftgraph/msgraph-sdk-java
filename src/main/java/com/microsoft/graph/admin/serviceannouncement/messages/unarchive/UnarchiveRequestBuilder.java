@@ -39,9 +39,10 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/unarchive", rawUrl);
     }
     /**
-     * Invoke action unarchive
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a CompletableFuture of unarchiveResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-unarchive?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnarchiveResponse> post(@javax.annotation.Nonnull final UnarchivePostRequestBody body) {
@@ -58,10 +59,11 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action unarchive
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unarchiveResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-unarchive?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnarchiveResponse> post(@javax.annotation.Nonnull final UnarchivePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action unarchive
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class UnarchiveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action unarchive
+     * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

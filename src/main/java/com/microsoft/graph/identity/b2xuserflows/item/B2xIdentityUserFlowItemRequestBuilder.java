@@ -65,8 +65,9 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property b2xUserFlows for identity
+     * Delete a b2xIdentityUserFlow object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -83,9 +84,10 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property b2xUserFlows for identity
+     * Delete a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -102,8 +104,9 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @return a CompletableFuture of b2xIdentityUserFlow
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> get() {
@@ -120,9 +123,10 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2xIdentityUserFlow
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -179,7 +183,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property b2xUserFlows for identity
+     * Delete a b2xIdentityUserFlow object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -187,7 +191,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property b2xUserFlows for identity
+     * Delete a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +210,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +218,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +276,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents entry point for B2X/self-service sign-up identity userflows.
+     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

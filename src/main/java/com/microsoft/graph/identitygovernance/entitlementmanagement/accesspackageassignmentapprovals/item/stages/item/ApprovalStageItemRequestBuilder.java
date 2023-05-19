@@ -78,8 +78,9 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of stages in the approval decision.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @return a CompletableFuture of approvalStage
+     * @see <a href="https://docs.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStage> get() {
@@ -96,9 +97,10 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of stages in the approval decision.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approvalStage
+     * @see <a href="https://docs.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @return a CompletableFuture of approvalStage
+     * @see <a href="https://docs.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStage> patch(@javax.annotation.Nonnull final ApprovalStage body) {
@@ -134,10 +137,11 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approvalStage
+     * @see <a href="https://docs.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStage> patch(@javax.annotation.Nonnull final ApprovalStage body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of stages in the approval decision.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of stages in the approval decision.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property stages in identityGovernance
+     * In Azure AD entitlement management, approve or deny an approvalStage object in an approval.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class ApprovalStageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of stages in the approval decision.
+     * In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

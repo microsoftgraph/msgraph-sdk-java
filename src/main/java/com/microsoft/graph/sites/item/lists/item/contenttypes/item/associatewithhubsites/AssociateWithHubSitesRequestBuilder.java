@@ -39,9 +39,10 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}/associateWithHubSites", rawUrl);
     }
     /**
-     * Invoke action associateWithHubSites
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final AssociateWithHubSitesPostRequestBody body) {
@@ -58,10 +59,11 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action associateWithHubSites
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final AssociateWithHubSitesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action associateWithHubSites
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action associateWithHubSites
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

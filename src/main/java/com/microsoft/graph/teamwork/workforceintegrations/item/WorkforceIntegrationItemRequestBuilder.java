@@ -41,8 +41,9 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/workforceIntegrations/{workforceIntegration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get workforceIntegrations from teamwork
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @return a CompletableFuture of workforceIntegration
+     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegration> get() {
@@ -96,9 +99,10 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get workforceIntegrations from teamwork
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workforceIntegration
+     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @return a CompletableFuture of workforceIntegration
+     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegration> patch(@javax.annotation.Nonnull final WorkforceIntegration body) {
@@ -134,10 +139,11 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workforceIntegration
+     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegration> patch(@javax.annotation.Nonnull final WorkforceIntegration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get workforceIntegrations from teamwork
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get workforceIntegrations from teamwork
+     * Retrieve the properties and relationships of a workforceIntegration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceIntegration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get workforceIntegrations from teamwork
+     * Retrieve the properties and relationships of a workforceIntegration object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -84,8 +84,9 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get callRecords from communications
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
      * @return a CompletableFuture of callRecord
+     * @see <a href="https://docs.microsoft.com/graph/api/callrecords-callrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecord> get() {
@@ -102,9 +103,10 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get callRecords from communications
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of callRecord
+     * @see <a href="https://docs.microsoft.com/graph/api/callrecords-callrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallRecord> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get callRecords from communications
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get callRecords from communications
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get callRecords from communications
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
      */
     public class GetQueryParameters {
         /** Expand related entities */

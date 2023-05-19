@@ -47,8 +47,9 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/featureRolloutPolicies/{featureRolloutPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property featureRolloutPolicies for policies
+     * Delete a featureRolloutPolicy object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property featureRolloutPolicies for policies
+     * Delete a featureRolloutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> get() {
@@ -102,9 +105,10 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property featureRolloutPolicies in policies
+     * Update the properties of featureRolloutPolicy object.
      * @param body The request body
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> patch(@javax.annotation.Nonnull final FeatureRolloutPolicy body) {
@@ -140,10 +145,11 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property featureRolloutPolicies in policies
+     * Update the properties of featureRolloutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of featureRolloutPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> patch(@javax.annotation.Nonnull final FeatureRolloutPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property featureRolloutPolicies for policies
+     * Delete a featureRolloutPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property featureRolloutPolicies for policies
+     * Delete a featureRolloutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property featureRolloutPolicies in policies
+     * Update the properties of featureRolloutPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property featureRolloutPolicies in policies
+     * Update the properties of featureRolloutPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve the properties and relationships of a featureRolloutPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

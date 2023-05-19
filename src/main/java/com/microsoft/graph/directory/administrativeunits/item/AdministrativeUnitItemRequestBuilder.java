@@ -59,8 +59,9 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property administrativeUnits for directory
+     * Delete an administrativeUnit.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +78,10 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property administrativeUnits for directory
+     * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +98,9 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @return a CompletableFuture of administrativeUnit
+     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get() {
@@ -114,9 +117,10 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
+     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,9 +137,10 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property administrativeUnits in directory
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @return a CompletableFuture of administrativeUnit
+     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> patch(@javax.annotation.Nonnull final AdministrativeUnit body) {
@@ -152,10 +157,11 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property administrativeUnits in directory
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
+     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> patch(@javax.annotation.Nonnull final AdministrativeUnit body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -173,7 +179,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property administrativeUnits for directory
+     * Delete an administrativeUnit.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +187,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property administrativeUnits for directory
+     * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +206,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +214,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +235,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property administrativeUnits in directory
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -238,7 +244,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property administrativeUnits in directory
+     * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,7 +272,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve the properties and relationships of an administrativeUnit object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

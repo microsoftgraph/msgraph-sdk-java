@@ -53,8 +53,9 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/primaryChannel/sharedWithTeams/{sharedWithChannelTeamInfo%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property sharedWithTeams for users
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,9 +72,10 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property sharedWithTeams for users
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,8 +92,9 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @return a CompletableFuture of sharedWithChannelTeamInfo
+     * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> get() {
@@ -108,9 +111,10 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sharedWithChannelTeamInfo
+     * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedWithChannelTeamInfo> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +171,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property sharedWithTeams for users
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +179,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property sharedWithTeams for users
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -194,7 +198,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +206,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +264,7 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of teams with which a channel is shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      */
     public class GetQueryParameters {
         /** Expand related entities */

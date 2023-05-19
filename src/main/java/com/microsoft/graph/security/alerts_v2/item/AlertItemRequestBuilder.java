@@ -78,8 +78,9 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get the properties and relationships of an alert in an organization based on the specified alert **id** property.
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get() {
@@ -96,9 +97,10 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get the properties and relationships of an alert in an organization based on the specified alert **id** property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property alerts_v2 in security
+     * Update the properties of an alert object in an organization based on the specified alert **id** property.
      * @param body The request body
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> patch(@javax.annotation.Nonnull final Alert body) {
@@ -134,10 +137,11 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property alerts_v2 in security
+     * Update the properties of an alert object in an organization based on the specified alert **id** property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alert
+     * @see <a href="https://docs.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Alert> patch(@javax.annotation.Nonnull final Alert body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get the properties and relationships of an alert in an organization based on the specified alert **id** property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get the properties and relationships of an alert in an organization based on the specified alert **id** property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property alerts_v2 in security
+     * Update the properties of an alert object in an organization based on the specified alert **id** property.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property alerts_v2 in security
+     * Update the properties of an alert object in an organization based on the specified alert **id** property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get the properties and relationships of an alert in an organization based on the specified alert **id** property.
      */
     public class GetQueryParameters {
         /** Expand related entities */

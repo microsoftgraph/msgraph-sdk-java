@@ -41,8 +41,9 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/extensionProperties/{extensionProperty%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property extensionProperties for applications
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/extensionproperty-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property extensionProperties for applications
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/extensionproperty-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
+     * Read a directory extension definition represented by an extensionProperty object.
      * @return a CompletableFuture of extensionProperty
+     * @see <a href="https://docs.microsoft.com/graph/api/extensionproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> get() {
@@ -96,9 +99,10 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
+     * Read a directory extension definition represented by an extensionProperty object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extensionProperty
+     * @see <a href="https://docs.microsoft.com/graph/api/extensionproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property extensionProperties for applications
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property extensionProperties for applications
+     * Delete a directory extension definition represented by an extensionProperty object. You can delete only directory extensions that aren't synced from on-premises active directory (AD).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
+     * Read a directory extension definition represented by an extensionProperty object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
+     * Read a directory extension definition represented by an extensionProperty object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +252,7 @@ public class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
+     * Read a directory extension definition represented by an extensionProperty object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

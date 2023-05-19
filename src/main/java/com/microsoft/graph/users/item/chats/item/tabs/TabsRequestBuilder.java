@@ -61,8 +61,9 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/tabs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @return a CompletableFuture of TeamsTabCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TeamsTabCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tabs for users
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @return a CompletableFuture of teamsTab
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> post(@javax.annotation.Nonnull final TeamsTab body) {
@@ -117,10 +120,11 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to tabs for users
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTab
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> post(@javax.annotation.Nonnull final TeamsTab body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to tabs for users
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to tabs for users
+     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the tabs in the chat. Nullable.
+     * Retrieve the list of tabs in the specified chat.
      */
     public class GetQueryParameters {
         /** Include count of items */

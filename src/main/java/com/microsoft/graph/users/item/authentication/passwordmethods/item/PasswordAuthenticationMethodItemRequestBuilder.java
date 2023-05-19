@@ -41,8 +41,9 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/passwordMethods/{passwordAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Retrieve a password that's registered to a user, represented by a passwordAuthenticationMethod object. For security, the password itself will never be returned in the object and the **password** property is always `null`.
      * @return a CompletableFuture of passwordAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/passwordauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordAuthenticationMethod> get() {
@@ -59,9 +60,10 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Retrieve a password that's registered to a user, represented by a passwordAuthenticationMethod object. For security, the password itself will never be returned in the object and the **password** property is always `null`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of passwordAuthenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/passwordauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordAuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +80,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Retrieve a password that's registered to a user, represented by a passwordAuthenticationMethod object. For security, the password itself will never be returned in the object and the **password** property is always `null`.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +88,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Retrieve a password that's registered to a user, represented by a passwordAuthenticationMethod object. For security, the password itself will never be returned in the object and the **password** property is always `null`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +109,7 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Retrieve a password that's registered to a user, represented by a passwordAuthenticationMethod object. For security, the password itself will never be returned in the object and the **password** property is always `null`.
      */
     public class GetQueryParameters {
         /** Expand related entities */

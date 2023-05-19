@@ -90,8 +90,9 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * Retrieve the properties and relationships of worksheetprotection object.
      * @return a CompletableFuture of workbookWorksheetProtection
+     * @see <a href="https://docs.microsoft.com/graph/api/worksheetprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> get() {
@@ -108,9 +109,10 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * Retrieve the properties and relationships of worksheetprotection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookWorksheetProtection
+     * @see <a href="https://docs.microsoft.com/graph/api/worksheetprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +196,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * Retrieve the properties and relationships of worksheetprotection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +204,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * Retrieve the properties and relationships of worksheetprotection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +262,7 @@ public class ProtectionRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns sheet protection object for a worksheet. Read-only.
+     * Retrieve the properties and relationships of worksheetprotection object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

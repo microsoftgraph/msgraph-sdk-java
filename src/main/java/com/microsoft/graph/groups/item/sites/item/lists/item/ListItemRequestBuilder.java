@@ -126,8 +126,9 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of lists under this site.
+     * Returns the metadata for a [list][].
      * @return a CompletableFuture of list
+     * @see <a href="https://docs.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get() {
@@ -144,9 +145,10 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of lists under this site.
+     * Returns the metadata for a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of list
+     * @see <a href="https://docs.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -230,7 +232,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of lists under this site.
+     * Returns the metadata for a [list][].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -238,7 +240,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of lists under this site.
+     * Returns the metadata for a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -296,7 +298,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of lists under this site.
+     * Returns the metadata for a [list][].
      */
     public class GetQueryParameters {
         /** Expand related entities */

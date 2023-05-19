@@ -61,8 +61,9 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipOperation objects and their properties.
      * @return a CompletableFuture of DelegatedAdminRelationshipOperationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipOperationCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DelegatedAdminRelationshipOperationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationshipOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipOperation objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipOperation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminRelationshipOperation objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -61,7 +61,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/termStore/groups/{group%2Did}/sets/{set%2Did}/terms{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @return a CompletableFuture of TermCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TermCollectionResponse
      */
@@ -138,7 +138,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class TermsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      */
     public class GetQueryParameters {
         /** Include count of items */

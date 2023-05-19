@@ -61,8 +61,9 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/taskDefinitions/{printTaskDefinition%2Did}/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a CompletableFuture of PrintTaskCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printtaskdefinition-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrintTaskCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printtaskdefinition-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * Retrieve a list of tasks associated with a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      */
     public class GetQueryParameters {
         /** Include count of items */

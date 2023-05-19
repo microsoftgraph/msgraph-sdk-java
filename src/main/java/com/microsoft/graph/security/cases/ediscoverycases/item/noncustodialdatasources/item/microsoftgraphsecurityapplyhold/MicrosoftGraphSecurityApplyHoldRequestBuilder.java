@@ -39,8 +39,9 @@ public class MicrosoftGraphSecurityApplyHoldRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/noncustodialDataSources/{ediscoveryNoncustodialDataSource%2Did}/microsoft.graph.security.applyHold", rawUrl);
     }
     /**
-     * Invoke action applyHold
+     * Start the process of applying hold on eDiscovery non-custodial data sources. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-applyhold?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class MicrosoftGraphSecurityApplyHoldRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Invoke action applyHold
+     * Start the process of applying hold on eDiscovery non-custodial data sources. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-applyhold?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class MicrosoftGraphSecurityApplyHoldRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Invoke action applyHold
+     * Start the process of applying hold on eDiscovery non-custodial data sources. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class MicrosoftGraphSecurityApplyHoldRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action applyHold
+     * Start the process of applying hold on eDiscovery non-custodial data sources. After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

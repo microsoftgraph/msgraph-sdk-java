@@ -67,8 +67,9 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}/contacts{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The contacts in the folder. Navigation property. Read-only. Nullable.
+     * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
      * @return a CompletableFuture of ContactCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactCollectionResponse> get() {
@@ -85,9 +86,10 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The contacts in the folder. Navigation property. Read-only. Nullable.
+     * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ContactCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,9 +106,10 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to contacts for users
+     * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
      * @param body The request body
      * @return a CompletableFuture of contact
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contact> post(@javax.annotation.Nonnull final Contact body) {
@@ -123,10 +126,11 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to contacts for users
+     * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contact
+     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Contact> post(@javax.annotation.Nonnull final Contact body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +148,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The contacts in the folder. Navigation property. Read-only. Nullable.
+     * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +156,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The contacts in the folder. Navigation property. Read-only. Nullable.
+     * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +177,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to contacts for users
+     * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to contacts for users
+     * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +209,7 @@ public class ContactsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The contacts in the folder. Navigation property. Read-only. Nullable.
+     * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
      */
     public class GetQueryParameters {
         /** Include count of items */

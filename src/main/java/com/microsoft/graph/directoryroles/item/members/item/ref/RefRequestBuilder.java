@@ -40,8 +40,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directoryRoles/{directoryRole%2Did}/members/{directoryObject%2Did}/$ref{?%40id*}", rawUrl);
     }
     /**
-     * Delete ref of navigation property members for directoryRoles
+     * Remove a member from a directoryRole. You can use both the object ID and template ID of the **directoryRole** with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryrole-delete-member?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -58,9 +59,10 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete ref of navigation property members for directoryRoles
+     * Remove a member from a directoryRole. You can use both the object ID and template ID of the **directoryRole** with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/directoryrole-delete-member?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete ref of navigation property members for directoryRoles
+     * Remove a member from a directoryRole. You can use both the object ID and template ID of the **directoryRole** with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete ref of navigation property members for directoryRoles
+     * Remove a member from a directoryRole. You can use both the object ID and template ID of the **directoryRole** with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -105,7 +107,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete ref of navigation property members for directoryRoles
+     * Remove a member from a directoryRole. You can use both the object ID and template ID of the **directoryRole** with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
      */
     public class DeleteQueryParameters {
         /** Delete Uri */

@@ -78,8 +78,9 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @return a CompletableFuture of tenantAppManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantAppManagementPolicy> get() {
@@ -96,9 +97,10 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantAppManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantAppManagementPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @return a CompletableFuture of tenantAppManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantAppManagementPolicy> patch(@javax.annotation.Nonnull final TenantAppManagementPolicy body) {
@@ -134,10 +137,11 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantAppManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantAppManagementPolicy> patch(@javax.annotation.Nonnull final TenantAppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property defaultAppManagementPolicy in policies
+     * Update the properties of a tenantAppManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+     * Read the properties of a tenantAppManagementPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

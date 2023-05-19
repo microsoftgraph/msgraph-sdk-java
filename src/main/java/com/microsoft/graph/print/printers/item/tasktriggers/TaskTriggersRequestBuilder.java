@@ -61,8 +61,9 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/taskTriggers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A list of task triggers that are associated with the printer.
+     * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a CompletableFuture of PrintTaskTriggerCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTriggerCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of task triggers that are associated with the printer.
+     * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PrintTaskTriggerCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTriggerCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to taskTriggers for print
+     * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
      * @return a CompletableFuture of printTaskTrigger
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> post(@javax.annotation.Nonnull final PrintTaskTrigger body) {
@@ -117,10 +120,11 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to taskTriggers for print
+     * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTaskTrigger
+     * @see <a href="https://docs.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> post(@javax.annotation.Nonnull final PrintTaskTrigger body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A list of task triggers that are associated with the printer.
+     * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A list of task triggers that are associated with the printer.
+     * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to taskTriggers for print
+     * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to taskTriggers for print
+     * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class TaskTriggersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A list of task triggers that are associated with the printer.
+     * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      */
     public class GetQueryParameters {
         /** Include count of items */

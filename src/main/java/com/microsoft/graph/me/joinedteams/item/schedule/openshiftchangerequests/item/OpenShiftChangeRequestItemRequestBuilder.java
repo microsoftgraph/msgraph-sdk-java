@@ -78,8 +78,9 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @return a CompletableFuture of openShiftChangeRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> get() {
@@ -96,9 +97,10 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of openShiftChangeRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The open shift requests in the schedule.
+     * Retrieve the properties and relationships of an openShiftChangeRequest object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -107,8 +107,9 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/events/{event%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property events for users
+     * Removes the specified event from the containing calendar.  If the event is a meeting, deleting the event on the organizer's calendar sends a cancellation message to the meeting attendees.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -125,9 +126,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property events for users
+     * Removes the specified event from the containing calendar.  If the event is a meeting, deleting the event on the organizer's calendar sends a cancellation message to the meeting attendees.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/event-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -144,8 +146,9 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the **event** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **event** instance.
      * @return a CompletableFuture of event
+     * @see <a href="https://docs.microsoft.com/graph/api/event-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> get() {
@@ -162,9 +165,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the **event** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **event** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of event
+     * @see <a href="https://docs.microsoft.com/graph/api/event-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -181,9 +185,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property events in users
+     * Update the properties of the event object.
      * @param body The request body
      * @return a CompletableFuture of event
+     * @see <a href="https://docs.microsoft.com/graph/api/event-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> patch(@javax.annotation.Nonnull final Event body) {
@@ -200,10 +205,11 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property events in users
+     * Update the properties of the event object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of event
+     * @see <a href="https://docs.microsoft.com/graph/api/event-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> patch(@javax.annotation.Nonnull final Event body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -221,7 +227,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property events for users
+     * Removes the specified event from the containing calendar.  If the event is a meeting, deleting the event on the organizer's calendar sends a cancellation message to the meeting attendees.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -229,7 +235,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property events for users
+     * Removes the specified event from the containing calendar.  If the event is a meeting, deleting the event on the organizer's calendar sends a cancellation message to the meeting attendees.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +254,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the **event** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **event** instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -256,7 +262,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the **event** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **event** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -277,7 +283,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property events in users
+     * Update the properties of the event object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -286,7 +292,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property events in users
+     * Update the properties of the event object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -314,7 +320,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the **event** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **event** instance.
      */
     public class GetQueryParameters {
         /** Expand related entities */

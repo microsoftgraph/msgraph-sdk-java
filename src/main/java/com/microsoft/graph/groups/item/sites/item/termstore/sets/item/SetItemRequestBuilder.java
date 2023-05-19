@@ -65,8 +65,9 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property sets for groups
+     * Delete a set object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -83,9 +84,10 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property sets for groups
+     * Delete a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -102,8 +104,9 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @return a CompletableFuture of set
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> get() {
@@ -120,9 +123,10 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of set
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -139,9 +143,10 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property sets in groups
+     * Update the properties of a set object.
      * @param body The request body
      * @return a CompletableFuture of set
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> patch(@javax.annotation.Nonnull final Set body) {
@@ -158,10 +163,11 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property sets in groups
+     * Update the properties of a set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of set
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> patch(@javax.annotation.Nonnull final Set body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -179,7 +185,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property sets for groups
+     * Delete a set object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -187,7 +193,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property sets for groups
+     * Delete a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +212,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +220,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +241,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property sets in groups
+     * Update the properties of a set object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -244,7 +250,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property sets in groups
+     * Update the properties of a set object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -272,7 +278,7 @@ public class SetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     * Read the properties and relationships of a set object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

@@ -90,8 +90,9 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
      * @return a CompletableFuture of serviceUpdateMessage
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> get() {
@@ -108,9 +109,10 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of serviceUpdateMessage
+     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceUpdateMessage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +196,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +204,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +262,7 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
      */
     public class GetQueryParameters {
         /** Expand related entities */

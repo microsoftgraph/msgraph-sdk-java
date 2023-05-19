@@ -41,8 +41,9 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories/{educationCategory%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property assignmentCategories for education
+     * Delete an existing category. Only teachers can perform this operation.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property assignmentCategories for education
+     * Delete an existing category. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a CompletableFuture of educationCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategory> get() {
@@ -96,9 +99,10 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationCategory> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property assignmentCategories for education
+     * Delete an existing category. Only teachers can perform this operation.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignmentCategories for education
+     * Delete an existing category. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +252,7 @@ public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All categories associated with this class. Nullable.
+     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
      */
     public class GetQueryParameters {
         /** Expand related entities */

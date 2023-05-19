@@ -84,8 +84,9 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         }
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
      * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> get() {
@@ -102,9 +103,10 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         }
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
      */
     public class GetQueryParameters {
         /** Expand related entities */

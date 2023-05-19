@@ -60,7 +60,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/fido2Methods{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @return a CompletableFuture of Fido2AuthenticationMethodCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -78,7 +78,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of Fido2AuthenticationMethodCollectionResponse
      */
@@ -97,7 +97,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +105,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +126,7 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -60,8 +60,9 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/oauth2PermissionGrants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get oauth2PermissionGrants from me
+     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
      * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-oauth2permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get oauth2PermissionGrants from me
+     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/user-list-oauth2permissiongrants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get oauth2PermissionGrants from me
+     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get oauth2PermissionGrants from me
+     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get oauth2PermissionGrants from me
+     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
      */
     public class GetQueryParameters {
         /** Include count of items */

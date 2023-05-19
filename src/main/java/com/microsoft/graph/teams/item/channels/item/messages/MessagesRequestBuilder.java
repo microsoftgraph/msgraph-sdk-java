@@ -67,8 +67,9 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/messages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
      * @return a CompletableFuture of ChatMessageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get() {
@@ -85,9 +86,10 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChatMessageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,9 +106,10 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to messages for teams
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @return a CompletableFuture of chatMessage
+     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body) {
@@ -123,10 +126,11 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to messages for teams
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
+     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@javax.annotation.Nonnull final ChatMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +148,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +156,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +177,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to messages for teams
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to messages for teams
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +209,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -90,8 +90,9 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @return a CompletableFuture of workbookPivotTable
+     * @see <a href="https://docs.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookPivotTable> get() {
@@ -108,9 +109,10 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookPivotTable
+     * @see <a href="https://docs.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookPivotTable> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +196,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +204,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +262,7 @@ public class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * Retrieve the properties and relationships of workbookPivotTable object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

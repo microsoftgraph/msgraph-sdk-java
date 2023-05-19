@@ -72,8 +72,9 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/memberOf{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get memberOf from contacts
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -90,9 +91,10 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get memberOf from contacts
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +111,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get memberOf from contacts
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -117,7 +119,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get memberOf from contacts
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -138,7 +140,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get memberOf from contacts
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /** Include count of items */

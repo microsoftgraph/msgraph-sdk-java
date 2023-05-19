@@ -61,8 +61,9 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/authenticationMethodModes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Names and descriptions of all valid authentication method modes in the system.
+     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of **authenticationMethodModes** objects and their properties.
      * @return a CompletableFuture of AuthenticationMethodModeDetailCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetailCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Names and descriptions of all valid authentication method modes in the system.
+     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of **authenticationMethodModes** objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuthenticationMethodModeDetailCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodModeDetailCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Names and descriptions of all valid authentication method modes in the system.
+     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of **authenticationMethodModes** objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Names and descriptions of all valid authentication method modes in the system.
+     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of **authenticationMethodModes** objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Names and descriptions of all valid authentication method modes in the system.
+     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of **authenticationMethodModes** objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -47,8 +47,9 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/groups/{group%2Did1}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property groups for groups
+     * Delete a group object in a term [store].
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property groups for groups
+     * Delete a group object in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of all groups available in the term store.
+     * Read the properties and relationships of a term store group object.
      * @return a CompletableFuture of group
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get() {
@@ -102,9 +105,10 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Collection of all groups available in the term store.
+     * Read the properties and relationships of a term store group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
+     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,7 +165,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property groups for groups
+     * Delete a group object in a term [store].
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +173,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property groups for groups
+     * Delete a group object in a term [store].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +192,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Collection of all groups available in the term store.
+     * Read the properties and relationships of a term store group object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of all groups available in the term store.
+     * Read the properties and relationships of a term store group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +258,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of all groups available in the term store.
+     * Read the properties and relationships of a term store group object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

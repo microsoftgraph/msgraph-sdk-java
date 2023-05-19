@@ -78,8 +78,9 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @return a CompletableFuture of groupSetting
+     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> get() {
@@ -96,9 +97,10 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSetting
+     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property settings in groups
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @return a CompletableFuture of groupSetting
+     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> patch(@javax.annotation.Nonnull final GroupSetting body) {
@@ -134,10 +137,11 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property settings in groups
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSetting
+     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> patch(@javax.annotation.Nonnull final GroupSetting body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property settings in groups
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property settings in groups
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      */
     public class GetQueryParameters {
         /** Expand related entities */

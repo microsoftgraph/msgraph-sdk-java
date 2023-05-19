@@ -40,8 +40,9 @@ public class SupportedLanguagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/outlook/supportedLanguages(){?%24top,%24skip,%24search,%24filter,%24count}", rawUrl);
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @return a CompletableFuture of supportedLanguagesResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-supportedlanguages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SupportedLanguagesResponse> get() {
@@ -58,9 +59,10 @@ public class SupportedLanguagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of supportedLanguagesResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-supportedlanguages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SupportedLanguagesResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class SupportedLanguagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class SupportedLanguagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -106,7 +108,7 @@ public class SupportedLanguagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      */
     public class GetQueryParameters {
         /** Include count of items */

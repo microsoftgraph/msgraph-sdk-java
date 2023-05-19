@@ -41,8 +41,9 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/linkedResources/{linkedResource%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property linkedResources for me
+     * Deletes a linkedResource object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/linkedresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property linkedResources for me
+     * Deletes a linkedResource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/linkedresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of resources linked to the task.
+     * Read the properties and relationships of a linkedResource object.
      * @return a CompletableFuture of linkedResource
+     * @see <a href="https://docs.microsoft.com/graph/api/linkedresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LinkedResource> get() {
@@ -96,9 +99,10 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of resources linked to the task.
+     * Read the properties and relationships of a linkedResource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of linkedResource
+     * @see <a href="https://docs.microsoft.com/graph/api/linkedresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LinkedResource> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property linkedResources in me
+     * Update the properties of a linkedResource object.
      * @param body The request body
      * @return a CompletableFuture of linkedResource
+     * @see <a href="https://docs.microsoft.com/graph/api/linkedresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LinkedResource> patch(@javax.annotation.Nonnull final LinkedResource body) {
@@ -134,10 +139,11 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property linkedResources in me
+     * Update the properties of a linkedResource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of linkedResource
+     * @see <a href="https://docs.microsoft.com/graph/api/linkedresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LinkedResource> patch(@javax.annotation.Nonnull final LinkedResource body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property linkedResources for me
+     * Deletes a linkedResource object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property linkedResources for me
+     * Deletes a linkedResource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of resources linked to the task.
+     * Read the properties and relationships of a linkedResource object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of resources linked to the task.
+     * Read the properties and relationships of a linkedResource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property linkedResources in me
+     * Update the properties of a linkedResource object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property linkedResources in me
+     * Update the properties of a linkedResource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class LinkedResourceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of resources linked to the task.
+     * Read the properties and relationships of a linkedResource object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

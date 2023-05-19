@@ -71,8 +71,9 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentRequests/{accessPackageAssignmentRequest%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property assignmentRequests for identityGovernance
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any **accessPackageAssignment** objects.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -89,9 +90,10 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property assignmentRequests for identityGovernance
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any **accessPackageAssignment** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -108,8 +110,9 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Access package assignment requests created by or on behalf of a subject.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
      * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequest> get() {
@@ -126,9 +129,10 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Access package assignment requests created by or on behalf of a subject.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @see <a href="https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -185,7 +189,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property assignmentRequests for identityGovernance
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any **accessPackageAssignment** objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -193,7 +197,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignmentRequests for identityGovernance
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any **accessPackageAssignment** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +216,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Access package assignment requests created by or on behalf of a subject.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +224,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Access package assignment requests created by or on behalf of a subject.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -278,7 +282,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Access package assignment requests created by or on behalf of a subject.
+     * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

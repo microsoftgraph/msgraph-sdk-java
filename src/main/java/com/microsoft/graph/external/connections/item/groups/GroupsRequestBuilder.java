@@ -61,7 +61,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/groups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @return a CompletableFuture of ExternalGroupCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExternalGroupCollectionResponse
      */
@@ -98,9 +98,10 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @return a CompletableFuture of externalGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> post(@javax.annotation.Nonnull final ExternalGroup body) {
@@ -117,10 +118,11 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalGroup
+     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> post(@javax.annotation.Nonnull final ExternalGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +169,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +178,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to groups for external
+     * Create a new externalGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +201,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get groups from external
+     * Get an externalGroup object.
      */
     public class GetQueryParameters {
         /** Include count of items */

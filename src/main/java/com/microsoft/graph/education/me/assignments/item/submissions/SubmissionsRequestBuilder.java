@@ -61,8 +61,9 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      * @return a CompletableFuture of EducationSubmissionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmissionCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationSubmissionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSubmissionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +148,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +201,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+     * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      */
     public class GetQueryParameters {
         /** Include count of items */

@@ -60,8 +60,9 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/identityProviders{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The identity providers included in the user flow.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @return a CompletableFuture of IdentityProviderCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderCollectionResponse> get() {
@@ -78,9 +79,10 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The identity providers included in the user flow.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityProviderCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +99,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The identity providers included in the user flow.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -105,7 +107,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The identity providers included in the user flow.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -126,7 +128,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The identity providers included in the user flow.
+     * Get the identity providers in a b2xIdentityUserFlow object.
      */
     public class GetQueryParameters {
         /** Include count of items */

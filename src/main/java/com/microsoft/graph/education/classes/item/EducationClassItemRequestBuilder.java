@@ -89,8 +89,9 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property classes for education
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -107,9 +108,10 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property classes for education
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -126,8 +128,9 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get classes from education
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @return a CompletableFuture of educationClass
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> get() {
@@ -144,9 +147,10 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get classes from education
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationClass
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -163,9 +167,10 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property classes in education
+     * Update the properties of an educationClass object.
      * @param body The request body
      * @return a CompletableFuture of educationClass
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> patch(@javax.annotation.Nonnull final EducationClass body) {
@@ -182,10 +187,11 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property classes in education
+     * Update the properties of an educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationClass
+     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> patch(@javax.annotation.Nonnull final EducationClass body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -203,7 +209,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property classes for education
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -211,7 +217,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property classes for education
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -230,7 +236,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get classes from education
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -238,7 +244,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get classes from education
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -259,7 +265,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property classes in education
+     * Update the properties of an educationClass object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -268,7 +274,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property classes in education
+     * Update the properties of an educationClass object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -296,7 +302,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get classes from education
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      */
     public class GetQueryParameters {
         /** Expand related entities */
