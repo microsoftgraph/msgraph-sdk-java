@@ -39,7 +39,7 @@ public class InboundOutboundPolicyConfiguration implements IJsonBackedObject {
 
     /**
      * The Inbound Allowed.
-     * 
+     * Defines whether external users coming inbound are allowed.
      */
     @SerializedName(value = "inboundAllowed", alternate = {"InboundAllowed"})
     @Expose
@@ -48,7 +48,7 @@ public class InboundOutboundPolicyConfiguration implements IJsonBackedObject {
 
     /**
      * The Outbound Allowed.
-     * 
+     * Defines whether internal users are allowed to go outbound.
      */
     @SerializedName(value = "outboundAllowed", alternate = {"OutboundAllowed"})
     @Expose

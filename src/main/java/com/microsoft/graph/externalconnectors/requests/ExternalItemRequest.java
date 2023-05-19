@@ -8,6 +8,8 @@ package com.microsoft.graph.externalconnectors.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.externalconnectors.models.ExternalItem;
+import com.microsoft.graph.externalconnectors.models.ExternalActivity;
+import com.microsoft.graph.externalconnectors.models.ExternalActivityResult;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

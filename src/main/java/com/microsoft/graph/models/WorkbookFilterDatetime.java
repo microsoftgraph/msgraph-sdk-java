@@ -39,7 +39,7 @@ public class WorkbookFilterDatetime implements IJsonBackedObject {
 
     /**
      * The Date.
-     * 
+     * The date in ISO8601 format used to filter data.
      */
     @SerializedName(value = "date", alternate = {"Date"})
     @Expose
@@ -48,7 +48,7 @@ public class WorkbookFilterDatetime implements IJsonBackedObject {
 
     /**
      * The Specificity.
-     * 
+     * How specific the date should be used to keep data. For example, if the date is 2005-04-02 and the specifity is set to 'month', the filter operation will keep all rows with a date in the month of april 2009. The possible values are: Year, Monday, Day, Hour, Minute, Second.
      */
     @SerializedName(value = "specificity", alternate = {"Specificity"})
     @Expose

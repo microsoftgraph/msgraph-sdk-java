@@ -88,4 +88,13 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     public OnlineMeetingAttendeeReportStreamRequestBuilder attendeeReport() {
         return new OnlineMeetingAttendeeReportStreamRequestBuilder(getRequestUrlWithAdditionalSegment("attendeeReport"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public OnlineMeetingGetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
+        return new OnlineMeetingGetVirtualAppointmentJoinWebUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getVirtualAppointmentJoinWebUrl"), getClient(), null);
+    }
 }

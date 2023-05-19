@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.58.0] - 2023-05-19
+
+### Added 
+
+- OnlineMeetingGetVirtualAppointmentJoinWebUrl model and related requests. 
+- SiteGetAllSites model and related requests. 
+- The following models and requests have been added to the externalConnectors namespace: 
+- ExternalActivity models and related requests. 
+- ExternalItemAddActivities models and related requests. 
+- IdentityReference and IdentityWithReference requests. 
+
 ## [5.57.0] - 2023-05-12
 
 ### Added 
