@@ -13,6 +13,8 @@ public enum EntityType implements ValuedEnum {
     ListItem("listItem"),
     Drive("drive"),
     UnknownFutureValue("unknownFutureValue"),
+    Acronym("acronym"),
+    Bookmark("bookmark"),
     ChatMessage("chatMessage"),
     Person("person");
     public final String value;
@@ -34,6 +36,8 @@ public enum EntityType implements ValuedEnum {
             case "listItem": return ListItem;
             case "drive": return Drive;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "acronym": return Acronym;
+            case "bookmark": return Bookmark;
             case "chatMessage": return ChatMessage;
             case "person": return Person;
             default: return null;

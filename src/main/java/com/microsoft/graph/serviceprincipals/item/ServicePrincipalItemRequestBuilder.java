@@ -25,6 +25,7 @@ import com.microsoft.graph.serviceprincipals.item.owners.OwnersRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.removekey.RemoveKeyRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.removepassword.RemovePasswordRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.synchronization.SynchronizationRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.transitivememberof.TransitiveMemberOfRequestBuilder;
@@ -160,6 +161,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the synchronization property of the microsoft.graph.servicePrincipal entity. */
+    @javax.annotation.Nonnull
+    public SynchronizationRequestBuilder synchronization() {
+        return new SynchronizationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity. */
     @javax.annotation.Nonnull

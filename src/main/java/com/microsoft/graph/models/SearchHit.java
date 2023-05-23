@@ -14,6 +14,8 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     private String contentSource;
     /** The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format. */
     private String hitId;
+    /** The isCollapsed property */
+    private Boolean isCollapsed;
     /** The OdataType property */
     private String odataType;
     /** The rank or the order of the result. */
@@ -64,9 +66,10 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("contentSource", (n) -> { this.setContentSource(n.getStringValue()); });
         deserializerMap.put("hitId", (n) -> { this.setHitId(n.getStringValue()); });
+        deserializerMap.put("isCollapsed", (n) -> { this.setIsCollapsed(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rank", (n) -> { this.setRank(n.getIntegerValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
@@ -81,6 +84,14 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getHitId() {
         return this.hitId;
+    }
+    /**
+     * Gets the isCollapsed property value. The isCollapsed property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsCollapsed() {
+        return this.isCollapsed;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -132,6 +143,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contentSource", this.getContentSource());
         writer.writeStringValue("hitId", this.getHitId());
+        writer.writeBooleanValue("isCollapsed", this.getIsCollapsed());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("rank", this.getRank());
         writer.writeObjectValue("resource", this.getResource());
@@ -165,6 +177,15 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setHitId(@javax.annotation.Nullable final String value) {
         this.hitId = value;
+    }
+    /**
+     * Sets the isCollapsed property value. The isCollapsed property
+     * @param value Value to set for the isCollapsed property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsCollapsed(@javax.annotation.Nullable final Boolean value) {
+        this.isCollapsed = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property

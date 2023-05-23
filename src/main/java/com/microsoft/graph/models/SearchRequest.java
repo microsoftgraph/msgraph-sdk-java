@@ -14,6 +14,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     private java.util.List<String> aggregationFilters;
     /** The aggregations property */
     private java.util.List<AggregationOption> aggregations;
+    /** The collapseProperties property */
+    private java.util.List<CollapseProperty> collapseProperties;
     /** The contentSources property */
     private java.util.List<String> contentSources;
     /** The enableTopResults property */
@@ -83,6 +85,14 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         return this.aggregations;
     }
     /**
+     * Gets the collapseProperties property value. The collapseProperties property
+     * @return a collapseProperty
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CollapseProperty> getCollapseProperties() {
+        return this.collapseProperties;
+    }
+    /**
      * Gets the contentSources property value. The contentSources property
      * @return a string
      */
@@ -112,9 +122,10 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("aggregationFilters", (n) -> { this.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("aggregations", (n) -> { this.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
+        deserializerMap.put("collapseProperties", (n) -> { this.setCollapseProperties(n.getCollectionOfObjectValues(CollapseProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("contentSources", (n) -> { this.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("enableTopResults", (n) -> { this.setEnableTopResults(n.getBooleanValue()); });
         deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfEnumValues(EntityType.class)); });
@@ -220,6 +231,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aggregationFilters", this.getAggregationFilters());
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
+        writer.writeCollectionOfObjectValues("collapseProperties", this.getCollapseProperties());
         writer.writeCollectionOfPrimitiveValues("contentSources", this.getContentSources());
         writer.writeBooleanValue("enableTopResults", this.getEnableTopResults());
         writer.writeCollectionOfEnumValues("entityTypes", this.getEntityTypes());
@@ -261,6 +273,15 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setAggregations(@javax.annotation.Nullable final java.util.List<AggregationOption> value) {
         this.aggregations = value;
+    }
+    /**
+     * Sets the collapseProperties property value. The collapseProperties property
+     * @param value Value to set for the collapseProperties property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCollapseProperties(@javax.annotation.Nullable final java.util.List<CollapseProperty> value) {
+        this.collapseProperties = value;
     }
     /**
      * Sets the contentSources property value. The contentSources property

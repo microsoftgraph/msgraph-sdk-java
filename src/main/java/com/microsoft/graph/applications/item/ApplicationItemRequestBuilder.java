@@ -17,6 +17,7 @@ import com.microsoft.graph.applications.item.removekey.RemoveKeyRequestBuilder;
 import com.microsoft.graph.applications.item.removepassword.RemovePasswordRequestBuilder;
 import com.microsoft.graph.applications.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.applications.item.setverifiedpublisher.SetVerifiedPublisherRequestBuilder;
+import com.microsoft.graph.applications.item.synchronization.SynchronizationRequestBuilder;
 import com.microsoft.graph.applications.item.tokenissuancepolicies.TokenIssuancePoliciesRequestBuilder;
 import com.microsoft.graph.applications.item.tokenlifetimepolicies.TokenLifetimePoliciesRequestBuilder;
 import com.microsoft.graph.applications.item.unsetverifiedpublisher.UnsetVerifiedPublisherRequestBuilder;
@@ -124,6 +125,11 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SetVerifiedPublisherRequestBuilder setVerifiedPublisher() {
         return new SetVerifiedPublisherRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the synchronization property of the microsoft.graph.application entity. */
+    @javax.annotation.Nonnull
+    public SynchronizationRequestBuilder synchronization() {
+        return new SynchronizationRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.application entity. */
     @javax.annotation.Nonnull

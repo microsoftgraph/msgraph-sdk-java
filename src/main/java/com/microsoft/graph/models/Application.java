@@ -83,6 +83,8 @@ public class Application extends DirectoryObject implements Parsable {
     private String signInAudience;
     /** Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens. */
     private SpaApplication spa;
+    /** The synchronization property */
+    private Synchronization synchronization;
     /** Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search. */
     private java.util.List<String> tags;
     /** Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
@@ -278,6 +280,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("serviceManagementReference", (n) -> { this.setServiceManagementReference(n.getStringValue()); });
         deserializerMap.put("signInAudience", (n) -> { this.setSignInAudience(n.getStringValue()); });
         deserializerMap.put("spa", (n) -> { this.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("synchronization", (n) -> { this.setSynchronization(n.getObjectValue(Synchronization::createFromDiscriminatorValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getUUIDValue()); });
         deserializerMap.put("tokenIssuancePolicies", (n) -> { this.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
@@ -463,6 +466,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this.spa;
     }
     /**
+     * Gets the synchronization property value. The synchronization property
+     * @return a synchronization
+     */
+    @javax.annotation.Nullable
+    public Synchronization getSynchronization() {
+        return this.synchronization;
+    }
+    /**
      * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.
      * @return a string
      */
@@ -556,6 +567,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeStringValue("serviceManagementReference", this.getServiceManagementReference());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
         writer.writeObjectValue("spa", this.getSpa());
+        writer.writeObjectValue("synchronization", this.getSynchronization());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
         writer.writeUUIDValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
@@ -895,6 +907,15 @@ public class Application extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setSpa(@javax.annotation.Nullable final SpaApplication value) {
         this.spa = value;
+    }
+    /**
+     * Sets the synchronization property value. The synchronization property
+     * @param value Value to set for the synchronization property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSynchronization(@javax.annotation.Nullable final Synchronization value) {
+        this.synchronization = value;
     }
     /**
      * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.

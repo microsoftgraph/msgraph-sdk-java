@@ -1,0 +1,340 @@
+package com.microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class AttributeDefinition implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> additionalData;
+    /** The anchor property */
+    private Boolean anchor;
+    /** The apiExpressions property */
+    private java.util.List<StringKeyStringValuePair> apiExpressions;
+    /** The caseExact property */
+    private Boolean caseExact;
+    /** The defaultValue property */
+    private String defaultValue;
+    /** The flowNullValues property */
+    private Boolean flowNullValues;
+    /** The metadata property */
+    private java.util.List<AttributeDefinitionMetadataEntry> metadata;
+    /** The multivalued property */
+    private Boolean multivalued;
+    /** The mutability property */
+    private Mutability mutability;
+    /** The name property */
+    private String name;
+    /** The OdataType property */
+    private String odataType;
+    /** The referencedObjects property */
+    private java.util.List<ReferencedObject> referencedObjects;
+    /** The required property */
+    private Boolean required;
+    /** The type property */
+    private AttributeType type;
+    /**
+     * Instantiates a new attributeDefinition and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public AttributeDefinition() {
+        this.setAdditionalData(new HashMap<>());
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a attributeDefinition
+     */
+    @javax.annotation.Nonnull
+    public static AttributeDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new AttributeDefinition();
+    }
+    /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this.additionalData;
+    }
+    /**
+     * Gets the anchor property value. The anchor property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAnchor() {
+        return this.anchor;
+    }
+    /**
+     * Gets the apiExpressions property value. The apiExpressions property
+     * @return a stringKeyStringValuePair
+     */
+    @javax.annotation.Nullable
+    public java.util.List<StringKeyStringValuePair> getApiExpressions() {
+        return this.apiExpressions;
+    }
+    /**
+     * Gets the caseExact property value. The caseExact property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getCaseExact() {
+        return this.caseExact;
+    }
+    /**
+     * Gets the defaultValue property value. The defaultValue property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDefaultValue() {
+        return this.defaultValue;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        deserializerMap.put("anchor", (n) -> { this.setAnchor(n.getBooleanValue()); });
+        deserializerMap.put("apiExpressions", (n) -> { this.setApiExpressions(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("caseExact", (n) -> { this.setCaseExact(n.getBooleanValue()); });
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("flowNullValues", (n) -> { this.setFlowNullValues(n.getBooleanValue()); });
+        deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(AttributeDefinitionMetadataEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("multivalued", (n) -> { this.setMultivalued(n.getBooleanValue()); });
+        deserializerMap.put("mutability", (n) -> { this.setMutability(n.getEnumValue(Mutability.class)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("referencedObjects", (n) -> { this.setReferencedObjects(n.getCollectionOfObjectValues(ReferencedObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeType.class)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the flowNullValues property value. The flowNullValues property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getFlowNullValues() {
+        return this.flowNullValues;
+    }
+    /**
+     * Gets the metadata property value. The metadata property
+     * @return a attributeDefinitionMetadataEntry
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AttributeDefinitionMetadataEntry> getMetadata() {
+        return this.metadata;
+    }
+    /**
+     * Gets the multivalued property value. The multivalued property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getMultivalued() {
+        return this.multivalued;
+    }
+    /**
+     * Gets the mutability property value. The mutability property
+     * @return a mutability
+     */
+    @javax.annotation.Nullable
+    public Mutability getMutability() {
+        return this.mutability;
+    }
+    /**
+     * Gets the name property value. The name property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getName() {
+        return this.name;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this.odataType;
+    }
+    /**
+     * Gets the referencedObjects property value. The referencedObjects property
+     * @return a referencedObject
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ReferencedObject> getReferencedObjects() {
+        return this.referencedObjects;
+    }
+    /**
+     * Gets the required property value. The required property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getRequired() {
+        return this.required;
+    }
+    /**
+     * Gets the type property value. The type property
+     * @return a attributeType
+     */
+    @javax.annotation.Nullable
+    public AttributeType getType() {
+        return this.type;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        writer.writeBooleanValue("anchor", this.getAnchor());
+        writer.writeCollectionOfObjectValues("apiExpressions", this.getApiExpressions());
+        writer.writeBooleanValue("caseExact", this.getCaseExact());
+        writer.writeStringValue("defaultValue", this.getDefaultValue());
+        writer.writeBooleanValue("flowNullValues", this.getFlowNullValues());
+        writer.writeCollectionOfObjectValues("metadata", this.getMetadata());
+        writer.writeBooleanValue("multivalued", this.getMultivalued());
+        writer.writeEnumValue("mutability", this.getMutability());
+        writer.writeStringValue("name", this.getName());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("referencedObjects", this.getReferencedObjects());
+        writer.writeBooleanValue("required", this.getRequired());
+        writer.writeEnumValue("type", this.getType());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this.additionalData = value;
+    }
+    /**
+     * Sets the anchor property value. The anchor property
+     * @param value Value to set for the anchor property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAnchor(@javax.annotation.Nullable final Boolean value) {
+        this.anchor = value;
+    }
+    /**
+     * Sets the apiExpressions property value. The apiExpressions property
+     * @param value Value to set for the apiExpressions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setApiExpressions(@javax.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {
+        this.apiExpressions = value;
+    }
+    /**
+     * Sets the caseExact property value. The caseExact property
+     * @param value Value to set for the caseExact property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCaseExact(@javax.annotation.Nullable final Boolean value) {
+        this.caseExact = value;
+    }
+    /**
+     * Sets the defaultValue property value. The defaultValue property
+     * @param value Value to set for the defaultValue property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDefaultValue(@javax.annotation.Nullable final String value) {
+        this.defaultValue = value;
+    }
+    /**
+     * Sets the flowNullValues property value. The flowNullValues property
+     * @param value Value to set for the flowNullValues property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFlowNullValues(@javax.annotation.Nullable final Boolean value) {
+        this.flowNullValues = value;
+    }
+    /**
+     * Sets the metadata property value. The metadata property
+     * @param value Value to set for the metadata property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMetadata(@javax.annotation.Nullable final java.util.List<AttributeDefinitionMetadataEntry> value) {
+        this.metadata = value;
+    }
+    /**
+     * Sets the multivalued property value. The multivalued property
+     * @param value Value to set for the multivalued property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMultivalued(@javax.annotation.Nullable final Boolean value) {
+        this.multivalued = value;
+    }
+    /**
+     * Sets the mutability property value. The mutability property
+     * @param value Value to set for the mutability property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMutability(@javax.annotation.Nullable final Mutability value) {
+        this.mutability = value;
+    }
+    /**
+     * Sets the name property value. The name property
+     * @param value Value to set for the name property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setName(@javax.annotation.Nullable final String value) {
+        this.name = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this.odataType = value;
+    }
+    /**
+     * Sets the referencedObjects property value. The referencedObjects property
+     * @param value Value to set for the referencedObjects property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setReferencedObjects(@javax.annotation.Nullable final java.util.List<ReferencedObject> value) {
+        this.referencedObjects = value;
+    }
+    /**
+     * Sets the required property value. The required property
+     * @param value Value to set for the required property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRequired(@javax.annotation.Nullable final Boolean value) {
+        this.required = value;
+    }
+    /**
+     * Sets the type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setType(@javax.annotation.Nullable final AttributeType value) {
+        this.type = value;
+    }
+}
