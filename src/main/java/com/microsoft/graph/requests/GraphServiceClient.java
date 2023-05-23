@@ -810,6 +810,48 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of FilterOperators objects
+     *
+     * @return the request builder for the collection of FilterOperators objects
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.FilterOperatorSchemaCollectionRequestBuilder filterOperators() {
+        return new com.microsoft.graph.requests.FilterOperatorSchemaCollectionRequestBuilder(getServiceRoot() + "/filterOperators", this, null);
+    }
+
+    /**
+     * Gets a single FilterOperators
+     *
+     * @param id the id of the FilterOperators to retrieve
+     * @return the request builder for the FilterOperators object
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.FilterOperatorSchemaRequestBuilder filterOperators(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.FilterOperatorSchemaRequestBuilder(getServiceRoot() + "/filterOperators/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of Functions objects
+     *
+     * @return the request builder for the collection of Functions objects
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttributeMappingFunctionSchemaCollectionRequestBuilder functions() {
+        return new com.microsoft.graph.requests.AttributeMappingFunctionSchemaCollectionRequestBuilder(getServiceRoot() + "/functions", this, null);
+    }
+
+    /**
+     * Gets a single Functions
+     *
+     * @param id the id of the Functions to retrieve
+     * @return the request builder for the Functions object
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttributeMappingFunctionSchemaRequestBuilder functions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttributeMappingFunctionSchemaRequestBuilder(getServiceRoot() + "/functions/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of AgreementAcceptances objects
      *
      * @return the request builder for the collection of AgreementAcceptances objects

@@ -41,7 +41,7 @@ public class ChatMessageHistoryItem implements IJsonBackedObject {
 
     /**
      * The Actions.
-     * 
+     * The modification actions of a message item.The possible values are: reactionAdded, reactionRemoved, actionUndefined, unknownFutureValue.
      */
     @SerializedName(value = "actions", alternate = {"Actions"})
     @Expose
@@ -50,7 +50,7 @@ public class ChatMessageHistoryItem implements IJsonBackedObject {
 
     /**
      * The Modified Date Time.
-     * 
+     * The date and time when the message was modified.
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class ChatMessageHistoryItem implements IJsonBackedObject {
 
     /**
      * The Reaction.
-     * 
+     * The reaction in the modified message.
      */
     @SerializedName(value = "reaction", alternate = {"Reaction"})
     @Expose

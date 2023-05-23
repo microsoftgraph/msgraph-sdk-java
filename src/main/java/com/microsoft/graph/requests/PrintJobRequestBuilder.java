@@ -8,8 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrintJob;
-import com.microsoft.graph.models.PrintJobConfiguration;
 import com.microsoft.graph.models.PrintJobStatus;
+import com.microsoft.graph.models.PrintJobConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -113,6 +113,15 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     */
+    @Nonnull
+    public PrintJobStartRequestBuilder start() {
+        return new PrintJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
@@ -128,14 +137,5 @@ public class PrintJobRequestBuilder extends BaseRequestBuilder<PrintJob> {
     @Nonnull
     public PrintJobRedirectRequestBuilder redirect(@Nonnull final PrintJobRedirectParameterSet parameters) {
         return new PrintJobRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public PrintJobStartRequestBuilder start() {
-        return new PrintJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
     }
 }

@@ -57,6 +57,15 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
     public Boolean allowedToCreateSecurityGroups;
 
     /**
+     * The Allowed To Create Tenants.
+     * Indicates whether the default user role can create tenants.
+     */
+    @SerializedName(value = "allowedToCreateTenants", alternate = {"AllowedToCreateTenants"})
+    @Expose
+	@Nullable
+    public Boolean allowedToCreateTenants;
+
+    /**
      * The Allowed To Read Bitlocker Keys For Owned Device.
      * Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      */

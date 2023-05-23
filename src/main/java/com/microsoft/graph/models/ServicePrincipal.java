@@ -18,6 +18,7 @@ import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.ResourceSpecificPermission;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.VerifiedPublisher;
+import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
@@ -461,6 +462,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
+
+    /**
+     * The Synchronization.
+     * 
+     */
+    @SerializedName(value = "synchronization", alternate = {"Synchronization"})
+    @Expose
+	@Nullable
+    public Synchronization synchronization;
 
 
     /**

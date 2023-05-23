@@ -25,6 +25,7 @@ import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
@@ -414,6 +415,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      */
 	@Nullable
     public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+
+    /**
+     * The Synchronization.
+     * 
+     */
+    @SerializedName(value = "synchronization", alternate = {"Synchronization"})
+    @Expose
+	@Nullable
+    public Synchronization synchronization;
 
 
     /**

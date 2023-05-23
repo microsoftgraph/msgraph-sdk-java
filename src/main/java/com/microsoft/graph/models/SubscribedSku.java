@@ -29,6 +29,24 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Account Id.
+     * 
+     */
+    @SerializedName(value = "accountId", alternate = {"AccountId"})
+    @Expose
+	@Nullable
+    public String accountId;
+
+    /**
+     * The Account Name.
+     * 
+     */
+    @SerializedName(value = "accountName", alternate = {"AccountName"})
+    @Expose
+	@Nullable
+    public String accountName;
+
+    /**
      * The Applies To.
      * For example, 'User' or 'Company'.
      */
@@ -90,6 +108,15 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String skuPartNumber;
+
+    /**
+     * The Subscription Ids.
+     * 
+     */
+    @SerializedName(value = "subscriptionIds", alternate = {"SubscriptionIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> subscriptionIds;
 
 
     /**
