@@ -38,7 +38,7 @@ public class ChatMessage extends Entity implements Parsable {
     private String locale;
     /** List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel. */
     private java.util.List<ChatMessageMention> mentions;
-    /** The messageHistory property */
+    /** List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message. */
     private java.util.List<ChatMessageHistoryItem> messageHistory;
     /** The messageType property */
     private ChatMessageType messageType;
@@ -228,7 +228,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this.mentions;
     }
     /**
-     * Gets the messageHistory property value. The messageHistory property
+     * Gets the messageHistory property value. List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
      * @return a chatMessageHistoryItem
      */
     @javax.annotation.Nullable
@@ -469,7 +469,7 @@ public class ChatMessage extends Entity implements Parsable {
         this.mentions = value;
     }
     /**
-     * Sets the messageHistory property value. The messageHistory property
+     * Sets the messageHistory property value. List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
      * @param value Value to set for the messageHistory property.
      * @return a void
      */

@@ -13,11 +13,11 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
     private ChatMessageActions actions;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The modifiedDateTime property */
+    /** The date and time when the message was modified. */
     private OffsetDateTime modifiedDateTime;
     /** The OdataType property */
     private String odataType;
-    /** The reaction property */
+    /** The reaction in the modified message. */
     private ChatMessageReaction reaction;
     /**
      * Instantiates a new chatMessageHistoryItem and sets the default values.
@@ -67,7 +67,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The date and time when the message was modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the reaction property value. The reaction property
+     * Gets the reaction property value. The reaction in the modified message.
      * @return a chatMessageReaction
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The date and time when the message was modified.
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the reaction property value. The reaction property
+     * Sets the reaction property value. The reaction in the modified message.
      * @param value Value to set for the reaction property.
      * @return a void
      */

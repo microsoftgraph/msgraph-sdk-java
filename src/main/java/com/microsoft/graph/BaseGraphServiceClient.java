@@ -31,6 +31,8 @@ import com.microsoft.graph.drives.DrivesRequestBuilder;
 import com.microsoft.graph.education.EducationRequestBuilder;
 import com.microsoft.graph.employeeexperience.EmployeeExperienceRequestBuilder;
 import com.microsoft.graph.external.ExternalRequestBuilder;
+import com.microsoft.graph.filteroperators.FilterOperatorsRequestBuilder;
+import com.microsoft.graph.functions.FunctionsRequestBuilder;
 import com.microsoft.graph.grouplifecyclepolicies.GroupLifecyclePoliciesRequestBuilder;
 import com.microsoft.graph.groups.GroupsRequestBuilder;
 import com.microsoft.graph.groupsettings.GroupSettingsRequestBuilder;
@@ -239,6 +241,16 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ExternalRequestBuilder external() {
         return new ExternalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the collection of filterOperatorSchema entities. */
+    @javax.annotation.Nonnull
+    public FilterOperatorsRequestBuilder filterOperators() {
+        return new FilterOperatorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the collection of attributeMappingFunctionSchema entities. */
+    @javax.annotation.Nonnull
+    public FunctionsRequestBuilder functions() {
+        return new FunctionsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the collection of groupLifecyclePolicy entities. */
     @javax.annotation.Nonnull

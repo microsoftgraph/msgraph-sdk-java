@@ -457,9 +457,9 @@ public class MeRequestBuilder extends BaseRequestBuilder {
         return new ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(pathParameters, requestAdapter, skip, top);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -476,10 +476,10 @@ public class MeRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -550,7 +550,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
         return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -558,7 +558,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -611,7 +611,7 @@ public class MeRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

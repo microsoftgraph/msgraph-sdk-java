@@ -19,6 +19,8 @@ public class Participant extends Entity implements Parsable {
     private String metadata;
     /** Information about whether the participant has recording capability. */
     private RecordingInfo recordingInfo;
+    /** Indicates the reason or reasons media content from this participant is restricted. */
+    private OnlineMeetingRestricted restrictedExperience;
     /**
      * Instantiates a new participant and sets the default values.
      * @return a void
@@ -50,6 +52,7 @@ public class Participant extends Entity implements Parsable {
         deserializerMap.put("mediaStreams", (n) -> { this.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
         deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getStringValue()); });
         deserializerMap.put("recordingInfo", (n) -> { this.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("restrictedExperience", (n) -> { this.setRestrictedExperience(n.getObjectValue(OnlineMeetingRestricted::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -101,6 +104,14 @@ public class Participant extends Entity implements Parsable {
         return this.recordingInfo;
     }
     /**
+     * Gets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
+     * @return a onlineMeetingRestricted
+     */
+    @javax.annotation.Nullable
+    public OnlineMeetingRestricted getRestrictedExperience() {
+        return this.restrictedExperience;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -115,6 +126,7 @@ public class Participant extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("mediaStreams", this.getMediaStreams());
         writer.writeStringValue("metadata", this.getMetadata());
         writer.writeObjectValue("recordingInfo", this.getRecordingInfo());
+        writer.writeObjectValue("restrictedExperience", this.getRestrictedExperience());
     }
     /**
      * Sets the info property value. The info property
@@ -169,5 +181,14 @@ public class Participant extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setRecordingInfo(@javax.annotation.Nullable final RecordingInfo value) {
         this.recordingInfo = value;
+    }
+    /**
+     * Sets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
+     * @param value Value to set for the restrictedExperience property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRestrictedExperience(@javax.annotation.Nullable final OnlineMeetingRestricted value) {
+        this.restrictedExperience = value;
     }
 }

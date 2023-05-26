@@ -94,6 +94,8 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private String servicePrincipalType;
     /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization's Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization's Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization's Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
     private String signInAudience;
+    /** The synchronization property */
+    private Synchronization synchronization;
     /** Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith). */
     private java.util.List<String> tags;
     /** Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user. */
@@ -343,6 +345,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("servicePrincipalNames", (n) -> { this.setServicePrincipalNames(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("servicePrincipalType", (n) -> { this.setServicePrincipalType(n.getStringValue()); });
         deserializerMap.put("signInAudience", (n) -> { this.setSignInAudience(n.getStringValue()); });
+        deserializerMap.put("synchronization", (n) -> { this.setSynchronization(n.getObjectValue(Synchronization::createFromDiscriminatorValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getUUIDValue()); });
         deserializerMap.put("tokenIssuancePolicies", (n) -> { this.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
@@ -528,6 +531,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.signInAudience;
     }
     /**
+     * Gets the synchronization property value. The synchronization property
+     * @return a synchronization
+     */
+    @javax.annotation.Nullable
+    public Synchronization getSynchronization() {
+        return this.synchronization;
+    }
+    /**
      * Gets the tags property value. Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith).
      * @return a string
      */
@@ -627,6 +638,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfPrimitiveValues("servicePrincipalNames", this.getServicePrincipalNames());
         writer.writeStringValue("servicePrincipalType", this.getServicePrincipalType());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
+        writer.writeObjectValue("synchronization", this.getSynchronization());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
         writer.writeUUIDValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
         writer.writeCollectionOfObjectValues("tokenIssuancePolicies", this.getTokenIssuancePolicies());
@@ -1020,6 +1032,15 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setSignInAudience(@javax.annotation.Nullable final String value) {
         this.signInAudience = value;
+    }
+    /**
+     * Sets the synchronization property value. The synchronization property
+     * @param value Value to set for the synchronization property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSynchronization(@javax.annotation.Nullable final Synchronization value) {
+        this.synchronization = value;
     }
     /**
      * Sets the tags property value. Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith).

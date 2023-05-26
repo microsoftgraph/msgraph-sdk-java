@@ -14,6 +14,8 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     private Boolean allowedToCreateApps;
     /** Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal. */
     private Boolean allowedToCreateSecurityGroups;
+    /** Indicates whether the default user role can create tenants. */
+    private Boolean allowedToCreateTenants;
     /** Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role. */
     private Boolean allowedToReadBitlockerKeysForOwnedDevice;
     /** Indicates whether the default user role can read other users. */
@@ -65,6 +67,14 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.allowedToCreateSecurityGroups;
     }
     /**
+     * Gets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowedToCreateTenants() {
+        return this.allowedToCreateTenants;
+    }
+    /**
      * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @return a boolean
      */
@@ -86,9 +96,10 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("allowedToCreateApps", (n) -> { this.setAllowedToCreateApps(n.getBooleanValue()); });
         deserializerMap.put("allowedToCreateSecurityGroups", (n) -> { this.setAllowedToCreateSecurityGroups(n.getBooleanValue()); });
+        deserializerMap.put("allowedToCreateTenants", (n) -> { this.setAllowedToCreateTenants(n.getBooleanValue()); });
         deserializerMap.put("allowedToReadBitlockerKeysForOwnedDevice", (n) -> { this.setAllowedToReadBitlockerKeysForOwnedDevice(n.getBooleanValue()); });
         deserializerMap.put("allowedToReadOtherUsers", (n) -> { this.setAllowedToReadOtherUsers(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -121,6 +132,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowedToCreateApps", this.getAllowedToCreateApps());
         writer.writeBooleanValue("allowedToCreateSecurityGroups", this.getAllowedToCreateSecurityGroups());
+        writer.writeBooleanValue("allowedToCreateTenants", this.getAllowedToCreateTenants());
         writer.writeBooleanValue("allowedToReadBitlockerKeysForOwnedDevice", this.getAllowedToReadBitlockerKeysForOwnedDevice());
         writer.writeBooleanValue("allowedToReadOtherUsers", this.getAllowedToReadOtherUsers());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -153,6 +165,15 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public void setAllowedToCreateSecurityGroups(@javax.annotation.Nullable final Boolean value) {
         this.allowedToCreateSecurityGroups = value;
+    }
+    /**
+     * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants.
+     * @param value Value to set for the allowedToCreateTenants property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAllowedToCreateTenants(@javax.annotation.Nullable final Boolean value) {
+        this.allowedToCreateTenants = value;
     }
     /**
      * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.

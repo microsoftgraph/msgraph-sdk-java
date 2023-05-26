@@ -8,6 +8,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class SubscribedSku extends Entity implements Parsable {
+    /** The accountId property */
+    private String accountId;
+    /** The accountName property */
+    private String accountName;
     /** For example, 'User' or 'Company'. */
     private String appliesTo;
     /** Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription. */
@@ -22,6 +26,8 @@ public class SubscribedSku extends Entity implements Parsable {
     private UUID skuId;
     /** The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus. */
     private String skuPartNumber;
+    /** The subscriptionIds property */
+    private java.util.List<String> subscriptionIds;
     /**
      * Instantiates a new SubscribedSku and sets the default values.
      * @return a void
@@ -39,6 +45,22 @@ public class SubscribedSku extends Entity implements Parsable {
     public static SubscribedSku createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SubscribedSku();
+    }
+    /**
+     * Gets the accountId property value. The accountId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAccountId() {
+        return this.accountId;
+    }
+    /**
+     * Gets the accountName property value. The accountName property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getAccountName() {
+        return this.accountName;
     }
     /**
      * Gets the appliesTo property value. For example, 'User' or 'Company'.
@@ -71,6 +93,8 @@ public class SubscribedSku extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountId", (n) -> { this.setAccountId(n.getStringValue()); });
+        deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getStringValue()); });
         deserializerMap.put("capabilityStatus", (n) -> { this.setCapabilityStatus(n.getStringValue()); });
         deserializerMap.put("consumedUnits", (n) -> { this.setConsumedUnits(n.getIntegerValue()); });
@@ -78,6 +102,7 @@ public class SubscribedSku extends Entity implements Parsable {
         deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(ServicePlanInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         deserializerMap.put("skuPartNumber", (n) -> { this.setSkuPartNumber(n.getStringValue()); });
+        deserializerMap.put("subscriptionIds", (n) -> { this.setSubscriptionIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
@@ -113,6 +138,14 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.skuPartNumber;
     }
     /**
+     * Gets the subscriptionIds property value. The subscriptionIds property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getSubscriptionIds() {
+        return this.subscriptionIds;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -121,6 +154,8 @@ public class SubscribedSku extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("accountId", this.getAccountId());
+        writer.writeStringValue("accountName", this.getAccountName());
         writer.writeStringValue("appliesTo", this.getAppliesTo());
         writer.writeStringValue("capabilityStatus", this.getCapabilityStatus());
         writer.writeIntegerValue("consumedUnits", this.getConsumedUnits());
@@ -128,6 +163,25 @@ public class SubscribedSku extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
         writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeStringValue("skuPartNumber", this.getSkuPartNumber());
+        writer.writeCollectionOfPrimitiveValues("subscriptionIds", this.getSubscriptionIds());
+    }
+    /**
+     * Sets the accountId property value. The accountId property
+     * @param value Value to set for the accountId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAccountId(@javax.annotation.Nullable final String value) {
+        this.accountId = value;
+    }
+    /**
+     * Sets the accountName property value. The accountName property
+     * @param value Value to set for the accountName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAccountName(@javax.annotation.Nullable final String value) {
+        this.accountName = value;
     }
     /**
      * Sets the appliesTo property value. For example, 'User' or 'Company'.
@@ -191,5 +245,14 @@ public class SubscribedSku extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setSkuPartNumber(@javax.annotation.Nullable final String value) {
         this.skuPartNumber = value;
+    }
+    /**
+     * Sets the subscriptionIds property value. The subscriptionIds property
+     * @param value Value to set for the subscriptionIds property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSubscriptionIds(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.subscriptionIds = value;
     }
 }

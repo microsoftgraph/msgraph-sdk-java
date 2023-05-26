@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OutlookCategory extends Entity implements Parsable {
-    /** A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below. */
+    /** A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note. */
     private CategoryColor color;
     /** A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only. */
     private String displayName;
@@ -30,7 +30,7 @@ public class OutlookCategory extends Entity implements Parsable {
         return new OutlookCategory();
     }
     /**
-     * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
+     * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
      * @return a categoryColor
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class OutlookCategory extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
+     * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
      * @param value Value to set for the color property.
      * @return a void
      */

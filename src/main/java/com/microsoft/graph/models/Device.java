@@ -65,7 +65,7 @@ public class Device extends DirectoryObject implements Parsable {
     /** Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory */
     private String trustType;
     /**
-     * Instantiates a new Device and sets the default values.
+     * Instantiates a new device and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class Device extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Device
+     * @return a device
      */
     @javax.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

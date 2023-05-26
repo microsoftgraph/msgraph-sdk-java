@@ -149,10 +149,10 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@javax.annotation.Nonnull final MailFolder body) {
@@ -169,11 +169,11 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@javax.annotation.Nonnull final MailFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -247,7 +247,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -256,7 +256,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
