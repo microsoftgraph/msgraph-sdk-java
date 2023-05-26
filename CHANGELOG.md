@@ -11,6 +11,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.59.0] - 2023-05-26
+
+### Added 
+
+- AttributeType model and derived types and requests.
+- Filter model and derived types and requests.
+- Synchronization model and derived types and requests.  
+- DirectoryDefinition models and related requests.
+- CollapseProperty model. 
+- ContainerFilter model. 
+- EntryExportStatus model.   
+- EntrySyncOperation model. 
+- EscrowBehavior model. 
+- ExpressionInputObject model. 
+- Mutability model. 
+- ObjectDefinition models. 
+- ObjectFlowTypes model. 
+- ObjectMapping models. 
+- OnlineMeeting models. 
+- ParseExpressionResponse model. 
+- PublicErrorResponse model. 
+- QuarantineReason model. 
+- ReferencedObject model. 
+- ScopeOperator models. 
+- StringKey models.  
+
 ## [5.58.0] - 2023-05-19
 
 ### Added 
