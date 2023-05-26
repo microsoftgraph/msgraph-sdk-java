@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AggregationOption;
+import com.microsoft.graph.models.CollapseProperty;
 import com.microsoft.graph.models.EntityType;
 import com.microsoft.graph.models.SearchQuery;
 import com.microsoft.graph.models.SearchAlterationOptions;
@@ -62,6 +63,15 @@ public class SearchRequest implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AggregationOption> aggregations;
+
+    /**
+     * The Collapse Properties.
+     * 
+     */
+    @SerializedName(value = "collapseProperties", alternate = {"CollapseProperties"})
+    @Expose
+	@Nullable
+    public java.util.List<CollapseProperty> collapseProperties;
 
     /**
      * The Content Sources.

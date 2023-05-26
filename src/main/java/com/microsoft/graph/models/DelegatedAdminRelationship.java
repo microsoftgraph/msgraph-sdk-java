@@ -34,7 +34,7 @@ public class DelegatedAdminRelationship extends Entity implements IJsonBackedObj
 
     /**
      * The Access Details.
-     * The access details containing the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
+     * The access details that contain the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
      */
     @SerializedName(value = "accessDetails", alternate = {"AccessDetails"})
     @Expose

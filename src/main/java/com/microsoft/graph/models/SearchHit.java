@@ -57,6 +57,15 @@ public class SearchHit implements IJsonBackedObject {
     public String hitId;
 
     /**
+     * The Is Collapsed.
+     * 
+     */
+    @SerializedName(value = "isCollapsed", alternate = {"IsCollapsed"})
+    @Expose
+	@Nullable
+    public Boolean isCollapsed;
+
+    /**
      * The Rank.
      * The rank or the order of the result.
      */

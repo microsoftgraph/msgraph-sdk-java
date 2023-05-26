@@ -301,6 +301,16 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
     }
 
     /**
+     * Gets the request builder for Synchronization
+     *
+     * @return the SynchronizationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.SynchronizationRequestBuilder synchronization() {
+        return new com.microsoft.graph.requests.SynchronizationRequestBuilder(getRequestUrlWithAdditionalSegment("synchronization"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for logo
      *
      * @return the ApplicationLogoStreamRequestBuilder instance

@@ -672,6 +672,16 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
     }
 
     /**
+     * Gets the request builder for Synchronization
+     *
+     * @return the SynchronizationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.SynchronizationRequestBuilder synchronization() {
+        return new com.microsoft.graph.requests.SynchronizationRequestBuilder(getRequestUrlWithAdditionalSegment("synchronization"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method

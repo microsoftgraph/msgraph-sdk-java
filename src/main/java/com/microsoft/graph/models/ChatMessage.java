@@ -167,7 +167,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Message History.
-     * 
+     * List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
      */
     @SerializedName(value = "messageHistory", alternate = {"MessageHistory"})
     @Expose

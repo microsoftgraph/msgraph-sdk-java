@@ -28,7 +28,7 @@ public class OutlookCategory extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
+     * A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
