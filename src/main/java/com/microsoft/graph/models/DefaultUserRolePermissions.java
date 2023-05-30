@@ -10,11 +10,11 @@ import java.util.Objects;
 public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** Indicates whether the default user role can create applications. */
+    /** Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal. */
     private Boolean allowedToCreateApps;
-    /** Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal. */
+    /** Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu. */
     private Boolean allowedToCreateSecurityGroups;
-    /** Indicates whether the default user role can create tenants. */
+    /** Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants. */
     private Boolean allowedToCreateTenants;
     /** Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role. */
     private Boolean allowedToReadBitlockerKeysForOwnedDevice;
@@ -51,7 +51,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.additionalData;
     }
     /**
-     * Gets the allowedToCreateApps property value. Indicates whether the default user role can create applications.
+     * Gets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.allowedToCreateApps;
     }
     /**
-     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
+     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.allowedToCreateSecurityGroups;
     }
     /**
-     * Gets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants.
+     * Gets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         this.additionalData = value;
     }
     /**
-     * Sets the allowedToCreateApps property value. Indicates whether the default user role can create applications.
+     * Sets the allowedToCreateApps property value. Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
      * @param value Value to set for the allowedToCreateApps property.
      * @return a void
      */
@@ -158,7 +158,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         this.allowedToCreateApps = value;
     }
     /**
-     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
+     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
      * @param value Value to set for the allowedToCreateSecurityGroups property.
      * @return a void
      */
@@ -167,7 +167,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         this.allowedToCreateSecurityGroups = value;
     }
     /**
-     * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants.
+     * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
      * @param value Value to set for the allowedToCreateTenants property.
      * @return a void
      */
