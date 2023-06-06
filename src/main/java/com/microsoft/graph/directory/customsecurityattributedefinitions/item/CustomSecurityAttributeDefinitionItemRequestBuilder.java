@@ -84,8 +84,9 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> get() {
@@ -102,9 +103,10 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +123,10 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> patch(@javax.annotation.Nonnull final CustomSecurityAttributeDefinition body) {
@@ -140,10 +143,11 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> patch(@javax.annotation.Nonnull final CustomSecurityAttributeDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -188,7 +192,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +221,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +230,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customSecurityAttributeDefinitions in directory
+     * Update the properties of a customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +258,7 @@ public class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Read the properties and relationships of a customSecurityAttributeDefinition object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

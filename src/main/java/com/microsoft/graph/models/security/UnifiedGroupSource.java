@@ -13,7 +13,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     /** Specifies which sources are included in this group. Possible values are: mailbox, site. */
     private SourceType includedSources;
     /**
-     * Instantiates a new unifiedGroupSource and sets the default values.
+     * Instantiates a new UnifiedGroupSource and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +24,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedGroupSource
+     * @return a UnifiedGroupSource
      */
     @javax.annotation.Nonnull
     public static UnifiedGroupSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

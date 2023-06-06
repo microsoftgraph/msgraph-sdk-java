@@ -1,4 +1,4 @@
-package com.microsoft.graph.branding.bannerlogo;
+package com.microsoft.graph.localizations.item.customcss;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -16,31 +16,31 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the media for the organizationalBranding entity.
+ * Provides operations to manage the media for the organizationalBrandingLocalization entity.
  */
-public class BannerLogoRequestBuilder extends BaseRequestBuilder {
+public class CustomCSSRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new BannerLogoRequestBuilder and sets the default values.
+     * Instantiates a new CustomCSSRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public BannerLogoRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/branding/bannerLogo", pathParameters);
+    public CustomCSSRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/localizations/{organizationalBrandingLocalization%2Did}/customCSS", pathParameters);
     }
     /**
-     * Instantiates a new BannerLogoRequestBuilder and sets the default values.
+     * Instantiates a new CustomCSSRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public BannerLogoRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/branding/bannerLogo", rawUrl);
+    public CustomCSSRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/localizations/{organizationalBrandingLocalization%2Did}/customCSS", rawUrl);
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Get customCSS for organizationalBrandingLocalization from localizations
      * @return a CompletableFuture of InputStream
      */
     @javax.annotation.Nonnull
@@ -58,7 +58,7 @@ public class BannerLogoRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Get customCSS for organizationalBrandingLocalization from localizations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
@@ -77,7 +77,7 @@ public class BannerLogoRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Update customCSS for organizationalBrandingLocalization in localizations
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -96,7 +96,7 @@ public class BannerLogoRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Update customCSS for organizationalBrandingLocalization in localizations
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -117,7 +117,7 @@ public class BannerLogoRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Get customCSS for organizationalBrandingLocalization from localizations
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -125,7 +125,7 @@ public class BannerLogoRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Get customCSS for organizationalBrandingLocalization from localizations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -144,7 +144,7 @@ public class BannerLogoRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Update customCSS for organizationalBrandingLocalization in localizations
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class BannerLogoRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Update customCSS for organizationalBrandingLocalization in localizations
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

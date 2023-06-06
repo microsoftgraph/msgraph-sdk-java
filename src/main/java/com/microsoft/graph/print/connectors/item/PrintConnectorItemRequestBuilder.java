@@ -41,7 +41,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/connectors/{printConnector%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete (unregister) a **printConnector**.
+     * Delete (unregister) a printConnector.
      * @return a CompletableFuture of void
      * @see <a href="https://docs.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -60,7 +60,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete (unregister) a **printConnector**.
+     * Delete (unregister) a printConnector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      * @see <a href="https://docs.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete (unregister) a **printConnector**.
+     * Delete (unregister) a printConnector.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +169,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete (unregister) a **printConnector**.
+     * Delete (unregister) a printConnector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

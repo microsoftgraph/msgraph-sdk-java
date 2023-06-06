@@ -39,8 +39,9 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/undoSoftDelete", rawUrl);
     }
     /**
-     * Invoke action undoSoftDelete
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action undoSoftDelete
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action undoSoftDelete
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action undoSoftDelete
+     * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

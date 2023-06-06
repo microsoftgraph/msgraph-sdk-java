@@ -1,4 +1,4 @@
-package com.microsoft.graph.branding.backgroundimage;
+package com.microsoft.graph.organization.item.branding.headerlogo;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -16,32 +16,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the media for the organizationalBranding entity.
+ * Provides operations to manage the media for the organization entity.
  */
-public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
+public class HeaderLogoRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new BackgroundImageRequestBuilder and sets the default values.
+     * Instantiates a new HeaderLogoRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public BackgroundImageRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/branding/backgroundImage", pathParameters);
+    public HeaderLogoRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/headerLogo", pathParameters);
     }
     /**
-     * Instantiates a new BackgroundImageRequestBuilder and sets the default values.
+     * Instantiates a new HeaderLogoRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public BackgroundImageRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/branding/backgroundImage", rawUrl);
+    public HeaderLogoRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/headerLogo", rawUrl);
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get headerLogo for the navigation property branding from organization
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
@@ -58,9 +59,10 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get headerLogo for the navigation property branding from organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update headerLogo for the navigation property branding in organization
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -96,7 +98,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update headerLogo for the navigation property branding in organization
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -117,7 +119,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get headerLogo for the navigation property branding from organization
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -125,7 +127,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get headerLogo for the navigation property branding from organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -144,7 +146,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update headerLogo for the navigation property branding in organization
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -153,7 +155,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update headerLogo for the navigation property branding in organization
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

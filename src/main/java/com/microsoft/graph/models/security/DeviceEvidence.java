@@ -18,6 +18,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     private OffsetDateTime firstSeenDateTime;
     /** The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue. */
     private DeviceHealthStatus healthStatus;
+    /** The ipInterfaces property */
+    private java.util.List<String> ipInterfaces;
     /** Users that were logged on the machine during the time of the alert. */
     private java.util.List<LoggedOnUser> loggedOnUsers;
     /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
@@ -92,6 +94,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         deserializerMap.put("deviceDnsName", (n) -> { this.setDeviceDnsName(n.getStringValue()); });
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(DeviceHealthStatus.class)); });
+        deserializerMap.put("ipInterfaces", (n) -> { this.setIpInterfaces(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("loggedOnUsers", (n) -> { this.setLoggedOnUsers(n.getCollectionOfObjectValues(LoggedOnUser::createFromDiscriminatorValue)); });
         deserializerMap.put("mdeDeviceId", (n) -> { this.setMdeDeviceId(n.getStringValue()); });
         deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(OnboardingStatus.class)); });
@@ -119,6 +122,14 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public DeviceHealthStatus getHealthStatus() {
         return this.healthStatus;
+    }
+    /**
+     * Gets the ipInterfaces property value. The ipInterfaces property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getIpInterfaces() {
+        return this.ipInterfaces;
     }
     /**
      * Gets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.
@@ -214,6 +225,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("deviceDnsName", this.getDeviceDnsName());
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
+        writer.writeCollectionOfPrimitiveValues("ipInterfaces", this.getIpInterfaces());
         writer.writeCollectionOfObjectValues("loggedOnUsers", this.getLoggedOnUsers());
         writer.writeStringValue("mdeDeviceId", this.getMdeDeviceId());
         writer.writeEnumValue("onboardingStatus", this.getOnboardingStatus());
@@ -269,6 +281,15 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final DeviceHealthStatus value) {
         this.healthStatus = value;
+    }
+    /**
+     * Sets the ipInterfaces property value. The ipInterfaces property
+     * @param value Value to set for the ipInterfaces property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIpInterfaces(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.ipInterfaces = value;
     }
     /**
      * Sets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.

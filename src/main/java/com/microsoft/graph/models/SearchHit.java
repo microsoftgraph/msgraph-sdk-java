@@ -14,7 +14,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     private String contentSource;
     /** The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format. */
     private String hitId;
-    /** The isCollapsed property */
+    /** Indicates whether the current result is collapsed when the collapseProperties property is used. */
     private Boolean isCollapsed;
     /** The OdataType property */
     private String odataType;
@@ -86,7 +86,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         return this.hitId;
     }
     /**
-     * Gets the isCollapsed property value. The isCollapsed property
+     * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property is used.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         this.hitId = value;
     }
     /**
-     * Sets the isCollapsed property value. The isCollapsed property
+     * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property is used.
      * @param value Value to set for the isCollapsed property.
      * @return a void
      */

@@ -41,8 +41,9 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences/{authenticationContextClassReference%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property authenticationContextClassReferences for identity
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Delete navigation property authenticationContextClassReferences for identity
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @return a CompletableFuture of authenticationContextClassReference
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationContextClassReference> get() {
@@ -96,9 +99,10 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationContextClassReference
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationContextClassReference> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Update the navigation property authenticationContextClassReferences in identity
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param body The request body
      * @return a CompletableFuture of authenticationContextClassReference
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcontextclassreference-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationContextClassReference> patch(@javax.annotation.Nonnull final AuthenticationContextClassReference body) {
@@ -134,10 +139,11 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Update the navigation property authenticationContextClassReferences in identity
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationContextClassReference
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcontextclassreference-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationContextClassReference> patch(@javax.annotation.Nonnull final AuthenticationContextClassReference body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Delete navigation property authenticationContextClassReferences for identity
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property authenticationContextClassReferences for identity
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Update the navigation property authenticationContextClassReferences in identity
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property authenticationContextClassReferences in identity
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class AuthenticationContextClassReferenceItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

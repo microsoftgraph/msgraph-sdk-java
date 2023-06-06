@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserAccount implements AdditionalDataHolder, Parsable {
-    /** The user account's displayed name. */
+    /** The displayed name of the user account. */
     private String accountName;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The user object identifier in Azure AD. */
+    /** The user object identifier in Azure Active Directory (Azure AD). */
     private String azureAdUserId;
-    /** The displayName property */
+    /** The user display name in Azure AD. */
     private String displayName;
     /** The name of the Active Directory domain of which the user is a member. */
     private String domainName;
@@ -43,7 +43,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return new UserAccount();
     }
     /**
-     * Gets the accountName property value. The user account's displayed name.
+     * Gets the accountName property value. The displayed name of the user account.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the azureAdUserId property value. The user object identifier in Azure AD.
+     * Gets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         return this.azureAdUserId;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The user display name in Azure AD.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accountName property value. The user account's displayed name.
+     * Sets the accountName property value. The displayed name of the user account.
      * @param value Value to set for the accountName property.
      * @return a void
      */
@@ -158,7 +158,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the azureAdUserId property value. The user object identifier in Azure AD.
+     * Sets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
      * @param value Value to set for the azureAdUserId property.
      * @return a void
      */
@@ -167,7 +167,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
         this.azureAdUserId = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The user display name in Azure AD.
      * @param value Value to set for the displayName property.
      * @return a void
      */

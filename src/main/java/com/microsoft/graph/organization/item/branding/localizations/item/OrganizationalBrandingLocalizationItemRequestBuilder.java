@@ -4,7 +4,11 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.OrganizationalBrandingLocalization;
 import com.microsoft.graph.organization.item.branding.localizations.item.backgroundimage.BackgroundImageRequestBuilder;
 import com.microsoft.graph.organization.item.branding.localizations.item.bannerlogo.BannerLogoRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.customcss.CustomCSSRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.favicon.FaviconRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.headerlogo.HeaderLogoRequestBuilder;
 import com.microsoft.graph.organization.item.branding.localizations.item.squarelogo.SquareLogoRequestBuilder;
+import com.microsoft.graph.organization.item.branding.localizations.item.squarelogodark.SquareLogoDarkRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -35,8 +39,28 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
     }
     /** Provides operations to manage the media for the organization entity. */
     @javax.annotation.Nonnull
+    public CustomCSSRequestBuilder customCSS() {
+        return new CustomCSSRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the media for the organization entity. */
+    @javax.annotation.Nonnull
+    public FaviconRequestBuilder favicon() {
+        return new FaviconRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the media for the organization entity. */
+    @javax.annotation.Nonnull
+    public HeaderLogoRequestBuilder headerLogo() {
+        return new HeaderLogoRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the media for the organization entity. */
+    @javax.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
         return new SquareLogoRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to manage the media for the organization entity. */
+    @javax.annotation.Nonnull
+    public SquareLogoDarkRequestBuilder squareLogoDark() {
+        return new SquareLogoDarkRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new OrganizationalBrandingLocalizationItemRequestBuilder and sets the default values.

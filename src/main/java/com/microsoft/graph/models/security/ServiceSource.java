@@ -13,7 +13,8 @@ public enum ServiceSource implements ValuedEnum {
     AzureAdIdentityProtection("azureAdIdentityProtection"),
     MicrosoftAppGovernance("microsoftAppGovernance"),
     DataLossPrevention("dataLossPrevention"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    MicrosoftDefenderForCloud("microsoftDefenderForCloud");
     public final String value;
     ServiceSource(final String value) {
         this.value = value;
@@ -34,6 +35,7 @@ public enum ServiceSource implements ValuedEnum {
             case "microsoftAppGovernance": return MicrosoftAppGovernance;
             case "dataLossPrevention": return DataLossPrevention;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "microsoftDefenderForCloud": return MicrosoftDefenderForCloud;
             default: return null;
         }
     }

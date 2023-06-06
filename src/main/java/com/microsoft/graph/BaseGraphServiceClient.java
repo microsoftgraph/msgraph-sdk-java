@@ -9,7 +9,6 @@ import com.microsoft.graph.applicationtemplates.ApplicationTemplatesRequestBuild
 import com.microsoft.graph.auditlogs.AuditLogsRequestBuilder;
 import com.microsoft.graph.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
 import com.microsoft.graph.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.branding.BrandingRequestBuilder;
 import com.microsoft.graph.certificatebasedauthconfiguration.CertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.chats.ChatsRequestBuilder;
 import com.microsoft.graph.communications.CommunicationsRequestBuilder;
@@ -131,11 +130,6 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** Provides operations to manage the organizationalBranding singleton. */
-    @javax.annotation.Nonnull
-    public BrandingRequestBuilder branding() {
-        return new BrandingRequestBuilder(pathParameters, requestAdapter);
     }
     /** Provides operations to manage the collection of certificateBasedAuthConfiguration entities. */
     @javax.annotation.Nonnull

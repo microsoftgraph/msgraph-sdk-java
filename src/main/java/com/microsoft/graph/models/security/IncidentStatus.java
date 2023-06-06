@@ -8,7 +8,8 @@ public enum IncidentStatus implements ValuedEnum {
     Resolved("resolved"),
     InProgress("inProgress"),
     Redirected("redirected"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    AwaitingAction("awaitingAction");
     public final String value;
     IncidentStatus(final String value) {
         this.value = value;
@@ -24,6 +25,7 @@ public enum IncidentStatus implements ValuedEnum {
             case "inProgress": return InProgress;
             case "redirected": return Redirected;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "awaitingAction": return AwaitingAction;
             default: return null;
         }
     }

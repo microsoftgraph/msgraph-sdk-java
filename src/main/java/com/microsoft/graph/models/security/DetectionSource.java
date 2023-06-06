@@ -21,7 +21,8 @@ public enum DetectionSource implements ValuedEnum {
     MicrosoftDataLossPrevention("microsoftDataLossPrevention"),
     AppGovernancePolicy("appGovernancePolicy"),
     AppGovernanceDetection("appGovernanceDetection"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    MicrosoftDefenderForCloud("microsoftDefenderForCloud");
     public final String value;
     DetectionSource(final String value) {
         this.value = value;
@@ -50,6 +51,7 @@ public enum DetectionSource implements ValuedEnum {
             case "appGovernancePolicy": return AppGovernancePolicy;
             case "appGovernanceDetection": return AppGovernanceDetection;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "microsoftDefenderForCloud": return MicrosoftDefenderForCloud;
             default: return null;
         }
     }

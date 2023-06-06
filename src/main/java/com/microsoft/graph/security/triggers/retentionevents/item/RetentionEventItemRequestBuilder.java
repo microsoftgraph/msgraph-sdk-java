@@ -47,8 +47,9 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/triggers/retentionEvents/{retentionEvent%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property retentionEvents for security
+     * Delete a retentionEvent object.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property retentionEvents for security
+     * Delete a retentionEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get retentionEvents from security
+     * Read the properties and relationships of a retentionEvent object.
      * @return a CompletableFuture of retentionEvent
+     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEvent> get() {
@@ -102,9 +105,10 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get retentionEvents from security
+     * Read the properties and relationships of a retentionEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of retentionEvent
+     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEvent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,7 +165,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property retentionEvents for security
+     * Delete a retentionEvent object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +173,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property retentionEvents for security
+     * Delete a retentionEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +192,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get retentionEvents from security
+     * Read the properties and relationships of a retentionEvent object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get retentionEvents from security
+     * Read the properties and relationships of a retentionEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +258,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get retentionEvents from security
+     * Read the properties and relationships of a retentionEvent object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

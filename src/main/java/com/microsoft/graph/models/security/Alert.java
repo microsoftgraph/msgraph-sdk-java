@@ -25,7 +25,7 @@ public class Alert extends Entity implements Parsable {
     private OffsetDateTime createdDateTime;
     /** String value describing each alert. */
     private String description;
-    /** Detection technology or sensor that identified the notable component or activity. */
+    /** Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud. */
     private DetectionSource detectionSource;
     /** The ID of the detector that triggered the alert. */
     private String detectorId;
@@ -148,7 +148,7 @@ public class Alert extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity.
+     * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
      * @return a detectionSource
      */
     @javax.annotation.Nullable
@@ -455,7 +455,7 @@ public class Alert extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity.
+     * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
      * @param value Value to set for the detectionSource property.
      * @return a void
      */
