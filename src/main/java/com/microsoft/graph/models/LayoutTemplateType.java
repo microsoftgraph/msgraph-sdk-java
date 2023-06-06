@@ -3,40 +3,28 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.security.models;
+package com.microsoft.graph.models;
 
 
 /**
- * The Enum Incident Status.
+ * The Enum Layout Template Type.
 */
-public enum IncidentStatus
+public enum LayoutTemplateType
 {
     /**
-    * active
+    * default
     */
-    ACTIVE,
+    DEFAULT,
     /**
-    * resolved
+    * vertical Split
     */
-    RESOLVED,
-    /**
-    * in Progress
-    */
-    IN_PROGRESS,
-    /**
-    * redirected
-    */
-    REDIRECTED,
+    VERTICAL_SPLIT,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * awaiting Action
-    */
-    AWAITING_ACTION,
-    /**
-    * For IncidentStatus values that were not expected from the service
+    * For LayoutTemplateType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

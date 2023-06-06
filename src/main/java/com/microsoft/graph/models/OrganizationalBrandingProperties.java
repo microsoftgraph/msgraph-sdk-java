@@ -9,6 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.LoginPageLayoutConfiguration;
+import com.microsoft.graph.models.LoginPageTextVisibilitySettings;
 import com.microsoft.graph.models.Entity;
 
 
@@ -63,6 +65,141 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     public java.util.List<String> cdnList;
 
     /**
+     * The Custom Account Reset Credentials Url.
+     * 
+     */
+    @SerializedName(value = "customAccountResetCredentialsUrl", alternate = {"CustomAccountResetCredentialsUrl"})
+    @Expose
+	@Nullable
+    public String customAccountResetCredentialsUrl;
+
+    /**
+     * The Custom Cannot Access Your Account Text.
+     * 
+     */
+    @SerializedName(value = "customCannotAccessYourAccountText", alternate = {"CustomCannotAccessYourAccountText"})
+    @Expose
+	@Nullable
+    public String customCannotAccessYourAccountText;
+
+    /**
+     * The Custom Cannot Access Your Account Url.
+     * 
+     */
+    @SerializedName(value = "customCannotAccessYourAccountUrl", alternate = {"CustomCannotAccessYourAccountUrl"})
+    @Expose
+	@Nullable
+    public String customCannotAccessYourAccountUrl;
+
+    /**
+     * The Custom CSSRelative Url.
+     * 
+     */
+    @SerializedName(value = "customCSSRelativeUrl", alternate = {"CustomCSSRelativeUrl"})
+    @Expose
+	@Nullable
+    public String customCSSRelativeUrl;
+
+    /**
+     * The Custom Forgot My Password Text.
+     * 
+     */
+    @SerializedName(value = "customForgotMyPasswordText", alternate = {"CustomForgotMyPasswordText"})
+    @Expose
+	@Nullable
+    public String customForgotMyPasswordText;
+
+    /**
+     * The Custom Privacy And Cookies Text.
+     * 
+     */
+    @SerializedName(value = "customPrivacyAndCookiesText", alternate = {"CustomPrivacyAndCookiesText"})
+    @Expose
+	@Nullable
+    public String customPrivacyAndCookiesText;
+
+    /**
+     * The Custom Privacy And Cookies Url.
+     * 
+     */
+    @SerializedName(value = "customPrivacyAndCookiesUrl", alternate = {"CustomPrivacyAndCookiesUrl"})
+    @Expose
+	@Nullable
+    public String customPrivacyAndCookiesUrl;
+
+    /**
+     * The Custom Reset It Now Text.
+     * 
+     */
+    @SerializedName(value = "customResetItNowText", alternate = {"CustomResetItNowText"})
+    @Expose
+	@Nullable
+    public String customResetItNowText;
+
+    /**
+     * The Custom Terms Of Use Text.
+     * 
+     */
+    @SerializedName(value = "customTermsOfUseText", alternate = {"CustomTermsOfUseText"})
+    @Expose
+	@Nullable
+    public String customTermsOfUseText;
+
+    /**
+     * The Custom Terms Of Use Url.
+     * 
+     */
+    @SerializedName(value = "customTermsOfUseUrl", alternate = {"CustomTermsOfUseUrl"})
+    @Expose
+	@Nullable
+    public String customTermsOfUseUrl;
+
+    /**
+     * The Favicon Relative Url.
+     * 
+     */
+    @SerializedName(value = "faviconRelativeUrl", alternate = {"FaviconRelativeUrl"})
+    @Expose
+	@Nullable
+    public String faviconRelativeUrl;
+
+    /**
+     * The Header Background Color.
+     * 
+     */
+    @SerializedName(value = "headerBackgroundColor", alternate = {"HeaderBackgroundColor"})
+    @Expose
+	@Nullable
+    public String headerBackgroundColor;
+
+    /**
+     * The Header Logo Relative Url.
+     * 
+     */
+    @SerializedName(value = "headerLogoRelativeUrl", alternate = {"HeaderLogoRelativeUrl"})
+    @Expose
+	@Nullable
+    public String headerLogoRelativeUrl;
+
+    /**
+     * The Login Page Layout Configuration.
+     * 
+     */
+    @SerializedName(value = "loginPageLayoutConfiguration", alternate = {"LoginPageLayoutConfiguration"})
+    @Expose
+	@Nullable
+    public LoginPageLayoutConfiguration loginPageLayoutConfiguration;
+
+    /**
+     * The Login Page Text Visibility Settings.
+     * 
+     */
+    @SerializedName(value = "loginPageTextVisibilitySettings", alternate = {"LoginPageTextVisibilitySettings"})
+    @Expose
+	@Nullable
+    public LoginPageTextVisibilitySettings loginPageTextVisibilitySettings;
+
+    /**
      * The Sign In Page Text.
      * Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.
      */
@@ -70,6 +207,15 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     @Expose
 	@Nullable
     public String signInPageText;
+
+    /**
+     * The Square Logo Dark Relative Url.
+     * 
+     */
+    @SerializedName(value = "squareLogoDarkRelativeUrl", alternate = {"SquareLogoDarkRelativeUrl"})
+    @Expose
+	@Nullable
+    public String squareLogoDarkRelativeUrl;
 
     /**
      * The Square Logo Relative Url.

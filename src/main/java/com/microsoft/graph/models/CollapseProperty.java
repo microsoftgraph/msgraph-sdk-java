@@ -40,7 +40,7 @@ public class CollapseProperty implements IJsonBackedObject {
 
     /**
      * The Fields.
-     * 
+     * Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
      */
     @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
@@ -49,7 +49,7 @@ public class CollapseProperty implements IJsonBackedObject {
 
     /**
      * The Limit.
-     * 
+     * Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
      */
     @SerializedName(value = "limit", alternate = {"Limit"})
     @Expose

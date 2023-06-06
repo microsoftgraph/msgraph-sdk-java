@@ -157,7 +157,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Threats.
-     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
      */
     @SerializedName(value = "threats", alternate = {"Threats"})
     @Expose

@@ -1092,16 +1092,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the OrganizationalBranding
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder branding() {
-        return new com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder(getServiceRoot() + "/branding", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the Directory
      */
     @Nonnull

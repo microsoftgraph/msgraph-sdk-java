@@ -58,7 +58,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Is Collapsed.
-     * 
+     * Indicates whether the current result is collapsed when the collapseProperties property is used.
      */
     @SerializedName(value = "isCollapsed", alternate = {"IsCollapsed"})
     @Expose

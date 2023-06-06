@@ -52,6 +52,10 @@ public enum ServiceSource
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * microsoft Defender For Cloud
+    */
+    MICROSOFT_DEFENDER_FOR_CLOUD,
+    /**
     * For ServiceSource values that were not expected from the service
     */
     UNEXPECTED_VALUE
