@@ -40,7 +40,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Create Apps.
-     * Indicates whether the default user role can create applications.
+     * Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
      */
     @SerializedName(value = "allowedToCreateApps", alternate = {"AllowedToCreateApps"})
     @Expose
@@ -49,7 +49,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Create Security Groups.
-     * Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
+     * Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
      */
     @SerializedName(value = "allowedToCreateSecurityGroups", alternate = {"AllowedToCreateSecurityGroups"})
     @Expose
@@ -58,7 +58,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Create Tenants.
-     * Indicates whether the default user role can create tenants.
+     * Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal.  When this setting is false, users assigned the Tenant Creator role can still create tenants.
      */
     @SerializedName(value = "allowedToCreateTenants", alternate = {"AllowedToCreateTenants"})
     @Expose

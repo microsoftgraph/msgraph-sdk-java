@@ -84,6 +84,10 @@ public enum DetectionSource
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * microsoft Defender For Cloud
+    */
+    MICROSOFT_DEFENDER_FOR_CLOUD,
+    /**
     * For DetectionSource values that were not expected from the service
     */
     UNEXPECTED_VALUE

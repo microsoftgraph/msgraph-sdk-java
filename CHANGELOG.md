@@ -11,6 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.60.0] - 2023-06-09
+
+### Added 
+
+- LayoutTemplateType model. 
+- LoginPageLayoutConfiguration model. 
+- LoginPageTextVisibilitySettings model. 
+- OrganizationalBrandingProperties derived requests.
+- The following models have been added to the security namespace. 
+- AmazonResourceEvidence
+- AzureResourceEvidence
+- GoogleCloudLocationType
+- GoogleCloudResourceEvidence
+
 ## [5.59.0] - 2023-05-26
 
 ### Added 

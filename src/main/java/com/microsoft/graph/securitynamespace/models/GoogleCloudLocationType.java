@@ -7,36 +7,32 @@ package com.microsoft.graph.security.models;
 
 
 /**
- * The Enum Incident Status.
+ * The Enum Google Cloud Location Type.
 */
-public enum IncidentStatus
+public enum GoogleCloudLocationType
 {
     /**
-    * active
+    * unknown
     */
-    ACTIVE,
+    UNKNOWN,
     /**
-    * resolved
+    * regional
     */
-    RESOLVED,
+    REGIONAL,
     /**
-    * in Progress
+    * zonal
     */
-    IN_PROGRESS,
+    ZONAL,
     /**
-    * redirected
+    * global
     */
-    REDIRECTED,
+    GLOBAL,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * awaiting Action
-    */
-    AWAITING_ACTION,
-    /**
-    * For IncidentStatus values that were not expected from the service
+    * For GoogleCloudLocationType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

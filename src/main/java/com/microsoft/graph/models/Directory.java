@@ -42,7 +42,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Attribute Sets.
-     * 
+     * Group of related custom security attribute definitions.
      */
     @SerializedName(value = "attributeSets", alternate = {"AttributeSets"})
     @Expose
@@ -51,7 +51,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Custom Security Attribute Definitions.
-     * 
+     * Schema of a custom security attributes (key-value pairs).
      */
     @SerializedName(value = "customSecurityAttributeDefinitions", alternate = {"CustomSecurityAttributeDefinitions"})
     @Expose

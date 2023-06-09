@@ -87,7 +87,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Favorite.
-     * true if the user has flagged this person as a favorite.
+     * True if the user has flagged this person as a favorite.
      */
     @SerializedName(value = "isFavorite", alternate = {"IsFavorite"})
     @Expose

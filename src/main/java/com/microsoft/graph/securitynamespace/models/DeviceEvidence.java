@@ -78,6 +78,15 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
     public DeviceHealthStatus healthStatus;
 
     /**
+     * The Ip Interfaces.
+     * 
+     */
+    @SerializedName(value = "ipInterfaces", alternate = {"IpInterfaces"})
+    @Expose
+	@Nullable
+    public java.util.List<String> ipInterfaces;
+
+    /**
      * The Logged On Users.
      * Users that were logged on the machine during the time of the alert.
      */
