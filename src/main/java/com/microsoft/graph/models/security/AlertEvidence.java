@@ -11,17 +11,19 @@ import java.util.Objects;
 public class AlertEvidence implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The time the evidence was created and added to the alert. */
+    /** The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime createdDateTime;
+    /** The detailedRoles property */
+    private java.util.List<String> detailedRoles;
     /** The OdataType property */
     private String odataType;
     /** The remediationStatus property */
     private EvidenceRemediationStatus remediationStatus;
     /** Details about the remediation status. */
     private String remediationStatusDetails;
-    /** The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'. */
+    /** One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker. */
     private java.util.List<EvidenceRole> roles;
-    /** Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc. */
+    /** Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets. */
     private java.util.List<String> tags;
     /** The verdict property */
     private EvidenceVerdict verdict;
@@ -45,10 +47,13 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.security.amazonResourceEvidence": return new AmazonResourceEvidence();
                 case "#microsoft.graph.security.analyzedMessageEvidence": return new AnalyzedMessageEvidence();
+                case "#microsoft.graph.security.azureResourceEvidence": return new AzureResourceEvidence();
                 case "#microsoft.graph.security.cloudApplicationEvidence": return new CloudApplicationEvidence();
                 case "#microsoft.graph.security.deviceEvidence": return new DeviceEvidence();
                 case "#microsoft.graph.security.fileEvidence": return new FileEvidence();
+                case "#microsoft.graph.security.googleCloudResourceEvidence": return new GoogleCloudResourceEvidence();
                 case "#microsoft.graph.security.ipEvidence": return new IpEvidence();
                 case "#microsoft.graph.security.mailboxEvidence": return new MailboxEvidence();
                 case "#microsoft.graph.security.mailClusterEvidence": return new MailClusterEvidence();
@@ -72,7 +77,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the createdDateTime property value. The time the evidence was created and added to the alert.
+     * Gets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -80,13 +85,22 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this.createdDateTime;
     }
     /**
+     * Gets the detailedRoles property value. The detailedRoles property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getDetailedRoles() {
+        return this.detailedRoles;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("detailedRoles", (n) -> { this.setDetailedRoles(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("remediationStatus", (n) -> { this.setRemediationStatus(n.getEnumValue(EvidenceRemediationStatus.class)); });
         deserializerMap.put("remediationStatusDetails", (n) -> { this.setRemediationStatusDetails(n.getStringValue()); });
@@ -120,7 +134,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this.remediationStatusDetails;
     }
     /**
-     * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
+     * Gets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
      * @return a evidenceRole
      */
     @javax.annotation.Nullable
@@ -128,7 +142,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this.roles;
     }
     /**
-     * Gets the tags property value. Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
+     * Gets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -152,6 +166,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeCollectionOfPrimitiveValues("detailedRoles", this.getDetailedRoles());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("remediationStatus", this.getRemediationStatus());
         writer.writeStringValue("remediationStatusDetails", this.getRemediationStatusDetails());
@@ -170,13 +185,22 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the createdDateTime property value. The time the evidence was created and added to the alert.
+     * Sets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
+    }
+    /**
+     * Sets the detailedRoles property value. The detailedRoles property
+     * @param value Value to set for the detailedRoles property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDetailedRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+        this.detailedRoles = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -206,7 +230,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this.remediationStatusDetails = value;
     }
     /**
-     * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
+     * Sets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
      * @param value Value to set for the roles property.
      * @return a void
      */
@@ -215,7 +239,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this.roles = value;
     }
     /**
-     * Sets the tags property value. Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
+     * Sets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
      * @param value Value to set for the tags property.
      * @return a void
      */

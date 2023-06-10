@@ -19,7 +19,7 @@ public class Person extends Entity implements Parsable {
     private String givenName;
     /** The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only. */
     private String imAddress;
-    /** true if the user has flagged this person as a favorite. */
+    /** True if the user has flagged this person as a favorite. */
     private Boolean isFavorite;
     /** The person's job title. */
     private String jobTitle;
@@ -140,7 +140,7 @@ public class Person extends Entity implements Parsable {
         return this.imAddress;
     }
     /**
-     * Gets the isFavorite property value. true if the user has flagged this person as a favorite.
+     * Gets the isFavorite property value. True if the user has flagged this person as a favorite.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -327,7 +327,7 @@ public class Person extends Entity implements Parsable {
         this.imAddress = value;
     }
     /**
-     * Sets the isFavorite property value. true if the user has flagged this person as a favorite.
+     * Sets the isFavorite property value. True if the user has flagged this person as a favorite.
      * @param value Value to set for the isFavorite property.
      * @return a void
      */

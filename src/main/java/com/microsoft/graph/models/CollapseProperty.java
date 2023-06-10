@@ -10,9 +10,9 @@ import java.util.Objects;
 public class CollapseProperty implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> additionalData;
-    /** The fields property */
+    /** Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required. */
     private java.util.List<String> fields;
-    /** The limit property */
+    /** Defines a maximum limit count for this field. This numeric value must be a positive integer. Required. */
     private Integer limit;
     /** The OdataType property */
     private String odataType;
@@ -55,7 +55,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fields property value. The fields property
+     * Gets the fields property value. Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
         return this.fields;
     }
     /**
-     * Gets the limit property value. The limit property
+     * Gets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the fields property value. The fields property
+     * Sets the fields property value. Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
      * @param value Value to set for the fields property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class CollapseProperty implements AdditionalDataHolder, Parsable {
         this.fields = value;
     }
     /**
-     * Sets the limit property value. The limit property
+     * Sets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
      * @param value Value to set for the limit property.
      * @return a void
      */

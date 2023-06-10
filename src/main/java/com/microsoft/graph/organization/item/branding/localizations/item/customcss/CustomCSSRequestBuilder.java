@@ -1,4 +1,4 @@
-package com.microsoft.graph.branding.localizations.item.backgroundimage;
+package com.microsoft.graph.organization.item.branding.localizations.item.customcss;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -16,31 +16,31 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the media for the organizationalBranding entity.
+ * Provides operations to manage the media for the organization entity.
  */
-public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
+public class CustomCSSRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new BackgroundImageRequestBuilder and sets the default values.
+     * Instantiates a new CustomCSSRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public BackgroundImageRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/branding/localizations/{organizationalBrandingLocalization%2Did}/backgroundImage", pathParameters);
+    public CustomCSSRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}/customCSS", pathParameters);
     }
     /**
-     * Instantiates a new BackgroundImageRequestBuilder and sets the default values.
+     * Instantiates a new CustomCSSRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
     @javax.annotation.Nullable
-    public BackgroundImageRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/branding/localizations/{organizationalBrandingLocalization%2Did}/backgroundImage", rawUrl);
+    public CustomCSSRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}/customCSS", rawUrl);
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get customCSS for the navigation property localizations from organization
      * @return a CompletableFuture of InputStream
      * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get customCSS for the navigation property localizations from organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update customCSS for the navigation property localizations in organization
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -98,7 +98,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update customCSS for the navigation property localizations in organization
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -119,7 +119,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get customCSS for the navigation property localizations from organization
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Get customCSS for the navigation property localizations from organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update customCSS for the navigation property localizations in organization
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -155,7 +155,7 @@ public class BackgroundImageRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Update customCSS for the navigation property localizations in organization
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

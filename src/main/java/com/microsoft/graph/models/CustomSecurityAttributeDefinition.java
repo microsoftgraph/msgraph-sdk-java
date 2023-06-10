@@ -7,23 +7,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomSecurityAttributeDefinition extends Entity implements Parsable {
-    /** The allowedValues property */
+    /** Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues. */
     private java.util.List<AllowedValue> allowedValues;
-    /** The attributeSet property */
+    /** Name of the attribute set. Case insensitive. */
     private String attributeSet;
-    /** The description property */
+    /** Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later. */
     private String description;
-    /** The isCollection property */
+    /** Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true. */
     private Boolean isCollection;
-    /** The isSearchable property */
+    /** Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later. */
     private Boolean isSearchable;
-    /** The name property */
+    /** Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive. */
     private String name;
-    /** The status property */
+    /** Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later. */
     private String status;
-    /** The type property */
+    /** Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later. */
     private String type;
-    /** The usePreDefinedValuesOnly property */
+    /** Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true. */
     private Boolean usePreDefinedValuesOnly;
     /**
      * Instantiates a new customSecurityAttributeDefinition and sets the default values.
@@ -44,7 +44,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return new CustomSecurityAttributeDefinition();
     }
     /**
-     * Gets the allowedValues property value. The allowedValues property
+     * Gets the allowedValues property value. Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      * @return a allowedValue
      */
     @javax.annotation.Nullable
@@ -52,7 +52,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this.allowedValues;
     }
     /**
-     * Gets the attributeSet property value. The attributeSet property
+     * Gets the attributeSet property value. Name of the attribute set. Case insensitive.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this.attributeSet;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the isCollection property value. The isCollection property
+     * Gets the isCollection property value. Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this.isCollection;
     }
     /**
-     * Gets the isSearchable property value. The isSearchable property
+     * Gets the isSearchable property value. Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this.isSearchable;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this.name;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this.status;
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         return this.type;
     }
     /**
-     * Gets the usePreDefinedValuesOnly property value. The usePreDefinedValuesOnly property
+     * Gets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         writer.writeBooleanValue("usePreDefinedValuesOnly", this.getUsePreDefinedValuesOnly());
     }
     /**
-     * Sets the allowedValues property value. The allowedValues property
+     * Sets the allowedValues property value. Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      * @param value Value to set for the allowedValues property.
      * @return a void
      */
@@ -162,7 +162,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.allowedValues = value;
     }
     /**
-     * Sets the attributeSet property value. The attributeSet property
+     * Sets the attributeSet property value. Name of the attribute set. Case insensitive.
      * @param value Value to set for the attributeSet property.
      * @return a void
      */
@@ -171,7 +171,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.attributeSet = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -180,7 +180,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.description = value;
     }
     /**
-     * Sets the isCollection property value. The isCollection property
+     * Sets the isCollection property value. Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
      * @param value Value to set for the isCollection property.
      * @return a void
      */
@@ -189,7 +189,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.isCollection = value;
     }
     /**
-     * Sets the isSearchable property value. The isSearchable property
+     * Sets the isSearchable property value. Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
@@ -198,7 +198,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.isSearchable = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -207,7 +207,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.name = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -216,7 +216,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.status = value;
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
      * @param value Value to set for the type property.
      * @return a void
      */
@@ -225,7 +225,7 @@ public class CustomSecurityAttributeDefinition extends Entity implements Parsabl
         this.type = value;
     }
     /**
-     * Sets the usePreDefinedValuesOnly property value. The usePreDefinedValuesOnly property
+     * Sets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
      * @param value Value to set for the usePreDefinedValuesOnly property.
      * @return a void
      */

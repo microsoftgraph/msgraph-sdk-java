@@ -61,8 +61,9 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/directory/customSecurityAttributeDefinitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @return a CompletableFuture of CustomSecurityAttributeDefinitionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinitionCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CustomSecurityAttributeDefinitionCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         }
     }
     /**
-     * Create new navigation property to customSecurityAttributeDefinitions for directory
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> post(@javax.annotation.Nonnull final CustomSecurityAttributeDefinition body) {
@@ -117,10 +120,11 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         }
     }
     /**
-     * Create new navigation property to customSecurityAttributeDefinitions for directory
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customSecurityAttributeDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> post(@javax.annotation.Nonnull final CustomSecurityAttributeDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Create new navigation property to customSecurityAttributeDefinitions for directory
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to customSecurityAttributeDefinitions for directory
+     * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Get customSecurityAttributeDefinitions from directory
+     * Get a list of the customSecurityAttributeDefinition objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

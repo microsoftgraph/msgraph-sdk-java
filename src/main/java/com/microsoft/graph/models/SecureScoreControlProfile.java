@@ -36,7 +36,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
     private String remediationImpact;
     /** Service that owns the control (Exchange, Sharepoint, Azure AD). */
     private String service;
-    /** List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage, */
+    /** List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, */
     private java.util.List<String> threats;
     /** The tier property */
     private String tier;
@@ -205,7 +205,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.service;
     }
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
      * @return a string
      */
     @javax.annotation.Nullable
@@ -400,7 +400,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.service = value;
     }
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
      * @param value Value to set for the threats property.
      * @return a void
      */

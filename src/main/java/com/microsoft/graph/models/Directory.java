@@ -9,9 +9,9 @@ import java.util.Objects;
 public class Directory extends Entity implements Parsable {
     /** Conceptual container for user and group directory objects. */
     private java.util.List<AdministrativeUnit> administrativeUnits;
-    /** The attributeSets property */
+    /** Group of related custom security attribute definitions. */
     private java.util.List<AttributeSet> attributeSets;
-    /** The customSecurityAttributeDefinitions property */
+    /** Schema of a custom security attributes (key-value pairs). */
     private java.util.List<CustomSecurityAttributeDefinition> customSecurityAttributeDefinitions;
     /** Recently deleted items. Read-only. Nullable. */
     private java.util.List<DirectoryObject> deletedItems;
@@ -46,7 +46,7 @@ public class Directory extends Entity implements Parsable {
         return this.administrativeUnits;
     }
     /**
-     * Gets the attributeSets property value. The attributeSets property
+     * Gets the attributeSets property value. Group of related custom security attribute definitions.
      * @return a attributeSet
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class Directory extends Entity implements Parsable {
         return this.attributeSets;
     }
     /**
-     * Gets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @return a customSecurityAttributeDefinition
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class Directory extends Entity implements Parsable {
         this.administrativeUnits = value;
     }
     /**
-     * Sets the attributeSets property value. The attributeSets property
+     * Sets the attributeSets property value. Group of related custom security attribute definitions.
      * @param value Value to set for the attributeSets property.
      * @return a void
      */
@@ -135,7 +135,7 @@ public class Directory extends Entity implements Parsable {
         this.attributeSets = value;
     }
     /**
-     * Sets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * Sets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @param value Value to set for the customSecurityAttributeDefinitions property.
      * @return a void
      */

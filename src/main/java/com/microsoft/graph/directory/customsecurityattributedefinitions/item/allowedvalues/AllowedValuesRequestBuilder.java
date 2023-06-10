@@ -61,8 +61,9 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/customSecurityAttributeDefinitions/{customSecurityAttributeDefinition%2Did}/allowedValues{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get allowedValues from directory
+     * Get a list of the allowedValue objects and their properties.
      * @return a CompletableFuture of AllowedValueCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValueCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get allowedValues from directory
+     * Get a list of the allowedValue objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AllowedValueCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-list-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValueCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to allowedValues for directory
+     * Create a new allowedValue object.
      * @param body The request body
      * @return a CompletableFuture of allowedValue
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-post-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValue> post(@javax.annotation.Nonnull final AllowedValue body) {
@@ -117,10 +120,11 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to allowedValues for directory
+     * Create a new allowedValue object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of allowedValue
+     * @see <a href="https://docs.microsoft.com/graph/api/customsecurityattributedefinition-post-allowedvalues?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValue> post(@javax.annotation.Nonnull final AllowedValue body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get allowedValues from directory
+     * Get a list of the allowedValue objects and their properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get allowedValues from directory
+     * Get a list of the allowedValue objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to allowedValues for directory
+     * Create a new allowedValue object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to allowedValues for directory
+     * Create a new allowedValue object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class AllowedValuesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get allowedValues from directory
+     * Get a list of the allowedValue objects and their properties.
      */
     public class GetQueryParameters {
         /** Include count of items */

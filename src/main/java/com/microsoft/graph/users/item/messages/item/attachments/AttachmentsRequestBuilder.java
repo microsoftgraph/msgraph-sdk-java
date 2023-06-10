@@ -54,7 +54,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public AttachmentsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.
@@ -64,7 +64,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public AttachmentsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * Retrieve a list of attachment objects.
@@ -232,14 +232,6 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
-        @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
-        public Integer skip;
-        /** Show only the first n items */
-        @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
-        public Integer top;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

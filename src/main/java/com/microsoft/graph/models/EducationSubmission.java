@@ -24,7 +24,7 @@ public class EducationSubmission extends Entity implements Parsable {
     private IdentitySet returnedBy;
     /** Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime returnedDateTime;
-    /** Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned. */
+    /** Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned. */
     private EducationSubmissionStatus status;
     /** User who moved the resource into the submitted state. */
     private IdentitySet submittedBy;
@@ -142,7 +142,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.returnedDateTime;
     }
     /**
-     * Gets the status property value. Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
      * @return a educationSubmissionStatus
      */
     @javax.annotation.Nullable
@@ -276,7 +276,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this.returnedDateTime = value;
     }
     /**
-     * Sets the status property value. Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
      * @param value Value to set for the status property.
      * @return a void
      */

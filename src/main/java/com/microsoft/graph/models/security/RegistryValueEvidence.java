@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RegistryValueEvidence extends AlertEvidence implements Parsable {
+    /** The mdeDeviceId property */
+    private String mdeDeviceId;
     /** Registry hive of the key that the recorded action was applied to. */
     private String registryHive;
     /** Registry key that the recorded action was applied to. */
@@ -42,12 +44,21 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mdeDeviceId", (n) -> { this.setMdeDeviceId(n.getStringValue()); });
         deserializerMap.put("registryHive", (n) -> { this.setRegistryHive(n.getStringValue()); });
         deserializerMap.put("registryKey", (n) -> { this.setRegistryKey(n.getStringValue()); });
         deserializerMap.put("registryValue", (n) -> { this.setRegistryValue(n.getStringValue()); });
         deserializerMap.put("registryValueName", (n) -> { this.setRegistryValueName(n.getStringValue()); });
         deserializerMap.put("registryValueType", (n) -> { this.setRegistryValueType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mdeDeviceId property value. The mdeDeviceId property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getMdeDeviceId() {
+        return this.mdeDeviceId;
     }
     /**
      * Gets the registryHive property value. Registry hive of the key that the recorded action was applied to.
@@ -98,11 +109,21 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("mdeDeviceId", this.getMdeDeviceId());
         writer.writeStringValue("registryHive", this.getRegistryHive());
         writer.writeStringValue("registryKey", this.getRegistryKey());
         writer.writeStringValue("registryValue", this.getRegistryValue());
         writer.writeStringValue("registryValueName", this.getRegistryValueName());
         writer.writeStringValue("registryValueType", this.getRegistryValueType());
+    }
+    /**
+     * Sets the mdeDeviceId property value. The mdeDeviceId property
+     * @param value Value to set for the mdeDeviceId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMdeDeviceId(@javax.annotation.Nullable final String value) {
+        this.mdeDeviceId = value;
     }
     /**
      * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AllowedValue extends Entity implements Parsable {
-    /** The isActive property */
+    /** Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects. */
     private Boolean isActive;
     /**
      * Instantiates a new allowedValue and sets the default values.
@@ -38,7 +38,7 @@ public class AllowedValue extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isActive property value. The isActive property
+     * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class AllowedValue extends Entity implements Parsable {
         writer.writeBooleanValue("isActive", this.getIsActive());
     }
     /**
-     * Sets the isActive property value. The isActive property
+     * Sets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
      * @param value Value to set for the isActive property.
      * @return a void
      */
