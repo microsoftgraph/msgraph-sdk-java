@@ -37,6 +37,15 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Is Course Activity Sync Enabled.
+     * Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+     */
+    @SerializedName(value = "isCourseActivitySyncEnabled", alternate = {"IsCourseActivitySyncEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isCourseActivitySyncEnabled;
+
+    /**
      * The Login Web Url.
      * Authentication URL to access the courses for the provider. Optional.
      */
