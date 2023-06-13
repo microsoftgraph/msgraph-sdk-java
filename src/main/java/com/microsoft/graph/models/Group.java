@@ -139,7 +139,7 @@ public class Group extends DirectoryObject implements Parsable {
     /** Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable. */
     private String visibility;
     /**
-     * Instantiates a new group and sets the default values.
+     * Instantiates a new Group and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -150,7 +150,7 @@ public class Group extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a group
+     * @return a Group
      */
     @javax.annotation.Nonnull
     public static Group createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

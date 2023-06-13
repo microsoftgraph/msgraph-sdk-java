@@ -142,7 +142,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> memberOf;
     /** The messages in a mailbox or folder. Read-only. Nullable. */
     private java.util.List<Message> messages;
-    /** The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
+    /** The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search. */
     private String mobilePhone;
     /** The URL for the user's personal site. Returned only on $select. */
     private String mySite;
@@ -933,7 +933,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.messages;
     }
     /**
-     * Gets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Gets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -2090,7 +2090,7 @@ public class User extends DirectoryObject implements Parsable {
         this.messages = value;
     }
     /**
-     * Sets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * Sets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */

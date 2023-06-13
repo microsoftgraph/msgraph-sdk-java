@@ -180,7 +180,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get entity from teams by key
+     * Retrieve the properties and relationships of the specified team.
      * @return a CompletableFuture of team
      * @see <a href="https://docs.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -199,7 +199,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get entity from teams by key
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
      * @see <a href="https://docs.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
@@ -288,7 +288,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get entity from teams by key
+     * Retrieve the properties and relationships of the specified team.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -296,7 +296,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get entity from teams by key
+     * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -354,7 +354,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get entity from teams by key
+     * Retrieve the properties and relationships of the specified team.
      */
     public class GetQueryParameters {
         /** Expand related entities */

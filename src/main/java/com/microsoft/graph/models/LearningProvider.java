@@ -9,6 +9,8 @@ import java.util.Objects;
 public class LearningProvider extends Entity implements Parsable {
     /** The display name that appears in Viva Learning. Required. */
     private String displayName;
+    /** Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider. */
+    private Boolean isCourseActivitySyncEnabled;
     /** Learning catalog items for the provider. */
     private java.util.List<LearningContent> learningContents;
     /** Authentication URL to access the courses for the provider. Optional. */
@@ -22,7 +24,7 @@ public class LearningProvider extends Entity implements Parsable {
     /** The square logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required. */
     private String squareLogoWebUrlForLightTheme;
     /**
-     * Instantiates a new learningProvider and sets the default values.
+     * Instantiates a new LearningProvider and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -32,7 +34,7 @@ public class LearningProvider extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a learningProvider
+     * @return a LearningProvider
      */
     @javax.annotation.Nonnull
     public static LearningProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,6 +57,7 @@ public class LearningProvider extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isCourseActivitySyncEnabled", (n) -> { this.setIsCourseActivitySyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("learningContents", (n) -> { this.setLearningContents(n.getCollectionOfObjectValues(LearningContent::createFromDiscriminatorValue)); });
         deserializerMap.put("loginWebUrl", (n) -> { this.setLoginWebUrl(n.getStringValue()); });
         deserializerMap.put("longLogoWebUrlForDarkTheme", (n) -> { this.setLongLogoWebUrlForDarkTheme(n.getStringValue()); });
@@ -62,6 +65,14 @@ public class LearningProvider extends Entity implements Parsable {
         deserializerMap.put("squareLogoWebUrlForDarkTheme", (n) -> { this.setSquareLogoWebUrlForDarkTheme(n.getStringValue()); });
         deserializerMap.put("squareLogoWebUrlForLightTheme", (n) -> { this.setSquareLogoWebUrlForLightTheme(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isCourseActivitySyncEnabled property value. Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsCourseActivitySyncEnabled() {
+        return this.isCourseActivitySyncEnabled;
     }
     /**
      * Gets the learningContents property value. Learning catalog items for the provider.
@@ -121,6 +132,7 @@ public class LearningProvider extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("isCourseActivitySyncEnabled", this.getIsCourseActivitySyncEnabled());
         writer.writeCollectionOfObjectValues("learningContents", this.getLearningContents());
         writer.writeStringValue("loginWebUrl", this.getLoginWebUrl());
         writer.writeStringValue("longLogoWebUrlForDarkTheme", this.getLongLogoWebUrlForDarkTheme());
@@ -136,6 +148,15 @@ public class LearningProvider extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this.displayName = value;
+    }
+    /**
+     * Sets the isCourseActivitySyncEnabled property value. Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+     * @param value Value to set for the isCourseActivitySyncEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsCourseActivitySyncEnabled(@javax.annotation.Nullable final Boolean value) {
+        this.isCourseActivitySyncEnabled = value;
     }
     /**
      * Sets the learningContents property value. Learning catalog items for the provider.
