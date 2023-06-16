@@ -25,13 +25,13 @@ apply plugin: "com.github.ben-manes.versions"
 android {
     namespace 'com.microsoft.graph'
 
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     defaultConfig {
         versionCode 1
         versionName "1.0"
         minSdkVersion 26
-        targetSdkVersion 33
+        targetSdkVersion 34
     }
 
     buildTypes {
