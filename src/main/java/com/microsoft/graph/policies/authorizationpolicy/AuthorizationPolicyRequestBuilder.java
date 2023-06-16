@@ -78,8 +78,9 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policy that controls Azure AD authorization settings.
+     * Retrieve the properties of an authorizationPolicy object.
      * @return a CompletableFuture of authorizationPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> get() {
@@ -96,9 +97,10 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The policy that controls Azure AD authorization settings.
+     * Retrieve the properties of an authorizationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authorizationPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -184,7 +186,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The policy that controls Azure AD authorization settings.
+     * Retrieve the properties of an authorizationPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -192,7 +194,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The policy that controls Azure AD authorization settings.
+     * Retrieve the properties of an authorizationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -250,7 +252,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The policy that controls Azure AD authorization settings.
+     * Retrieve the properties of an authorizationPolicy object.
      */
     public class GetQueryParameters {
         /** Expand related entities */

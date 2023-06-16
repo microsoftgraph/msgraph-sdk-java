@@ -12,6 +12,8 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     private Map<String, Object> additionalData;
     /** The number of units that are enabled for the active subscription of the service SKU. */
     private Integer enabled;
+    /** The lockedOut property */
+    private Integer lockedOut;
     /** The OdataType property */
     private String odataType;
     /** The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted. */
@@ -58,12 +60,21 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getIntegerValue()); });
+        deserializerMap.put("lockedOut", (n) -> { this.setLockedOut(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("suspended", (n) -> { this.setSuspended(n.getIntegerValue()); });
         deserializerMap.put("warning", (n) -> { this.setWarning(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lockedOut property value. The lockedOut property
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getLockedOut() {
+        return this.lockedOut;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -98,6 +109,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("enabled", this.getEnabled());
+        writer.writeIntegerValue("lockedOut", this.getLockedOut());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("suspended", this.getSuspended());
         writer.writeIntegerValue("warning", this.getWarning());
@@ -120,6 +132,15 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Integer value) {
         this.enabled = value;
+    }
+    /**
+     * Sets the lockedOut property value. The lockedOut property
+     * @param value Value to set for the lockedOut property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLockedOut(@javax.annotation.Nullable final Integer value) {
+        this.lockedOut = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property

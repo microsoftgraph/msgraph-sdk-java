@@ -63,7 +63,7 @@ public class Organization extends DirectoryObject implements Parsable {
     /** The collection of domains associated with this tenant. Not nullable. */
     private java.util.List<VerifiedDomain> verifiedDomains;
     /**
-     * Instantiates a new organization and sets the default values.
+     * Instantiates a new Organization and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class Organization extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a organization
+     * @return a Organization
      */
     @javax.annotation.Nonnull
     public static Organization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -47,8 +47,9 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/methods/{authenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @return a CompletableFuture of authenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethod> get() {
@@ -65,9 +66,10 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationMethod
+     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +126,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -132,7 +134,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,7 +187,7 @@ public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents all authentication methods registered to a user.
+     * Retrieve the properties and relationships of an authenticationMethod object.
      */
     public class GetQueryParameters {
         /** Expand related entities */
