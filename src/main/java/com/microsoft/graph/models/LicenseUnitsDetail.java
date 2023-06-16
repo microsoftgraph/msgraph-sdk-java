@@ -47,6 +47,15 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
     public Integer enabled;
 
     /**
+     * The Locked Out.
+     * 
+     */
+    @SerializedName(value = "lockedOut", alternate = {"LockedOut"})
+    @Expose
+	@Nullable
+    public Integer lockedOut;
+
+    /**
      * The Suspended.
      * The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
      */

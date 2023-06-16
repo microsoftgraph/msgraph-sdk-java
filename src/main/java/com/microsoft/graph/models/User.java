@@ -369,7 +369,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mobile Phone.
-     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
      */
     @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose
