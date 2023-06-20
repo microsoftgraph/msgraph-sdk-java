@@ -38,7 +38,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessContainer property value. The accessContainer property
-     * @return a delegatedAdminAccessContainer
+     * @return a DelegatedAdminAccessContainer
      */
     @javax.annotation.Nullable
     public DelegatedAdminAccessContainer getAccessContainer() {
@@ -46,7 +46,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a delegatedAdminAccessDetails
+     * @return a DelegatedAdminAccessDetails
      */
     @javax.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {

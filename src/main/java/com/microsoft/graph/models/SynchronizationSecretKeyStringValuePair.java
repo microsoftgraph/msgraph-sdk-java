@@ -56,7 +56,7 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
     }
     /**
      * Gets the key property value. The key property
-     * @return a synchronizationSecret
+     * @return a SynchronizationSecret
      */
     @javax.annotation.Nullable
     public SynchronizationSecret getKey() {

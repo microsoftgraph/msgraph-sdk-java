@@ -62,7 +62,7 @@ public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDa
     }
     /**
      * Gets the sourceFile property value. The sourceFile property
-     * @return a itemReference
+     * @return a ItemReference
      */
     @javax.annotation.Nullable
     public ItemReference getSourceFile() {

@@ -52,7 +52,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the installIntent property value. Possible values for the install intent chosen by the admin.
-     * @return a installIntent
+     * @return a InstallIntent
      */
     @javax.annotation.Nullable
     public InstallIntent getInstallIntent() {

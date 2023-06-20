@@ -51,7 +51,7 @@ public class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the role property value. The role property
-     * @return a screenSharingRole
+     * @return a ScreenSharingRole
      */
     @javax.annotation.Nullable
     public ScreenSharingRole getRole() {

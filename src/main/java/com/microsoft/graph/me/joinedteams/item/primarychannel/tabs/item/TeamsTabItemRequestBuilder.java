@@ -47,8 +47,9 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/joinedTeams/{team%2Did}/primaryChannel/tabs/{teamsTab%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property tabs for me
+     * Removes (unpins) a tab from the specified channel within a team. 
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +66,10 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tabs for me
+     * Removes (unpins) a tab from the specified channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +86,9 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
      * @return a CompletableFuture of teamsTab
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> get() {
@@ -102,9 +105,10 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTab
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tabs in me
+     * Update the properties of the specified tab.This can be used to configure the content of the tab.
      * @param body The request body
      * @return a CompletableFuture of teamsTab
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> patch(@javax.annotation.Nonnull final TeamsTab body) {
@@ -140,10 +145,11 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property tabs in me
+     * Update the properties of the specified tab.This can be used to configure the content of the tab.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTab
+     * @see <a href="https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> patch(@javax.annotation.Nonnull final TeamsTab body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property tabs for me
+     * Removes (unpins) a tab from the specified channel within a team. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +175,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tabs for me
+     * Removes (unpins) a tab from the specified channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +194,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property tabs in me
+     * Update the properties of the specified tab.This can be used to configure the content of the tab.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property tabs in me
+     * Update the properties of the specified tab.This can be used to configure the content of the tab.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +260,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
      */
     public class GetQueryParameters {
         /** Expand related entities */

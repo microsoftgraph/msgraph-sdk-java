@@ -56,7 +56,7 @@ public class MediaContentRatingNewZealand implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the movieRating property value. Movies rating labels in New Zealand
-     * @return a ratingNewZealandMoviesType
+     * @return a RatingNewZealandMoviesType
      */
     @javax.annotation.Nullable
     public RatingNewZealandMoviesType getMovieRating() {
@@ -72,7 +72,7 @@ public class MediaContentRatingNewZealand implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the tvRating property value. TV content rating labels in New Zealand
-     * @return a ratingNewZealandTelevisionType
+     * @return a RatingNewZealandTelevisionType
      */
     @javax.annotation.Nullable
     public RatingNewZealandTelevisionType getTvRating() {

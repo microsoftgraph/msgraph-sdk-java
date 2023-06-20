@@ -29,7 +29,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
     /** The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional. */
     private OffsetDateTime startDateTime;
     /**
-     * Instantiates a new passwordCredential and sets the default values.
+     * Instantiates a new PasswordCredential and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +39,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordCredential
+     * @return a PasswordCredential
      */
     @javax.annotation.Nonnull
     public static PasswordCredential createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

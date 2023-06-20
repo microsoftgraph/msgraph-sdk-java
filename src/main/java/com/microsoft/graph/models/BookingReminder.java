@@ -87,7 +87,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a bookingReminderRecipients
+     * @return a BookingReminderRecipients
      */
     @javax.annotation.Nullable
     public BookingReminderRecipients getRecipients() {

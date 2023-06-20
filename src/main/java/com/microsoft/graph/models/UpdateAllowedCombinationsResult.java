@@ -64,7 +64,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the currentCombinations property value. The list of current authentication method combinations allowed by the authentication strength.
-     * @return a authenticationMethodModes
+     * @return a AuthenticationMethodModes
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getCurrentCombinations() {
@@ -94,7 +94,7 @@ public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the previousCombinations property value. The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
-     * @return a authenticationMethodModes
+     * @return a AuthenticationMethodModes
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getPreviousCombinations() {

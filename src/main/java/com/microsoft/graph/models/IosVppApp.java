@@ -124,7 +124,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
-     * @return a vppTokenAccountType
+     * @return a VppTokenAccountType
      */
     @javax.annotation.Nullable
     public VppTokenAccountType getVppTokenAccountType() {

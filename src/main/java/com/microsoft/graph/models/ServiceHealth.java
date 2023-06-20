@@ -61,7 +61,7 @@ public class ServiceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a serviceHealthStatus
+     * @return a ServiceHealthStatus
      */
     @javax.annotation.Nullable
     public ServiceHealthStatus getStatus() {

@@ -19,7 +19,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     /** The OdataType property */
     private String odataType;
     /**
-     * Instantiates a new driveRecipient and sets the default values.
+     * Instantiates a new DriveRecipient and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +29,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driveRecipient
+     * @return a DriveRecipient
      */
     @javax.annotation.Nonnull
     public static DriveRecipient createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

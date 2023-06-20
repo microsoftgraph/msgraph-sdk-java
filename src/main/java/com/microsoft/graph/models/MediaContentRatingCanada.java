@@ -56,7 +56,7 @@ public class MediaContentRatingCanada implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Canada
-     * @return a ratingCanadaMoviesType
+     * @return a RatingCanadaMoviesType
      */
     @javax.annotation.Nullable
     public RatingCanadaMoviesType getMovieRating() {
@@ -72,7 +72,7 @@ public class MediaContentRatingCanada implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Canada
-     * @return a ratingCanadaTelevisionType
+     * @return a RatingCanadaTelevisionType
      */
     @javax.annotation.Nullable
     public RatingCanadaTelevisionType getTvRating() {

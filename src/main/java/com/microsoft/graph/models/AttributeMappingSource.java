@@ -94,7 +94,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a attributeMappingSourceType
+     * @return a AttributeMappingSourceType
      */
     @javax.annotation.Nullable
     public AttributeMappingSourceType getType() {

@@ -19,7 +19,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     /** The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup */
     private String value;
     /**
-     * Instantiates a new acl and sets the default values.
+     * Instantiates a new Acl and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +29,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a acl
+     * @return a Acl
      */
     @javax.annotation.Nonnull
     public static Acl createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessType property value. The accessType property
-     * @return a accessType
+     * @return a AccessType
      */
     @javax.annotation.Nullable
     public AccessType getAccessType() {
@@ -75,7 +75,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a aclType
+     * @return a AclType
      */
     @javax.annotation.Nullable
     public AclType getType() {

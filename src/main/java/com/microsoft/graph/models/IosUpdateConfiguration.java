@@ -66,7 +66,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     * @return a dayOfWeek
+     * @return a DayOfWeek
      */
     @javax.annotation.Nullable
     public java.util.List<DayOfWeek> getScheduledInstallDays() {

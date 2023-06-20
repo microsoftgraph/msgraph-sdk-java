@@ -92,7 +92,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the customers property value. A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
-     * @return a bookingCustomerInformationBase
+     * @return a BookingCustomerInformationBase
      */
     @javax.annotation.Nullable
     public java.util.List<BookingCustomerInformationBase> getCustomers() {
@@ -116,7 +116,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -221,7 +221,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the priceType property value. Represents the type of pricing of a booking service.
-     * @return a bookingPriceType
+     * @return a BookingPriceType
      */
     @javax.annotation.Nullable
     public BookingPriceType getPriceType() {
@@ -293,7 +293,7 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {

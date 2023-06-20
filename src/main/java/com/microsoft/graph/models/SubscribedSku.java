@@ -29,7 +29,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /** The subscriptionIds property */
     private java.util.List<String> subscriptionIds;
     /**
-     * Instantiates a new SubscribedSku and sets the default values.
+     * Instantiates a new subscribedSku and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +39,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubscribedSku
+     * @return a subscribedSku
      */
     @javax.annotation.Nonnull
     public static SubscribedSku createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -115,7 +115,7 @@ public class SubscribedSku extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable
-     * @return a servicePlanInfo
+     * @return a ServicePlanInfo
      */
     @javax.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServicePlans() {

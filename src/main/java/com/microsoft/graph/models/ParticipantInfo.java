@@ -25,7 +25,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /** The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only. */
     private String region;
     /**
-     * Instantiates a new participantInfo and sets the default values.
+     * Instantiates a new ParticipantInfo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a participantInfo
+     * @return a ParticipantInfo
      */
     @javax.annotation.Nonnull
     public static ParticipantInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -84,7 +84,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @javax.annotation.Nullable
     public IdentitySet getIdentity() {

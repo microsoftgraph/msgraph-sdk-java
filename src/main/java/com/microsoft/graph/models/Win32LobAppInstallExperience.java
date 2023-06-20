@@ -47,7 +47,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceRestartBehavior property value. Indicates the type of restart action.
-     * @return a win32LobAppRestartBehavior
+     * @return a Win32LobAppRestartBehavior
      */
     @javax.annotation.Nullable
     public Win32LobAppRestartBehavior getDeviceRestartBehavior() {
@@ -75,7 +75,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @javax.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {

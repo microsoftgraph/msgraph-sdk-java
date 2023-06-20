@@ -46,7 +46,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
-     * @return a recipient
+     * @return a Recipient
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
@@ -120,7 +120,7 @@ public class ConversationThread extends Entity implements Parsable {
     }
     /**
      * Gets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
-     * @return a recipient
+     * @return a Recipient
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {

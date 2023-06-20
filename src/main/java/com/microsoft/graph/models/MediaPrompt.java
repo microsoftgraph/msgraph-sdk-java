@@ -40,7 +40,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     }
     /**
      * Gets the mediaInfo property value. The mediaInfo property
-     * @return a mediaInfo
+     * @return a MediaInfo
      */
     @javax.annotation.Nullable
     public MediaInfo getMediaInfo() {

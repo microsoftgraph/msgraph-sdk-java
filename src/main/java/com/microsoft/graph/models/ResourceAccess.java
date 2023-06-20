@@ -18,7 +18,7 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
     /** Specifies whether the id property references a delegated permission or an app role (application permission). The possible values are: Scope (for delegated permissions) or Role (for app roles). */
     private String type;
     /**
-     * Instantiates a new resourceAccess and sets the default values.
+     * Instantiates a new ResourceAccess and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -28,7 +28,7 @@ public class ResourceAccess implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceAccess
+     * @return a ResourceAccess
      */
     @javax.annotation.Nonnull
     public static ResourceAccess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

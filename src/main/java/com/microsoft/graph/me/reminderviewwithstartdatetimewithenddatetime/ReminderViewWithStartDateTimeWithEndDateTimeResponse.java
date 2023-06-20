@@ -41,7 +41,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a reminder
+     * @return a Reminder
      */
     @javax.annotation.Nullable
     public java.util.List<Reminder> getValue() {

@@ -37,7 +37,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
-     * @return a keyValuePair
+     * @return a KeyValuePair
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {

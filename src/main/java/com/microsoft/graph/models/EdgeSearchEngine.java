@@ -30,7 +30,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     }
     /**
      * Gets the edgeSearchEngineType property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
-     * @return a edgeSearchEngineType
+     * @return a EdgeSearchEngineType
      */
     @javax.annotation.Nullable
     public EdgeSearchEngineType getEdgeSearchEngineType() {

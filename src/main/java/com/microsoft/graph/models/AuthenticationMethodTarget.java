@@ -58,7 +58,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     }
     /**
      * Gets the targetType property value. The targetType property
-     * @return a authenticationMethodTargetType
+     * @return a AuthenticationMethodTargetType
      */
     @javax.annotation.Nullable
     public AuthenticationMethodTargetType getTargetType() {

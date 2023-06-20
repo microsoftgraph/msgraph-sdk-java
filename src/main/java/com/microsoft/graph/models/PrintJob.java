@@ -46,7 +46,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. The configuration property
-     * @return a printJobConfiguration
+     * @return a PrintJobConfiguration
      */
     @javax.annotation.Nullable
     public PrintJobConfiguration getConfiguration() {
@@ -120,7 +120,7 @@ public class PrintJob extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a printJobStatus
+     * @return a PrintJobStatus
      */
     @javax.annotation.Nullable
     public PrintJobStatus getStatus() {

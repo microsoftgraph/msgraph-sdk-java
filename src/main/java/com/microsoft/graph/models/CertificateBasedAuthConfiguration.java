@@ -29,7 +29,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
     }
     /**
      * Gets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
-     * @return a certificateAuthority
+     * @return a CertificateAuthority
      */
     @javax.annotation.Nullable
     public java.util.List<CertificateAuthority> getCertificateAuthorities() {

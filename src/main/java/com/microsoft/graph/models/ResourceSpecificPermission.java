@@ -24,7 +24,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
     /** The value of the permission. */
     private String value;
     /**
-     * Instantiates a new resourceSpecificPermission and sets the default values.
+     * Instantiates a new ResourceSpecificPermission and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -34,7 +34,7 @@ public class ResourceSpecificPermission implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceSpecificPermission
+     * @return a ResourceSpecificPermission
      */
     @javax.annotation.Nonnull
     public static ResourceSpecificPermission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

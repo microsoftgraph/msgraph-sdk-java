@@ -32,7 +32,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the channel property value. The enum to specify the channels for Microsoft Edge apps.
-     * @return a microsoftEdgeChannel
+     * @return a MicrosoftEdgeChannel
      */
     @javax.annotation.Nullable
     public MicrosoftEdgeChannel getChannel() {

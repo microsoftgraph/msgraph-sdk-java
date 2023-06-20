@@ -64,7 +64,7 @@ public class ExternalItemContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a externalItemContentType
+     * @return a ExternalItemContentType
      */
     @javax.annotation.Nullable
     public ExternalItemContentType getType() {

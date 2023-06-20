@@ -23,7 +23,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     /** The OdataType property */
     private String odataType;
     /**
-     * Instantiates a new visualInfo and sets the default values.
+     * Instantiates a new VisualInfo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -33,7 +33,7 @@ public class VisualInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a visualInfo
+     * @return a VisualInfo
      */
     @javax.annotation.Nonnull
     public static VisualInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

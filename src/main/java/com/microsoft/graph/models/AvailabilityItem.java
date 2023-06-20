@@ -21,7 +21,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     /** The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue. */
     private BookingsAvailabilityStatus status;
     /**
-     * Instantiates a new availabilityItem and sets the default values.
+     * Instantiates a new AvailabilityItem and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a availabilityItem
+     * @return a AvailabilityItem
      */
     @javax.annotation.Nonnull
     public static AvailabilityItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -86,7 +86,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {

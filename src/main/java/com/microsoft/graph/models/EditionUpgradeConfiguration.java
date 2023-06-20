@@ -57,7 +57,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the licenseType property value. Edition Upgrade License type
-     * @return a editionUpgradeLicenseType
+     * @return a EditionUpgradeLicenseType
      */
     @javax.annotation.Nullable
     public EditionUpgradeLicenseType getLicenseType() {
@@ -73,7 +73,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the targetEdition property value. Windows 10 Edition type.
-     * @return a windows10EditionType
+     * @return a Windows10EditionType
      */
     @javax.annotation.Nullable
     public Windows10EditionType getTargetEdition() {

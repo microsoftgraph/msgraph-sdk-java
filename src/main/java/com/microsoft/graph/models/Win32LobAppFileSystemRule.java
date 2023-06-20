@@ -79,7 +79,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the operationType property value. Contains all supported file system detection type.
-     * @return a win32LobAppFileSystemOperationType
+     * @return a Win32LobAppFileSystemOperationType
      */
     @javax.annotation.Nullable
     public Win32LobAppFileSystemOperationType getOperationType() {
@@ -87,7 +87,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {

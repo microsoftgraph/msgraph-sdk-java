@@ -64,7 +64,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
     }
     /**
      * Gets the guestOrExternalUserTypes property value. The guestOrExternalUserTypes property
-     * @return a conditionalAccessGuestOrExternalUserTypes
+     * @return a ConditionalAccessGuestOrExternalUserTypes
      */
     @javax.annotation.Nullable
     public ConditionalAccessGuestOrExternalUserTypes getGuestOrExternalUserTypes() {

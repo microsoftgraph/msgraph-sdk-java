@@ -88,7 +88,7 @@ public class DeviceInstallState extends Entity implements Parsable {
     }
     /**
      * Gets the installState property value. Possible values for install state.
-     * @return a installState
+     * @return a InstallState
      */
     @javax.annotation.Nullable
     public InstallState getInstallState() {

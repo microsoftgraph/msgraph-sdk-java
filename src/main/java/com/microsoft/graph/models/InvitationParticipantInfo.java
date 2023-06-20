@@ -23,7 +23,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     /** Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully. */
     private String replacesCallId;
     /**
-     * Instantiates a new invitationParticipantInfo and sets the default values.
+     * Instantiates a new InvitationParticipantInfo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -33,7 +33,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitationParticipantInfo
+     * @return a InvitationParticipantInfo
      */
     @javax.annotation.Nonnull
     public static InvitationParticipantInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +73,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @javax.annotation.Nullable
     public IdentitySet getIdentity() {

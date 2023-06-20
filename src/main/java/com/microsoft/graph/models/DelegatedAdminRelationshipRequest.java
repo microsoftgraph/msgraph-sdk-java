@@ -36,7 +36,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     }
     /**
      * Gets the action property value. The action property
-     * @return a delegatedAdminRelationshipRequestAction
+     * @return a DelegatedAdminRelationshipRequestAction
      */
     @javax.annotation.Nullable
     public DelegatedAdminRelationshipRequestAction getAction() {

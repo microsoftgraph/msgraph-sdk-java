@@ -140,7 +140,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
-     * @return a applicationGuardBlockClipboardSharingType
+     * @return a ApplicationGuardBlockClipboardSharingType
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockClipboardSharingType getApplicationGuardBlockClipboardSharing() {
@@ -148,7 +148,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
-     * @return a applicationGuardBlockFileTransferType
+     * @return a ApplicationGuardBlockFileTransferType
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockFileTransferType getApplicationGuardBlockFileTransfer() {
@@ -180,7 +180,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
-     * @return a appLockerApplicationControlType
+     * @return a AppLockerApplicationControlType
      */
     @javax.annotation.Nullable
     public AppLockerApplicationControlType getAppLockerApplicationControl() {
@@ -321,7 +321,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
-     * @return a firewallCertificateRevocationListCheckMethodType
+     * @return a FirewallCertificateRevocationListCheckMethodType
      */
     @javax.annotation.Nullable
     public FirewallCertificateRevocationListCheckMethodType getFirewallCertificateRevocationListCheckMethod() {
@@ -377,7 +377,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
-     * @return a firewallPacketQueueingMethodType
+     * @return a FirewallPacketQueueingMethodType
      */
     @javax.annotation.Nullable
     public FirewallPacketQueueingMethodType getFirewallPacketQueueingMethod() {
@@ -385,7 +385,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
-     * @return a firewallPreSharedKeyEncodingMethodType
+     * @return a FirewallPreSharedKeyEncodingMethodType
      */
     @javax.annotation.Nullable
     public FirewallPreSharedKeyEncodingMethodType getFirewallPreSharedKeyEncodingMethod() {

@@ -227,7 +227,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the publishingState property value. Indicates the publishing state of an app.
-     * @return a mobileAppPublishingState
+     * @return a MobileAppPublishingState
      */
     @javax.annotation.Nullable
     public MobileAppPublishingState getPublishingState() {

@@ -106,9 +106,10 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add new entity to identityProviders
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret.
      * @param body The request body
      * @return a CompletableFuture of identityProvider
+     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-post-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProvider> post(@javax.annotation.Nonnull final IdentityProvider body) {
@@ -125,10 +126,11 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Add new entity to identityProviders
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityProvider
+     * @see <a href="https://docs.microsoft.com/graph/api/identityprovider-post-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProvider> post(@javax.annotation.Nonnull final IdentityProvider body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +177,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add new entity to identityProviders
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -184,7 +186,7 @@ public class IdentityProvidersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add new entity to identityProviders
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

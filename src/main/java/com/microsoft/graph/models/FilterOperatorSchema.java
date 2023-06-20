@@ -14,7 +14,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     /** The supportedAttributeTypes property */
     private java.util.List<AttributeType> supportedAttributeTypes;
     /**
-     * Instantiates a new FilterOperatorSchema and sets the default values.
+     * Instantiates a new filterOperatorSchema and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +24,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FilterOperatorSchema
+     * @return a filterOperatorSchema
      */
     @javax.annotation.Nonnull
     public static FilterOperatorSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     }
     /**
      * Gets the arity property value. The arity property
-     * @return a scopeOperatorType
+     * @return a ScopeOperatorType
      */
     @javax.annotation.Nullable
     public ScopeOperatorType getArity() {
@@ -53,7 +53,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     }
     /**
      * Gets the multivaluedComparisonType property value. The multivaluedComparisonType property
-     * @return a scopeOperatorMultiValuedComparisonType
+     * @return a ScopeOperatorMultiValuedComparisonType
      */
     @javax.annotation.Nullable
     public ScopeOperatorMultiValuedComparisonType getMultivaluedComparisonType() {
@@ -61,7 +61,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     }
     /**
      * Gets the supportedAttributeTypes property value. The supportedAttributeTypes property
-     * @return a attributeType
+     * @return a AttributeType
      */
     @javax.annotation.Nullable
     public java.util.List<AttributeType> getSupportedAttributeTypes() {

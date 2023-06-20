@@ -100,10 +100,9 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new group object in a term store.
+     * Create new navigation property to groups for sites
      * @param body The request body
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> post(@javax.annotation.Nonnull final Group body) {
@@ -120,11 +119,10 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new group object in a term store.
+     * Create new navigation property to groups for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-group-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> post(@javax.annotation.Nonnull final Group body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -171,7 +169,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new group object in a term store.
+     * Create new navigation property to groups for sites
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +178,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new group object in a term store.
+     * Create new navigation property to groups for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

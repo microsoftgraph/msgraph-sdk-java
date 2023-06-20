@@ -84,8 +84,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get settings from me
+     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @return a CompletableFuture of userSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> get() {
@@ -102,9 +103,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get settings from me
+     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +190,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get settings from me
+     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get settings from me
+     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +256,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get settings from me
+     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      */
     public class GetQueryParameters {
         /** Expand related entities */

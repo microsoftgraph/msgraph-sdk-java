@@ -36,7 +36,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
     }
     /**
      * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
-     * @return a authenticationMethodModes
+     * @return a AuthenticationMethodModes
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAppliesToCombinations() {

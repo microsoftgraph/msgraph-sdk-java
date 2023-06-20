@@ -43,7 +43,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     /** The sortProperties property */
     private java.util.List<SortProperty> sortProperties;
     /**
-     * Instantiates a new searchRequest and sets the default values.
+     * Instantiates a new SearchRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -53,7 +53,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchRequest
+     * @return a SearchRequest
      */
     @javax.annotation.Nonnull
     public static SearchRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -167,7 +167,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the query property value. The query property
-     * @return a searchQuery
+     * @return a SearchQuery
      */
     @javax.annotation.Nullable
     public SearchQuery getQuery() {

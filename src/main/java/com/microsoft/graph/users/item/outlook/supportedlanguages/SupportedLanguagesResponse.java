@@ -41,7 +41,7 @@ public class SupportedLanguagesResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a localeInfo
+     * @return a LocaleInfo
      */
     @javax.annotation.Nullable
     public java.util.List<LocaleInfo> getValue() {

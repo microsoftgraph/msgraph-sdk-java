@@ -41,7 +41,7 @@ public class TranslateExchangeIdsResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a convertIdResult
+     * @return a ConvertIdResult
      */
     @javax.annotation.Nullable
     public java.util.List<ConvertIdResult> getValue() {

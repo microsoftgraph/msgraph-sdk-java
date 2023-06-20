@@ -19,7 +19,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     /** Represents the corrected segment string. */
     private String suggestion;
     /**
-     * Instantiates a new alteredQueryToken and sets the default values.
+     * Instantiates a new AlteredQueryToken and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +29,7 @@ public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alteredQueryToken
+     * @return a AlteredQueryToken
      */
     @javax.annotation.Nonnull
     public static AlteredQueryToken createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

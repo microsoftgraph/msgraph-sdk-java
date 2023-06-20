@@ -37,7 +37,7 @@ public class UserActivity extends Entity implements Parsable {
     /** The visualElements property */
     private VisualInfo visualElements;
     /**
-     * Instantiates a new UserActivity and sets the default values.
+     * Instantiates a new userActivity and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -47,7 +47,7 @@ public class UserActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserActivity
+     * @return a userActivity
      */
     @javax.annotation.Nonnull
     public static UserActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -183,7 +183,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the visualElements property value. The visualElements property
-     * @return a visualInfo
+     * @return a VisualInfo
      */
     @javax.annotation.Nullable
     public VisualInfo getVisualElements() {

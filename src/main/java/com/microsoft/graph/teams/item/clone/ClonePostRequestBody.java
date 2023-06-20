@@ -99,7 +99,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the partsToClone property value. The partsToClone property
-     * @return a clonableTeamParts
+     * @return a ClonableTeamParts
      */
     @javax.annotation.Nullable
     public ClonableTeamParts getPartsToClone() {
@@ -107,7 +107,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the visibility property value. The visibility property
-     * @return a teamVisibilityType
+     * @return a TeamVisibilityType
      */
     @javax.annotation.Nullable
     public TeamVisibilityType getVisibility() {

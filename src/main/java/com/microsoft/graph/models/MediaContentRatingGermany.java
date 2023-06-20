@@ -56,7 +56,7 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Germany
-     * @return a ratingGermanyMoviesType
+     * @return a RatingGermanyMoviesType
      */
     @javax.annotation.Nullable
     public RatingGermanyMoviesType getMovieRating() {
@@ -72,7 +72,7 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Germany
-     * @return a ratingGermanyTelevisionType
+     * @return a RatingGermanyTelevisionType
      */
     @javax.annotation.Nullable
     public RatingGermanyTelevisionType getTvRating() {

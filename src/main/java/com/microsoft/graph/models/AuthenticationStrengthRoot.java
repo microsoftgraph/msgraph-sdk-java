@@ -41,7 +41,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     }
     /**
      * Gets the combinations property value. The combinations property
-     * @return a authenticationMethodModes
+     * @return a AuthenticationMethodModes
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getCombinations() {

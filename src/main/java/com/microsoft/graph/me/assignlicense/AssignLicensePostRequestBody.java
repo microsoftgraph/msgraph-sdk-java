@@ -44,7 +44,7 @@ public class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the addLicenses property value. The addLicenses property
-     * @return a assignedLicense
+     * @return a AssignedLicense
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedLicense> getAddLicenses() {

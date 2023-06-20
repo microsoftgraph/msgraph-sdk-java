@@ -19,7 +19,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     /** The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional. */
     private Integer size;
     /**
-     * Instantiates a new aggregationOption and sets the default values.
+     * Instantiates a new AggregationOption and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +29,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aggregationOption
+     * @return a AggregationOption
      */
     @javax.annotation.Nonnull
     public static AggregationOption createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AggregationOption implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bucketDefinition property value. The bucketDefinition property
-     * @return a bucketAggregationDefinition
+     * @return a BucketAggregationDefinition
      */
     @javax.annotation.Nullable
     public BucketAggregationDefinition getBucketDefinition() {

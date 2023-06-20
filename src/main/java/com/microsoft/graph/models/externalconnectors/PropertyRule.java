@@ -71,7 +71,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operation property value. The operation property
-     * @return a ruleOperation
+     * @return a RuleOperation
      */
     @javax.annotation.Nullable
     public RuleOperation getOperation() {
@@ -95,7 +95,7 @@ public class PropertyRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the valuesJoinedBy property value. The valuesJoinedBy property
-     * @return a binaryOperator
+     * @return a BinaryOperator
      */
     @javax.annotation.Nullable
     public BinaryOperator getValuesJoinedBy() {

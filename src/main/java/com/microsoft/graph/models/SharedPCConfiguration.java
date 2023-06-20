@@ -61,7 +61,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
-     * @return a sharedPCAllowedAccountType
+     * @return a SharedPCAllowedAccountType
      */
     @javax.annotation.Nullable
     public SharedPCAllowedAccountType getAllowedAccounts() {

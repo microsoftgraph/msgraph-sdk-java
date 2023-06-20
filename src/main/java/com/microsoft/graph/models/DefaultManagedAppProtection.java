@@ -52,7 +52,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a managedAppDataEncryptionType
+     * @return a ManagedAppDataEncryptionType
      */
     @javax.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
@@ -68,7 +68,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-     * @return a keyValuePair
+     * @return a KeyValuePair
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {

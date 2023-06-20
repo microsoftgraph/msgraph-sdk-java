@@ -108,7 +108,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the connectionType property value. The connectionType property
-     * @return a networkConnectionType
+     * @return a NetworkConnectionType
      */
     @javax.annotation.Nullable
     public NetworkConnectionType getConnectionType() {
@@ -192,7 +192,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the networkTransportProtocol property value. The networkTransportProtocol property
-     * @return a networkTransportProtocol
+     * @return a NetworkTransportProtocol
      */
     @javax.annotation.Nullable
     public NetworkTransportProtocol getNetworkTransportProtocol() {
@@ -264,7 +264,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
-     * @return a traceRouteHop
+     * @return a TraceRouteHop
      */
     @javax.annotation.Nullable
     public java.util.List<TraceRouteHop> getTraceRouteHops() {
@@ -272,7 +272,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiBand property value. The wifiBand property
-     * @return a wifiBand
+     * @return a WifiBand
      */
     @javax.annotation.Nullable
     public WifiBand getWifiBand() {
@@ -312,7 +312,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the wifiRadioType property value. The wifiRadioType property
-     * @return a wifiRadioType
+     * @return a WifiRadioType
      */
     @javax.annotation.Nullable
     public WifiRadioType getWifiRadioType() {

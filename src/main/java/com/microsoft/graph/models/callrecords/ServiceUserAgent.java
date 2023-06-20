@@ -40,7 +40,7 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the role property value. The role property
-     * @return a serviceRole
+     * @return a ServiceRole
      */
     @javax.annotation.Nullable
     public ServiceRole getRole() {

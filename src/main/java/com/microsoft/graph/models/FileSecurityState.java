@@ -21,7 +21,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     /** Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage. */
     private String riskScore;
     /**
-     * Instantiates a new fileSecurityState and sets the default values.
+     * Instantiates a new FileSecurityState and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fileSecurityState
+     * @return a FileSecurityState
      */
     @javax.annotation.Nonnull
     public static FileSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

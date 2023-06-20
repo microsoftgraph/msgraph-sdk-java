@@ -50,7 +50,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the direction property value. The direction property
-     * @return a mediaDirection
+     * @return a MediaDirection
      */
     @javax.annotation.Nullable
     public MediaDirection getDirection() {
@@ -81,7 +81,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mediaType property value. The mediaType property
-     * @return a modality
+     * @return a Modality
      */
     @javax.annotation.Nullable
     public Modality getMediaType() {

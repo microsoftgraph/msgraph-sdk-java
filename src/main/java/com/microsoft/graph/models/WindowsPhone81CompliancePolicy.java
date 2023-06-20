@@ -142,7 +142,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {

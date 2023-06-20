@@ -17,7 +17,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
     /** Value for this key-value pair */
     private String value;
     /**
-     * Instantiates a new keyValuePair and sets the default values.
+     * Instantiates a new KeyValuePair and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a keyValuePair
+     * @return a KeyValuePair
      */
     @javax.annotation.Nonnull
     public static KeyValuePair createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

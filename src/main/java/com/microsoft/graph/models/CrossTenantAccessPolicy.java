@@ -62,7 +62,7 @@ public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
-     * @return a crossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      */
     @javax.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getPartners() {

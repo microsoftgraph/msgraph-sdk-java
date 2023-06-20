@@ -85,7 +85,7 @@ public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a synchronizationScheduleState
+     * @return a SynchronizationScheduleState
      */
     @javax.annotation.Nullable
     public SynchronizationScheduleState getState() {

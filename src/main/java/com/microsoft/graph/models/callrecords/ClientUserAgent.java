@@ -65,7 +65,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a clientPlatform
+     * @return a ClientPlatform
      */
     @javax.annotation.Nullable
     public ClientPlatform getPlatform() {
@@ -73,7 +73,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the productFamily property value. The productFamily property
-     * @return a productFamily
+     * @return a ProductFamily
      */
     @javax.annotation.Nullable
     public ProductFamily getProductFamily() {

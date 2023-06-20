@@ -79,7 +79,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the operationType property value. Contains all supported registry data detection type.
-     * @return a win32LobAppRegistryRuleOperationType
+     * @return a Win32LobAppRegistryRuleOperationType
      */
     @javax.annotation.Nullable
     public Win32LobAppRegistryRuleOperationType getOperationType() {
@@ -87,7 +87,7 @@ public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {

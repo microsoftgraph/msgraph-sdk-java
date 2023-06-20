@@ -39,7 +39,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     }
     /**
      * Gets the participants property value. The participants to invite.
-     * @return a invitationParticipantInfo
+     * @return a InvitationParticipantInfo
      */
     @javax.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {

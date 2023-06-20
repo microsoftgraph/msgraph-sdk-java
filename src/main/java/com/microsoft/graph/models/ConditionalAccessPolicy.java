@@ -44,7 +44,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the conditions property value. The conditions property
-     * @return a conditionalAccessConditionSet
+     * @return a ConditionalAccessConditionSet
      */
     @javax.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {
@@ -117,7 +117,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a conditionalAccessPolicyState
+     * @return a ConditionalAccessPolicyState
      */
     @javax.annotation.Nullable
     public ConditionalAccessPolicyState getState() {

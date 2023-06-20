@@ -93,7 +93,7 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the theme property value. The theme property
-     * @return a scheduleEntityTheme
+     * @return a ScheduleEntityTheme
      */
     @javax.annotation.Nullable
     public ScheduleEntityTheme getTheme() {

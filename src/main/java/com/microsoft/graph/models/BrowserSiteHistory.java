@@ -31,7 +31,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, Parsable {
     /** The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option. */
     private BrowserSiteTargetEnvironment targetEnvironment;
     /**
-     * Instantiates a new browserSiteHistory and sets the default values.
+     * Instantiates a new BrowserSiteHistory and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -41,7 +41,7 @@ public class BrowserSiteHistory implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a browserSiteHistory
+     * @return a BrowserSiteHistory
      */
     @javax.annotation.Nonnull
     public static BrowserSiteHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -42,7 +42,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a windowsArchitecture
+     * @return a WindowsArchitecture
      */
     @javax.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {
@@ -106,7 +106,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @javax.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {

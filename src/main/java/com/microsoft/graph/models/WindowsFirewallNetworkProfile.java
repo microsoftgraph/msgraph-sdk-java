@@ -105,7 +105,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the firewallEnabled property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @javax.annotation.Nullable
     public StateManagementSetting getFirewallEnabled() {

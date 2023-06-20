@@ -182,7 +182,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
-     * @return a internetSiteSecurityLevel
+     * @return a InternetSiteSecurityLevel
      */
     @javax.annotation.Nullable
     public InternetSiteSecurityLevel getBrowserInternetSecurityLevel() {
@@ -190,7 +190,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
-     * @return a siteSecurityLevel
+     * @return a SiteSecurityLevel
      */
     @javax.annotation.Nullable
     public SiteSecurityLevel getBrowserIntranetSecurityLevel() {
@@ -238,7 +238,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
-     * @return a siteSecurityLevel
+     * @return a SiteSecurityLevel
      */
     @javax.annotation.Nullable
     public SiteSecurityLevel getBrowserTrustedSitesSecurityLevel() {
@@ -352,7 +352,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -384,7 +384,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
-     * @return a windowsUserAccountControlSettings
+     * @return a WindowsUserAccountControlSettings
      */
     @javax.annotation.Nullable
     public WindowsUserAccountControlSettings getUserAccountControlSettings() {

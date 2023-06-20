@@ -149,7 +149,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     * @return a managedAppFlaggedReason
+     * @return a ManagedAppFlaggedReason
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppFlaggedReason> getFlaggedReasons() {

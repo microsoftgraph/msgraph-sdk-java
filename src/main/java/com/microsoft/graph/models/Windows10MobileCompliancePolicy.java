@@ -181,7 +181,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {

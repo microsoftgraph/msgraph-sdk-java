@@ -17,7 +17,7 @@ public class PrintTaskStatus implements AdditionalDataHolder, Parsable {
     /** The state property */
     private PrintTaskProcessingState state;
     /**
-     * Instantiates a new printTaskStatus and sets the default values.
+     * Instantiates a new PrintTaskStatus and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class PrintTaskStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printTaskStatus
+     * @return a PrintTaskStatus
      */
     @javax.annotation.Nonnull
     public static PrintTaskStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -72,7 +72,7 @@ public class PrintTaskStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a printTaskProcessingState
+     * @return a PrintTaskProcessingState
      */
     @javax.annotation.Nullable
     public PrintTaskProcessingState getState() {

@@ -56,7 +56,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Australia
-     * @return a ratingAustraliaMoviesType
+     * @return a RatingAustraliaMoviesType
      */
     @javax.annotation.Nullable
     public RatingAustraliaMoviesType getMovieRating() {
@@ -72,7 +72,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Australia
-     * @return a ratingAustraliaTelevisionType
+     * @return a RatingAustraliaTelevisionType
      */
     @javax.annotation.Nullable
     public RatingAustraliaTelevisionType getTvRating() {

@@ -61,7 +61,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/pages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a page object. **Getting page information** Access a page's metadata by page identifier: **Getting page content** You can use the page's `content` endpoint to get the HTML content of a page: The `includeIDs=true` query option is used to update pages.
      * @return a CompletableFuture of OnenotePageCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -79,7 +79,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a page object. **Getting page information** Access a page's metadata by page identifier: **Getting page content** You can use the page's `content` endpoint to get the HTML content of a page: The `includeIDs=true` query option is used to update pages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnenotePageCollectionResponse
      */
@@ -138,7 +138,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a page object. **Getting page information** Access a page's metadata by page identifier: **Getting page content** You can use the page's `content` endpoint to get the HTML content of a page: The `includeIDs=true` query option is used to update pages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +146,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a page object. **Getting page information** Access a page's metadata by page identifier: **Getting page content** You can use the page's `content` endpoint to get the HTML content of a page: The `includeIDs=true` query option is used to update pages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a page object. **Getting page information** Access a page's metadata by page identifier: **Getting page content** You can use the page's `content` endpoint to get the HTML content of a page: The `includeIDs=true` query option is used to update pages.
      */
     public class GetQueryParameters {
         /** Include count of items */

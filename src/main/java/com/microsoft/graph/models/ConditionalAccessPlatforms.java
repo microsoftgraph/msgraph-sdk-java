@@ -44,7 +44,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
-     * @return a conditionalAccessDevicePlatform
+     * @return a ConditionalAccessDevicePlatform
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessDevicePlatform> getExcludePlatforms() {
@@ -64,7 +64,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
-     * @return a conditionalAccessDevicePlatform
+     * @return a ConditionalAccessDevicePlatform
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessDevicePlatform> getIncludePlatforms() {

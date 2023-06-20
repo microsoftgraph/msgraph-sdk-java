@@ -93,7 +93,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements Parsable
     }
     /**
      * Gets the status property value. The status property
-     * @return a certificateStatus
+     * @return a CertificateStatus
      */
     @javax.annotation.Nullable
     public CertificateStatus getStatus() {

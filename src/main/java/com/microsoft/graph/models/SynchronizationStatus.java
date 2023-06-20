@@ -65,7 +65,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a synchronizationStatusCode
+     * @return a SynchronizationStatusCode
      */
     @javax.annotation.Nullable
     public SynchronizationStatusCode getCode() {

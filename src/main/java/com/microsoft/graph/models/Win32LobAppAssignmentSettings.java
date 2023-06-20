@@ -36,7 +36,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
-     * @return a win32LobAppDeliveryOptimizationPriority
+     * @return a Win32LobAppDeliveryOptimizationPriority
      */
     @javax.annotation.Nullable
     public Win32LobAppDeliveryOptimizationPriority getDeliveryOptimizationPriority() {
@@ -65,7 +65,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the notifications property value. Contains value for notification status.
-     * @return a win32LobAppNotification
+     * @return a Win32LobAppNotification
      */
     @javax.annotation.Nullable
     public Win32LobAppNotification getNotifications() {

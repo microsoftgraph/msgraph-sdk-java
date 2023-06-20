@@ -165,7 +165,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a mobileThreatPartnerTenantState
+     * @return a MobileThreatPartnerTenantState
      */
     @javax.annotation.Nullable
     public MobileThreatPartnerTenantState getPartnerState() {

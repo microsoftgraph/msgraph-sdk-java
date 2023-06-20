@@ -56,7 +56,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Par
     }
     /**
      * Gets the movieRating property value. Movies rating labels in United States
-     * @return a ratingUnitedStatesMoviesType
+     * @return a RatingUnitedStatesMoviesType
      */
     @javax.annotation.Nullable
     public RatingUnitedStatesMoviesType getMovieRating() {
@@ -72,7 +72,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Par
     }
     /**
      * Gets the tvRating property value. TV content rating labels in United States
-     * @return a ratingUnitedStatesTelevisionType
+     * @return a RatingUnitedStatesTelevisionType
      */
     @javax.annotation.Nullable
     public RatingUnitedStatesTelevisionType getTvRating() {

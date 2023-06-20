@@ -74,7 +74,7 @@ public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ruleType property value. Contains rule types for Win32 LOB apps.
-     * @return a win32LobAppRuleType
+     * @return a Win32LobAppRuleType
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleType getRuleType() {

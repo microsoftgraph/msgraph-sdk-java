@@ -62,7 +62,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the participants property value. The participants property
-     * @return a invitationParticipantInfo
+     * @return a InvitationParticipantInfo
      */
     @javax.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {

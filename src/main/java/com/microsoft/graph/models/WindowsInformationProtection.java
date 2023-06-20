@@ -111,7 +111,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     }
     /**
      * Gets the enforcementLevel property value. Possible values for WIP Protection enforcement levels
-     * @return a windowsInformationProtectionEnforcementLevel
+     * @return a WindowsInformationProtectionEnforcementLevel
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionEnforcementLevel getEnforcementLevel() {

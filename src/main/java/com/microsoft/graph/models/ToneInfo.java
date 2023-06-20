@@ -72,7 +72,7 @@ public class ToneInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tone property value. The tone property
-     * @return a tone
+     * @return a Tone
      */
     @javax.annotation.Nullable
     public Tone getTone() {

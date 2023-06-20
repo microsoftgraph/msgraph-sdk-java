@@ -142,7 +142,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mutability property value. The mutability property
-     * @return a mutability
+     * @return a Mutability
      */
     @javax.annotation.Nullable
     public Mutability getMutability() {
@@ -182,7 +182,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a attributeType
+     * @return a AttributeType
      */
     @javax.annotation.Nullable
     public AttributeType getType() {

@@ -39,7 +39,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
     }
     /**
      * Gets the event property value. The event property
-     * @return a printEvent
+     * @return a PrintEvent
      */
     @javax.annotation.Nullable
     public PrintEvent getEvent() {

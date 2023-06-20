@@ -61,7 +61,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a delegatedAdminAccessDetails
+     * @return a DelegatedAdminAccessDetails
      */
     @javax.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {

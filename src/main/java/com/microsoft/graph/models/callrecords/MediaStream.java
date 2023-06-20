@@ -20,6 +20,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private Period averageAudioNetworkJitter;
     /** Average estimated bandwidth available between two endpoints in bits per second. */
     private Long averageBandwidthEstimate;
+    /** Average duration of the received freezing time in the video stream. */
+    private Period averageFreezeDuration;
     /** Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator. */
     private Period averageJitter;
     /** Average packet loss rate for stream. */
@@ -38,6 +40,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private Float averageVideoPacketLossRate;
     /** UTC time when the stream ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime endDateTime;
+    /** Indicates whether the forward error correction (FEC) was used at some point during the session. The default value is null. */
+    private Boolean isAudioForwardErrorCorrectionUsed;
     /** Fraction of the call where frame rate is less than 7.5 frames per second. */
     private Float lowFrameRateRatio;
     /** Fraction of the call that the client is running less than 70% expected video processing capability. */
@@ -58,6 +62,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private Long packetUtilization;
     /** Packet loss rate after FEC has been applied aggregated across all video streams and codecs. */
     private Float postForwardErrorCorrectionPacketLossRate;
+    /** Average duration of the received freezing time in the video stream represented in root mean square. */
+    private Period rmsFreezeDuration;
     /** UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime startDateTime;
     /** The streamDirection property */
@@ -69,7 +75,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /** True if the media stream bypassed the Mediation Server and went straight between client and PSTN Gateway/PBX, false otherwise. */
     private Boolean wasMediaBypassed;
     /**
-     * Instantiates a new mediaStream and sets the default values.
+     * Instantiates a new MediaStream and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -79,7 +85,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mediaStream
+     * @return a MediaStream
      */
     @javax.annotation.Nonnull
     public static MediaStream createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -125,6 +131,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Long getAverageBandwidthEstimate() {
         return this.averageBandwidthEstimate;
+    }
+    /**
+     * Gets the averageFreezeDuration property value. Average duration of the received freezing time in the video stream.
+     * @return a Period
+     */
+    @javax.annotation.Nullable
+    public Period getAverageFreezeDuration() {
+        return this.averageFreezeDuration;
     }
     /**
      * Gets the averageJitter property value. Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
@@ -204,11 +218,12 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(28);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(31);
         deserializerMap.put("audioCodec", (n) -> { this.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
         deserializerMap.put("averageAudioDegradation", (n) -> { this.setAverageAudioDegradation(n.getFloatValue()); });
         deserializerMap.put("averageAudioNetworkJitter", (n) -> { this.setAverageAudioNetworkJitter(n.getPeriodValue()); });
         deserializerMap.put("averageBandwidthEstimate", (n) -> { this.setAverageBandwidthEstimate(n.getLongValue()); });
+        deserializerMap.put("averageFreezeDuration", (n) -> { this.setAverageFreezeDuration(n.getPeriodValue()); });
         deserializerMap.put("averageJitter", (n) -> { this.setAverageJitter(n.getPeriodValue()); });
         deserializerMap.put("averagePacketLossRate", (n) -> { this.setAveragePacketLossRate(n.getFloatValue()); });
         deserializerMap.put("averageRatioOfConcealedSamples", (n) -> { this.setAverageRatioOfConcealedSamples(n.getFloatValue()); });
@@ -218,6 +233,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         deserializerMap.put("averageVideoFrameRate", (n) -> { this.setAverageVideoFrameRate(n.getFloatValue()); });
         deserializerMap.put("averageVideoPacketLossRate", (n) -> { this.setAverageVideoPacketLossRate(n.getFloatValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isAudioForwardErrorCorrectionUsed", (n) -> { this.setIsAudioForwardErrorCorrectionUsed(n.getBooleanValue()); });
         deserializerMap.put("lowFrameRateRatio", (n) -> { this.setLowFrameRateRatio(n.getFloatValue()); });
         deserializerMap.put("lowVideoProcessingCapabilityRatio", (n) -> { this.setLowVideoProcessingCapabilityRatio(n.getFloatValue()); });
         deserializerMap.put("maxAudioNetworkJitter", (n) -> { this.setMaxAudioNetworkJitter(n.getPeriodValue()); });
@@ -228,12 +244,21 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("packetUtilization", (n) -> { this.setPacketUtilization(n.getLongValue()); });
         deserializerMap.put("postForwardErrorCorrectionPacketLossRate", (n) -> { this.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("rmsFreezeDuration", (n) -> { this.setRmsFreezeDuration(n.getPeriodValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("streamDirection", (n) -> { this.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
         deserializerMap.put("streamId", (n) -> { this.setStreamId(n.getStringValue()); });
         deserializerMap.put("videoCodec", (n) -> { this.setVideoCodec(n.getEnumValue(VideoCodec.class)); });
         deserializerMap.put("wasMediaBypassed", (n) -> { this.setWasMediaBypassed(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isAudioForwardErrorCorrectionUsed property value. Indicates whether the forward error correction (FEC) was used at some point during the session. The default value is null.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsAudioForwardErrorCorrectionUsed() {
+        return this.isAudioForwardErrorCorrectionUsed;
     }
     /**
      * Gets the lowFrameRateRatio property value. Fraction of the call where frame rate is less than 7.5 frames per second.
@@ -316,6 +341,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         return this.postForwardErrorCorrectionPacketLossRate;
     }
     /**
+     * Gets the rmsFreezeDuration property value. Average duration of the received freezing time in the video stream represented in root mean square.
+     * @return a Period
+     */
+    @javax.annotation.Nullable
+    public Period getRmsFreezeDuration() {
+        return this.rmsFreezeDuration;
+    }
+    /**
      * Gets the startDateTime property value. UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
@@ -325,7 +358,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the streamDirection property value. The streamDirection property
-     * @return a mediaStreamDirection
+     * @return a MediaStreamDirection
      */
     @javax.annotation.Nullable
     public MediaStreamDirection getStreamDirection() {
@@ -367,6 +400,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         writer.writeFloatValue("averageAudioDegradation", this.getAverageAudioDegradation());
         writer.writePeriodValue("averageAudioNetworkJitter", this.getAverageAudioNetworkJitter());
         writer.writeLongValue("averageBandwidthEstimate", this.getAverageBandwidthEstimate());
+        writer.writePeriodValue("averageFreezeDuration", this.getAverageFreezeDuration());
         writer.writePeriodValue("averageJitter", this.getAverageJitter());
         writer.writeFloatValue("averagePacketLossRate", this.getAveragePacketLossRate());
         writer.writeFloatValue("averageRatioOfConcealedSamples", this.getAverageRatioOfConcealedSamples());
@@ -376,6 +410,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         writer.writeFloatValue("averageVideoFrameRate", this.getAverageVideoFrameRate());
         writer.writeFloatValue("averageVideoPacketLossRate", this.getAverageVideoPacketLossRate());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeBooleanValue("isAudioForwardErrorCorrectionUsed", this.getIsAudioForwardErrorCorrectionUsed());
         writer.writeFloatValue("lowFrameRateRatio", this.getLowFrameRateRatio());
         writer.writeFloatValue("lowVideoProcessingCapabilityRatio", this.getLowVideoProcessingCapabilityRatio());
         writer.writePeriodValue("maxAudioNetworkJitter", this.getMaxAudioNetworkJitter());
@@ -386,6 +421,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("packetUtilization", this.getPacketUtilization());
         writer.writeFloatValue("postForwardErrorCorrectionPacketLossRate", this.getPostForwardErrorCorrectionPacketLossRate());
+        writer.writePeriodValue("rmsFreezeDuration", this.getRmsFreezeDuration());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("streamDirection", this.getStreamDirection());
         writer.writeStringValue("streamId", this.getStreamId());
@@ -437,6 +473,15 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setAverageBandwidthEstimate(@javax.annotation.Nullable final Long value) {
         this.averageBandwidthEstimate = value;
+    }
+    /**
+     * Sets the averageFreezeDuration property value. Average duration of the received freezing time in the video stream.
+     * @param value Value to set for the averageFreezeDuration property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAverageFreezeDuration(@javax.annotation.Nullable final Period value) {
+        this.averageFreezeDuration = value;
     }
     /**
      * Sets the averageJitter property value. Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
@@ -518,6 +563,15 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
+    }
+    /**
+     * Sets the isAudioForwardErrorCorrectionUsed property value. Indicates whether the forward error correction (FEC) was used at some point during the session. The default value is null.
+     * @param value Value to set for the isAudioForwardErrorCorrectionUsed property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsAudioForwardErrorCorrectionUsed(@javax.annotation.Nullable final Boolean value) {
+        this.isAudioForwardErrorCorrectionUsed = value;
     }
     /**
      * Sets the lowFrameRateRatio property value. Fraction of the call where frame rate is less than 7.5 frames per second.
@@ -608,6 +662,15 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setPostForwardErrorCorrectionPacketLossRate(@javax.annotation.Nullable final Float value) {
         this.postForwardErrorCorrectionPacketLossRate = value;
+    }
+    /**
+     * Sets the rmsFreezeDuration property value. Average duration of the received freezing time in the video stream represented in root mean square.
+     * @param value Value to set for the rmsFreezeDuration property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRmsFreezeDuration(@javax.annotation.Nullable final Period value) {
+        this.rmsFreezeDuration = value;
     }
     /**
      * Sets the startDateTime property value. UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z

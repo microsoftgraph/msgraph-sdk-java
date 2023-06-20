@@ -52,7 +52,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a appListType
+     * @return a AppListType
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -161,7 +161,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {

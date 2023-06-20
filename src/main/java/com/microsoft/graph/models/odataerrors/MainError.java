@@ -14,8 +14,8 @@ public class MainError implements AdditionalDataHolder, Parsable {
     private String code;
     /** The details property */
     private java.util.List<ErrorDetails> details;
-    /** The innererror property */
-    private InnerError innererror;
+    /** The innerError property */
+    private InnerError innerError;
     /** The message property */
     private String message;
     /** The target property */
@@ -71,18 +71,18 @@ public class MainError implements AdditionalDataHolder, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfObjectValues(ErrorDetails::createFromDiscriminatorValue)); });
-        deserializerMap.put("innererror", (n) -> { this.setInnererror(n.getObjectValue(InnerError::createFromDiscriminatorValue)); });
+        deserializerMap.put("innerError", (n) -> { this.setInnerError(n.getObjectValue(InnerError::createFromDiscriminatorValue)); });
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the innererror property value. The innererror property
+     * Gets the innerError property value. The innerError property
      * @return a InnerError
      */
     @javax.annotation.Nullable
-    public InnerError getInnererror() {
-        return this.innererror;
+    public InnerError getInnerError() {
+        return this.innerError;
     }
     /**
      * Gets the message property value. The message property
@@ -110,7 +110,7 @@ public class MainError implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
         writer.writeCollectionOfObjectValues("details", this.getDetails());
-        writer.writeObjectValue("innererror", this.getInnererror());
+        writer.writeObjectValue("innerError", this.getInnerError());
         writer.writeStringValue("message", this.getMessage());
         writer.writeStringValue("target", this.getTarget());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -143,13 +143,13 @@ public class MainError implements AdditionalDataHolder, Parsable {
         this.details = value;
     }
     /**
-     * Sets the innererror property value. The innererror property
-     * @param value Value to set for the innererror property.
+     * Sets the innerError property value. The innerError property
+     * @param value Value to set for the innerError property.
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setInnererror(@javax.annotation.Nullable final InnerError value) {
-        this.innererror = value;
+    public void setInnerError(@javax.annotation.Nullable final InnerError value) {
+        this.innerError = value;
     }
     /**
      * Sets the message property value. The message property
