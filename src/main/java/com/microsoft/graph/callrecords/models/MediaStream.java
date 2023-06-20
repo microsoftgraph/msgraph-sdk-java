@@ -77,6 +77,15 @@ public class MediaStream implements IJsonBackedObject {
     public Long averageBandwidthEstimate;
 
     /**
+     * The Average Freeze Duration.
+     * Average duration of the received freezing time in the video stream.
+     */
+    @SerializedName(value = "averageFreezeDuration", alternate = {"AverageFreezeDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration averageFreezeDuration;
+
+    /**
      * The Average Jitter.
      * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      */
@@ -158,6 +167,15 @@ public class MediaStream implements IJsonBackedObject {
     public java.time.OffsetDateTime endDateTime;
 
     /**
+     * The Is Audio Forward Error Correction Used.
+     * Indicates whether the forward error correction (FEC) was used at some point during the session. The default value is null.
+     */
+    @SerializedName(value = "isAudioForwardErrorCorrectionUsed", alternate = {"IsAudioForwardErrorCorrectionUsed"})
+    @Expose
+	@Nullable
+    public Boolean isAudioForwardErrorCorrectionUsed;
+
+    /**
      * The Low Frame Rate Ratio.
      * Fraction of the call where frame rate is less than 7.5 frames per second.
      */
@@ -237,6 +255,15 @@ public class MediaStream implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Float postForwardErrorCorrectionPacketLossRate;
+
+    /**
+     * The Rms Freeze Duration.
+     * Average duration of the received freezing time in the video stream represented in root mean square.
+     */
+    @SerializedName(value = "rmsFreezeDuration", alternate = {"RmsFreezeDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration rmsFreezeDuration;
 
     /**
      * The Start Date Time.

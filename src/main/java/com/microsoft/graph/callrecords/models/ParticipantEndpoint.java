@@ -28,6 +28,33 @@ public class ParticipantEndpoint extends Endpoint implements IJsonBackedObject {
 
 
     /**
+     * The Cpu Cores Count.
+     * CPU number of cores used by the media endpoint.
+     */
+    @SerializedName(value = "cpuCoresCount", alternate = {"CpuCoresCount"})
+    @Expose
+	@Nullable
+    public Integer cpuCoresCount;
+
+    /**
+     * The Cpu Name.
+     * CPU name used by the media endpoint.
+     */
+    @SerializedName(value = "cpuName", alternate = {"CpuName"})
+    @Expose
+	@Nullable
+    public String cpuName;
+
+    /**
+     * The Cpu Processor Speed In Mhz.
+     * CPU processor speed used by the media endpoint.
+     */
+    @SerializedName(value = "cpuProcessorSpeedInMhz", alternate = {"CpuProcessorSpeedInMhz"})
+    @Expose
+	@Nullable
+    public Integer cpuProcessorSpeedInMhz;
+
+    /**
      * The Feedback.
      * The feedback provided by the user of this endpoint about the quality of the session.
      */
@@ -44,6 +71,15 @@ public class ParticipantEndpoint extends Endpoint implements IJsonBackedObject {
     @Expose
 	@Nullable
     public IdentitySet identity;
+
+    /**
+     * The Name.
+     * Name of the device used by the media endpoint.
+     */
+    @SerializedName(value = "name", alternate = {"Name"})
+    @Expose
+	@Nullable
+    public String name;
 
 
     /**
