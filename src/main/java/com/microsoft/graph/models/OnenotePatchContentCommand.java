@@ -40,7 +40,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the action property value. The action property
-     * @return a onenotePatchActionType
+     * @return a OnenotePatchActionType
      */
     @javax.annotation.Nullable
     public OnenotePatchActionType getAction() {

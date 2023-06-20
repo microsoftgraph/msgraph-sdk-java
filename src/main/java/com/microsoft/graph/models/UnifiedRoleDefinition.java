@@ -111,7 +111,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
-     * @return a unifiedRolePermission
+     * @return a UnifiedRolePermission
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRolePermission> getRolePermissions() {

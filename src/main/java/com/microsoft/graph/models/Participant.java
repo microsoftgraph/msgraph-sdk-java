@@ -57,7 +57,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the info property value. The info property
-     * @return a participantInfo
+     * @return a ParticipantInfo
      */
     @javax.annotation.Nullable
     public ParticipantInfo getInfo() {

@@ -62,7 +62,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     }
     /**
      * Gets the productVersionOperator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getProductVersionOperator() {

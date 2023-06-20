@@ -185,7 +185,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the complianceState property value. Compliance state.
-     * @return a complianceState
+     * @return a ComplianceState
      */
     @javax.annotation.Nullable
     public ComplianceState getComplianceState() {
@@ -241,7 +241,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
-     * @return a deviceEnrollmentType
+     * @return a DeviceEnrollmentType
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentType getDeviceEnrollmentType() {
@@ -265,7 +265,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceRegistrationState property value. Device registration status.
-     * @return a deviceRegistrationState
+     * @return a DeviceRegistrationState
      */
     @javax.annotation.Nullable
     public DeviceRegistrationState getDeviceRegistrationState() {
@@ -321,7 +321,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeAccessState property value. Device Exchange Access State.
-     * @return a deviceManagementExchangeAccessState
+     * @return a DeviceManagementExchangeAccessState
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeAccessState getExchangeAccessState() {
@@ -329,7 +329,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
-     * @return a deviceManagementExchangeAccessStateReason
+     * @return a DeviceManagementExchangeAccessStateReason
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeAccessStateReason getExchangeAccessStateReason() {
@@ -475,7 +475,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceOwnerType property value. Owner type of device.
-     * @return a managedDeviceOwnerType
+     * @return a ManagedDeviceOwnerType
      */
     @javax.annotation.Nullable
     public ManagedDeviceOwnerType getManagedDeviceOwnerType() {
@@ -483,7 +483,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementAgent property value. The managementAgent property
-     * @return a managementAgentType
+     * @return a ManagementAgentType
      */
     @javax.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
@@ -547,7 +547,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the partnerReportedThreatState property value. Available health states for the Device Health API
-     * @return a managedDevicePartnerReportedHealthState
+     * @return a ManagedDevicePartnerReportedHealthState
      */
     @javax.annotation.Nullable
     public ManagedDevicePartnerReportedHealthState getPartnerReportedThreatState() {

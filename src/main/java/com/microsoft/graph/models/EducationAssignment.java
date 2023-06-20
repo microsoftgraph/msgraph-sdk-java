@@ -61,7 +61,7 @@ public class EducationAssignment extends Entity implements Parsable {
     /** The deep link URL for the given assignment. */
     private String webUrl;
     /**
-     * Instantiates a new EducationAssignment and sets the default values.
+     * Instantiates a new educationAssignment and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class EducationAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignment
+     * @return a educationAssignment
      */
     @javax.annotation.Nonnull
     public static EducationAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

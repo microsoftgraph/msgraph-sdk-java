@@ -41,7 +41,7 @@ public class AllowedCalendarSharingRolesWithUserResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a calendarRoleType
+     * @return a CalendarRoleType
      */
     @javax.annotation.Nullable
     public java.util.List<CalendarRoleType> getValue() {

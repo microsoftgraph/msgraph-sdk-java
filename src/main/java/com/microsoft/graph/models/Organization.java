@@ -83,7 +83,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedPlans property value. The collection of service plans associated with the tenant. Not nullable.
-     * @return a assignedPlan
+     * @return a AssignedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
@@ -215,7 +215,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mobileDeviceManagementAuthority property value. Mobile device management authority.
-     * @return a mdmAuthority
+     * @return a MdmAuthority
      */
     @javax.annotation.Nullable
     public MdmAuthority getMobileDeviceManagementAuthority() {
@@ -271,7 +271,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the provisionedPlans property value. Not nullable.
-     * @return a provisionedPlan
+     * @return a ProvisionedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
@@ -327,7 +327,7 @@ public class Organization extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the verifiedDomains property value. The collection of domains associated with this tenant. Not nullable.
-     * @return a verifiedDomain
+     * @return a VerifiedDomain
      */
     @javax.annotation.Nullable
     public java.util.List<VerifiedDomain> getVerifiedDomains() {

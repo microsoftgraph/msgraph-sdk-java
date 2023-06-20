@@ -83,7 +83,7 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceType property value. The sourceType property
-     * @return a settingSourceType
+     * @return a SettingSourceType
      */
     @javax.annotation.Nullable
     public SettingSourceType getSourceType() {

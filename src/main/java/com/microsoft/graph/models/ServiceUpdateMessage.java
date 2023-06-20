@@ -75,7 +75,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the body property value. The body property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @javax.annotation.Nullable
     public ItemBody getBody() {
@@ -83,7 +83,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the category property value. The category property
-     * @return a serviceUpdateCategory
+     * @return a ServiceUpdateCategory
      */
     @javax.annotation.Nullable
     public ServiceUpdateCategory getCategory() {
@@ -135,7 +135,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a serviceUpdateSeverity
+     * @return a ServiceUpdateSeverity
      */
     @javax.annotation.Nullable
     public ServiceUpdateSeverity getSeverity() {

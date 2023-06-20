@@ -317,7 +317,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
-     * @return a assignedLicense
+     * @return a AssignedLicense
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
@@ -325,7 +325,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and not).
-     * @return a assignedPlan
+     * @return a AssignedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
@@ -1190,7 +1190,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le).
-     * @return a provisionedPlan
+     * @return a ProvisionedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {

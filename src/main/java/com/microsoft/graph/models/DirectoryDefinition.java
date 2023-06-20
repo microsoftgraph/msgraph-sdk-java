@@ -40,7 +40,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the discoverabilities property value. The discoverabilities property
-     * @return a directoryDefinitionDiscoverabilities
+     * @return a DirectoryDefinitionDiscoverabilities
      */
     @javax.annotation.Nullable
     public DirectoryDefinitionDiscoverabilities getDiscoverabilities() {

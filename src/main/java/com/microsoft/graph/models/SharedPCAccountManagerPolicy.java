@@ -43,7 +43,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
-     * @return a sharedPCAccountDeletionPolicyType
+     * @return a SharedPCAccountDeletionPolicyType
      */
     @javax.annotation.Nullable
     public SharedPCAccountDeletionPolicyType getAccountDeletionPolicy() {

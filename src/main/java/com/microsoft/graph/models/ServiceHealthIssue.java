@@ -46,7 +46,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the classification property value. The classification property
-     * @return a serviceHealthClassificationType
+     * @return a ServiceHealthClassificationType
      */
     @javax.annotation.Nullable
     public ServiceHealthClassificationType getClassification() {
@@ -104,7 +104,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the origin property value. The origin property
-     * @return a serviceHealthOrigin
+     * @return a ServiceHealthOrigin
      */
     @javax.annotation.Nullable
     public ServiceHealthOrigin getOrigin() {
@@ -112,7 +112,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the posts property value. Collection of historical posts for the service issue.
-     * @return a serviceHealthIssuePost
+     * @return a ServiceHealthIssuePost
      */
     @javax.annotation.Nullable
     public java.util.List<ServiceHealthIssuePost> getPosts() {
@@ -128,7 +128,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a serviceHealthStatus
+     * @return a ServiceHealthStatus
      */
     @javax.annotation.Nullable
     public ServiceHealthStatus getStatus() {

@@ -41,7 +41,7 @@ public class SupportedTimeZonesResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a timeZoneInformation
+     * @return a TimeZoneInformation
      */
     @javax.annotation.Nullable
     public java.util.List<TimeZoneInformation> getValue() {

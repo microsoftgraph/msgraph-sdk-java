@@ -56,7 +56,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the movieRating property value. Movies rating labels in France
-     * @return a ratingFranceMoviesType
+     * @return a RatingFranceMoviesType
      */
     @javax.annotation.Nullable
     public RatingFranceMoviesType getMovieRating() {
@@ -72,7 +72,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the tvRating property value. TV content rating labels in France
-     * @return a ratingFranceTelevisionType
+     * @return a RatingFranceTelevisionType
      */
     @javax.annotation.Nullable
     public RatingFranceTelevisionType getTvRating() {

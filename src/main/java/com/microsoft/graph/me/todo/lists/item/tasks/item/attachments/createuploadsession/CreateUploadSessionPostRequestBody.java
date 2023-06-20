@@ -41,7 +41,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the attachmentInfo property value. The attachmentInfo property
-     * @return a attachmentInfo
+     * @return a AttachmentInfo
      */
     @javax.annotation.Nullable
     public AttachmentInfo getAttachmentInfo() {

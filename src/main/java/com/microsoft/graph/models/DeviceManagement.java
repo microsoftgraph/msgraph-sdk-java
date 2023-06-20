@@ -377,7 +377,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptionState property value. Tenant mobile device management subscription state.
-     * @return a deviceManagementSubscriptionState
+     * @return a DeviceManagementSubscriptionState
      */
     @javax.annotation.Nullable
     public DeviceManagementSubscriptionState getSubscriptionState() {

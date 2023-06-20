@@ -17,7 +17,7 @@ public class SynchronizationMetadataEntry implements AdditionalDataHolder, Parsa
     /** The value property */
     private String value;
     /**
-     * Instantiates a new synchronizationMetadataEntry and sets the default values.
+     * Instantiates a new SynchronizationMetadataEntry and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class SynchronizationMetadataEntry implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a synchronizationMetadataEntry
+     * @return a SynchronizationMetadataEntry
      */
     @javax.annotation.Nonnull
     public static SynchronizationMetadataEntry createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -64,7 +64,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a deviceThreatProtectionLevel
+     * @return a DeviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -175,7 +175,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {

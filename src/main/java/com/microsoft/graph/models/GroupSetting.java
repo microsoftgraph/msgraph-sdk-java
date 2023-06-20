@@ -61,7 +61,7 @@ public class GroupSetting extends Entity implements Parsable {
     }
     /**
      * Gets the values property value. Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
-     * @return a settingValue
+     * @return a SettingValue
      */
     @javax.annotation.Nullable
     public java.util.List<SettingValue> getValues() {

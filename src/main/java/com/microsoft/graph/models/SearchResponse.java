@@ -21,7 +21,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     /** Contains the search terms sent in the initial search query. */
     private java.util.List<String> searchTerms;
     /**
-     * Instantiates a new searchResponse and sets the default values.
+     * Instantiates a new SearchResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchResponse
+     * @return a SearchResponse
      */
     @javax.annotation.Nonnull
     public static SearchResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

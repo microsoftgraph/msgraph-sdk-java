@@ -34,7 +34,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     /** A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property. */
     private UUID participantId;
     /**
-     * Instantiates a new teleconferenceDeviceQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceQuality and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -44,7 +44,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teleconferenceDeviceQuality
+     * @return a TeleconferenceDeviceQuality
      */
     @javax.annotation.Nonnull
     public static TeleconferenceDeviceQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -145,7 +145,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
-     * @return a teleconferenceDeviceMediaQuality
+     * @return a TeleconferenceDeviceMediaQuality
      */
     @javax.annotation.Nullable
     public java.util.List<TeleconferenceDeviceMediaQuality> getMediaQualityList() {

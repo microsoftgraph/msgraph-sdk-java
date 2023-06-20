@@ -93,7 +93,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
-     * @return a managedAppDataStorageLocation
+     * @return a ManagedAppDataStorageLocation
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppDataStorageLocation> getAllowedDataStorageLocations() {
@@ -101,7 +101,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
-     * @return a managedAppDataTransferLevel
+     * @return a ManagedAppDataTransferLevel
      */
     @javax.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedInboundDataTransferSources() {
@@ -109,7 +109,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
-     * @return a managedAppClipboardSharingLevel
+     * @return a ManagedAppClipboardSharingLevel
      */
     @javax.annotation.Nullable
     public ManagedAppClipboardSharingLevel getAllowedOutboundClipboardSharingLevel() {
@@ -117,7 +117,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
-     * @return a managedAppDataTransferLevel
+     * @return a ManagedAppDataTransferLevel
      */
     @javax.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedOutboundDataTransferDestinations() {
@@ -201,7 +201,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the managedBrowser property value. Type of managed browser
-     * @return a managedBrowserType
+     * @return a ManagedBrowserType
      */
     @javax.annotation.Nullable
     public ManagedBrowserType getManagedBrowser() {
@@ -305,7 +305,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
-     * @return a managedAppPinCharacterSet
+     * @return a ManagedAppPinCharacterSet
      */
     @javax.annotation.Nullable
     public ManagedAppPinCharacterSet getPinCharacterSet() {

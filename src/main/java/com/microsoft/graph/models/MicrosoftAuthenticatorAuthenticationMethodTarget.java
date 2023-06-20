@@ -29,7 +29,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     }
     /**
      * Gets the authenticationMode property value. The authenticationMode property
-     * @return a microsoftAuthenticatorAuthenticationMode
+     * @return a MicrosoftAuthenticatorAuthenticationMode
      */
     @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMode getAuthenticationMode() {

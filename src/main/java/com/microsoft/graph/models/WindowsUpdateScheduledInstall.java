@@ -44,7 +44,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     }
     /**
      * Gets the scheduledInstallDay property value. Possible values for a weekly schedule.
-     * @return a weeklySchedule
+     * @return a WeeklySchedule
      */
     @javax.annotation.Nullable
     public WeeklySchedule getScheduledInstallDay() {

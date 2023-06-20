@@ -189,7 +189,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the state property value. The state property
-     * @return a synchronizationTaskExecutionResult
+     * @return a SynchronizationTaskExecutionResult
      */
     @javax.annotation.Nullable
     public SynchronizationTaskExecutionResult getState() {

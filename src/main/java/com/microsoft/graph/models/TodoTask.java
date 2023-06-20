@@ -185,7 +185,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a importance
+     * @return a Importance
      */
     @javax.annotation.Nullable
     public Importance getImportance() {
@@ -241,7 +241,7 @@ public class TodoTask extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a taskStatus
+     * @return a TaskStatus
      */
     @javax.annotation.Nullable
     public TaskStatus getStatus() {

@@ -85,7 +85,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the operationType property value. Contains all supported Powershell Script output detection type.
-     * @return a win32LobAppPowerShellScriptRuleOperationType
+     * @return a Win32LobAppPowerShellScriptRuleOperationType
      */
     @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptRuleOperationType getOperationType() {
@@ -93,7 +93,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a win32LobAppRuleOperator
+     * @return a Win32LobAppRuleOperator
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {

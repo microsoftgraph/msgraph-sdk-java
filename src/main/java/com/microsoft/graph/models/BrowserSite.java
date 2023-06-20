@@ -71,7 +71,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the compatibilityMode property value. The compatibilityMode property
-     * @return a browserSiteCompatibilityMode
+     * @return a BrowserSiteCompatibilityMode
      */
     @javax.annotation.Nullable
     public BrowserSiteCompatibilityMode getCompatibilityMode() {
@@ -116,7 +116,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The history of modifications applied to the site.
-     * @return a browserSiteHistory
+     * @return a BrowserSiteHistory
      */
     @javax.annotation.Nullable
     public java.util.List<BrowserSiteHistory> getHistory() {
@@ -140,7 +140,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the mergeType property value. The mergeType property
-     * @return a browserSiteMergeType
+     * @return a BrowserSiteMergeType
      */
     @javax.annotation.Nullable
     public BrowserSiteMergeType getMergeType() {
@@ -148,7 +148,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a browserSiteStatus
+     * @return a BrowserSiteStatus
      */
     @javax.annotation.Nullable
     public BrowserSiteStatus getStatus() {
@@ -156,7 +156,7 @@ public class BrowserSite extends Entity implements Parsable {
     }
     /**
      * Gets the targetEnvironment property value. The targetEnvironment property
-     * @return a browserSiteTargetEnvironment
+     * @return a BrowserSiteTargetEnvironment
      */
     @javax.annotation.Nullable
     public BrowserSiteTargetEnvironment getTargetEnvironment() {

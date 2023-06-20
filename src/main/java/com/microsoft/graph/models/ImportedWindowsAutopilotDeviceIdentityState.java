@@ -64,7 +64,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     }
     /**
      * Gets the deviceImportStatus property value. The deviceImportStatus property
-     * @return a importedWindowsAutopilotDeviceIdentityImportStatus
+     * @return a ImportedWindowsAutopilotDeviceIdentityImportStatus
      */
     @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityImportStatus getDeviceImportStatus() {

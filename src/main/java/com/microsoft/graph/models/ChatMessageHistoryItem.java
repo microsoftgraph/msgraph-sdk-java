@@ -39,7 +39,7 @@ public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actions property value. The actions property
-     * @return a chatMessageActions
+     * @return a ChatMessageActions
      */
     @javax.annotation.Nullable
     public ChatMessageActions getActions() {

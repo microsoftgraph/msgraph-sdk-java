@@ -22,7 +22,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /** Windows version 8.1 or later. */
     private Boolean v81;
     /**
-     * Instantiates a new windowsMinimumOperatingSystem and sets the default values.
+     * Instantiates a new WindowsMinimumOperatingSystem and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -32,7 +32,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @javax.annotation.Nonnull
     public static WindowsMinimumOperatingSystem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

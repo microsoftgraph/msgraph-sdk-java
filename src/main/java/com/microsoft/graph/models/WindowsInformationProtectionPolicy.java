@@ -121,7 +121,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinLowercaseLetters property value. Pin Character Requirements
-     * @return a windowsInformationProtectionPinCharacterRequirements
+     * @return a WindowsInformationProtectionPinCharacterRequirements
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinLowercaseLetters() {
@@ -137,7 +137,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinSpecialCharacters property value. Pin Character Requirements
-     * @return a windowsInformationProtectionPinCharacterRequirements
+     * @return a WindowsInformationProtectionPinCharacterRequirements
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinSpecialCharacters() {
@@ -145,7 +145,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinUppercaseLetters property value. Pin Character Requirements
-     * @return a windowsInformationProtectionPinCharacterRequirements
+     * @return a WindowsInformationProtectionPinCharacterRequirements
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinUppercaseLetters() {

@@ -17,7 +17,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     /** The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application. */
     private String resourceAppId;
     /**
-     * Instantiates a new requiredResourceAccess and sets the default values.
+     * Instantiates a new RequiredResourceAccess and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a requiredResourceAccess
+     * @return a RequiredResourceAccess
      */
     @javax.annotation.Nonnull
     public static RequiredResourceAccess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourceAccess property value. The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
-     * @return a resourceAccess
+     * @return a ResourceAccess
      */
     @javax.annotation.Nullable
     public java.util.List<ResourceAccess> getResourceAccess() {

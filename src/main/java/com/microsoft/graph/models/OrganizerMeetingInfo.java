@@ -40,7 +40,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
     }
     /**
      * Gets the organizer property value. The organizer property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @javax.annotation.Nullable
     public IdentitySet getOrganizer() {

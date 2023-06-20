@@ -17,6 +17,8 @@ public class Session extends Entity implements Parsable {
     private OffsetDateTime endDateTime;
     /** Failure information associated with the session if the session failed. */
     private FailureInfo failureInfo;
+    /** Specifies whether the session is a test. */
+    private Boolean isTest;
     /** List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue. */
     private java.util.List<Modality> modalities;
     /** The list of segments involved in the session. Read-only. Nullable. */
@@ -84,14 +86,23 @@ public class Session extends Entity implements Parsable {
         deserializerMap.put("caller", (n) -> { this.setCaller(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("failureInfo", (n) -> { this.setFailureInfo(n.getObjectValue(FailureInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("isTest", (n) -> { this.setIsTest(n.getBooleanValue()); });
         deserializerMap.put("modalities", (n) -> { this.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
         deserializerMap.put("segments", (n) -> { this.setSegments(n.getCollectionOfObjectValues(Segment::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }
     /**
+     * Gets the isTest property value. Specifies whether the session is a test.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsTest() {
+        return this.isTest;
+    }
+    /**
      * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return a modality
+     * @return a Modality
      */
     @javax.annotation.Nullable
     public java.util.List<Modality> getModalities() {
@@ -126,6 +137,7 @@ public class Session extends Entity implements Parsable {
         writer.writeObjectValue("caller", this.getCaller());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeObjectValue("failureInfo", this.getFailureInfo());
+        writer.writeBooleanValue("isTest", this.getIsTest());
         writer.writeCollectionOfEnumValues("modalities", this.getModalities());
         writer.writeCollectionOfObjectValues("segments", this.getSegments());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
@@ -165,6 +177,15 @@ public class Session extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setFailureInfo(@javax.annotation.Nullable final FailureInfo value) {
         this.failureInfo = value;
+    }
+    /**
+     * Sets the isTest property value. Specifies whether the session is a test.
+     * @param value Value to set for the isTest property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsTest(@javax.annotation.Nullable final Boolean value) {
+        this.isTest = value;
     }
     /**
      * Sets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.

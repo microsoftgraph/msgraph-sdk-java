@@ -53,7 +53,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
     }
     /**
      * Gets the routingMode property value. The routingMode property
-     * @return a routingMode
+     * @return a RoutingMode
      */
     @javax.annotation.Nullable
     public RoutingMode getRoutingMode() {

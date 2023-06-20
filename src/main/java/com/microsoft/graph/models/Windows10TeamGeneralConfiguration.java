@@ -162,7 +162,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the miracastChannel property value. Possible values for Miracast channel.
-     * @return a miracastChannel
+     * @return a MiracastChannel
      */
     @javax.annotation.Nullable
     public MiracastChannel getMiracastChannel() {
@@ -250,7 +250,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
-     * @return a welcomeScreenMeetingInformation
+     * @return a WelcomeScreenMeetingInformation
      */
     @javax.annotation.Nullable
     public WelcomeScreenMeetingInformation getWelcomeScreenMeetingInformation() {

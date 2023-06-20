@@ -62,7 +62,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
     }
     /**
      * Gets the status property value. The status property
-     * @return a importedWindowsAutopilotDeviceIdentityUploadStatus
+     * @return a ImportedWindowsAutopilotDeviceIdentityUploadStatus
      */
     @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityUploadStatus getStatus() {

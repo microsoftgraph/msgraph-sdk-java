@@ -44,7 +44,7 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the end property value. The end property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEnd() {
@@ -72,7 +72,7 @@ public class TimeSlot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the start property value. The start property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStart() {

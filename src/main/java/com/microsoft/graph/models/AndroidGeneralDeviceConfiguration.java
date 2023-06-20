@@ -220,7 +220,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a appListType
+     * @return a AppListType
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -429,7 +429,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a androidRequiredPasswordType
+     * @return a AndroidRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
@@ -549,7 +549,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
-     * @return a webBrowserCookieSettings
+     * @return a WebBrowserCookieSettings
      */
     @javax.annotation.Nullable
     public WebBrowserCookieSettings getWebBrowserCookieSettings() {

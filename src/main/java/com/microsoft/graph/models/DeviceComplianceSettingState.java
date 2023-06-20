@@ -121,7 +121,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @javax.annotation.Nullable
     public ComplianceStatus getState() {

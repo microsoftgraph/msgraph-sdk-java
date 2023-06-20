@@ -61,8 +61,9 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/onenote/notebooks/{notebook%2Did}/sections/{onenoteSection%2Did}/pages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection of pages in the section.  Read-only. Nullable.
+     * Retrieve a list of page objects from the specified section.
      * @return a CompletableFuture of OnenotePageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get() {
@@ -79,9 +80,10 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of pages in the section.  Read-only. Nullable.
+     * Retrieve a list of page objects from the specified section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OnenotePageCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +100,10 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to pages for groups
+     * Create a new page in the specified section.
      * @param body The request body
      * @return a CompletableFuture of onenotePage
+     * @see <a href="https://docs.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@javax.annotation.Nonnull final OnenotePage body) {
@@ -117,10 +120,11 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to pages for groups
+     * Create a new page in the specified section.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenotePage
+     * @see <a href="https://docs.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@javax.annotation.Nonnull final OnenotePage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +142,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of pages in the section.  Read-only. Nullable.
+     * Retrieve a list of page objects from the specified section.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +150,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of pages in the section.  Read-only. Nullable.
+     * Retrieve a list of page objects from the specified section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +171,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to pages for groups
+     * Create a new page in the specified section.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +180,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to pages for groups
+     * Create a new page in the specified section.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,7 +203,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of pages in the section.  Read-only. Nullable.
+     * Retrieve a list of page objects from the specified section.
      */
     public class GetQueryParameters {
         /** Include count of items */

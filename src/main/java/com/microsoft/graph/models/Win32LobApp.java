@@ -54,7 +54,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a windowsArchitecture
+     * @return a WindowsArchitecture
      */
     @javax.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {

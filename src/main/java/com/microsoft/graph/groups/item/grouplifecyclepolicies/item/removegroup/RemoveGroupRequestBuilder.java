@@ -39,9 +39,10 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}/removeGroup", rawUrl);
     }
     /**
-     * Invoke action removeGroup
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @return a CompletableFuture of removeGroupResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoveGroupResponse> post(@javax.annotation.Nonnull final RemoveGroupPostRequestBody body) {
@@ -58,10 +59,11 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action removeGroup
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of removeGroupResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoveGroupResponse> post(@javax.annotation.Nonnull final RemoveGroupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action removeGroup
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class RemoveGroupRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action removeGroup
+     * Removes a group from a lifecycle policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

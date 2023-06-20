@@ -48,7 +48,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
-     * @return a excludeTarget
+     * @return a ExcludeTarget
      */
     @javax.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
@@ -70,7 +70,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
-     * @return a authenticationMethodsRegistrationCampaignIncludeTarget
+     * @return a AuthenticationMethodsRegistrationCampaignIncludeTarget
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> getIncludeTargets() {
@@ -94,7 +94,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the state property value. The state property
-     * @return a advancedConfigState
+     * @return a AdvancedConfigState
      */
     @javax.annotation.Nullable
     public AdvancedConfigState getState() {

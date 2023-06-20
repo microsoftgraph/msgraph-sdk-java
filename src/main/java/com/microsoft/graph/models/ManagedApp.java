@@ -43,7 +43,7 @@ public class ManagedApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appAvailability property value. A managed (MAM) application's availability.
-     * @return a managedAppAvailability
+     * @return a ManagedAppAvailability
      */
     @javax.annotation.Nullable
     public ManagedAppAvailability getAppAvailability() {

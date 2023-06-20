@@ -59,7 +59,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the final property value. The final property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @javax.annotation.Nullable
     public IdentitySet getFinal() {
@@ -75,7 +75,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the original property value. The original property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @javax.annotation.Nullable
     public IdentitySet getOriginal() {
@@ -83,7 +83,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the routingType property value. The routingType property
-     * @return a routingType
+     * @return a RoutingType
      */
     @javax.annotation.Nullable
     public RoutingType getRoutingType() {

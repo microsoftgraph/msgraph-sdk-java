@@ -137,7 +137,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the addIns property value. Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
-     * @return a addIn
+     * @return a AddIn
      */
     @javax.annotation.Nullable
     public java.util.List<AddIn> getAddIns() {
@@ -225,7 +225,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoles property value. The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
-     * @return a appRole
+     * @return a AppRole
      */
     @javax.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
@@ -380,7 +380,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a keyCredential
+     * @return a KeyCredential
      */
     @javax.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
@@ -436,7 +436,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
-     * @return a permissionScope
+     * @return a PermissionScope
      */
     @javax.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {
@@ -460,7 +460,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     * @return a passwordCredential
+     * @return a PasswordCredential
      */
     @javax.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
@@ -492,7 +492,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the resourceSpecificApplicationPermissions property value. The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
-     * @return a resourceSpecificPermission
+     * @return a ResourceSpecificPermission
      */
     @javax.annotation.Nullable
     public java.util.List<ResourceSpecificPermission> getResourceSpecificApplicationPermissions() {

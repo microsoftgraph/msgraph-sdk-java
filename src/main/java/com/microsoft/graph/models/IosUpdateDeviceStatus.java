@@ -102,7 +102,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the installStatus property value. The installStatus property
-     * @return a iosUpdatesInstallStatus
+     * @return a IosUpdatesInstallStatus
      */
     @javax.annotation.Nullable
     public IosUpdatesInstallStatus getInstallStatus() {
@@ -126,7 +126,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @javax.annotation.Nullable
     public ComplianceStatus getStatus() {

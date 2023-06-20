@@ -65,7 +65,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the exchangeConnectorType property value. The type of Exchange Connector.
-     * @return a deviceManagementExchangeConnectorType
+     * @return a DeviceManagementExchangeConnectorType
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeConnectorType getExchangeConnectorType() {
@@ -123,7 +123,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     }
     /**
      * Gets the status property value. The current status of the Exchange Connector.
-     * @return a deviceManagementExchangeConnectorStatus
+     * @return a DeviceManagementExchangeConnectorStatus
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeConnectorStatus getStatus() {

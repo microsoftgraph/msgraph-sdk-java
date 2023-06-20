@@ -20,7 +20,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
     /** The OdataType property */
     private String odataType;
     /**
-     * Instantiates a new iosHomeScreenFolderPage and sets the default values.
+     * Instantiates a new IosHomeScreenFolderPage and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -30,7 +30,7 @@ public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosHomeScreenFolderPage
+     * @return a IosHomeScreenFolderPage
      */
     @javax.annotation.Nonnull
     public static IosHomeScreenFolderPage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

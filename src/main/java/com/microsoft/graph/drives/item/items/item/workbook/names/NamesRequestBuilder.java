@@ -75,7 +75,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of nameditem objects.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get() {
@@ -95,7 +95,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of nameditem objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -51,7 +51,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the enrollmentType property value. Possible ways of adding a mobile device to management.
-     * @return a deviceEnrollmentType
+     * @return a DeviceEnrollmentType
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentType getEnrollmentType() {
@@ -59,7 +59,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     }
     /**
      * Gets the failureCategory property value. Top level failure categories for enrollment.
-     * @return a deviceEnrollmentFailureReason
+     * @return a DeviceEnrollmentFailureReason
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentFailureReason getFailureCategory() {

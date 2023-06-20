@@ -87,7 +87,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowBehavior property value. The flowBehavior property
-     * @return a attributeFlowBehavior
+     * @return a AttributeFlowBehavior
      */
     @javax.annotation.Nullable
     public AttributeFlowBehavior getFlowBehavior() {
@@ -95,7 +95,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowType property value. The flowType property
-     * @return a attributeFlowType
+     * @return a AttributeFlowType
      */
     @javax.annotation.Nullable
     public AttributeFlowType getFlowType() {

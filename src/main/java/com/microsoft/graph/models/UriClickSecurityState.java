@@ -26,7 +26,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     /** The verdict property */
     private String verdict;
     /**
-     * Instantiates a new uriClickSecurityState and sets the default values.
+     * Instantiates a new UriClickSecurityState and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -36,7 +36,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uriClickSecurityState
+     * @return a UriClickSecurityState
      */
     @javax.annotation.Nonnull
     public static UriClickSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

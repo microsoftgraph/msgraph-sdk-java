@@ -19,7 +19,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     /** The state property */
     private PrinterProcessingState state;
     /**
-     * Instantiates a new printerStatus and sets the default values.
+     * Instantiates a new PrinterStatus and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +29,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerStatus
+     * @return a PrinterStatus
      */
     @javax.annotation.Nonnull
     public static PrinterStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the details property value. The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
-     * @return a printerProcessingStateDetail
+     * @return a PrinterProcessingStateDetail
      */
     @javax.annotation.Nullable
     public java.util.List<PrinterProcessingStateDetail> getDetails() {
@@ -83,7 +83,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a printerProcessingState
+     * @return a PrinterProcessingState
      */
     @javax.annotation.Nullable
     public PrinterProcessingState getState() {

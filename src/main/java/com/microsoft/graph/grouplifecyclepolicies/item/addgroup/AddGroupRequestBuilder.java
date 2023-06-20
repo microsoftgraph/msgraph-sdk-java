@@ -39,9 +39,10 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}/addGroup", rawUrl);
     }
     /**
-     * Invoke action addGroup
+     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
      * @param body The request body
      * @return a CompletableFuture of addGroupResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddGroupResponse> post(@javax.annotation.Nonnull final AddGroupPostRequestBody body) {
@@ -58,10 +59,11 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action addGroup
+     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of addGroupResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddGroupResponse> post(@javax.annotation.Nonnull final AddGroupPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action addGroup
+     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action addGroup
+     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

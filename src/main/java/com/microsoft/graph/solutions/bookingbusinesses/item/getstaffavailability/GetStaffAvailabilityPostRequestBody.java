@@ -45,7 +45,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -73,7 +73,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {

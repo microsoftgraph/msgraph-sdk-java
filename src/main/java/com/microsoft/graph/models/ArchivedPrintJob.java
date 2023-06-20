@@ -150,7 +150,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the processingState property value. The processingState property
-     * @return a printJobProcessingState
+     * @return a PrintJobProcessingState
      */
     @javax.annotation.Nullable
     public PrintJobProcessingState getProcessingState() {

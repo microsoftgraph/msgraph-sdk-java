@@ -25,7 +25,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     /** The length of the attachment in bytes. Required. */
     private Long size;
     /**
-     * Instantiates a new attachmentItem and sets the default values.
+     * Instantiates a new AttachmentItem and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class AttachmentItem implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentItem
+     * @return a AttachmentItem
      */
     @javax.annotation.Nonnull
     public static AttachmentItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

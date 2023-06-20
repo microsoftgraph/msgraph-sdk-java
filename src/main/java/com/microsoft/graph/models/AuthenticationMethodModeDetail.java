@@ -31,7 +31,7 @@ public class AuthenticationMethodModeDetail extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationMethod property value. The authenticationMethod property
-     * @return a baseAuthenticationMethod
+     * @return a BaseAuthenticationMethod
      */
     @javax.annotation.Nullable
     public BaseAuthenticationMethod getAuthenticationMethod() {

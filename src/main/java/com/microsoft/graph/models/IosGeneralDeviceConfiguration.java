@@ -410,7 +410,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
-     * @return a appListType
+     * @return a AppListType
      */
     @javax.annotation.Nullable
     public AppListType getAppsVisibilityListType() {
@@ -498,7 +498,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a appListType
+     * @return a AppListType
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -1126,7 +1126,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingApps property value. Apps rating as in media content
-     * @return a ratingAppsType
+     * @return a RatingAppsType
      */
     @javax.annotation.Nullable
     public RatingAppsType getMediaContentRatingApps() {
@@ -1318,7 +1318,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
@@ -1374,7 +1374,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
-     * @return a webBrowserCookieSettings
+     * @return a WebBrowserCookieSettings
      */
     @javax.annotation.Nullable
     public WebBrowserCookieSettings getSafariCookieSettings() {

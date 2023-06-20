@@ -110,7 +110,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the automaticUpdateMode property value. Possible values for automatic update mode.
-     * @return a automaticUpdateMode
+     * @return a AutomaticUpdateMode
      */
     @javax.annotation.Nullable
     public AutomaticUpdateMode getAutomaticUpdateMode() {
@@ -118,7 +118,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the autoRestartNotificationDismissal property value. Auto restart required notification dismissal method
-     * @return a autoRestartNotificationDismissalMethod
+     * @return a AutoRestartNotificationDismissalMethod
      */
     @javax.annotation.Nullable
     public AutoRestartNotificationDismissalMethod getAutoRestartNotificationDismissal() {
@@ -126,7 +126,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
-     * @return a windowsUpdateType
+     * @return a WindowsUpdateType
      */
     @javax.annotation.Nullable
     public WindowsUpdateType getBusinessReadyUpdatesOnly() {
@@ -158,7 +158,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
-     * @return a windowsDeliveryOptimizationMode
+     * @return a WindowsDeliveryOptimizationMode
      */
     @javax.annotation.Nullable
     public WindowsDeliveryOptimizationMode getDeliveryOptimizationMode() {
@@ -323,7 +323,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the prereleaseFeatures property value. Possible values for pre-release features.
-     * @return a prereleaseFeatures
+     * @return a PrereleaseFeatures
      */
     @javax.annotation.Nullable
     public PrereleaseFeatures getPrereleaseFeatures() {
@@ -403,7 +403,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the updateNotificationLevel property value. Windows Update Notification Display Options
-     * @return a windowsUpdateNotificationDisplayOption
+     * @return a WindowsUpdateNotificationDisplayOption
      */
     @javax.annotation.Nullable
     public WindowsUpdateNotificationDisplayOption getUpdateNotificationLevel() {
@@ -419,7 +419,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the userPauseAccess property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @javax.annotation.Nullable
     public Enablement getUserPauseAccess() {
@@ -427,7 +427,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the userWindowsUpdateScanAccess property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @javax.annotation.Nullable
     public Enablement getUserWindowsUpdateScanAccess() {

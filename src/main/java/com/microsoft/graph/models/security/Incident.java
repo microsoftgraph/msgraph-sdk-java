@@ -168,7 +168,7 @@ public class Incident extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @javax.annotation.Nullable
     public AlertSeverity getSeverity() {
@@ -176,7 +176,7 @@ public class Incident extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a incidentStatus
+     * @return a IncidentStatus
      */
     @javax.annotation.Nullable
     public IncidentStatus getStatus() {

@@ -21,7 +21,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     /** The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query. */
     private Integer total;
     /**
-     * Instantiates a new searchHitsContainer and sets the default values.
+     * Instantiates a new SearchHitsContainer and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchHitsContainer
+     * @return a SearchHitsContainer
      */
     @javax.annotation.Nonnull
     public static SearchHitsContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

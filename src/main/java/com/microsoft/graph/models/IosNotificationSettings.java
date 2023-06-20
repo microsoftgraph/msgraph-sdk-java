@@ -61,7 +61,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alertType property value. Notification Settings Alert Type.
-     * @return a iosNotificationAlertType
+     * @return a IosNotificationAlertType
      */
     @javax.annotation.Nullable
     public IosNotificationAlertType getAlertType() {

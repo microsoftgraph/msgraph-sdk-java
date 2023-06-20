@@ -90,7 +90,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowTypes property value. The flowTypes property
-     * @return a objectFlowTypes
+     * @return a ObjectFlowTypes
      */
     @javax.annotation.Nullable
     public ObjectFlowTypes getFlowTypes() {

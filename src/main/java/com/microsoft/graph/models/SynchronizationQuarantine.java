@@ -101,7 +101,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a quarantineReason
+     * @return a QuarantineReason
      */
     @javax.annotation.Nullable
     public QuarantineReason getReason() {

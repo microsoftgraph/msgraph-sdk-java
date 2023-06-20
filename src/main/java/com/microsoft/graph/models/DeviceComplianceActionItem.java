@@ -38,7 +38,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     }
     /**
      * Gets the actionType property value. Scheduled Action Type Enum
-     * @return a deviceComplianceActionType
+     * @return a DeviceComplianceActionType
      */
     @javax.annotation.Nullable
     public DeviceComplianceActionType getActionType() {

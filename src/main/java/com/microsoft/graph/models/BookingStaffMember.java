@@ -93,7 +93,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     }
     /**
      * Gets the role property value. The role property
-     * @return a bookingStaffRole
+     * @return a BookingStaffRole
      */
     @javax.annotation.Nullable
     public BookingStaffRole getRole() {

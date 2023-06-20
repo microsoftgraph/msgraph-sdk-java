@@ -41,7 +41,7 @@ public class GetMailTipsResponse extends BaseCollectionPaginationCountResponse i
     }
     /**
      * Gets the value property value. The value property
-     * @return a mailTips
+     * @return a MailTips
      */
     @javax.annotation.Nullable
     public java.util.List<MailTips> getValue() {

@@ -63,7 +63,7 @@ public class TransferPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the transferTarget property value. The transferTarget property
-     * @return a invitationParticipantInfo
+     * @return a InvitationParticipantInfo
      */
     @javax.annotation.Nullable
     public InvitationParticipantInfo getTransferTarget() {

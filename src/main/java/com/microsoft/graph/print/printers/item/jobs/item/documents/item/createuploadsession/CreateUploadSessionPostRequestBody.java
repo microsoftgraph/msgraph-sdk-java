@@ -51,7 +51,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the properties property value. The properties property
-     * @return a printDocumentUploadProperties
+     * @return a PrintDocumentUploadProperties
      */
     @javax.annotation.Nullable
     public PrintDocumentUploadProperties getProperties() {

@@ -39,7 +39,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse exten
     }
     /**
      * Gets the value property value. The value property
-     * @return a crossTenantAccessPolicyConfigurationPartner
+     * @return a CrossTenantAccessPolicyConfigurationPartner
      */
     @javax.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getValue() {

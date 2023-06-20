@@ -95,7 +95,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the messageType property value. The messageType property
-     * @return a chatMessageType
+     * @return a ChatMessageType
      */
     @javax.annotation.Nullable
     public ChatMessageType getMessageType() {

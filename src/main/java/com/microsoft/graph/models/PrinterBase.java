@@ -135,7 +135,7 @@ public class PrinterBase extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a printerStatus
+     * @return a PrinterStatus
      */
     @javax.annotation.Nullable
     public PrinterStatus getStatus() {

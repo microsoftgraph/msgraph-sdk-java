@@ -94,7 +94,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the type property value. The type property
-     * @return a attributeType
+     * @return a AttributeType
      */
     @javax.annotation.Nullable
     public AttributeType getType() {

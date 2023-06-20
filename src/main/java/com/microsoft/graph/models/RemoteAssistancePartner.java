@@ -68,7 +68,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The current TeamViewer connector status
-     * @return a remoteAssistanceOnboardingStatus
+     * @return a RemoteAssistanceOnboardingStatus
      */
     @javax.annotation.Nullable
     public RemoteAssistanceOnboardingStatus getOnboardingStatus() {

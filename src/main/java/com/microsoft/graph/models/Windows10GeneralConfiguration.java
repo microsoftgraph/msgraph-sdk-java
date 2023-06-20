@@ -447,7 +447,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsAllowTrustedAppsSideloading property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @javax.annotation.Nullable
     public StateManagementSetting getAppsAllowTrustedAppsSideloading() {
@@ -575,7 +575,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderCloudBlockLevel property value. Possible values of Cloud Block Level
-     * @return a defenderCloudBlockLevelType
+     * @return a DefenderCloudBlockLevelType
      */
     @javax.annotation.Nullable
     public DefenderCloudBlockLevelType getDefenderCloudBlockLevel() {
@@ -615,7 +615,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderMonitorFileActivity property value. Possible values for monitoring file activity.
-     * @return a defenderMonitorFileActivity
+     * @return a DefenderMonitorFileActivity
      */
     @javax.annotation.Nullable
     public DefenderMonitorFileActivity getDefenderMonitorFileActivity() {
@@ -631,7 +631,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderPromptForSampleSubmission property value. Possible values for prompting user for samples submission.
-     * @return a defenderPromptForSampleSubmission
+     * @return a DefenderPromptForSampleSubmission
      */
     @javax.annotation.Nullable
     public DefenderPromptForSampleSubmission getDefenderPromptForSampleSubmission() {
@@ -735,7 +735,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderScanType property value. Possible values for system scan type.
-     * @return a defenderScanType
+     * @return a DefenderScanType
      */
     @javax.annotation.Nullable
     public DefenderScanType getDefenderScanType() {
@@ -767,7 +767,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderSystemScanSchedule property value. Possible values for a weekly schedule.
-     * @return a weeklySchedule
+     * @return a WeeklySchedule
      */
     @javax.annotation.Nullable
     public WeeklySchedule getDefenderSystemScanSchedule() {
@@ -775,7 +775,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the developerUnlockSetting property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @javax.annotation.Nullable
     public StateManagementSetting getDeveloperUnlockSetting() {
@@ -799,7 +799,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the diagnosticsDataSubmissionMode property value. Allow the device to send diagnostic and usage telemetry data, such as Watson.
-     * @return a diagnosticDataSubmissionMode
+     * @return a DiagnosticDataSubmissionMode
      */
     @javax.annotation.Nullable
     public DiagnosticDataSubmissionMode getDiagnosticsDataSubmissionMode() {
@@ -943,7 +943,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the edgeCookiePolicy property value. Possible values to specify which cookies are allowed in Microsoft Edge.
-     * @return a edgeCookiePolicy
+     * @return a EdgeCookiePolicy
      */
     @javax.annotation.Nullable
     public EdgeCookiePolicy getEdgeCookiePolicy() {
@@ -1489,7 +1489,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -1529,7 +1529,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the privacyAdvertisingId property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @javax.annotation.Nullable
     public StateManagementSetting getPrivacyAdvertisingId() {
@@ -1561,7 +1561,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safeSearchFilter property value. Specifies what level of safe search (filtering adult content) is required
-     * @return a safeSearchFilterType
+     * @return a SafeSearchFilterType
      */
     @javax.annotation.Nullable
     public SafeSearchFilterType getSafeSearchFilter() {
@@ -1825,7 +1825,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuAppListVisibility property value. Type of start menu app list visibility.
-     * @return a windowsStartMenuAppListVisibilityType
+     * @return a WindowsStartMenuAppListVisibilityType
      */
     @javax.annotation.Nullable
     public WindowsStartMenuAppListVisibilityType getStartMenuAppListVisibility() {
@@ -1953,7 +1953,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuMode property value. Type of display modes for the start menu.
-     * @return a windowsStartMenuModeType
+     * @return a WindowsStartMenuModeType
      */
     @javax.annotation.Nullable
     public WindowsStartMenuModeType getStartMenuMode() {
@@ -1961,7 +1961,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderDocuments property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderDocuments() {
@@ -1969,7 +1969,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderDownloads property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderDownloads() {
@@ -1977,7 +1977,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderFileExplorer property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderFileExplorer() {
@@ -1985,7 +1985,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderHomeGroup property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderHomeGroup() {
@@ -1993,7 +1993,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderMusic property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderMusic() {
@@ -2001,7 +2001,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderNetwork property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderNetwork() {
@@ -2009,7 +2009,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderPersonalFolder property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderPersonalFolder() {
@@ -2017,7 +2017,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderPictures property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderPictures() {
@@ -2025,7 +2025,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderSettings property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderSettings() {
@@ -2033,7 +2033,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the startMenuPinnedFolderVideos property value. Generic visibility state.
-     * @return a visibilitySetting
+     * @return a VisibilitySetting
      */
     @javax.annotation.Nullable
     public VisibilitySetting getStartMenuPinnedFolderVideos() {
@@ -2193,7 +2193,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the windowsSpotlightConfigureOnLockScreen property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
-     * @return a windowsSpotlightEnablementSettings
+     * @return a WindowsSpotlightEnablementSettings
      */
     @javax.annotation.Nullable
     public WindowsSpotlightEnablementSettings getWindowsSpotlightConfigureOnLockScreen() {

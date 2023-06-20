@@ -131,7 +131,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the diskType property value. The diskType property
-     * @return a diskType
+     * @return a DiskType
      */
     @javax.annotation.Nullable
     public DiskType getDiskType() {
@@ -184,7 +184,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a userExperienceAnalyticsHealthState
+     * @return a UserExperienceAnalyticsHealthState
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {

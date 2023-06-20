@@ -33,7 +33,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     /** Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required. */
     private ConditionalAccessUsers users;
     /**
-     * Instantiates a new conditionalAccessConditionSet and sets the default values.
+     * Instantiates a new ConditionalAccessConditionSet and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessConditionSet
+     * @return a ConditionalAccessConditionSet
      */
     @javax.annotation.Nonnull
     public static ConditionalAccessConditionSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +76,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
-     * @return a conditionalAccessClientApp
+     * @return a ConditionalAccessClientApp
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessClientApp> getClientAppTypes() {
@@ -136,7 +136,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
-     * @return a riskLevel
+     * @return a RiskLevel
      */
     @javax.annotation.Nullable
     public java.util.List<RiskLevel> getServicePrincipalRiskLevels() {
@@ -144,7 +144,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
-     * @return a riskLevel
+     * @return a RiskLevel
      */
     @javax.annotation.Nullable
     public java.util.List<RiskLevel> getSignInRiskLevels() {
@@ -152,7 +152,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
-     * @return a riskLevel
+     * @return a RiskLevel
      */
     @javax.annotation.Nullable
     public java.util.List<RiskLevel> getUserRiskLevels() {

@@ -187,7 +187,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordRequiredType property value. Android Work Profile required password type.
-     * @return a androidWorkProfileRequiredPasswordType
+     * @return a AndroidWorkProfileRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getPasswordRequiredType() {
@@ -275,7 +275,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
-     * @return a androidWorkProfileCrossProfileDataSharingType
+     * @return a AndroidWorkProfileCrossProfileDataSharingType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileCrossProfileDataSharingType getWorkProfileDataSharingType() {
@@ -283,7 +283,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
-     * @return a androidWorkProfileDefaultAppPermissionPolicyType
+     * @return a AndroidWorkProfileDefaultAppPermissionPolicyType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileDefaultAppPermissionPolicyType getWorkProfileDefaultAppPermissionPolicy() {
@@ -387,7 +387,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
-     * @return a androidWorkProfileRequiredPasswordType
+     * @return a AndroidWorkProfileRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getWorkProfilePasswordRequiredType() {

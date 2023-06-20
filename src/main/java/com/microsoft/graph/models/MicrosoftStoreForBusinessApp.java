@@ -52,7 +52,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the licenseType property value. The licenseType property
-     * @return a microsoftStoreForBusinessLicenseType
+     * @return a MicrosoftStoreForBusinessLicenseType
      */
     @javax.annotation.Nullable
     public MicrosoftStoreForBusinessLicenseType getLicenseType() {

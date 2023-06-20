@@ -42,7 +42,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
     }
     /**
      * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
-     * @return a ipRange
+     * @return a IpRange
      */
     @javax.annotation.Nullable
     public java.util.List<IpRange> getIpRanges() {

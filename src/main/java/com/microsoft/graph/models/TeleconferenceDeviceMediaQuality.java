@@ -56,7 +56,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /** The remote media port. */
     private Integer remotePort;
     /**
-     * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
+     * Instantiates a new TeleconferenceDeviceMediaQuality and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teleconferenceDeviceMediaQuality
+     * @return a TeleconferenceDeviceMediaQuality
      */
     @javax.annotation.Nonnull
     public static TeleconferenceDeviceMediaQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

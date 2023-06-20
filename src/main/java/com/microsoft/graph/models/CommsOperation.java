@@ -78,7 +78,7 @@ public class CommsOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a operationStatus
+     * @return a OperationStatus
      */
     @javax.annotation.Nullable
     public OperationStatus getStatus() {

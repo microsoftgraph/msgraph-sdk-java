@@ -56,7 +56,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Ireland
-     * @return a ratingIrelandMoviesType
+     * @return a RatingIrelandMoviesType
      */
     @javax.annotation.Nullable
     public RatingIrelandMoviesType getMovieRating() {
@@ -72,7 +72,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Ireland
-     * @return a ratingIrelandTelevisionType
+     * @return a RatingIrelandTelevisionType
      */
     @javax.annotation.Nullable
     public RatingIrelandTelevisionType getTvRating() {

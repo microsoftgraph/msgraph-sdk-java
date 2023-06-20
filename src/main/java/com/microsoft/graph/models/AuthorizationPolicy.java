@@ -93,7 +93,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
-     * @return a defaultUserRolePermissions
+     * @return a DefaultUserRolePermissions
      */
     @javax.annotation.Nullable
     public DefaultUserRolePermissions getDefaultUserRolePermissions() {

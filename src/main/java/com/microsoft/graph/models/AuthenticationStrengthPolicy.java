@@ -25,7 +25,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /** The requirementsSatisfied property */
     private AuthenticationStrengthRequirements requirementsSatisfied;
     /**
-     * Instantiates a new AuthenticationStrengthPolicy and sets the default values.
+     * Instantiates a new authenticationStrengthPolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationStrengthPolicy
+     * @return a authenticationStrengthPolicy
      */
     @javax.annotation.Nonnull
     public static AuthenticationStrengthPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the allowedCombinations property value. A collection of authentication method modes that are required be used to satify this authentication strength.
-     * @return a authenticationMethodModes
+     * @return a AuthenticationMethodModes
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAllowedCombinations() {
@@ -109,7 +109,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the policyType property value. The policyType property
-     * @return a authenticationStrengthPolicyType
+     * @return a AuthenticationStrengthPolicyType
      */
     @javax.annotation.Nullable
     public AuthenticationStrengthPolicyType getPolicyType() {
@@ -117,7 +117,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requirementsSatisfied property value. The requirementsSatisfied property
-     * @return a authenticationStrengthRequirements
+     * @return a AuthenticationStrengthRequirements
      */
     @javax.annotation.Nullable
     public AuthenticationStrengthRequirements getRequirementsSatisfied() {

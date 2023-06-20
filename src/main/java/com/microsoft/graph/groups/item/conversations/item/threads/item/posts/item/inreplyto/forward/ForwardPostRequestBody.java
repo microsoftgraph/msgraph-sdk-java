@@ -62,7 +62,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the toRecipients property value. The ToRecipients property
-     * @return a recipient
+     * @return a Recipient
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {

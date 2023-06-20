@@ -19,7 +19,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     /** The targetOperand property */
     private FilterOperand targetOperand;
     /**
-     * Instantiates a new filterClause and sets the default values.
+     * Instantiates a new FilterClause and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +29,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filterClause
+     * @return a FilterClause
      */
     @javax.annotation.Nonnull
     public static FilterClause createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

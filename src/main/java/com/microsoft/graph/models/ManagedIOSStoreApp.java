@@ -36,7 +36,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
-     * @return a iosDeviceType
+     * @return a IosDeviceType
      */
     @javax.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
@@ -73,7 +73,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. Contains properties of the minimum operating system required for an iOS mobile app.
-     * @return a iosMinimumOperatingSystem
+     * @return a IosMinimumOperatingSystem
      */
     @javax.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {

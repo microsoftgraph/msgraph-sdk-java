@@ -43,7 +43,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. The details property
-     * @return a conditionalAccessPolicyDetail
+     * @return a ConditionalAccessPolicyDetail
      */
     @javax.annotation.Nullable
     public ConditionalAccessPolicyDetail getDetails() {
@@ -72,7 +72,7 @@ public class ConditionalAccessTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the scenarios property value. The scenarios property
-     * @return a templateScenarios
+     * @return a TemplateScenarios
      */
     @javax.annotation.Nullable
     public TemplateScenarios getScenarios() {
