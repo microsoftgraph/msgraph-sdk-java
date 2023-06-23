@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.62.0] - 2023-06-23
+
+### Changed 
+
+- Generated v1.0 models and request builders using Typewriter.
+
 ## [5.61.0] - 2023-06-16
 
 ### Changed 

@@ -67,6 +67,15 @@ public class Session extends Entity implements IJsonBackedObject {
     public FailureInfo failureInfo;
 
     /**
+     * The Is Test.
+     * Specifies whether the session is a test.
+     */
+    @SerializedName(value = "isTest", alternate = {"IsTest"})
+    @Expose
+	@Nullable
+    public Boolean isTest;
+
+    /**
      * The Modalities.
      * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      */
