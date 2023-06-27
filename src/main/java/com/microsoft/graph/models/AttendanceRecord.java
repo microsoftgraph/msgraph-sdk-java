@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttendanceRecord extends Entity implements Parsable {
-    /** List of time periods between joining and leaving a meeting. */
+    /**
+     * List of time periods between joining and leaving a meeting.
+     */
     private java.util.List<AttendanceInterval> attendanceIntervals;
-    /** Email address of the user associated with this attendance record. */
+    /**
+     * Email address of the user associated with this attendance record.
+     */
     private String emailAddress;
-    /** Identity of the user associated with this attendance record. */
+    /**
+     * Identity of the user associated with this attendance record.
+     */
     private Identity identity;
-    /** Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer. */
+    /**
+     * Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
+     */
     private String role;
-    /** Total duration of the attendances in seconds. */
+    /**
+     * Total duration of the attendances in seconds.
+     */
     private Integer totalAttendanceInSeconds;
     /**
      * Instantiates a new attendanceRecord and sets the default values.

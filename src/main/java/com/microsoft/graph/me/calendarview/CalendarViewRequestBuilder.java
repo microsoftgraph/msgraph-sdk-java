@@ -23,12 +23,16 @@ import java.util.Objects;
  * Provides operations to manage the calendarView property of the microsoft.graph.user entity.
  */
 public class CalendarViewRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the delta method. */
+    /**
+     * Provides operations to call the delta method.
+     */
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
@@ -137,37 +141,55 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * The calendar view for the calendar. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00 */
+        /**
+         * The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+         */
         @javax.annotation.Nullable
         public String endDateTime;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00 */
+        /**
+         * The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
+         */
         @javax.annotation.Nullable
         public String startDateTime;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -176,7 +198,9 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

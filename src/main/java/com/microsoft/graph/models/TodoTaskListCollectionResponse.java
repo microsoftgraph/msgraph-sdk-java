@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TodoTaskListCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TodoTaskList> value;
     /**
      * Instantiates a new TodoTaskListCollectionResponse and sets the default values.

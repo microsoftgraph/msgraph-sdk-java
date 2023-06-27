@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the me property of the microsoft.graph.educationRoot entity.
  */
 public class MeRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the assignments property of the microsoft.graph.educationUser entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the classes property of the microsoft.graph.educationUser entity. */
+    /**
+     * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
+     */
     @javax.annotation.Nonnull
     public ClassesRequestBuilder classes() {
         return new ClassesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity. */
+    /**
+     * Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity.
+     */
     @javax.annotation.Nonnull
     public RubricsRequestBuilder rubrics() {
         return new RubricsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the schools property of the microsoft.graph.educationUser entity. */
+    /**
+     * Provides operations to manage the schools property of the microsoft.graph.educationUser entity.
+     */
     @javax.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
         return new SchoolsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity. */
+    /**
+     * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
+     */
     @javax.annotation.Nonnull
     public TaughtClassesRequestBuilder taughtClasses() {
         return new TaughtClassesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the user property of the microsoft.graph.educationUser entity. */
+    /**
+     * Provides operations to manage the user property of the microsoft.graph.educationUser entity.
+     */
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);
@@ -287,11 +299,15 @@ public class MeRequestBuilder extends BaseRequestBuilder {
      * Get me from education
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -300,7 +316,9 @@ public class MeRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

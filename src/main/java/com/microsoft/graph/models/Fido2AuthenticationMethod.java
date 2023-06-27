@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator. */
+    /**
+     * Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+     */
     private String aaGuid;
-    /** The attestation certificate(s) attached to this security key. */
+    /**
+     * The attestation certificate(s) attached to this security key.
+     */
     private java.util.List<String> attestationCertificates;
-    /** The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested. */
+    /**
+     * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+     */
     private AttestationLevel attestationLevel;
-    /** The timestamp when this key was registered to the user. */
+    /**
+     * The timestamp when this key was registered to the user.
+     */
     private OffsetDateTime createdDateTime;
-    /** The display name of the key as given by the user. */
+    /**
+     * The display name of the key as given by the user.
+     */
     private String displayName;
-    /** The manufacturer-assigned model of the FIDO2 security key. */
+    /**
+     * The manufacturer-assigned model of the FIDO2 security key.
+     */
     private String model;
     /**
      * Instantiates a new Fido2AuthenticationMethod and sets the default values.

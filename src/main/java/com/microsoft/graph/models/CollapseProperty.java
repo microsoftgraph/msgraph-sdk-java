@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CollapseProperty implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required. */
+    /**
+     * Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
+     */
     private java.util.List<String> fields;
-    /** Defines a maximum limit count for this field. This numeric value must be a positive integer. Required. */
+    /**
+     * Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
+     */
     private Integer limit;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new CollapseProperty and sets the default values.

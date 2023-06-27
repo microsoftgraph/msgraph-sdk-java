@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlertComment implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The comment text. */
+    /**
+     * The comment text.
+     */
     private String comment;
-    /** The person or app name that submitted the comment. */
+    /**
+     * The person or app name that submitted the comment.
+     */
     private String createdByDisplayName;
-    /** The time when the comment was submitted. */
+    /**
+     * The time when the comment was submitted.
+     */
     private OffsetDateTime createdDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new alertComment and sets the default values.

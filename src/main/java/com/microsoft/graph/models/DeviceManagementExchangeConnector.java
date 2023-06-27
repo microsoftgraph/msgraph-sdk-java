@@ -11,23 +11,41 @@ import java.util.Objects;
  * Entity which represents a connection to an Exchange environment.
  */
 public class DeviceManagementExchangeConnector extends Entity implements Parsable {
-    /** The name of the server hosting the Exchange Connector. */
+    /**
+     * The name of the server hosting the Exchange Connector.
+     */
     private String connectorServerName;
-    /** An alias assigned to the Exchange server */
+    /**
+     * An alias assigned to the Exchange server
+     */
     private String exchangeAlias;
-    /** The type of Exchange Connector. */
+    /**
+     * The type of Exchange Connector.
+     */
     private DeviceManagementExchangeConnectorType exchangeConnectorType;
-    /** Exchange Organization to the Exchange server */
+    /**
+     * Exchange Organization to the Exchange server
+     */
     private String exchangeOrganization;
-    /** Last sync time for the Exchange Connector */
+    /**
+     * Last sync time for the Exchange Connector
+     */
     private OffsetDateTime lastSyncDateTime;
-    /** Email address used to configure the Service To Service Exchange Connector. */
+    /**
+     * Email address used to configure the Service To Service Exchange Connector.
+     */
     private String primarySmtpAddress;
-    /** The name of the Exchange server. */
+    /**
+     * The name of the Exchange server.
+     */
     private String serverName;
-    /** The current status of the Exchange Connector. */
+    /**
+     * The current status of the Exchange Connector.
+     */
     private DeviceManagementExchangeConnectorStatus status;
-    /** The version of the ExchangeConnectorAgent */
+    /**
+     * The version of the ExchangeConnectorAgent
+     */
     private String version;
     /**
      * Instantiates a new deviceManagementExchangeConnector and sets the default values.

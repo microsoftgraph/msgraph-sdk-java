@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BetaInvPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The A property */
+    /**
+     * The A property
+     */
     private Json a;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The alpha property */
+    /**
+     * The alpha property
+     */
     private Json alpha;
-    /** The B property */
+    /**
+     * The B property
+     */
     private Json b;
-    /** The beta property */
+    /**
+     * The beta property
+     */
     private Json beta;
-    /** The probability property */
+    /**
+     * The probability property
+     */
     private Json probability;
     /**
      * Instantiates a new BetaInvPostRequestBody and sets the default values.

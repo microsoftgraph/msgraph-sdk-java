@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharedWithChannelTeamInfoCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<SharedWithChannelTeamInfo> value;
     /**
      * Instantiates a new SharedWithChannelTeamInfoCollectionResponse and sets the default values.

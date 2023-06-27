@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The conditions property */
+    /**
+     * The conditions property
+     */
     private ConditionalAccessConditionSet conditions;
-    /** Represents grant controls that must be fulfilled for the policy. */
+    /**
+     * Represents grant controls that must be fulfilled for the policy.
+     */
     private ConditionalAccessGrantControls grantControls;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Represents a complex type of session controls that is enforced after sign-in. */
+    /**
+     * Represents a complex type of session controls that is enforced after sign-in.
+     */
     private ConditionalAccessSessionControls sessionControls;
     /**
      * Instantiates a new ConditionalAccessPolicyDetail and sets the default values.

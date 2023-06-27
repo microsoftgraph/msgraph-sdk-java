@@ -9,23 +9,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The expirationDateTime property */
+    /**
+     * The expirationDateTime property
+     */
     private String expirationDateTime;
-    /** The message property */
+    /**
+     * The message property
+     */
     private String message;
-    /** The password property */
+    /**
+     * The password property
+     */
     private String password;
-    /** The recipients property */
+    /**
+     * The recipients property
+     */
     private java.util.List<DriveRecipient> recipients;
-    /** The requireSignIn property */
+    /**
+     * The requireSignIn property
+     */
     private Boolean requireSignIn;
-    /** The retainInheritedPermissions property */
+    /**
+     * The retainInheritedPermissions property
+     */
     private Boolean retainInheritedPermissions;
-    /** The roles property */
+    /**
+     * The roles property
+     */
     private java.util.List<String> roles;
-    /** The sendInvitation property */
+    /**
+     * The sendInvitation property
+     */
     private Boolean sendInvitation;
     /**
      * Instantiates a new invitePostRequestBody and sets the default values.

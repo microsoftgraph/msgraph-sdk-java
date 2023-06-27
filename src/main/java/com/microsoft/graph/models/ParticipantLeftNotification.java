@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantLeftNotification extends Entity implements Parsable {
-    /** The call property */
+    /**
+     * The call property
+     */
     private Call call;
-    /** ID of the participant under the policy who has left the meeting. */
+    /**
+     * ID of the participant under the policy who has left the meeting.
+     */
     private String participantId;
     /**
      * Instantiates a new ParticipantLeftNotification and sets the default values.

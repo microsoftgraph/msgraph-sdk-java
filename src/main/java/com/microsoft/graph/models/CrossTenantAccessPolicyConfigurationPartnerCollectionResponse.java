@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationPartnerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<CrossTenantAccessPolicyConfigurationPartner> value;
     /**
      * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerCollectionResponse and sets the default values.

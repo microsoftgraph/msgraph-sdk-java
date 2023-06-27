@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenTypeExtension extends Extension implements Parsable {
-    /** A unique text identifier for an open type data extension. Optional. */
+    /**
+     * A unique text identifier for an open type data extension. Optional.
+     */
     private String extensionName;
     /**
      * Instantiates a new OpenTypeExtension and sets the default values.

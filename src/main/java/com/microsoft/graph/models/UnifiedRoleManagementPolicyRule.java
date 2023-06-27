@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
-    /** Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne). */
+    /**
+     * Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
+     */
     private UnifiedRoleManagementPolicyRuleTarget target;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRule and sets the default values.

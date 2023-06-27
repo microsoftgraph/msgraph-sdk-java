@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EoMonthPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The months property */
+    /**
+     * The months property
+     */
     private Json months;
-    /** The startDate property */
+    /**
+     * The startDate property
+     */
     private Json startDate;
     /**
      * Instantiates a new eoMonthPostRequestBody and sets the default values.

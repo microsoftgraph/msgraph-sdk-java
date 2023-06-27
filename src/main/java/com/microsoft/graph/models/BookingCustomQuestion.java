@@ -10,11 +10,17 @@ import java.util.Objects;
  * Represents a custom question of the business.
  */
 public class BookingCustomQuestion extends Entity implements Parsable {
-    /** The expected answer type. The possible values are: text, radioButton, unknownFutureValue. */
+    /**
+     * The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
+     */
     private AnswerInputType answerInputType;
-    /** List of possible answer values. */
+    /**
+     * List of possible answer values.
+     */
     private java.util.List<String> answerOptions;
-    /** The question. */
+    /**
+     * The question.
+     */
     private String displayName;
     /**
      * Instantiates a new bookingCustomQuestion and sets the default values.

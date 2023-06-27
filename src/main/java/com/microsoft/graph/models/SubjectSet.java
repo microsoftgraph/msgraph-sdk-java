@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.identitygovernance.RuleBasedSubjectSet;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,9 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectSet implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new subjectSet and sets the default values.
@@ -36,6 +41,7 @@ public class SubjectSet implements AdditionalDataHolder, Parsable {
                 case "#microsoft.graph.connectedOrganizationMembers": return new ConnectedOrganizationMembers();
                 case "#microsoft.graph.externalSponsors": return new ExternalSponsors();
                 case "#microsoft.graph.groupMembers": return new GroupMembers();
+                case "#microsoft.graph.identityGovernance.ruleBasedSubjectSet": return new RuleBasedSubjectSet();
                 case "#microsoft.graph.internalSponsors": return new InternalSponsors();
                 case "#microsoft.graph.requestorManager": return new RequestorManager();
                 case "#microsoft.graph.singleServicePrincipal": return new SingleServicePrincipal();

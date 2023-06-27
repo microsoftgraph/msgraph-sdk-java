@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The date and time when the Temporary Access Pass was created. */
+    /**
+     * The date and time when the Temporary Access Pass was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The state of the authentication method that indicates whether it's currently usable by the user. */
+    /**
+     * The state of the authentication method that indicates whether it's currently usable by the user.
+     */
     private Boolean isUsable;
-    /** Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime. */
+    /**
+     * Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
+     */
     private Boolean isUsableOnce;
-    /** The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days). */
+    /**
+     * The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
+     */
     private Integer lifetimeInMinutes;
-    /** Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed. */
+    /**
+     * Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
+     */
     private String methodUsabilityReason;
-    /** The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced. */
+    /**
+     * The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
+     */
     private OffsetDateTime startDateTime;
-    /** The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET. */
+    /**
+     * The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
+     */
     private String temporaryAccessPass;
     /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** For internal use only */
+    /**
+     * For internal use only.
+     */
     private String identityProvider;
-    /** For internal use only */
+    /**
+     * For internal use only.
+     */
     private byte[] key;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** For internal use only */
+    /**
+     * For internal use only.
+     */
     private Integer type;
     /**
      * Instantiates a new AlternativeSecurityId and sets the default values.
@@ -58,7 +68,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityProvider property value. For internal use only
+     * Gets the identityProvider property value. For internal use only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +76,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         return this.identityProvider;
     }
     /**
-     * Gets the key property value. For internal use only
+     * Gets the key property value. For internal use only.
      * @return a base64url
      */
     @javax.annotation.Nullable
@@ -82,7 +92,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the type property value. For internal use only
+     * Gets the type property value. For internal use only.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -113,7 +123,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the identityProvider property value. For internal use only
+     * Sets the identityProvider property value. For internal use only.
      * @param value Value to set for the identityProvider property.
      * @return a void
      */
@@ -122,7 +132,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         this.identityProvider = value;
     }
     /**
-     * Sets the key property value. For internal use only
+     * Sets the key property value. For internal use only.
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -140,7 +150,7 @@ public class AlternativeSecurityId implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the type property value. For internal use only
+     * Sets the type property value. For internal use only.
      * @param value Value to set for the type property.
      * @return a void
      */

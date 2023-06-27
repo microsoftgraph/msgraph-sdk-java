@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WebApp extends MobileApp implements Parsable {
-    /** The web app URL. This property cannot be PATCHed. */
+    /**
+     * The web app URL. This property cannot be PATCHed.
+     */
     private String appUrl;
-    /** Whether or not to use managed browser. This property is only applicable for Android and IOS. */
+    /**
+     * Whether or not to use managed browser. This property is only applicable for Android and IOS.
+     */
     private Boolean useManagedBrowser;
     /**
      * Instantiates a new WebApp and sets the default values.

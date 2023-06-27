@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewReviewer extends Entity implements Parsable {
-    /** The date when the reviewer was added for the access review. */
+    /**
+     * The date when the reviewer was added for the access review.
+     */
     private OffsetDateTime createdDateTime;
-    /** Name of reviewer. */
+    /**
+     * Name of reviewer.
+     */
     private String displayName;
-    /** User principal name of the reviewer. */
+    /**
+     * User principal name of the reviewer.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new accessReviewReviewer and sets the default values.

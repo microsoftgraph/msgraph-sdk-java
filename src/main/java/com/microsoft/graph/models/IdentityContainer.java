@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityContainer extends Entity implements Parsable {
-    /** Represents entry point for API connectors. */
+    /**
+     * Represents entry point for API connectors.
+     */
     private java.util.List<IdentityApiConnector> apiConnectors;
-    /** Represents entry point for B2X/self-service sign-up identity userflows. */
+    /**
+     * Represents entry point for B2X/self-service sign-up identity userflows.
+     */
     private java.util.List<B2xIdentityUserFlow> b2xUserFlows;
-    /** the entry point for the Conditional Access (CA) object model. */
+    /**
+     * the entry point for the Conditional Access (CA) object model.
+     */
     private ConditionalAccessRoot conditionalAccess;
-    /** The identityProviders property */
+    /**
+     * The identityProviders property
+     */
     private java.util.List<IdentityProviderBase> identityProviders;
-    /** Represents entry point for identity userflow attributes. */
+    /**
+     * Represents entry point for identity userflow attributes.
+     */
     private java.util.List<IdentityUserFlowAttribute> userFlowAttributes;
     /**
      * Instantiates a new IdentityContainer and sets the default values.

@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceHealthIssuePost implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The published time of the post. */
+    /**
+     * The published time of the post.
+     */
     private OffsetDateTime createdDateTime;
-    /** The content of the service issue post. The supported value for the contentType property is html. */
+    /**
+     * The content of the service issue post. The supported value for the contentType property is html.
+     */
     private ItemBody description;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue. */
+    /**
+     * The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
+     */
     private PostType postType;
     /**
      * Instantiates a new ServiceHealthIssuePost and sets the default values.

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains value for delivery optimization priority. */
+/**
+ * Contains value for delivery optimization priority.
+ */
 public enum Win32LobAppDeliveryOptimizationPriority implements ValuedEnum {
     /** Not configured or background normal delivery optimization priority. */
     NotConfigured("notConfigured"),

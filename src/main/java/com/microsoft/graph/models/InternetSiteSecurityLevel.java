@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for internet site security level. */
+/**
+ * Possible values for internet site security level.
+ */
 public enum InternetSiteSecurityLevel implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

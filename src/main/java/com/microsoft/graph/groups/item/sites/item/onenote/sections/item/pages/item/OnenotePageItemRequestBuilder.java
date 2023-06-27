@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
  */
 public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the media for the group entity. */
+    /**
+     * Provides operations to manage the media for the group entity.
+     */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the copyToSection method. */
+    /**
+     * Provides operations to call the copyToSection method.
+     */
     @javax.annotation.Nonnull
     public CopyToSectionRequestBuilder copyToSection() {
         return new CopyToSectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the onenotePatchContent method. */
+    /**
+     * Provides operations to call the onenotePatchContent method.
+     */
     @javax.annotation.Nonnull
     public OnenotePatchContentRequestBuilder onenotePatchContent() {
         return new OnenotePatchContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the parentNotebook property of the microsoft.graph.onenotePage entity. */
+    /**
+     * Provides operations to manage the parentNotebook property of the microsoft.graph.onenotePage entity.
+     */
     @javax.annotation.Nonnull
     public ParentNotebookRequestBuilder parentNotebook() {
         return new ParentNotebookRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the parentSection property of the microsoft.graph.onenotePage entity. */
+    /**
+     * Provides operations to manage the parentSection property of the microsoft.graph.onenotePage entity.
+     */
     @javax.annotation.Nonnull
     public ParentSectionRequestBuilder parentSection() {
         return new ParentSectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the preview method. */
+    /**
+     * Provides operations to call the preview method.
+     */
     @javax.annotation.Nonnull
     public PreviewRequestBuilder preview() {
         return new PreviewRequestBuilder(pathParameters, requestAdapter);
@@ -287,11 +299,15 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * The collection of pages in the section.  Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -300,7 +316,9 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

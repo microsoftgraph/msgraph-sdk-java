@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
-    /** Value used when configuring the answer/destination/value of the MX record at the DNS host. */
+    /**
+     * Value used when configuring the answer/destination/value of the MX record at the DNS host.
+     */
     private String mailExchange;
-    /** Value used when configuring the Preference/Priority property of the MX record at the DNS host. */
+    /**
+     * Value used when configuring the Preference/Priority property of the MX record at the DNS host.
+     */
     private Integer preference;
     /**
      * Instantiates a new DomainDnsMxRecord and sets the default values.

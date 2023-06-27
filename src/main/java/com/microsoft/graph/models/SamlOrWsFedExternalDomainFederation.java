@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements Parsable {
-    /** Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq). */
+    /**
+     * Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
+     */
     private java.util.List<ExternalDomainName> domains;
     /**
      * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.

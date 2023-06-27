@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PendingContentUpdate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Date and time the pending binary operation was queued in UTC time. Read-only. */
+    /**
+     * Date and time the pending binary operation was queued in UTC time. Read-only.
+     */
     private OffsetDateTime queuedDateTime;
     /**
      * Instantiates a new pendingContentUpdate and sets the default values.

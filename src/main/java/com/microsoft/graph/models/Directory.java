@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Directory extends Entity implements Parsable {
-    /** Conceptual container for user and group directory objects. */
+    /**
+     * Conceptual container for user and group directory objects.
+     */
     private java.util.List<AdministrativeUnit> administrativeUnits;
-    /** Group of related custom security attribute definitions. */
+    /**
+     * Group of related custom security attribute definitions.
+     */
     private java.util.List<AttributeSet> attributeSets;
-    /** Schema of a custom security attributes (key-value pairs). */
+    /**
+     * Schema of a custom security attributes (key-value pairs).
+     */
     private java.util.List<CustomSecurityAttributeDefinition> customSecurityAttributeDefinitions;
-    /** Recently deleted items. Read-only. Nullable. */
+    /**
+     * Recently deleted items. Read-only. Nullable.
+     */
     private java.util.List<DirectoryObject> deletedItems;
-    /** Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol. */
+    /**
+     * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
+     */
     private java.util.List<IdentityProviderBase> federationConfigurations;
-    /** A container for on-premises directory synchronization functionalities that are available for the organization. */
+    /**
+     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     */
     private java.util.List<OnPremisesDirectorySynchronization> onPremisesSynchronization;
     /**
      * Instantiates a new Directory and sets the default values.

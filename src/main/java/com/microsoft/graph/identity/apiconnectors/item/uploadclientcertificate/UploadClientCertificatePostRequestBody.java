@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The password property */
+    /**
+     * The password property
+     */
     private String password;
-    /** The pkcs12Value property */
+    /**
+     * The pkcs12Value property
+     */
     private String pkcs12Value;
     /**
      * Instantiates a new uploadClientCertificatePostRequestBody and sets the default values.

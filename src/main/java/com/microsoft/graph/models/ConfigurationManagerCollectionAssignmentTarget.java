@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
-    /** The collection Id that is the target of the assignment. */
+    /**
+     * The collection Id that is the target of the assignment.
+     */
     private String collectionId;
     /**
      * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.

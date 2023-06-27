@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** Description for the team. */
+    /**
+     * Description for the team.
+     */
     private String teamDescription;
-    /** Display name of the team. */
+    /**
+     * Display name of the team.
+     */
     private String teamDisplayName;
-    /** Unique identifier of the team. */
+    /**
+     * Unique identifier of the team.
+     */
     private String teamId;
     /**
      * Instantiates a new TeamCreatedEventMessageDetail and sets the default values.

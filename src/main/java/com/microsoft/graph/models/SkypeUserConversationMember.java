@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SkypeUserConversationMember extends ConversationMember implements Parsable {
-    /** Skype ID of the user. */
+    /**
+     * Skype ID of the user.
+     */
     private String skypeId;
     /**
      * Instantiates a new SkypeUserConversationMember and sets the default values.

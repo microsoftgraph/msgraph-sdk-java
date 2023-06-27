@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The error if the status is not successful. */
+    /**
+     * The error if the status is not successful.
+     */
     private PublicError error;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The status of the distribution. The possible values are: pending, error, success, notAvaliable. */
+    /**
+     * The status of the distribution. The possible values are: pending, error, success, notAvaliable.
+     */
     private EventStatusType status;
     /**
      * Instantiates a new retentionEventStatus and sets the default values.

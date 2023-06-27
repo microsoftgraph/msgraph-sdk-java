@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingStringXml extends OmaSetting implements Parsable {
-    /** File name associated with the Value property (.xml). */
+    /**
+     * File name associated with the Value property (.xml).
+     */
     private String fileName;
-    /** Value. (UTF8 encoded byte array) */
+    /**
+     * Value. (UTF8 encoded byte array)
+     */
     private byte[] value;
     /**
      * Instantiates a new OmaSettingStringXml and sets the default values.

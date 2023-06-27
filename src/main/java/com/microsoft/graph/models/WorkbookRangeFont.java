@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookRangeFont extends Entity implements Parsable {
-    /** Represents the bold status of font. */
+    /**
+     * Represents the bold status of font.
+     */
     private Boolean bold;
-    /** HTML color code representation of the text color. E.g. #FF0000 represents Red. */
+    /**
+     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+     */
     private String color;
-    /** Represents the italic status of the font. */
+    /**
+     * Represents the italic status of the font.
+     */
     private Boolean italic;
-    /** Font name (e.g. 'Calibri') */
+    /**
+     * Font name (e.g. 'Calibri')
+     */
     private String name;
-    /** Font size. */
+    /**
+     * Font size.
+     */
     private Double size;
-    /** Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant. */
+    /**
+     * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     */
     private String underline;
     /**
      * Instantiates a new workbookRangeFont and sets the default values.

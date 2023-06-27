@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IntRatePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The basis property */
+    /**
+     * The basis property
+     */
     private Json basis;
-    /** The investment property */
+    /**
+     * The investment property
+     */
     private Json investment;
-    /** The maturity property */
+    /**
+     * The maturity property
+     */
     private Json maturity;
-    /** The redemption property */
+    /**
+     * The redemption property
+     */
     private Json redemption;
-    /** The settlement property */
+    /**
+     * The settlement property
+     */
     private Json settlement;
     /**
      * Instantiates a new intRatePostRequestBody and sets the default values.

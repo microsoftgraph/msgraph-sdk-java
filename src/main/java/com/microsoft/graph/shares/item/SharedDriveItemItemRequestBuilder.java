@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the collection of sharedDriveItem entities.
  */
 public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity. */
+    /**
+     * Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity.
+     */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity. */
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
+     */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the list property of the microsoft.graph.sharedDriveItem entity. */
+    /**
+     * Provides operations to manage the list property of the microsoft.graph.sharedDriveItem entity.
+     */
     @javax.annotation.Nonnull
     public ListRequestBuilder list() {
         return new ListRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the listItem property of the microsoft.graph.sharedDriveItem entity. */
+    /**
+     * Provides operations to manage the listItem property of the microsoft.graph.sharedDriveItem entity.
+     */
     @javax.annotation.Nonnull
     public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity. */
+    /**
+     * Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity.
+     */
     @javax.annotation.Nonnull
     public PermissionRequestBuilder permission() {
         return new PermissionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the root property of the microsoft.graph.sharedDriveItem entity. */
+    /**
+     * Provides operations to manage the root property of the microsoft.graph.sharedDriveItem entity.
+     */
     @javax.annotation.Nonnull
     public RootRequestBuilder root() {
         return new RootRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the site property of the microsoft.graph.sharedDriveItem entity. */
+    /**
+     * Provides operations to manage the site property of the microsoft.graph.sharedDriveItem entity.
+     */
     @javax.annotation.Nonnull
     public SiteRequestBuilder site() {
         return new SiteRequestBuilder(pathParameters, requestAdapter);
@@ -307,11 +325,15 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Access a shared DriveItem or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -320,7 +342,9 @@ public class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable {
-    /** The zone or region where the resource is located. */
+    /**
+     * The zone or region where the resource is located.
+     */
     private String location;
-    /** The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue. */
+    /**
+     * The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
+     */
     private GoogleCloudLocationType locationType;
-    /** The Google project ID as defined by the user. */
+    /**
+     * The Google project ID as defined by the user.
+     */
     private String projectId;
-    /** The project number assigned by Google. */
+    /**
+     * The project number assigned by Google.
+     */
     private Long projectNumber;
-    /** The name of the resource. */
+    /**
+     * The name of the resource.
+     */
     private String resourceName;
-    /** The type of the resource. */
+    /**
+     * The type of the resource.
+     */
     private String resourceType;
     /**
      * Instantiates a new GoogleCloudResourceEvidence and sets the default values.

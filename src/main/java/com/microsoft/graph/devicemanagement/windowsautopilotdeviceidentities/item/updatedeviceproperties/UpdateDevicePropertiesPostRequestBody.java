@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The addressableUserName property */
+    /**
+     * The addressableUserName property
+     */
     private String addressableUserName;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The groupTag property */
+    /**
+     * The groupTag property
+     */
     private String groupTag;
-    /** The userPrincipalName property */
+    /**
+     * The userPrincipalName property
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new updateDevicePropertiesPostRequestBody and sets the default values.

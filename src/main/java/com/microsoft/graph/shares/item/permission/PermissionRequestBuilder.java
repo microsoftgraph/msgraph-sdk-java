@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity.
  */
 public class PermissionRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the grant method. */
+    /**
+     * Provides operations to call the grant method.
+     */
     @javax.annotation.Nonnull
     public GrantRequestBuilder grant() {
         return new GrantRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class PermissionRequestBuilder extends BaseRequestBuilder {
      * Used to access the permission representing the underlying sharing link
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class PermissionRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

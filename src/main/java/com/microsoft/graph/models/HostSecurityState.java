@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class HostSecurityState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com). */
+    /**
+     * Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
+     */
     private String fqdn;
-    /** The isAzureAdJoined property */
+    /**
+     * The isAzureAdJoined property
+     */
     private Boolean isAzureAdJoined;
-    /** The isAzureAdRegistered property */
+    /**
+     * The isAzureAdRegistered property
+     */
     private Boolean isAzureAdRegistered;
-    /** True if the host is domain joined to an on-premises Active Directory domain. */
+    /**
+     * True if the host is domain joined to an on-premises Active Directory domain.
+     */
     private Boolean isHybridAzureDomainJoined;
-    /** The local host name, without the DNS domain name. */
+    /**
+     * The local host name, without the DNS domain name.
+     */
     private String netBiosName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Host Operating System. (For example, Windows10, MacOS, RHEL, etc.). */
+    /**
+     * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     */
     private String os;
-    /** Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert. */
+    /**
+     * Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
+     */
     private String privateIpAddress;
-    /** Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert. */
+    /**
+     * Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
+     */
     private String publicIpAddress;
-    /** Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
+     */
     private String riskScore;
     /**
      * Instantiates a new hostSecurityState and sets the default values.

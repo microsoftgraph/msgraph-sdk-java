@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecurrencePattern implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly. */
+    /**
+     * The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
+     */
     private Integer dayOfMonth;
-    /** A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly. */
+    /**
+     * A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
+     */
     private java.util.List<DayOfWeek> daysOfWeek;
-    /** The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly. */
+    /**
+     * The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
+     */
     private DayOfWeek firstDayOfWeek;
-    /** Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly. */
+    /**
+     * Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
+     */
     private WeekIndex index;
-    /** The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required. */
+    /**
+     * The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
+     */
     private Integer interval;
-    /** The month in which the event occurs.  This is a number from 1 to 12. */
+    /**
+     * The month in which the event occurs.  This is a number from 1 to 12.
+     */
     private Integer month;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property. */
+    /**
+     * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
+     */
     private RecurrencePatternType type;
     /**
      * Instantiates a new recurrencePattern and sets the default values.

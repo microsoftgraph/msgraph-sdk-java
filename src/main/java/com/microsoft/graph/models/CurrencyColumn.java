@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CurrencyColumn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Specifies the locale from which to infer the currency symbol. */
+    /**
+     * Specifies the locale from which to infer the currency symbol.
+     */
     private String locale;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new currencyColumn and sets the default values.

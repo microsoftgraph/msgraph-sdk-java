@@ -25,27 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
  */
 public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity. */
+    /**
+     * Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public AppsRequestBuilder apps() {
         return new AppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the assign method. */
+    /**
+     * Provides operations to call the assign method.
+     */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deploymentSummary property of the microsoft.graph.targetedManagedAppConfiguration entity. */
+    /**
+     * Provides operations to manage the deploymentSummary property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public DeploymentSummaryRequestBuilder deploymentSummary() {
         return new DeploymentSummaryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the targetApps method. */
+    /**
+     * Provides operations to call the targetApps method.
+     */
     @javax.annotation.Nonnull
     public TargetAppsRequestBuilder targetApps() {
         return new TargetAppsRequestBuilder(pathParameters, requestAdapter);
@@ -71,8 +81,9 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -89,9 +100,10 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -108,8 +120,9 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> get() {
@@ -126,9 +139,10 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -145,9 +159,10 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> patch(@javax.annotation.Nonnull final TargetedManagedAppConfiguration body) {
@@ -164,10 +179,11 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> patch(@javax.annotation.Nonnull final TargetedManagedAppConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +201,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -193,7 +209,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * Deletes a targetedManagedAppConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +228,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +236,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -241,7 +257,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -250,7 +266,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * Update the properties of a targetedManagedAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -278,14 +294,18 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Targeted managed app configurations.
+     * Read properties and relationships of the targetedManagedAppConfiguration object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -294,7 +314,9 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable {
-    /** A value indicating whether to search the 32-bit registry on 64-bit systems. */
+    /**
+     * A value indicating whether to search the 32-bit registry on 64-bit systems.
+     */
     private Boolean check32BitOn64System;
-    /** The registry comparison value. */
+    /**
+     * The registry comparison value.
+     */
     private String comparisonValue;
-    /** The full path of the registry entry containing the value to detect. */
+    /**
+     * The full path of the registry entry containing the value to detect.
+     */
     private String keyPath;
-    /** Contains all supported registry data detection type. */
+    /**
+     * Contains all supported registry data detection type.
+     */
     private Win32LobAppRegistryRuleOperationType operationType;
-    /** Contains properties for detection operator. */
+    /**
+     * Contains properties for detection operator.
+     */
     private Win32LobAppRuleOperator operator;
-    /** The name of the registry value to detect. */
+    /**
+     * The name of the registry value to detect.
+     */
     private String valueName;
     /**
      * Instantiates a new Win32LobAppRegistryRule and sets the default values.

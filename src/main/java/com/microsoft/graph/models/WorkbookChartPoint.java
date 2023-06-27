@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartPoint extends Entity implements Parsable {
-    /** Encapsulates the format properties chart point. Read-only. */
+    /**
+     * Encapsulates the format properties chart point. Read-only.
+     */
     private WorkbookChartPointFormat format;
-    /** Returns the value of a chart point. Read-only. */
+    /**
+     * Returns the value of a chart point. Read-only.
+     */
     private Json value;
     /**
      * Instantiates a new workbookChartPoint and sets the default values.

@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UpdateAllowedCombinationsResult implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Information about why the updateAllowedCombinations action was successful or failed. */
+    /**
+     * Information about why the updateAllowedCombinations action was successful or failed.
+     */
     private String additionalInformation;
-    /** References to existing Conditional Access policies that use this authentication strength. */
+    /**
+     * References to existing Conditional Access policies that use this authentication strength.
+     */
     private java.util.List<String> conditionalAccessReferences;
-    /** The list of current authentication method combinations allowed by the authentication strength. */
+    /**
+     * The list of current authentication method combinations allowed by the authentication strength.
+     */
     private java.util.List<AuthenticationMethodModes> currentCombinations;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action. */
+    /**
+     * The list of former authentication method combinations allowed by the authentication strength before they were updated through the updateAllowedCombinations action.
+     */
     private java.util.List<AuthenticationMethodModes> previousCombinations;
     /**
      * Instantiates a new updateAllowedCombinationsResult and sets the default values.

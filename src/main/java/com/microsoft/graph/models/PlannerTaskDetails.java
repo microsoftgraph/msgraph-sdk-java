@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerTaskDetails extends Entity implements Parsable {
-    /** The collection of checklist items on the task. */
+    /**
+     * The collection of checklist items on the task.
+     */
     private PlannerChecklistItems checklist;
-    /** Description of the task. */
+    /**
+     * Description of the task.
+     */
     private String description;
-    /** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task. */
+    /**
+     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     */
     private PlannerPreviewType previewType;
-    /** The collection of references on the task. */
+    /**
+     * The collection of references on the task.
+     */
     private PlannerExternalReferences references;
     /**
      * Instantiates a new plannerTaskDetails and sets the default values.

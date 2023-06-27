@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** An array that shows the availability status of each attendee for this meeting suggestion. */
+    /**
+     * An array that shows the availability status of each attendee for this meeting suggestion.
+     */
     private java.util.List<AttendeeAvailability> attendeeAvailability;
-    /** A percentage that represents the likelhood of all the attendees attending. */
+    /**
+     * A percentage that represents the likelhood of all the attendees attending.
+     */
     private Double confidence;
-    /** An array that specifies the name and geographic location of each meeting location for this meeting suggestion. */
+    /**
+     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
+     */
     private java.util.List<Location> locations;
-    /** A time period suggested for the meeting. */
+    /**
+     * A time period suggested for the meeting.
+     */
     private TimeSlot meetingTimeSlot;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence. */
+    /**
+     * Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
+     */
     private Integer order;
-    /** Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /**
+     * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     */
     private FreeBusyStatus organizerAvailability;
-    /** Reason for suggesting the meeting time. */
+    /**
+     * Reason for suggesting the meeting time.
+     */
     private String suggestionReason;
     /**
      * Instantiates a new MeetingTimeSuggestion and sets the default values.

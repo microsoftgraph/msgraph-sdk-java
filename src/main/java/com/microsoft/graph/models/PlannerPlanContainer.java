@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The identifier of the resource that contains the plan. Optional. */
+    /**
+     * The identifier of the resource that contains the plan. Optional.
+     */
     private String containerId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional. */
+    /**
+     * The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
+     */
     private PlannerContainerType type;
-    /** The full canonical URL of the container. Optional. */
+    /**
+     * The full canonical URL of the container. Optional.
+     */
     private String url;
     /**
      * Instantiates a new plannerPlanContainer and sets the default values.

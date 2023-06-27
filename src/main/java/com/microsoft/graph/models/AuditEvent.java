@@ -8,34 +8,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
-/**
- * A class containing the properties for Audit Event.
- */
 public class AuditEvent extends Entity implements Parsable {
-    /** Friendly name of the activity. */
+    /**
+     * Friendly name of the activity.
+     */
     private String activity;
-    /** The date time in UTC when the activity was performed. */
+    /**
+     * The date time in UTC when the activity was performed.
+     */
     private OffsetDateTime activityDateTime;
-    /** The HTTP operation type of the activity. */
+    /**
+     * The HTTP operation type of the activity.
+     */
     private String activityOperationType;
-    /** The result of the activity. */
+    /**
+     * The result of the activity.
+     */
     private String activityResult;
-    /** The type of activity that was being performed. */
+    /**
+     * The type of activity that was being performed.
+     */
     private String activityType;
-    /** AAD user and application that are associated with the audit event. */
+    /**
+     * AAD user and application that are associated with the audit event.
+     */
     private AuditActor actor;
-    /** Audit category. */
+    /**
+     * Audit category.
+     */
     private String category;
-    /** Component name. */
+    /**
+     * Component name.
+     */
     private String componentName;
-    /** The client request Id that is used to correlate activity within the system. */
+    /**
+     * The client request Id that is used to correlate activity within the system.
+     */
     private UUID correlationId;
-    /** Event display name. */
+    /**
+     * Event display name.
+     */
     private String displayName;
-    /** Resources being modified. */
+    /**
+     * Resources being modified.
+     */
     private java.util.List<AuditResource> resources;
     /**
-     * Instantiates a new auditEvent and sets the default values.
+     * Instantiates a new AuditEvent and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -45,7 +64,7 @@ public class AuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditEvent
+     * @return a AuditEvent
      */
     @javax.annotation.Nonnull
     public static AuditEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

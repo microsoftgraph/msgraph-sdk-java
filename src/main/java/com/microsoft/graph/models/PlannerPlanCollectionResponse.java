@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerPlanCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PlannerPlan> value;
     /**
      * Instantiates a new PlannerPlanCollectionResponse and sets the default values.

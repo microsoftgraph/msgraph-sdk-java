@@ -8,22 +8,36 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Printer extends PrinterBase implements Parsable {
-    /** The connectors that are associated with the printer. */
+    /**
+     * The connectors that are associated with the printer.
+     */
     private java.util.List<PrintConnector> connectors;
-    /** True if the printer has a physical device for printing. Read-only. */
+    /**
+     * True if the printer has a physical device for printing. Read-only.
+     */
     private Boolean hasPhysicalDevice;
-    /** True if the printer is shared; false otherwise. Read-only. */
+    /**
+     * True if the printer is shared; false otherwise. Read-only.
+     */
     private Boolean isShared;
-    /** The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only. */
+    /**
+     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
+     */
     private OffsetDateTime lastSeenDateTime;
-    /** The DateTimeOffset when the printer was registered. Read-only. */
+    /**
+     * The DateTimeOffset when the printer was registered. Read-only.
+     */
     private OffsetDateTime registeredDateTime;
-    /** The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable. */
+    /**
+     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
+     */
     private java.util.List<PrinterShare> shares;
-    /** A list of task triggers that are associated with the printer. */
+    /**
+     * A list of task triggers that are associated with the printer.
+     */
     private java.util.List<PrintTaskTrigger> taskTriggers;
     /**
-     * Instantiates a new Printer and sets the default values.
+     * Instantiates a new printer and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -34,7 +48,7 @@ public class Printer extends PrinterBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Printer
+     * @return a printer
      */
     @javax.annotation.Nonnull
     public static Printer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -8,31 +8,57 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MessageRuleActions implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A list of categories to be assigned to a message. */
+    /**
+     * A list of categories to be assigned to a message.
+     */
     private java.util.List<String> assignCategories;
-    /** The ID of a folder that a message is to be copied to. */
+    /**
+     * The ID of a folder that a message is to be copied to.
+     */
     private String copyToFolder;
-    /** Indicates whether a message should be moved to the Deleted Items folder. */
+    /**
+     * Indicates whether a message should be moved to the Deleted Items folder.
+     */
     private Boolean delete;
-    /** The email addresses of the recipients to which a message should be forwarded as an attachment. */
+    /**
+     * The email addresses of the recipients to which a message should be forwarded as an attachment.
+     */
     private java.util.List<Recipient> forwardAsAttachmentTo;
-    /** The email addresses of the recipients to which a message should be forwarded. */
+    /**
+     * The email addresses of the recipients to which a message should be forwarded.
+     */
     private java.util.List<Recipient> forwardTo;
-    /** Indicates whether a message should be marked as read. */
+    /**
+     * Indicates whether a message should be marked as read.
+     */
     private Boolean markAsRead;
-    /** Sets the importance of the message, which can be: low, normal, high. */
+    /**
+     * Sets the importance of the message, which can be: low, normal, high.
+     */
     private Importance markImportance;
-    /** The ID of the folder that a message will be moved to. */
+    /**
+     * The ID of the folder that a message will be moved to.
+     */
     private String moveToFolder;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder. */
+    /**
+     * Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
+     */
     private Boolean permanentDelete;
-    /** The email addresses to which a message should be redirected. */
+    /**
+     * The email addresses to which a message should be redirected.
+     */
     private java.util.List<Recipient> redirectTo;
-    /** Indicates whether subsequent rules should be evaluated. */
+    /**
+     * Indicates whether subsequent rules should be evaluated.
+     */
     private Boolean stopProcessingRules;
     /**
      * Instantiates a new messageRuleActions and sets the default values.

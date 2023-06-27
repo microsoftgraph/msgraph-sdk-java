@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Type of start menu app list visibility. */
+/**
+ * Type of start menu app list visibility.
+ */
 public enum WindowsStartMenuAppListVisibilityType implements ValuedEnum {
     /** User defined. Default value. */
     UserDefined("userDefined"),

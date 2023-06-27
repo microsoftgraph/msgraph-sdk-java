@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OutlookCategoryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<OutlookCategory> value;
     /**
      * Instantiates a new OutlookCategoryCollectionResponse and sets the default values.

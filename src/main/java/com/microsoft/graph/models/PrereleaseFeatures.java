@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for pre-release features. */
+/**
+ * Possible values for pre-release features.
+ */
 public enum PrereleaseFeatures implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

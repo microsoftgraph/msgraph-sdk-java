@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Group extends Entity implements Parsable {
-    /** Date and time of the group creation. Read-only. */
+    /**
+     * Date and time of the group creation. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** Description that gives details on the term usage. */
+    /**
+     * Description that gives details on the term usage.
+     */
     private String description;
-    /** Name of the group. */
+    /**
+     * Name of the group.
+     */
     private String displayName;
-    /** ID of the parent site of this group. */
+    /**
+     * ID of the parent site of this group.
+     */
     private String parentSiteId;
-    /** Returns the type of the group. Possible values are: global, system, and siteCollection. */
+    /**
+     * Returns the type of the group. Possible values are: global, system, and siteCollection.
+     */
     private TermGroupScope scope;
-    /** All sets under the group in a term [store]. */
+    /**
+     * All sets under the group in a term [store].
+     */
     private java.util.List<Set> sets;
     /**
      * Instantiates a new group and sets the default values.

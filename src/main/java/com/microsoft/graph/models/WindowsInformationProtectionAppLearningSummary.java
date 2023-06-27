@@ -10,11 +10,17 @@ import java.util.Objects;
  * Windows Information Protection AppLearning Summary entity.
  */
 public class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable {
-    /** Application Name */
+    /**
+     * Application Name
+     */
     private String applicationName;
-    /** Possible types of Application */
+    /**
+     * Possible types of Application
+     */
     private ApplicationType applicationType;
-    /** Device Count */
+    /**
+     * Device Count
+     */
     private Integer deviceCount;
     /**
      * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.

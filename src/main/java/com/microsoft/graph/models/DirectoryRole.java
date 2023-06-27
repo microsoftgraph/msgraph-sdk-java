@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectoryRole extends DirectoryObject implements Parsable {
-    /** The description for the directory role. Read-only. Supports $filter (eq), $search, $select. */
+    /**
+     * The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
+     */
     private String description;
-    /** The display name for the directory role. Read-only. Supports $filter (eq), $search, $select. */
+    /**
+     * The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
+     */
     private String displayName;
-    /** Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand. */
+    /**
+     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
+     */
     private java.util.List<DirectoryObject> members;
-    /** The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select. */
+    /**
+     * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
+     */
     private String roleTemplateId;
-    /** Members of this directory role that are scoped to administrative units. Read-only. Nullable. */
+    /**
+     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     */
     private java.util.List<ScopedRoleMembership> scopedMembers;
     /**
      * Instantiates a new DirectoryRole and sets the default values.

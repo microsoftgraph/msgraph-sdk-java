@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The error property */
+    /**
+     * The error property
+     */
     private PublicError error;
-    /** The evaluationResult property */
+    /**
+     * The evaluationResult property
+     */
     private java.util.List<String> evaluationResult;
-    /** The evaluationSucceeded property */
+    /**
+     * The evaluationSucceeded property
+     */
     private Boolean evaluationSucceeded;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The parsedExpression property */
+    /**
+     * The parsedExpression property
+     */
     private AttributeMappingSource parsedExpression;
-    /** The parsingSucceeded property */
+    /**
+     * The parsingSucceeded property
+     */
     private Boolean parsingSucceeded;
     /**
      * Instantiates a new parseExpressionResponse and sets the default values.

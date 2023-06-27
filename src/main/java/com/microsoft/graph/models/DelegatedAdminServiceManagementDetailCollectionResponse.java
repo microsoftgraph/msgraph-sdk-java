@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminServiceManagementDetailCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DelegatedAdminServiceManagementDetail> value;
     /**
      * Instantiates a new DelegatedAdminServiceManagementDetailCollectionResponse and sets the default values.

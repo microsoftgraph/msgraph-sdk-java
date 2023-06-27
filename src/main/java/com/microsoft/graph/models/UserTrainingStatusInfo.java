@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Date and time of assignment of the training to the user. */
+    /**
+     * Date and time of assignment of the training to the user.
+     */
     private OffsetDateTime assignedDateTime;
-    /** Date and time of completion of the training by the user. */
+    /**
+     * Date and time of completion of the training by the user.
+     */
     private OffsetDateTime completionDateTime;
-    /** Display name of the assigned training. */
+    /**
+     * Display name of the assigned training.
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
+    /**
+     * The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     */
     private TrainingStatus trainingStatus;
     /**
      * Instantiates a new UserTrainingStatusInfo and sets the default values.

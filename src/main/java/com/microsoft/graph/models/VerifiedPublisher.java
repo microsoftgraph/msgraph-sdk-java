@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VerifiedPublisher implements AdditionalDataHolder, Parsable {
-    /** The timestamp when the verified publisher was first added or most recently updated. */
+    /**
+     * The timestamp when the verified publisher was first added or most recently updated.
+     */
     private OffsetDateTime addedDateTime;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The verified publisher name from the app publisher's Partner Center account. */
+    /**
+     * The verified publisher name from the app publisher's Partner Center account.
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The ID of the verified publisher from the app publisher's Partner Center account. */
+    /**
+     * The ID of the verified publisher from the app publisher's Partner Center account.
+     */
     private String verifiedPublisherId;
     /**
      * Instantiates a new verifiedPublisher and sets the default values.

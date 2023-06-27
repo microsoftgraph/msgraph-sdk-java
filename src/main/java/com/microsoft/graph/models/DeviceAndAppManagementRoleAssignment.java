@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable {
-    /** The list of ids of role member security groups. These are IDs from Azure Active Directory. */
+    /**
+     * The list of ids of role member security groups. These are IDs from Azure Active Directory.
+     */
     private java.util.List<String> members;
     /**
      * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.

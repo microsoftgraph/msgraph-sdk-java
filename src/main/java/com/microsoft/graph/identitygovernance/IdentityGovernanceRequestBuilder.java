@@ -3,6 +3,7 @@ package com.microsoft.graph.identitygovernance;
 import com.microsoft.graph.identitygovernance.accessreviews.AccessReviewsRequestBuilder;
 import com.microsoft.graph.identitygovernance.appconsent.AppConsentRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.EntitlementManagementRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.LifecycleWorkflowsRequestBuilder;
 import com.microsoft.graph.identitygovernance.termsofuse.TermsOfUseRequestBuilder;
 import com.microsoft.graph.models.IdentityGovernance;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -24,22 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the identityGovernance singleton.
  */
 public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity. */
+    /**
+     * Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity.
+     */
     @javax.annotation.Nonnull
     public AccessReviewsRequestBuilder accessReviews() {
         return new AccessReviewsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity. */
+    /**
+     * Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity.
+     */
     @javax.annotation.Nonnull
     public AppConsentRequestBuilder appConsent() {
         return new AppConsentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity. */
+    /**
+     * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
+     */
     @javax.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity. */
+    /**
+     * Provides operations to manage the lifecycleWorkflows property of the microsoft.graph.identityGovernance entity.
+     */
+    @javax.annotation.Nonnull
+    public LifecycleWorkflowsRequestBuilder lifecycleWorkflows() {
+        return new LifecycleWorkflowsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity.
+     */
     @javax.annotation.Nonnull
     public TermsOfUseRequestBuilder termsOfUse() {
         return new TermsOfUseRequestBuilder(pathParameters, requestAdapter);
@@ -206,11 +222,15 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Get identityGovernance
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -219,7 +239,9 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

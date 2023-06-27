@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationOrganization extends Entity implements Parsable {
-    /** Organization description. */
+    /**
+     * Organization description.
+     */
     private String description;
-    /** Organization display name. */
+    /**
+     * Organization display name.
+     */
     private String displayName;
-    /** Source where this organization was created from. Possible values are: sis, manual. */
+    /**
+     * Source where this organization was created from. Possible values are: sis, manual.
+     */
     private EducationExternalSource externalSource;
-    /** The name of the external source this resources was generated from. */
+    /**
+     * The name of the external source this resources was generated from.
+     */
     private String externalSourceDetail;
     /**
      * Instantiates a new educationOrganization and sets the default values.

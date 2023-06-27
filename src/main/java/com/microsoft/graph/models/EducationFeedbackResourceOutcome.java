@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable {
-    /** The actual feedback resource. */
+    /**
+     * The actual feedback resource.
+     */
     private EducationResource feedbackResource;
-    /** The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue. */
+    /**
+     * The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
+     */
     private EducationFeedbackResourceOutcomeStatus resourceStatus;
     /**
      * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.

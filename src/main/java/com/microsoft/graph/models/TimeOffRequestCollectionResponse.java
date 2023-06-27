@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOffRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TimeOffRequest> value;
     /**
      * Instantiates a new TimeOffRequestCollectionResponse and sets the default values.

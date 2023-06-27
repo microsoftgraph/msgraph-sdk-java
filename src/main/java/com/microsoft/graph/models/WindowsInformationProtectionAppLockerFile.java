@@ -10,13 +10,21 @@ import java.util.Objects;
  * Windows Information Protection AppLocker File
  */
 public class WindowsInformationProtectionAppLockerFile extends Entity implements Parsable {
-    /** The friendly name */
+    /**
+     * The friendly name
+     */
     private String displayName;
-    /** File as a byte array */
+    /**
+     * File as a byte array
+     */
     private byte[] file;
-    /** SHA256 hash of the file */
+    /**
+     * SHA256 hash of the file
+     */
     private String fileHash;
-    /** Version of the entity. */
+    /**
+     * Version of the entity.
+     */
     private String version;
     /**
      * Instantiates a new windowsInformationProtectionAppLockerFile and sets the default values.

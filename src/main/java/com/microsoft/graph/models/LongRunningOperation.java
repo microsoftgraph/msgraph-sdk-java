@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LongRunningOperation extends Entity implements Parsable {
-    /** The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
-    /** The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime lastActionDateTime;
-    /** URI of the resource that the operation is performed on. */
+    /**
+     * URI of the resource that the operation is performed on.
+     */
     private String resourceLocation;
-    /** The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. */
+    /**
+     * The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
+     */
     private LongRunningOperationStatus status;
-    /** Details about the status of the operation. */
+    /**
+     * Details about the status of the operation.
+     */
     private String statusDetail;
     /**
      * Instantiates a new longRunningOperation and sets the default values.

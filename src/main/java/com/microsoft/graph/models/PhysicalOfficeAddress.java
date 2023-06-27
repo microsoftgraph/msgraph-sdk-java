@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PhysicalOfficeAddress implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The city. */
+    /**
+     * The city.
+     */
     private String city;
-    /** The country or region. It's a free-format string value, for example, 'United States'. */
+    /**
+     * The country or region. It's a free-format string value, for example, 'United States'.
+     */
     private String countryOrRegion;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Office location such as building and office number for an organizational contact. */
+    /**
+     * Office location such as building and office number for an organizational contact.
+     */
     private String officeLocation;
-    /** The postal code. */
+    /**
+     * The postal code.
+     */
     private String postalCode;
-    /** The state. */
+    /**
+     * The state.
+     */
     private String state;
-    /** The street. */
+    /**
+     * The street.
+     */
     private String street;
     /**
      * Instantiates a new physicalOfficeAddress and sets the default values.

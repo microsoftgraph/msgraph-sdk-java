@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If false, then approval is not required for new requests in this policy. */
+    /**
+     * If false, then approval is not required for new requests in this policy.
+     */
     private Boolean isApprovalRequiredForAdd;
-    /** If false, then approval is not required for updates to requests in this policy. */
+    /**
+     * If false, then approval is not required for updates to requests in this policy.
+     */
     private Boolean isApprovalRequiredForUpdate;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required. */
+    /**
+     * If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
+     */
     private java.util.List<AccessPackageApprovalStage> stages;
     /**
      * Instantiates a new accessPackageAssignmentApprovalSettings and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookTableRowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<WorkbookTableRow> value;
     /**
      * Instantiates a new WorkbookTableRowCollectionResponse and sets the default values.

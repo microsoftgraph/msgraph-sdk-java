@@ -11,13 +11,21 @@ import java.util.Objects;
  * Windows Information Protection Proxied Domain Collection
  */
 public class WindowsInformationProtectionProxiedDomainCollection implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Display name */
+    /**
+     * Display name
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Collection of proxied domains */
+    /**
+     * Collection of proxied domains
+     */
     private java.util.List<ProxiedDomain> proxiedDomains;
     /**
      * Instantiates a new windowsInformationProtectionProxiedDomainCollection and sets the default values.

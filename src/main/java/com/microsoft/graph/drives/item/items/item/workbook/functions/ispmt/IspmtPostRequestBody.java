@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IspmtPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The nper property */
+    /**
+     * The nper property
+     */
     private Json nper;
-    /** The per property */
+    /**
+     * The per property
+     */
     private Json per;
-    /** The pv property */
+    /**
+     * The pv property
+     */
     private Json pv;
-    /** The rate property */
+    /**
+     * The rate property
+     */
     private Json rate;
     /**
      * Instantiates a new ispmtPostRequestBody and sets the default values.

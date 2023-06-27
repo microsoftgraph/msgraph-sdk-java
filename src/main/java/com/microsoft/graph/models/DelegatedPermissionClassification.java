@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedPermissionClassification extends Entity implements Parsable {
-    /** The classification value being given. Possible value: low. Does not support $filter. */
+    /**
+     * The classification value being given. Possible value: low. Does not support $filter.
+     */
     private PermissionClassificationType classification;
-    /** The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter. */
+    /**
+     * The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+     */
     private String permissionId;
-    /** The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter. */
+    /**
+     * The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
+     */
     private String permissionName;
     /**
      * Instantiates a new delegatedPermissionClassification and sets the default values.

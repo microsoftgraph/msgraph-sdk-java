@@ -41,8 +41,9 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDeviceOverview{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Device overview
+     * Read properties and relationships of the managedDeviceOverview object.
      * @return a CompletableFuture of managedDeviceOverview
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> get() {
@@ -59,9 +60,10 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Device overview
+     * Read properties and relationships of the managedDeviceOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceOverview
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddeviceoverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +80,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Device overview
+     * Read properties and relationships of the managedDeviceOverview object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +88,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Device overview
+     * Read properties and relationships of the managedDeviceOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,14 +109,18 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Device overview
+     * Read properties and relationships of the managedDeviceOverview object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -123,7 +129,9 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

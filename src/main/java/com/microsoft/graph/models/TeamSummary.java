@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamSummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Count of guests in a team. */
+    /**
+     * Count of guests in a team.
+     */
     private Integer guestsCount;
-    /** Count of members in a team. */
+    /**
+     * Count of members in a team.
+     */
     private Integer membersCount;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Count of owners in a team. */
+    /**
+     * Count of owners in a team.
+     */
     private Integer ownersCount;
     /**
      * Instantiates a new teamSummary and sets the default values.

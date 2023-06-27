@@ -9,9 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CountBlankPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The range property */
+    /**
+     * The range property
+     */
     private Json range;
     /**
      * Instantiates a new countBlankPostRequestBody and sets the default values.

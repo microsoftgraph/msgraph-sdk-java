@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The resourceActions property */
+    /**
+     * The resourceActions property
+     */
     private java.util.List<UnifiedRbacResourceAction> resourceActions;
     /**
      * Instantiates a new unifiedRbacResourceNamespace and sets the default values.

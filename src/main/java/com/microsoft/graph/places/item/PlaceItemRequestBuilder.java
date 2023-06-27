@@ -20,7 +20,9 @@ import java.util.Objects;
  * Provides operations to manage the collection of place entities.
  */
 public class PlaceItemRequestBuilder extends BaseRequestBuilder {
-    /** Casts the previous resource to room. */
+    /**
+     * Casts the previous resource to room.
+     */
     @javax.annotation.Nonnull
     public GraphRoomRequestBuilder graphRoom() {
         return new GraphRoomRequestBuilder(pathParameters, requestAdapter);

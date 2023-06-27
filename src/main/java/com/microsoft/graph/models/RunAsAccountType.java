@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Indicates the type of execution context the app runs in. */
+/**
+ * Indicates the type of execution context the app runs in.
+ */
 public enum RunAsAccountType implements ValuedEnum {
     /** System context */
     System("system"),

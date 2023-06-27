@@ -11,6 +11,16 @@ import com.microsoft.graph.models.externalconnectors.ExternalGroup;
 import com.microsoft.graph.models.externalconnectors.ExternalItem;
 import com.microsoft.graph.models.externalconnectors.Identity;
 import com.microsoft.graph.models.externalconnectors.Schema;
+import com.microsoft.graph.models.identitygovernance.CustomTaskExtension;
+import com.microsoft.graph.models.identitygovernance.LifecycleManagementSettings;
+import com.microsoft.graph.models.identitygovernance.LifecycleWorkflowsContainer;
+import com.microsoft.graph.models.identitygovernance.Run;
+import com.microsoft.graph.models.identitygovernance.Task;
+import com.microsoft.graph.models.identitygovernance.TaskDefinition;
+import com.microsoft.graph.models.identitygovernance.TaskProcessingResult;
+import com.microsoft.graph.models.identitygovernance.TaskReport;
+import com.microsoft.graph.models.identitygovernance.UserProcessingResult;
+import com.microsoft.graph.models.identitygovernance.WorkflowTemplate;
 import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.CaseEscaped;
 import com.microsoft.graph.models.security.CaseOperation;
@@ -55,11 +65,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Entity implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The unique idenfier for an entity. Read-only. */
+    /**
+     * The unique idenfier for an entity. Read-only.
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new entity and sets the default values.
@@ -234,6 +250,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.countryNamedLocation": return new CountryNamedLocation();
             case "#microsoft.graph.crossTenantAccessPolicy": return new CrossTenantAccessPolicy();
             case "#microsoft.graph.crossTenantAccessPolicyConfigurationDefault": return new CrossTenantAccessPolicyConfigurationDefault();
+            case "#microsoft.graph.customCalloutExtension": return new CustomCalloutExtension();
             case "#microsoft.graph.customSecurityAttributeDefinition": return new CustomSecurityAttributeDefinition();
             case "#microsoft.graph.dataPolicyOperation": return new DataPolicyOperation();
             case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
@@ -244,6 +261,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.delegatedAdminRelationshipRequest": return new DelegatedAdminRelationshipRequest();
             case "#microsoft.graph.delegatedAdminServiceManagementDetail": return new DelegatedAdminServiceManagementDetail();
             case "#microsoft.graph.delegatedPermissionClassification": return new DelegatedPermissionClassification();
+            case "#microsoft.graph.deletedItemContainer": return new DeletedItemContainer();
             case "#microsoft.graph.deletedTeam": return new DeletedTeam();
             case "#microsoft.graph.detectedApp": return new DetectedApp();
             case "#microsoft.graph.device": return new Device();
@@ -353,6 +371,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.fileAssessmentRequest": return new FileAssessmentRequest();
             case "#microsoft.graph.fileAttachment": return new FileAttachment();
             case "#microsoft.graph.filterOperatorSchema": return new FilterOperatorSchema();
+            case "#microsoft.graph.governanceInsight": return new GovernanceInsight();
             case "#microsoft.graph.group": return new Group();
             case "#microsoft.graph.groupLifecyclePolicy": return new GroupLifecyclePolicy();
             case "#microsoft.graph.groupSetting": return new GroupSetting();
@@ -362,6 +381,16 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.identityBuiltInUserFlowAttribute": return new IdentityBuiltInUserFlowAttribute();
             case "#microsoft.graph.identityContainer": return new IdentityContainer();
             case "#microsoft.graph.identityCustomUserFlowAttribute": return new IdentityCustomUserFlowAttribute();
+            case "#microsoft.graph.identityGovernance.customTaskExtension": return new CustomTaskExtension();
+            case "#microsoft.graph.identityGovernance.lifecycleManagementSettings": return new LifecycleManagementSettings();
+            case "#microsoft.graph.identityGovernance.lifecycleWorkflowsContainer": return new LifecycleWorkflowsContainer();
+            case "#microsoft.graph.identityGovernance.run": return new Run();
+            case "#microsoft.graph.identityGovernance.task": return new Task();
+            case "#microsoft.graph.identityGovernance.taskDefinition": return new TaskDefinition();
+            case "#microsoft.graph.identityGovernance.taskProcessingResult": return new TaskProcessingResult();
+            case "#microsoft.graph.identityGovernance.taskReport": return new TaskReport();
+            case "#microsoft.graph.identityGovernance.userProcessingResult": return new UserProcessingResult();
+            case "#microsoft.graph.identityGovernance.workflowTemplate": return new WorkflowTemplate();
             case "#microsoft.graph.identityProvider": return new IdentityProvider();
             case "#microsoft.graph.identityProviderBase": return new IdentityProviderBase();
             case "#microsoft.graph.identitySecurityDefaultsEnforcementPolicy": return new IdentitySecurityDefaultsEnforcementPolicy();
@@ -586,6 +615,17 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.ediscoverySearch": return new EdiscoverySearch();
             case "#microsoft.graph.security.ediscoveryTagOperation": return new EdiscoveryTagOperation();
             case "#microsoft.graph.security.incident": return new Incident();
+        }
+        return null;
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param discriminatorValue Discriminator value from the payload
+     * @return a entity
+     */
+    @javax.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
+        switch (discriminatorValue) {
             case "#microsoft.graph.security.retentionEvent": return new RetentionEvent();
             case "#microsoft.graph.security.retentionEventType": return new RetentionEventType();
             case "#microsoft.graph.security.search": return new Search();
@@ -599,17 +639,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.serviceAnnouncement": return new ServiceAnnouncement();
             case "#microsoft.graph.serviceAnnouncementAttachment": return new ServiceAnnouncementAttachment();
             case "#microsoft.graph.serviceAnnouncementBase": return new ServiceAnnouncementBase();
-        }
-        return null;
-    }
-    /**
-     * Creates a new instance of the appropriate class based on discriminator value
-     * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
-     */
-    @javax.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
-        switch (discriminatorValue) {
             case "#microsoft.graph.serviceHealth": return new ServiceHealth();
             case "#microsoft.graph.serviceHealthIssue": return new ServiceHealthIssue();
             case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
@@ -725,6 +754,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.userInstallStateSummary": return new UserInstallStateSummary();
             case "#microsoft.graph.userScopeTeamsAppInstallation": return new UserScopeTeamsAppInstallation();
             case "#microsoft.graph.userSettings": return new UserSettings();
+            case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             case "#microsoft.graph.userTeamwork": return new UserTeamwork();
             case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
             case "#microsoft.graph.vppToken": return new VppToken();

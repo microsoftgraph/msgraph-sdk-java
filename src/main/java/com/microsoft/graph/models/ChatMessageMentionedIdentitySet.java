@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
-    /** If present, represents a conversation (for example, team or channel) @mentioned in a message. */
+    /**
+     * If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     */
     private TeamworkConversationIdentity conversation;
     /**
      * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.

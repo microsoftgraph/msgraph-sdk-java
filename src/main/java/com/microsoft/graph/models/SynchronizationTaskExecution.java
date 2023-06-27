@@ -9,37 +9,69 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsable {
-    /** The activityIdentifier property */
+    /**
+     * The activityIdentifier property
+     */
     private String activityIdentifier;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The countEntitled property */
+    /**
+     * The countEntitled property
+     */
     private Long countEntitled;
-    /** The countEntitledForProvisioning property */
+    /**
+     * The countEntitledForProvisioning property
+     */
     private Long countEntitledForProvisioning;
-    /** The countEscrowed property */
+    /**
+     * The countEscrowed property
+     */
     private Long countEscrowed;
-    /** The countEscrowedRaw property */
+    /**
+     * The countEscrowedRaw property
+     */
     private Long countEscrowedRaw;
-    /** The countExported property */
+    /**
+     * The countExported property
+     */
     private Long countExported;
-    /** The countExports property */
+    /**
+     * The countExports property
+     */
     private Long countExports;
-    /** The countImported property */
+    /**
+     * The countImported property
+     */
     private Long countImported;
-    /** The countImportedDeltas property */
+    /**
+     * The countImportedDeltas property
+     */
     private Long countImportedDeltas;
-    /** The countImportedReferenceDeltas property */
+    /**
+     * The countImportedReferenceDeltas property
+     */
     private Long countImportedReferenceDeltas;
-    /** The error property */
+    /**
+     * The error property
+     */
     private SynchronizationError error;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The state property */
+    /**
+     * The state property
+     */
     private SynchronizationTaskExecutionResult state;
-    /** The timeBegan property */
+    /**
+     * The timeBegan property
+     */
     private OffsetDateTime timeBegan;
-    /** The timeEnded property */
+    /**
+     * The timeEnded property
+     */
     private OffsetDateTime timeEnded;
     /**
      * Instantiates a new synchronizationTaskExecution and sets the default values.

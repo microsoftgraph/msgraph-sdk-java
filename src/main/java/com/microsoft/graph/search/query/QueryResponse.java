@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class QueryResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<SearchResponse> value;
     /**
      * Instantiates a new queryResponse and sets the default values.

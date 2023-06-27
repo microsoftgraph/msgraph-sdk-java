@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether the requestor is allowed to set a custom schedule. */
+    /**
+     * Indicates whether the requestor is allowed to set a custom schedule.
+     */
     private Boolean allowCustomAssignmentSchedule;
-    /** Indicates whether a request to add must be approved by an approver. */
+    /**
+     * Indicates whether a request to add must be approved by an approver.
+     */
     private Boolean isApprovalRequiredForAdd;
-    /** Indicates whether a request to update must be approved by an approver. */
+    /**
+     * Indicates whether a request to update must be approved by an approver.
+     */
     private Boolean isApprovalRequiredForUpdate;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The description of the policy that the user is trying to request access using. */
+    /**
+     * The description of the policy that the user is trying to request access using.
+     */
     private String policyDescription;
-    /** The display name of the policy that the user is trying to request access using. */
+    /**
+     * The display name of the policy that the user is trying to request access using.
+     */
     private String policyDisplayName;
-    /** The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request. */
+    /**
+     * The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
+     */
     private String policyId;
-    /** The questions property */
+    /**
+     * The questions property
+     */
     private java.util.List<AccessPackageQuestion> questions;
-    /** Schedule restrictions enforced, if any. */
+    /**
+     * Schedule restrictions enforced, if any.
+     */
     private EntitlementManagementSchedule schedule;
     /**
      * Instantiates a new accessPackageAssignmentRequestRequirements and sets the default values.

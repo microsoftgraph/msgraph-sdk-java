@@ -40,9 +40,10 @@ public class GetDeviceManagementIntentPerSettingContributingProfilesRequestBuild
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/getDeviceManagementIntentPerSettingContributingProfiles", rawUrl);
     }
     /**
-     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
+     * Not yet documented
      * @param body The request body
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getdevicemanagementintentpersettingcontributingprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetDeviceManagementIntentPerSettingContributingProfilesPostRequestBody body) {
@@ -59,10 +60,11 @@ public class GetDeviceManagementIntentPerSettingContributingProfilesRequestBuild
         }
     }
     /**
-     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getdevicemanagementintentpersettingcontributingprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetDeviceManagementIntentPerSettingContributingProfilesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class GetDeviceManagementIntentPerSettingContributingProfilesRequestBuild
         }
     }
     /**
-     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
+     * Not yet documented
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class GetDeviceManagementIntentPerSettingContributingProfilesRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getDeviceManagementIntentPerSettingContributingProfiles
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

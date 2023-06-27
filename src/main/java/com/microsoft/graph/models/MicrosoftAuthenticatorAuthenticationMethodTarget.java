@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
-    /** The authenticationMode property */
+    /**
+     * The authenticationMode property
+     */
     private MicrosoftAuthenticatorAuthenticationMode authenticationMode;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.

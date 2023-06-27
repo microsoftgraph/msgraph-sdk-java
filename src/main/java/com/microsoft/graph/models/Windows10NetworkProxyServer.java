@@ -11,15 +11,25 @@ import java.util.Objects;
  * Network Proxy Server Policy.
  */
 public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Address to the proxy server. Specify an address in the format [':'] */
+    /**
+     * Address to the proxy server. Specify an address in the format [':']
+     */
     private String address;
-    /** Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node. */
+    /**
+     * Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
+     */
     private java.util.List<String> exceptions;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies whether the proxy server should be used for local (intranet) addresses. */
+    /**
+     * Specifies whether the proxy server should be used for local (intranet) addresses.
+     */
     private Boolean useForLocalAddresses;
     /**
      * Instantiates a new windows10NetworkProxyServer and sets the default values.

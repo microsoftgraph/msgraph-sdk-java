@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SigningCertificateUpdateStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Status of the last certificate update. Read-only. For a list of statuses, see certificateUpdateResult status. */
+    /**
+     * Status of the last certificate update. Read-only. For a list of statuses, see certificateUpdateResult status.
+     */
     private String certificateUpdateResult;
-    /** Date and time in ISO 8601 format and in UTC time when the certificate was last updated. Read-only. */
+    /**
+     * Date and time in ISO 8601 format and in UTC time when the certificate was last updated. Read-only.
+     */
     private OffsetDateTime lastRunDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new signingCertificateUpdateStatus and sets the default values.

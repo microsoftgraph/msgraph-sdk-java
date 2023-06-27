@@ -9,24 +9,40 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ShiftActivity implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Customer defined code for the shiftActivity. Required. */
+    /**
+     * Customer defined code for the shiftActivity. Required.
+     */
     private String code;
-    /** The name of the shiftActivity. Required. */
+    /**
+     * The name of the shiftActivity. Required.
+     */
     private String displayName;
-    /** The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
+    /**
+     * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     */
     private OffsetDateTime endDateTime;
-    /** Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required. */
+    /**
+     * Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
+     */
     private Boolean isPaid;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
+    /**
+     * The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     */
     private OffsetDateTime startDateTime;
-    /** The theme property */
+    /**
+     * The theme property
+     */
     private ScheduleEntityTheme theme;
     /**
-     * Instantiates a new ShiftActivity and sets the default values.
+     * Instantiates a new shiftActivity and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -36,7 +52,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ShiftActivity
+     * @return a shiftActivity
      */
     @javax.annotation.Nonnull
     public static ShiftActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

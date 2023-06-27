@@ -9,9 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConnectionOperation extends Entity implements Parsable {
-    /** If status is failed, provides more information about the error that caused the failure. */
+    /**
+     * If status is failed, provides more information about the error that caused the failure.
+     */
     private PublicError error;
-    /** Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue. */
+    /**
+     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+     */
     private ConnectionOperationStatus status;
     /**
      * Instantiates a new connectionOperation and sets the default values.

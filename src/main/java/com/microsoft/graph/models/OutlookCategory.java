@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OutlookCategory extends Entity implements Parsable {
-    /** A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note. */
+    /**
+     * A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
+     */
     private CategoryColor color;
-    /** A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only. */
+    /**
+     * A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
+     */
     private String displayName;
     /**
      * Instantiates a new outlookCategory and sets the default values.

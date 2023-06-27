@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AzureResourceEvidence extends AlertEvidence implements Parsable {
-    /** The unique identifier for the Azure resource. */
+    /**
+     * The unique identifier for the Azure resource.
+     */
     private String resourceId;
-    /** The name of the resource. */
+    /**
+     * The name of the resource.
+     */
     private String resourceName;
-    /** The type of the resource. */
+    /**
+     * The type of the resource.
+     */
     private String resourceType;
     /**
      * Instantiates a new AzureResourceEvidence and sets the default values.

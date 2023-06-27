@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
-    /** Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false. */
+    /**
+     * Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
+     */
     private Boolean isUsableForSignIn;
     /**
      * Instantiates a new SmsAuthenticationMethodTarget and sets the default values.

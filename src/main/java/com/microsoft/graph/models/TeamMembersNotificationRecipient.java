@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
-    /** The unique identifier for the team whose members should receive the notification. */
+    /**
+     * The unique identifier for the team whose members should receive the notification.
+     */
     private String teamId;
     /**
      * Instantiates a new TeamMembersNotificationRecipient and sets the default values.

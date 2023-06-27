@@ -11,25 +11,45 @@ import java.util.Objects;
  * A termsAndConditions entity represents the metadata and contents of a given Terms and Conditions (T&C) policy. T&C policies contents are presented to users upon their first attempt to enroll into Intune and subsequently upon edits where an administrator has required re-acceptance. They enable administrators to communicate the provisions to which a user must agree in order to have devices enrolled into Intune.
  */
 public class TermsAndConditions extends Entity implements Parsable {
-    /** Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy. */
+    /**
+     * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
+     */
     private String acceptanceStatement;
-    /** The list of acceptance statuses for this T&C policy. */
+    /**
+     * The list of acceptance statuses for this T&C policy.
+     */
     private java.util.List<TermsAndConditionsAcceptanceStatus> acceptanceStatuses;
-    /** The list of assignments for this T&C policy. */
+    /**
+     * The list of assignments for this T&C policy.
+     */
     private java.util.List<TermsAndConditionsAssignment> assignments;
-    /** Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy. */
+    /**
+     * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
+     */
     private String bodyText;
-    /** DateTime the object was created. */
+    /**
+     * DateTime the object was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Administrator-supplied description of the T&C policy. */
+    /**
+     * Administrator-supplied description of the T&C policy.
+     */
     private String description;
-    /** Administrator-supplied name for the T&C policy. */
+    /**
+     * Administrator-supplied name for the T&C policy.
+     */
     private String displayName;
-    /** DateTime the object was last modified. */
+    /**
+     * DateTime the object was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy. */
+    /**
+     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
+     */
     private String title;
-    /** Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy. */
+    /**
+     * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
+     */
     private Integer version;
     /**
      * Instantiates a new termsAndConditions and sets the default values.

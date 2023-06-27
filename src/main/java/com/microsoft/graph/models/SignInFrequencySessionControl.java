@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
-    /** The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue. */
+    /**
+     * The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
+     */
     private SignInFrequencyAuthenticationType authenticationType;
-    /** The possible values are timeBased, everyTime, unknownFutureValue. */
+    /**
+     * The possible values are timeBased, everyTime, unknownFutureValue.
+     */
     private SignInFrequencyInterval frequencyInterval;
-    /** Possible values are: days, hours. */
+    /**
+     * Possible values are: days, hours.
+     */
     private SigninFrequencyType type;
-    /** The number of days or hours. */
+    /**
+     * The number of days or hours.
+     */
     private Integer value;
     /**
      * Instantiates a new SignInFrequencySessionControl and sets the default values.

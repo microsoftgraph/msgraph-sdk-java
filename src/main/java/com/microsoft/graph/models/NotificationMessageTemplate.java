@@ -11,17 +11,29 @@ import java.util.Objects;
  * Notification messages are messages that are sent to end users who are determined to be not-compliant with the compliance policies defined by the administrator. Administrators choose notifications and configure them in the Intune Admin Console using the compliance policy creation page under the Actions for non-compliance section. Use the notificationMessageTemplate object to create your own custom notifications for administrators to choose while configuring actions for non-compliance.
  */
 public class NotificationMessageTemplate extends Entity implements Parsable {
-    /** Branding Options for the Message Template. Branding is defined in the Intune Admin Console. */
+    /**
+     * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
+     */
     private NotificationTemplateBrandingOptions brandingOptions;
-    /** The default locale to fallback onto when the requested locale is not available. */
+    /**
+     * The default locale to fallback onto when the requested locale is not available.
+     */
     private String defaultLocale;
-    /** Display name for the Notification Message Template. */
+    /**
+     * Display name for the Notification Message Template.
+     */
     private String displayName;
-    /** DateTime the object was last modified. */
+    /**
+     * DateTime the object was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The list of localized messages for this Notification Message Template. */
+    /**
+     * The list of localized messages for this Notification Message Template.
+     */
     private java.util.List<LocalizedNotificationMessage> localizedNotificationMessages;
-    /** List of Scope Tags for this Entity instance. */
+    /**
+     * List of Scope Tags for this Entity instance.
+     */
     private java.util.List<String> roleScopeTagIds;
     /**
      * Instantiates a new notificationMessageTemplate and sets the default values.

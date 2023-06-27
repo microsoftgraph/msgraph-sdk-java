@@ -9,41 +9,77 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LearningContent extends Entity implements Parsable {
-    /** Keywords, topics, and other tags associated with the learning content. Optional. */
+    /**
+     * Keywords, topics, and other tags associated with the learning content. Optional.
+     */
     private java.util.List<String> additionalTags;
-    /** The content web URL for the learning content. Required. */
+    /**
+     * The content web URL for the learning content. Required.
+     */
     private String contentWebUrl;
-    /** The authors, creators, or contributors of the learning content. Optional. */
+    /**
+     * The authors, creators, or contributors of the learning content. Optional.
+     */
     private java.util.List<String> contributors;
-    /** The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional. */
+    /**
+     * The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+     */
     private OffsetDateTime createdDateTime;
-    /** The description or summary for the learning content. Optional. */
+    /**
+     * The description or summary for the learning content. Optional.
+     */
     private String description;
-    /** The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional. */
+    /**
+     * The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
+     */
     private Period duration;
-    /** Unique external content ID for the learning content. Required. */
+    /**
+     * Unique external content ID for the learning content. Required.
+     */
     private String externalId;
-    /** The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional. */
+    /**
+     * The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
+     */
     private String format;
-    /** Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional. */
+    /**
+     * Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
+     */
     private Boolean isActive;
-    /** Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional. */
+    /**
+     * Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
+     */
     private Boolean isPremium;
-    /** Indicates whether the learning content is searchable or not. The default value is true. Optional. */
+    /**
+     * Indicates whether the learning content is searchable or not. The default value is true. Optional.
+     */
     private Boolean isSearchable;
-    /** The language of the learning content, for example, en-us or fr-fr. Required. */
+    /**
+     * The language of the learning content, for example, en-us or fr-fr. Required.
+     */
     private String languageTag;
-    /** The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional. */
+    /**
+     * The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The number of pages of the learning content, for example, 9. Optional. */
+    /**
+     * The number of pages of the learning content, for example, 9. Optional.
+     */
     private Integer numberOfPages;
-    /** The skills tags associated with the learning content. Optional. */
+    /**
+     * The skills tags associated with the learning content. Optional.
+     */
     private java.util.List<String> skillTags;
-    /** The source name of the learning content, such as LinkedIn Learning or Coursera. Optional. */
+    /**
+     * The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
+     */
     private String sourceName;
-    /** The URL of learning content thumbnail image. Optional. */
+    /**
+     * The URL of learning content thumbnail image. Optional.
+     */
     private String thumbnailWebUrl;
-    /** The title of the learning content. Required. */
+    /**
+     * The title of the learning content. Required.
+     */
     private String title;
     /**
      * Instantiates a new learningContent and sets the default values.

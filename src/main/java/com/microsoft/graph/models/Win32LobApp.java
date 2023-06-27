@@ -7,31 +7,57 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobApp extends MobileLobApp implements Parsable {
-    /** Contains properties for Windows architecture. */
+    /**
+     * Contains properties for Windows architecture.
+     */
     private WindowsArchitecture applicableArchitectures;
-    /** The command line to install this app */
+    /**
+     * The command line to install this app
+     */
     private String installCommandLine;
-    /** The install experience for this app. */
+    /**
+     * The install experience for this app.
+     */
     private Win32LobAppInstallExperience installExperience;
-    /** The value for the minimum CPU speed which is required to install this app. */
+    /**
+     * The value for the minimum CPU speed which is required to install this app.
+     */
     private Integer minimumCpuSpeedInMHz;
-    /** The value for the minimum free disk space which is required to install this app. */
+    /**
+     * The value for the minimum free disk space which is required to install this app.
+     */
     private Integer minimumFreeDiskSpaceInMB;
-    /** The value for the minimum physical memory which is required to install this app. */
+    /**
+     * The value for the minimum physical memory which is required to install this app.
+     */
     private Integer minimumMemoryInMB;
-    /** The value for the minimum number of processors which is required to install this app. */
+    /**
+     * The value for the minimum number of processors which is required to install this app.
+     */
     private Integer minimumNumberOfProcessors;
-    /** The value for the minimum supported windows release. */
+    /**
+     * The value for the minimum supported windows release.
+     */
     private String minimumSupportedWindowsRelease;
-    /** The MSI details if this Win32 app is an MSI app. */
+    /**
+     * The MSI details if this Win32 app is an MSI app.
+     */
     private Win32LobAppMsiInformation msiInformation;
-    /** The return codes for post installation behavior. */
+    /**
+     * The return codes for post installation behavior.
+     */
     private java.util.List<Win32LobAppReturnCode> returnCodes;
-    /** The detection and requirement rules for this app. */
+    /**
+     * The detection and requirement rules for this app.
+     */
     private java.util.List<Win32LobAppRule> rules;
-    /** The relative path of the setup file in the encrypted Win32LobApp package. */
+    /**
+     * The relative path of the setup file in the encrypted Win32LobApp package.
+     */
     private String setupFilePath;
-    /** The command line to uninstall this app */
+    /**
+     * The command line to uninstall this app
+     */
     private String uninstallCommandLine;
     /**
      * Instantiates a new Win32LobApp and sets the default values.

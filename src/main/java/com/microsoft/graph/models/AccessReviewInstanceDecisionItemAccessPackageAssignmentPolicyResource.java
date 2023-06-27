@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
-    /** Display name of the access package to which access has been granted. */
+    /**
+     * Display name of the access package to which access has been granted.
+     */
     private String accessPackageDisplayName;
-    /** Identifier of the access package to which access has been granted. */
+    /**
+     * Identifier of the access package to which access has been granted.
+     */
     private String accessPackageId;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.

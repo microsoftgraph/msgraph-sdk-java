@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SiteCollection implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The geographic region code for where this site collection resides. Read-only. */
+    /**
+     * The geographic region code for where this site collection resides. Read-only.
+     */
     private String dataLocationCode;
-    /** The hostname for the site collection. Read-only. */
+    /**
+     * The hostname for the site collection. Read-only.
+     */
     private String hostname;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** If present, indicates that this is a root site collection in SharePoint. Read-only. */
+    /**
+     * If present, indicates that this is a root site collection in SharePoint. Read-only.
+     */
     private Root root;
     /**
      * Instantiates a new siteCollection and sets the default values.

@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the settings property of the microsoft.graph.user entity.
  */
 public class SettingsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the shiftPreferences property of the microsoft.graph.userSettings entity. */
+    /**
+     * Provides operations to manage the shiftPreferences property of the microsoft.graph.userSettings entity.
+     */
     @javax.annotation.Nonnull
     public ShiftPreferencesRequestBuilder shiftPreferences() {
         return new ShiftPreferencesRequestBuilder(pathParameters, requestAdapter);
@@ -123,9 +125,10 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property settings in users
+     * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
      * @param body The request body
      * @return a CompletableFuture of userSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> patch(@javax.annotation.Nonnull final UserSettings body) {
@@ -142,10 +145,11 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property settings in users
+     * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userSettings
+     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> patch(@javax.annotation.Nonnull final UserSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -219,7 +223,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property settings in users
+     * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -228,7 +232,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property settings in users
+     * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -259,11 +263,15 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -272,7 +280,9 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

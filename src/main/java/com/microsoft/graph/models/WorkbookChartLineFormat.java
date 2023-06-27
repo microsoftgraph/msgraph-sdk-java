@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartLineFormat extends Entity implements Parsable {
-    /** HTML color code representing the color of lines in the chart. */
+    /**
+     * HTML color code representing the color of lines in the chart.
+     */
     private String color;
     /**
      * Instantiates a new workbookChartLineFormat and sets the default values.

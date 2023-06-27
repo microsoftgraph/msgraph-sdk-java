@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the security property of the microsoft.graph.reportRoot entity.
  */
 public class SecurityRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the getAttackSimulationRepeatOffenders method. */
+    /**
+     * Provides operations to call the getAttackSimulationRepeatOffenders method.
+     */
     @javax.annotation.Nonnull
     public GetAttackSimulationRepeatOffendersRequestBuilder getAttackSimulationRepeatOffenders() {
         return new GetAttackSimulationRepeatOffendersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getAttackSimulationSimulationUserCoverage method. */
+    /**
+     * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
+     */
     @javax.annotation.Nonnull
     public GetAttackSimulationSimulationUserCoverageRequestBuilder getAttackSimulationSimulationUserCoverage() {
         return new GetAttackSimulationSimulationUserCoverageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getAttackSimulationTrainingUserCoverage method. */
+    /**
+     * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
+     */
     @javax.annotation.Nonnull
     public GetAttackSimulationTrainingUserCoverageRequestBuilder getAttackSimulationTrainingUserCoverage() {
         return new GetAttackSimulationTrainingUserCoverageRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +275,15 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Get security from reports
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +292,9 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

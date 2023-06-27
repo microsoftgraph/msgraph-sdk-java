@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RichLongRunningOperation extends LongRunningOperation implements Parsable {
-    /** Error that caused the operation to fail. */
+    /**
+     * Error that caused the operation to fail.
+     */
     private PublicError error;
-    /** A value between 0 and 100 that indicates the progress of the operation. */
+    /**
+     * A value between 0 and 100 that indicates the progress of the operation.
+     */
     private Integer percentageComplete;
-    /** The unique identifier for the result. */
+    /**
+     * The unique identifier for the result.
+     */
     private String resourceId;
-    /** The type of the operation. */
+    /**
+     * The type of the operation.
+     */
     private String type;
     /**
      * Instantiates a new RichLongRunningOperation and sets the default values.

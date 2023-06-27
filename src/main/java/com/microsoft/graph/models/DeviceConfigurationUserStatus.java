@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceConfigurationUserStatus extends Entity implements Parsable {
-    /** Devices count for that user. */
+    /**
+     * Devices count for that user.
+     */
     private Integer devicesCount;
-    /** Last modified date time of the policy report. */
+    /**
+     * Last modified date time of the policy report.
+     */
     private OffsetDateTime lastReportedDateTime;
-    /** The status property */
+    /**
+     * The status property
+     */
     private ComplianceStatus status;
-    /** User name of the DevicePolicyStatus. */
+    /**
+     * User name of the DevicePolicyStatus.
+     */
     private String userDisplayName;
-    /** UserPrincipalName. */
+    /**
+     * UserPrincipalName.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new deviceConfigurationUserStatus and sets the default values.

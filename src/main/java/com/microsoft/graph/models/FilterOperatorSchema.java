@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FilterOperatorSchema extends Entity implements Parsable {
-    /** The arity property */
+    /**
+     * The arity property
+     */
     private ScopeOperatorType arity;
-    /** The multivaluedComparisonType property */
+    /**
+     * The multivaluedComparisonType property
+     */
     private ScopeOperatorMultiValuedComparisonType multivaluedComparisonType;
-    /** The supportedAttributeTypes property */
+    /**
+     * The supportedAttributeTypes property
+     */
     private java.util.List<AttributeType> supportedAttributeTypes;
     /**
      * Instantiates a new filterOperatorSchema and sets the default values.

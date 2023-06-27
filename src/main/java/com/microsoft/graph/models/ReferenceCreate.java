@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ReferenceCreate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataId property */
+    /**
+     * The OdataId property
+     */
     private String odataId;
     /**
      * Instantiates a new ReferenceCreate and sets the default values.

@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminAccessDetails implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The directory roles that the Microsoft partner is assigned in the customer tenant. */
+    /**
+     * The directory roles that the Microsoft partner is assigned in the customer tenant.
+     */
     private java.util.List<UnifiedRole> unifiedRoles;
     /**
      * Instantiates a new DelegatedAdminAccessDetails and sets the default values.

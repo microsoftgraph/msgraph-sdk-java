@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartDataLabelFormat extends Entity implements Parsable {
-    /** Represents the fill format of the current chart data label. Read-only. */
+    /**
+     * Represents the fill format of the current chart data label. Read-only.
+     */
     private WorkbookChartFill fill;
-    /** Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only. */
+    /**
+     * Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
+     */
     private WorkbookChartFont font;
     /**
      * Instantiates a new workbookChartDataLabelFormat and sets the default values.

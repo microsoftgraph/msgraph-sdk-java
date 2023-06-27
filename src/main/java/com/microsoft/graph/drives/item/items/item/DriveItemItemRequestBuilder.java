@@ -1,6 +1,7 @@
 package com.microsoft.graph.drives.item.items.item;
 
 import com.microsoft.graph.drives.item.items.item.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.assignsensitivitylabel.AssignSensitivityLabelRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.checkin.CheckinRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.checkout.CheckoutRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.children.ChildrenRequestBuilder;
@@ -11,6 +12,7 @@ import com.microsoft.graph.drives.item.items.item.createlink.CreateLinkRequestBu
 import com.microsoft.graph.drives.item.items.item.createuploadsession.CreateUploadSessionRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.delta.DeltaRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.deltawithtoken.DeltaWithTokenRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.extractsensitivitylabels.ExtractSensitivityLabelsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.follow.FollowRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
@@ -47,122 +49,184 @@ import java.util.Objects;
  * Provides operations to manage the items property of the microsoft.graph.drive entity.
  */
 public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the analytics property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the analytics property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkin method. */
+    /**
+     * Provides operations to call the assignSensitivityLabel method.
+     */
+    @javax.annotation.Nonnull
+    public AssignSensitivityLabelRequestBuilder assignSensitivityLabel() {
+        return new AssignSensitivityLabelRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the checkin method.
+     */
     @javax.annotation.Nonnull
     public CheckinRequestBuilder checkin() {
         return new CheckinRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkout method. */
+    /**
+     * Provides operations to call the checkout method.
+     */
     @javax.annotation.Nonnull
     public CheckoutRequestBuilder checkout() {
         return new CheckoutRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the children property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public ChildrenRequestBuilder children() {
         return new ChildrenRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the drive entity. */
+    /**
+     * Provides operations to manage the media for the drive entity.
+     */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the copy method. */
+    /**
+     * Provides operations to call the copy method.
+     */
     @javax.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the createLink method. */
+    /**
+     * Provides operations to call the createLink method.
+     */
     @javax.annotation.Nonnull
     public CreateLinkRequestBuilder createLink() {
         return new CreateLinkRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the createUploadSession method. */
+    /**
+     * Provides operations to call the createUploadSession method.
+     */
     @javax.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
         return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the delta method. */
+    /**
+     * Provides operations to call the delta method.
+     */
     @javax.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the follow method. */
+    /**
+     * Provides operations to call the extractSensitivityLabels method.
+     */
+    @javax.annotation.Nonnull
+    public ExtractSensitivityLabelsRequestBuilder extractSensitivityLabels() {
+        return new ExtractSensitivityLabelsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the follow method.
+     */
     @javax.annotation.Nonnull
     public FollowRequestBuilder follow() {
         return new FollowRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getActivitiesByInterval method. */
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     */
     @javax.annotation.Nonnull
     public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
         return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the invite method. */
+    /**
+     * Provides operations to call the invite method.
+     */
     @javax.annotation.Nonnull
     public InviteRequestBuilder invite() {
         return new InviteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the listItem property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the listItem property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the permissions property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the preview method. */
+    /**
+     * Provides operations to call the preview method.
+     */
     @javax.annotation.Nonnull
     public PreviewRequestBuilder preview() {
         return new PreviewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the restore method. */
+    /**
+     * Provides operations to call the restore method.
+     */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public ThumbnailsRequestBuilder thumbnails() {
         return new ThumbnailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unfollow method. */
+    /**
+     * Provides operations to call the unfollow method.
+     */
     @javax.annotation.Nonnull
     public UnfollowRequestBuilder unfollow() {
         return new UnfollowRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the validatePermission method. */
+    /**
+     * Provides operations to call the validatePermission method.
+     */
     @javax.annotation.Nonnull
     public ValidatePermissionRequestBuilder validatePermission() {
         return new ValidatePermissionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the versions property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the workbook property of the microsoft.graph.driveItem entity. */
+    /**
+     * Provides operations to manage the workbook property of the microsoft.graph.driveItem entity.
+     */
     @javax.annotation.Nonnull
     public WorkbookRequestBuilder workbook() {
         return new WorkbookRequestBuilder(pathParameters, requestAdapter);
@@ -436,11 +500,15 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
      * All items contained in the drive. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -449,7 +517,9 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

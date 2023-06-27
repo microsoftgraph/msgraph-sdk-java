@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LogNormDistPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The cumulative property */
+    /**
+     * The cumulative property
+     */
     private Json cumulative;
-    /** The mean property */
+    /**
+     * The mean property
+     */
     private Json mean;
-    /** The standardDev property */
+    /**
+     * The standardDev property
+     */
     private Json standardDev;
-    /** The x property */
+    /**
+     * The x property
+     */
     private Json x;
     /**
      * Instantiates a new LogNormDistPostRequestBody and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteOperationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<OnenoteOperation> value;
     /**
      * Instantiates a new OnenoteOperationCollectionResponse and sets the default values.

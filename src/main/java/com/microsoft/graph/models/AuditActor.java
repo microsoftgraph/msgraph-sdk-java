@@ -11,25 +11,45 @@ import java.util.Objects;
  * A class containing the properties for Audit Actor.
  */
 public class AuditActor implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Name of the Application. */
+    /**
+     * Name of the Application.
+     */
     private String applicationDisplayName;
-    /** AAD Application Id. */
+    /**
+     * AAD Application Id.
+     */
     private String applicationId;
-    /** Actor Type. */
+    /**
+     * Actor Type.
+     */
     private String auditActorType;
-    /** IPAddress. */
+    /**
+     * IPAddress.
+     */
     private String ipAddress;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Service Principal Name (SPN). */
+    /**
+     * Service Principal Name (SPN).
+     */
     private String servicePrincipalName;
-    /** User Id. */
+    /**
+     * User Id.
+     */
     private String userId;
-    /** List of user permissions when the audit was performed. */
+    /**
+     * List of user permissions when the audit was performed.
+     */
     private java.util.List<String> userPermissions;
-    /** User Principal Name (UPN). */
+    /**
+     * User Principal Name (UPN).
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new auditActor and sets the default values.

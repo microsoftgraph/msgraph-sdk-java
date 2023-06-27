@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Describes the error, if any, for the current stage. */
+    /**
+     * Describes the error, if any, for the current stage.
+     */
     private PublicError error;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue. */
+    /**
+     * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+     */
     private SubjectRightsRequestStage stage;
-    /** Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue. */
+    /**
+     * Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     */
     private SubjectRightsRequestStageStatus status;
     /**
      * Instantiates a new subjectRightsRequestStageDetail and sets the default values.

@@ -7,267 +7,529 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates whether or not to allow account modification when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to allow account modification when the device is in supervised mode.
+     */
     private Boolean accountBlockModification;
-    /** Indicates whether or not to allow activation lock when the device is in the supervised mode. */
+    /**
+     * Indicates whether or not to allow activation lock when the device is in the supervised mode.
+     */
     private Boolean activationLockAllowWhenSupervised;
-    /** Indicates whether or not to allow AirDrop when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to allow AirDrop when the device is in supervised mode.
+     */
     private Boolean airDropBlocked;
-    /** Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
+     */
     private Boolean airDropForceUnmanagedDropTarget;
-    /** Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password. */
+    /**
+     * Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
+     */
     private Boolean airPlayForcePairingPasswordForOutgoingRequests;
-    /** Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
+     */
     private Boolean appleNewsBlocked;
-    /** Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
+     */
     private Boolean appleWatchBlockPairing;
-    /** Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later). */
+    /**
+     * Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
+     */
     private Boolean appleWatchForceWristDetection;
-    /** Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements. */
+    /**
+     * Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<AppListItem> appsSingleAppModeList;
-    /** Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
+     */
     private Boolean appStoreBlockAutomaticDownloads;
-    /** Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean appStoreBlocked;
-    /** Indicates whether or not to block the user from making in app purchases. */
+    /**
+     * Indicates whether or not to block the user from making in app purchases.
+     */
     private Boolean appStoreBlockInAppPurchases;
-    /** Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
+     */
     private Boolean appStoreBlockUIAppInstallation;
-    /** Indicates whether or not to require a password when using the app store. */
+    /**
+     * Indicates whether or not to require a password when using the app store.
+     */
     private Boolean appStoreRequirePassword;
-    /** List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements. */
+    /**
+     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
+     */
     private java.util.List<AppListItem> appsVisibilityList;
-    /** Possible values of the compliance app list. */
+    /**
+     * Possible values of the compliance app list.
+     */
     private AppListType appsVisibilityListType;
-    /** Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later). */
+    /**
+     * Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
+     */
     private Boolean bluetoothBlockModification;
-    /** Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean cameraBlocked;
-    /** Indicates whether or not to block data roaming. */
+    /**
+     * Indicates whether or not to block data roaming.
+     */
     private Boolean cellularBlockDataRoaming;
-    /** Indicates whether or not to block global background fetch while roaming. */
+    /**
+     * Indicates whether or not to block global background fetch while roaming.
+     */
     private Boolean cellularBlockGlobalBackgroundFetchWhileRoaming;
-    /** Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
+     */
     private Boolean cellularBlockPerAppDataModification;
-    /** Indicates whether or not to block Personal Hotspot. */
+    /**
+     * Indicates whether or not to block Personal Hotspot.
+     */
     private Boolean cellularBlockPersonalHotspot;
-    /** Indicates whether or not to block voice roaming. */
+    /**
+     * Indicates whether or not to block voice roaming.
+     */
     private Boolean cellularBlockVoiceRoaming;
-    /** Indicates whether or not to block untrusted TLS certificates. */
+    /**
+     * Indicates whether or not to block untrusted TLS certificates.
+     */
     private Boolean certificatesBlockUntrustedTlsCertificates;
-    /** Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later). */
+    /**
+     * Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
+     */
     private Boolean classroomAppBlockRemoteScreenObservation;
-    /** Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
+     */
     private Boolean classroomAppForceUnpromptedScreenObservation;
-    /** Possible values of the compliance app list. */
+    /**
+     * Possible values of the compliance app list.
+     */
     private AppListType compliantAppListType;
-    /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
+    /**
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
     private java.util.List<AppListItem> compliantAppsList;
-    /** Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
+     */
     private Boolean configurationProfileBlockChanges;
-    /** Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ). */
+    /**
+     * Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
+     */
     private Boolean definitionLookupBlocked;
-    /** Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
+     */
     private Boolean deviceBlockEnableRestrictions;
-    /** Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
+     */
     private Boolean deviceBlockEraseContentAndSettings;
-    /** Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
+     */
     private Boolean deviceBlockNameModification;
-    /** Indicates whether or not to block diagnostic data submission. */
+    /**
+     * Indicates whether or not to block diagnostic data submission.
+     */
     private Boolean diagnosticDataBlockSubmission;
-    /** Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later). */
+    /**
+     * Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
+     */
     private Boolean diagnosticDataBlockSubmissionModification;
-    /** Indicates whether or not to block the user from viewing managed documents in unmanaged apps. */
+    /**
+     * Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
+     */
     private Boolean documentsBlockManagedDocumentsInUnmanagedApps;
-    /** Indicates whether or not to block the user from viewing unmanaged documents in managed apps. */
+    /**
+     * Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
+     */
     private Boolean documentsBlockUnmanagedDocumentsInManagedApps;
-    /** An email address lacking a suffix that matches any of these strings will be considered out-of-domain. */
+    /**
+     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
+     */
     private java.util.List<String> emailInDomainSuffixes;
-    /** Indicates whether or not to block the user from trusting an enterprise app. */
+    /**
+     * Indicates whether or not to block the user from trusting an enterprise app.
+     */
     private Boolean enterpriseAppBlockTrust;
-    /** [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device. */
+    /**
+     * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+     */
     private Boolean enterpriseAppBlockTrustModification;
-    /** Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean faceTimeBlocked;
-    /** Indicates whether or not to block changes to Find My Friends when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
+     */
     private Boolean findMyFriendsBlocked;
-    /** Indicates whether or not to block the user from using Game Center when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
+     */
     private Boolean gameCenterBlocked;
-    /** Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean gamingBlockGameCenterFriends;
-    /** Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean gamingBlockMultiplayer;
-    /** indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode. */
+    /**
+     * indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
+     */
     private Boolean hostPairingBlocked;
-    /** Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
+     */
     private Boolean iBooksStoreBlocked;
-    /** Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica. */
+    /**
+     * Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
+     */
     private Boolean iBooksStoreBlockErotica;
-    /** Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device. */
+    /**
+     * Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
+     */
     private Boolean iCloudBlockActivityContinuation;
-    /** Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean iCloudBlockBackup;
-    /** Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean iCloudBlockDocumentSync;
-    /** Indicates whether or not to block Managed Apps Cloud Sync. */
+    /**
+     * Indicates whether or not to block Managed Apps Cloud Sync.
+     */
     private Boolean iCloudBlockManagedAppsSync;
-    /** Indicates whether or not to block iCloud Photo Library. */
+    /**
+     * Indicates whether or not to block iCloud Photo Library.
+     */
     private Boolean iCloudBlockPhotoLibrary;
-    /** Indicates whether or not to block iCloud Photo Stream Sync. */
+    /**
+     * Indicates whether or not to block iCloud Photo Stream Sync.
+     */
     private Boolean iCloudBlockPhotoStreamSync;
-    /** Indicates whether or not to block Shared Photo Stream. */
+    /**
+     * Indicates whether or not to block Shared Photo Stream.
+     */
     private Boolean iCloudBlockSharedPhotoStream;
-    /** Indicates whether or not to require backups to iCloud be encrypted. */
+    /**
+     * Indicates whether or not to require backups to iCloud be encrypted.
+     */
     private Boolean iCloudRequireEncryptedBackup;
-    /** Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean iTunesBlockExplicitContent;
-    /** Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later). */
+    /**
+     * Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
+     */
     private Boolean iTunesBlockMusicService;
-    /** Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later). */
+    /**
+     * Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
+     */
     private Boolean iTunesBlockRadio;
-    /** Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later). */
+    /**
+     * Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
+     */
     private Boolean keyboardBlockAutoCorrect;
-    /** Indicates whether or not to block the user from using dictation input when the device is in supervised mode. */
+    /**
+     * Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
+     */
     private Boolean keyboardBlockDictation;
-    /** Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later). */
+    /**
+     * Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
+     */
     private Boolean keyboardBlockPredictive;
-    /** Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
+     */
     private Boolean keyboardBlockShortcuts;
-    /** Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later). */
+    /**
+     * Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
+     */
     private Boolean keyboardBlockSpellCheck;
-    /** Indicates whether or not to allow assistive speak while in kiosk mode. */
+    /**
+     * Indicates whether or not to allow assistive speak while in kiosk mode.
+     */
     private Boolean kioskModeAllowAssistiveSpeak;
-    /** Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode. */
+    /**
+     * Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
+     */
     private Boolean kioskModeAllowAssistiveTouchSettings;
-    /** Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead. */
+    /**
+     * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+     */
     private Boolean kioskModeAllowAutoLock;
-    /** Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode. */
+    /**
+     * Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
+     */
     private Boolean kioskModeAllowColorInversionSettings;
-    /** Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead. */
+    /**
+     * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+     */
     private Boolean kioskModeAllowRingerSwitch;
-    /** Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead. */
+    /**
+     * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+     */
     private Boolean kioskModeAllowScreenRotation;
-    /** Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead. */
+    /**
+     * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+     */
     private Boolean kioskModeAllowSleepButton;
-    /** Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead. */
+    /**
+     * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+     */
     private Boolean kioskModeAllowTouchscreen;
-    /** Indicates whether or not to allow access to the voice over settings while in kiosk mode. */
+    /**
+     * Indicates whether or not to allow access to the voice over settings while in kiosk mode.
+     */
     private Boolean kioskModeAllowVoiceOverSettings;
-    /** Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead. */
+    /**
+     * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+     */
     private Boolean kioskModeAllowVolumeButtons;
-    /** Indicates whether or not to allow access to the zoom settings while in kiosk mode. */
+    /**
+     * Indicates whether or not to allow access to the zoom settings while in kiosk mode.
+     */
     private Boolean kioskModeAllowZoomSettings;
-    /** URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known. */
+    /**
+     * URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
+     */
     private String kioskModeAppStoreUrl;
-    /** ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set. */
+    /**
+     * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
+     */
     private String kioskModeBuiltInAppId;
-    /** Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored. */
+    /**
+     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
+     */
     private String kioskModeManagedAppId;
-    /** Indicates whether or not to require assistive touch while in kiosk mode. */
+    /**
+     * Indicates whether or not to require assistive touch while in kiosk mode.
+     */
     private Boolean kioskModeRequireAssistiveTouch;
-    /** Indicates whether or not to require color inversion while in kiosk mode. */
+    /**
+     * Indicates whether or not to require color inversion while in kiosk mode.
+     */
     private Boolean kioskModeRequireColorInversion;
-    /** Indicates whether or not to require mono audio while in kiosk mode. */
+    /**
+     * Indicates whether or not to require mono audio while in kiosk mode.
+     */
     private Boolean kioskModeRequireMonoAudio;
-    /** Indicates whether or not to require voice over while in kiosk mode. */
+    /**
+     * Indicates whether or not to require voice over while in kiosk mode.
+     */
     private Boolean kioskModeRequireVoiceOver;
-    /** Indicates whether or not to require zoom while in kiosk mode. */
+    /**
+     * Indicates whether or not to require zoom while in kiosk mode.
+     */
     private Boolean kioskModeRequireZoom;
-    /** Indicates whether or not to block the user from using control center on the lock screen. */
+    /**
+     * Indicates whether or not to block the user from using control center on the lock screen.
+     */
     private Boolean lockScreenBlockControlCenter;
-    /** Indicates whether or not to block the user from using the notification view on the lock screen. */
+    /**
+     * Indicates whether or not to block the user from using the notification view on the lock screen.
+     */
     private Boolean lockScreenBlockNotificationView;
-    /** Indicates whether or not to block the user from using passbook when the device is locked. */
+    /**
+     * Indicates whether or not to block the user from using passbook when the device is locked.
+     */
     private Boolean lockScreenBlockPassbook;
-    /** Indicates whether or not to block the user from using the Today View on the lock screen. */
+    /**
+     * Indicates whether or not to block the user from using the Today View on the lock screen.
+     */
     private Boolean lockScreenBlockTodayView;
-    /** Apps rating as in media content */
+    /**
+     * Apps rating as in media content
+     */
     private RatingAppsType mediaContentRatingApps;
-    /** Media content rating settings for Australia */
+    /**
+     * Media content rating settings for Australia
+     */
     private MediaContentRatingAustralia mediaContentRatingAustralia;
-    /** Media content rating settings for Canada */
+    /**
+     * Media content rating settings for Canada
+     */
     private MediaContentRatingCanada mediaContentRatingCanada;
-    /** Media content rating settings for France */
+    /**
+     * Media content rating settings for France
+     */
     private MediaContentRatingFrance mediaContentRatingFrance;
-    /** Media content rating settings for Germany */
+    /**
+     * Media content rating settings for Germany
+     */
     private MediaContentRatingGermany mediaContentRatingGermany;
-    /** Media content rating settings for Ireland */
+    /**
+     * Media content rating settings for Ireland
+     */
     private MediaContentRatingIreland mediaContentRatingIreland;
-    /** Media content rating settings for Japan */
+    /**
+     * Media content rating settings for Japan
+     */
     private MediaContentRatingJapan mediaContentRatingJapan;
-    /** Media content rating settings for New Zealand */
+    /**
+     * Media content rating settings for New Zealand
+     */
     private MediaContentRatingNewZealand mediaContentRatingNewZealand;
-    /** Media content rating settings for United Kingdom */
+    /**
+     * Media content rating settings for United Kingdom
+     */
     private MediaContentRatingUnitedKingdom mediaContentRatingUnitedKingdom;
-    /** Media content rating settings for United States */
+    /**
+     * Media content rating settings for United States
+     */
     private MediaContentRatingUnitedStates mediaContentRatingUnitedStates;
-    /** Indicates whether or not to block the user from using the Messages app on the supervised device. */
+    /**
+     * Indicates whether or not to block the user from using the Messages app on the supervised device.
+     */
     private Boolean messagesBlocked;
-    /** List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements. */
+    /**
+     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
+     */
     private java.util.List<IosNetworkUsageRule> networkUsageRules;
-    /** Indicates whether or not to allow notifications settings modification (iOS 9.3 and later). */
+    /**
+     * Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
+     */
     private Boolean notificationsBlockSettingsModification;
-    /** Block modification of registered Touch ID fingerprints when in supervised mode. */
+    /**
+     * Block modification of registered Touch ID fingerprints when in supervised mode.
+     */
     private Boolean passcodeBlockFingerprintModification;
-    /** Indicates whether or not to block fingerprint unlock. */
+    /**
+     * Indicates whether or not to block fingerprint unlock.
+     */
     private Boolean passcodeBlockFingerprintUnlock;
-    /** Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later). */
+    /**
+     * Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
+     */
     private Boolean passcodeBlockModification;
-    /** Indicates whether or not to block simple passcodes. */
+    /**
+     * Indicates whether or not to block simple passcodes.
+     */
     private Boolean passcodeBlockSimple;
-    /** Number of days before the passcode expires. Valid values 1 to 65535 */
+    /**
+     * Number of days before the passcode expires. Valid values 1 to 65535
+     */
     private Integer passcodeExpirationDays;
-    /** Number of character sets a passcode must contain. Valid values 0 to 4 */
+    /**
+     * Number of character sets a passcode must contain. Valid values 0 to 4
+     */
     private Integer passcodeMinimumCharacterSetCount;
-    /** Minimum length of passcode. Valid values 4 to 14 */
+    /**
+     * Minimum length of passcode. Valid values 4 to 14
+     */
     private Integer passcodeMinimumLength;
-    /** Minutes of inactivity before a passcode is required. */
+    /**
+     * Minutes of inactivity before a passcode is required.
+     */
     private Integer passcodeMinutesOfInactivityBeforeLock;
-    /** Minutes of inactivity before the screen times out. */
+    /**
+     * Minutes of inactivity before the screen times out.
+     */
     private Integer passcodeMinutesOfInactivityBeforeScreenTimeout;
-    /** Number of previous passcodes to block. Valid values 1 to 24 */
+    /**
+     * Number of previous passcodes to block. Valid values 1 to 24
+     */
     private Integer passcodePreviousPasscodeBlockCount;
-    /** Indicates whether or not to require a passcode. */
+    /**
+     * Indicates whether or not to require a passcode.
+     */
     private Boolean passcodeRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passcodeRequiredType;
-    /** Number of sign in failures allowed before wiping the device. Valid values 2 to 11 */
+    /**
+     * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
+     */
     private Integer passcodeSignInFailureCountBeforeWipe;
-    /** Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later). */
+    /**
+     * Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
+     */
     private Boolean podcastsBlocked;
-    /** Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean safariBlockAutofill;
-    /** Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later. */
+    /**
+     * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
+     */
     private Boolean safariBlocked;
-    /** Indicates whether or not to block JavaScript in Safari. */
+    /**
+     * Indicates whether or not to block JavaScript in Safari.
+     */
     private Boolean safariBlockJavaScript;
-    /** Indicates whether or not to block popups in Safari. */
+    /**
+     * Indicates whether or not to block popups in Safari.
+     */
     private Boolean safariBlockPopups;
-    /** Web Browser Cookie Settings. */
+    /**
+     * Web Browser Cookie Settings.
+     */
     private WebBrowserCookieSettings safariCookieSettings;
-    /** URLs matching the patterns listed here will be considered managed. */
+    /**
+     * URLs matching the patterns listed here will be considered managed.
+     */
     private java.util.List<String> safariManagedDomains;
-    /** Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later). */
+    /**
+     * Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
+     */
     private java.util.List<String> safariPasswordAutoFillDomains;
-    /** Indicates whether or not to require fraud warning in Safari. */
+    /**
+     * Indicates whether or not to require fraud warning in Safari.
+     */
     private Boolean safariRequireFraudWarning;
-    /** Indicates whether or not to block the user from taking Screenshots. */
+    /**
+     * Indicates whether or not to block the user from taking Screenshots.
+     */
     private Boolean screenCaptureBlocked;
-    /** Indicates whether or not to block the user from using Siri. */
+    /**
+     * Indicates whether or not to block the user from using Siri.
+     */
     private Boolean siriBlocked;
-    /** Indicates whether or not to block the user from using Siri when locked. */
+    /**
+     * Indicates whether or not to block the user from using Siri when locked.
+     */
     private Boolean siriBlockedWhenLocked;
-    /** Indicates whether or not to block Siri from querying user-generated content when used on a supervised device. */
+    /**
+     * Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
+     */
     private Boolean siriBlockUserGeneratedContent;
-    /** Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device. */
+    /**
+     * Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
+     */
     private Boolean siriRequireProfanityFilter;
-    /** Indicates whether or not to block Spotlight search from returning internet results on supervised device. */
+    /**
+     * Indicates whether or not to block Spotlight search from returning internet results on supervised device.
+     */
     private Boolean spotlightBlockInternetResults;
-    /** Indicates whether or not to block voice dialing. */
+    /**
+     * Indicates whether or not to block voice dialing.
+     */
     private Boolean voiceDialingBlocked;
-    /** Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) . */
+    /**
+     * Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
+     */
     private Boolean wallpaperBlockModification;
-    /** Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced. */
+    /**
+     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
+     */
     private Boolean wiFiConnectOnlyToConfiguredNetworks;
     /**
      * Instantiates a new IosGeneralDeviceConfiguration and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Defines whether external users coming inbound are allowed. */
+    /**
+     * Defines whether external users coming inbound are allowed.
+     */
     private Boolean inboundAllowed;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Defines whether internal users are allowed to go outbound. */
+    /**
+     * Defines whether internal users are allowed to go outbound.
+     */
     private Boolean outboundAllowed;
     /**
      * Instantiates a new inboundOutboundPolicyConfiguration and sets the default values.

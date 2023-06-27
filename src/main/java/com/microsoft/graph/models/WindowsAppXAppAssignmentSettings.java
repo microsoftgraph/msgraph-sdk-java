@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed. */
+    /**
+     * When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
+     */
     private Boolean useDeviceContext;
     /**
      * Instantiates a new WindowsAppXAppAssignmentSettings and sets the default values.

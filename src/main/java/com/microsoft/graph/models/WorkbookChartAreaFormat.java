@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAreaFormat extends Entity implements Parsable {
-    /** Represents the fill format of an object, which includes background formatting information. Read-only. */
+    /**
+     * Represents the fill format of an object, which includes background formatting information. Read-only.
+     */
     private WorkbookChartFill fill;
-    /** Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only. */
+    /**
+     * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
+     */
     private WorkbookChartFont font;
     /**
      * Instantiates a new workbookChartAreaFormat and sets the default values.

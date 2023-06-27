@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Print implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The list of available print connectors. */
+    /**
+     * The list of available print connectors.
+     */
     private java.util.List<PrintConnector> connectors;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The list of print long running operations. */
+    /**
+     * The list of print long running operations.
+     */
     private java.util.List<PrintOperation> operations;
-    /** The list of printers registered in the tenant. */
+    /**
+     * The list of printers registered in the tenant.
+     */
     private java.util.List<Printer> printers;
-    /** The list of available Universal Print service endpoints. */
+    /**
+     * The list of available Universal Print service endpoints.
+     */
     private java.util.List<PrintService> services;
-    /** Tenant-wide settings for the Universal Print service. */
+    /**
+     * Tenant-wide settings for the Universal Print service.
+     */
     private PrintSettings settings;
-    /** The list of printer shares registered in the tenant. */
+    /**
+     * The list of printer shares registered in the tenant.
+     */
     private java.util.List<PrinterShare> shares;
-    /** List of abstract definition for a task that can be triggered when various events occur within Universal Print. */
+    /**
+     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     */
     private java.util.List<PrintTaskDefinition> taskDefinitions;
     /**
      * Instantiates a new Print and sets the default values.

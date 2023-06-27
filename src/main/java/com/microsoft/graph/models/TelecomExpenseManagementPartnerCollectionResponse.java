@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TelecomExpenseManagementPartnerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TelecomExpenseManagementPartner> value;
     /**
      * Instantiates a new TelecomExpenseManagementPartnerCollectionResponse and sets the default values.

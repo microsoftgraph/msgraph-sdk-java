@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AadUserConversationMember extends ConversationMember implements Parsable {
-    /** The email address of the user. */
+    /**
+     * The email address of the user.
+     */
     private String email;
-    /** TenantId which the Azure AD user belongs to. */
+    /**
+     * TenantId which the Azure AD user belongs to.
+     */
     private String tenantId;
-    /** The user property */
+    /**
+     * The user property
+     */
     private User user;
-    /** The guid of the user. */
+    /**
+     * The guid of the user.
+     */
     private String userId;
     /**
      * Instantiates a new AadUserConversationMember and sets the default values.

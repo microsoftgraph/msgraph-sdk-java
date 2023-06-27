@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DdbPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The cost property */
+    /**
+     * The cost property
+     */
     private Json cost;
-    /** The factor property */
+    /**
+     * The factor property
+     */
     private Json factor;
-    /** The life property */
+    /**
+     * The life property
+     */
     private Json life;
-    /** The period property */
+    /**
+     * The period property
+     */
     private Json period;
-    /** The salvage property */
+    /**
+     * The salvage property
+     */
     private Json salvage;
     /**
      * Instantiates a new ddbPostRequestBody and sets the default values.

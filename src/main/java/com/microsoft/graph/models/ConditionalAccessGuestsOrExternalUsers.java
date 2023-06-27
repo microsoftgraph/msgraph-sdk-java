@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String. */
+    /**
+     * The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+     */
     private ConditionalAccessExternalTenants externalTenants;
-    /** The guestOrExternalUserTypes property */
+    /**
+     * The guestOrExternalUserTypes property
+     */
     private ConditionalAccessGuestOrExternalUserTypes guestOrExternalUserTypes;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new conditionalAccessGuestsOrExternalUsers and sets the default values.

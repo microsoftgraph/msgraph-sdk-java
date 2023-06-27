@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ModifiedProperty implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates the property name of the target attribute that was changed. */
+    /**
+     * Indicates the property name of the target attribute that was changed.
+     */
     private String displayName;
-    /** Indicates the updated value for the propery. */
+    /**
+     * Indicates the updated value for the propery.
+     */
     private String newValue;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates the previous value (before the update) for the property. */
+    /**
+     * Indicates the previous value (before the update) for the property.
+     */
     private String oldValue;
     /**
      * Instantiates a new modifiedProperty and sets the default values.

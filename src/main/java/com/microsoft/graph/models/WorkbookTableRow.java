@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookTableRow extends Entity implements Parsable {
-    /** Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only. */
+    /**
+     * Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+     */
     private Integer index;
-    /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /**
+     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     */
     private Json values;
     /**
      * Instantiates a new workbookTableRow and sets the default values.

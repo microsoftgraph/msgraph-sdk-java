@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AzureActiveDirectoryTenant extends IdentitySource implements Parsable {
-    /** The name of the Azure Active Directory tenant. Read only. */
+    /**
+     * The name of the Azure Active Directory tenant. Read only.
+     */
     private String displayName;
-    /** The ID of the Azure Active Directory tenant. Read only. */
+    /**
+     * The ID of the Azure Active Directory tenant. Read only.
+     */
     private String tenantId;
     /**
      * Instantiates a new AzureActiveDirectoryTenant and sets the default values.

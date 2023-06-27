@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DatePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The day property */
+    /**
+     * The day property
+     */
     private Json day;
-    /** The month property */
+    /**
+     * The month property
+     */
     private Json month;
-    /** The year property */
+    /**
+     * The year property
+     */
     private Json year;
     /**
      * Instantiates a new datePostRequestBody and sets the default values.

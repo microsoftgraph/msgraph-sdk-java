@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PasswordAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PasswordAuthenticationMethod> value;
     /**
      * Instantiates a new PasswordAuthenticationMethodCollectionResponse and sets the default values.

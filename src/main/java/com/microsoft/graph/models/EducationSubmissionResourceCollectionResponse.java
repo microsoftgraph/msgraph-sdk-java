@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationSubmissionResourceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<EducationSubmissionResource> value;
     /**
      * Instantiates a new EducationSubmissionResourceCollectionResponse and sets the default values.

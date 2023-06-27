@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RequestSchedule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** When the eligible or active assignment expires. */
+    /**
+     * When the eligible or active assignment expires.
+     */
     private ExpirationPattern expiration;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The frequency of the  eligible or active assignment. This property is currently unsupported in PIM. */
+    /**
+     * The frequency of the  eligible or active assignment. This property is currently unsupported in PIM.
+     */
     private PatternedRecurrence recurrence;
-    /** When the  eligible or active assignment becomes active. */
+    /**
+     * When the  eligible or active assignment becomes active.
+     */
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new requestSchedule and sets the default values.

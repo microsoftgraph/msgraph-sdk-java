@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
  */
 public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity. */
+    /**
+     * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
+     */
     @javax.annotation.Nonnull
     public ChildTagsRequestBuilder childTags() {
         return new ChildTagsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the parent property of the microsoft.graph.security.ediscoveryReviewTag entity. */
+    /**
+     * Provides operations to manage the parent property of the microsoft.graph.security.ediscoveryReviewTag entity.
+     */
     @javax.annotation.Nonnull
     public ParentRequestBuilder parent() {
         return new ParentRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +273,15 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an ediscoveryReviewTag object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +290,9 @@ public class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -10,7 +10,9 @@ import java.util.Objects;
  * The type for deployment of groups or apps.
  */
 public class TargetedManagedAppPolicyAssignment extends Entity implements Parsable {
-    /** Identifier for deployment to a group or app */
+    /**
+     * Identifier for deployment to a group or app
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new targetedManagedAppPolicyAssignment and sets the default values.

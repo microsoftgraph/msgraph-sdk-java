@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for the file format of a report */
+/**
+ * Possible values for the file format of a report
+ */
 public enum DeviceManagementReportFileFormat implements ValuedEnum {
     /** CSV Format */
     Csv("csv"),

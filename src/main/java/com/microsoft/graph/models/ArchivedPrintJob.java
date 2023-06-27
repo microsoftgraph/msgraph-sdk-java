@@ -9,27 +9,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
-    /** True if the job was acquired by a printer; false otherwise. Read-only. */
+    /**
+     * True if the job was acquired by a printer; false otherwise. Read-only.
+     */
     private Boolean acquiredByPrinter;
-    /** The dateTimeOffset when the job was acquired by the printer, if any. Read-only. */
+    /**
+     * The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
+     */
     private OffsetDateTime acquiredDateTime;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The dateTimeOffset when the job was completed, canceled or aborted. Read-only. */
+    /**
+     * The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
+     */
     private OffsetDateTime completionDateTime;
-    /** The number of copies that were printed. Read-only. */
+    /**
+     * The number of copies that were printed. Read-only.
+     */
     private Integer copiesPrinted;
-    /** The user who created the print job. Read-only. */
+    /**
+     * The user who created the print job. Read-only.
+     */
     private UserIdentity createdBy;
-    /** The dateTimeOffset when the job was created. Read-only. */
+    /**
+     * The dateTimeOffset when the job was created. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The archived print job's GUID. Read-only. */
+    /**
+     * The archived print job's GUID. Read-only.
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The printer ID that the job was queued for. Read-only. */
+    /**
+     * The printer ID that the job was queued for. Read-only.
+     */
     private String printerId;
-    /** The processingState property */
+    /**
+     * The processingState property
+     */
     private PrintJobProcessingState processingState;
     /**
      * Instantiates a new archivedPrintJob and sets the default values.

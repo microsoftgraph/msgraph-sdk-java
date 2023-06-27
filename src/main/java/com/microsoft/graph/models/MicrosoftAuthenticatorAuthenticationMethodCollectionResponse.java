@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodCollectionResponse and sets the default values.

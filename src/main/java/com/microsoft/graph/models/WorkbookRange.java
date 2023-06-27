@@ -7,45 +7,85 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookRange extends Entity implements Parsable {
-    /** Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only. */
+    /**
+     * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
+     */
     private String address;
-    /** Represents range reference for the specified range in the language of the user. Read-only. */
+    /**
+     * Represents range reference for the specified range in the language of the user. Read-only.
+     */
     private String addressLocal;
-    /** Number of cells in the range. Read-only. */
+    /**
+     * Number of cells in the range. Read-only.
+     */
     private Integer cellCount;
-    /** Represents the total number of columns in the range. Read-only. */
+    /**
+     * Represents the total number of columns in the range. Read-only.
+     */
     private Integer columnCount;
-    /** Represents if all columns of the current range are hidden. */
+    /**
+     * Represents if all columns of the current range are hidden.
+     */
     private Boolean columnHidden;
-    /** Represents the column number of the first cell in the range. Zero-indexed. Read-only. */
+    /**
+     * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
+     */
     private Integer columnIndex;
-    /** Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only. */
+    /**
+     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+     */
     private WorkbookRangeFormat format;
-    /** Represents the formula in A1-style notation. */
+    /**
+     * Represents the formula in A1-style notation.
+     */
     private Json formulas;
-    /** Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German. */
+    /**
+     * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
+     */
     private Json formulasLocal;
-    /** Represents the formula in R1C1-style notation. */
+    /**
+     * Represents the formula in R1C1-style notation.
+     */
     private Json formulasR1C1;
-    /** Represents if all cells of the current range are hidden. Read-only. */
+    /**
+     * Represents if all cells of the current range are hidden. Read-only.
+     */
     private Boolean hidden;
-    /** Represents Excel's number format code for the given cell. */
+    /**
+     * Represents Excel's number format code for the given cell.
+     */
     private Json numberFormat;
-    /** Returns the total number of rows in the range. Read-only. */
+    /**
+     * Returns the total number of rows in the range. Read-only.
+     */
     private Integer rowCount;
-    /** Represents if all rows of the current range are hidden. */
+    /**
+     * Represents if all rows of the current range are hidden.
+     */
     private Boolean rowHidden;
-    /** Returns the row number of the first cell in the range. Zero-indexed. Read-only. */
+    /**
+     * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
+     */
     private Integer rowIndex;
-    /** The worksheet containing the current range. Read-only. */
+    /**
+     * The worksheet containing the current range. Read-only.
+     */
     private WorkbookRangeSort sort;
-    /** Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only. */
+    /**
+     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     */
     private Json text;
-    /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /**
+     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     */
     private Json values;
-    /** Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only. */
+    /**
+     * Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
+     */
     private Json valueTypes;
-    /** The worksheet containing the current range. Read-only. */
+    /**
+     * The worksheet containing the current range. Read-only.
+     */
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new WorkbookRange and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BasicAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
-    /** The password. It is not returned in the responses. */
+    /**
+     * The password. It is not returned in the responses.
+     */
     private String password;
-    /** The username. */
+    /**
+     * The username.
+     */
     private String username;
     /**
      * Instantiates a new BasicAuthentication and sets the default values.

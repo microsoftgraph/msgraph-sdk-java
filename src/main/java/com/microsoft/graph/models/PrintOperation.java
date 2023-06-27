@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintOperation extends Entity implements Parsable {
-    /** The DateTimeOffset when the operation was created. Read-only. */
+    /**
+     * The DateTimeOffset when the operation was created. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The status property */
+    /**
+     * The status property
+     */
     private PrintOperationStatus status;
     /**
      * Instantiates a new printOperation and sets the default values.

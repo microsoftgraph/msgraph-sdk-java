@@ -7,29 +7,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookRangeView extends Entity implements Parsable {
-    /** Represents the cell addresses */
+    /**
+     * Represents the cell addresses
+     */
     private Json cellAddresses;
-    /** Returns the number of visible columns. Read-only. */
+    /**
+     * Returns the number of visible columns. Read-only.
+     */
     private Integer columnCount;
-    /** Represents the formula in A1-style notation. */
+    /**
+     * Represents the formula in A1-style notation.
+     */
     private Json formulas;
-    /** Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German. */
+    /**
+     * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
+     */
     private Json formulasLocal;
-    /** Represents the formula in R1C1-style notation. */
+    /**
+     * Represents the formula in R1C1-style notation.
+     */
     private Json formulasR1C1;
-    /** Index of the range. */
+    /**
+     * Index of the range.
+     */
     private Integer index;
-    /** Represents Excel's number format code for the given cell. Read-only. */
+    /**
+     * Represents Excel's number format code for the given cell. Read-only.
+     */
     private Json numberFormat;
-    /** Returns the number of visible rows. Read-only. */
+    /**
+     * Returns the number of visible rows. Read-only.
+     */
     private Integer rowCount;
-    /** Represents a collection of range views associated with the range. Read-only. Read-only. */
+    /**
+     * Represents a collection of range views associated with the range. Read-only. Read-only.
+     */
     private java.util.List<WorkbookRangeView> rows;
-    /** Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only. */
+    /**
+     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     */
     private Json text;
-    /** Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /**
+     * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     */
     private Json values;
-    /** Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. */
+    /**
+     * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     */
     private Json valueTypes;
     /**
      * Instantiates a new WorkbookRangeView and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Determines whether the user's Authenticator app will show them the client app they are signing into. */
+    /**
+     * Determines whether the user's Authenticator app will show them the client app they are signing into.
+     */
     private AuthenticationMethodFeatureConfiguration displayAppInformationRequiredState;
-    /** Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from. */
+    /**
+     * Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
+     */
     private AuthenticationMethodFeatureConfiguration displayLocationInformationRequiredState;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new microsoftAuthenticatorFeatureSettings and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LinkedResourceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<LinkedResource> value;
     /**
      * Instantiates a new LinkedResourceCollectionResponse and sets the default values.

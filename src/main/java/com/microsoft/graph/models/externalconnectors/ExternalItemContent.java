@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalItemContent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The type property */
+    /**
+     * The type property
+     */
     private ExternalItemContentType type;
-    /** The content for the externalItem. Required. */
+    /**
+     * The content for the externalItem. Required.
+     */
     private String value;
     /**
      * Instantiates a new externalItemContent and sets the default values.

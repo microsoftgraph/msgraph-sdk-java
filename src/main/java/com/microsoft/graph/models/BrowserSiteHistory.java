@@ -12,23 +12,41 @@ import java.util.Objects;
  * The history for the site modifications
  */
 public class BrowserSiteHistory implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain. */
+    /**
+     * Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
+     */
     private Boolean allowRedirect;
-    /** The comment for the site. */
+    /**
+     * The comment for the site.
+     */
     private String comment;
-    /** Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue. */
+    /**
+     * Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
+     */
     private BrowserSiteCompatibilityMode compatibilityMode;
-    /** The user who last modified the site. */
+    /**
+     * The user who last modified the site.
+     */
     private IdentitySet lastModifiedBy;
-    /** The merge type of the site. The possible values are: noMerge, default, unknownFutureValue. */
+    /**
+     * The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
+     */
     private BrowserSiteMergeType mergeType;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The date and time when the site was last published. */
+    /**
+     * The date and time when the site was last published.
+     */
     private OffsetDateTime publishedDateTime;
-    /** The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option. */
+    /**
+     * The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
+     */
     private BrowserSiteTargetEnvironment targetEnvironment;
     /**
      * Instantiates a new BrowserSiteHistory and sets the default values.

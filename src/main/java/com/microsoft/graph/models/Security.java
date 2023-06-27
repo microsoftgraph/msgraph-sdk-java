@@ -12,23 +12,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Security extends Entity implements Parsable {
-    /** The alerts property */
+    /**
+     * The alerts property
+     */
     private java.util.List<Alert> alerts;
-    /** A collection of alerts in Microsoft 365 Defender. */
+    /**
+     * A collection of alerts in Microsoft 365 Defender.
+     */
     private java.util.List<Alert> alertsV2;
-    /** The attackSimulation property */
+    /**
+     * The attackSimulation property
+     */
     private AttackSimulationRoot attackSimulation;
-    /** The cases property */
+    /**
+     * The cases property
+     */
     private CasesRoot cases;
-    /** A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack. */
+    /**
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     */
     private java.util.List<Incident> incidents;
-    /** The secureScoreControlProfiles property */
+    /**
+     * The secureScoreControlProfiles property
+     */
     private java.util.List<SecureScoreControlProfile> secureScoreControlProfiles;
-    /** The secureScores property */
+    /**
+     * The secureScores property
+     */
     private java.util.List<SecureScore> secureScores;
-    /** The triggers property */
+    /**
+     * The triggers property
+     */
     private TriggersRoot triggers;
-    /** The triggerTypes property */
+    /**
+     * The triggerTypes property
+     */
     private TriggerTypesRoot triggerTypes;
     /**
      * Instantiates a new Security and sets the default values.

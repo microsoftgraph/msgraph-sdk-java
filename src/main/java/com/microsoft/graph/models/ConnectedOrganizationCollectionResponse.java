@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConnectedOrganizationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ConnectedOrganization> value;
     /**
      * Instantiates a new ConnectedOrganizationCollectionResponse and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Initiator extends Identity implements Parsable {
-    /** Type of initiator. Possible values are: user, application, system, unknownFutureValue. */
+    /**
+     * Type of initiator. Possible values are: user, application, system, unknownFutureValue.
+     */
     private InitiatorType initiatorType;
     /**
      * Instantiates a new Initiator and sets the default values.

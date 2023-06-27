@@ -28,42 +28,58 @@ import java.util.Objects;
  * Provides operations to manage the branding property of the microsoft.graph.organization entity.
  */
 public class BrandingRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the media for the organization entity. */
+    /**
+     * Provides operations to manage the media for the organization entity.
+     */
     @javax.annotation.Nonnull
     public BackgroundImageRequestBuilder backgroundImage() {
         return new BackgroundImageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organization entity. */
+    /**
+     * Provides operations to manage the media for the organization entity.
+     */
     @javax.annotation.Nonnull
     public BannerLogoRequestBuilder bannerLogo() {
         return new BannerLogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organization entity. */
+    /**
+     * Provides operations to manage the media for the organization entity.
+     */
     @javax.annotation.Nonnull
     public CustomCSSRequestBuilder customCSS() {
         return new CustomCSSRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organization entity. */
+    /**
+     * Provides operations to manage the media for the organization entity.
+     */
     @javax.annotation.Nonnull
     public FaviconRequestBuilder favicon() {
         return new FaviconRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organization entity. */
+    /**
+     * Provides operations to manage the media for the organization entity.
+     */
     @javax.annotation.Nonnull
     public HeaderLogoRequestBuilder headerLogo() {
         return new HeaderLogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity. */
+    /**
+     * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
+     */
     @javax.annotation.Nonnull
     public LocalizationsRequestBuilder localizations() {
         return new LocalizationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organization entity. */
+    /**
+     * Provides operations to manage the media for the organization entity.
+     */
     @javax.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
         return new SquareLogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organization entity. */
+    /**
+     * Provides operations to manage the media for the organization entity.
+     */
     @javax.annotation.Nonnull
     public SquareLogoDarkRequestBuilder squareLogoDark() {
         return new SquareLogoDarkRequestBuilder(pathParameters, requestAdapter);
@@ -305,11 +321,15 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
      * Retrieve the default organizational branding object, if the **Accept-Language** header is set to `0` or `default`. If no default organizational branding object exists, this method returns a `404 Not Found` error. If the **Accept-Language** header is set to an existing locale identified by the value of its **id**, this method retrieves the branding for the specified locale. This method retrieves only non-Stream properties, for example, **usernameHintText** and **signInPageText**. To retrieve Stream types of the default branding, for example, **bannerLogo** and **backgroundImage**, use the GET organizationalBrandingLocalization method.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -318,7 +338,9 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

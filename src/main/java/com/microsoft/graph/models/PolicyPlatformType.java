@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Supported platform types for policies. */
+/**
+ * Supported platform types for policies.
+ */
 public enum PolicyPlatformType implements ValuedEnum {
     /** Android. */
     Android("android"),

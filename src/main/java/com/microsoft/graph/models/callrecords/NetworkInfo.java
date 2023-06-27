@@ -8,61 +8,117 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NetworkInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent. */
+    /**
+     * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
+     */
     private Float bandwidthLowEventRatio;
-    /** The wireless LAN basic service set identifier of the media endpoint used to connect to the network. */
+    /**
+     * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+     */
     private String basicServiceSetIdentifier;
-    /** The connectionType property */
+    /**
+     * The connectionType property
+     */
     private NetworkConnectionType connectionType;
-    /** Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication. */
+    /**
+     * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
+     */
     private Float delayEventRatio;
-    /** DNS suffix associated with the network adapter of the media endpoint. */
+    /**
+     * DNS suffix associated with the network adapter of the media endpoint.
+     */
     private String dnsSuffix;
-    /** IP address of the media endpoint. */
+    /**
+     * IP address of the media endpoint.
+     */
     private String ipAddress;
-    /** Link speed in bits per second reported by the network adapter used by the media endpoint. */
+    /**
+     * Link speed in bits per second reported by the network adapter used by the media endpoint.
+     */
     private Long linkSpeed;
-    /** The media access control (MAC) address of the media endpoint's network device. */
+    /**
+     * The media access control (MAC) address of the media endpoint's network device.
+     */
     private String macAddress;
-    /** The networkTransportProtocol property */
+    /**
+     * The networkTransportProtocol property
+     */
     private NetworkTransportProtocol networkTransportProtocol;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Network port number used by media endpoint. */
+    /**
+     * Network port number used by media endpoint.
+     */
     private Integer port;
-    /** Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received. */
+    /**
+     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
+     */
     private Float receivedQualityEventRatio;
-    /** IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint. */
+    /**
+     * IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
+     */
     private String reflexiveIPAddress;
-    /** IP address of the media relay server allocated by the media endpoint. */
+    /**
+     * IP address of the media relay server allocated by the media endpoint.
+     */
     private String relayIPAddress;
-    /** Network port number allocated on the media relay server by the media endpoint. */
+    /**
+     * Network port number allocated on the media relay server by the media endpoint.
+     */
     private Integer relayPort;
-    /** Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent. */
+    /**
+     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
+     */
     private Float sentQualityEventRatio;
-    /** Subnet used for media stream by the media endpoint. */
+    /**
+     * Subnet used for media stream by the media endpoint.
+     */
     private String subnet;
-    /** List of network trace route hops collected for this media stream.* */
+    /**
+     * List of network trace route hops collected for this media stream.*
+     */
     private java.util.List<TraceRouteHop> traceRouteHops;
-    /** The wifiBand property */
+    /**
+     * The wifiBand property
+     */
     private WifiBand wifiBand;
-    /** Estimated remaining battery charge in percentage reported by the media endpoint. */
+    /**
+     * Estimated remaining battery charge in percentage reported by the media endpoint.
+     */
     private Integer wifiBatteryCharge;
-    /** WiFi channel used by the media endpoint. */
+    /**
+     * WiFi channel used by the media endpoint.
+     */
     private Integer wifiChannel;
-    /** Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint. */
+    /**
+     * Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
+     */
     private String wifiMicrosoftDriver;
-    /** Version of the Microsoft WiFi driver used by the media endpoint. */
+    /**
+     * Version of the Microsoft WiFi driver used by the media endpoint.
+     */
     private String wifiMicrosoftDriverVersion;
-    /** The wifiRadioType property */
+    /**
+     * The wifiRadioType property
+     */
     private WifiRadioType wifiRadioType;
-    /** WiFi signal strength in percentage reported by the media endpoint. */
+    /**
+     * WiFi signal strength in percentage reported by the media endpoint.
+     */
     private Integer wifiSignalStrength;
-    /** Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint. */
+    /**
+     * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
+     */
     private String wifiVendorDriver;
-    /** Version of the WiFi driver used by the media endpoint. */
+    /**
+     * Version of the WiFi driver used by the media endpoint.
+     */
     private String wifiVendorDriverVersion;
     /**
      * Instantiates a new networkInfo and sets the default values.

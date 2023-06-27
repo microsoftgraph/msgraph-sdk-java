@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ContentTypeInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The id of the content type. */
+    /**
+     * The ID of the content type.
+     */
     private String id;
-    /** The name of the content type. */
+    /**
+     * The name of the content type.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new contentTypeInfo and sets the default values.
@@ -55,7 +63,7 @@ public class ContentTypeInfo implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id of the content type.
+     * Gets the id property value. The ID of the content type.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +109,7 @@ public class ContentTypeInfo implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the id property value. The id of the content type.
+     * Sets the id property value. The ID of the content type.
      * @param value Value to set for the id property.
      * @return a void
      */

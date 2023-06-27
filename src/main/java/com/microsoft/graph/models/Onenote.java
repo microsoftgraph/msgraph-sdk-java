@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Onenote extends Entity implements Parsable {
-    /** The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable. */
+    /**
+     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     */
     private java.util.List<Notebook> notebooks;
-    /** The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable. */
+    /**
+     * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
+     */
     private java.util.List<OnenoteOperation> operations;
-    /** The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable. */
+    /**
+     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     */
     private java.util.List<OnenotePage> pages;
-    /** The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable. */
+    /**
+     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+     */
     private java.util.List<OnenoteResource> resources;
-    /** The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable. */
+    /**
+     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     */
     private java.util.List<SectionGroup> sectionGroups;
-    /** The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable. */
+    /**
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     */
     private java.util.List<OnenoteSection> sections;
     /**
      * Instantiates a new onenote and sets the default values.

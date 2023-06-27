@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SupportedTimeZonesWithTimeZoneStandardResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TimeZoneInformation> value;
     /**
      * Instantiates a new supportedTimeZonesWithTimeZoneStandardResponse and sets the default values.

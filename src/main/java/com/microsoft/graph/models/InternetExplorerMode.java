@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InternetExplorerMode extends Entity implements Parsable {
-    /** A collection of site lists to support Internet Explorer mode. */
+    /**
+     * A collection of site lists to support Internet Explorer mode.
+     */
     private java.util.List<BrowserSiteList> siteLists;
     /**
      * Instantiates a new internetExplorerMode and sets the default values.

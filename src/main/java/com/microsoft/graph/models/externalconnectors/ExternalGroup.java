@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalGroup extends Entity implements Parsable {
-    /** The description of the external group. Optional. */
+    /**
+     * The description of the external group. Optional.
+     */
     private String description;
-    /** The friendly name of the external group. Optional. */
+    /**
+     * The friendly name of the external group. Optional.
+     */
     private String displayName;
-    /** A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members. */
+    /**
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+     */
     private java.util.List<Identity> members;
     /**
      * Instantiates a new externalGroup and sets the default values.

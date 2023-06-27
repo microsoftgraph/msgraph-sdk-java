@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxes extends Entity implements Parsable {
-    /** Represents the category axis in a chart. Read-only. */
+    /**
+     * Represents the category axis in a chart. Read-only.
+     */
     private WorkbookChartAxis categoryAxis;
-    /** Represents the series axis of a 3-dimensional chart. Read-only. */
+    /**
+     * Represents the series axis of a 3-dimensional chart. Read-only.
+     */
     private WorkbookChartAxis seriesAxis;
-    /** Represents the value axis in an axis. Read-only. */
+    /**
+     * Represents the value axis in an axis. Read-only.
+     */
     private WorkbookChartAxis valueAxis;
     /**
      * Instantiates a new workbookChartAxes and sets the default values.

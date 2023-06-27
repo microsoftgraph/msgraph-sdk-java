@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IntegerRange implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The inclusive upper bound of the integer range. */
+    /**
+     * The inclusive upper bound of the integer range.
+     */
     private Long end;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The inclusive lower bound of the integer range. */
+    /**
+     * The inclusive lower bound of the integer range.
+     */
     private Long start;
     /**
      * Instantiates a new integerRange and sets the default values.

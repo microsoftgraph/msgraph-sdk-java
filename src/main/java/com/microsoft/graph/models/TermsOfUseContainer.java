@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TermsOfUseContainer extends Entity implements Parsable {
-    /** Represents the current status of a user's response to a company's customizable terms of use agreement. */
+    /**
+     * Represents the current status of a user's response to a company's customizable terms of use agreement.
+     */
     private java.util.List<AgreementAcceptance> agreementAcceptances;
-    /** Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD). */
+    /**
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+     */
     private java.util.List<Agreement> agreements;
     /**
      * Instantiates a new TermsOfUseContainer and sets the default values.

@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IncomingContext implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The ID of the participant that is under observation. Read-only. */
+    /**
+     * The ID of the participant that is under observation. Read-only.
+     */
     private String observedParticipantId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The identity that the call is happening on behalf of. */
+    /**
+     * The identity that the call is happening on behalf of.
+     */
     private IdentitySet onBehalfOf;
-    /** The ID of the participant that triggered the incoming call. Read-only. */
+    /**
+     * The ID of the participant that triggered the incoming call. Read-only.
+     */
     private String sourceParticipantId;
-    /** The identity that transferred the call. */
+    /**
+     * The identity that transferred the call.
+     */
     private IdentitySet transferor;
     /**
      * Instantiates a new incomingContext and sets the default values.

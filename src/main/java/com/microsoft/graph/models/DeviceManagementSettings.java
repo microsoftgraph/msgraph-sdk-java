@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The number of days a device is allowed to go without checking in to remain compliant. */
+    /**
+     * The number of days a device is allowed to go without checking in to remain compliant.
+     */
     private Integer deviceComplianceCheckinThresholdDays;
-    /** Is feature enabled or not for scheduled action for rule. */
+    /**
+     * Is feature enabled or not for scheduled action for rule.
+     */
     private Boolean isScheduledActionEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Device should be noncompliant when there is no compliance policy targeted when this is true */
+    /**
+     * Device should be noncompliant when there is no compliance policy targeted when this is true
+     */
     private Boolean secureByDefault;
     /**
      * Instantiates a new deviceManagementSettings and sets the default values.

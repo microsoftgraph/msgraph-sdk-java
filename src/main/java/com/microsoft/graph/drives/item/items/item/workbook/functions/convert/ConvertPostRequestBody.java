@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConvertPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The fromUnit property */
+    /**
+     * The fromUnit property
+     */
     private Json fromUnit;
-    /** The number property */
+    /**
+     * The number property
+     */
     private Json number;
-    /** The toUnit property */
+    /**
+     * The toUnit property
+     */
     private Json toUnit;
     /**
      * Instantiates a new convertPostRequestBody and sets the default values.

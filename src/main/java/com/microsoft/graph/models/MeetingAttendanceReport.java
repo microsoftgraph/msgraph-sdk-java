@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MeetingAttendanceReport extends Entity implements Parsable {
-    /** List of attendance records of an attendance report. Read-only. */
+    /**
+     * List of attendance records of an attendance report. Read-only.
+     */
     private java.util.List<AttendanceRecord> attendanceRecords;
-    /** UTC time when the meeting ended. Read-only. */
+    /**
+     * UTC time when the meeting ended. Read-only.
+     */
     private OffsetDateTime meetingEndDateTime;
-    /** UTC time when the meeting started. Read-only. */
+    /**
+     * UTC time when the meeting started. Read-only.
+     */
     private OffsetDateTime meetingStartDateTime;
-    /** Total number of participants. Read-only. */
+    /**
+     * Total number of participants. Read-only.
+     */
     private Integer totalParticipantCount;
     /**
      * Instantiates a new meetingAttendanceReport and sets the default values.

@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the manager property of the microsoft.graph.user entity.
  */
 public class ManagerRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the collection of user entities. */
+    /**
+     * Provides operations to manage the collection of user entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
@@ -189,11 +191,15 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -202,7 +208,9 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

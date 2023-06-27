@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintJob extends Entity implements Parsable {
-    /** The configuration property */
+    /**
+     * The configuration property
+     */
     private PrintJobConfiguration configuration;
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private UserIdentity createdBy;
-    /** The DateTimeOffset when the job was created. Read-only. */
+    /**
+     * The DateTimeOffset when the job was created. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The documents property */
+    /**
+     * The documents property
+     */
     private java.util.List<PrintDocument> documents;
-    /** If true, document can be fetched by printer. */
+    /**
+     * If true, document can be fetched by printer.
+     */
     private Boolean isFetchable;
-    /** Contains the source job URL, if the job has been redirected from another printer. */
+    /**
+     * Contains the source job URL, if the job has been redirected from another printer.
+     */
     private String redirectedFrom;
-    /** Contains the destination job URL, if the job has been redirected to another printer. */
+    /**
+     * Contains the destination job URL, if the job has been redirected to another printer.
+     */
     private String redirectedTo;
-    /** The status property */
+    /**
+     * The status property
+     */
     private PrintJobStatus status;
-    /** A list of printTasks that were triggered by this print job. */
+    /**
+     * A list of printTasks that were triggered by this print job.
+     */
     private java.util.List<PrintTask> tasks;
     /**
      * Instantiates a new printJob and sets the default values.

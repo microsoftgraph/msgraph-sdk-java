@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartDataLabels extends Entity implements Parsable {
-    /** Represents the format of chart data labels, which includes fill and font formatting. Read-only. */
+    /**
+     * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
+     */
     private WorkbookChartDataLabelFormat format;
-    /** DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout. */
+    /**
+     * DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
+     */
     private String position;
-    /** String representing the separator used for the data labels on a chart. */
+    /**
+     * String representing the separator used for the data labels on a chart.
+     */
     private String separator;
-    /** Boolean value representing if the data label bubble size is visible or not. */
+    /**
+     * Boolean value representing if the data label bubble size is visible or not.
+     */
     private Boolean showBubbleSize;
-    /** Boolean value representing if the data label category name is visible or not. */
+    /**
+     * Boolean value representing if the data label category name is visible or not.
+     */
     private Boolean showCategoryName;
-    /** Boolean value representing if the data label legend key is visible or not. */
+    /**
+     * Boolean value representing if the data label legend key is visible or not.
+     */
     private Boolean showLegendKey;
-    /** Boolean value representing if the data label percentage is visible or not. */
+    /**
+     * Boolean value representing if the data label percentage is visible or not.
+     */
     private Boolean showPercentage;
-    /** Boolean value representing if the data label series name is visible or not. */
+    /**
+     * Boolean value representing if the data label series name is visible or not.
+     */
     private Boolean showSeriesName;
-    /** Boolean value representing if the data label value is visible or not. */
+    /**
+     * Boolean value representing if the data label value is visible or not.
+     */
     private Boolean showValue;
     /**
      * Instantiates a new workbookChartDataLabels and sets the default values.

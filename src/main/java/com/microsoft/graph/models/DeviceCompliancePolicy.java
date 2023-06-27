@@ -11,29 +11,53 @@ import java.util.Objects;
  * This is the base class for Compliance policy. Compliance policies are platform specific and individual per-platform compliance policies inherit from here. 
  */
 public class DeviceCompliancePolicy extends Entity implements Parsable {
-    /** The collection of assignments for this compliance policy. */
+    /**
+     * The collection of assignments for this compliance policy.
+     */
     private java.util.List<DeviceCompliancePolicyAssignment> assignments;
-    /** DateTime the object was created. */
+    /**
+     * DateTime the object was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Admin provided description of the Device Configuration. */
+    /**
+     * Admin provided description of the Device Configuration.
+     */
     private String description;
-    /** Compliance Setting State Device Summary */
+    /**
+     * Compliance Setting State Device Summary
+     */
     private java.util.List<SettingStateDeviceSummary> deviceSettingStateSummaries;
-    /** List of DeviceComplianceDeviceStatus. */
+    /**
+     * List of DeviceComplianceDeviceStatus.
+     */
     private java.util.List<DeviceComplianceDeviceStatus> deviceStatuses;
-    /** Device compliance devices status overview */
+    /**
+     * Device compliance devices status overview
+     */
     private DeviceComplianceDeviceOverview deviceStatusOverview;
-    /** Admin provided name of the device configuration. */
+    /**
+     * Admin provided name of the device configuration.
+     */
     private String displayName;
-    /** DateTime the object was last modified. */
+    /**
+     * DateTime the object was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies. */
+    /**
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     */
     private java.util.List<DeviceComplianceScheduledActionForRule> scheduledActionsForRule;
-    /** List of DeviceComplianceUserStatus. */
+    /**
+     * List of DeviceComplianceUserStatus.
+     */
     private java.util.List<DeviceComplianceUserStatus> userStatuses;
-    /** Device compliance users status overview */
+    /**
+     * Device compliance users status overview
+     */
     private DeviceComplianceUserOverview userStatusOverview;
-    /** Version of the device configuration. */
+    /**
+     * Version of the device configuration.
+     */
     private Integer version;
     /**
      * Instantiates a new deviceCompliancePolicy and sets the default values.

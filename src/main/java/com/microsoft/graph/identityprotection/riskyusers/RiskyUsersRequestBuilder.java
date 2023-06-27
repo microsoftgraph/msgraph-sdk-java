@@ -25,17 +25,23 @@ import java.util.Objects;
  * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
  */
 public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the confirmCompromised method. */
+    /**
+     * Provides operations to call the confirmCompromised method.
+     */
     @javax.annotation.Nonnull
     public ConfirmCompromisedRequestBuilder confirmCompromised() {
         return new ConfirmCompromisedRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the dismiss method. */
+    /**
+     * Provides operations to call the dismiss method.
+     */
     @javax.annotation.Nonnull
     public DismissRequestBuilder dismiss() {
         return new DismissRequestBuilder(pathParameters, requestAdapter);
@@ -216,35 +222,51 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
      * Get a list of the riskyUser objects and their properties.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -253,7 +275,9 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

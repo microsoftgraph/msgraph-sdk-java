@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control. */
+    /**
+     * Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
+     */
     private ApplicationEnforcedRestrictionsSessionControl applicationEnforcedRestrictions;
-    /** Session control to apply cloud app security. */
+    /**
+     * Session control to apply cloud app security.
+     */
     private CloudAppSecuritySessionControl cloudAppSecurity;
-    /** Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not. */
+    /**
+     * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     */
     private Boolean disableResilienceDefaults;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly. */
+    /**
+     * Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
+     */
     private PersistentBrowserSessionControl persistentBrowser;
-    /** Session control to enforce signin frequency. */
+    /**
+     * Session control to enforce signin frequency.
+     */
     private SignInFrequencySessionControl signInFrequency;
     /**
      * Instantiates a new conditionalAccessSessionControls and sets the default values.

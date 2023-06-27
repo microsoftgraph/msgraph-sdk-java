@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The destinationFileName property */
+    /**
+     * The destinationFileName property
+     */
     private String destinationFileName;
-    /** The sourceFile property */
+    /**
+     * The sourceFile property
+     */
     private ItemReference sourceFile;
     /**
      * Instantiates a new copyToDefaultContentLocationPostRequestBody and sets the default values.

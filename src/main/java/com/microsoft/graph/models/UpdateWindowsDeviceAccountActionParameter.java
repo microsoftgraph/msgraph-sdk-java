@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private Boolean calendarSyncEnabled;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private WindowsDeviceAccount deviceAccount;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String deviceAccountEmail;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String exchangeServer;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private Boolean passwordRotationEnabled;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String sessionInitiationProtocalAddress;
     /**
      * Instantiates a new updateWindowsDeviceAccountActionParameter and sets the default values.

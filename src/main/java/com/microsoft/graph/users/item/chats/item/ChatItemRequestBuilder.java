@@ -31,57 +31,79 @@ import java.util.Objects;
  * Provides operations to manage the chats property of the microsoft.graph.user entity.
  */
 public class ChatItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the hideForUser method. */
+    /**
+     * Provides operations to call the hideForUser method.
+     */
     @javax.annotation.Nonnull
     public HideForUserRequestBuilder hideForUser() {
         return new HideForUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the installedApps property of the microsoft.graph.chat entity. */
+    /**
+     * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
+     */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastMessagePreview property of the microsoft.graph.chat entity. */
+    /**
+     * Provides operations to manage the lastMessagePreview property of the microsoft.graph.chat entity.
+     */
     @javax.annotation.Nonnull
     public LastMessagePreviewRequestBuilder lastMessagePreview() {
         return new LastMessagePreviewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the markChatReadForUser method. */
+    /**
+     * Provides operations to call the markChatReadForUser method.
+     */
     @javax.annotation.Nonnull
     public MarkChatReadForUserRequestBuilder markChatReadForUser() {
         return new MarkChatReadForUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the markChatUnreadForUser method. */
+    /**
+     * Provides operations to call the markChatUnreadForUser method.
+     */
     @javax.annotation.Nonnull
     public MarkChatUnreadForUserRequestBuilder markChatUnreadForUser() {
         return new MarkChatUnreadForUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the members property of the microsoft.graph.chat entity. */
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.chat entity.
+     */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the messages property of the microsoft.graph.chat entity. */
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.chat entity.
+     */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity. */
+    /**
+     * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
+     */
     @javax.annotation.Nonnull
     public PinnedMessagesRequestBuilder pinnedMessages() {
         return new PinnedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the sendActivityNotification method. */
+    /**
+     * Provides operations to call the sendActivityNotification method.
+     */
     @javax.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tabs property of the microsoft.graph.chat entity. */
+    /**
+     * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
+     */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unhideForUser method. */
+    /**
+     * Provides operations to call the unhideForUser method.
+     */
     @javax.annotation.Nonnull
     public UnhideForUserRequestBuilder unhideForUser() {
         return new UnhideForUserRequestBuilder(pathParameters, requestAdapter);
@@ -319,11 +341,15 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -332,7 +358,9 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

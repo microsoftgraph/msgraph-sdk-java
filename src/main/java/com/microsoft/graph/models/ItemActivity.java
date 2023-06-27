@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemActivity extends Entity implements Parsable {
-    /** An item was accessed. */
+    /**
+     * An item was accessed.
+     */
     private AccessAction access;
-    /** Details about when the activity took place. Read-only. */
+    /**
+     * Details about when the activity took place. Read-only.
+     */
     private OffsetDateTime activityDateTime;
-    /** Identity of who performed the action. Read-only. */
+    /**
+     * Identity of who performed the action. Read-only.
+     */
     private IdentitySet actor;
-    /** Exposes the driveItem that was the target of this activity. */
+    /**
+     * Exposes the driveItem that was the target of this activity.
+     */
     private DriveItem driveItem;
     /**
      * Instantiates a new itemActivity and sets the default values.

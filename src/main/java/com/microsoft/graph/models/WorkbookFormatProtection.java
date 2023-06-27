@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFormatProtection extends Entity implements Parsable {
-    /** Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting. */
+    /**
+     * Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     */
     private Boolean formulaHidden;
-    /** Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting. */
+    /**
+     * Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     */
     private Boolean locked;
     /**
      * Instantiates a new WorkbookFormatProtection and sets the default values.

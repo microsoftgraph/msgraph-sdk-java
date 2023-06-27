@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Apps rating as in media content */
+/**
+ * Apps rating as in media content
+ */
 public enum RatingAppsType implements ValuedEnum {
     /** Default value, allow all apps content */
     AllAllowed("allAllowed"),

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsHelloForBusinessAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<WindowsHelloForBusinessAuthenticationMethod> value;
     /**
      * Instantiates a new WindowsHelloForBusinessAuthenticationMethodCollectionResponse and sets the default values.

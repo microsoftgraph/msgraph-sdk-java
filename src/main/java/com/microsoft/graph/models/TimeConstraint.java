@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeConstraint implements AdditionalDataHolder, Parsable {
-    /** The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown. */
+    /**
+     * The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
+     */
     private ActivityDomain activityDomain;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The timeSlots property */
+    /**
+     * The timeSlots property
+     */
     private java.util.List<TimeSlot> timeSlots;
     /**
      * Instantiates a new timeConstraint and sets the default values.

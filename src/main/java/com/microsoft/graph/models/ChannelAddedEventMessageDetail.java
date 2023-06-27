@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChannelAddedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Display name of the channel. */
+    /**
+     * Display name of the channel.
+     */
     private String channelDisplayName;
-    /** Unique identifier of the channel. */
+    /**
+     * Unique identifier of the channel.
+     */
     private String channelId;
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
     /**
      * Instantiates a new ChannelAddedEventMessageDetail and sets the default values.

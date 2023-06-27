@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingStaffMemberBaseCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<BookingStaffMemberBase> value;
     /**
      * Instantiates a new BookingStaffMemberBaseCollectionResponse and sets the default values.

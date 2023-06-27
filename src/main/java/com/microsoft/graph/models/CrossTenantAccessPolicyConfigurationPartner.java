@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false. */
+    /**
+     * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
+     */
     private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
-    /** Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
+    /**
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
-    /** Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration. */
+    /**
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
-    /** Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect. */
+    /**
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
-    /** Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect. */
+    /**
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
-    /** Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another. */
+    /**
+     * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
+     */
     private CrossTenantIdentitySyncPolicyPartner identitySynchronization;
-    /** Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations. */
+    /**
+     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
-    /** Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization. */
+    /**
+     * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
+     */
     private Boolean isServiceProvider;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The tenant identifier for the partner Azure AD organization. Read-only. Key. */
+    /**
+     * The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     */
     private String tenantId;
     /**
      * Instantiates a new CrossTenantAccessPolicyConfigurationPartner and sets the default values.

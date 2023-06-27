@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope implements Parsable {
-    /** Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S. */
+    /**
+     * Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
+     */
     private Period inactiveDuration;
     /**
      * Instantiates a new AccessReviewInactiveUsersQueryScope and sets the default values.

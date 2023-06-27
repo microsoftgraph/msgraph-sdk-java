@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EntitlementManagementSettings extends Entity implements Parsable {
-    /** If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted. */
+    /**
+     * If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
+     */
     private Period durationUntilExternalUserDeletedAfterBlocked;
-    /** Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue. */
+    /**
+     * Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
+     */
     private AccessPackageExternalUserLifecycleAction externalUserLifecycleAction;
     /**
      * Instantiates a new entitlementManagementSettings and sets the default values.

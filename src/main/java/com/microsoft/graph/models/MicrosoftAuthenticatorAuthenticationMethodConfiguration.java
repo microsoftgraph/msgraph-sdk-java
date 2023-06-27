@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only. */
+    /**
+     * A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
+     */
     private MicrosoftAuthenticatorFeatureSettings featureSettings;
-    /** A collection of groups that are enabled to use the authentication method. Expanded by default. */
+    /**
+     * A collection of groups that are enabled to use the authentication method. Expanded by default.
+     */
     private java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> includeTargets;
-    /** The isSoftwareOathEnabled property */
+    /**
+     * The isSoftwareOathEnabled property
+     */
     private Boolean isSoftwareOathEnabled;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.

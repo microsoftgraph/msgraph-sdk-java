@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationCategory extends Entity implements Parsable {
-    /** Unique identifier for the category. */
+    /**
+     * Unique identifier for the category.
+     */
     private String displayName;
     /**
      * Instantiates a new educationCategory and sets the default values.

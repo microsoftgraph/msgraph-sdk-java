@@ -11,13 +11,21 @@ import java.util.Objects;
  * Represents an operation applied against an app registration.
  */
 public class ManagedAppOperation extends Entity implements Parsable {
-    /** The operation name. */
+    /**
+     * The operation name.
+     */
     private String displayName;
-    /** The last time the app operation was modified. */
+    /**
+     * The last time the app operation was modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The current state of the operation */
+    /**
+     * The current state of the operation
+     */
     private String state;
-    /** Version of the entity. */
+    /**
+     * Version of the entity.
+     */
     private String version;
     /**
      * Instantiates a new managedAppOperation and sets the default values.

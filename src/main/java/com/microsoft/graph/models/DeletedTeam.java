@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeletedTeam extends Entity implements Parsable {
-    /** The channels that are either shared with this deleted team or created in this deleted team. */
+    /**
+     * The channels that are either shared with this deleted team or created in this deleted team.
+     */
     private java.util.List<Channel> channels;
     /**
      * Instantiates a new deletedTeam and sets the default values.

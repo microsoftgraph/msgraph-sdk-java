@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** Unique identifier of the tab. */
+    /**
+     * Unique identifier of the tab.
+     */
     private String tabId;
     /**
      * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.

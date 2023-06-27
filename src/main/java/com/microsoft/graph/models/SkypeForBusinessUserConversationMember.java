@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SkypeForBusinessUserConversationMember extends ConversationMember implements Parsable {
-    /** ID of the tenant that the user belongs to. */
+    /**
+     * ID of the tenant that the user belongs to.
+     */
     private String tenantId;
-    /** Azure Active Directory ID of the user. */
+    /**
+     * Azure Active Directory ID of the user.
+     */
     private String userId;
     /**
      * Instantiates a new SkypeForBusinessUserConversationMember and sets the default values.

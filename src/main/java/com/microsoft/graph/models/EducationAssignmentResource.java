@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentResource extends Entity implements Parsable {
-    /** Indicates whether this resource should be copied to each student submission for modification and submission. Required */
+    /**
+     * Indicates whether this resource should be copied to each student submission for modification and submission. Required
+     */
     private Boolean distributeForStudentWork;
-    /** Resource object that has been associated with this assignment. */
+    /**
+     * Resource object that has been associated with this assignment.
+     */
     private EducationResource resource;
     /**
      * Instantiates a new educationAssignmentResource and sets the default values.

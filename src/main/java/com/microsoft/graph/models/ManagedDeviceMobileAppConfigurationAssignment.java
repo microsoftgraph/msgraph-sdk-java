@@ -10,7 +10,9 @@ import java.util.Objects;
  * Contains the properties used to assign an MDM app configuration to a group.
  */
 public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implements Parsable {
-    /** Assignment target that the T&C policy is assigned to. */
+    /**
+     * Assignment target that the T&C policy is assigned to.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new managedDeviceMobileAppConfigurationAssignment and sets the default values.

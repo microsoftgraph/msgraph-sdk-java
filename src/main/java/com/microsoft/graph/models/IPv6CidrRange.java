@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IPv6CidrRange extends IpRange implements Parsable {
-    /** IPv6 address in CIDR notation. Not nullable. */
+    /**
+     * IPv6 address in CIDR notation. Not nullable.
+     */
     private String cidrAddress;
     /**
      * Instantiates a new IPv6CidrRange and sets the default values.

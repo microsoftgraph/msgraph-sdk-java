@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LocalizedNotificationMessageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<LocalizedNotificationMessage> value;
     /**
      * Instantiates a new LocalizedNotificationMessageCollectionResponse and sets the default values.

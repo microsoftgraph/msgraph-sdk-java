@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSettings extends Entity implements Parsable {
-    /** The contributionToContentDiscoveryAsOrganizationDisabled property */
+    /**
+     * Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     */
     private Boolean contributionToContentDiscoveryAsOrganizationDisabled;
-    /** The contributionToContentDiscoveryDisabled property */
+    /**
+     * When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
+     */
     private Boolean contributionToContentDiscoveryDisabled;
-    /** The shiftPreferences property */
+    /**
+     * The shiftPreferences property
+     */
     private ShiftPreferences shiftPreferences;
     /**
      * Instantiates a new userSettings and sets the default values.
@@ -32,7 +38,7 @@ public class UserSettings extends Entity implements Parsable {
         return new UserSettings();
     }
     /**
-     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
+     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -40,7 +46,7 @@ public class UserSettings extends Entity implements Parsable {
         return this.contributionToContentDiscoveryAsOrganizationDisabled;
     }
     /**
-     * Gets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
+     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -81,7 +87,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
     }
     /**
-     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
+     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      * @return a void
      */
@@ -90,7 +96,7 @@ public class UserSettings extends Entity implements Parsable {
         this.contributionToContentDiscoveryAsOrganizationDisabled = value;
     }
     /**
-     * Sets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
+     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      * @return a void
      */

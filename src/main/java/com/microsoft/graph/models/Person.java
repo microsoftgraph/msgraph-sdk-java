@@ -7,43 +7,81 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Person extends Entity implements Parsable {
-    /** The person's birthday. */
+    /**
+     * The person's birthday.
+     */
     private String birthday;
-    /** The name of the person's company. */
+    /**
+     * The name of the person's company.
+     */
     private String companyName;
-    /** The person's department. */
+    /**
+     * The person's department.
+     */
     private String department;
-    /** The person's display name. */
+    /**
+     * The person's display name.
+     */
     private String displayName;
-    /** The person's given name. */
+    /**
+     * The person's given name.
+     */
     private String givenName;
-    /** The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only. */
+    /**
+     * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
+     */
     private String imAddress;
-    /** True if the user has flagged this person as a favorite. */
+    /**
+     * True if the user has flagged this person as a favorite.
+     */
     private Boolean isFavorite;
-    /** The person's job title. */
+    /**
+     * The person's job title.
+     */
     private String jobTitle;
-    /** The location of the person's office. */
+    /**
+     * The location of the person's office.
+     */
     private String officeLocation;
-    /** Free-form notes that the user has taken about this person. */
+    /**
+     * Free-form notes that the user has taken about this person.
+     */
     private String personNotes;
-    /** The type of person. */
+    /**
+     * The type of person.
+     */
     private PersonType personType;
-    /** The person's phone numbers. */
+    /**
+     * The person's phone numbers.
+     */
     private java.util.List<Phone> phones;
-    /** The person's addresses. */
+    /**
+     * The person's addresses.
+     */
     private java.util.List<Location> postalAddresses;
-    /** The person's profession. */
+    /**
+     * The person's profession.
+     */
     private String profession;
-    /** The person's email addresses. */
+    /**
+     * The person's email addresses.
+     */
     private java.util.List<ScoredEmailAddress> scoredEmailAddresses;
-    /** The person's surname. */
+    /**
+     * The person's surname.
+     */
     private String surname;
-    /** The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain. */
+    /**
+     * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
+     */
     private String userPrincipalName;
-    /** The person's websites. */
+    /**
+     * The person's websites.
+     */
     private java.util.List<Website> websites;
-    /** The phonetic Japanese name of the person's company. */
+    /**
+     * The phonetic Japanese name of the person's company.
+     */
     private String yomiCompany;
     /**
      * Instantiates a new person and sets the default values.

@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FeatureRolloutPolicy extends Entity implements Parsable {
-    /** Nullable. Specifies a list of directoryObjects that feature is enabled for. */
+    /**
+     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     */
     private java.util.List<DirectoryObject> appliesTo;
-    /** A description for this feature rollout policy. */
+    /**
+     * A description for this feature rollout policy.
+     */
     private String description;
-    /** The display name for this  feature rollout policy. */
+    /**
+     * The display name for this  feature rollout policy.
+     */
     private String displayName;
-    /** The feature property */
+    /**
+     * The feature property
+     */
     private StagedFeatureName feature;
-    /** Indicates whether this feature rollout policy should be applied to the entire organization. */
+    /**
+     * Indicates whether this feature rollout policy should be applied to the entire organization.
+     */
     private Boolean isAppliedToOrganization;
-    /** Indicates whether the feature rollout is enabled. */
+    /**
+     * Indicates whether the feature rollout is enabled.
+     */
     private Boolean isEnabled;
     /**
      * Instantiates a new featureRolloutPolicy and sets the default values.

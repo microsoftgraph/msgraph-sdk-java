@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedEBookCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ManagedEBook> value;
     /**
      * Instantiates a new ManagedEBookCollectionResponse and sets the default values.

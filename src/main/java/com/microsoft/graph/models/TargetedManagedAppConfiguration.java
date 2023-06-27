@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable {
-    /** List of apps to which the policy is deployed. */
+    /**
+     * List of apps to which the policy is deployed.
+     */
     private java.util.List<ManagedMobileApp> apps;
-    /** Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
+    /**
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
+     */
     private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
-    /** Count of apps to which the current policy is deployed. */
+    /**
+     * Count of apps to which the current policy is deployed.
+     */
     private Integer deployedAppCount;
-    /** Navigation property to deployment summary of the configuration. */
+    /**
+     * Navigation property to deployment summary of the configuration.
+     */
     private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /** Indicates if the policy is deployed to any inclusion groups or not. */
+    /**
+     * Indicates if the policy is deployed to any inclusion groups or not.
+     */
     private Boolean isAssigned;
     /**
      * Instantiates a new TargetedManagedAppConfiguration and sets the default values.

@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
  */
 public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the device property of the microsoft.graph.windowsHelloForBusinessAuthenticationMethod entity. */
+    /**
+     * Provides operations to manage the device property of the microsoft.graph.windowsHelloForBusinessAuthenticationMethod entity.
+     */
     @javax.annotation.Nonnull
     public DeviceRequestBuilder device() {
         return new DeviceRequestBuilder(pathParameters, requestAdapter);
@@ -189,11 +191,15 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
      * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -202,7 +208,9 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder exten
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

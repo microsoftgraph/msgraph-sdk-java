@@ -9,21 +9,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AmorDegrcPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The basis property */
+    /**
+     * The basis property
+     */
     private Json basis;
-    /** The cost property */
+    /**
+     * The cost property
+     */
     private Json cost;
-    /** The datePurchased property */
+    /**
+     * The datePurchased property
+     */
     private Json datePurchased;
-    /** The firstPeriod property */
+    /**
+     * The firstPeriod property
+     */
     private Json firstPeriod;
-    /** The period property */
+    /**
+     * The period property
+     */
     private Json period;
-    /** The rate property */
+    /**
+     * The rate property
+     */
     private Json rate;
-    /** The salvage property */
+    /**
+     * The salvage property
+     */
     private Json salvage;
     /**
      * Instantiates a new amorDegrcPostRequestBody and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** A collection of groups that are enabled to use the authentication method. Expanded by default. */
+    /**
+     * A collection of groups that are enabled to use the authentication method. Expanded by default.
+     */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /** true if users can register office phones, otherwise, false. */
+    /**
+     * true if users can register office phones, otherwise, false.
+     */
     private Boolean isOfficePhoneAllowed;
     /**
      * Instantiates a new VoiceAuthenticationMethodConfiguration and sets the default values.

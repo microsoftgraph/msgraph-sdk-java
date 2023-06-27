@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The currentPassword property */
+    /**
+     * The currentPassword property
+     */
     private String currentPassword;
-    /** The newPassword property */
+    /**
+     * The newPassword property
+     */
     private String newPassword;
     /**
      * Instantiates a new changePasswordPostRequestBody and sets the default values.

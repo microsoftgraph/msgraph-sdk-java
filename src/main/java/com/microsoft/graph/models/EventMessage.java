@@ -7,25 +7,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventMessage extends Message implements Parsable {
-    /** The endDateTime property */
+    /**
+     * The endDateTime property
+     */
     private DateTimeTimeZone endDateTime;
-    /** The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only. */
+    /**
+     * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
+     */
     private Event event;
-    /** The isAllDay property */
+    /**
+     * The isAllDay property
+     */
     private Boolean isAllDay;
-    /** The isDelegated property */
+    /**
+     * The isDelegated property
+     */
     private Boolean isDelegated;
-    /** The isOutOfDate property */
+    /**
+     * The isOutOfDate property
+     */
     private Boolean isOutOfDate;
-    /** The location property */
+    /**
+     * The location property
+     */
     private Location location;
-    /** The meetingMessageType property */
+    /**
+     * The meetingMessageType property
+     */
     private MeetingMessageType meetingMessageType;
-    /** The recurrence property */
+    /**
+     * The recurrence property
+     */
     private PatternedRecurrence recurrence;
-    /** The startDateTime property */
+    /**
+     * The startDateTime property
+     */
     private DateTimeTimeZone startDateTime;
-    /** The type property */
+    /**
+     * The type property
+     */
     private EventType type;
     /**
      * Instantiates a new EventMessage and sets the default values.

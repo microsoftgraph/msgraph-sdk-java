@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RubricQuality implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The collection of criteria for this rubric quality. */
+    /**
+     * The collection of criteria for this rubric quality.
+     */
     private java.util.List<RubricCriterion> criteria;
-    /** The description of this rubric quality. */
+    /**
+     * The description of this rubric quality.
+     */
     private EducationItemBody description;
-    /** The name of this rubric quality. */
+    /**
+     * The name of this rubric quality.
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The ID of this resource. */
+    /**
+     * The ID of this resource.
+     */
     private String qualityId;
-    /** If present, a numerical weight for this quality.  Weights must add up to 100. */
+    /**
+     * If present, a numerical weight for this quality.  Weights must add up to 100.
+     */
     private Float weight;
     /**
      * Instantiates a new rubricQuality and sets the default values.

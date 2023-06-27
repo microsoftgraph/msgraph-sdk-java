@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ThumbnailSet extends Entity implements Parsable {
-    /** A 1920x1920 scaled thumbnail. */
+    /**
+     * A 1920x1920 scaled thumbnail.
+     */
     private Thumbnail large;
-    /** A 176x176 scaled thumbnail. */
+    /**
+     * A 176x176 scaled thumbnail.
+     */
     private Thumbnail medium;
-    /** A 48x48 cropped thumbnail. */
+    /**
+     * A 48x48 cropped thumbnail.
+     */
     private Thumbnail small;
-    /** A custom thumbnail image or the original image used to generate other thumbnails. */
+    /**
+     * A custom thumbnail image or the original image used to generate other thumbnails.
+     */
     private Thumbnail source;
     /**
      * Instantiates a new thumbnailSet and sets the default values.

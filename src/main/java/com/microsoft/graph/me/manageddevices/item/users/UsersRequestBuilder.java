@@ -41,8 +41,9 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/managedDevices/{managedDevice%2Did}/users{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @return a CompletableFuture of UserCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -59,9 +60,10 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UserCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +80,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +88,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,38 +109,54 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -147,7 +165,9 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

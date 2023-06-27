@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxisTitle extends Entity implements Parsable {
-    /** Represents the formatting of chart axis title. Read-only. */
+    /**
+     * Represents the formatting of chart axis title. Read-only.
+     */
     private WorkbookChartAxisTitleFormat format;
-    /** Represents the axis title. */
+    /**
+     * Represents the axis title.
+     */
     private String text;
-    /** A boolean that specifies the visibility of an axis title. */
+    /**
+     * A boolean that specifies the visibility of an axis title.
+     */
     private Boolean visible;
     /**
      * Instantiates a new workbookChartAxisTitle and sets the default values.

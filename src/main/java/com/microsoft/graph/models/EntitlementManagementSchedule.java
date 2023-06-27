@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EntitlementManagementSchedule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** When the access should expire. */
+    /**
+     * When the access should expire.
+     */
     private ExpirationPattern expiration;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** For recurring access reviews.  Not used in access requests. */
+    /**
+     * For recurring access reviews.  Not used in access requests.
+     */
     private PatternedRecurrence recurrence;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new entitlementManagementSchedule and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkConversationIdentity extends Identity implements Parsable {
-    /** Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue. */
+    /**
+     * Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
+     */
     private TeamworkConversationIdentityType conversationIdentityType;
     /**
      * Instantiates a new TeamworkConversationIdentity and sets the default values.

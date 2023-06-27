@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosCustomConfiguration extends DeviceConfiguration implements Parsable {
-    /** Payload. (UTF8 encoded byte array) */
+    /**
+     * Payload. (UTF8 encoded byte array)
+     */
     private byte[] payload;
-    /** Payload file name (.mobileconfig */
+    /**
+     * Payload file name (.mobileconfig
+     */
     private String payloadFileName;
-    /** Name that is displayed to the user. */
+    /**
+     * Name that is displayed to the user.
+     */
     private String payloadName;
     /**
      * Instantiates a new IosCustomConfiguration and sets the default values.

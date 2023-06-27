@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ShiftPreferences extends ChangeTrackedEntity implements Parsable {
-    /** Availability of the user to be scheduled for work and its recurrence pattern. */
+    /**
+     * Availability of the user to be scheduled for work and its recurrence pattern.
+     */
     private java.util.List<ShiftAvailability> availability;
     /**
      * Instantiates a new ShiftPreferences and sets the default values.

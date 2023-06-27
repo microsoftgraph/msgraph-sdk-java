@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartFont extends Entity implements Parsable {
-    /** Represents the bold status of font. */
+    /**
+     * Represents the bold status of font.
+     */
     private Boolean bold;
-    /** HTML color code representation of the text color. E.g. #FF0000 represents Red. */
+    /**
+     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+     */
     private String color;
-    /** Represents the italic status of the font. */
+    /**
+     * Represents the italic status of the font.
+     */
     private Boolean italic;
-    /** Font name (e.g. 'Calibri') */
+    /**
+     * Font name (e.g. 'Calibri')
+     */
     private String name;
-    /** Size of the font (e.g. 11) */
+    /**
+     * Size of the font (e.g. 11)
+     */
     private Double size;
-    /** Type of underline applied to the font. The possible values are: None, Single. */
+    /**
+     * Type of underline applied to the font. The possible values are: None, Single.
+     */
     private String underline;
     /**
      * Instantiates a new workbookChartFont and sets the default values.

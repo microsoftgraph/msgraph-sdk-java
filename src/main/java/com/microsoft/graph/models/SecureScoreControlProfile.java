@@ -8,43 +8,81 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecureScoreControlProfile extends Entity implements Parsable {
-    /** Control action type (Config, Review, Behavior). */
+    /**
+     * Control action type (Config, Review, Behavior).
+     */
     private String actionType;
-    /** URL to where the control can be actioned. */
+    /**
+     * URL to where the control can be actioned.
+     */
     private String actionUrl;
-    /** GUID string for tenant ID. */
+    /**
+     * GUID string for tenant ID.
+     */
     private String azureTenantId;
-    /** The collection of compliance information associated with secure score control */
+    /**
+     * The collection of compliance information associated with secure score control
+     */
     private java.util.List<ComplianceInformation> complianceInformation;
-    /** Control action category (Identity, Data, Device, Apps, Infrastructure). */
+    /**
+     * Control action category (Identity, Data, Device, Apps, Infrastructure).
+     */
     private String controlCategory;
-    /** Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update). */
+    /**
+     * Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
+     */
     private java.util.List<SecureScoreControlStateUpdate> controlStateUpdates;
-    /** Flag to indicate if a control is depreciated. */
+    /**
+     * Flag to indicate if a control is depreciated.
+     */
     private Boolean deprecated;
-    /** Resource cost of implemmentating control (low, moderate, high). */
+    /**
+     * Resource cost of implemmentating control (low, moderate, high).
+     */
     private String implementationCost;
-    /** Time at which the control profile entity was last modified. The Timestamp type represents date and time */
+    /**
+     * Time at which the control profile entity was last modified. The Timestamp type represents date and time
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** max attainable score for the control. */
+    /**
+     * max attainable score for the control.
+     */
     private Double maxScore;
-    /** Microsoft's stack ranking of control. */
+    /**
+     * Microsoft's stack ranking of control.
+     */
     private Integer rank;
-    /** Description of what the control will help remediate. */
+    /**
+     * Description of what the control will help remediate.
+     */
     private String remediation;
-    /** Description of the impact on users of the remediation. */
+    /**
+     * Description of the impact on users of the remediation.
+     */
     private String remediationImpact;
-    /** Service that owns the control (Exchange, Sharepoint, Azure AD). */
+    /**
+     * Service that owns the control (Exchange, Sharepoint, Azure AD).
+     */
     private String service;
-    /** List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, */
+    /**
+     * List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
+     */
     private java.util.List<String> threats;
-    /** The tier property */
+    /**
+     * The tier property
+     */
     private String tier;
-    /** The title property */
+    /**
+     * The title property
+     */
     private String title;
-    /** The userImpact property */
+    /**
+     * The userImpact property
+     */
     private String userImpact;
-    /** The vendorInformation property */
+    /**
+     * The vendorInformation property
+     */
     private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new secureScoreControlProfile and sets the default values.

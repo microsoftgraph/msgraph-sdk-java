@@ -8,24 +8,40 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only. */
+    /**
+     * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+     */
     private String countryCode;
-    /** The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only. */
+    /**
+     * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     */
     private EndpointType endpointType;
-    /** The identity property */
+    /**
+     * The identity property
+     */
     private IdentitySet identity;
-    /** The language culture string. Read-only. */
+    /**
+     * The language culture string. Read-only.
+     */
     private String languageId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The participant ID of the participant. Read-only. */
+    /**
+     * The participant ID of the participant. Read-only.
+     */
     private String participantId;
-    /** The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only. */
+    /**
+     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+     */
     private String region;
     /**
-     * Instantiates a new ParticipantInfo and sets the default values.
+     * Instantiates a new participantInfo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +51,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ParticipantInfo
+     * @return a participantInfo
      */
     @javax.annotation.Nonnull
     public static ParticipantInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

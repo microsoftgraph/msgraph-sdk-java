@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable {
-    /** Provides the reason why the DomainDnsUnavailableRecord entity is returned. */
+    /**
+     * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
+     */
     private String description;
     /**
      * Instantiates a new DomainDnsUnavailableRecord and sets the default values.

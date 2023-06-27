@@ -8,13 +8,21 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class CalendarGroup extends Entity implements Parsable {
-    /** The calendars in the calendar group. Navigation property. Read-only. Nullable. */
+    /**
+     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
+     */
     private java.util.List<Calendar> calendars;
-    /** Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only. */
+    /**
+     * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+     */
     private String changeKey;
-    /** The class identifier. Read-only. */
+    /**
+     * The class identifier. Read-only.
+     */
     private UUID classId;
-    /** The group name. */
+    /**
+     * The group name.
+     */
     private String name;
     /**
      * Instantiates a new calendarGroup and sets the default values.

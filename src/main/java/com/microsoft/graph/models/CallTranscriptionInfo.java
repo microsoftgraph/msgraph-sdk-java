@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The state modified time in UTC. */
+    /**
+     * The state modified time in UTC.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The state property */
+    /**
+     * The state property
+     */
     private CallTranscriptionState state;
     /**
      * Instantiates a new callTranscriptionInfo and sets the default values.

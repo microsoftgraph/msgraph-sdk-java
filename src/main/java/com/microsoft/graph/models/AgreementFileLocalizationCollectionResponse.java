@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AgreementFileLocalizationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AgreementFileLocalization> value;
     /**
      * Instantiates a new AgreementFileLocalizationCollectionResponse and sets the default values.

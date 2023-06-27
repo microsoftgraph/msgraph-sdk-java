@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PdurationPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The fv property */
+    /**
+     * The fv property
+     */
     private Json fv;
-    /** The pv property */
+    /**
+     * The pv property
+     */
     private Json pv;
-    /** The rate property */
+    /**
+     * The rate property
+     */
     private Json rate;
     /**
      * Instantiates a new pdurationPostRequestBody and sets the default values.

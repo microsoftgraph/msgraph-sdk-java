@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartGridlinesFormat extends Entity implements Parsable {
-    /** Represents chart line formatting. Read-only. */
+    /**
+     * Represents chart line formatting. Read-only.
+     */
     private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartGridlinesFormat and sets the default values.

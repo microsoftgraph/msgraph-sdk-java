@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxis extends Entity implements Parsable {
-    /** Represents the formatting of a chart object, which includes line and font formatting. Read-only. */
+    /**
+     * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
+     */
     private WorkbookChartAxisFormat format;
-    /** Returns a gridlines object that represents the major gridlines for the specified axis. Read-only. */
+    /**
+     * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
+     */
     private WorkbookChartGridlines majorGridlines;
-    /** Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number. */
+    /**
+     * Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
+     */
     private Json majorUnit;
-    /** Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
+    /**
+     * Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+     */
     private Json maximum;
-    /** Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number. */
+    /**
+     * Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
+     */
     private Json minimum;
-    /** Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only. */
+    /**
+     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
+     */
     private WorkbookChartGridlines minorGridlines;
-    /** Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number. */
+    /**
+     * Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
+     */
     private Json minorUnit;
-    /** Represents the axis title. Read-only. */
+    /**
+     * Represents the axis title. Read-only.
+     */
     private WorkbookChartAxisTitle title;
     /**
      * Instantiates a new workbookChartAxis and sets the default values.

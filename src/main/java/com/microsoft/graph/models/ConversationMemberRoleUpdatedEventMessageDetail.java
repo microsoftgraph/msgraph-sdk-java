@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Roles for the coversation member user. */
+    /**
+     * Roles for the coversation member user.
+     */
     private java.util.List<String> conversationMemberRoles;
-    /** Identity of the conversation member user. */
+    /**
+     * Identity of the conversation member user.
+     */
     private TeamworkUserIdentity conversationMemberUser;
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
     /**
      * Instantiates a new ConversationMemberRoleUpdatedEventMessageDetail and sets the default values.

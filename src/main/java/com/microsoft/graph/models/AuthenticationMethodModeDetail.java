@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodModeDetail extends Entity implements Parsable {
-    /** The authenticationMethod property */
+    /**
+     * The authenticationMethod property
+     */
     private BaseAuthenticationMethod authenticationMethod;
-    /** The display name of this mode */
+    /**
+     * The display name of this mode
+     */
     private String displayName;
     /**
      * Instantiates a new AuthenticationMethodModeDetail and sets the default values.

@@ -7,29 +7,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable {
-    /** Represents the level to which app data is encrypted for managed apps */
+    /**
+     * Represents the level to which app data is encrypted for managed apps
+     */
     private ManagedAppDataEncryptionType appDataEncryptionType;
-    /** List of apps to which the policy is deployed. */
+    /**
+     * List of apps to which the policy is deployed.
+     */
     private java.util.List<ManagedMobileApp> apps;
-    /** A set of string key and string value pairs to be sent to the affected users, unalterned by this service */
+    /**
+     * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
+     */
     private java.util.List<KeyValuePair> customSettings;
-    /** Count of apps to which the current policy is deployed. */
+    /**
+     * Count of apps to which the current policy is deployed.
+     */
     private Integer deployedAppCount;
-    /** Navigation property to deployment summary of the configuration. */
+    /**
+     * Navigation property to deployment summary of the configuration.
+     */
     private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /** When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only) */
+    /**
+     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
+     */
     private Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
-    /** Indicates whether managed-app data should be encrypted. (Android only) */
+    /**
+     * Indicates whether managed-app data should be encrypted. (Android only)
+     */
     private Boolean encryptAppData;
-    /** Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only) */
+    /**
+     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
+     */
     private Boolean faceIdBlocked;
-    /** Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only) */
+    /**
+     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
+     */
     private String minimumRequiredPatchVersion;
-    /** Versions less than the specified version will block the managed app from accessing company data. (iOS Only) */
+    /**
+     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
+     */
     private String minimumRequiredSdkVersion;
-    /** Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only) */
+    /**
+     * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
+     */
     private String minimumWarningPatchVersion;
-    /** Indicates whether screen capture is blocked. (Android only) */
+    /**
+     * Indicates whether screen capture is blocked. (Android only)
+     */
     private Boolean screenCaptureBlocked;
     /**
      * Instantiates a new DefaultManagedAppProtection and sets the default values.

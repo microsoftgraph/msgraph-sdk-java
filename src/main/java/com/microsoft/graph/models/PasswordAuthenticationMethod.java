@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
-    /** For security, the password is always returned as null from a LIST or GET operation. */
+    /**
+     * For security, the password is always returned as null from a LIST or GET operation.
+     */
     private String password;
     /**
      * Instantiates a new PasswordAuthenticationMethod and sets the default values.

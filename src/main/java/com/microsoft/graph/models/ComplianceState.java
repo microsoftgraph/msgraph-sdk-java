@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Compliance state. */
+/**
+ * Compliance state.
+ */
 public enum ComplianceState implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),

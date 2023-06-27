@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ThreatAssessmentRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ThreatAssessmentRequest> value;
     /**
      * Instantiates a new ThreatAssessmentRequestCollectionResponse and sets the default values.

@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAsyncOperation extends Entity implements Parsable {
-    /** Number of times the operation was attempted before being marked successful or failed. */
+    /**
+     * Number of times the operation was attempted before being marked successful or failed.
+     */
     private Integer attemptsCount;
-    /** Time when the operation was created. */
+    /**
+     * Time when the operation was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Any error that causes the async operation to fail. */
+    /**
+     * Any error that causes the async operation to fail.
+     */
     private OperationError error;
-    /** Time when the async operation was last updated. */
+    /**
+     * Time when the async operation was last updated.
+     */
     private OffsetDateTime lastActionDateTime;
-    /** The operationType property */
+    /**
+     * The operationType property
+     */
     private TeamsAsyncOperationType operationType;
-    /** The status property */
+    /**
+     * The status property
+     */
     private TeamsAsyncOperationStatus status;
-    /** The ID of the object that's created or modified as result of this async operation, typically a team. */
+    /**
+     * The ID of the object that's created or modified as result of this async operation, typically a team.
+     */
     private String targetResourceId;
-    /** The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths. */
+    /**
+     * The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
+     */
     private String targetResourceLocation;
     /**
      * Instantiates a new teamsAsyncOperation and sets the default values.

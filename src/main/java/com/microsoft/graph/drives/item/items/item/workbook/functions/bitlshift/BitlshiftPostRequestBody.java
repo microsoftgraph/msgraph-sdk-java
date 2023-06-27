@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BitlshiftPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The number property */
+    /**
+     * The number property
+     */
     private Json number;
-    /** The shiftAmount property */
+    /**
+     * The shiftAmount property
+     */
     private Json shiftAmount;
     /**
      * Instantiates a new bitlshiftPostRequestBody and sets the default values.

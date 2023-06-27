@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetAttackSimulationTrainingUserCoverageResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AttackSimulationTrainingUserCoverage> value;
     /**
      * Instantiates a new getAttackSimulationTrainingUserCoverageResponse and sets the default values.

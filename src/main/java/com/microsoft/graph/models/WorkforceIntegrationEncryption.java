@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Possible values are: sharedSecret, unknownFutureValue. */
+    /**
+     * Possible values are: sharedSecret, unknownFutureValue.
+     */
     private WorkforceIntegrationEncryptionProtocol protocol;
-    /** Encryption shared secret. */
+    /**
+     * Encryption shared secret.
+     */
     private String secret;
     /**
      * Instantiates a new workforceIntegrationEncryption and sets the default values.

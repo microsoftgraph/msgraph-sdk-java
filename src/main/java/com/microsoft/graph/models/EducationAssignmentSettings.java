@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentSettings extends Entity implements Parsable {
-    /** Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false. */
+    /**
+     * Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
+     */
     private Boolean submissionAnimationDisabled;
     /**
      * Instantiates a new educationAssignmentSettings and sets the default values.

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResourceReference implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The item's unique identifier. */
+    /**
+     * The item's unique identifier.
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A string value that can be used to classify the item, such as 'microsoft.graph.driveItem' */
+    /**
+     * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+     */
     private String type;
-    /** A URL leading to the referenced item. */
+    /**
+     * A URL leading to the referenced item.
+     */
     private String webUrl;
     /**
      * Instantiates a new resourceReference and sets the default values.

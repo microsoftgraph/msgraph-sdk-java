@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PersonOrGroupColumn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether multiple values can be selected from the source. */
+    /**
+     * Indicates whether multiple values can be selected from the source.
+     */
     private Boolean allowMultipleSelection;
-    /** Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly. */
+    /**
+     * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
+     */
     private String chooseFromType;
-    /** How to display the information about the person or group chosen. See below. */
+    /**
+     * How to display the information about the person or group chosen. See below.
+     */
     private String displayAs;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new personOrGroupColumn and sets the default values.

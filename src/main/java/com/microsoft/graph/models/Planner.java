@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Planner extends Entity implements Parsable {
-    /** Read-only. Nullable. Returns a collection of the specified buckets */
+    /**
+     * Read-only. Nullable. Returns a collection of the specified buckets
+     */
     private java.util.List<PlannerBucket> buckets;
-    /** Read-only. Nullable. Returns a collection of the specified plans */
+    /**
+     * Read-only. Nullable. Returns a collection of the specified plans
+     */
     private java.util.List<PlannerPlan> plans;
-    /** Read-only. Nullable. Returns a collection of the specified tasks */
+    /**
+     * Read-only. Nullable. Returns a collection of the specified tasks
+     */
     private java.util.List<PlannerTask> tasks;
     /**
      * Instantiates a new Planner and sets the default values.

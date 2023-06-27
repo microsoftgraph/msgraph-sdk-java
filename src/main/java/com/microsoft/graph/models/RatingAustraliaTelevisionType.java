@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** TV content rating labels in Australia */
+/**
+ * TV content rating labels in Australia
+ */
 public enum RatingAustraliaTelevisionType implements ValuedEnum {
     /** Default value, allow all TV shows content */
     AllAllowed("allAllowed"),

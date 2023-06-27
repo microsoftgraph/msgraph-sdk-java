@@ -30,52 +30,72 @@ import java.util.Objects;
  * Provides operations to manage the authentication property of the microsoft.graph.user entity.
  */
 public class AuthenticationRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public EmailMethodsRequestBuilder emailMethods() {
         return new EmailMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public Fido2MethodsRequestBuilder fido2Methods() {
         return new Fido2MethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the methods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public MethodsRequestBuilder methods() {
         return new MethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public MicrosoftAuthenticatorMethodsRequestBuilder microsoftAuthenticatorMethods() {
         return new MicrosoftAuthenticatorMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public PasswordMethodsRequestBuilder passwordMethods() {
         return new PasswordMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public PhoneMethodsRequestBuilder phoneMethods() {
         return new PhoneMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public SoftwareOathMethodsRequestBuilder softwareOathMethods() {
         return new SoftwareOathMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public TemporaryAccessPassMethodsRequestBuilder temporaryAccessPassMethods() {
         return new TemporaryAccessPassMethodsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity. */
+    /**
+     * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
+     */
     @javax.annotation.Nonnull
     public WindowsHelloForBusinessMethodsRequestBuilder windowsHelloForBusinessMethods() {
         return new WindowsHelloForBusinessMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -311,11 +331,15 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * The authentication methods that are supported for the user.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -324,7 +348,9 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

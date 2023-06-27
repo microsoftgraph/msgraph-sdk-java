@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ShiftItem extends ScheduleEntity implements Parsable {
-    /** An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required. */
+    /**
+     * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
+     */
     private java.util.List<ShiftActivity> activities;
-    /** The shift label of the shiftItem. */
+    /**
+     * The shift label of the shiftItem.
+     */
     private String displayName;
-    /** The shift notes for the shiftItem. */
+    /**
+     * The shift notes for the shiftItem.
+     */
     private String notes;
     /**
      * Instantiates a new ShiftItem and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallOptions implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether to hide the app after the call is escalated. */
+    /**
+     * Indicates whether to hide the app after the call is escalated.
+     */
     private Boolean hideBotAfterEscalation;
-    /** Indicates whether content sharing notifications should be enabled for the call. */
+    /**
+     * Indicates whether content sharing notifications should be enabled for the call.
+     */
     private Boolean isContentSharingNotificationEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new callOptions and sets the default values.

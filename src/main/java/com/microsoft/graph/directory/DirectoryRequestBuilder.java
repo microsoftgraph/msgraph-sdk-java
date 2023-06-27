@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the directory singleton.
  */
 public class DirectoryRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity. */
+    /**
+     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
+     */
     @javax.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder administrativeUnits() {
         return new AdministrativeUnitsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the attributeSets property of the microsoft.graph.directory entity. */
+    /**
+     * Provides operations to manage the attributeSets property of the microsoft.graph.directory entity.
+     */
     @javax.annotation.Nonnull
     public AttributeSetsRequestBuilder attributeSets() {
         return new AttributeSetsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity. */
+    /**
+     * Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity.
+     */
     @javax.annotation.Nonnull
     public CustomSecurityAttributeDefinitionsRequestBuilder customSecurityAttributeDefinitions() {
         return new CustomSecurityAttributeDefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deletedItems property of the microsoft.graph.directory entity. */
+    /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
+     */
     @javax.annotation.Nonnull
     public DeletedItemsRequestBuilder deletedItems() {
         return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity. */
+    /**
+     * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
+     */
     @javax.annotation.Nonnull
     public FederationConfigurationsRequestBuilder federationConfigurations() {
         return new FederationConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity. */
+    /**
+     * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
+     */
     @javax.annotation.Nonnull
     public OnPremisesSynchronizationRequestBuilder onPremisesSynchronization() {
         return new OnPremisesSynchronizationRequestBuilder(pathParameters, requestAdapter);
@@ -218,11 +230,15 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * Get directory
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -231,7 +247,9 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

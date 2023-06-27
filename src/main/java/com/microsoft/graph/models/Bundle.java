@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Bundle implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If the bundle is an [album][], then the album property is included */
+    /**
+     * If the bundle is an [album][], then the album property is included
+     */
     private Album album;
-    /** Number of children contained immediately within this container. */
+    /**
+     * Number of children contained immediately within this container.
+     */
     private Integer childCount;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new bundle and sets the default values.

@@ -9,47 +9,89 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoteItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Identity of the user, device, and application which created the item. Read-only. */
+    /**
+     * Identity of the user, device, and application which created the item. Read-only.
+     */
     private IdentitySet createdBy;
-    /** Date and time of item creation. Read-only. */
+    /**
+     * Date and time of item creation. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** Indicates that the remote item is a file. Read-only. */
+    /**
+     * Indicates that the remote item is a file. Read-only.
+     */
     private File file;
-    /** Information about the remote item from the local file system. Read-only. */
+    /**
+     * Information about the remote item from the local file system. Read-only.
+     */
     private FileSystemInfo fileSystemInfo;
-    /** Indicates that the remote item is a folder. Read-only. */
+    /**
+     * Indicates that the remote item is a folder. Read-only.
+     */
     private Folder folder;
-    /** Unique identifier for the remote item in its drive. Read-only. */
+    /**
+     * Unique identifier for the remote item in its drive. Read-only.
+     */
     private String id;
-    /** Image metadata, if the item is an image. Read-only. */
+    /**
+     * Image metadata, if the item is an image. Read-only.
+     */
     private Image image;
-    /** Identity of the user, device, and application which last modified the item. Read-only. */
+    /**
+     * Identity of the user, device, and application which last modified the item. Read-only.
+     */
     private IdentitySet lastModifiedBy;
-    /** Date and time the item was last modified. Read-only. */
+    /**
+     * Date and time the item was last modified. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Optional. Filename of the remote item. Read-only. */
+    /**
+     * Optional. Filename of the remote item. Read-only.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
+    /**
+     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+     */
     private PackageEscaped packageEscaped;
-    /** Properties of the parent of the remote item. Read-only. */
+    /**
+     * Properties of the parent of the remote item. Read-only.
+     */
     private ItemReference parentReference;
-    /** Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. */
+    /**
+     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     */
     private Shared shared;
-    /** Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only. */
+    /**
+     * Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
+     */
     private SharepointIds sharepointIds;
-    /** Size of the remote item. Read-only. */
+    /**
+     * Size of the remote item. Read-only.
+     */
     private Long size;
-    /** If the current item is also available as a special folder, this facet is returned. Read-only. */
+    /**
+     * If the current item is also available as a special folder, this facet is returned. Read-only.
+     */
     private SpecialFolder specialFolder;
-    /** Video metadata, if the item is a video. Read-only. */
+    /**
+     * Video metadata, if the item is a video. Read-only.
+     */
     private Video video;
-    /** DAV compatible URL for the item. */
+    /**
+     * DAV compatible URL for the item.
+     */
     private String webDavUrl;
-    /** URL that displays the resource in the browser. Read-only. */
+    /**
+     * URL that displays the resource in the browser. Read-only.
+     */
     private String webUrl;
     /**
      * Instantiates a new remoteItem and sets the default values.

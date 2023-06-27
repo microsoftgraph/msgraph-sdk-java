@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
  */
 public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity. */
+    /**
+     * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
+     */
     @javax.annotation.Nonnull
     public CustodiansRequestBuilder custodians() {
         return new CustodiansRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the close method. */
+    /**
+     * Provides operations to call the close method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityCloseRequestBuilder microsoftGraphSecurityClose() {
         return new MicrosoftGraphSecurityCloseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reopen method. */
+    /**
+     * Provides operations to call the reopen method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityReopenRequestBuilder microsoftGraphSecurityReopen() {
         return new MicrosoftGraphSecurityReopenRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity. */
+    /**
+     * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.
+     */
     @javax.annotation.Nonnull
     public NoncustodialDataSourcesRequestBuilder noncustodialDataSources() {
         return new NoncustodialDataSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.security.ediscoveryCase entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity. */
+    /**
+     * Provides operations to manage the reviewSets property of the microsoft.graph.security.ediscoveryCase entity.
+     */
     @javax.annotation.Nonnull
     public ReviewSetsRequestBuilder reviewSets() {
         return new ReviewSetsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity. */
+    /**
+     * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
+     */
     @javax.annotation.Nonnull
     public SearchesRequestBuilder searches() {
         return new SearchesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the settings property of the microsoft.graph.security.ediscoveryCase entity. */
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.security.ediscoveryCase entity.
+     */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity. */
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.security.ediscoveryCase entity.
+     */
     @javax.annotation.Nonnull
     public TagsRequestBuilder tags() {
         return new TagsRequestBuilder(pathParameters, requestAdapter);
@@ -311,11 +329,15 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an ediscoveryCase object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -324,7 +346,9 @@ public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

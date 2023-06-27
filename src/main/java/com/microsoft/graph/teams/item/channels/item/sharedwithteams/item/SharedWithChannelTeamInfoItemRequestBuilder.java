@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
  */
 public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity. */
+    /**
+     * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
+     */
     @javax.annotation.Nonnull
     public AllowedMembersRequestBuilder allowedMembers() {
         return new AllowedMembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the team property of the microsoft.graph.teamInfo entity. */
+    /**
+     * Provides operations to manage the team property of the microsoft.graph.teamInfo entity.
+     */
     @javax.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
@@ -267,11 +271,15 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
      * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -280,7 +288,9 @@ public class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuil
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

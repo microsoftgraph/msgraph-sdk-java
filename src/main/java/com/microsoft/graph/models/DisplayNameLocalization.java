@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DisplayNameLocalization implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field. */
+    /**
+     * If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
+     */
     private String displayName;
-    /** Provides the language culture-code and friendly name of the language that the displayName field has been provided in. */
+    /**
+     * Provides the language culture-code and friendly name of the language that the displayName field has been provided in.
+     */
     private String languageTag;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new displayNameLocalization and sets the default values.

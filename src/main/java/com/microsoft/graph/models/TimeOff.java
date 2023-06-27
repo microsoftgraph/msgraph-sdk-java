@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOff extends ChangeTrackedEntity implements Parsable {
-    /** The draft version of this timeOff that is viewable by managers. Required. */
+    /**
+     * The draft version of this timeOff that is viewable by managers. Required.
+     */
     private TimeOffItem draftTimeOff;
-    /** The shared version of this timeOff that is viewable by both employees and managers. Required. */
+    /**
+     * The shared version of this timeOff that is viewable by both employees and managers. Required.
+     */
     private TimeOffItem sharedTimeOff;
-    /** ID of the user assigned to the timeOff. Required. */
+    /**
+     * ID of the user assigned to the timeOff. Required.
+     */
     private String userId;
     /**
      * Instantiates a new TimeOff and sets the default values.

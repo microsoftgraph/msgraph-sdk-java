@@ -10,29 +10,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RetentionEvent extends Entity implements Parsable {
-    /** The user who created the retentionEvent. */
+    /**
+     * The user who created the retentionEvent.
+     */
     private IdentitySet createdBy;
-    /** The date time when the retentionEvent was created. */
+    /**
+     * The date time when the retentionEvent was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Optional information about the event. */
+    /**
+     * Optional information about the event.
+     */
     private String description;
-    /** Name of the event. */
+    /**
+     * Name of the event.
+     */
     private String displayName;
-    /** The eventPropagationResults property */
+    /**
+     * The eventPropagationResults property
+     */
     private java.util.List<EventPropagationResult> eventPropagationResults;
-    /** Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event. */
+    /**
+     * Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
+     */
     private java.util.List<EventQuery> eventQueries;
-    /** The eventStatus property */
+    /**
+     * The eventStatus property
+     */
     private RetentionEventStatus eventStatus;
-    /** Optional time when the event should be triggered. */
+    /**
+     * Optional time when the event should be triggered.
+     */
     private OffsetDateTime eventTriggerDateTime;
-    /** The user who last modified the retentionEvent. */
+    /**
+     * The user who last modified the retentionEvent.
+     */
     private IdentitySet lastModifiedBy;
-    /** The latest date time when the retentionEvent was modified. */
+    /**
+     * The latest date time when the retentionEvent was modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Last time the status of the event was updated. */
+    /**
+     * Last time the status of the event was updated.
+     */
     private OffsetDateTime lastStatusUpdateDateTime;
-    /** Specifies the event that will start the retention period for labels that use this event type when an event is created. */
+    /**
+     * Specifies the event that will start the retention period for labels that use this event type when an event is created.
+     */
     private RetentionEventType retentionEventType;
     /**
      * Instantiates a new retentionEvent and sets the default values.

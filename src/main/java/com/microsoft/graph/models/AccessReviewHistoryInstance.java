@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewHistoryInstance extends Entity implements Parsable {
-    /** Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required. */
+    /**
+     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     */
     private String downloadUri;
-    /** Timestamp when this instance and associated data expires and the history is deleted. Required. */
+    /**
+     * Timestamp when this instance and associated data expires and the history is deleted. Required.
+     */
     private OffsetDateTime expirationDateTime;
-    /** Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required. */
+    /**
+     * Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
+     */
     private OffsetDateTime fulfilledDateTime;
-    /** Timestamp, reviews ending on or before this date will be included in the fetched history data. */
+    /**
+     * Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     */
     private OffsetDateTime reviewHistoryPeriodEndDateTime;
-    /** Timestamp, reviews starting on or after this date will be included in the fetched history data. */
+    /**
+     * Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     */
     private OffsetDateTime reviewHistoryPeriodStartDateTime;
-    /** Timestamp when the instance's history data is scheduled to be generated. */
+    /**
+     * Timestamp when the instance's history data is scheduled to be generated.
+     */
     private OffsetDateTime runDateTime;
-    /** Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method. */
+    /**
+     * Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
+     */
     private AccessReviewHistoryStatus status;
     /**
      * Instantiates a new accessReviewHistoryInstance and sets the default values.

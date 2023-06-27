@@ -7,27 +7,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** Maximum Windows Phone version. */
+    /**
+     * Maximum Windows Phone version.
+     */
     private String osMaximumVersion;
-    /** Minimum Windows Phone version. */
+    /**
+     * Minimum Windows Phone version.
+     */
     private String osMinimumVersion;
-    /** Whether or not to block syncing the calendar. */
+    /**
+     * Whether or not to block syncing the calendar.
+     */
     private Boolean passwordBlockSimple;
-    /** Number of days before the password expires. */
+    /**
+     * Number of days before the password expires.
+     */
     private Integer passwordExpirationDays;
-    /** The number of character sets required in the password. */
+    /**
+     * The number of character sets required in the password.
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** Minimum length of passwords. */
+    /**
+     * Minimum length of passwords.
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before a password is required. */
+    /**
+     * Minutes of inactivity before a password is required.
+     */
     private Integer passwordMinutesOfInactivityBeforeLock;
-    /** Number of previous passwords to block. Valid values 0 to 24 */
+    /**
+     * Number of previous passwords to block. Valid values 0 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Whether or not to require a password. */
+    /**
+     * Whether or not to require a password.
+     */
     private Boolean passwordRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
-    /** Require encryption on windows phone devices. */
+    /**
+     * Require encryption on windows phone devices.
+     */
     private Boolean storageRequireEncryption;
     /**
      * Instantiates a new WindowsPhone81CompliancePolicy and sets the default values.

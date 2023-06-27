@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The decision property */
+    /**
+     * The decision property
+     */
     private String decision;
-    /** The justification property */
+    /**
+     * The justification property
+     */
     private String justification;
-    /** The principalId property */
+    /**
+     * The principalId property
+     */
     private String principalId;
-    /** The resourceId property */
+    /**
+     * The resourceId property
+     */
     private String resourceId;
     /**
      * Instantiates a new batchRecordDecisionsPostRequestBody and sets the default values.

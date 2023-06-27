@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsMobileMSI extends MobileLobApp implements Parsable {
-    /** The command line. */
+    /**
+     * The command line.
+     */
     private String commandLine;
-    /** A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature. */
+    /**
+     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+     */
     private Boolean ignoreVersionDetection;
-    /** The product code. */
+    /**
+     * The product code.
+     */
     private String productCode;
-    /** The product version of Windows Mobile MSI Line of Business (LoB) app. */
+    /**
+     * The product version of Windows Mobile MSI Line of Business (LoB) app.
+     */
     private String productVersion;
     /**
      * Instantiates a new WindowsMobileMSI and sets the default values.

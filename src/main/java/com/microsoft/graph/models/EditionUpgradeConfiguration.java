@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable {
-    /** Edition Upgrade License File Content. */
+    /**
+     * Edition Upgrade License File Content.
+     */
     private String license;
-    /** Edition Upgrade License type */
+    /**
+     * Edition Upgrade License type
+     */
     private EditionUpgradeLicenseType licenseType;
-    /** Edition Upgrade Product Key. */
+    /**
+     * Edition Upgrade Product Key.
+     */
     private String productKey;
-    /** Windows 10 Edition type. */
+    /**
+     * Windows 10 Edition type.
+     */
     private Windows10EditionType targetEdition;
     /**
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.

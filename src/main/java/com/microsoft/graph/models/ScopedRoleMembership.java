@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScopedRoleMembership extends Entity implements Parsable {
-    /** Unique identifier for the administrative unit that the directory role is scoped to */
+    /**
+     * Unique identifier for the administrative unit that the directory role is scoped to
+     */
     private String administrativeUnitId;
-    /** Unique identifier for the directory role that the member is in. */
+    /**
+     * Unique identifier for the directory role that the member is in.
+     */
     private String roleId;
-    /** The roleMemberInfo property */
+    /**
+     * The roleMemberInfo property
+     */
     private Identity roleMemberInfo;
     /**
      * Instantiates a new scopedRoleMembership and sets the default values.

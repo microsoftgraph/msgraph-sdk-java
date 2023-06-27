@@ -11,15 +11,25 @@ import java.util.Objects;
  * The minimum operating system required for a Windows mobile app.
  */
 public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Windows version 10.0 or later. */
+    /**
+     * Windows version 10.0 or later.
+     */
     private Boolean v100;
-    /** Windows version 8.0 or later. */
+    /**
+     * Windows version 8.0 or later.
+     */
     private Boolean v80;
-    /** Windows version 8.1 or later. */
+    /**
+     * Windows version 8.1 or later.
+     */
     private Boolean v81;
     /**
      * Instantiates a new WindowsMinimumOperatingSystem and sets the default values.

@@ -27,37 +27,51 @@ import java.util.Objects;
  * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
  */
 public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity. */
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity.
+     */
     @javax.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the publish method. */
+    /**
+     * Provides operations to call the publish method.
+     */
     @javax.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity. */
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
+     */
     @javax.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
         return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the rubric property of the microsoft.graph.educationAssignment entity. */
+    /**
+     * Provides operations to manage the rubric property of the microsoft.graph.educationAssignment entity.
+     */
     @javax.annotation.Nonnull
     public RubricRequestBuilder rubric() {
         return new RubricRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setUpFeedbackResourcesFolder method. */
+    /**
+     * Provides operations to call the setUpFeedbackResourcesFolder method.
+     */
     @javax.annotation.Nonnull
     public SetUpFeedbackResourcesFolderRequestBuilder setUpFeedbackResourcesFolder() {
         return new SetUpFeedbackResourcesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setUpResourcesFolder method. */
+    /**
+     * Provides operations to call the setUpResourcesFolder method.
+     */
     @javax.annotation.Nonnull
     public SetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
         return new SetUpResourcesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity. */
+    /**
+     * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
+     */
     @javax.annotation.Nonnull
     public SubmissionsRequestBuilder submissions() {
         return new SubmissionsRequestBuilder(pathParameters, requestAdapter);
@@ -299,11 +313,15 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of an assignment. Only teachers, students, and applications with application permissions can perform this operation. Students can only see assignments assigned to them; teachers and applications with application permissions can see all assignments in a class.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -312,7 +330,9 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

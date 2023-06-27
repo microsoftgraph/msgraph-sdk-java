@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharePointIdentitySet extends IdentitySet implements Parsable {
-    /** The group associated with this action. Optional. */
+    /**
+     * The group associated with this action. Optional.
+     */
     private Identity group;
-    /** The SharePoint group associated with this action. Optional. */
+    /**
+     * The SharePoint group associated with this action. Optional.
+     */
     private SharePointIdentity siteGroup;
-    /** The SharePoint user associated with this action. Optional. */
+    /**
+     * The SharePoint user associated with this action. Optional.
+     */
     private SharePointIdentity siteUser;
     /**
      * Instantiates a new SharePointIdentitySet and sets the default values.

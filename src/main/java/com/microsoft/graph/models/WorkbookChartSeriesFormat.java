@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartSeriesFormat extends Entity implements Parsable {
-    /** Represents the fill format of a chart series, which includes background formating information. Read-only. */
+    /**
+     * Represents the fill format of a chart series, which includes background formating information. Read-only.
+     */
     private WorkbookChartFill fill;
-    /** Represents line formatting. Read-only. */
+    /**
+     * Represents line formatting. Read-only.
+     */
     private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartSeriesFormat and sets the default values.

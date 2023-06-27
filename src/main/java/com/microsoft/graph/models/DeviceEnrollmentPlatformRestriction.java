@@ -11,17 +11,29 @@ import java.util.Objects;
  * Platform specific enrollment restrictions
  */
 public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Max OS version supported */
+    /**
+     * Max OS version supported
+     */
     private String osMaximumVersion;
-    /** Min OS version supported */
+    /**
+     * Min OS version supported
+     */
     private String osMinimumVersion;
-    /** Block personally owned devices from enrolling */
+    /**
+     * Block personally owned devices from enrolling
+     */
     private Boolean personalDeviceEnrollmentBlocked;
-    /** Block the platform from enrolling */
+    /**
+     * Block the platform from enrolling
+     */
     private Boolean platformBlocked;
     /**
      * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.

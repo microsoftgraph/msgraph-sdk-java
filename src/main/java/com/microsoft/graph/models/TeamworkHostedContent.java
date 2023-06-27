@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkHostedContent extends Entity implements Parsable {
-    /** Write only. Bytes for the hosted content (such as images). */
+    /**
+     * Write only. Bytes for the hosted content (such as images).
+     */
     private byte[] contentBytes;
-    /** Write only. Content type. sicj as image/png, image/jpg. */
+    /**
+     * Write only. Content type. sicj as image/png, image/jpg.
+     */
     private String contentType;
     /**
      * Instantiates a new teamworkHostedContent and sets the default values.

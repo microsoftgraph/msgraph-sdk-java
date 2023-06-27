@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Notification Settings Alert Type. */
+/**
+ * Notification Settings Alert Type.
+ */
 public enum IosNotificationAlertType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

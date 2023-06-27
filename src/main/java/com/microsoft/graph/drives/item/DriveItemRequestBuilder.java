@@ -31,52 +31,72 @@ import java.util.Objects;
  * Provides operations to manage the collection of drive entities.
  */
 public class DriveItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the bundles property of the microsoft.graph.drive entity. */
+    /**
+     * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
+     */
     @javax.annotation.Nonnull
     public BundlesRequestBuilder bundles() {
         return new BundlesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the following property of the microsoft.graph.drive entity. */
+    /**
+     * Provides operations to manage the following property of the microsoft.graph.drive entity.
+     */
     @javax.annotation.Nonnull
     public FollowingRequestBuilder following() {
         return new FollowingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the items property of the microsoft.graph.drive entity. */
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.drive entity.
+     */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the list property of the microsoft.graph.drive entity. */
+    /**
+     * Provides operations to manage the list property of the microsoft.graph.drive entity.
+     */
     @javax.annotation.Nonnull
     public ListRequestBuilder list() {
         return new ListRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the recent method. */
+    /**
+     * Provides operations to call the recent method.
+     */
     @javax.annotation.Nonnull
     public RecentRequestBuilder recent() {
         return new RecentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the root property of the microsoft.graph.drive entity. */
+    /**
+     * Provides operations to manage the root property of the microsoft.graph.drive entity.
+     */
     @javax.annotation.Nonnull
     public RootRequestBuilder root() {
         return new RootRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the sharedWithMe method. */
+    /**
+     * Provides operations to call the sharedWithMe method.
+     */
     @javax.annotation.Nonnull
     public SharedWithMeRequestBuilder sharedWithMe() {
         return new SharedWithMeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the special property of the microsoft.graph.drive entity. */
+    /**
+     * Provides operations to manage the special property of the microsoft.graph.drive entity.
+     */
     @javax.annotation.Nonnull
     public SpecialRequestBuilder special() {
         return new SpecialRequestBuilder(pathParameters, requestAdapter);
@@ -322,11 +342,15 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
      * Get entity from drives by key
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -335,7 +359,9 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

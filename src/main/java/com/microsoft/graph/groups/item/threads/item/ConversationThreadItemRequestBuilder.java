@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the threads property of the microsoft.graph.group entity.
  */
 public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the posts property of the microsoft.graph.conversationThread entity. */
+    /**
+     * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
+     */
     @javax.annotation.Nonnull
     public PostsRequestBuilder posts() {
         return new PostsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reply method. */
+    /**
+     * Provides operations to call the reply method.
+     */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
@@ -269,7 +273,9 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * Get a thread object.
      */
     public class GetQueryParameters {
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -278,7 +284,9 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

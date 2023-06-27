@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the title property of the microsoft.graph.workbookChart entity.
  */
 public class TitleRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the format property of the microsoft.graph.workbookChartTitle entity. */
+    /**
+     * Provides operations to manage the format property of the microsoft.graph.workbookChartTitle entity.
+     */
     @javax.annotation.Nonnull
     public FormatRequestBuilder format() {
         return new FormatRequestBuilder(pathParameters, requestAdapter);
@@ -261,11 +263,15 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of charttitle object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -274,7 +280,9 @@ public class TitleRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

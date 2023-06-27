@@ -43,9 +43,12 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
      * @return a CompletableFuture of void
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -63,9 +66,12 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete-identityproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -82,8 +88,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The identity providers included in the user flow.
      * @return a CompletableFuture of identityProvider
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<IdentityProvider> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -101,8 +110,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * The identity providers included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityProvider
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<IdentityProvider> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
@@ -119,8 +131,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
      * @return a RequestInformation
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -128,8 +143,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
@@ -146,8 +164,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The identity providers included in the user flow.
      * @return a RequestInformation
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -155,8 +176,11 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * The identity providers included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
     @javax.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
@@ -181,11 +205,15 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * The identity providers included in the user flow.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -194,7 +222,9 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

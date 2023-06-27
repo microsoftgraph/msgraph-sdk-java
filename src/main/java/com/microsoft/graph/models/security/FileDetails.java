@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileDetails implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The name of the file. */
+    /**
+     * The name of the file.
+     */
     private String fileName;
-    /** The file path (location) of the file instance. */
+    /**
+     * The file path (location) of the file instance.
+     */
     private String filePath;
-    /** The publisher of the file. */
+    /**
+     * The publisher of the file.
+     */
     private String filePublisher;
-    /** The size of the file in bytes. */
+    /**
+     * The size of the file in bytes.
+     */
     private Long fileSize;
-    /** The certificate authority (CA) that issued the certificate. */
+    /**
+     * The certificate authority (CA) that issued the certificate.
+     */
     private String issuer;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The Sha1 cryptographic hash of the file content. */
+    /**
+     * The Sha1 cryptographic hash of the file content.
+     */
     private String sha1;
-    /** The Sha256 cryptographic hash of the file content. */
+    /**
+     * The Sha256 cryptographic hash of the file content.
+     */
     private String sha256;
-    /** The signer of the signed file. */
+    /**
+     * The signer of the signed file.
+     */
     private String signer;
     /**
      * Instantiates a new fileDetails and sets the default values.

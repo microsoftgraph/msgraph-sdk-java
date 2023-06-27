@@ -25,27 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
  */
 public class PostItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the attachments property of the microsoft.graph.post entity. */
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.post entity.
+     */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the extensions property of the microsoft.graph.post entity. */
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.post entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the forward method. */
+    /**
+     * Provides operations to call the forward method.
+     */
     @javax.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the inReplyTo property of the microsoft.graph.post entity. */
+    /**
+     * Provides operations to manage the inReplyTo property of the microsoft.graph.post entity.
+     */
     @javax.annotation.Nonnull
     public InReplyToRequestBuilder inReplyTo() {
         return new InReplyToRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reply method. */
+    /**
+     * Provides operations to call the reply method.
+     */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
@@ -140,11 +150,15 @@ public class PostItemRequestBuilder extends BaseRequestBuilder {
      * Get posts from groups
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -153,7 +167,9 @@ public class PostItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

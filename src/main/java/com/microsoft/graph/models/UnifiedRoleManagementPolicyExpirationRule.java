@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPolicyRule implements Parsable {
-    /** Indicates whether expiration is required or if it's a permanently active assignment or eligibility. */
+    /**
+     * Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
+     */
     private Boolean isExpirationRequired;
-    /** The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true. */
+    /**
+     * The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+     */
     private Period maximumDuration;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.

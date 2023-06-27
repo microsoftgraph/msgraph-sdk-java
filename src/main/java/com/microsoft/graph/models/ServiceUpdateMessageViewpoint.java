@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether the user archived the message. */
+    /**
+     * Indicates whether the user archived the message.
+     */
     private Boolean isArchived;
-    /** Indicates whether the user marked the message as favorite. */
+    /**
+     * Indicates whether the user marked the message as favorite.
+     */
     private Boolean isFavorited;
-    /** Indicates whether the user read the message. */
+    /**
+     * Indicates whether the user read the message.
+     */
     private Boolean isRead;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new serviceUpdateMessageViewpoint and sets the default values.

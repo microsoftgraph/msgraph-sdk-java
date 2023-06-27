@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** A collection of groups that are enabled to use the authentication method. */
+    /**
+     * A collection of groups that are enabled to use the authentication method.
+     */
     private java.util.List<SmsAuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new SmsAuthenticationMethodConfiguration and sets the default values.

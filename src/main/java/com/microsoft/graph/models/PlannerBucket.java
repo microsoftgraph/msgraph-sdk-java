@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerBucket extends Entity implements Parsable {
-    /** Name of the bucket. */
+    /**
+     * Name of the bucket.
+     */
     private String name;
-    /** Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner. */
+    /**
+     * Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
+     */
     private String orderHint;
-    /** Plan ID to which the bucket belongs. */
+    /**
+     * Plan ID to which the bucket belongs.
+     */
     private String planId;
-    /** Read-only. Nullable. The collection of tasks in the bucket. */
+    /**
+     * Read-only. Nullable. The collection of tasks in the bucket.
+     */
     private java.util.List<PlannerTask> tasks;
     /**
      * Instantiates a new plannerBucket and sets the default values.

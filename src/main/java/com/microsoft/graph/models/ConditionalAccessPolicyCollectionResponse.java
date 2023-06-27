@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ConditionalAccessPolicy> value;
     /**
      * Instantiates a new ConditionalAccessPolicyCollectionResponse and sets the default values.

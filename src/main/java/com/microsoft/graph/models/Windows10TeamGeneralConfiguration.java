@@ -8,45 +8,85 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates whether or not to Block Azure Operational Insights. */
+    /**
+     * Indicates whether or not to Block Azure Operational Insights.
+     */
     private Boolean azureOperationalInsightsBlockTelemetry;
-    /** The Azure Operational Insights workspace id. */
+    /**
+     * The Azure Operational Insights workspace id.
+     */
     private String azureOperationalInsightsWorkspaceId;
-    /** The Azure Operational Insights Workspace key. */
+    /**
+     * The Azure Operational Insights Workspace key.
+     */
     private String azureOperationalInsightsWorkspaceKey;
-    /** Specifies whether to automatically launch the Connect app whenever a projection is initiated. */
+    /**
+     * Specifies whether to automatically launch the Connect app whenever a projection is initiated.
+     */
     private Boolean connectAppBlockAutoLaunch;
-    /** Indicates whether or not to Block setting a maintenance window for device updates. */
+    /**
+     * Indicates whether or not to Block setting a maintenance window for device updates.
+     */
     private Boolean maintenanceWindowBlocked;
-    /** Maintenance window duration for device updates. Valid values 0 to 5 */
+    /**
+     * Maintenance window duration for device updates. Valid values 0 to 5
+     */
     private Integer maintenanceWindowDurationInHours;
-    /** Maintenance window start time for device updates. */
+    /**
+     * Maintenance window start time for device updates.
+     */
     private LocalTime maintenanceWindowStartTime;
-    /** Indicates whether or not to Block wireless projection. */
+    /**
+     * Indicates whether or not to Block wireless projection.
+     */
     private Boolean miracastBlocked;
-    /** Possible values for Miracast channel. */
+    /**
+     * Possible values for Miracast channel.
+     */
     private MiracastChannel miracastChannel;
-    /** Indicates whether or not to require a pin for wireless projection. */
+    /**
+     * Indicates whether or not to require a pin for wireless projection.
+     */
     private Boolean miracastRequirePin;
-    /** Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365. */
+    /**
+     * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
+     */
     private Boolean settingsBlockMyMeetingsAndFiles;
-    /** Specifies whether to allow the ability to resume a session when the session times out. */
+    /**
+     * Specifies whether to allow the ability to resume a session when the session times out.
+     */
     private Boolean settingsBlockSessionResume;
-    /** Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings. */
+    /**
+     * Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
+     */
     private Boolean settingsBlockSigninSuggestions;
-    /** Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100 */
+    /**
+     * Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
+     */
     private Integer settingsDefaultVolume;
-    /** Specifies the number of minutes until the Hub screen turns off. */
+    /**
+     * Specifies the number of minutes until the Hub screen turns off.
+     */
     private Integer settingsScreenTimeoutInMinutes;
-    /** Specifies the number of minutes until the session times out. */
+    /**
+     * Specifies the number of minutes until the session times out.
+     */
     private Integer settingsSessionTimeoutInMinutes;
-    /** Specifies the number of minutes until the Hub enters sleep mode. */
+    /**
+     * Specifies the number of minutes until the Hub enters sleep mode.
+     */
     private Integer settingsSleepTimeoutInMinutes;
-    /** The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image. */
+    /**
+     * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
+     */
     private String welcomeScreenBackgroundImageUrl;
-    /** Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room. */
+    /**
+     * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
+     */
     private Boolean welcomeScreenBlockAutomaticWakeUp;
-    /** Possible values for welcome screen meeting information. */
+    /**
+     * Possible values for welcome screen meeting information.
+     */
     private WelcomeScreenMeetingInformation welcomeScreenMeetingInformation;
     /**
      * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.

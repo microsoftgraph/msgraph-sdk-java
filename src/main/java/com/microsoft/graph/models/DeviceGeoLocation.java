@@ -12,25 +12,45 @@ import java.util.Objects;
  * Device location
  */
 public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Altitude, given in meters above sea level */
+    /**
+     * Altitude, given in meters above sea level
+     */
     private Double altitude;
-    /** Heading in degrees from true north */
+    /**
+     * Heading in degrees from true north
+     */
     private Double heading;
-    /** Accuracy of longitude and latitude in meters */
+    /**
+     * Accuracy of longitude and latitude in meters
+     */
     private Double horizontalAccuracy;
-    /** Time at which location was recorded, relative to UTC */
+    /**
+     * Time at which location was recorded, relative to UTC
+     */
     private OffsetDateTime lastCollectedDateTime;
-    /** Latitude coordinate of the device's location */
+    /**
+     * Latitude coordinate of the device's location
+     */
     private Double latitude;
-    /** Longitude coordinate of the device's location */
+    /**
+     * Longitude coordinate of the device's location
+     */
     private Double longitude;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Speed the device is traveling in meters per second */
+    /**
+     * Speed the device is traveling in meters per second
+     */
     private Double speed;
-    /** Accuracy of altitude in meters */
+    /**
+     * Accuracy of altitude in meters
+     */
     private Double verticalAccuracy;
     /**
      * Instantiates a new deviceGeoLocation and sets the default values.

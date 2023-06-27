@@ -7,35 +7,65 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SoftwareUpdateStatusSummary extends Entity implements Parsable {
-    /** Number of compliant devices. */
+    /**
+     * Number of compliant devices.
+     */
     private Integer compliantDeviceCount;
-    /** Number of compliant users. */
+    /**
+     * Number of compliant users.
+     */
     private Integer compliantUserCount;
-    /** Number of conflict devices. */
+    /**
+     * Number of conflict devices.
+     */
     private Integer conflictDeviceCount;
-    /** Number of conflict users. */
+    /**
+     * Number of conflict users.
+     */
     private Integer conflictUserCount;
-    /** The name of the policy. */
+    /**
+     * The name of the policy.
+     */
     private String displayName;
-    /** Number of devices had error. */
+    /**
+     * Number of devices had error.
+     */
     private Integer errorDeviceCount;
-    /** Number of users had error. */
+    /**
+     * Number of users had error.
+     */
     private Integer errorUserCount;
-    /** Number of non compliant devices. */
+    /**
+     * Number of non compliant devices.
+     */
     private Integer nonCompliantDeviceCount;
-    /** Number of non compliant users. */
+    /**
+     * Number of non compliant users.
+     */
     private Integer nonCompliantUserCount;
-    /** Number of not applicable devices. */
+    /**
+     * Number of not applicable devices.
+     */
     private Integer notApplicableDeviceCount;
-    /** Number of not applicable users. */
+    /**
+     * Number of not applicable users.
+     */
     private Integer notApplicableUserCount;
-    /** Number of remediated devices. */
+    /**
+     * Number of remediated devices.
+     */
     private Integer remediatedDeviceCount;
-    /** Number of remediated users. */
+    /**
+     * Number of remediated users.
+     */
     private Integer remediatedUserCount;
-    /** Number of unknown devices. */
+    /**
+     * Number of unknown devices.
+     */
     private Integer unknownDeviceCount;
-    /** Number of unknown users. */
+    /**
+     * Number of unknown users.
+     */
     private Integer unknownUserCount;
     /**
      * Instantiates a new softwareUpdateStatusSummary and sets the default values.

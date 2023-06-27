@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizerMeetingInfo extends MeetingInfo implements Parsable {
-    /** The organizer property */
+    /**
+     * The organizer property
+     */
     private IdentitySet organizer;
     /**
      * Instantiates a new OrganizerMeetingInfo and sets the default values.

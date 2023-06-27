@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SinglePropertySchema implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The name of the property. */
+    /**
+     * The name of the property.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The type of the property. */
+    /**
+     * The type of the property.
+     */
     private String type;
     /**
      * Instantiates a new SinglePropertySchema and sets the default values.

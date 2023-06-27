@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
-    /** Azure AD device identifier. */
+    /**
+     * Azure AD device identifier.
+     */
     private String deviceId;
-    /** Possible ways of adding a mobile device to management. */
+    /**
+     * Possible ways of adding a mobile device to management.
+     */
     private DeviceEnrollmentType enrollmentType;
-    /** Top level failure categories for enrollment. */
+    /**
+     * Top level failure categories for enrollment.
+     */
     private DeviceEnrollmentFailureReason failureCategory;
-    /** Detailed failure reason. */
+    /**
+     * Detailed failure reason.
+     */
     private String failureReason;
-    /** Device identifier created or collected by Intune. */
+    /**
+     * Device identifier created or collected by Intune.
+     */
     private String managedDeviceIdentifier;
-    /** Operating System. */
+    /**
+     * Operating System.
+     */
     private String operatingSystem;
-    /** OS Version. */
+    /**
+     * OS Version.
+     */
     private String osVersion;
-    /** Identifier for the user that tried to enroll the device. */
+    /**
+     * Identifier for the user that tried to enroll the device.
+     */
     private String userId;
     /**
      * Instantiates a new EnrollmentTroubleshootingEvent and sets the default values.

@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CheckGrantedPermissionsForAppResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ResourceSpecificPermissionGrant> value;
     /**
      * Instantiates a new checkGrantedPermissionsForAppResponse and sets the default values.

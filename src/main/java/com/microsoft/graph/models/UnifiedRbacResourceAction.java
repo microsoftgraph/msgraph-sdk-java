@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRbacResourceAction extends Entity implements Parsable {
-    /** The actionVerb property */
+    /**
+     * The actionVerb property
+     */
     private String actionVerb;
-    /** The authenticationContextId property */
+    /**
+     * The authenticationContextId property
+     */
     private String authenticationContextId;
-    /** The description property */
+    /**
+     * The description property
+     */
     private String description;
-    /** The isAuthenticationContextSettable property */
+    /**
+     * The isAuthenticationContextSettable property
+     */
     private Boolean isAuthenticationContextSettable;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The resourceScopeId property */
+    /**
+     * The resourceScopeId property
+     */
     private String resourceScopeId;
     /**
      * Instantiates a new unifiedRbacResourceAction and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleAssignmentScheduleRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<UnifiedRoleAssignmentScheduleRequest> value;
     /**
      * Instantiates a new UnifiedRoleAssignmentScheduleRequestCollectionResponse and sets the default values.

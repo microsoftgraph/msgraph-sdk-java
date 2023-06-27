@@ -11,27 +11,49 @@ import java.util.Objects;
  * Device Configuration.
  */
 public class DeviceConfiguration extends Entity implements Parsable {
-    /** The list of assignments for the device configuration profile. */
+    /**
+     * The list of assignments for the device configuration profile.
+     */
     private java.util.List<DeviceConfigurationAssignment> assignments;
-    /** DateTime the object was created. */
+    /**
+     * DateTime the object was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Admin provided description of the Device Configuration. */
+    /**
+     * Admin provided description of the Device Configuration.
+     */
     private String description;
-    /** Device Configuration Setting State Device Summary */
+    /**
+     * Device Configuration Setting State Device Summary
+     */
     private java.util.List<SettingStateDeviceSummary> deviceSettingStateSummaries;
-    /** Device configuration installation status by device. */
+    /**
+     * Device configuration installation status by device.
+     */
     private java.util.List<DeviceConfigurationDeviceStatus> deviceStatuses;
-    /** Device Configuration devices status overview */
+    /**
+     * Device Configuration devices status overview
+     */
     private DeviceConfigurationDeviceOverview deviceStatusOverview;
-    /** Admin provided name of the device configuration. */
+    /**
+     * Admin provided name of the device configuration.
+     */
     private String displayName;
-    /** DateTime the object was last modified. */
+    /**
+     * DateTime the object was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Device configuration installation status by user. */
+    /**
+     * Device configuration installation status by user.
+     */
     private java.util.List<DeviceConfigurationUserStatus> userStatuses;
-    /** Device Configuration users status overview */
+    /**
+     * Device Configuration users status overview
+     */
     private DeviceConfigurationUserOverview userStatusOverview;
-    /** Version of the device configuration. */
+    /**
+     * Version of the device configuration.
+     */
     private Integer version;
     /**
      * Instantiates a new deviceConfiguration and sets the default values.

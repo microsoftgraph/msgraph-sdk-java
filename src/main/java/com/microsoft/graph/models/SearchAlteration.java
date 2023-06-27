@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchAlteration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001. */
+    /**
+     * Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
+     */
     private String alteredHighlightedQueryString;
-    /** Defines the altered query string with spelling correction. */
+    /**
+     * Defines the altered query string with spelling correction.
+     */
     private String alteredQueryString;
-    /** Represents changed segments related to an original user query. */
+    /**
+     * Represents changed segments related to an original user query.
+     */
     private java.util.List<AlteredQueryToken> alteredQueryTokens;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new searchAlteration and sets the default values.

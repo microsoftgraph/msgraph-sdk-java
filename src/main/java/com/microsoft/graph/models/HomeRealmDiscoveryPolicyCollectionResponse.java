@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class HomeRealmDiscoveryPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<HomeRealmDiscoveryPolicy> value;
     /**
      * Instantiates a new HomeRealmDiscoveryPolicyCollectionResponse and sets the default values.

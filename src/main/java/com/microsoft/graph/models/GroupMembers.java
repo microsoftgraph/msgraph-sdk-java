@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupMembers extends SubjectSet implements Parsable {
-    /** The name of the group in Azure AD. Read only. */
+    /**
+     * The name of the group in Azure AD. Read only.
+     */
     private String description;
-    /** The ID of the group in Azure AD. */
+    /**
+     * The ID of the group in Azure AD.
+     */
     private String groupId;
     /**
      * Instantiates a new GroupMembers and sets the default values.

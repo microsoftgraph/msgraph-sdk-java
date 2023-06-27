@@ -24,12 +24,16 @@ import java.util.Objects;
  * Provides operations to manage the attachments property of the microsoft.graph.message entity.
  */
 public class AttachmentsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the createUploadSession method. */
+    /**
+     * Provides operations to call the createUploadSession method.
+     */
     @javax.annotation.Nonnull
     public CreateUploadSessionRequestBuilder createUploadSession() {
         return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
@@ -67,9 +71,9 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/mailFolders/{mailFolder%2Did}/messages/{message%2Did}/attachments{?%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @return a CompletableFuture of AttachmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get() {
@@ -86,10 +90,10 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AttachmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,10 +110,10 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to add an attachment to a message.  An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.  You can add an attachment to an existing message by posting to its attachments collection, or you can add an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB.
+     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
      * @param body The request body
      * @return a CompletableFuture of attachment
-     * @see <a href="https://docs.microsoft.com/graph/api/message-post-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> post(@javax.annotation.Nonnull final Attachment body) {
@@ -126,11 +130,11 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to add an attachment to a message.  An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.  You can add an attachment to an existing message by posting to its attachments collection, or you can add an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB.
+     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of attachment
-     * @see <a href="https://docs.microsoft.com/graph/api/message-post-attachments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Attachment> post(@javax.annotation.Nonnull final Attachment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +152,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +160,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +181,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to add an attachment to a message.  An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.  You can add an attachment to an existing message by posting to its attachments collection, or you can add an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB.
+     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +190,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to add an attachment to a message.  An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource.  You can add an attachment to an existing message by posting to its attachments collection, or you can add an attachment to a message that is being created and sent on the fly. This operation limits the size of the attachment you can add to under 3 MB.
+     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,26 +213,36 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of attachment objects attached to a message.
+     * Retrieve a list of attachment objects.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -237,7 +251,9 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

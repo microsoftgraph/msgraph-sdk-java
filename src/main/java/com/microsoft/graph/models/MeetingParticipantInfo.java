@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Identity information of the participant. */
+    /**
+     * Identity information of the participant.
+     */
     private IdentitySet identity;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies the participant's role in the meeting. */
+    /**
+     * Specifies the participant's role in the meeting.
+     */
     private OnlineMeetingRole role;
-    /** User principal name of the participant. */
+    /**
+     * User principal name of the participant.
+     */
     private String upn;
     /**
      * Instantiates a new meetingParticipantInfo and sets the default values.

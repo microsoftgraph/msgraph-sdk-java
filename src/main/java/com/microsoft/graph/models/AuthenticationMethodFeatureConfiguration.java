@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A single entity that is excluded from this feature. */
+    /**
+     * A single entity that is excluded from this feature.
+     */
     private FeatureTarget excludeTarget;
-    /** A single entity that is included in this feature. */
+    /**
+     * A single entity that is included in this feature.
+     */
     private FeatureTarget includeTarget;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled. */
+    /**
+     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     */
     private AdvancedConfigState state;
     /**
      * Instantiates a new authenticationMethodFeatureConfiguration and sets the default values.

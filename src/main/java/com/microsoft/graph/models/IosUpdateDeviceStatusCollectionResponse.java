@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosUpdateDeviceStatusCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<IosUpdateDeviceStatus> value;
     /**
      * Instantiates a new IosUpdateDeviceStatusCollectionResponse and sets the default values.

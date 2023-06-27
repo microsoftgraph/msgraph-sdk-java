@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Website implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The URL of the website. */
+    /**
+     * The URL of the website.
+     */
     private String address;
-    /** The display name of the web site. */
+    /**
+     * The display name of the web site.
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The possible values are: other, home, work, blog, profile. */
+    /**
+     * The possible values are: other, home, work, blog, profile.
+     */
     private WebsiteType type;
     /**
      * Instantiates a new website and sets the default values.

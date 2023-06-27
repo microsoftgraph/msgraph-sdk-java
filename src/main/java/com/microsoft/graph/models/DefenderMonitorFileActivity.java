@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for monitoring file activity. */
+/**
+ * Possible values for monitoring file activity.
+ */
 public enum DefenderMonitorFileActivity implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

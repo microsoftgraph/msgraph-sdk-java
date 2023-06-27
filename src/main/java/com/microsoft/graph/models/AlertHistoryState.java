@@ -9,23 +9,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlertHistoryState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The appId property */
+    /**
+     * The appId property
+     */
     private String appId;
-    /** The assignedTo property */
+    /**
+     * The assignedTo property
+     */
     private String assignedTo;
-    /** The comments property */
+    /**
+     * The comments property
+     */
     private java.util.List<String> comments;
-    /** The feedback property */
+    /**
+     * The feedback property
+     */
     private AlertFeedback feedback;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The status property */
+    /**
+     * The status property
+     */
     private AlertStatus status;
-    /** The updatedDateTime property */
+    /**
+     * The updatedDateTime property
+     */
     private OffsetDateTime updatedDateTime;
-    /** The user property */
+    /**
+     * The user property
+     */
     private String user;
     /**
      * Instantiates a new alertHistoryState and sets the default values.

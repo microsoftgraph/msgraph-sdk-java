@@ -9,7 +9,9 @@ import java.util.Objects;
  * Builds and executes requests for operations under /education/classes/{educationClass-id}/assignments/{educationAssignment-id}/categories/{educationCategory-id}
  */
 public class EducationCategoryItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the collection of educationRoot entities. */
+    /**
+     * Provides operations to manage the collection of educationRoot entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

@@ -9,23 +9,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlertEvidence implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
-    /** The detailedRoles property */
+    /**
+     * The detailedRoles property
+     */
     private java.util.List<String> detailedRoles;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The remediationStatus property */
+    /**
+     * The remediationStatus property
+     */
     private EvidenceRemediationStatus remediationStatus;
-    /** Details about the remediation status. */
+    /**
+     * Details about the remediation status.
+     */
     private String remediationStatusDetails;
-    /** One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker. */
+    /**
+     * One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+     */
     private java.util.List<EvidenceRole> roles;
-    /** Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets. */
+    /**
+     * Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+     */
     private java.util.List<String> tags;
-    /** The verdict property */
+    /**
+     * The verdict property
+     */
     private EvidenceVerdict verdict;
     /**
      * Instantiates a new AlertEvidence and sets the default values.

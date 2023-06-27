@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CalendarSharingMessage extends Message implements Parsable {
-    /** The canAccept property */
+    /**
+     * The canAccept property
+     */
     private Boolean canAccept;
-    /** The sharingMessageAction property */
+    /**
+     * The sharingMessageAction property
+     */
     private CalendarSharingMessageAction sharingMessageAction;
-    /** The sharingMessageActions property */
+    /**
+     * The sharingMessageActions property
+     */
     private java.util.List<CalendarSharingMessageAction> sharingMessageActions;
-    /** The suggestedCalendarName property */
+    /**
+     * The suggestedCalendarName property
+     */
     private String suggestedCalendarName;
     /**
      * Instantiates a new CalendarSharingMessage and sets the default values.

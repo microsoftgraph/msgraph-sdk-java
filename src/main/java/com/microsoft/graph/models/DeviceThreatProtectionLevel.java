@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Device threat protection levels for the Device Threat Protection API. */
+/**
+ * Device threat protection levels for the Device Threat Protection API.
+ */
 public enum DeviceThreatProtectionLevel implements ValuedEnum {
     /** Default Value. Do not use. */
     Unavailable("unavailable"),

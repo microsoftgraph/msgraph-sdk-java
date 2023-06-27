@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessRoot extends Entity implements Parsable {
-    /** Read-only. Nullable. Returns a collection of the specified authentication context class references. */
+    /**
+     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     */
     private java.util.List<AuthenticationContextClassReference> authenticationContextClassReferences;
-    /** The authenticationStrength property */
+    /**
+     * The authenticationStrength property
+     */
     private AuthenticationStrengthRoot authenticationStrength;
-    /** Read-only. Nullable. Returns a collection of the specified named locations. */
+    /**
+     * Read-only. Nullable. Returns a collection of the specified named locations.
+     */
     private java.util.List<NamedLocation> namedLocations;
-    /** Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies. */
+    /**
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     */
     private java.util.List<ConditionalAccessPolicy> policies;
-    /** Read-only. Nullable. Returns a collection of the specified Conditional Access templates. */
+    /**
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     */
     private java.util.List<ConditionalAccessTemplate> templates;
     /**
      * Instantiates a new ConditionalAccessRoot and sets the default values.

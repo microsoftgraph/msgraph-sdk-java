@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The date and time that this Windows Hello for Business key was registered. */
+    /**
+     * The date and time that this Windows Hello for Business key was registered.
+     */
     private OffsetDateTime createdDateTime;
-    /** The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device. */
+    /**
+     * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+     */
     private Device device;
-    /** The name of the device on which Windows Hello for Business is registered */
+    /**
+     * The name of the device on which Windows Hello for Business is registered
+     */
     private String displayName;
-    /** Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown. */
+    /**
+     * Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+     */
     private AuthenticationMethodKeyStrength keyStrength;
     /**
      * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.

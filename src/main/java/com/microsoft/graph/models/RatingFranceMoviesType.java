@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Movies rating labels in France */
+/**
+ * Movies rating labels in France
+ */
 public enum RatingFranceMoviesType implements ValuedEnum {
     /** Default value, allow all movies content */
     AllAllowed("allAllowed"),

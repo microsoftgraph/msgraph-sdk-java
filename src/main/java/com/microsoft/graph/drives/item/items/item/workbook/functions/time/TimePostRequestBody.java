@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The hour property */
+    /**
+     * The hour property
+     */
     private Json hour;
-    /** The minute property */
+    /**
+     * The minute property
+     */
     private Json minute;
-    /** The second property */
+    /**
+     * The second property
+     */
     private Json second;
     /**
      * Instantiates a new timePostRequestBody and sets the default values.

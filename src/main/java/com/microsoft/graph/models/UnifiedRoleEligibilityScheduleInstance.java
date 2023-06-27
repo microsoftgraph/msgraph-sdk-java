@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
-    /** The end date of the schedule instance. */
+    /**
+     * The end date of the schedule instance.
+     */
     private OffsetDateTime endDateTime;
-    /** How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne). */
+    /**
+     * How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
+     */
     private String memberType;
-    /** The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne). */
+    /**
+     * The identifier of the unifiedRoleEligibilitySchedule object from which this instance was created. Supports $filter (eq, ne).
+     */
     private String roleEligibilityScheduleId;
-    /** When this instance starts. */
+    /**
+     * When this instance starts.
+     */
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new unifiedRoleEligibilityScheduleInstance and sets the default values.

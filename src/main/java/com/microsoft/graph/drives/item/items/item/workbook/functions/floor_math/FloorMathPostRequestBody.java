@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FloorMathPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The mode property */
+    /**
+     * The mode property
+     */
     private Json mode;
-    /** The number property */
+    /**
+     * The number property
+     */
     private Json number;
-    /** The significance property */
+    /**
+     * The significance property
+     */
     private Json significance;
     /**
      * Instantiates a new FloorMathPostRequestBody and sets the default values.

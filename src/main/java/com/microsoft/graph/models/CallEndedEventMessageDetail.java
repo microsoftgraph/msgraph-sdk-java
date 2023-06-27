@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Duration of the call. */
+    /**
+     * Duration of the call.
+     */
     private Period callDuration;
-    /** Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue. */
+    /**
+     * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     */
     private TeamworkCallEventType callEventType;
-    /** Unique identifier of the call. */
+    /**
+     * Unique identifier of the call.
+     */
     private String callId;
-    /** List of call participants. */
+    /**
+     * List of call participants.
+     */
     private java.util.List<CallParticipantInfo> callParticipants;
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
     /**
      * Instantiates a new CallEndedEventMessageDetail and sets the default values.

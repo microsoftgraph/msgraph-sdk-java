@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAccountUserConversationMember extends ConversationMember implements Parsable {
-    /** Microsoft Account ID of the user. */
+    /**
+     * Microsoft Account ID of the user.
+     */
     private String userId;
     /**
      * Instantiates a new MicrosoftAccountUserConversationMember and sets the default values.

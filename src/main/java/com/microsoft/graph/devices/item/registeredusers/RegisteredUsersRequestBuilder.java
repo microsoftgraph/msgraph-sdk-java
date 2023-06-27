@@ -27,32 +27,44 @@ import java.util.Objects;
  * Provides operations to manage the registeredUsers property of the microsoft.graph.device entity.
  */
 public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to appRoleAssignment. */
+    /**
+     * Casts the previous resource to appRoleAssignment.
+     */
     @javax.annotation.Nonnull
     public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
         return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to endpoint. */
+    /**
+     * Casts the previous resource to endpoint.
+     */
     @javax.annotation.Nonnull
     public GraphEndpointRequestBuilder graphEndpoint() {
         return new GraphEndpointRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to servicePrincipal. */
+    /**
+     * Casts the previous resource to servicePrincipal.
+     */
     @javax.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
         return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to user. */
+    /**
+     * Casts the previous resource to user.
+     */
     @javax.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
         return new GraphUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of device entities. */
+    /**
+     * Provides operations to manage the collection of device entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
@@ -161,35 +173,51 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
      * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -198,7 +226,9 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

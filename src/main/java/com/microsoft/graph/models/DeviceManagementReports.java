@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementReports extends Entity implements Parsable {
-    /** Entity representing a job to export a report */
+    /**
+     * Entity representing a job to export a report
+     */
     private java.util.List<DeviceManagementExportJob> exportJobs;
     /**
      * Instantiates a new deviceManagementReports and sets the default values.

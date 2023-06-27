@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class QuartileIncPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The array property */
+    /**
+     * The array property
+     */
     private Json array;
-    /** The quart property */
+    /**
+     * The quart property
+     */
     private Json quart;
     /**
      * Instantiates a new QuartileIncPostRequestBody and sets the default values.

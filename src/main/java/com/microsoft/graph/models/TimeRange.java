@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeRange implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** End time for the time range. */
+    /**
+     * End time for the time range.
+     */
     private LocalTime endTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Start time for the time range. */
+    /**
+     * Start time for the time range.
+     */
     private LocalTime startTime;
     /**
      * Instantiates a new timeRange and sets the default values.

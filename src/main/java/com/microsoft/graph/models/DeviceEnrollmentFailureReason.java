@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Top level failure categories for enrollment. */
+/**
+ * Top level failure categories for enrollment.
+ */
 public enum DeviceEnrollmentFailureReason implements ValuedEnum {
     /** Default value, failure reason is unknown. */
     Unknown("unknown"),

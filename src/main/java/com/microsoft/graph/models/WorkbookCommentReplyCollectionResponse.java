@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookCommentReplyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<WorkbookCommentReply> value;
     /**
      * Instantiates a new WorkbookCommentReplyCollectionResponse and sets the default values.

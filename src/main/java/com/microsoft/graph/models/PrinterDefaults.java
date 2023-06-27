@@ -8,43 +8,81 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterDefaults implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The default color mode to use when printing the document. Valid values are described in the following table. */
+    /**
+     * The default color mode to use when printing the document. Valid values are described in the following table.
+     */
     private PrintColorMode colorMode;
-    /** The default content (MIME) type to use when processing documents. */
+    /**
+     * The default content (MIME) type to use when processing documents.
+     */
     private String contentType;
-    /** The default number of copies printed per job. */
+    /**
+     * The default number of copies printed per job.
+     */
     private Integer copiesPerJob;
-    /** The default resolution in DPI to use when printing the job. */
+    /**
+     * The default resolution in DPI to use when printing the job.
+     */
     private Integer dpi;
-    /** The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table. */
+    /**
+     * The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
+     */
     private PrintDuplexMode duplexMode;
-    /** The default set of finishings to apply to print jobs. Valid values are described in the following table. */
+    /**
+     * The default set of finishings to apply to print jobs. Valid values are described in the following table.
+     */
     private java.util.List<PrintFinishing> finishings;
-    /** The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions. */
+    /**
+     * The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
+     */
     private Boolean fitPdfToPage;
-    /** The inputBin property */
+    /**
+     * The inputBin property
+     */
     private String inputBin;
-    /** The default media (such as paper) color to print the document on. */
+    /**
+     * The default media (such as paper) color to print the document on.
+     */
     private String mediaColor;
-    /** The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic. */
+    /**
+     * The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+     */
     private String mediaSize;
-    /** The default media (such as paper) type to print the document on. */
+    /**
+     * The default media (such as paper) type to print the document on.
+     */
     private String mediaType;
-    /** The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table. */
+    /**
+     * The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
+     */
     private PrintMultipageLayout multipageLayout;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The default orientation to use when printing the document. Valid values are described in the following table. */
+    /**
+     * The default orientation to use when printing the document. Valid values are described in the following table.
+     */
     private PrintOrientation orientation;
-    /** The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins. */
+    /**
+     * The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     */
     private String outputBin;
-    /** The default number of document pages to print on each sheet. */
+    /**
+     * The default number of document pages to print on each sheet.
+     */
     private Integer pagesPerSheet;
-    /** The default quality to use when printing the document. Valid values are described in the following table. */
+    /**
+     * The default quality to use when printing the document. Valid values are described in the following table.
+     */
     private PrintQuality quality;
-    /** Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table. */
+    /**
+     * Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
+     */
     private PrintScaling scaling;
     /**
      * Instantiates a new printerDefaults and sets the default values.

@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CasesRoot extends Entity implements Parsable {
-    /** The ediscoveryCases property */
+    /**
+     * The ediscoveryCases property
+     */
     private java.util.List<EdiscoveryCase> ediscoveryCases;
     /**
      * Instantiates a new casesRoot and sets the default values.

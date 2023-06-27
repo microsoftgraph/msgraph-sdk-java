@@ -7,37 +7,69 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled */
+    /**
+     * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
+     */
     private Boolean bitLockerEnabled;
-    /** Require devices to be reported as healthy by Windows Device Health Attestation. */
+    /**
+     * Require devices to be reported as healthy by Windows Device Health Attestation.
+     */
     private Boolean codeIntegrityEnabled;
-    /** Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled. */
+    /**
+     * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
+     */
     private Boolean earlyLaunchAntiMalwareDriverEnabled;
-    /** Maximum Windows Phone version. */
+    /**
+     * Maximum Windows Phone version.
+     */
     private String osMaximumVersion;
-    /** Minimum Windows Phone version. */
+    /**
+     * Minimum Windows Phone version.
+     */
     private String osMinimumVersion;
-    /** Whether or not to block syncing the calendar. */
+    /**
+     * Whether or not to block syncing the calendar.
+     */
     private Boolean passwordBlockSimple;
-    /** Number of days before password expiration. Valid values 1 to 255 */
+    /**
+     * Number of days before password expiration. Valid values 1 to 255
+     */
     private Integer passwordExpirationDays;
-    /** The number of character sets required in the password. */
+    /**
+     * The number of character sets required in the password.
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** Minimum password length. Valid values 4 to 16 */
+    /**
+     * Minimum password length. Valid values 4 to 16
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before a password is required. */
+    /**
+     * Minutes of inactivity before a password is required.
+     */
     private Integer passwordMinutesOfInactivityBeforeLock;
-    /** The number of previous passwords to prevent re-use of. */
+    /**
+     * The number of previous passwords to prevent re-use of.
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Require a password to unlock Windows Phone device. */
+    /**
+     * Require a password to unlock Windows Phone device.
+     */
     private Boolean passwordRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
-    /** Require a password to unlock an idle device. */
+    /**
+     * Require a password to unlock an idle device.
+     */
     private Boolean passwordRequireToUnlockFromIdle;
-    /** Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled. */
+    /**
+     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
+     */
     private Boolean secureBootEnabled;
-    /** Require encryption on windows devices. */
+    /**
+     * Require encryption on windows devices.
+     */
     private Boolean storageRequireEncryption;
     /**
      * Instantiates a new Windows10MobileCompliancePolicy and sets the default values.

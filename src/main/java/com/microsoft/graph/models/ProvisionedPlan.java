@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisionedPlan implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** For example, 'Enabled'. */
+    /**
+     * For example, 'Enabled'.
+     */
     private String capabilityStatus;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** For example, 'Success'. */
+    /**
+     * For example, 'Success'.
+     */
     private String provisioningStatus;
-    /** The name of the service; for example, 'AccessControlS2S' */
+    /**
+     * The name of the service; for example, 'AccessControlS2S'
+     */
     private String service;
     /**
      * Instantiates a new ProvisionedPlan and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TaskFileAttachment extends AttachmentBase implements Parsable {
-    /** The base64-encoded contents of the file. */
+    /**
+     * The base64-encoded contents of the file.
+     */
     private byte[] contentBytes;
     /**
      * Instantiates a new TaskFileAttachment and sets the default values.

@@ -10,21 +10,37 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class LicenseAssignmentState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The assignedByGroup property */
+    /**
+     * The assignedByGroup property
+     */
     private String assignedByGroup;
-    /** The disabledPlans property */
+    /**
+     * The disabledPlans property
+     */
     private java.util.List<UUID> disabledPlans;
-    /** The error property */
+    /**
+     * The error property
+     */
     private String error;
-    /** The lastUpdatedDateTime property */
+    /**
+     * The lastUpdatedDateTime property
+     */
     private OffsetDateTime lastUpdatedDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The skuId property */
+    /**
+     * The skuId property
+     */
     private UUID skuId;
-    /** The state property */
+    /**
+     * The state property
+     */
     private String state;
     /**
      * Instantiates a new licenseAssignmentState and sets the default values.

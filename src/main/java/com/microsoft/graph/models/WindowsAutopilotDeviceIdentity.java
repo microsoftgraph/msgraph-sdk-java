@@ -11,37 +11,69 @@ import java.util.Objects;
  * The windowsAutopilotDeviceIdentity resource represents a Windows Autopilot Device.
  */
 public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
-    /** Addressable user name. */
+    /**
+     * Addressable user name.
+     */
     private String addressableUserName;
-    /** AAD Device ID - to be deprecated */
+    /**
+     * AAD Device ID - to be deprecated
+     */
     private String azureActiveDirectoryDeviceId;
-    /** Display Name */
+    /**
+     * Display Name
+     */
     private String displayName;
-    /** The enrollmentState property */
+    /**
+     * The enrollmentState property
+     */
     private EnrollmentState enrollmentState;
-    /** Group Tag of the Windows autopilot device. */
+    /**
+     * Group Tag of the Windows autopilot device.
+     */
     private String groupTag;
-    /** Intune Last Contacted Date Time of the Windows autopilot device. */
+    /**
+     * Intune Last Contacted Date Time of the Windows autopilot device.
+     */
     private OffsetDateTime lastContactedDateTime;
-    /** Managed Device ID */
+    /**
+     * Managed Device ID
+     */
     private String managedDeviceId;
-    /** Oem manufacturer of the Windows autopilot device. */
+    /**
+     * Oem manufacturer of the Windows autopilot device.
+     */
     private String manufacturer;
-    /** Model name of the Windows autopilot device. */
+    /**
+     * Model name of the Windows autopilot device.
+     */
     private String model;
-    /** Product Key of the Windows autopilot device. */
+    /**
+     * Product Key of the Windows autopilot device.
+     */
     private String productKey;
-    /** Purchase Order Identifier of the Windows autopilot device. */
+    /**
+     * Purchase Order Identifier of the Windows autopilot device.
+     */
     private String purchaseOrderIdentifier;
-    /** Resource Name. */
+    /**
+     * Resource Name.
+     */
     private String resourceName;
-    /** Serial number of the Windows autopilot device. */
+    /**
+     * Serial number of the Windows autopilot device.
+     */
     private String serialNumber;
-    /** SKU Number */
+    /**
+     * SKU Number
+     */
     private String skuNumber;
-    /** System Family */
+    /**
+     * System Family
+     */
     private String systemFamily;
-    /** User Principal Name. */
+    /**
+     * User Principal Name.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new windowsAutopilotDeviceIdentity and sets the default values.

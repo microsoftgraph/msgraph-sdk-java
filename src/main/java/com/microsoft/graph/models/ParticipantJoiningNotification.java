@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantJoiningNotification extends Entity implements Parsable {
-    /** The call property */
+    /**
+     * The call property
+     */
     private Call call;
     /**
      * Instantiates a new ParticipantJoiningNotification and sets the default values.

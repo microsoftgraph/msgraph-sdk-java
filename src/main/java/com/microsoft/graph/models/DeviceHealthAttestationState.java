@@ -9,73 +9,141 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate. */
+    /**
+     * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
+     */
     private String attestationIdentityKey;
-    /** On or Off of BitLocker Drive Encryption */
+    /**
+     * On or Off of BitLocker Drive Encryption
+     */
     private String bitLockerStatus;
-    /** The security version number of the Boot Application */
+    /**
+     * The security version number of the Boot Application
+     */
     private String bootAppSecurityVersion;
-    /** When bootDebugging is enabled, the device is used in development and testing */
+    /**
+     * When bootDebugging is enabled, the device is used in development and testing
+     */
     private String bootDebugging;
-    /** The security version number of the Boot Application */
+    /**
+     * The security version number of the Boot Application
+     */
     private String bootManagerSecurityVersion;
-    /** The version of the Boot Manager */
+    /**
+     * The version of the Boot Manager
+     */
     private String bootManagerVersion;
-    /** The Boot Revision List that was loaded during initial boot on the attested device */
+    /**
+     * The Boot Revision List that was loaded during initial boot on the attested device
+     */
     private String bootRevisionListInfo;
-    /** When code integrity is enabled, code execution is restricted to integrity verified code */
+    /**
+     * When code integrity is enabled, code execution is restricted to integrity verified code
+     */
     private String codeIntegrity;
-    /** The version of the Boot Manager */
+    /**
+     * The version of the Boot Manager
+     */
     private String codeIntegrityCheckVersion;
-    /** The Code Integrity policy that is controlling the security of the boot environment */
+    /**
+     * The Code Integrity policy that is controlling the security of the boot environment
+     */
     private String codeIntegrityPolicy;
-    /** The DHA report version. (Namespace version) */
+    /**
+     * The DHA report version. (Namespace version)
+     */
     private String contentNamespaceUrl;
-    /** The HealthAttestation state schema version */
+    /**
+     * The HealthAttestation state schema version
+     */
     private String contentVersion;
-    /** DEP Policy defines a set of hardware and software technologies that perform additional checks on memory */
+    /**
+     * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
+     */
     private String dataExcutionPolicy;
-    /** The DHA report version. (Namespace version) */
+    /**
+     * The DHA report version. (Namespace version)
+     */
     private String deviceHealthAttestationStatus;
-    /** ELAM provides protection for the computers in your network when they start up */
+    /**
+     * ELAM provides protection for the computers in your network when they start up
+     */
     private String earlyLaunchAntiMalwareDriverProtection;
-    /** This attribute indicates if DHA is supported for the device */
+    /**
+     * This attribute indicates if DHA is supported for the device
+     */
     private String healthAttestationSupportedStatus;
-    /** This attribute appears if DHA-Service detects an integrity issue */
+    /**
+     * This attribute appears if DHA-Service detects an integrity issue
+     */
     private String healthStatusMismatchInfo;
-    /** The DateTime when device was evaluated or issued to MDM */
+    /**
+     * The DateTime when device was evaluated or issued to MDM
+     */
     private OffsetDateTime issuedDateTime;
-    /** The Timestamp of the last update. */
+    /**
+     * The Timestamp of the last update.
+     */
     private String lastUpdateDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** When operatingSystemKernelDebugging is enabled, the device is used in development and testing */
+    /**
+     * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
+     */
     private String operatingSystemKernelDebugging;
-    /** The Operating System Revision List that was loaded during initial boot on the attested device */
+    /**
+     * The Operating System Revision List that was loaded during initial boot on the attested device
+     */
     private String operatingSystemRevListInfo;
-    /** The measurement that is captured in PCR[0] */
+    /**
+     * The measurement that is captured in PCR[0]
+     */
     private String pcr0;
-    /** Informational attribute that identifies the HASH algorithm that was used by TPM */
+    /**
+     * Informational attribute that identifies the HASH algorithm that was used by TPM
+     */
     private String pcrHashAlgorithm;
-    /** The number of times a PC device has hibernated or resumed */
+    /**
+     * The number of times a PC device has hibernated or resumed
+     */
     private Long resetCount;
-    /** The number of times a PC device has rebooted */
+    /**
+     * The number of times a PC device has rebooted
+     */
     private Long restartCount;
-    /** Safe mode is a troubleshooting option for Windows that starts your computer in a limited state */
+    /**
+     * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
+     */
     private String safeMode;
-    /** When Secure Boot is enabled, the core components must have the correct cryptographic signatures */
+    /**
+     * When Secure Boot is enabled, the core components must have the correct cryptographic signatures
+     */
     private String secureBoot;
-    /** Fingerprint of the Custom Secure Boot Configuration Policy */
+    /**
+     * Fingerprint of the Custom Secure Boot Configuration Policy
+     */
     private String secureBootConfigurationPolicyFingerPrint;
-    /** When test signing is allowed, the device does not enforce signature validation during boot */
+    /**
+     * When test signing is allowed, the device does not enforce signature validation during boot
+     */
     private String testSigning;
-    /** The security version number of the Boot Application */
+    /**
+     * The security version number of the Boot Application
+     */
     private String tpmVersion;
-    /** VSM is a container that protects high value assets from a compromised kernel */
+    /**
+     * VSM is a container that protects high value assets from a compromised kernel
+     */
     private String virtualSecureMode;
-    /** Operating system running with limited services that is used to prepare a computer for Windows */
+    /**
+     * Operating system running with limited services that is used to prepare a computer for Windows
+     */
     private String windowsPE;
     /**
      * Instantiates a new deviceHealthAttestationState and sets the default values.

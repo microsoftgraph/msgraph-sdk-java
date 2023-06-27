@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeMappingFunctionSchemaCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AttributeMappingFunctionSchema> value;
     /**
      * Instantiates a new AttributeMappingFunctionSchemaCollectionResponse and sets the default values.

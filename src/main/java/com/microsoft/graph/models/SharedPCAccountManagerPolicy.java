@@ -11,17 +11,29 @@ import java.util.Objects;
  * SharedPC Account Manager Policy. Only applies when the account manager is enabled.
  */
 public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable {
-    /** Possible values for when accounts are deleted on a shared PC. */
+    /**
+     * Possible values for when accounts are deleted on a shared PC.
+     */
     private SharedPCAccountDeletionPolicyType accountDeletionPolicy;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100 */
+    /**
+     * Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
+     */
     private Integer cacheAccountsAboveDiskFreePercentage;
-    /** Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. */
+    /**
+     * Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
+     */
     private Integer inactiveThresholdDays;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100 */
+    /**
+     * Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
+     */
     private Integer removeAccountsBelowDiskFreePercentage;
     /**
      * Instantiates a new sharedPCAccountManagerPolicy and sets the default values.

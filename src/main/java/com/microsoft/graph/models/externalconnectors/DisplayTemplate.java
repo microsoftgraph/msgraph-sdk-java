@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DisplayTemplate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed. */
+    /**
+     * The text identifier for the display template; for example, contosoTickets. Maximum 16 characters. Only alphanumeric characters allowed.
+     */
     private String id;
-    /** The layout property */
+    /**
+     * The layout property
+     */
     private Json layout;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value. */
+    /**
+     * Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported. Must be positive value.
+     */
     private Integer priority;
-    /** Specifies additional rules for selecting this display template based on the item schema. Optional. */
+    /**
+     * Specifies additional rules for selecting this display template based on the item schema. Optional.
+     */
     private java.util.List<PropertyRule> rules;
     /**
      * Instantiates a new displayTemplate and sets the default values.

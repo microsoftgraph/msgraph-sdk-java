@@ -9,25 +9,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OddFPricePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The basis property */
+    /**
+     * The basis property
+     */
     private Json basis;
-    /** The firstCoupon property */
+    /**
+     * The firstCoupon property
+     */
     private Json firstCoupon;
-    /** The frequency property */
+    /**
+     * The frequency property
+     */
     private Json frequency;
-    /** The issue property */
+    /**
+     * The issue property
+     */
     private Json issue;
-    /** The maturity property */
+    /**
+     * The maturity property
+     */
     private Json maturity;
-    /** The rate property */
+    /**
+     * The rate property
+     */
     private Json rate;
-    /** The redemption property */
+    /**
+     * The redemption property
+     */
     private Json redemption;
-    /** The settlement property */
+    /**
+     * The settlement property
+     */
     private Json settlement;
-    /** The yld property */
+    /**
+     * The yld property
+     */
     private Json yld;
     /**
      * Instantiates a new oddFPricePostRequestBody and sets the default values.

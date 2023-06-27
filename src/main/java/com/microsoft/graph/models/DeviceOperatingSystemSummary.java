@@ -11,33 +11,61 @@ import java.util.Objects;
  * Device operating system summary.
  */
 public class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647 */
+    /**
+     * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
+     */
     private Integer androidCorporateWorkProfileCount;
-    /** Number of android device count. */
+    /**
+     * Number of android device count.
+     */
     private Integer androidCount;
-    /** Number of dedicated Android devices. */
+    /**
+     * Number of dedicated Android devices.
+     */
     private Integer androidDedicatedCount;
-    /** Number of device admin Android devices. */
+    /**
+     * Number of device admin Android devices.
+     */
     private Integer androidDeviceAdminCount;
-    /** Number of fully managed Android devices. */
+    /**
+     * Number of fully managed Android devices.
+     */
     private Integer androidFullyManagedCount;
-    /** Number of work profile Android devices. */
+    /**
+     * Number of work profile Android devices.
+     */
     private Integer androidWorkProfileCount;
-    /** Number of ConfigMgr managed devices. */
+    /**
+     * Number of ConfigMgr managed devices.
+     */
     private Integer configMgrDeviceCount;
-    /** Number of iOS device count. */
+    /**
+     * Number of iOS device count.
+     */
     private Integer iosCount;
-    /** Number of Mac OS X device count. */
+    /**
+     * Number of Mac OS X device count.
+     */
     private Integer macOSCount;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Number of unknown device count. */
+    /**
+     * Number of unknown device count.
+     */
     private Integer unknownCount;
-    /** Number of Windows device count. */
+    /**
+     * Number of Windows device count.
+     */
     private Integer windowsCount;
-    /** Number of Windows mobile device count. */
+    /**
+     * Number of Windows mobile device count.
+     */
     private Integer windowsMobileCount;
     /**
      * Instantiates a new deviceOperatingSystemSummary and sets the default values.

@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppConsentRequest extends Entity implements Parsable {
-    /** The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby. */
+    /**
+     * The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
+     */
     private String appDisplayName;
-    /** The identifier of the application. Required. Supports $filter (eq only) and $orderby. */
+    /**
+     * The identifier of the application. Required. Supports $filter (eq only) and $orderby.
+     */
     private String appId;
-    /** A list of pending scopes waiting for approval. Required. */
+    /**
+     * A list of pending scopes waiting for approval. Required.
+     */
     private java.util.List<AppConsentRequestScope> pendingScopes;
-    /** A list of pending user consent requests. Supports $filter (eq). */
+    /**
+     * A list of pending user consent requests. Supports $filter (eq).
+     */
     private java.util.List<UserConsentRequest> userConsentRequests;
     /**
      * Instantiates a new appConsentRequest and sets the default values.

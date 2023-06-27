@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosUpdateDeviceStatus extends Entity implements Parsable {
-    /** The DateTime when device compliance grace period expires */
+    /**
+     * The DateTime when device compliance grace period expires
+     */
     private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /** Device name of the DevicePolicyStatus. */
+    /**
+     * Device name of the DevicePolicyStatus.
+     */
     private String deviceDisplayName;
-    /** The device id that is being reported. */
+    /**
+     * The device id that is being reported.
+     */
     private String deviceId;
-    /** The device model that is being reported */
+    /**
+     * The device model that is being reported
+     */
     private String deviceModel;
-    /** The installStatus property */
+    /**
+     * The installStatus property
+     */
     private IosUpdatesInstallStatus installStatus;
-    /** Last modified date time of the policy report. */
+    /**
+     * Last modified date time of the policy report.
+     */
     private OffsetDateTime lastReportedDateTime;
-    /** The device version that is being reported. */
+    /**
+     * The device version that is being reported.
+     */
     private String osVersion;
-    /** The status property */
+    /**
+     * The status property
+     */
     private ComplianceStatus status;
-    /** The User id that is being reported. */
+    /**
+     * The User id that is being reported.
+     */
     private String userId;
-    /** The User Name that is being reported */
+    /**
+     * The User Name that is being reported
+     */
     private String userName;
-    /** UserPrincipalName. */
+    /**
+     * UserPrincipalName.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new iosUpdateDeviceStatus and sets the default values.

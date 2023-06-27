@@ -110,7 +110,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove a member from a directoryRole. You can use both the object ID and template ID of the **directoryRole** with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Azure portal. For details, see Role template IDs.
      */
     public class DeleteQueryParameters {
-        /** Delete Uri */
+        /**
+         * Delete Uri
+         */
         @QueryParameter(name = "%40id")
         @javax.annotation.Nullable
         public String id;
@@ -119,7 +121,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }

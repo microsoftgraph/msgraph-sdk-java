@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSource extends DataSource implements Parsable {
-    /** Email address of the user's mailbox. */
+    /**
+     * Email address of the user's mailbox.
+     */
     private String email;
-    /** Specifies which sources are included in this group. Possible values are: mailbox, site. */
+    /**
+     * Specifies which sources are included in this group. Possible values are: mailbox, site.
+     */
     private SourceType includedSources;
-    /** The URL of the user's OneDrive for Business site. Read-only. */
+    /**
+     * The URL of the user's OneDrive for Business site. Read-only.
+     */
     private String siteWebUrl;
     /**
      * Instantiates a new UserSource and sets the default values.

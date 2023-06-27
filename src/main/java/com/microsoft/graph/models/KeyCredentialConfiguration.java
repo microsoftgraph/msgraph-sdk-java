@@ -10,15 +10,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The maxLifetime property */
+    /**
+     * The maxLifetime property
+     */
     private Period maxLifetime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable. */
+    /**
+     * Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
+     */
     private OffsetDateTime restrictForAppsCreatedAfterDateTime;
-    /** The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy. */
+    /**
+     * The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     */
     private AppKeyCredentialRestrictionType restrictionType;
     /**
      * Instantiates a new keyCredentialConfiguration and sets the default values.

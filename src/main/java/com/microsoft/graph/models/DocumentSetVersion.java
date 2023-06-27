@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DocumentSetVersion extends ListItemVersion implements Parsable {
-    /** Comment about the captured version. */
+    /**
+     * Comment about the captured version.
+     */
     private String comment;
-    /** User who captured the version. */
+    /**
+     * User who captured the version.
+     */
     private IdentitySet createdBy;
-    /** Date and time when this version was created. */
+    /**
+     * Date and time when this version was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Items within the document set that are captured as part of this version. */
+    /**
+     * Items within the document set that are captured as part of this version.
+     */
     private java.util.List<DocumentSetVersionItem> items;
-    /** If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false. */
+    /**
+     * If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
+     */
     private Boolean shouldCaptureMinorVersion;
     /**
      * Instantiates a new DocumentSetVersion and sets the default values.

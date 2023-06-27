@@ -8,51 +8,97 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Name of the capture device driver used by the media endpoint. */
+    /**
+     * Name of the capture device driver used by the media endpoint.
+     */
     private String captureDeviceDriver;
-    /** Name of the capture device used by the media endpoint. */
+    /**
+     * Name of the capture device used by the media endpoint.
+     */
     private String captureDeviceName;
-    /** Fraction of the call that the media endpoint detected the capture device was not working properly. */
+    /**
+     * Fraction of the call that the media endpoint detected the capture device was not working properly.
+     */
     private Float captureNotFunctioningEventRatio;
-    /** Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received. */
+    /**
+     * Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
+     */
     private Float cpuInsufficentEventRatio;
-    /** Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent. */
+    /**
+     * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
+     */
     private Float deviceClippingEventRatio;
-    /** Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received. */
+    /**
+     * Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
+     */
     private Float deviceGlitchEventRatio;
-    /** Number of times during the call that the media endpoint detected howling or screeching audio. */
+    /**
+     * Number of times during the call that the media endpoint detected howling or screeching audio.
+     */
     private Integer howlingEventCount;
-    /** The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call. */
+    /**
+     * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
+     */
     private Float initialSignalLevelRootMeanSquare;
-    /** Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent. */
+    /**
+     * Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
+     */
     private Float lowSpeechLevelEventRatio;
-    /** Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent. */
+    /**
+     * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
+     */
     private Float lowSpeechToNoiseEventRatio;
-    /** Glitches per 5 minute interval for the media endpoint's microphone. */
+    /**
+     * Glitches per 5 minute interval for the media endpoint's microphone.
+     */
     private Float micGlitchRate;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint. */
+    /**
+     * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+     */
     private Integer receivedNoiseLevel;
-    /** Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint. */
+    /**
+     * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+     */
     private Integer receivedSignalLevel;
-    /** Name of the render device driver used by the media endpoint. */
+    /**
+     * Name of the render device driver used by the media endpoint.
+     */
     private String renderDeviceDriver;
-    /** Name of the render device used by the media endpoint. */
+    /**
+     * Name of the render device used by the media endpoint.
+     */
     private String renderDeviceName;
-    /** Fraction of the call that media endpoint detected device render is muted. */
+    /**
+     * Fraction of the call that media endpoint detected device render is muted.
+     */
     private Float renderMuteEventRatio;
-    /** Fraction of the call that the media endpoint detected the render device was not working properly. */
+    /**
+     * Fraction of the call that the media endpoint detected the render device was not working properly.
+     */
     private Float renderNotFunctioningEventRatio;
-    /** Fraction of the call that media endpoint detected device render volume is set to 0. */
+    /**
+     * Fraction of the call that media endpoint detected device render volume is set to 0.
+     */
     private Float renderZeroVolumeEventRatio;
-    /** Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint. */
+    /**
+     * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+     */
     private Integer sentNoiseLevel;
-    /** Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint. */
+    /**
+     * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+     */
     private Integer sentSignalLevel;
-    /** Glitches per 5 minute internal for the media endpoint's loudspeaker. */
+    /**
+     * Glitches per 5 minute internal for the media endpoint's loudspeaker.
+     */
     private Float speakerGlitchRate;
     /**
      * Instantiates a new deviceInfo and sets the default values.

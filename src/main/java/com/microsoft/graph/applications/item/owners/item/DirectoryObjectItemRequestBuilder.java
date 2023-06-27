@@ -13,27 +13,37 @@ import java.util.Objects;
  * Builds and executes requests for operations under /applications/{application-id}/owners/{directoryObject-id}
  */
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
-    /** Casts the previous resource to appRoleAssignment. */
+    /**
+     * Casts the previous resource to appRoleAssignment.
+     */
     @javax.annotation.Nonnull
     public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
         return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to endpoint. */
+    /**
+     * Casts the previous resource to endpoint.
+     */
     @javax.annotation.Nonnull
     public GraphEndpointRequestBuilder graphEndpoint() {
         return new GraphEndpointRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to servicePrincipal. */
+    /**
+     * Casts the previous resource to servicePrincipal.
+     */
     @javax.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
         return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to user. */
+    /**
+     * Casts the previous resource to user.
+     */
     @javax.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
         return new GraphUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of application entities. */
+    /**
+     * Provides operations to manage the collection of application entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

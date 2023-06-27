@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ActivitySettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies configurations to identify an externalItem based on a shared URL. */
+    /**
+     * Specifies configurations to identify an externalItem based on a shared URL.
+     */
     private java.util.List<UrlToItemResolverBase> urlToItemResolvers;
     /**
      * Instantiates a new activitySettings and sets the default values.

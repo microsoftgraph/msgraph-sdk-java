@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BaseItemVersion extends Entity implements Parsable {
-    /** Identity of the user which last modified the version. Read-only. */
+    /**
+     * Identity of the user which last modified the version. Read-only.
+     */
     private IdentitySet lastModifiedBy;
-    /** Date and time the version was last modified. Read-only. */
+    /**
+     * Date and time the version was last modified. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Indicates the publication status of this particular version. Read-only. */
+    /**
+     * Indicates the publication status of this particular version. Read-only.
+     */
     private PublicationFacet publication;
     /**
      * Instantiates a new baseItemVersion and sets the default values.

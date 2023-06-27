@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintJobStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A human-readable description of the print job's current processing state. Read-only. */
+    /**
+     * A human-readable description of the print job's current processing state. Read-only.
+     */
     private String description;
-    /** Additional details for print job state. Valid values are described in the following table. Read-only. */
+    /**
+     * Additional details for print job state. Valid values are described in the following table. Read-only.
+     */
     private java.util.List<PrintJobStateDetail> details;
-    /** True if the job was acknowledged by a printer; false otherwise. Read-only. */
+    /**
+     * True if the job was acknowledged by a printer; false otherwise. Read-only.
+     */
     private Boolean isAcquiredByPrinter;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The state property */
+    /**
+     * The state property
+     */
     private PrintJobProcessingState state;
     /**
      * Instantiates a new PrintJobStatus and sets the default values.

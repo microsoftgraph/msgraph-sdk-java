@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmployeeOrgData implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The cost center associated with the user. Returned only on $select. Supports $filter. */
+    /**
+     * The cost center associated with the user. Returned only on $select. Supports $filter.
+     */
     private String costCenter;
-    /** The name of the division in which the user works. Returned only on $select. Supports $filter. */
+    /**
+     * The name of the division in which the user works. Returned only on $select. Supports $filter.
+     */
     private String division;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new employeeOrgData and sets the default values.

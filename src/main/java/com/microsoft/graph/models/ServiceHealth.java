@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceHealth extends Entity implements Parsable {
-    /** A collection of issues that happened on the service, with detailed information for each issue. */
+    /**
+     * A collection of issues that happened on the service, with detailed information for each issue.
+     */
     private java.util.List<ServiceHealthIssue> issues;
-    /** The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant. */
+    /**
+     * The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
+     */
     private String service;
-    /** The status property */
+    /**
+     * The status property
+     */
     private ServiceHealthStatus status;
     /**
      * Instantiates a new serviceHealth and sets the default values.

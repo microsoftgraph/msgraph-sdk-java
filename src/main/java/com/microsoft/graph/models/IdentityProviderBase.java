@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityProviderBase extends Entity implements Parsable {
-    /** The display name of the identity provider. */
+    /**
+     * The display name of the identity provider.
+     */
     private String displayName;
     /**
      * Instantiates a new identityProviderBase and sets the default values.

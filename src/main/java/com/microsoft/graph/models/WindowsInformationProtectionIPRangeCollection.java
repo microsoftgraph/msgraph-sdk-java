@@ -11,13 +11,21 @@ import java.util.Objects;
  * Windows Information Protection IP Range Collection
  */
 public class WindowsInformationProtectionIPRangeCollection implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Display name */
+    /**
+     * Display name
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Collection of ip ranges */
+    /**
+     * Collection of ip ranges
+     */
     private java.util.List<IpRange> ranges;
     /**
      * Instantiates a new windowsInformationProtectionIPRangeCollection and sets the default values.

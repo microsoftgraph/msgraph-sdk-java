@@ -4,35 +4,70 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. */
+    /**
+     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.
+     */
     private java.util.List<AccessReviewApplyAction> applyActions;
-    /** Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond. */
+    /**
+     * Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond.
+     */
     private Boolean autoApplyDecisionsEnabled;
-    /** Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false). */
+    /**
+     * Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false).
+     */
     private Boolean decisionHistoriesForReviewersEnabled;
-    /** Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation. */
+    /**
+     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
+     */
     private String defaultDecision;
-    /** Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond. */
+    /**
+     * Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.  CAUTION: If both autoApplyDecisionsEnabled and defaultDecisionEnabled are true, all access for the principals to the resource risks being revoked if the reviewers fail to respond.
+     */
     private Boolean defaultDecisionEnabled;
-    /** Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property. */
+    /**
+     * Duration of an access review instance in days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
+     */
     private Integer instanceDurationInDays;
-    /** Indicates whether reviewers are required to provide justification with their decision. Default value is false. */
+    /**
+     * Indicates whether reviewers are required to provide justification with their decision. Default value is false.
+     */
     private Boolean justificationRequiredOnApproval;
-    /** Indicates whether emails are enabled or disabled. Default value is false. */
+    /**
+     * Indicates whether emails are enabled or disabled. Default value is false.
+     */
     private Boolean mailNotificationsEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property. */
+    /**
+     * The recommendationInsightSettings property
+     */
+    private java.util.List<AccessReviewRecommendationInsightSetting> recommendationInsightSettings;
+    /**
+     * The recommendationLookBackDuration property
+     */
+    private Period recommendationLookBackDuration;
+    /**
+     * Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.
+     */
     private Boolean recommendationsEnabled;
-    /** Detailed settings for recurrence using the standard Outlook recurrence object. Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts. */
+    /**
+     * Detailed settings for recurrence using the standard Outlook recurrence object. Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
+     */
     private PatternedRecurrence recurrence;
-    /** Indicates whether reminders are enabled or disabled. Default value is false. */
+    /**
+     * Indicates whether reminders are enabled or disabled. Default value is false.
+     */
     private Boolean reminderNotificationsEnabled;
     /**
      * Instantiates a new accessReviewScheduleSettings and sets the default values.
@@ -106,7 +141,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("applyActions", (n) -> { this.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
         deserializerMap.put("autoApplyDecisionsEnabled", (n) -> { this.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
         deserializerMap.put("decisionHistoriesForReviewersEnabled", (n) -> { this.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
@@ -116,6 +151,8 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         deserializerMap.put("justificationRequiredOnApproval", (n) -> { this.setJustificationRequiredOnApproval(n.getBooleanValue()); });
         deserializerMap.put("mailNotificationsEnabled", (n) -> { this.setMailNotificationsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendationInsightSettings", (n) -> { this.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodValue()); });
         deserializerMap.put("recommendationsEnabled", (n) -> { this.setRecommendationsEnabled(n.getBooleanValue()); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("reminderNotificationsEnabled", (n) -> { this.setReminderNotificationsEnabled(n.getBooleanValue()); });
@@ -152,6 +189,22 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
+    }
+    /**
+     * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * @return a accessReviewRecommendationInsightSetting
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessReviewRecommendationInsightSetting> getRecommendationInsightSettings() {
+        return this.recommendationInsightSettings;
+    }
+    /**
+     * Gets the recommendationLookBackDuration property value. The recommendationLookBackDuration property
+     * @return a Period
+     */
+    @javax.annotation.Nullable
+    public Period getRecommendationLookBackDuration() {
+        return this.recommendationLookBackDuration;
     }
     /**
      * Gets the recommendationsEnabled property value. Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.
@@ -194,6 +247,8 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         writer.writeBooleanValue("justificationRequiredOnApproval", this.getJustificationRequiredOnApproval());
         writer.writeBooleanValue("mailNotificationsEnabled", this.getMailNotificationsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("recommendationInsightSettings", this.getRecommendationInsightSettings());
+        writer.writePeriodValue("recommendationLookBackDuration", this.getRecommendationLookBackDuration());
         writer.writeBooleanValue("recommendationsEnabled", this.getRecommendationsEnabled());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeBooleanValue("reminderNotificationsEnabled", this.getReminderNotificationsEnabled());
@@ -288,6 +343,24 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this.odataType = value;
+    }
+    /**
+     * Sets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * @param value Value to set for the recommendationInsightSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRecommendationInsightSettings(@javax.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
+        this.recommendationInsightSettings = value;
+    }
+    /**
+     * Sets the recommendationLookBackDuration property value. The recommendationLookBackDuration property
+     * @param value Value to set for the recommendationLookBackDuration property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
+        this.recommendationLookBackDuration = value;
     }
     /**
      * Sets the recommendationsEnabled property value. Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.

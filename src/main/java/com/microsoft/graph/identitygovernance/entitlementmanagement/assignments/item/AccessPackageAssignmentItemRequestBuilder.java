@@ -24,22 +24,30 @@ import java.util.Objects;
  * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
  */
 public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignment entity. */
+    /**
+     * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignment entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageRequestBuilder accessPackage() {
         return new AccessPackageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignmentPolicy property of the microsoft.graph.accessPackageAssignment entity. */
+    /**
+     * Provides operations to manage the assignmentPolicy property of the microsoft.graph.accessPackageAssignment entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentPolicyRequestBuilder assignmentPolicy() {
         return new AssignmentPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reprocess method. */
+    /**
+     * Provides operations to call the reprocess method.
+     */
     @javax.annotation.Nonnull
     public ReprocessRequestBuilder reprocess() {
         return new ReprocessRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the target property of the microsoft.graph.accessPackageAssignment entity. */
+    /**
+     * Provides operations to manage the target property of the microsoft.graph.accessPackageAssignment entity.
+     */
     @javax.annotation.Nonnull
     public TargetRequestBuilder target() {
         return new TargetRequestBuilder(pathParameters, requestAdapter);
@@ -277,11 +285,15 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -290,7 +302,9 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

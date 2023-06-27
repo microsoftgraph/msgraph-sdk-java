@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all. */
+    /**
+     * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
+     */
     private ExternalAudienceScope externalAudience;
-    /** The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled. */
+    /**
+     * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
+     */
     private String externalReplyMessage;
-    /** The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled. */
+    /**
+     * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
+     */
     private String internalReplyMessage;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The date and time that automatic replies are set to end, if Status is set to Scheduled. */
+    /**
+     * The date and time that automatic replies are set to end, if Status is set to Scheduled.
+     */
     private DateTimeTimeZone scheduledEndDateTime;
-    /** The date and time that automatic replies are set to begin, if Status is set to Scheduled. */
+    /**
+     * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
+     */
     private DateTimeTimeZone scheduledStartDateTime;
-    /** Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled. */
+    /**
+     * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
+     */
     private AutomaticRepliesStatus status;
     /**
      * Instantiates a new automaticRepliesSetting and sets the default values.

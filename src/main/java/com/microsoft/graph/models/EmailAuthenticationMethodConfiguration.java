@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who did not use public preview will automatically have email OTP enabled beginning in October 2021. */
+    /**
+     * Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who did not use public preview will automatically have email OTP enabled beginning in October 2021.
+     */
     private ExternalEmailOtpState allowExternalIdToUseEmailOtp;
-    /** A collection of groups that are enabled to use the authentication method. */
+    /**
+     * A collection of groups that are enabled to use the authentication method.
+     */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new EmailAuthenticationMethodConfiguration and sets the default values.

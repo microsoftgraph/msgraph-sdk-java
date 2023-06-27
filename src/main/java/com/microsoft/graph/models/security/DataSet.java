@@ -10,11 +10,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DataSet extends Entity implements Parsable {
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private IdentitySet createdBy;
-    /** The createdDateTime property */
+    /**
+     * The createdDateTime property
+     */
     private OffsetDateTime createdDateTime;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
     /**
      * Instantiates a new dataSet and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Todo extends Entity implements Parsable {
-    /** The task lists in the users mailbox. */
+    /**
+     * The task lists in the users mailbox.
+     */
     private java.util.List<TodoTaskList> lists;
     /**
      * Instantiates a new todo and sets the default values.

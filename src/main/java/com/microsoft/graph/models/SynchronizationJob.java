@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationJob extends Entity implements Parsable {
-    /** The schedule property */
+    /**
+     * The schedule property
+     */
     private SynchronizationSchedule schedule;
-    /** The schema property */
+    /**
+     * The schema property
+     */
     private SynchronizationSchema schema;
-    /** The status property */
+    /**
+     * The status property
+     */
     private SynchronizationStatus status;
-    /** The synchronizationJobSettings property */
+    /**
+     * The synchronizationJobSettings property
+     */
     private java.util.List<KeyValuePair> synchronizationJobSettings;
-    /** The templateId property */
+    /**
+     * The templateId property
+     */
     private String templateId;
     /**
      * Instantiates a new synchronizationJob and sets the default values.

@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItemUploadableProperties implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Provides a user-visible description of the item. Read-write. Only on OneDrive Personal. */
+    /**
+     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
+     */
     private String description;
-    /** Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal. */
+    /**
+     * Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+     */
     private Long fileSize;
-    /** File system information on client. Read-write. */
+    /**
+     * File system information on client. Read-write.
+     */
     private FileSystemInfo fileSystemInfo;
-    /** The name of the item (filename and extension). Read-write. */
+    /**
+     * The name of the item (filename and extension). Read-write.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new driveItemUploadableProperties and sets the default values.

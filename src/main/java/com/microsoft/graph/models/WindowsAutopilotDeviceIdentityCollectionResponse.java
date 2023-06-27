@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsAutopilotDeviceIdentityCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<WindowsAutopilotDeviceIdentity> value;
     /**
      * Instantiates a new WindowsAutopilotDeviceIdentityCollectionResponse and sets the default values.

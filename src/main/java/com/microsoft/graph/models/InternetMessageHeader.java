@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InternetMessageHeader implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Represents the key in a key-value pair. */
+    /**
+     * Represents the key in a key-value pair.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The value in a key-value pair. */
+    /**
+     * The value in a key-value pair.
+     */
     private String value;
     /**
      * Instantiates a new internetMessageHeader and sets the default values.

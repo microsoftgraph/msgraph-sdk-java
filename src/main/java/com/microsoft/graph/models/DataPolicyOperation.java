@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DataPolicyOperation extends Entity implements Parsable {
-    /** Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes. */
+    /**
+     * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
+     */
     private OffsetDateTime completedDateTime;
-    /** Specifies the progress of an operation. */
+    /**
+     * Specifies the progress of an operation.
+     */
     private Double progress;
-    /** Possible values are: notStarted, running, complete, failed, unknownFutureValue. */
+    /**
+     * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
+     */
     private DataPolicyOperationStatus status;
-    /** The URL location to where data is being exported for export requests. */
+    /**
+     * The URL location to where data is being exported for export requests.
+     */
     private String storageLocation;
-    /** Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime submittedDateTime;
-    /** The id for the user on whom the operation is performed. */
+    /**
+     * The id for the user on whom the operation is performed.
+     */
     private String userId;
     /**
      * Instantiates a new dataPolicyOperation and sets the default values.

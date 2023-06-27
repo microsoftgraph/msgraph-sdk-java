@@ -11,15 +11,25 @@ import java.util.Objects;
  * A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal.
  */
 public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable {
-    /** DateTime when the terms were last accepted by the user. */
+    /**
+     * DateTime when the terms were last accepted by the user.
+     */
     private OffsetDateTime acceptedDateTime;
-    /** Most recent version number of the T&C accepted by the user. */
+    /**
+     * Most recent version number of the T&C accepted by the user.
+     */
     private Integer acceptedVersion;
-    /** Navigation link to the terms and conditions that are assigned. */
+    /**
+     * Navigation link to the terms and conditions that are assigned.
+     */
     private TermsAndConditions termsAndConditions;
-    /** Display name of the user whose acceptance the entity represents. */
+    /**
+     * Display name of the user whose acceptance the entity represents.
+     */
     private String userDisplayName;
-    /** The userPrincipalName of the User that accepted the term. */
+    /**
+     * The userPrincipalName of the User that accepted the term.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new termsAndConditionsAcceptanceStatus and sets the default values.

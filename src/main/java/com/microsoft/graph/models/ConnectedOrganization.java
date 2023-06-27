@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConnectedOrganization extends Entity implements Parsable {
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The description of the connected organization. */
+    /**
+     * The description of the connected organization.
+     */
     private String description;
-    /** The display name of the connected organization. Supports $filter (eq). */
+    /**
+     * The display name of the connected organization. Supports $filter (eq).
+     */
     private String displayName;
-    /** The externalSponsors property */
+    /**
+     * The externalSponsors property
+     */
     private java.util.List<DirectoryObject> externalSponsors;
-    /** The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable. */
+    /**
+     * The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
+     */
     private java.util.List<IdentitySource> identitySources;
-    /** The internalSponsors property */
+    /**
+     * The internalSponsors property
+     */
     private java.util.List<DirectoryObject> internalSponsors;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime modifiedDateTime;
-    /** The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue. */
+    /**
+     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
+     */
     private ConnectedOrganizationState state;
     /**
      * Instantiates a new connectedOrganization and sets the default values.

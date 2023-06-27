@@ -10,7 +10,9 @@ import java.util.Objects;
  * Enrollment Configuration Assignment
  */
 public class EnrollmentConfigurationAssignment extends Entity implements Parsable {
-    /** Represents an assignment to managed devices in the tenant */
+    /**
+     * Represents an assignment to managed devices in the tenant
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new enrollmentConfigurationAssignment and sets the default values.

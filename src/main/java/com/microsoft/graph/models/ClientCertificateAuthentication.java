@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
-    /** The list of certificates uploaded for this API connector. */
+    /**
+     * The list of certificates uploaded for this API connector.
+     */
     private java.util.List<Pkcs12CertificateInformation> certificateList;
     /**
      * Instantiates a new ClientCertificateAuthentication and sets the default values.

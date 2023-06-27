@@ -11,14 +11,20 @@ import java.util.Objects;
  * User group targeting for Compliance Management Partner
  */
 public class ComplianceManagementPartnerAssignment implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Group assignment target. */
+    /**
+     * Group assignment target.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new ComplianceManagementPartnerAssignment and sets the default values.
+     * Instantiates a new complianceManagementPartnerAssignment and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -28,7 +34,7 @@ public class ComplianceManagementPartnerAssignment implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComplianceManagementPartnerAssignment
+     * @return a complianceManagementPartnerAssignment
      */
     @javax.annotation.Nonnull
     public static ComplianceManagementPartnerAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

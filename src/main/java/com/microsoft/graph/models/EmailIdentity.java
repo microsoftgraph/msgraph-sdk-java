@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailIdentity extends Identity implements Parsable {
-    /** Email address of the user. */
+    /**
+     * Email address of the user.
+     */
     private String email;
     /**
      * Instantiates a new EmailIdentity and sets the default values.

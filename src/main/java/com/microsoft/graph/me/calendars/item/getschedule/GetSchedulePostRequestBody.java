@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The AvailabilityViewInterval property */
+    /**
+     * The AvailabilityViewInterval property
+     */
     private Integer availabilityViewInterval;
-    /** The EndTime property */
+    /**
+     * The EndTime property
+     */
     private DateTimeTimeZone endTime;
-    /** The Schedules property */
+    /**
+     * The Schedules property
+     */
     private java.util.List<String> schedules;
-    /** The StartTime property */
+    /**
+     * The StartTime property
+     */
     private DateTimeTimeZone startTime;
     /**
      * Instantiates a new getSchedulePostRequestBody and sets the default values.

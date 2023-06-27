@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExtensionPropertyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ExtensionProperty> value;
     /**
      * Instantiates a new ExtensionPropertyCollectionResponse and sets the default values.

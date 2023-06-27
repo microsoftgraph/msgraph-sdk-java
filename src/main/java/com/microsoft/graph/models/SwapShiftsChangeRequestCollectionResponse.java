@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SwapShiftsChangeRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<SwapShiftsChangeRequest> value;
     /**
      * Instantiates a new SwapShiftsChangeRequestCollectionResponse and sets the default values.

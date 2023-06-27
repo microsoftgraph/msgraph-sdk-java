@@ -32,62 +32,86 @@ import java.util.Objects;
  * Provides operations to manage the messages property of the microsoft.graph.user entity.
  */
 public class MessageItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the attachments property of the microsoft.graph.message entity. */
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.message entity.
+     */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the user entity. */
+    /**
+     * Provides operations to manage the media for the user entity.
+     */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the copy method. */
+    /**
+     * Provides operations to call the copy method.
+     */
     @javax.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the createForward method. */
+    /**
+     * Provides operations to call the createForward method.
+     */
     @javax.annotation.Nonnull
     public CreateForwardRequestBuilder createForward() {
         return new CreateForwardRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the createReply method. */
+    /**
+     * Provides operations to call the createReply method.
+     */
     @javax.annotation.Nonnull
     public CreateReplyRequestBuilder createReply() {
         return new CreateReplyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the createReplyAll method. */
+    /**
+     * Provides operations to call the createReplyAll method.
+     */
     @javax.annotation.Nonnull
     public CreateReplyAllRequestBuilder createReplyAll() {
         return new CreateReplyAllRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the extensions property of the microsoft.graph.message entity. */
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.message entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the forward method. */
+    /**
+     * Provides operations to call the forward method.
+     */
     @javax.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the move method. */
+    /**
+     * Provides operations to call the move method.
+     */
     @javax.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reply method. */
+    /**
+     * Provides operations to call the reply method.
+     */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the replyAll method. */
+    /**
+     * Provides operations to call the replyAll method.
+     */
     @javax.annotation.Nonnull
     public ReplyAllRequestBuilder replyAll() {
         return new ReplyAllRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the send method. */
+    /**
+     * Provides operations to call the send method.
+     */
     @javax.annotation.Nonnull
     public SendRequestBuilder send() {
         return new SendRequestBuilder(pathParameters, requestAdapter);
@@ -113,9 +137,9 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/me/messages/{message%2Did}{?includeHiddenMessages*,%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete eventMessage.
+     * Delete a message in the specified user's mailbox, or delete a relationship of the message.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/message-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -132,10 +156,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete eventMessage.
+     * Delete a message in the specified user's mailbox, or delete a relationship of the message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/message-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -154,7 +178,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The messages in a mailbox or folder. Read-only. Nullable.
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/singlevaluelegacyextendedproperty-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> get() {
@@ -174,7 +198,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * The messages in a mailbox or folder. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/singlevaluelegacyextendedproperty-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/opentypeextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -191,10 +215,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of an eventMessage object.
+     * Update the properties of a message object.
      * @param body The request body
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/message-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> patch(@javax.annotation.Nonnull final Message body) {
@@ -211,11 +235,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of an eventMessage object.
+     * Update the properties of a message object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/message-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> patch(@javax.annotation.Nonnull final Message body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -233,7 +257,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete eventMessage.
+     * Delete a message in the specified user's mailbox, or delete a relationship of the message.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -241,7 +265,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete eventMessage.
+     * Delete a message in the specified user's mailbox, or delete a relationship of the message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -289,7 +313,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an eventMessage object.
+     * Update the properties of a message object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -298,7 +322,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an eventMessage object.
+     * Update the properties of a message object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -329,14 +353,20 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Include Hidden Messages */
+        /**
+         * Include Hidden Messages
+         */
         @javax.annotation.Nullable
         public String includeHiddenMessages;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -345,7 +375,9 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

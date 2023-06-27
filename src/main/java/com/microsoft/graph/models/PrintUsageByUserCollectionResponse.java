@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintUsageByUserCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PrintUsageByUser> value;
     /**
      * Instantiates a new PrintUsageByUserCollectionResponse and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AadUserConversationMemberResult extends ActionResultPart implements Parsable {
-    /** The userId property */
+    /**
+     * The userId property
+     */
     private String userId;
     /**
      * Instantiates a new AadUserConversationMemberResult and sets the default values.

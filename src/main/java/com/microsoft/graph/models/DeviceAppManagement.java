@@ -8,41 +8,77 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceAppManagement extends Entity implements Parsable {
-    /** Android managed app policies. */
+    /**
+     * Android managed app policies.
+     */
     private java.util.List<AndroidManagedAppProtection> androidManagedAppProtections;
-    /** Default managed app policies. */
+    /**
+     * Default managed app policies.
+     */
     private java.util.List<DefaultManagedAppProtection> defaultManagedAppProtections;
-    /** iOS managed app policies. */
+    /**
+     * iOS managed app policies.
+     */
     private java.util.List<IosManagedAppProtection> iosManagedAppProtections;
-    /** Whether the account is enabled for syncing applications from the Microsoft Store for Business. */
+    /**
+     * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
+     */
     private Boolean isEnabledForMicrosoftStoreForBusiness;
-    /** Managed app policies. */
+    /**
+     * Managed app policies.
+     */
     private java.util.List<ManagedAppPolicy> managedAppPolicies;
-    /** The managed app registrations. */
+    /**
+     * The managed app registrations.
+     */
     private java.util.List<ManagedAppRegistration> managedAppRegistrations;
-    /** The managed app statuses. */
+    /**
+     * The managed app statuses.
+     */
     private java.util.List<ManagedAppStatus> managedAppStatuses;
-    /** The Managed eBook. */
+    /**
+     * The Managed eBook.
+     */
     private java.util.List<ManagedEBook> managedEBooks;
-    /** Windows information protection for apps running on devices which are MDM enrolled. */
+    /**
+     * Windows information protection for apps running on devices which are MDM enrolled.
+     */
     private java.util.List<MdmWindowsInformationProtectionPolicy> mdmWindowsInformationProtectionPolicies;
-    /** The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture. */
+    /**
+     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     */
     private String microsoftStoreForBusinessLanguage;
-    /** The last time an application sync from the Microsoft Store for Business was completed. */
+    /**
+     * The last time an application sync from the Microsoft Store for Business was completed.
+     */
     private OffsetDateTime microsoftStoreForBusinessLastCompletedApplicationSyncTime;
-    /** The last time the apps from the Microsoft Store for Business were synced successfully for the account. */
+    /**
+     * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
+     */
     private OffsetDateTime microsoftStoreForBusinessLastSuccessfulSyncDateTime;
-    /** The mobile app categories. */
+    /**
+     * The mobile app categories.
+     */
     private java.util.List<MobileAppCategory> mobileAppCategories;
-    /** The Managed Device Mobile Application Configurations. */
+    /**
+     * The Managed Device Mobile Application Configurations.
+     */
     private java.util.List<ManagedDeviceMobileAppConfiguration> mobileAppConfigurations;
-    /** The mobile apps. */
+    /**
+     * The mobile apps.
+     */
     private java.util.List<MobileApp> mobileApps;
-    /** Targeted managed app configurations. */
+    /**
+     * Targeted managed app configurations.
+     */
     private java.util.List<TargetedManagedAppConfiguration> targetedManagedAppConfigurations;
-    /** List of Vpp tokens for this organization. */
+    /**
+     * List of Vpp tokens for this organization.
+     */
     private java.util.List<VppToken> vppTokens;
-    /** Windows information protection for apps running on devices which are not MDM enrolled. */
+    /**
+     * Windows information protection for apps running on devices which are not MDM enrolled.
+     */
     private java.util.List<WindowsInformationProtectionPolicy> windowsInformationProtectionPolicies;
     /**
      * Instantiates a new DeviceAppManagement and sets the default values.

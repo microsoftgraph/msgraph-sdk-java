@@ -10,17 +10,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RetentionEventType extends Entity implements Parsable {
-    /** The user who created the retentionEventType. */
+    /**
+     * The user who created the retentionEventType.
+     */
     private IdentitySet createdBy;
-    /** The date time when the retentionEventType was created. */
+    /**
+     * The date time when the retentionEventType was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Optional information about the event type. */
+    /**
+     * Optional information about the event type.
+     */
     private String description;
-    /** Name of the event type. */
+    /**
+     * Name of the event type.
+     */
     private String displayName;
-    /** The user who last modified the retentionEventType. */
+    /**
+     * The user who last modified the retentionEventType.
+     */
     private IdentitySet lastModifiedBy;
-    /** The latest date time when the retentionEventType was modified. */
+    /**
+     * The latest date time when the retentionEventType was modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new retentionEventType and sets the default values.

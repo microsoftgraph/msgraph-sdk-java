@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class HlookupPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The lookupValue property */
+    /**
+     * The lookupValue property
+     */
     private Json lookupValue;
-    /** The rangeLookup property */
+    /**
+     * The rangeLookup property
+     */
     private Json rangeLookup;
-    /** The rowIndexNum property */
+    /**
+     * The rowIndexNum property
+     */
     private Json rowIndexNum;
-    /** The tableArray property */
+    /**
+     * The tableArray property
+     */
     private Json tableArray;
     /**
      * Instantiates a new hlookupPostRequestBody and sets the default values.

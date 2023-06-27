@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttachmentInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The type of the attachment. The possible values are: file, item, reference. Required. */
+    /**
+     * The type of the attachment. The possible values are: file, item, reference. Required.
+     */
     private AttachmentType attachmentType;
-    /** The nature of the data in the attachment. Optional. */
+    /**
+     * The nature of the data in the attachment. Optional.
+     */
     private String contentType;
-    /** The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required. */
+    /**
+     * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The length of the attachment in bytes. Required. */
+    /**
+     * The length of the attachment in bytes. Required.
+     */
     private Long size;
     /**
      * Instantiates a new AttachmentInfo and sets the default values.

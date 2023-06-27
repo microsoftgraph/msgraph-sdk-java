@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RetentionEventTypeCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<RetentionEventType> value;
     /**
      * Instantiates a new RetentionEventTypeCollectionResponse and sets the default values.

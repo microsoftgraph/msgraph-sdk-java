@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Image implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Optional. Height of the image, in pixels. Read-only. */
+    /**
+     * Optional. Height of the image, in pixels. Read-only.
+     */
     private Integer height;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Optional. Width of the image, in pixels. Read-only. */
+    /**
+     * Optional. Width of the image, in pixels. Read-only.
+     */
     private Integer width;
     /**
      * Instantiates a new image and sets the default values.

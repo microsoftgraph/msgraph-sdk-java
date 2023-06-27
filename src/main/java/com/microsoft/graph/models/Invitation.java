@@ -7,28 +7,48 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Invitation extends Entity implements Parsable {
-    /** The user created as part of the invitation creation. Read-Only */
+    /**
+     * The user created as part of the invitation creation. Read-Only
+     */
     private User invitedUser;
-    /** The display name of the user being invited. */
+    /**
+     * The display name of the user being invited.
+     */
     private String invitedUserDisplayName;
-    /** The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name. */
+    /**
+     * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+     */
     private String invitedUserEmailAddress;
-    /** Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list. */
+    /**
+     * Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
+     */
     private InvitedUserMessageInfo invitedUserMessageInfo;
-    /** The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator. */
+    /**
+     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
+     */
     private String invitedUserType;
-    /** The URL the user can use to redeem their invitation. Read-only. */
+    /**
+     * The URL the user can use to redeem their invitation. Read-only.
+     */
     private String inviteRedeemUrl;
-    /** The URL the user should be redirected to once the invitation is redeemed. Required. */
+    /**
+     * The URL the user should be redirected to once the invitation is redeemed. Required.
+     */
     private String inviteRedirectUrl;
-    /** Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user. */
+    /**
+     * Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
+     */
     private Boolean resetRedemption;
-    /** Indicates whether an email should be sent to the user being invited. The default is false. */
+    /**
+     * Indicates whether an email should be sent to the user being invited. The default is false.
+     */
     private Boolean sendInvitationMessage;
-    /** The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error. */
+    /**
+     * The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
+     */
     private String status;
     /**
-     * Instantiates a new invitation and sets the default values.
+     * Instantiates a new Invitation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -38,7 +58,7 @@ public class Invitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitation
+     * @return a Invitation
      */
     @javax.annotation.Nonnull
     public static Invitation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

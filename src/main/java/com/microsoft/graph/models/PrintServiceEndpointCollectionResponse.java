@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintServiceEndpointCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PrintServiceEndpoint> value;
     /**
      * Instantiates a new PrintServiceEndpointCollectionResponse and sets the default values.

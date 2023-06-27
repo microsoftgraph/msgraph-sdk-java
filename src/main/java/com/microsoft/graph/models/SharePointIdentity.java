@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharePointIdentity extends Identity implements Parsable {
-    /** The sign in name of the SharePoint identity. */
+    /**
+     * The sign in name of the SharePoint identity.
+     */
     private String loginName;
     /**
      * Instantiates a new SharePointIdentity and sets the default values.

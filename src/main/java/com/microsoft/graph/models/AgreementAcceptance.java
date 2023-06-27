@@ -8,31 +8,57 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AgreementAcceptance extends Entity implements Parsable {
-    /** The identifier of the agreement file accepted by the user. */
+    /**
+     * The identifier of the agreement file accepted by the user.
+     */
     private String agreementFileId;
-    /** The identifier of the agreement. */
+    /**
+     * The identifier of the agreement.
+     */
     private String agreementId;
-    /** The display name of the device used for accepting the agreement. */
+    /**
+     * The display name of the device used for accepting the agreement.
+     */
     private String deviceDisplayName;
-    /** The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values. */
+    /**
+     * The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
+     */
     private String deviceId;
-    /** The operating system used to accept the agreement. */
+    /**
+     * The operating system used to accept the agreement.
+     */
     private String deviceOSType;
-    /** The operating system version of the device used to accept the agreement. */
+    /**
+     * The operating system version of the device used to accept the agreement.
+     */
     private String deviceOSVersion;
-    /** The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values. */
+    /**
+     * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
+     */
     private OffsetDateTime expirationDateTime;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime recordedDateTime;
-    /** The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq). */
+    /**
+     * The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
+     */
     private AgreementAcceptanceState state;
-    /** Display name of the user when the acceptance was recorded. */
+    /**
+     * Display name of the user when the acceptance was recorded.
+     */
     private String userDisplayName;
-    /** Email of the user when the acceptance was recorded. */
+    /**
+     * Email of the user when the acceptance was recorded.
+     */
     private String userEmail;
-    /** The identifier of the user who accepted the agreement. Supports $filter (eq). */
+    /**
+     * The identifier of the user who accepted the agreement. Supports $filter (eq).
+     */
     private String userId;
-    /** UPN of the user when the acceptance was recorded. */
+    /**
+     * UPN of the user when the acceptance was recorded.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new agreementAcceptance and sets the default values.

@@ -10,19 +10,33 @@ import java.util.Objects;
  * Imported windows autopilot devices.
  */
 public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable {
-    /** UPN of the user the device will be assigned */
+    /**
+     * UPN of the user the device will be assigned
+     */
     private String assignedUserPrincipalName;
-    /** Group Tag of the Windows autopilot device. */
+    /**
+     * Group Tag of the Windows autopilot device.
+     */
     private String groupTag;
-    /** Hardware Blob of the Windows autopilot device. */
+    /**
+     * Hardware Blob of the Windows autopilot device.
+     */
     private byte[] hardwareIdentifier;
-    /** The Import Id of the Windows autopilot device. */
+    /**
+     * The Import Id of the Windows autopilot device.
+     */
     private String importId;
-    /** Product Key of the Windows autopilot device. */
+    /**
+     * Product Key of the Windows autopilot device.
+     */
     private String productKey;
-    /** Serial number of the Windows autopilot device. */
+    /**
+     * Serial number of the Windows autopilot device.
+     */
     private String serialNumber;
-    /** Current state of the imported device. */
+    /**
+     * Current state of the imported device.
+     */
     private ImportedWindowsAutopilotDeviceIdentityState state;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.

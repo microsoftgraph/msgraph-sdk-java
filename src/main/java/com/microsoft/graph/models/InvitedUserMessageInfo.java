@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported. */
+    /**
+     * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     */
     private java.util.List<Recipient> ccRecipients;
-    /** Customized message body you want to send if you don't want the default message. */
+    /**
+     * Customized message body you want to send if you don't want the default message.
+     */
     private String customizedMessageBody;
-    /** The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US. */
+    /**
+     * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
+     */
     private String messageLanguage;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new invitedUserMessageInfo and sets the default values.

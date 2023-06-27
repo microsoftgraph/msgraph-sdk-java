@@ -11,35 +11,65 @@ import java.util.Objects;
  * The ManagedAppEntity is the base entity type for all other entity types under app management workflow.
  */
 public class ManagedAppRegistration extends Entity implements Parsable {
-    /** The app package Identifier */
+    /**
+     * The app package Identifier
+     */
     private MobileAppIdentifier appIdentifier;
-    /** App version */
+    /**
+     * App version
+     */
     private String applicationVersion;
-    /** Zero or more policys already applied on the registered app when it last synchronized with managment service. */
+    /**
+     * Zero or more policys already applied on the registered app when it last synchronized with managment service.
+     */
     private java.util.List<ManagedAppPolicy> appliedPolicies;
-    /** Date and time of creation */
+    /**
+     * Date and time of creation
+     */
     private OffsetDateTime createdDateTime;
-    /** Host device name */
+    /**
+     * Host device name
+     */
     private String deviceName;
-    /** App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions. */
+    /**
+     * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
+     */
     private String deviceTag;
-    /** Host device type */
+    /**
+     * Host device type
+     */
     private String deviceType;
-    /** Zero or more reasons an app registration is flagged. E.g. app running on rooted device */
+    /**
+     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
+     */
     private java.util.List<ManagedAppFlaggedReason> flaggedReasons;
-    /** Zero or more policies admin intended for the app as of now. */
+    /**
+     * Zero or more policies admin intended for the app as of now.
+     */
     private java.util.List<ManagedAppPolicy> intendedPolicies;
-    /** Date and time of last the app synced with management service. */
+    /**
+     * Date and time of last the app synced with management service.
+     */
     private OffsetDateTime lastSyncDateTime;
-    /** App management SDK version */
+    /**
+     * App management SDK version
+     */
     private String managementSdkVersion;
-    /** Zero or more long running operations triggered on the app registration. */
+    /**
+     * Zero or more long running operations triggered on the app registration.
+     */
     private java.util.List<ManagedAppOperation> operations;
-    /** Operating System version */
+    /**
+     * Operating System version
+     */
     private String platformVersion;
-    /** The user Id to who this app registration belongs. */
+    /**
+     * The user Id to who this app registration belongs.
+     */
     private String userId;
-    /** Version of the entity. */
+    /**
+     * Version of the entity.
+     */
     private String version;
     /**
      * Instantiates a new managedAppRegistration and sets the default values.

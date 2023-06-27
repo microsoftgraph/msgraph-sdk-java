@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetActivitiesByIntervalResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ItemActivityStat> value;
     /**
      * Instantiates a new getActivitiesByIntervalResponse and sets the default values.

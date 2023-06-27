@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolicyRule implements Parsable {
-    /** The settings for approval of the role assignment. */
+    /**
+     * The settings for approval of the role assignment.
+     */
     private ApprovalSettings setting;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyApprovalRule and sets the default values.

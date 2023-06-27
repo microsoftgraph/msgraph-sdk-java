@@ -10,27 +10,49 @@ import java.util.Objects;
  * Device Compilance Policy Setting State summary across the account.
  */
 public class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable {
-    /** Number of compliant devices */
+    /**
+     * Number of compliant devices
+     */
     private Integer compliantDeviceCount;
-    /** Number of conflict devices */
+    /**
+     * Number of conflict devices
+     */
     private Integer conflictDeviceCount;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private java.util.List<DeviceComplianceSettingState> deviceComplianceSettingStates;
-    /** Number of error devices */
+    /**
+     * Number of error devices
+     */
     private Integer errorDeviceCount;
-    /** Number of NonCompliant devices */
+    /**
+     * Number of NonCompliant devices
+     */
     private Integer nonCompliantDeviceCount;
-    /** Number of not applicable devices */
+    /**
+     * Number of not applicable devices
+     */
     private Integer notApplicableDeviceCount;
-    /** Supported platform types for policies. */
+    /**
+     * Supported platform types for policies.
+     */
     private PolicyPlatformType platformType;
-    /** Number of remediated devices */
+    /**
+     * Number of remediated devices
+     */
     private Integer remediatedDeviceCount;
-    /** The setting class name and property name. */
+    /**
+     * The setting class name and property name.
+     */
     private String setting;
-    /** Name of the setting. */
+    /**
+     * Name of the setting.
+     */
     private String settingName;
-    /** Number of unknown devices */
+    /**
+     * Number of unknown devices
+     */
     private Integer unknownDeviceCount;
     /**
      * Instantiates a new deviceCompliancePolicySettingStateSummary and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceUpdateMessageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ServiceUpdateMessage> value;
     /**
      * Instantiates a new ServiceUpdateMessageCollectionResponse and sets the default values.

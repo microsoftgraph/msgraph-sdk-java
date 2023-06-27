@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values. */
+    /**
+     * The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
+     */
     private String target;
-    /** The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue. */
+    /**
+     * The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
+     */
     private CrossTenantAccessPolicyTargetType targetType;
     /**
      * Instantiates a new crossTenantAccessPolicyTarget and sets the default values.

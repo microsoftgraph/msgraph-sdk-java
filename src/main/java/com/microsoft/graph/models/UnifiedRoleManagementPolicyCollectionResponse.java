@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<UnifiedRoleManagementPolicy> value;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyCollectionResponse and sets the default values.

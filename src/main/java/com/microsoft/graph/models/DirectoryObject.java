@@ -8,10 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectoryObject extends Entity implements Parsable {
-    /** Date and time when this object was deleted. Always null when the object hasn't been deleted. */
+    /**
+     * Date and time when this object was deleted. Always null when the object hasn't been deleted.
+     */
     private OffsetDateTime deletedDateTime;
     /**
-     * Instantiates a new DirectoryObject and sets the default values.
+     * Instantiates a new directoryObject and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -21,7 +23,7 @@ public class DirectoryObject extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DirectoryObject
+     * @return a directoryObject
      */
     @javax.annotation.Nonnull
     public static DirectoryObject createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

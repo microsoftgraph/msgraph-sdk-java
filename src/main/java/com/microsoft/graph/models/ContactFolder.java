@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ContactFolder extends Entity implements Parsable {
-    /** The collection of child folders in the folder. Navigation property. Read-only. Nullable. */
+    /**
+     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     */
     private java.util.List<ContactFolder> childFolders;
-    /** The contacts in the folder. Navigation property. Read-only. Nullable. */
+    /**
+     * The contacts in the folder. Navigation property. Read-only. Nullable.
+     */
     private java.util.List<Contact> contacts;
-    /** The folder's display name. */
+    /**
+     * The folder's display name.
+     */
     private String displayName;
-    /** The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable. */
+    /**
+     * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
+     */
     private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /** The ID of the folder's parent folder. */
+    /**
+     * The ID of the folder's parent folder.
+     */
     private String parentFolderId;
-    /** The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable. */
+    /**
+     * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+     */
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /**
      * Instantiates a new contactFolder and sets the default values.

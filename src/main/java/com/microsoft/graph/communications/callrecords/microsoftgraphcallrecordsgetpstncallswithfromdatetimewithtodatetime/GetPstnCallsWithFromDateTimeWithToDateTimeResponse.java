@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetPstnCallsWithFromDateTimeWithToDateTimeResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PstnCallLogRow> value;
     /**
      * Instantiates a new getPstnCallsWithFromDateTimeWithToDateTimeResponse and sets the default values.

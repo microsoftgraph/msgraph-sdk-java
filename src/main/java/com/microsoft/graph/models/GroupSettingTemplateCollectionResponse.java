@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupSettingTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<GroupSettingTemplate> value;
     /**
      * Instantiates a new GroupSettingTemplateCollectionResponse and sets the default values.

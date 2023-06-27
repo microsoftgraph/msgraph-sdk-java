@@ -9,27 +9,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Photo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Camera manufacturer. Read-only. */
+    /**
+     * Camera manufacturer. Read-only.
+     */
     private String cameraMake;
-    /** Camera model. Read-only. */
+    /**
+     * Camera model. Read-only.
+     */
     private String cameraModel;
-    /** The denominator for the exposure time fraction from the camera. Read-only. */
+    /**
+     * The denominator for the exposure time fraction from the camera. Read-only.
+     */
     private Double exposureDenominator;
-    /** The numerator for the exposure time fraction from the camera. Read-only. */
+    /**
+     * The numerator for the exposure time fraction from the camera. Read-only.
+     */
     private Double exposureNumerator;
-    /** The F-stop value from the camera. Read-only. */
+    /**
+     * The F-stop value from the camera. Read-only.
+     */
     private Double fNumber;
-    /** The focal length from the camera. Read-only. */
+    /**
+     * The focal length from the camera. Read-only.
+     */
     private Double focalLength;
-    /** The ISO value from the camera. Read-only. */
+    /**
+     * The ISO value from the camera. Read-only.
+     */
     private Integer iso;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The orientation value from the camera. Writable on OneDrive Personal. */
+    /**
+     * The orientation value from the camera. Writable on OneDrive Personal.
+     */
     private Integer orientation;
-    /** Represents the date and time the photo was taken. Read-only. */
+    /**
+     * Represents the date and time the photo was taken. Read-only.
+     */
     private OffsetDateTime takenDateTime;
     /**
      * Instantiates a new photo and sets the default values.

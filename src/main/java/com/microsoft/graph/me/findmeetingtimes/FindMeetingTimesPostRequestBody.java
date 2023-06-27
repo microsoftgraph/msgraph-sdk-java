@@ -12,23 +12,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The attendees property */
+    /**
+     * The attendees property
+     */
     private java.util.List<AttendeeBase> attendees;
-    /** The isOrganizerOptional property */
+    /**
+     * The isOrganizerOptional property
+     */
     private Boolean isOrganizerOptional;
-    /** The locationConstraint property */
+    /**
+     * The locationConstraint property
+     */
     private LocationConstraint locationConstraint;
-    /** The maxCandidates property */
+    /**
+     * The maxCandidates property
+     */
     private Integer maxCandidates;
-    /** The meetingDuration property */
+    /**
+     * The meetingDuration property
+     */
     private Period meetingDuration;
-    /** The minimumAttendeePercentage property */
+    /**
+     * The minimumAttendeePercentage property
+     */
     private Double minimumAttendeePercentage;
-    /** The returnSuggestionReasons property */
+    /**
+     * The returnSuggestionReasons property
+     */
     private Boolean returnSuggestionReasons;
-    /** The timeConstraint property */
+    /**
+     * The timeConstraint property
+     */
     private TimeConstraint timeConstraint;
     /**
      * Instantiates a new findMeetingTimesPostRequestBody and sets the default values.

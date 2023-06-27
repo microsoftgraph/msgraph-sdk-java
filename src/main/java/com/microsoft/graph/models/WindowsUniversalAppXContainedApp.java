@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUniversalAppXContainedApp extends MobileContainedApp implements Parsable {
-    /** The app user model ID of the contained app of a WindowsUniversalAppX app. */
+    /**
+     * The app user model ID of the contained app of a WindowsUniversalAppX app.
+     */
     private String appUserModelId;
     /**
      * Instantiates a new WindowsUniversalAppXContainedApp and sets the default values.

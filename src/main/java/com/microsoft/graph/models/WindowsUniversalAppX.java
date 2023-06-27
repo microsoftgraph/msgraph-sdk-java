@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
-    /** Contains properties for Windows architecture. */
+    /**
+     * Contains properties for Windows architecture.
+     */
     private WindowsArchitecture applicableArchitectures;
-    /** Contains properties for Windows device type. */
+    /**
+     * Contains properties for Windows device type.
+     */
     private WindowsDeviceType applicableDeviceTypes;
-    /** The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. */
+    /**
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     */
     private java.util.List<MobileContainedApp> committedContainedApps;
-    /** The Identity Name. */
+    /**
+     * The Identity Name.
+     */
     private String identityName;
-    /** The Identity Publisher Hash. */
+    /**
+     * The Identity Publisher Hash.
+     */
     private String identityPublisherHash;
-    /** The Identity Resource Identifier. */
+    /**
+     * The Identity Resource Identifier.
+     */
     private String identityResourceIdentifier;
-    /** The identity version. */
+    /**
+     * The identity version.
+     */
     private String identityVersion;
-    /** Whether or not the app is a bundle. */
+    /**
+     * Whether or not the app is a bundle.
+     */
     private Boolean isBundle;
-    /** The minimum operating system required for a Windows mobile app. */
+    /**
+     * The minimum operating system required for a Windows mobile app.
+     */
     private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new WindowsUniversalAppX and sets the default values.

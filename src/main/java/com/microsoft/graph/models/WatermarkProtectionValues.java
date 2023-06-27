@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WatermarkProtectionValues implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether to apply a watermark to any shared content. */
+    /**
+     * Indicates whether to apply a watermark to any shared content.
+     */
     private Boolean isEnabledForContentSharing;
-    /** Indicates whether to apply a watermark to everyone's video feed. */
+    /**
+     * Indicates whether to apply a watermark to everyone's video feed.
+     */
     private Boolean isEnabledForVideo;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new watermarkProtectionValues and sets the default values.

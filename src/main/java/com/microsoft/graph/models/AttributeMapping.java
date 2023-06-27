@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeMapping implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The defaultValue property */
+    /**
+     * The defaultValue property
+     */
     private String defaultValue;
-    /** The exportMissingReferences property */
+    /**
+     * The exportMissingReferences property
+     */
     private Boolean exportMissingReferences;
-    /** The flowBehavior property */
+    /**
+     * The flowBehavior property
+     */
     private AttributeFlowBehavior flowBehavior;
-    /** The flowType property */
+    /**
+     * The flowType property
+     */
     private AttributeFlowType flowType;
-    /** The matchingPriority property */
+    /**
+     * The matchingPriority property
+     */
     private Integer matchingPriority;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The source property */
+    /**
+     * The source property
+     */
     private AttributeMappingSource source;
-    /** The targetAttributeName property */
+    /**
+     * The targetAttributeName property
+     */
     private String targetAttributeName;
     /**
      * Instantiates a new attributeMapping and sets the default values.

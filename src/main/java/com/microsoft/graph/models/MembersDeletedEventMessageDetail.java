@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MembersDeletedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** List of members deleted. */
+    /**
+     * List of members deleted.
+     */
     private java.util.List<TeamworkUserIdentity> members;
     /**
      * Instantiates a new MembersDeletedEventMessageDetail and sets the default values.

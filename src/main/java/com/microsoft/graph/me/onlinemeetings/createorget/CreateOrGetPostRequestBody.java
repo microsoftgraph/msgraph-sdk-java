@@ -11,19 +11,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The chatInfo property */
+    /**
+     * The chatInfo property
+     */
     private ChatInfo chatInfo;
-    /** The endDateTime property */
+    /**
+     * The endDateTime property
+     */
     private OffsetDateTime endDateTime;
-    /** The externalId property */
+    /**
+     * The externalId property
+     */
     private String externalId;
-    /** The participants property */
+    /**
+     * The participants property
+     */
     private MeetingParticipants participants;
-    /** The startDateTime property */
+    /**
+     * The startDateTime property
+     */
     private OffsetDateTime startDateTime;
-    /** The subject property */
+    /**
+     * The subject property
+     */
     private String subject;
     /**
      * Instantiates a new createOrGetPostRequestBody and sets the default values.

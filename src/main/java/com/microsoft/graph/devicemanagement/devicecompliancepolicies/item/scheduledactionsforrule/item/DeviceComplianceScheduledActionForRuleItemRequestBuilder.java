@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
  */
 public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity. */
+    /**
+     * Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity.
+     */
     @javax.annotation.Nonnull
     public ScheduledActionConfigurationsRequestBuilder scheduledActionConfigurations() {
         return new ScheduledActionConfigurationsRequestBuilder(pathParameters, requestAdapter);
@@ -47,8 +49,9 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/scheduledActionsForRule/{deviceComplianceScheduledActionForRule%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property scheduledActionsForRule for deviceManagement
+     * Deletes a deviceComplianceScheduledActionForRule.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +68,10 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         }
     }
     /**
-     * Delete navigation property scheduledActionsForRule for deviceManagement
+     * Deletes a deviceComplianceScheduledActionForRule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +88,9 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         }
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
      * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> get() {
@@ -102,9 +107,10 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         }
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +127,10 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         }
     }
     /**
-     * Update the navigation property scheduledActionsForRule in deviceManagement
+     * Update the properties of a deviceComplianceScheduledActionForRule object.
      * @param body The request body
      * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> patch(@javax.annotation.Nonnull final DeviceComplianceScheduledActionForRule body) {
@@ -140,10 +147,11 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         }
     }
     /**
-     * Update the navigation property scheduledActionsForRule in deviceManagement
+     * Update the properties of a deviceComplianceScheduledActionForRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> patch(@javax.annotation.Nonnull final DeviceComplianceScheduledActionForRule body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +169,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         }
     }
     /**
-     * Delete navigation property scheduledActionsForRule for deviceManagement
+     * Deletes a deviceComplianceScheduledActionForRule.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +177,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property scheduledActionsForRule for deviceManagement
+     * Deletes a deviceComplianceScheduledActionForRule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +196,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +204,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +225,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Update the navigation property scheduledActionsForRule in deviceManagement
+     * Update the properties of a deviceComplianceScheduledActionForRule object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +234,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property scheduledActionsForRule in deviceManagement
+     * Update the properties of a deviceComplianceScheduledActionForRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,14 +262,18 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +282,9 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

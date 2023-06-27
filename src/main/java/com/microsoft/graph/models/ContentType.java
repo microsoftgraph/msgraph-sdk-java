@@ -7,43 +7,81 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ContentType extends Entity implements Parsable {
-    /** List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites. */
+    /**
+     * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     */
     private java.util.List<String> associatedHubsUrls;
-    /** Parent contentType from which this content type is derived. */
+    /**
+     * Parent contentType from which this content type is derived.
+     */
     private ContentType base;
-    /** The collection of content types that are ancestors of this content type. */
+    /**
+     * The collection of content types that are ancestors of this content type.
+     */
     private java.util.List<ContentType> baseTypes;
-    /** The collection of columns that are required by this content type. */
+    /**
+     * The collection of columns that are required by this content type.
+     */
     private java.util.List<ColumnLink> columnLinks;
-    /** Column order information in a content type. */
+    /**
+     * Column order information in a content type.
+     */
     private java.util.List<ColumnDefinition> columnPositions;
-    /** The collection of column definitions for this contentType. */
+    /**
+     * The collection of column definitions for this contentType.
+     */
     private java.util.List<ColumnDefinition> columns;
-    /** The descriptive text for the item. */
+    /**
+     * The descriptive text for the item.
+     */
     private String description;
-    /** Document Set metadata. */
+    /**
+     * Document Set metadata.
+     */
     private DocumentSet documentSet;
-    /** Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type. */
+    /**
+     * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
+     */
     private DocumentSetContent documentTemplate;
-    /** The name of the group this content type belongs to. Helps organize related content types. */
+    /**
+     * The name of the group this content type belongs to. Helps organize related content types.
+     */
     private String group;
-    /** Indicates whether the content type is hidden in the list's 'New' menu. */
+    /**
+     * Indicates whether the content type is hidden in the list's 'New' menu.
+     */
     private Boolean hidden;
-    /** If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined. */
+    /**
+     * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
+     */
     private ItemReference inheritedFrom;
-    /** Specifies if a content type is a built-in content type. */
+    /**
+     * Specifies if a content type is a built-in content type.
+     */
     private Boolean isBuiltIn;
-    /** The name of the content type. */
+    /**
+     * The name of the content type.
+     */
     private String name;
-    /** Specifies the order in which the content type appears in the selection UI. */
+    /**
+     * Specifies the order in which the content type appears in the selection UI.
+     */
     private ContentTypeOrder order;
-    /** The unique identifier of the content type. */
+    /**
+     * The unique identifier of the content type.
+     */
     private String parentId;
-    /** If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type. */
+    /**
+     * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
+     */
     private Boolean propagateChanges;
-    /** If true, the content type can't be modified unless this value is first set to false. */
+    /**
+     * If true, the content type can't be modified unless this value is first set to false.
+     */
     private Boolean readOnly;
-    /** If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types. */
+    /**
+     * If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     */
     private Boolean sealed;
     /**
      * Instantiates a new contentType and sets the default values.

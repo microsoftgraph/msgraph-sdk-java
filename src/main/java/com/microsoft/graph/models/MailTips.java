@@ -8,33 +8,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailTips implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Mail tips for automatic reply if it has been set up by the recipient. */
+    /**
+     * Mail tips for automatic reply if it has been set up by the recipient.
+     */
     private AutomaticRepliesMailTips automaticReplies;
-    /** A custom mail tip that can be set on the recipient's mailbox. */
+    /**
+     * A custom mail tip that can be set on the recipient's mailbox.
+     */
     private String customMailTip;
-    /** Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders. */
+    /**
+     * Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
+     */
     private Boolean deliveryRestricted;
-    /** The email address of the recipient to get mailtips for. */
+    /**
+     * The email address of the recipient to get mailtips for.
+     */
     private EmailAddress emailAddress;
-    /** Errors that occur during the getMailTips action. */
+    /**
+     * Errors that occur during the getMailTips action.
+     */
     private MailTipsError error;
-    /** The number of external members if the recipient is a distribution list. */
+    /**
+     * The number of external members if the recipient is a distribution list.
+     */
     private Integer externalMemberCount;
-    /** Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager. */
+    /**
+     * Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
+     */
     private Boolean isModerated;
-    /** The mailbox full status of the recipient. */
+    /**
+     * The mailbox full status of the recipient.
+     */
     private Boolean mailboxFull;
-    /** The maximum message size that has been configured for the recipient's organization or mailbox. */
+    /**
+     * The maximum message size that has been configured for the recipient's organization or mailbox.
+     */
     private Integer maxMessageSize;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content. */
+    /**
+     * The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+     */
     private RecipientScopeType recipientScope;
-    /** Recipients suggested based on previous contexts where they appear in the same message. */
+    /**
+     * Recipients suggested based on previous contexts where they appear in the same message.
+     */
     private java.util.List<Recipient> recipientSuggestions;
-    /** The number of members if the recipient is a distribution list. */
+    /**
+     * The number of members if the recipient is a distribution list.
+     */
     private Integer totalMemberCount;
     /**
      * Instantiates a new MailTips and sets the default values.

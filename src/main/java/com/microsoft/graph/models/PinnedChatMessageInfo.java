@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PinnedChatMessageInfo extends Entity implements Parsable {
-    /** Represents details about the chat message that is pinned. */
+    /**
+     * Represents details about the chat message that is pinned.
+     */
     private ChatMessage message;
     /**
      * Instantiates a new pinnedChatMessageInfo and sets the default values.

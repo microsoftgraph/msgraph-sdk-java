@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VerifiedDomain implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** For example, Email, OfficeCommunicationsOnline. */
+    /**
+     * For example, Email, OfficeCommunicationsOnline.
+     */
     private String capabilities;
-    /** true if this is the default domain associated with the tenant; otherwise, false. */
+    /**
+     * true if this is the default domain associated with the tenant; otherwise, false.
+     */
     private Boolean isDefault;
-    /** true if this is the initial domain associated with the tenant; otherwise, false. */
+    /**
+     * true if this is the initial domain associated with the tenant; otherwise, false.
+     */
     private Boolean isInitial;
-    /** The domain name; for example, contoso.onmicrosoft.com. */
+    /**
+     * The domain name; for example, contoso.onmicrosoft.com.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** For example, Managed. */
+    /**
+     * For example, Managed.
+     */
     private String type;
     /**
      * Instantiates a new VerifiedDomain and sets the default values.

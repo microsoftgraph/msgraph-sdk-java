@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Identity extends Entity implements Parsable {
-    /** The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system. */
+    /**
+     * The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
+     */
     private IdentityType type;
     /**
      * Instantiates a new identity and sets the default values.

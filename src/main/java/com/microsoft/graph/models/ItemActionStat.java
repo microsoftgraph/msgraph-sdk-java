@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemActionStat implements AdditionalDataHolder, Parsable {
-    /** The number of times the action took place. Read-only. */
+    /**
+     * The number of times the action took place. Read-only.
+     */
     private Integer actionCount;
-    /** The number of distinct actors that performed the action. Read-only. */
+    /**
+     * The number of distinct actors that performed the action. Read-only.
+     */
     private Integer actorCount;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new itemActionStat and sets the default values.

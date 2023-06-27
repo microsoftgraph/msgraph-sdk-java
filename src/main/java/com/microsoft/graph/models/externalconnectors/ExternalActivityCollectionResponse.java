@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalActivityCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ExternalActivity> value;
     /**
      * Instantiates a new ExternalActivityCollectionResponse and sets the default values.

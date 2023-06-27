@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the insights property of the microsoft.graph.user entity.
  */
 public class InsightsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity. */
+    /**
+     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
+     */
     @javax.annotation.Nonnull
     public SharedRequestBuilder shared() {
         return new SharedRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity. */
+    /**
+     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
+     */
     @javax.annotation.Nonnull
     public TrendingRequestBuilder trending() {
         return new TrendingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity. */
+    /**
+     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
+     */
     @javax.annotation.Nonnull
     public UsedRequestBuilder used() {
         return new UsedRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +275,15 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
      * Get insights from me
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +292,9 @@ public class InsightsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

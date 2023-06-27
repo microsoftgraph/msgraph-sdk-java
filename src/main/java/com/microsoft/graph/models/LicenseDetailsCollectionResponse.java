@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LicenseDetailsCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<LicenseDetails> value;
     /**
      * Instantiates a new LicenseDetailsCollectionResponse and sets the default values.

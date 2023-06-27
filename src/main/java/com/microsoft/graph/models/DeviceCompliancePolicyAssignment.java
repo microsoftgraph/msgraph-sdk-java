@@ -10,7 +10,9 @@ import java.util.Objects;
  * Device compliance policy assignment.
  */
 public class DeviceCompliancePolicyAssignment extends Entity implements Parsable {
-    /** Target for the compliance policy assignment. */
+    /**
+     * Target for the compliance policy assignment.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new deviceCompliancePolicyAssignment and sets the default values.

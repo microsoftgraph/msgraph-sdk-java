@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** The type of Exchange Connector. */
+/**
+ * The type of Exchange Connector.
+ */
 public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
     /** Connects to on-premises Exchange Environment. */
     OnPremises("onPremises"),

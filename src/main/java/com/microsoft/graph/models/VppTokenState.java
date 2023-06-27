@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible states associated with an Apple Volume Purchase Program token. */
+/**
+ * Possible states associated with an Apple Volume Purchase Program token.
+ */
 public enum VppTokenState implements ValuedEnum {
     /** Default state. */
     Unknown("unknown"),

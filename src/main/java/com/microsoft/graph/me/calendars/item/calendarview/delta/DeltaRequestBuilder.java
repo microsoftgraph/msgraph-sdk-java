@@ -27,7 +27,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public DeltaRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/calendars/{calendar%2Did}/calendarView/delta(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/me/calendars/{calendar%2Did}/calendarView/delta(){?startDateTime*,endDateTime*,%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
     }
     /**
      * Instantiates a new DeltaRequestBuilder and sets the default values.
@@ -37,7 +37,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public DeltaRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/me/calendars/{calendar%2Did}/calendarView/delta(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/me/calendars/{calendar%2Did}/calendarView/delta(){?startDateTime*,endDateTime*,%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
     }
     /**
      * Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user's primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.
@@ -111,31 +111,55 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user's primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Filter items by property values */
+        /**
+         * The end date and time of the time range in the function, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+         */
+        @javax.annotation.Nullable
+        public String endDateTime;
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * The start date and time of the time range in the function, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+         */
+        @javax.annotation.Nullable
+        public String startDateTime;
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -144,7 +168,9 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

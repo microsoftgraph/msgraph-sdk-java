@@ -10,21 +10,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Set extends Entity implements Parsable {
-    /** Children terms of set in term [store]. */
+    /**
+     * Children terms of set in term [store].
+     */
     private java.util.List<Term> children;
-    /** Date and time of set creation. Read-only. */
+    /**
+     * Date and time of set creation. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** Description that gives details on the term usage. */
+    /**
+     * Description that gives details on the term usage.
+     */
     private String description;
-    /** Name of the set for each languageTag. */
+    /**
+     * Name of the set for each languageTag.
+     */
     private java.util.List<LocalizedName> localizedNames;
-    /** The parentGroup property */
+    /**
+     * The parentGroup property
+     */
     private Group parentGroup;
-    /** Custom properties for the set. */
+    /**
+     * Custom properties for the set.
+     */
     private java.util.List<KeyValue> properties;
-    /** Indicates which terms have been pinned or reused directly under the set. */
+    /**
+     * Indicates which terms have been pinned or reused directly under the set.
+     */
     private java.util.List<Relation> relations;
-    /** All the terms under the set. */
+    /**
+     * All the terms under the set.
+     */
     private java.util.List<Term> terms;
     /**
      * Instantiates a new set and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupLifecyclePolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<GroupLifecyclePolicy> value;
     /**
      * Instantiates a new GroupLifecyclePolicyCollectionResponse and sets the default values.

@@ -9,61 +9,117 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Alert extends Entity implements Parsable {
-    /** The adversary or activity group that is associated with this alert. */
+    /**
+     * The adversary or activity group that is associated with this alert.
+     */
     private String actorDisplayName;
-    /** URL for the alert page in the Microsoft 365 Defender portal. */
+    /**
+     * URL for the alert page in the Microsoft 365 Defender portal.
+     */
     private String alertWebUrl;
-    /** Owner of the alert, or null if no owner is assigned. */
+    /**
+     * Owner of the alert, or null if no owner is assigned.
+     */
     private String assignedTo;
-    /** The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework. */
+    /**
+     * The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
+     */
     private String category;
-    /** Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue. */
+    /**
+     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+     */
     private AlertClassification classification;
-    /** Array of comments created by the Security Operations (SecOps) team during the alert management process. */
+    /**
+     * Array of comments created by the Security Operations (SecOps) team during the alert management process.
+     */
     private java.util.List<AlertComment> comments;
-    /** Time when Microsoft 365 Defender created the alert. */
+    /**
+     * Time when Microsoft 365 Defender created the alert.
+     */
     private OffsetDateTime createdDateTime;
-    /** String value describing each alert. */
+    /**
+     * String value describing each alert.
+     */
     private String description;
-    /** Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud. */
+    /**
+     * Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
+     */
     private DetectionSource detectionSource;
-    /** The ID of the detector that triggered the alert. */
+    /**
+     * The ID of the detector that triggered the alert.
+     */
     private String detectorId;
-    /** Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue. */
+    /**
+     * Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
+     */
     private AlertDetermination determination;
-    /** Collection of evidence related to the alert. */
+    /**
+     * Collection of evidence related to the alert.
+     */
     private java.util.List<AlertEvidence> evidence;
-    /** The earliest activity associated with the alert. */
+    /**
+     * The earliest activity associated with the alert.
+     */
     private OffsetDateTime firstActivityDateTime;
-    /** Unique identifier to represent the incident this alert resource is associated with. */
+    /**
+     * Unique identifier to represent the incident this alert resource is associated with.
+     */
     private String incidentId;
-    /** URL for the incident page in the Microsoft 365 Defender portal. */
+    /**
+     * URL for the incident page in the Microsoft 365 Defender portal.
+     */
     private String incidentWebUrl;
-    /** The oldest activity associated with the alert. */
+    /**
+     * The oldest activity associated with the alert.
+     */
     private OffsetDateTime lastActivityDateTime;
-    /** Time when the alert was last updated at Microsoft 365 Defender. */
+    /**
+     * Time when the alert was last updated at Microsoft 365 Defender.
+     */
     private OffsetDateTime lastUpdateDateTime;
-    /** The attack techniques, as aligned with the MITRE ATT&CK framework. */
+    /**
+     * The attack techniques, as aligned with the MITRE ATT&CK framework.
+     */
     private java.util.List<String> mitreTechniques;
-    /** The ID of the alert as it appears in the security provider product that generated the alert. */
+    /**
+     * The ID of the alert as it appears in the security provider product that generated the alert.
+     */
     private String providerAlertId;
-    /** Recommended response and remediation actions to take in the event this alert was generated. */
+    /**
+     * Recommended response and remediation actions to take in the event this alert was generated.
+     */
     private String recommendedActions;
-    /** Time when the alert was resolved. */
+    /**
+     * Time when the alert was resolved.
+     */
     private OffsetDateTime resolvedDateTime;
-    /** The serviceSource property */
+    /**
+     * The serviceSource property
+     */
     private ServiceSource serviceSource;
-    /** The severity property */
+    /**
+     * The severity property
+     */
     private AlertSeverity severity;
-    /** The status property */
+    /**
+     * The status property
+     */
     private AlertStatus status;
-    /** The Azure Active Directory tenant the alert was created in. */
+    /**
+     * The Azure Active Directory tenant the alert was created in.
+     */
     private String tenantId;
-    /** The threat associated with this alert. */
+    /**
+     * The threat associated with this alert.
+     */
     private String threatDisplayName;
-    /** Threat family associated with this alert. */
+    /**
+     * Threat family associated with this alert.
+     */
     private String threatFamilyName;
-    /** Brief identifying string value describing the alert. */
+    /**
+     * Brief identifying string value describing the alert.
+     */
     private String title;
     /**
      * Instantiates a new alert and sets the default values.

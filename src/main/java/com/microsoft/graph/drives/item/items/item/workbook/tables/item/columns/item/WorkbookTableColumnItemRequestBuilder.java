@@ -25,27 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
  */
 public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the dataBodyRange method. */
+    /**
+     * Provides operations to call the dataBodyRange method.
+     */
     @javax.annotation.Nonnull
     public DataBodyRangeRequestBuilder dataBodyRange() {
         return new DataBodyRangeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the filter property of the microsoft.graph.workbookTableColumn entity. */
+    /**
+     * Provides operations to manage the filter property of the microsoft.graph.workbookTableColumn entity.
+     */
     @javax.annotation.Nonnull
     public FilterRequestBuilder filter() {
         return new FilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the headerRowRange method. */
+    /**
+     * Provides operations to call the headerRowRange method.
+     */
     @javax.annotation.Nonnull
     public HeaderRowRangeRequestBuilder headerRowRange() {
         return new HeaderRowRangeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the range method. */
+    /**
+     * Provides operations to call the range method.
+     */
     @javax.annotation.Nonnull
     public RangeRequestBuilder range() {
         return new RangeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the totalRowRange method. */
+    /**
+     * Provides operations to call the totalRowRange method.
+     */
     @javax.annotation.Nonnull
     public TotalRowRangeRequestBuilder totalRowRange() {
         return new TotalRowRangeRequestBuilder(pathParameters, requestAdapter);
@@ -287,11 +297,15 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of tablecolumn object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -300,7 +314,9 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

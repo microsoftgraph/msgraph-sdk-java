@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable {
-    /** The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required. */
+    /**
+     * The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
+     */
     private String identityProviderType;
     /**
      * Instantiates a new BuiltInIdentityProvider and sets the default values.

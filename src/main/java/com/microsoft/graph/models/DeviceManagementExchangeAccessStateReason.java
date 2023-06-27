@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Device Exchange Access State Reason. */
+/**
+ * Device Exchange Access State Reason.
+ */
 public enum DeviceManagementExchangeAccessStateReason implements ValuedEnum {
     /** No access state reason discovered from Exchange */
     None("none"),

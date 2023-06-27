@@ -27,7 +27,7 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public GetAllMessagesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/chats/getAllMessages(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/chats/getAllMessages(){?model*,%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
     }
     /**
      * Instantiates a new GetAllMessagesRequestBuilder and sets the default values.
@@ -37,7 +37,7 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public GetAllMessagesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/chats/getAllMessages(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/chats/getAllMessages(){?model*,%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
     }
     /**
      * Invoke function getAllMessages
@@ -109,31 +109,50 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
      * Invoke function getAllMessages
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * The payment model for the API
+         */
+        @javax.annotation.Nullable
+        public String model;
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -142,7 +161,9 @@ public class GetAllMessagesRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

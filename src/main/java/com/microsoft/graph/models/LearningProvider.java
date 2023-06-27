@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LearningProvider extends Entity implements Parsable {
-    /** The display name that appears in Viva Learning. Required. */
+    /**
+     * The display name that appears in Viva Learning. Required.
+     */
     private String displayName;
-    /** Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider. */
+    /**
+     * Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+     */
     private Boolean isCourseActivitySyncEnabled;
-    /** Learning catalog items for the provider. */
+    /**
+     * Learning catalog items for the provider.
+     */
     private java.util.List<LearningContent> learningContents;
-    /** Authentication URL to access the courses for the provider. Optional. */
+    /**
+     * Authentication URL to access the courses for the provider. Optional.
+     */
     private String loginWebUrl;
-    /** The long logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required. */
+    /**
+     * The long logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
+     */
     private String longLogoWebUrlForDarkTheme;
-    /** The long logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required. */
+    /**
+     * The long logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
+     */
     private String longLogoWebUrlForLightTheme;
-    /** The square logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required. */
+    /**
+     * The square logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
+     */
     private String squareLogoWebUrlForDarkTheme;
-    /** The square logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required. */
+    /**
+     * The square logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
+     */
     private String squareLogoWebUrlForLightTheme;
     /**
      * Instantiates a new learningProvider and sets the default values.

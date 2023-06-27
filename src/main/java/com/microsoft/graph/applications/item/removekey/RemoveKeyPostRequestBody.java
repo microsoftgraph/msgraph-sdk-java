@@ -9,11 +9,17 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The keyId property */
+    /**
+     * The keyId property
+     */
     private UUID keyId;
-    /** The proof property */
+    /**
+     * The proof property
+     */
     private String proof;
     /**
      * Instantiates a new removeKeyPostRequestBody and sets the default values.

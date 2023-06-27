@@ -80,9 +80,9 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat.
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://docs.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get() {
@@ -99,10 +99,10 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationMember
-     * @see <a href="https://docs.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -186,7 +186,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +194,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -252,14 +252,18 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -268,7 +272,9 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable {
-    /** Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps. */
+    /**
+     * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
+     */
     private CloudAppSecuritySessionControlType cloudAppSecurityType;
     /**
      * Instantiates a new CloudAppSecuritySessionControl and sets the default values.

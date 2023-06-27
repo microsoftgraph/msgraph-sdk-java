@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
-    /** The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk. */
+    /**
+     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
+     */
     private MailDestinationRoutingReason destinationRoutingReason;
-    /** The resource URI of the mail message for assessment. */
+    /**
+     * The resource URI of the mail message for assessment.
+     */
     private String messageUri;
-    /** The mail recipient whose policies are used to assess the mail. */
+    /**
+     * The mail recipient whose policies are used to assess the mail.
+     */
     private String recipientEmail;
     /**
      * Instantiates a new MailAssessmentRequest and sets the default values.

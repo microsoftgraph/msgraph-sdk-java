@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the planner property of the microsoft.graph.user entity.
  */
 public class PlannerRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the plans property of the microsoft.graph.plannerUser entity. */
+    /**
+     * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.
+     */
     @javax.annotation.Nonnull
     public PlansRequestBuilder plans() {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity. */
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity.
+     */
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -263,11 +267,15 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * Entry-point to the Planner resource that might exist for a user. Read-only.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -276,7 +284,9 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

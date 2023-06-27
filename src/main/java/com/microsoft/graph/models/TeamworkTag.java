@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkTag extends Entity implements Parsable {
-    /** The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers. */
+    /**
+     * The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
+     */
     private String description;
-    /** The name of the tag as it will appear to the user in Microsoft Teams. */
+    /**
+     * The name of the tag as it will appear to the user in Microsoft Teams.
+     */
     private String displayName;
-    /** The number of users assigned to the tag. */
+    /**
+     * The number of users assigned to the tag.
+     */
     private Integer memberCount;
-    /** Users assigned to the tag. */
+    /**
+     * Users assigned to the tag.
+     */
     private java.util.List<TeamworkTagMember> members;
-    /** The type of the tag. Default is standard. */
+    /**
+     * The type of the tag. Default is standard.
+     */
     private TeamworkTagType tagType;
-    /** ID of the team in which the tag is defined. */
+    /**
+     * ID of the team in which the tag is defined.
+     */
     private String teamId;
     /**
      * Instantiates a new teamworkTag and sets the default values.

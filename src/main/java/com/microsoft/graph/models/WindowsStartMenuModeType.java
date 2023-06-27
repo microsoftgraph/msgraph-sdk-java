@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Type of display modes for the start menu. */
+/**
+ * Type of display modes for the start menu.
+ */
 public enum WindowsStartMenuModeType implements ValuedEnum {
     /** User defined. Default value. */
     UserDefined("userDefined"),

@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallTranscriptEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Unique identifier of the call. */
+    /**
+     * Unique identifier of the call.
+     */
     private String callId;
-    /** Unique identifier for a call transcript. */
+    /**
+     * Unique identifier for a call transcript.
+     */
     private String callTranscriptICalUid;
-    /** The organizer of the meeting. */
+    /**
+     * The organizer of the meeting.
+     */
     private IdentitySet meetingOrganizer;
     /**
      * Instantiates a new CallTranscriptEventMessageDetail and sets the default values.

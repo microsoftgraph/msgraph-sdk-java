@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TraceRouteHop implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The network path count of this hop that was used to compute the RTT. */
+    /**
+     * The network path count of this hop that was used to compute the RTT.
+     */
     private Integer hopCount;
-    /** IP address used for this hop in the network trace. */
+    /**
+     * IP address used for this hop in the network trace.
+     */
     private String ipAddress;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator. */
+    /**
+     * The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
+     */
     private Period roundTripTime;
     /**
      * Instantiates a new TraceRouteHop and sets the default values.

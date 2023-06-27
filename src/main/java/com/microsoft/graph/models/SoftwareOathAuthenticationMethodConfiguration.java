@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SoftwareOathAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** A collection of groups that are enabled to use the authentication method. Expanded by default. */
+    /**
+     * A collection of groups that are enabled to use the authentication method. Expanded by default.
+     */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new SoftwareOathAuthenticationMethodConfiguration and sets the default values.

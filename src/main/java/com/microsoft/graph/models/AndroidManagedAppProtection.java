@@ -7,25 +7,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
-    /** List of apps to which the policy is deployed. */
+    /**
+     * List of apps to which the policy is deployed.
+     */
     private java.util.List<ManagedMobileApp> apps;
-    /** Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
+    /**
+     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     */
     private String customBrowserDisplayName;
-    /** Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
+    /**
+     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     */
     private String customBrowserPackageId;
-    /** Count of apps to which the current policy is deployed. */
+    /**
+     * Count of apps to which the current policy is deployed.
+     */
     private Integer deployedAppCount;
-    /** Navigation property to deployment summary of the configuration. */
+    /**
+     * Navigation property to deployment summary of the configuration.
+     */
     private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /** When this setting is enabled, app level encryption is disabled if device level encryption is enabled */
+    /**
+     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
+     */
     private Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
-    /** Indicates whether application data for managed apps should be encrypted */
+    /**
+     * Indicates whether application data for managed apps should be encrypted
+     */
     private Boolean encryptAppData;
-    /** Define the oldest required Android security patch level a user can have to gain secure access to the app. */
+    /**
+     * Define the oldest required Android security patch level a user can have to gain secure access to the app.
+     */
     private String minimumRequiredPatchVersion;
-    /** Define the oldest recommended Android security patch level a user can have for secure access to the app. */
+    /**
+     * Define the oldest recommended Android security patch level a user can have for secure access to the app.
+     */
     private String minimumWarningPatchVersion;
-    /** Indicates whether a managed user can take screen captures of managed apps */
+    /**
+     * Indicates whether a managed user can take screen captures of managed apps
+     */
     private Boolean screenCaptureBlocked;
     /**
      * Instantiates a new AndroidManagedAppProtection and sets the default values.

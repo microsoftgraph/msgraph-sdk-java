@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable {
-    /** Add different branding based on a locale. */
+    /**
+     * Add different branding based on a locale.
+     */
     private java.util.List<OrganizationalBrandingLocalization> localizations;
     /**
      * Instantiates a new OrganizationalBranding and sets the default values.

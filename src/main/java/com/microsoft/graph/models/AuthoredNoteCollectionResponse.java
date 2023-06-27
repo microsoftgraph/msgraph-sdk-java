@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthoredNoteCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AuthoredNote> value;
     /**
      * Instantiates a new AuthoredNoteCollectionResponse and sets the default values.

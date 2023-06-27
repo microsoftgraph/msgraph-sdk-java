@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements Parsable {
-    /** The activity related to service principal risk level change. */
+    /**
+     * The activity related to service principal risk level change.
+     */
     private RiskServicePrincipalActivity activity;
-    /** The identifier of the actor of the operation. */
+    /**
+     * The identifier of the actor of the operation.
+     */
     private String initiatedBy;
     /**
      * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.

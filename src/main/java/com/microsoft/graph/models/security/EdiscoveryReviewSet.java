@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryReviewSet extends DataSet implements Parsable {
-    /** Represents queries within the review set. */
+    /**
+     * Represents queries within the review set.
+     */
     private java.util.List<EdiscoveryReviewSetQuery> queries;
     /**
      * Instantiates a new EdiscoveryReviewSet and sets the default values.

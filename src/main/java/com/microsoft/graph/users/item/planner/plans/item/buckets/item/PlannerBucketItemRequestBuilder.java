@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
  */
 public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity. */
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
+     */
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
      * Read-only. Nullable. Collection of buckets in the plan.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

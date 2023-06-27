@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the services property of the microsoft.graph.print entity.
  */
 public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the endpoints property of the microsoft.graph.printService entity. */
+    /**
+     * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
+     */
     @javax.annotation.Nonnull
     public EndpointsRequestBuilder endpoints() {
         return new EndpointsRequestBuilder(pathParameters, requestAdapter);
@@ -259,11 +261,15 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a print service.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -272,7 +278,9 @@ public class PrintServiceItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

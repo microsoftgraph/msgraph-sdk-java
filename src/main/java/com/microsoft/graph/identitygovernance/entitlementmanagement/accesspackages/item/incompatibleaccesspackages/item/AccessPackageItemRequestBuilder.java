@@ -9,7 +9,9 @@ import java.util.Objects;
  * Builds and executes requests for operations under /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/incompatibleAccessPackages/{accessPackage-id1}
  */
 public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the collection of identityGovernance entities. */
+    /**
+     * Provides operations to manage the collection of identityGovernance entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

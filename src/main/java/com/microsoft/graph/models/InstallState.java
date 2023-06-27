@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for install state. */
+/**
+ * Possible values for install state.
+ */
 public enum InstallState implements ValuedEnum {
     /** Not Applicable. */
     NotApplicable("notApplicable"),

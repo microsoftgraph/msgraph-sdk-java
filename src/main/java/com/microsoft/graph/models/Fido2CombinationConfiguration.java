@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Fido2CombinationConfiguration extends AuthenticationCombinationConfiguration implements Parsable {
-    /** A list of AAGUIDs allowed to be used as part of the specified authentication method combinations. */
+    /**
+     * A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
+     */
     private java.util.List<String> allowedAAGUIDs;
     /**
      * Instantiates a new Fido2CombinationConfiguration and sets the default values.

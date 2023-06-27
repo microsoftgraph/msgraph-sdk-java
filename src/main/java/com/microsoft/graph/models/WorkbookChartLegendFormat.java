@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartLegendFormat extends Entity implements Parsable {
-    /** Represents the fill format of an object, which includes background formating information. Read-only. */
+    /**
+     * Represents the fill format of an object, which includes background formating information. Read-only.
+     */
     private WorkbookChartFill fill;
-    /** Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only. */
+    /**
+     * Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
+     */
     private WorkbookChartFont font;
     /**
      * Instantiates a new workbookChartLegendFormat and sets the default values.

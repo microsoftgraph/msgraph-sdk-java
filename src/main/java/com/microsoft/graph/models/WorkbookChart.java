@@ -7,29 +7,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChart extends Entity implements Parsable {
-    /** Represents chart axes. Read-only. */
+    /**
+     * Represents chart axes. Read-only.
+     */
     private WorkbookChartAxes axes;
-    /** Represents the datalabels on the chart. Read-only. */
+    /**
+     * Represents the datalabels on the chart. Read-only.
+     */
     private WorkbookChartDataLabels dataLabels;
-    /** Encapsulates the format properties for the chart area. Read-only. */
+    /**
+     * Encapsulates the format properties for the chart area. Read-only.
+     */
     private WorkbookChartAreaFormat format;
-    /** Represents the height, in points, of the chart object. */
+    /**
+     * Represents the height, in points, of the chart object.
+     */
     private Double height;
-    /** The distance, in points, from the left side of the chart to the worksheet origin. */
+    /**
+     * The distance, in points, from the left side of the chart to the worksheet origin.
+     */
     private Double left;
-    /** Represents the legend for the chart. Read-only. */
+    /**
+     * Represents the legend for the chart. Read-only.
+     */
     private WorkbookChartLegend legend;
-    /** Represents the name of a chart object. */
+    /**
+     * Represents the name of a chart object.
+     */
     private String name;
-    /** Represents either a single series or collection of series in the chart. Read-only. */
+    /**
+     * Represents either a single series or collection of series in the chart. Read-only.
+     */
     private java.util.List<WorkbookChartSeries> series;
-    /** Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only. */
+    /**
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     */
     private WorkbookChartTitle title;
-    /** Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart). */
+    /**
+     * Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
+     */
     private Double top;
-    /** Represents the width, in points, of the chart object. */
+    /**
+     * Represents the width, in points, of the chart object.
+     */
     private Double width;
-    /** The worksheet containing the current chart. Read-only. */
+    /**
+     * The worksheet containing the current chart. Read-only.
+     */
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookChart and sets the default values.

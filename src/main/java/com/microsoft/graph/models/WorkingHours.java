@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkingHours implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The days of the week on which the user works. */
+    /**
+     * The days of the week on which the user works.
+     */
     private java.util.List<DayOfWeek> daysOfWeek;
-    /** The time of the day that the user stops working. */
+    /**
+     * The time of the day that the user stops working.
+     */
     private LocalTime endTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The time of the day that the user starts working. */
+    /**
+     * The time of the day that the user starts working.
+     */
     private LocalTime startTime;
-    /** The time zone to which the working hours apply. */
+    /**
+     * The time zone to which the working hours apply.
+     */
     private TimeZoneBase timeZone;
     /**
      * Instantiates a new workingHours and sets the default values.

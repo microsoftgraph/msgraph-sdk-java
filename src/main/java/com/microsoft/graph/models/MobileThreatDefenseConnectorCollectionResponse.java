@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileThreatDefenseConnectorCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<MobileThreatDefenseConnector> value;
     /**
      * Instantiates a new MobileThreatDefenseConnectorCollectionResponse and sets the default values.

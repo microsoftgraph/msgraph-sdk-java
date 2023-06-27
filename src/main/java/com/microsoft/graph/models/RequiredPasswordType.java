@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values of required passwords. */
+/**
+ * Possible values of required passwords.
+ */
 public enum RequiredPasswordType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

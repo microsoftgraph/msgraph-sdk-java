@@ -11,27 +11,49 @@ import java.util.Objects;
  * An item describing notification setting.
  */
 public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Notification Settings Alert Type. */
+    /**
+     * Notification Settings Alert Type.
+     */
     private IosNotificationAlertType alertType;
-    /** Application name to be associated with the bundleID. */
+    /**
+     * Application name to be associated with the bundleID.
+     */
     private String appName;
-    /** Indicates whether badges are allowed for this app. */
+    /**
+     * Indicates whether badges are allowed for this app.
+     */
     private Boolean badgesEnabled;
-    /** Bundle id of app to which to apply these notification settings. */
+    /**
+     * Bundle id of app to which to apply these notification settings.
+     */
     private String bundleID;
-    /** Indicates whether notifications are allowed for this app. */
+    /**
+     * Indicates whether notifications are allowed for this app.
+     */
     private Boolean enabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Publisher to be associated with the bundleID. */
+    /**
+     * Publisher to be associated with the bundleID.
+     */
     private String publisher;
-    /** Indicates whether notifications can be shown in notification center. */
+    /**
+     * Indicates whether notifications can be shown in notification center.
+     */
     private Boolean showInNotificationCenter;
-    /** Indicates whether notifications can be shown on the lock screen. */
+    /**
+     * Indicates whether notifications can be shown on the lock screen.
+     */
     private Boolean showOnLockScreen;
-    /** Indicates whether sounds are allowed for this app. */
+    /**
+     * Indicates whether sounds are allowed for this app.
+     */
     private Boolean soundsEnabled;
     /**
      * Instantiates a new iosNotificationSettings and sets the default values.

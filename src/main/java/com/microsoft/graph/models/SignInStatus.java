@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignInStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Provides additional details on the sign-in activity */
+    /**
+     * Provides additional details on the sign-in activity
+     */
     private String additionalDetails;
-    /** Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages. */
+    /**
+     * Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
+     */
     private Integer errorCode;
-    /** Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages. */
+    /**
+     * Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
+     */
     private String failureReason;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new signInStatus and sets the default values.

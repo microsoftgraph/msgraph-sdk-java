@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The criteria1 property */
+    /**
+     * The criteria1 property
+     */
     private String criteria1;
-    /** The criteria2 property */
+    /**
+     * The criteria2 property
+     */
     private String criteria2;
-    /** The oper property */
+    /**
+     * The oper property
+     */
     private String oper;
     /**
      * Instantiates a new applyCustomFilterPostRequestBody and sets the default values.

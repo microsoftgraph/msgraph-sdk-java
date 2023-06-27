@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
  */
 public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the team property of the microsoft.graph.teamInfo entity. */
+    /**
+     * Provides operations to manage the team property of the microsoft.graph.teamInfo entity.
+     */
     @javax.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
      * The list of associatedTeamInfo objects that a user is associated with.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

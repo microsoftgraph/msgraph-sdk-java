@@ -8,89 +8,173 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Event extends OutlookItem implements Parsable {
-    /** true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true. */
+    /**
+     * true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
+     */
     private Boolean allowNewTimeProposals;
-    /** The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable. */
+    /**
+     * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
+     */
     private java.util.List<Attachment> attachments;
-    /** The collection of attendees for the event. */
+    /**
+     * The collection of attendees for the event.
+     */
     private java.util.List<Attendee> attendees;
-    /** The body of the message associated with the event. It can be in HTML or text format. */
+    /**
+     * The body of the message associated with the event. It can be in HTML or text format.
+     */
     private ItemBody body;
-    /** The preview of the message associated with the event. It is in text format. */
+    /**
+     * The preview of the message associated with the event. It is in text format.
+     */
     private String bodyPreview;
-    /** The calendar that contains the event. Navigation property. Read-only. */
+    /**
+     * The calendar that contains the event. Navigation property. Read-only.
+     */
     private Calendar calendar;
-    /** The date, time, and time zone that the event ends. By default, the end time is in UTC. */
+    /**
+     * The date, time, and time zone that the event ends. By default, the end time is in UTC.
+     */
     private DateTimeTimeZone end;
-    /** The collection of open extensions defined for the event. Nullable. */
+    /**
+     * The collection of open extensions defined for the event. Nullable.
+     */
     private java.util.List<Extension> extensions;
-    /** Set to true if the event has attachments. */
+    /**
+     * Set to true if the event has attachments.
+     */
     private Boolean hasAttachments;
-    /** When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false. */
+    /**
+     * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
+     */
     private Boolean hideAttendees;
-    /** A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only. */
+    /**
+     * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
+     */
     private String iCalUId;
-    /** The importance property */
+    /**
+     * The importance property
+     */
     private Importance importance;
-    /** The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable. */
+    /**
+     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+     */
     private java.util.List<Event> instances;
-    /** The isAllDay property */
+    /**
+     * The isAllDay property
+     */
     private Boolean isAllDay;
-    /** The isCancelled property */
+    /**
+     * The isCancelled property
+     */
     private Boolean isCancelled;
-    /** The isDraft property */
+    /**
+     * The isDraft property
+     */
     private Boolean isDraft;
-    /** The isOnlineMeeting property */
+    /**
+     * The isOnlineMeeting property
+     */
     private Boolean isOnlineMeeting;
-    /** The isOrganizer property */
+    /**
+     * The isOrganizer property
+     */
     private Boolean isOrganizer;
-    /** The isReminderOn property */
+    /**
+     * The isReminderOn property
+     */
     private Boolean isReminderOn;
-    /** The location property */
+    /**
+     * The location property
+     */
     private Location location;
-    /** The locations property */
+    /**
+     * The locations property
+     */
     private java.util.List<Location> locations;
-    /** The collection of multi-value extended properties defined for the event. Read-only. Nullable. */
+    /**
+     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
+     */
     private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /** The onlineMeeting property */
+    /**
+     * The onlineMeeting property
+     */
     private OnlineMeetingInfo onlineMeeting;
-    /** The onlineMeetingProvider property */
+    /**
+     * The onlineMeetingProvider property
+     */
     private OnlineMeetingProviderType onlineMeetingProvider;
-    /** The onlineMeetingUrl property */
+    /**
+     * The onlineMeetingUrl property
+     */
     private String onlineMeetingUrl;
-    /** The organizer property */
+    /**
+     * The organizer property
+     */
     private Recipient organizer;
-    /** The originalEndTimeZone property */
+    /**
+     * The originalEndTimeZone property
+     */
     private String originalEndTimeZone;
-    /** The originalStart property */
+    /**
+     * The originalStart property
+     */
     private OffsetDateTime originalStart;
-    /** The originalStartTimeZone property */
+    /**
+     * The originalStartTimeZone property
+     */
     private String originalStartTimeZone;
-    /** The recurrence property */
+    /**
+     * The recurrence property
+     */
     private PatternedRecurrence recurrence;
-    /** The reminderMinutesBeforeStart property */
+    /**
+     * The reminderMinutesBeforeStart property
+     */
     private Integer reminderMinutesBeforeStart;
-    /** The responseRequested property */
+    /**
+     * The responseRequested property
+     */
     private Boolean responseRequested;
-    /** The responseStatus property */
+    /**
+     * The responseStatus property
+     */
     private ResponseStatus responseStatus;
-    /** The sensitivity property */
+    /**
+     * The sensitivity property
+     */
     private Sensitivity sensitivity;
-    /** The seriesMasterId property */
+    /**
+     * The seriesMasterId property
+     */
     private String seriesMasterId;
-    /** The showAs property */
+    /**
+     * The showAs property
+     */
     private FreeBusyStatus showAs;
-    /** The collection of single-value extended properties defined for the event. Read-only. Nullable. */
+    /**
+     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
+     */
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /** The start property */
+    /**
+     * The start property
+     */
     private DateTimeTimeZone start;
-    /** The subject property */
+    /**
+     * The subject property
+     */
     private String subject;
-    /** The transactionId property */
+    /**
+     * The transactionId property
+     */
     private String transactionId;
-    /** The type property */
+    /**
+     * The type property
+     */
     private EventType type;
-    /** The webLink property */
+    /**
+     * The webLink property
+     */
     private String webLink;
     /**
      * Instantiates a new Event and sets the default values.

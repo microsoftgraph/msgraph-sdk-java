@@ -8,13 +8,21 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class OnPremisesConditionalAccessSettings extends Entity implements Parsable {
-    /** Indicates if on premises conditional access is enabled for this organization */
+    /**
+     * Indicates if on premises conditional access is enabled for this organization
+     */
     private Boolean enabled;
-    /** User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy. */
+    /**
+     * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
+     */
     private java.util.List<UUID> excludedGroups;
-    /** User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access. */
+    /**
+     * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
+     */
     private java.util.List<UUID> includedGroups;
-    /** Override the default access rule when allowing a device to ensure access is granted. */
+    /**
+     * Override the default access rule when allowing a device to ensure access is granted.
+     */
     private Boolean overrideDefaultRule;
     /**
      * Instantiates a new onPremisesConditionalAccessSettings and sets the default values.

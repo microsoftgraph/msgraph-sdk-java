@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
  */
 public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the activities property of the microsoft.graph.externalConnectors.externalItem entity. */
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.externalConnectors.externalItem entity.
+     */
     @javax.annotation.Nonnull
     public ActivitiesRequestBuilder activities() {
         return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the addActivities method. */
+    /**
+     * Provides operations to call the addActivities method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder microsoftGraphExternalConnectorsAddActivities() {
         return new MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder(pathParameters, requestAdapter);
@@ -267,11 +271,15 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an externalItem object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -280,7 +288,9 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

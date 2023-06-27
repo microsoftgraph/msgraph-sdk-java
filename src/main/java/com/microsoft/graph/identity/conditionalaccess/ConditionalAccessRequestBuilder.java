@@ -25,27 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the conditionalAccess property of the microsoft.graph.identityContainer entity.
  */
 public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity. */
+    /**
+     * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
+     */
     @javax.annotation.Nonnull
     public AuthenticationContextClassReferencesRequestBuilder authenticationContextClassReferences() {
         return new AuthenticationContextClassReferencesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the authenticationStrength property of the microsoft.graph.conditionalAccessRoot entity. */
+    /**
+     * Provides operations to manage the authenticationStrength property of the microsoft.graph.conditionalAccessRoot entity.
+     */
     @javax.annotation.Nonnull
     public AuthenticationStrengthRequestBuilder authenticationStrength() {
         return new AuthenticationStrengthRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity. */
+    /**
+     * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
+     */
     @javax.annotation.Nonnull
     public NamedLocationsRequestBuilder namedLocations() {
         return new NamedLocationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity. */
+    /**
+     * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
+     */
     @javax.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity. */
+    /**
+     * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
+     */
     @javax.annotation.Nonnull
     public TemplatesRequestBuilder templates() {
         return new TemplatesRequestBuilder(pathParameters, requestAdapter);
@@ -281,11 +291,15 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * the entry point for the Conditional Access (CA) object model.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -294,7 +308,9 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

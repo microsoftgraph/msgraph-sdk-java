@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UrlEvidence extends AlertEvidence implements Parsable {
-    /** The Unique Resource Locator (URL). */
+    /**
+     * The Unique Resource Locator (URL).
+     */
     private String url;
     /**
      * Instantiates a new UrlEvidence and sets the default values.

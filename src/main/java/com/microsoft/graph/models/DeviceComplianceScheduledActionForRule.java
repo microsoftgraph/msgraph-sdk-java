@@ -10,9 +10,13 @@ import java.util.Objects;
  * Scheduled Action for Rule
  */
 public class DeviceComplianceScheduledActionForRule extends Entity implements Parsable {
-    /** Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired. */
+    /**
+     * Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
+     */
     private String ruleName;
-    /** The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action. */
+    /**
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
+     */
     private java.util.List<DeviceComplianceActionItem> scheduledActionConfigurations;
     /**
      * Instantiates a new deviceComplianceScheduledActionForRule and sets the default values.

@@ -8,61 +8,117 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Device extends DirectoryObject implements Parsable {
-    /** true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property. */
+    /**
+     * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     */
     private Boolean accountEnabled;
-    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le). */
+    /**
+     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
+     */
     private java.util.List<AlternativeSecurityId> alternativeSecurityIds;
-    /** The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy. */
+    /**
+     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
+     */
     private OffsetDateTime approximateLastSignInDateTime;
-    /** The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime complianceExpirationDateTime;
-    /** User-defined property set by Intune to automatically add devices to groups and simplify managing devices. */
+    /**
+     * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+     */
     private String deviceCategory;
-    /** Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith). */
+    /**
+     * Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
+     */
     private String deviceId;
-    /** For internal use only. Set to null. */
+    /**
+     * For internal use only. Set to null.
+     */
     private String deviceMetadata;
-    /** Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal. */
+    /**
+     * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     */
     private String deviceOwnership;
-    /** For internal use only. */
+    /**
+     * For internal use only.
+     */
     private Integer deviceVersion;
-    /** The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
+    /**
+     * The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     */
     private String displayName;
-    /** Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune. */
+    /**
+     * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     */
     private String enrollmentProfileName;
-    /** The collection of open extensions defined for the device. Read-only. Nullable. */
+    /**
+     * The collection of open extensions defined for the device. Read-only. Nullable.
+     */
     private java.util.List<Extension> extensions;
-    /** true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not). */
+    /**
+     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
+     */
     private Boolean isCompliant;
-    /** true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not). */
+    /**
+     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
+     */
     private Boolean isManaged;
-    /** Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith). */
+    /**
+     * Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
+     */
     private String mdmAppId;
-    /** Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand. */
+    /**
+     * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
+     */
     private java.util.List<DirectoryObject> memberOf;
-    /** The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in). */
+    /**
+     * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
+     */
     private OffsetDateTime onPremisesLastSyncDateTime;
-    /** true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values). */
+    /**
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
+     */
     private Boolean onPremisesSyncEnabled;
-    /** The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
+    /**
+     * The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
+     */
     private String operatingSystem;
-    /** The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
+    /**
+     * The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
+     */
     private String operatingSystemVersion;
-    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0). */
+    /**
+     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith,/$count eq 0, /$count ne 0).
+     */
     private java.util.List<String> physicalIds;
-    /** The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT. */
+    /**
+     * The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
+     */
     private String profileType;
-    /** The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand. */
+    /**
+     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
+     */
     private java.util.List<DirectoryObject> registeredOwners;
-    /** Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand. */
+    /**
+     * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
+     */
     private java.util.List<DirectoryObject> registeredUsers;
-    /** Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime registrationDateTime;
-    /** List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0). */
+    /**
+     * List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
+     */
     private java.util.List<String> systemLabels;
-    /** Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand. */
+    /**
+     * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
+     */
     private java.util.List<DirectoryObject> transitiveMemberOf;
-    /** Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory */
+    /**
+     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     */
     private String trustType;
     /**
      * Instantiates a new device and sets the default values.

@@ -8,47 +8,89 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Whether the printer should collate pages wehen printing multiple copies of a multi-page document. */
+    /**
+     * Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
+     */
     private Boolean collate;
-    /** The color mode the printer should use to print the job. Valid values are described in the table below. Read-only. */
+    /**
+     * The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
+     */
     private PrintColorMode colorMode;
-    /** The number of copies that should be printed. Read-only. */
+    /**
+     * The number of copies that should be printed. Read-only.
+     */
     private Integer copies;
-    /** The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only. */
+    /**
+     * The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
+     */
     private Integer dpi;
-    /** The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only. */
+    /**
+     * The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
+     */
     private PrintDuplexMode duplexMode;
-    /** The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only. */
+    /**
+     * The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
+     */
     private PrinterFeedOrientation feedOrientation;
-    /** Finishing processes to use when printing. */
+    /**
+     * Finishing processes to use when printing.
+     */
     private java.util.List<PrintFinishing> finishings;
-    /** The fitPdfToPage property */
+    /**
+     * The fitPdfToPage property
+     */
     private Boolean fitPdfToPage;
-    /** The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins. */
+    /**
+     * The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
+     */
     private String inputBin;
-    /** The margin settings to use when printing. */
+    /**
+     * The margin settings to use when printing.
+     */
     private PrintMargin margin;
-    /** The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. */
+    /**
+     * The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
+     */
     private String mediaSize;
-    /** The mediaType property */
+    /**
+     * The mediaType property
+     */
     private String mediaType;
-    /** The multipageLayout property */
+    /**
+     * The multipageLayout property
+     */
     private PrintMultipageLayout multipageLayout;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The orientation property */
+    /**
+     * The orientation property
+     */
     private PrintOrientation orientation;
-    /** The outputBin property */
+    /**
+     * The outputBin property
+     */
     private String outputBin;
-    /** The pageRanges property */
+    /**
+     * The pageRanges property
+     */
     private java.util.List<IntegerRange> pageRanges;
-    /** The pagesPerSheet property */
+    /**
+     * The pagesPerSheet property
+     */
     private Integer pagesPerSheet;
-    /** The quality property */
+    /**
+     * The quality property
+     */
     private PrintQuality quality;
-    /** The scaling property */
+    /**
+     * The scaling property
+     */
     private PrintScaling scaling;
     /**
      * Instantiates a new PrintJobConfiguration and sets the default values.

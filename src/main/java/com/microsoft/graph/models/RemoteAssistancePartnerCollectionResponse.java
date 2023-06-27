@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoteAssistancePartnerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<RemoteAssistancePartner> value;
     /**
      * Instantiates a new RemoteAssistancePartnerCollectionResponse and sets the default values.

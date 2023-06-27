@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApprovalSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false. */
+    /**
+     * One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
+     */
     private String approvalMode;
-    /** If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required. */
+    /**
+     * If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
+     */
     private java.util.List<UnifiedApprovalStage> approvalStages;
-    /** Indicates whether approval is required for requests in this policy. */
+    /**
+     * Indicates whether approval is required for requests in this policy.
+     */
     private Boolean isApprovalRequired;
-    /** Indicates whether approval is required for a user to extend their assignment. */
+    /**
+     * Indicates whether approval is required for a user to extend their assignment.
+     */
     private Boolean isApprovalRequiredForExtension;
-    /** Indicates whether the requestor is required to supply a justification in their request. */
+    /**
+     * Indicates whether the requestor is required to supply a justification in their request.
+     */
     private Boolean isRequestorJustificationRequired;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new approvalSettings and sets the default values.

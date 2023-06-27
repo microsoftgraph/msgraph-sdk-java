@@ -11,13 +11,21 @@ import java.util.Objects;
  * A page for a folder containing apps and web clips on the Home Screen.
  */
 public class IosHomeScreenFolderPage implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A list of apps and web clips to appear on a page within a folder. This collection can contain a maximum of 500 elements. */
+    /**
+     * A list of apps and web clips to appear on a page within a folder. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<IosHomeScreenApp> apps;
-    /** Name of the folder page */
+    /**
+     * Name of the folder page
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new IosHomeScreenFolderPage and sets the default values.

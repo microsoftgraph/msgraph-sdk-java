@@ -12,15 +12,25 @@ import java.util.Objects;
  * This type represents when and to whom to send an e-mail reminder.
  */
 public class BookingReminder implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The message in the reminder. */
+    /**
+     * The message in the reminder.
+     */
     private String message;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format. */
+    /**
+     * The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
+     */
     private Period offset;
-    /** The recipients property */
+    /**
+     * The recipients property
+     */
     private BookingReminderRecipients recipients;
     /**
      * Instantiates a new bookingReminder and sets the default values.

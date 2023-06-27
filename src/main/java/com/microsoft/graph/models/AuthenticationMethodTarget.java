@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodTarget extends Entity implements Parsable {
-    /** Determines if the user is enforced to register the authentication method. */
+    /**
+     * Determines if the user is enforced to register the authentication method.
+     */
     private Boolean isRegistrationRequired;
-    /** The targetType property */
+    /**
+     * The targetType property
+     */
     private AuthenticationMethodTargetType targetType;
     /**
      * Instantiates a new authenticationMethodTarget and sets the default values.

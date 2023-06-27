@@ -9,19 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The expirationDateTime property */
+    /**
+     * The expirationDateTime property
+     */
     private OffsetDateTime expirationDateTime;
-    /** The message property */
+    /**
+     * The message property
+     */
     private String message;
-    /** The password property */
+    /**
+     * The password property
+     */
     private String password;
-    /** The retainInheritedPermissions property */
+    /**
+     * The retainInheritedPermissions property
+     */
     private Boolean retainInheritedPermissions;
-    /** The scope property */
+    /**
+     * The scope property
+     */
     private String scope;
-    /** The type property */
+    /**
+     * The type property
+     */
     private String type;
     /**
      * Instantiates a new createLinkPostRequestBody and sets the default values.

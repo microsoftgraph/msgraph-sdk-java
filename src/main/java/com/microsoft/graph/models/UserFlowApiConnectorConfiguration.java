@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The postAttributeCollection property */
+    /**
+     * The postAttributeCollection property
+     */
     private IdentityApiConnector postAttributeCollection;
-    /** The postFederationSignup property */
+    /**
+     * The postFederationSignup property
+     */
     private IdentityApiConnector postFederationSignup;
     /**
      * Instantiates a new userFlowApiConnectorConfiguration and sets the default values.

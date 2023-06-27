@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BinomInvPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The alpha property */
+    /**
+     * The alpha property
+     */
     private Json alpha;
-    /** The probabilityS property */
+    /**
+     * The probabilityS property
+     */
     private Json probabilityS;
-    /** The trials property */
+    /**
+     * The trials property
+     */
     private Json trials;
     /**
      * Instantiates a new BinomInvPostRequestBody and sets the default values.

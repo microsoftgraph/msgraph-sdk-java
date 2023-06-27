@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Bitlocker extends Entity implements Parsable {
-    /** The recovery keys associated with the bitlocker entity. */
+    /**
+     * The recovery keys associated with the bitlocker entity.
+     */
     private java.util.List<BitlockerRecoveryKey> recoveryKeys;
     /**
      * Instantiates a new Bitlocker and sets the default values.

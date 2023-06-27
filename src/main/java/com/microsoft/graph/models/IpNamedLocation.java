@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IpNamedLocation extends NamedLocation implements Parsable {
-    /** List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required. */
+    /**
+     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC5969. Required.
+     */
     private java.util.List<IpRange> ipRanges;
-    /** true if this location is explicitly trusted. Optional. Default value is false. */
+    /**
+     * true if this location is explicitly trusted. Optional. Default value is false.
+     */
     private Boolean isTrusted;
     /**
      * Instantiates a new IpNamedLocation and sets the default values.

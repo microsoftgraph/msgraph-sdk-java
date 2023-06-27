@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** App configuration key types. */
+/**
+ * App configuration key types.
+ */
 public enum MdmAppConfigKeyType implements ValuedEnum {
     StringType("stringType"),
     IntegerType("integerType"),

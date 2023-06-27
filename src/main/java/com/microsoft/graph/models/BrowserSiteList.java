@@ -11,25 +11,45 @@ import java.util.Objects;
  * A singleton entity which is used to specify IE mode site list metadata
  */
 public class BrowserSiteList extends Entity implements Parsable {
-    /** The description of the site list. */
+    /**
+     * The description of the site list.
+     */
     private String description;
-    /** The name of the site list. */
+    /**
+     * The name of the site list.
+     */
     private String displayName;
-    /** The user who last modified the site list. */
+    /**
+     * The user who last modified the site list.
+     */
     private IdentitySet lastModifiedBy;
-    /** The date and time when the site list was last modified. */
+    /**
+     * The date and time when the site list was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The user who published the site list. */
+    /**
+     * The user who published the site list.
+     */
     private IdentitySet publishedBy;
-    /** The date and time when the site list was published. */
+    /**
+     * The date and time when the site list was published.
+     */
     private OffsetDateTime publishedDateTime;
-    /** The current revision of the site list. */
+    /**
+     * The current revision of the site list.
+     */
     private String revision;
-    /** A collection of shared cookies defined for the site list. */
+    /**
+     * A collection of shared cookies defined for the site list.
+     */
     private java.util.List<BrowserSharedCookie> sharedCookies;
-    /** A collection of sites defined for the site list. */
+    /**
+     * A collection of sites defined for the site list.
+     */
     private java.util.List<BrowserSite> sites;
-    /** The status property */
+    /**
+     * The status property
+     */
     private BrowserSiteListStatus status;
     /**
      * Instantiates a new browserSiteList and sets the default values.

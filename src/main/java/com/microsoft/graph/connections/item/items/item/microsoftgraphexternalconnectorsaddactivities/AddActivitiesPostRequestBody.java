@@ -9,9 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AddActivitiesPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The activities property */
+    /**
+     * The activities property
+     */
     private java.util.List<ExternalActivity> activities;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
     /**
      * Instantiates a new addActivitiesPostRequestBody and sets the default values.

@@ -28,42 +28,58 @@ import java.util.Objects;
  * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
  */
 public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageAssignmentApprovalsRequestBuilder accessPackageAssignmentApprovals() {
         return new AccessPackageAssignmentApprovalsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentPoliciesRequestBuilder assignmentPolicies() {
         return new AssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentRequestsRequestBuilder assignmentRequests() {
         return new AssignmentRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public CatalogsRequestBuilder catalogs() {
         return new CatalogsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder connectedOrganizations() {
         return new ConnectedOrganizationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity. */
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity.
+     */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
@@ -299,11 +315,15 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Get entitlementManagement from identityGovernance
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -312,7 +332,9 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

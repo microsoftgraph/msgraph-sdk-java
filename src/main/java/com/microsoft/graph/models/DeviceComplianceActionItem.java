@@ -10,13 +10,21 @@ import java.util.Objects;
  * Scheduled Action Configuration
  */
 public class DeviceComplianceActionItem extends Entity implements Parsable {
-    /** Scheduled Action Type Enum */
+    /**
+     * Scheduled Action Type Enum
+     */
     private DeviceComplianceActionType actionType;
-    /** Number of hours to wait till the action will be enforced. Valid values 0 to 8760 */
+    /**
+     * Number of hours to wait till the action will be enforced. Valid values 0 to 8760
+     */
     private Integer gracePeriodHours;
-    /** A list of group IDs to speicify who to CC this notification message to. */
+    /**
+     * A list of group IDs to speicify who to CC this notification message to.
+     */
     private java.util.List<String> notificationMessageCCList;
-    /** What notification Message template to use */
+    /**
+     * What notification Message template to use
+     */
     private String notificationTemplateId;
     /**
      * Instantiates a new deviceComplianceActionItem and sets the default values.

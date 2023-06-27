@@ -11,15 +11,25 @@ import java.util.Objects;
  * BitLocker Removable Drive Policies.
  */
 public class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer. */
+    /**
+     * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
+     */
     private Boolean blockCrossOrganizationWriteAccess;
-    /** Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256. */
+    /**
+     * Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     */
     private BitLockerEncryptionMethod encryptionMethod;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect. */
+    /**
+     * Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
+     */
     private Boolean requireEncryptionForWriteAccess;
     /**
      * Instantiates a new bitLockerRemovableDrivePolicy and sets the default values.

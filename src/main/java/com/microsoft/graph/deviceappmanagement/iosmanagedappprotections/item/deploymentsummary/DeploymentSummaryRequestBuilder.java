@@ -78,8 +78,9 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Navigation property to deployment summary of the configuration.
+     * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> get() {
@@ -96,9 +97,10 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Navigation property to deployment summary of the configuration.
+     * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deploymentSummary in deviceAppManagement
+     * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param body The request body
      * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> patch(@javax.annotation.Nonnull final ManagedAppPolicyDeploymentSummary body) {
@@ -134,10 +137,11 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deploymentSummary in deviceAppManagement
+     * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppPolicyDeploymentSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> patch(@javax.annotation.Nonnull final ManagedAppPolicyDeploymentSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Navigation property to deployment summary of the configuration.
+     * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Navigation property to deployment summary of the configuration.
+     * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deploymentSummary in deviceAppManagement
+     * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deploymentSummary in deviceAppManagement
+     * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,14 +252,18 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Navigation property to deployment summary of the configuration.
+     * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -264,7 +272,9 @@ public class DeploymentSummaryRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -8,29 +8,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Video implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Number of audio bits per sample. */
+    /**
+     * Number of audio bits per sample.
+     */
     private Integer audioBitsPerSample;
-    /** Number of audio channels. */
+    /**
+     * Number of audio channels.
+     */
     private Integer audioChannels;
-    /** Name of the audio format (AAC, MP3, etc.). */
+    /**
+     * Name of the audio format (AAC, MP3, etc.).
+     */
     private String audioFormat;
-    /** Number of audio samples per second. */
+    /**
+     * Number of audio samples per second.
+     */
     private Integer audioSamplesPerSecond;
-    /** Bit rate of the video in bits per second. */
+    /**
+     * Bit rate of the video in bits per second.
+     */
     private Integer bitrate;
-    /** Duration of the file in milliseconds. */
+    /**
+     * Duration of the file in milliseconds.
+     */
     private Long duration;
-    /** 'Four character code' name of the video format. */
+    /**
+     * 'Four character code' name of the video format.
+     */
     private String fourCC;
-    /** Frame rate of the video. */
+    /**
+     * Frame rate of the video.
+     */
     private Double frameRate;
-    /** Height of the video, in pixels. */
+    /**
+     * Height of the video, in pixels.
+     */
     private Integer height;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Width of the video, in pixels. */
+    /**
+     * Width of the video, in pixels.
+     */
     private Integer width;
     /**
      * Instantiates a new video and sets the default values.

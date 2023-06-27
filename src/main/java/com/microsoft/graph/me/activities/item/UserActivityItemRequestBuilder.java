@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the activities property of the microsoft.graph.user entity.
  */
 public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity. */
+    /**
+     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
+     */
     @javax.annotation.Nonnull
     public HistoryItemsRequestBuilder historyItems() {
         return new HistoryItemsRequestBuilder(pathParameters, requestAdapter);
@@ -259,11 +261,15 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
      * The user's activities across devices. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -272,7 +278,9 @@ public class UserActivityItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

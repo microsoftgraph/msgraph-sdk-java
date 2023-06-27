@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Parsable {
-    /** If set to true, Azure Active Directory security defaults is enabled for the tenant. */
+    /**
+     * If set to true, Azure Active Directory security defaults is enabled for the tenant.
+     */
     private Boolean isEnabled;
     /**
      * Instantiates a new IdentitySecurityDefaultsEnforcementPolicy and sets the default values.

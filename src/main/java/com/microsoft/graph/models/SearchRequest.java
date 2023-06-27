@@ -8,39 +8,73 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchRequest implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The aggregationFilters property */
+    /**
+     * The aggregationFilters property
+     */
     private java.util.List<String> aggregationFilters;
-    /** The aggregations property */
+    /**
+     * The aggregations property
+     */
     private java.util.List<AggregationOption> aggregations;
-    /** The collapseProperties property */
+    /**
+     * The collapseProperties property
+     */
     private java.util.List<CollapseProperty> collapseProperties;
-    /** The contentSources property */
+    /**
+     * The contentSources property
+     */
     private java.util.List<String> contentSources;
-    /** The enableTopResults property */
+    /**
+     * The enableTopResults property
+     */
     private Boolean enableTopResults;
-    /** The entityTypes property */
+    /**
+     * The entityTypes property
+     */
     private java.util.List<EntityType> entityTypes;
-    /** The fields property */
+    /**
+     * The fields property
+     */
     private java.util.List<String> fields;
-    /** The from property */
+    /**
+     * The from property
+     */
     private Integer from;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The query property */
+    /**
+     * The query property
+     */
     private SearchQuery query;
-    /** The queryAlterationOptions property */
+    /**
+     * The queryAlterationOptions property
+     */
     private SearchAlterationOptions queryAlterationOptions;
-    /** The region property */
+    /**
+     * The region property
+     */
     private String region;
-    /** The resultTemplateOptions property */
+    /**
+     * The resultTemplateOptions property
+     */
     private ResultTemplateOption resultTemplateOptions;
-    /** The sharePointOneDriveOptions property */
+    /**
+     * The sharePointOneDriveOptions property
+     */
     private SharePointOneDriveOptions sharePointOneDriveOptions;
-    /** The size property */
+    /**
+     * The size property
+     */
     private Integer size;
-    /** The sortProperties property */
+    /**
+     * The sortProperties property
+     */
     private java.util.List<SortProperty> sortProperties;
     /**
      * Instantiates a new SearchRequest and sets the default values.

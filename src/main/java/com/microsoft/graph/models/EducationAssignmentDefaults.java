@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentDefaults extends Entity implements Parsable {
-    /** Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen. */
+    /**
+     * Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
+     */
     private EducationAddedStudentAction addedStudentAction;
-    /** Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none. */
+    /**
+     * Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+     */
     private EducationAddToCalendarOptions addToCalendarAction;
-    /** Class-level default value for due time field. Default value is 23:59:00. */
+    /**
+     * Class-level default value for due time field. Default value is 23:59:00.
+     */
     private LocalTime dueTime;
-    /** Default Teams channel to which notifications will be sent. Default value is null. */
+    /**
+     * Default Teams channel to which notifications will be sent. Default value is null.
+     */
     private String notificationChannelUrl;
     /**
      * Instantiates a new educationAssignmentDefaults and sets the default values.

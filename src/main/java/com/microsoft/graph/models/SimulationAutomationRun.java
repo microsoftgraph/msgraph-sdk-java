@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SimulationAutomationRun extends Entity implements Parsable {
-    /** Date and time when the run ends in an attack simulation automation. */
+    /**
+     * Date and time when the run ends in an attack simulation automation.
+     */
     private OffsetDateTime endDateTime;
-    /** Unique identifier for the attack simulation campaign initiated in the attack simulation automation run. */
+    /**
+     * Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
+     */
     private String simulationId;
-    /** Date and time when the run starts in an attack simulation automation. */
+    /**
+     * Date and time when the run starts in an attack simulation automation.
+     */
     private OffsetDateTime startDateTime;
-    /** Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue. */
+    /**
+     * Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
+     */
     private SimulationAutomationRunStatus status;
     /**
      * Instantiates a new simulationAutomationRun and sets the default values.

@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MediaStream implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The direction property */
+    /**
+     * The direction property
+     */
     private MediaDirection direction;
-    /** The media stream label. */
+    /**
+     * The media stream label.
+     */
     private String label;
-    /** The mediaType property */
+    /**
+     * The mediaType property
+     */
     private Modality mediaType;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** If the media is muted by the server. */
+    /**
+     * If the media is muted by the server.
+     */
     private Boolean serverMuted;
-    /** The source ID. */
+    /**
+     * The source ID.
+     */
     private String sourceId;
     /**
      * Instantiates a new mediaStream and sets the default values.

@@ -39,97 +39,135 @@ import java.util.Objects;
  * Provides operations to manage the policyRoot singleton.
  */
 public class PoliciesRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public ActivityBasedTimeoutPoliciesRequestBuilder activityBasedTimeoutPolicies() {
         return new ActivityBasedTimeoutPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the adminConsentRequestPolicy property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the adminConsentRequestPolicy property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public AdminConsentRequestPolicyRequestBuilder adminConsentRequestPolicy() {
         return new AdminConsentRequestPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public AppManagementPoliciesRequestBuilder appManagementPolicies() {
         return new AppManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the authenticationFlowsPolicy property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the authenticationFlowsPolicy property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public AuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
         return new AuthenticationFlowsPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the authenticationMethodsPolicy property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the authenticationMethodsPolicy property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the authenticationStrengthPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the authenticationStrengthPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public AuthenticationStrengthPoliciesRequestBuilder authenticationStrengthPolicies() {
         return new AuthenticationStrengthPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the authorizationPolicy property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the authorizationPolicy property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public AuthorizationPolicyRequestBuilder authorizationPolicy() {
         return new AuthorizationPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public ConditionalAccessPoliciesRequestBuilder conditionalAccessPolicies() {
         return new ConditionalAccessPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the crossTenantAccessPolicy property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the crossTenantAccessPolicy property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
         return new CrossTenantAccessPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the defaultAppManagementPolicy property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the defaultAppManagementPolicy property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public DefaultAppManagementPolicyRequestBuilder defaultAppManagementPolicy() {
         return new DefaultAppManagementPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public FeatureRolloutPoliciesRequestBuilder featureRolloutPolicies() {
         return new FeatureRolloutPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the identitySecurityDefaultsEnforcementPolicy property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the identitySecurityDefaultsEnforcementPolicy property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public PermissionGrantPoliciesRequestBuilder permissionGrantPolicies() {
         return new PermissionGrantPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public RoleManagementPoliciesRequestBuilder roleManagementPolicies() {
         return new RoleManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public RoleManagementPolicyAssignmentsRequestBuilder roleManagementPolicyAssignments() {
         return new RoleManagementPolicyAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity. */
+    /**
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
+     */
     @javax.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -296,11 +334,15 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Get policies
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -309,7 +351,9 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

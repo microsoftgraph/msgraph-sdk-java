@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageHistoryItem implements AdditionalDataHolder, Parsable {
-    /** The actions property */
+    /**
+     * The actions property
+     */
     private ChatMessageActions actions;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The date and time when the message was modified. */
+    /**
+     * The date and time when the message was modified.
+     */
     private OffsetDateTime modifiedDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The reaction in the modified message. */
+    /**
+     * The reaction in the modified message.
+     */
     private ChatMessageReaction reaction;
     /**
      * Instantiates a new chatMessageHistoryItem and sets the default values.

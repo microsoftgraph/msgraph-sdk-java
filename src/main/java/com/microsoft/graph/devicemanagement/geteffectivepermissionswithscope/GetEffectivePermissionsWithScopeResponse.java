@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetEffectivePermissionsWithScopeResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<RolePermission> value;
     /**
      * Instantiates a new getEffectivePermissionsWithScopeResponse and sets the default values.

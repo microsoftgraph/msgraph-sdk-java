@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RubricLevel implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The description of this rubric level. */
+    /**
+     * The description of this rubric level.
+     */
     private EducationItemBody description;
-    /** The name of this rubric level. */
+    /**
+     * The name of this rubric level.
+     */
     private String displayName;
-    /** Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric. */
+    /**
+     * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
+     */
     private EducationAssignmentGradeType grading;
-    /** The ID of this resource. */
+    /**
+     * The ID of this resource.
+     */
     private String levelId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new rubricLevel and sets the default values.

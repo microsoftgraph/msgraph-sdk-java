@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters. */
+    /**
+     * Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
+     */
     private Integer defaultLength;
-    /** Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes. */
+    /**
+     * Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
+     */
     private Integer defaultLifetimeInMinutes;
-    /** A collection of groups that are enabled to use the authentication method. */
+    /**
+     * A collection of groups that are enabled to use the authentication method.
+     */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /** If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable. */
+    /**
+     * If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
+     */
     private Boolean isUsableOnce;
-    /** Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
+    /**
+     * Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     */
     private Integer maximumLifetimeInMinutes;
-    /** Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
+    /**
+     * Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     */
     private Integer minimumLifetimeInMinutes;
     /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethodConfiguration and sets the default values.

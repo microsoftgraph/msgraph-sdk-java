@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LocateDeviceActionResult extends DeviceActionResult implements Parsable {
-    /** device location */
+    /**
+     * device location
+     */
     private DeviceGeoLocation deviceLocation;
     /**
      * Instantiates a new LocateDeviceActionResult and sets the default values.

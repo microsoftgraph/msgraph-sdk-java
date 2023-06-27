@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The ID of the conference. */
+    /**
+     * The ID of the conference.
+     */
     private String conferenceId;
-    /** The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting. */
+    /**
+     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     */
     private String joinUrl;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** All of the phone numbers associated with this conference. */
+    /**
+     * All of the phone numbers associated with this conference.
+     */
     private java.util.List<Phone> phones;
-    /** The pre-formatted quickdial for this call. */
+    /**
+     * The pre-formatted quickdial for this call.
+     */
     private String quickDial;
-    /** The toll free numbers that can be used to join the conference. */
+    /**
+     * The toll free numbers that can be used to join the conference.
+     */
     private java.util.List<String> tollFreeNumbers;
-    /** The toll number that can be used to join the conference. */
+    /**
+     * The toll number that can be used to join the conference.
+     */
     private String tollNumber;
     /**
      * Instantiates a new onlineMeetingInfo and sets the default values.

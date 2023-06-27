@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintServiceEndpoint extends Entity implements Parsable {
-    /** A human-readable display name for the endpoint. */
+    /**
+     * A human-readable display name for the endpoint.
+     */
     private String displayName;
-    /** The URI that can be used to access the service. */
+    /**
+     * The URI that can be used to access the service.
+     */
     private String uri;
     /**
      * Instantiates a new printServiceEndpoint and sets the default values.

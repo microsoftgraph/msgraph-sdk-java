@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Schema extends Entity implements Parsable {
-    /** Must be set to microsoft.graph.externalConnector.externalItem. Required. */
+    /**
+     * Must be set to microsoft.graph.externalConnector.externalItem. Required.
+     */
     private String baseType;
-    /** The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128. */
+    /**
+     * The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
+     */
     private java.util.List<Property> properties;
     /**
      * Instantiates a new schema and sets the default values.

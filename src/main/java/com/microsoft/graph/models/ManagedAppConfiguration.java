@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable {
-    /** A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service */
+    /**
+     * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
+     */
     private java.util.List<KeyValuePair> customSettings;
     /**
      * Instantiates a new ManagedAppConfiguration and sets the default values.

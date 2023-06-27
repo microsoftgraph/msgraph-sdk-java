@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShift extends ChangeTrackedEntity implements Parsable {
-    /** An unpublished open shift. */
+    /**
+     * An unpublished open shift.
+     */
     private OpenShiftItem draftOpenShift;
-    /** ID for the scheduling group that the open shift belongs to. */
+    /**
+     * ID for the scheduling group that the open shift belongs to.
+     */
     private String schedulingGroupId;
-    /** A published open shift. */
+    /**
+     * A published open shift.
+     */
     private OpenShiftItem sharedOpenShift;
     /**
      * Instantiates a new OpenShift and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
-    /** The unique identifier for the chat whose members should receive the notifications. */
+    /**
+     * The unique identifier for the chat whose members should receive the notifications.
+     */
     private String chatId;
     /**
      * Instantiates a new ChatMembersNotificationRecipient and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewSet extends Entity implements Parsable {
-    /** Represents the template and scheduling for an access review. */
+    /**
+     * Represents the template and scheduling for an access review.
+     */
     private java.util.List<AccessReviewScheduleDefinition> definitions;
-    /** Represents a collection of access review history data and the scopes used to collect that data. */
+    /**
+     * Represents a collection of access review history data and the scopes used to collect that data.
+     */
     private java.util.List<AccessReviewHistoryDefinition> historyDefinitions;
     /**
      * Instantiates a new AccessReviewSet and sets the default values.
