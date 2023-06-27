@@ -39,7 +39,7 @@ public class DefaultColumnValue implements IJsonBackedObject {
 
     /**
      * The Formula.
-     * The formula used to compute the default value for this column.
+     * The formula used to compute the default value for the column.
      */
     @SerializedName(value = "formula", alternate = {"Formula"})
     @Expose
@@ -48,7 +48,7 @@ public class DefaultColumnValue implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The direct value to use as the default value for this column.
+     * The direct value to use as the default value for the column.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

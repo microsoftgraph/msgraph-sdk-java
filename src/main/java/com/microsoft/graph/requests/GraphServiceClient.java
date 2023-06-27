@@ -1022,6 +1022,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the IdentityGovernance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IdentityGovernanceRequestBuilder identityGovernance() {
+        return new com.microsoft.graph.requests.IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the AuditLogRoot
      */
     @Nonnull
@@ -1167,16 +1177,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.CloudCommunicationsRequestBuilder communications() {
         return new com.microsoft.graph.requests.CloudCommunicationsRequestBuilder(getServiceRoot() + "/communications", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the IdentityGovernance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.IdentityGovernanceRequestBuilder identityGovernance() {
-        return new com.microsoft.graph.requests.IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
     }
 
     /**

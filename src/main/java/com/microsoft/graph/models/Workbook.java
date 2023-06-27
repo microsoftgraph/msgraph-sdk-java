@@ -44,7 +44,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Comments.
-     * 
+     * Represents a collection of comments in a workbook.
      */
     @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose

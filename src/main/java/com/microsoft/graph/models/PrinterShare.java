@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.PrinterShareViewpoint;
 import com.microsoft.graph.models.Printer;
 import com.microsoft.graph.models.PrinterBase;
 import com.microsoft.graph.requests.GroupCollectionPage;
@@ -46,6 +47,15 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime createdDateTime;
+
+    /**
+     * The View Point.
+     * Additional data for a printer share as viewed by the signed-in user.
+     */
+    @SerializedName(value = "viewPoint", alternate = {"ViewPoint"})
+    @Expose
+	@Nullable
+    public PrinterShareViewpoint viewPoint;
 
     /**
      * The Allowed Groups.

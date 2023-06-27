@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewApplyAction;
+import com.microsoft.graph.models.AccessReviewRecommendationInsightSetting;
 import com.microsoft.graph.models.PatternedRecurrence;
 
 
@@ -111,6 +112,24 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean mailNotificationsEnabled;
+
+    /**
+     * The Recommendation Insight Settings.
+     * 
+     */
+    @SerializedName(value = "recommendationInsightSettings", alternate = {"RecommendationInsightSettings"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewRecommendationInsightSetting> recommendationInsightSettings;
+
+    /**
+     * The Recommendation Look Back Duration.
+     * 
+     */
+    @SerializedName(value = "recommendationLookBackDuration", alternate = {"RecommendationLookBackDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration recommendationLookBackDuration;
 
     /**
      * The Recommendations Enabled.
