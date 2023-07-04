@@ -200,6 +200,16 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
     }
 
     /**
+     * Gets the request builder for ThreatIntelligence
+     *
+     * @return the ThreatIntelligenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.ThreatIntelligenceRequestBuilder threatIntelligence() {
+        return new com.microsoft.graph.security.requests.ThreatIntelligenceRequestBuilder(getRequestUrlWithAdditionalSegment("threatIntelligence"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method

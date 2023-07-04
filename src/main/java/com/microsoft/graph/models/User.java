@@ -21,6 +21,7 @@ import com.microsoft.graph.models.OnPremisesProvisioningError;
 import com.microsoft.graph.models.PasswordProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.MailboxSettings;
+import com.microsoft.graph.models.UserPrint;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.InferenceClassification;
@@ -35,6 +36,7 @@ import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
+import com.microsoft.graph.models.EmployeeExperienceUser;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
 import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage;
@@ -647,6 +649,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public Integer deviceEnrollmentLimit;
 
     /**
+     * The Print.
+     * 
+     */
+    @SerializedName(value = "print", alternate = {"Print"})
+    @Expose
+	@Nullable
+    public UserPrint print;
+
+    /**
      * The About Me.
      * A freeform text entry field for the user to describe themselves. Returned only on $select.
      */
@@ -1067,7 +1078,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Online Meetings.
-     * 
+     * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
      */
     @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
@@ -1112,7 +1123,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Teamwork.
-     * 
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      */
     @SerializedName(value = "teamwork", alternate = {"Teamwork"})
     @Expose
@@ -1127,6 +1138,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Todo todo;
+
+    /**
+     * The Employee Experience.
+     * 
+     */
+    @SerializedName(value = "employeeExperience", alternate = {"EmployeeExperience"})
+    @Expose
+	@Nullable
+    public EmployeeExperienceUser employeeExperience;
 
 
     /**

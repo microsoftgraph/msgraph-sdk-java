@@ -21,9 +21,11 @@ import com.microsoft.graph.models.ManagedDeviceOwnerType;
 import com.microsoft.graph.models.ManagementAgentType;
 import com.microsoft.graph.models.ManagedDevicePartnerReportedHealthState;
 import com.microsoft.graph.models.DeviceCategory;
+import com.microsoft.graph.models.WindowsProtectionState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage;
 import com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage;
+import com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionPage;
 import com.microsoft.graph.requests.UserCollectionPage;
 
 
@@ -546,11 +548,29 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public DeviceCategory deviceCategory;
 
     /**
+     * The Log Collection Requests.
+     * List of log collection requests
+     */
+    @SerializedName(value = "logCollectionRequests", alternate = {"LogCollectionRequests"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionPage logCollectionRequests;
+
+    /**
      * The Users.
      * The primary users associated with the managed device.
      */
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage users;
+
+    /**
+     * The Windows Protection State.
+     * The device protection status. This property is read-only.
+     */
+    @SerializedName(value = "windowsProtectionState", alternate = {"WindowsProtectionState"})
+    @Expose
+	@Nullable
+    public WindowsProtectionState windowsProtectionState;
 
 
     /**
@@ -568,6 +588,10 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
         if (json.has("deviceConfigurationStates")) {
             deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates"), com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage.class);
+        }
+
+        if (json.has("logCollectionRequests")) {
+            logCollectionRequests = serializer.deserializeObject(json.get("logCollectionRequests"), com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionPage.class);
         }
 
         if (json.has("users")) {

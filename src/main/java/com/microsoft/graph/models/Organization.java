@@ -181,7 +181,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Security Compliance Notification Mails.
-     * 
+     * Not nullable.
      */
     @SerializedName(value = "securityComplianceNotificationMails", alternate = {"SecurityComplianceNotificationMails"})
     @Expose
@@ -190,7 +190,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Security Compliance Notification Phones.
-     * 
+     * Not nullable.
      */
     @SerializedName(value = "securityComplianceNotificationPhones", alternate = {"SecurityComplianceNotificationPhones"})
     @Expose

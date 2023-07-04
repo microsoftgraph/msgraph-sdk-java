@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.models;
 
-
+import com.microsoft.graph.models.TeamsAppPermissionSet;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -20,6 +20,15 @@ import java.util.ArrayList;
  * The class for the Teams App Installation Upgrade Parameter Set.
  */
 public class TeamsAppInstallationUpgradeParameterSet {
+    /**
+     * The consented Permission Set.
+     * 
+     */
+    @SerializedName(value = "consentedPermissionSet", alternate = {"ConsentedPermissionSet"})
+    @Expose
+	@Nullable
+    public TeamsAppPermissionSet consentedPermissionSet;
+
 
     /**
      * Instiaciates a new TeamsAppInstallationUpgradeParameterSet
@@ -30,6 +39,7 @@ public class TeamsAppInstallationUpgradeParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected TeamsAppInstallationUpgradeParameterSet(@Nonnull final TeamsAppInstallationUpgradeParameterSetBuilder builder) {
+        this.consentedPermissionSet = builder.consentedPermissionSet;
     }
     /**
      * Gets a new builder for the body
@@ -43,6 +53,21 @@ public class TeamsAppInstallationUpgradeParameterSet {
      * Fluent builder for the TeamsAppInstallationUpgradeParameterSet
      */
     public static final class TeamsAppInstallationUpgradeParameterSetBuilder {
+        /**
+         * The consentedPermissionSet parameter value
+         */
+        @Nullable
+        protected TeamsAppPermissionSet consentedPermissionSet;
+        /**
+         * Sets the ConsentedPermissionSet
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public TeamsAppInstallationUpgradeParameterSetBuilder withConsentedPermissionSet(@Nullable final TeamsAppPermissionSet val) {
+            this.consentedPermissionSet = val;
+            return this;
+        }
         /**
          * Instanciates a new TeamsAppInstallationUpgradeParameterSetBuilder
          */
@@ -64,6 +89,9 @@ public class TeamsAppInstallationUpgradeParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.consentedPermissionSet != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("consentedPermissionSet", consentedPermissionSet));
+        }
         return result;
     }
 }

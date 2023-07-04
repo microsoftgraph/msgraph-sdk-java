@@ -13,6 +13,7 @@ import com.microsoft.graph.security.models.CasesRoot;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.security.models.TriggersRoot;
 import com.microsoft.graph.security.models.TriggerTypesRoot;
+import com.microsoft.graph.security.models.ThreatIntelligence;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.security.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionPage;
@@ -113,6 +114,15 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.SecureScoreCollectionPage secureScores;
+
+    /**
+     * The Threat Intelligence.
+     * 
+     */
+    @SerializedName(value = "threatIntelligence", alternate = {"ThreatIntelligence"})
+    @Expose
+	@Nullable
+    public ThreatIntelligence threatIntelligence;
 
 
     /**

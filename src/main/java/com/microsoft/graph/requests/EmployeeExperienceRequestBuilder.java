@@ -57,6 +57,26 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder<Employe
 
 
     /**
+     *  Gets a request builder for the LearningCourseActivity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LearningCourseActivityCollectionRequestBuilder learningCourseActivities() {
+        return new com.microsoft.graph.requests.LearningCourseActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("learningCourseActivities"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the LearningCourseActivity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.LearningCourseActivityRequestBuilder learningCourseActivities(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.LearningCourseActivityRequestBuilder(getRequestUrlWithAdditionalSegment("learningCourseActivities") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the LearningProvider collection
      *
      * @return the collection request builder

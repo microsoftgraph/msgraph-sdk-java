@@ -58,6 +58,16 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
 
 
     /**
+     * Gets the request builder for LifecycleWorkflowsContainer
+     *
+     * @return the LifecycleWorkflowsContainerRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.identitygovernance.requests.LifecycleWorkflowsContainerRequestBuilder lifecycleWorkflows() {
+        return new com.microsoft.graph.identitygovernance.requests.LifecycleWorkflowsContainerRequestBuilder(getRequestUrlWithAdditionalSegment("lifecycleWorkflows"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for AccessReviewSet
      *
      * @return the AccessReviewSetRequestBuilder instance

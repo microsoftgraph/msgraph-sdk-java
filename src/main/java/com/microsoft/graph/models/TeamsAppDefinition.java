@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.TeamsAppAuthorization;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.TeamsAppPublishingState;
 import com.microsoft.graph.models.TeamworkBot;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Authorization.
+     * 
+     */
+    @SerializedName(value = "authorization", alternate = {"Authorization"})
+    @Expose
+	@Nullable
+    public TeamsAppAuthorization authorization;
 
     /**
      * The Created By.

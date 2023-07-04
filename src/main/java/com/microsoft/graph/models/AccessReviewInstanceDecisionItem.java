@@ -8,10 +8,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemResource;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.GovernanceInsightCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -145,6 +147,15 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 	@Nullable
     public java.time.OffsetDateTime reviewedDateTime;
 
+    /**
+     * The Insights.
+     * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+     */
+    @SerializedName(value = "insights", alternate = {"Insights"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.GovernanceInsightCollectionPage insights;
+
 
     /**
      * Sets the raw JSON object
@@ -154,5 +165,9 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("insights")) {
+            insights = serializer.deserializeObject(json.get("insights"), com.microsoft.graph.requests.GovernanceInsightCollectionPage.class);
+        }
     }
 }

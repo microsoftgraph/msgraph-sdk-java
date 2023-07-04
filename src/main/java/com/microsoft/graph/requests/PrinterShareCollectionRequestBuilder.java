@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Print;
+import com.microsoft.graph.models.UserPrint;
 import com.microsoft.graph.models.PrinterShare;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class PrinterShareCollectionRequestBuilder extends BaseCollectionRequestBuilder<PrinterShare, PrinterShareRequestBuilder, PrinterShareCollectionResponse, PrinterShareCollectionPage, PrinterShareCollectionRequest> {
 
     /**
-     * The request builder for this collection of Print
+     * The request builder for this collection of UserPrint
      *
      * @param requestUrl     the request URL
      * @param client         the service client

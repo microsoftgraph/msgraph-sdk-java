@@ -1189,6 +1189,16 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
+     * Gets the request builder for EmployeeExperienceUser
+     *
+     * @return the EmployeeExperienceUserRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EmployeeExperienceUserRequestBuilder employeeExperience() {
+        return new com.microsoft.graph.requests.EmployeeExperienceUserRequestBuilder(getRequestUrlWithAdditionalSegment("employeeExperience"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method

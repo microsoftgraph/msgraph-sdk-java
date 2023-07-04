@@ -26,6 +26,24 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
 
 
     /**
+     * The Is Removable.
+     * When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
+     */
+    @SerializedName(value = "isRemovable", alternate = {"IsRemovable"})
+    @Expose
+	@Nullable
+    public Boolean isRemovable;
+
+    /**
+     * The Uninstall On Device Removal.
+     * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
+     */
+    @SerializedName(value = "uninstallOnDeviceRemoval", alternate = {"UninstallOnDeviceRemoval"})
+    @Expose
+	@Nullable
+    public Boolean uninstallOnDeviceRemoval;
+
+    /**
      * The Vpn Configuration Id.
      * The VPN Configuration Id to apply for this app.
      */

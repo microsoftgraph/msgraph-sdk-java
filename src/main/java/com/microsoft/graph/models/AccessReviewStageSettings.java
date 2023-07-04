@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
+import com.microsoft.graph.models.AccessReviewRecommendationInsightSetting;
 
 
 import com.google.gson.JsonObject;
@@ -74,6 +75,15 @@ public class AccessReviewStageSettings implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AccessReviewReviewerScope> fallbackReviewers;
+
+    /**
+     * The Recommendation Insight Settings.
+     * 
+     */
+    @SerializedName(value = "recommendationInsightSettings", alternate = {"RecommendationInsightSettings"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewRecommendationInsightSetting> recommendationInsightSettings;
 
     /**
      * The Recommendations Enabled.
