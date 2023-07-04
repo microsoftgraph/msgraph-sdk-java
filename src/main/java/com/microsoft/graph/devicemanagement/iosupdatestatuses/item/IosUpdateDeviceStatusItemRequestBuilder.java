@@ -41,8 +41,9 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/iosUpdateStatuses/{iosUpdateDeviceStatus%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property iosUpdateStatuses for deviceManagement
+     * Deletes a iosUpdateDeviceStatus.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property iosUpdateStatuses for deviceManagement
+     * Deletes a iosUpdateDeviceStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * Read properties and relationships of the iosUpdateDeviceStatus object.
      * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> get() {
@@ -96,9 +99,10 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * Read properties and relationships of the iosUpdateDeviceStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property iosUpdateStatuses in deviceManagement
+     * Update the properties of a iosUpdateDeviceStatus object.
      * @param body The request body
      * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> patch(@javax.annotation.Nonnull final IosUpdateDeviceStatus body) {
@@ -134,10 +139,11 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the navigation property iosUpdateStatuses in deviceManagement
+     * Update the properties of a iosUpdateDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> patch(@javax.annotation.Nonnull final IosUpdateDeviceStatus body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Delete navigation property iosUpdateStatuses for deviceManagement
+     * Deletes a iosUpdateDeviceStatus.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property iosUpdateStatuses for deviceManagement
+     * Deletes a iosUpdateDeviceStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * Read properties and relationships of the iosUpdateDeviceStatus object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * Read properties and relationships of the iosUpdateDeviceStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property iosUpdateStatuses in deviceManagement
+     * Update the properties of a iosUpdateDeviceStatus object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property iosUpdateStatuses in deviceManagement
+     * Update the properties of a iosUpdateDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,14 +254,18 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * Read properties and relationships of the iosUpdateDeviceStatus object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -264,7 +274,9 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The gracePeriodBeforeAccessRemoval property */
+    /**
+     * The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
+     */
     private Period gracePeriodBeforeAccessRemoval;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The removeAccessWhenTargetLeavesAllowedTargets property */
+    /**
+     * Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
+     */
     private Boolean removeAccessWhenTargetLeavesAllowedTargets;
-    /** If set to true, automatic assignments will be created for targets in the allowed target scope. */
+    /**
+     * If set to true, automatic assignments will be created for targets in the allowed target scope.
+     */
     private Boolean requestAccessForAllowedTargets;
     /**
      * Instantiates a new accessPackageAutomaticRequestSettings and sets the default values.
@@ -59,7 +69,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         return deserializerMap;
     }
     /**
-     * Gets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
+     * Gets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -75,7 +85,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         return this.odataType;
     }
     /**
-     * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
+     * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -114,7 +124,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         this.additionalData = value;
     }
     /**
-     * Sets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
+     * Sets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
      * @param value Value to set for the gracePeriodBeforeAccessRemoval property.
      * @return a void
      */
@@ -132,7 +142,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
         this.odataType = value;
     }
     /**
-     * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
+     * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
      * @param value Value to set for the removeAccessWhenTargetLeavesAllowedTargets property.
      * @return a void
      */

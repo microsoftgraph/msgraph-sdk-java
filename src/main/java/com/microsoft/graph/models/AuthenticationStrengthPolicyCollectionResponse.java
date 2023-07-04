@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationStrengthPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AuthenticationStrengthPolicy> value;
     /**
      * Instantiates a new AuthenticationStrengthPolicyCollectionResponse and sets the default values.

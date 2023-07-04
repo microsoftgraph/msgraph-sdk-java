@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
-    /** The enum to specify the channels for Microsoft Edge apps. */
+    /**
+     * The enum to specify the channels for Microsoft Edge apps.
+     */
     private MicrosoftEdgeChannel channel;
-    /** The language locale to use when the Edge app displays text to the user. */
+    /**
+     * The language locale to use when the Edge app displays text to the user.
+     */
     private String displayLanguageLocale;
     /**
      * Instantiates a new WindowsMicrosoftEdgeApp and sets the default values.

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecommendedAction implements AdditionalDataHolder, Parsable {
-    /** Web URL to the recommended action. */
+    /**
+     * Web URL to the recommended action.
+     */
     private String actionWebUrl;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Potential improvement in the tenant security score from the recommended action. */
+    /**
+     * Potential improvement in the tenant security score from the recommended action.
+     */
     private Double potentialScoreImpact;
-    /** Title of the recommended action. */
+    /**
+     * Title of the recommended action.
+     */
     private String title;
     /**
      * Instantiates a new recommendedAction and sets the default values.

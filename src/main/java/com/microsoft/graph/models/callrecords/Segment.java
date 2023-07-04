@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Segment extends Entity implements Parsable {
-    /** Endpoint that answered this segment. */
+    /**
+     * Endpoint that answered this segment.
+     */
     private Endpoint callee;
-    /** Endpoint that initiated this segment. */
+    /**
+     * Endpoint that initiated this segment.
+     */
     private Endpoint caller;
-    /** UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime endDateTime;
-    /** Failure information associated with the segment if it failed. */
+    /**
+     * Failure information associated with the segment if it failed.
+     */
     private FailureInfo failureInfo;
-    /** Media associated with this segment. */
+    /**
+     * Media associated with this segment.
+     */
     private java.util.List<Media> media;
-    /** UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new segment and sets the default values.

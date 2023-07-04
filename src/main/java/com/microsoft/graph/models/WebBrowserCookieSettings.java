@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Web Browser Cookie Settings. */
+/**
+ * Web Browser Cookie Settings.
+ */
 public enum WebBrowserCookieSettings implements ValuedEnum {
     /** Browser default value, no intent. */
     BrowserDefault("browserDefault"),

@@ -9,21 +9,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationStudent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Birth date of the student. */
+    /**
+     * Birth date of the student.
+     */
     private LocalDate birthDate;
-    /** ID of the student in the source system. */
+    /**
+     * ID of the student in the source system.
+     */
     private String externalId;
-    /** The possible values are: female, male, other, unknownFutureValue. */
+    /**
+     * The possible values are: female, male, other, unknownFutureValue.
+     */
     private EducationGender gender;
-    /** Current grade level of the student. */
+    /**
+     * Current grade level of the student.
+     */
     private String grade;
-    /** Year the student is graduating from the school. */
+    /**
+     * Year the student is graduating from the school.
+     */
     private String graduationYear;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Student Number. */
+    /**
+     * Student Number.
+     */
     private String studentNumber;
     /**
      * Instantiates a new educationStudent and sets the default values.

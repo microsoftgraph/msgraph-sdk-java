@@ -11,13 +11,21 @@ import java.util.Objects;
  * Proxied Domain
  */
 public class ProxiedDomain implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The IP address or FQDN */
+    /**
+     * The IP address or FQDN
+     */
     private String ipAddressOrFQDN;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Proxy IP or FQDN */
+    /**
+     * Proxy IP or FQDN
+     */
     private String proxy;
     /**
      * Instantiates a new ProxiedDomain and sets the default values.

@@ -7,31 +7,57 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Room extends Place implements Parsable {
-    /** Specifies the name of the audio device in the room. */
+    /**
+     * Specifies the name of the audio device in the room.
+     */
     private String audioDeviceName;
-    /** Type of room. Possible values are standard, and reserved. */
+    /**
+     * Type of room. Possible values are standard, and reserved.
+     */
     private BookingType bookingType;
-    /** Specifies the building name or building number that the room is in. */
+    /**
+     * Specifies the building name or building number that the room is in.
+     */
     private String building;
-    /** Specifies the capacity of the room. */
+    /**
+     * Specifies the capacity of the room.
+     */
     private Integer capacity;
-    /** Specifies the name of the display device in the room. */
+    /**
+     * Specifies the name of the display device in the room.
+     */
     private String displayDeviceName;
-    /** Email address of the room. */
+    /**
+     * Email address of the room.
+     */
     private String emailAddress;
-    /** Specifies a descriptive label for the floor, for example, P. */
+    /**
+     * Specifies a descriptive label for the floor, for example, P.
+     */
     private String floorLabel;
-    /** Specifies the floor number that the room is on. */
+    /**
+     * Specifies the floor number that the room is on.
+     */
     private Integer floorNumber;
-    /** Specifies whether the room is wheelchair accessible. */
+    /**
+     * Specifies whether the room is wheelchair accessible.
+     */
     private Boolean isWheelChairAccessible;
-    /** Specifies a descriptive label for the room, for example, a number or name. */
+    /**
+     * Specifies a descriptive label for the room, for example, a number or name.
+     */
     private String label;
-    /** Specifies a nickname for the room, for example, 'conf room'. */
+    /**
+     * Specifies a nickname for the room, for example, 'conf room'.
+     */
     private String nickname;
-    /** Specifies additional features of the room, for example, details like the type of view or furniture type. */
+    /**
+     * Specifies additional features of the room, for example, details like the type of view or furniture type.
+     */
     private java.util.List<String> tags;
-    /** Specifies the name of the video device in the room. */
+    /**
+     * Specifies the name of the video device in the room.
+     */
     private String videoDeviceName;
     /**
      * Instantiates a new Room and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityUserFlow extends Entity implements Parsable {
-    /** The userFlowType property */
+    /**
+     * The userFlowType property
+     */
     private UserFlowType userFlowType;
-    /** The userFlowTypeVersion property */
+    /**
+     * The userFlowTypeVersion property
+     */
     private Float userFlowTypeVersion;
     /**
      * Instantiates a new IdentityUserFlow and sets the default values.

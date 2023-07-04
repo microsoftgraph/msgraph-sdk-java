@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the comments property of the microsoft.graph.workbook entity.
  */
 public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the replies property of the microsoft.graph.workbookComment entity. */
+    /**
+     * Provides operations to manage the replies property of the microsoft.graph.workbookComment entity.
+     */
     @javax.annotation.Nonnull
     public RepliesRequestBuilder replies() {
         return new RepliesRequestBuilder(pathParameters, requestAdapter);
@@ -84,7 +86,7 @@ public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @return a CompletableFuture of workbookComment
      */
     @javax.annotation.Nonnull
@@ -102,7 +104,7 @@ public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookComment
      */
@@ -188,7 +190,7 @@ public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +198,7 @@ public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,14 +256,18 @@ public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class WorkbookCommentItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

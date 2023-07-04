@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AgreementFile extends AgreementFileProperties implements Parsable {
-    /** The localized version of the terms of use agreement files attached to the agreement. */
+    /**
+     * The localized version of the terms of use agreement files attached to the agreement.
+     */
     private java.util.List<AgreementFileLocalization> localizations;
     /**
      * Instantiates a new AgreementFile and sets the default values.

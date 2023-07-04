@@ -10,9 +10,13 @@ import java.util.Objects;
  * The identifier for the deployment an app.
  */
 public class ManagedMobileApp extends Entity implements Parsable {
-    /** The identifier for an app with it's operating system type. */
+    /**
+     * The identifier for an app with it's operating system type.
+     */
     private MobileAppIdentifier mobileAppIdentifier;
-    /** Version of the entity. */
+    /**
+     * Version of the entity.
+     */
     private String version;
     /**
      * Instantiates a new managedMobileApp and sets the default values.

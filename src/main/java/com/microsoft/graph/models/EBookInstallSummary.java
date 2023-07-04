@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EBookInstallSummary extends Entity implements Parsable {
-    /** Number of Devices that have failed to install this book. */
+    /**
+     * Number of Devices that have failed to install this book.
+     */
     private Integer failedDeviceCount;
-    /** Number of Users that have 1 or more device that failed to install this book. */
+    /**
+     * Number of Users that have 1 or more device that failed to install this book.
+     */
     private Integer failedUserCount;
-    /** Number of Devices that have successfully installed this book. */
+    /**
+     * Number of Devices that have successfully installed this book.
+     */
     private Integer installedDeviceCount;
-    /** Number of Users whose devices have all succeeded to install this book. */
+    /**
+     * Number of Users whose devices have all succeeded to install this book.
+     */
     private Integer installedUserCount;
-    /** Number of Devices that does not have this book installed. */
+    /**
+     * Number of Devices that does not have this book installed.
+     */
     private Integer notInstalledDeviceCount;
-    /** Number of Users that did not install this book. */
+    /**
+     * Number of Users that did not install this book.
+     */
     private Integer notInstalledUserCount;
     /**
      * Instantiates a new eBookInstallSummary and sets the default values.

@@ -9,19 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecurrenceRange implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate. */
+    /**
+     * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
+     */
     private LocalDate endDate;
-    /** The number of times to repeat the event. Required and must be positive if type is numbered. */
+    /**
+     * The number of times to repeat the event. Required and must be positive if type is numbered.
+     */
     private Integer numberOfOccurrences;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used. */
+    /**
+     * Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
+     */
     private String recurrenceTimeZone;
-    /** The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required. */
+    /**
+     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
+     */
     private LocalDate startDate;
-    /** The recurrence range. The possible values are: endDate, noEnd, numbered. Required. */
+    /**
+     * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
+     */
     private RecurrenceRangeType type;
     /**
      * Instantiates a new recurrenceRange and sets the default values.

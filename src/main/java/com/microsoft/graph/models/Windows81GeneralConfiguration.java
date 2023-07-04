@@ -7,71 +7,137 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account. */
+    /**
+     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
+     */
     private Boolean accountsBlockAddingNonMicrosoftAccountEmail;
-    /** Value indicating whether this policy only applies to Windows 8.1. This property is read-only. */
+    /**
+     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
+     */
     private Boolean applyOnlyToWindows81;
-    /** Indicates whether or not to block auto fill. */
+    /**
+     * Indicates whether or not to block auto fill.
+     */
     private Boolean browserBlockAutofill;
-    /** Indicates whether or not to block automatic detection of Intranet sites. */
+    /**
+     * Indicates whether or not to block automatic detection of Intranet sites.
+     */
     private Boolean browserBlockAutomaticDetectionOfIntranetSites;
-    /** Indicates whether or not to block enterprise mode access. */
+    /**
+     * Indicates whether or not to block enterprise mode access.
+     */
     private Boolean browserBlockEnterpriseModeAccess;
-    /** Indicates whether or not to Block the user from using JavaScript. */
+    /**
+     * Indicates whether or not to Block the user from using JavaScript.
+     */
     private Boolean browserBlockJavaScript;
-    /** Indicates whether or not to block plug-ins. */
+    /**
+     * Indicates whether or not to block plug-ins.
+     */
     private Boolean browserBlockPlugins;
-    /** Indicates whether or not to block popups. */
+    /**
+     * Indicates whether or not to block popups.
+     */
     private Boolean browserBlockPopups;
-    /** Indicates whether or not to Block the user from sending the do not track header. */
+    /**
+     * Indicates whether or not to Block the user from sending the do not track header.
+     */
     private Boolean browserBlockSendingDoNotTrackHeader;
-    /** Indicates whether or not to block a single word entry on Intranet sites. */
+    /**
+     * Indicates whether or not to block a single word entry on Intranet sites.
+     */
     private Boolean browserBlockSingleWordEntryOnIntranetSites;
-    /** The enterprise mode site list location. Could be a local file, local network or http location. */
+    /**
+     * The enterprise mode site list location. Could be a local file, local network or http location.
+     */
     private String browserEnterpriseModeSiteListLocation;
-    /** Possible values for internet site security level. */
+    /**
+     * Possible values for internet site security level.
+     */
     private InternetSiteSecurityLevel browserInternetSecurityLevel;
-    /** Possible values for site security level. */
+    /**
+     * Possible values for site security level.
+     */
     private SiteSecurityLevel browserIntranetSecurityLevel;
-    /** The logging report location. */
+    /**
+     * The logging report location.
+     */
     private String browserLoggingReportLocation;
-    /** Indicates whether or not to require a firewall. */
+    /**
+     * Indicates whether or not to require a firewall.
+     */
     private Boolean browserRequireFirewall;
-    /** Indicates whether or not to require fraud warning. */
+    /**
+     * Indicates whether or not to require fraud warning.
+     */
     private Boolean browserRequireFraudWarning;
-    /** Indicates whether or not to require high security for restricted sites. */
+    /**
+     * Indicates whether or not to require high security for restricted sites.
+     */
     private Boolean browserRequireHighSecurityForRestrictedSites;
-    /** Indicates whether or not to require the user to use the smart screen filter. */
+    /**
+     * Indicates whether or not to require the user to use the smart screen filter.
+     */
     private Boolean browserRequireSmartScreen;
-    /** Possible values for site security level. */
+    /**
+     * Possible values for site security level.
+     */
     private SiteSecurityLevel browserTrustedSitesSecurityLevel;
-    /** Indicates whether or not to block data roaming. */
+    /**
+     * Indicates whether or not to block data roaming.
+     */
     private Boolean cellularBlockDataRoaming;
-    /** Indicates whether or not to block diagnostic data submission. */
+    /**
+     * Indicates whether or not to block diagnostic data submission.
+     */
     private Boolean diagnosticsBlockDataSubmission;
-    /** Indicates whether or not to Block the user from using a pictures password and pin. */
+    /**
+     * Indicates whether or not to Block the user from using a pictures password and pin.
+     */
     private Boolean passwordBlockPicturePasswordAndPin;
-    /** Password expiration in days. */
+    /**
+     * Password expiration in days.
+     */
     private Integer passwordExpirationDays;
-    /** The number of character sets required in the password. */
+    /**
+     * The number of character sets required in the password.
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** The minimum password length. */
+    /**
+     * The minimum password length.
+     */
     private Integer passwordMinimumLength;
-    /** The minutes of inactivity before the screen times out. */
+    /**
+     * The minutes of inactivity before the screen times out.
+     */
     private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /** The number of previous passwords to prevent re-use of. Valid values 0 to 24 */
+    /**
+     * The number of previous passwords to prevent re-use of. Valid values 0 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
-    /** The number of sign in failures before factory reset. */
+    /**
+     * The number of sign in failures before factory reset.
+     */
     private Integer passwordSignInFailureCountBeforeFactoryReset;
-    /** Indicates whether or not to require encryption on a mobile device. */
+    /**
+     * Indicates whether or not to require encryption on a mobile device.
+     */
     private Boolean storageRequireDeviceEncryption;
-    /** Indicates whether or not to require automatic updates. */
+    /**
+     * Indicates whether or not to require automatic updates.
+     */
     private Boolean updatesRequireAutomaticUpdates;
-    /** Possible values for Windows user account control settings. */
+    /**
+     * Possible values for Windows user account control settings.
+     */
     private WindowsUserAccountControlSettings userAccountControlSettings;
-    /** The work folders url. */
+    /**
+     * The work folders url.
+     */
     private String workFoldersUrl;
     /**
      * Instantiates a new Windows81GeneralConfiguration and sets the default values.

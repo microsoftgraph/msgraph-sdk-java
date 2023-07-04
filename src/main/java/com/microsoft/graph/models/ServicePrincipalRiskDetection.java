@@ -8,48 +8,88 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServicePrincipalRiskDetection extends Entity implements Parsable {
-    /** Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal. */
+    /**
+     * Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
+     */
     private ActivityType activity;
-    /** Date and time when the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Date and time when the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime activityDateTime;
-    /** Additional information associated with the risk detection. This string value is represented as a JSON object with the quotations escaped. */
+    /**
+     * Additional information associated with the risk detection. This string value is represented as a JSON object with the quotations escaped.
+     */
     private String additionalInfo;
-    /** The unique identifier for the associated application. */
+    /**
+     * The unique identifier for the associated application.
+     */
     private String appId;
-    /** Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. */
+    /**
+     * Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
+     */
     private String correlationId;
-    /** Date and time when the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * Date and time when the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime detectedDateTime;
-    /** Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue. */
+    /**
+     * Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     */
     private RiskDetectionTimingType detectionTimingType;
-    /** Provides the IP address of the client from where the risk occurred. */
+    /**
+     * Provides the IP address of the client from where the risk occurred.
+     */
     private String ipAddress;
-    /** The unique identifier for the key credential associated with the risk detection. */
+    /**
+     * The unique identifier for the key credential associated with the risk detection.
+     */
     private java.util.List<String> keyIds;
-    /** Date and time when the risk detection was last updated. */
+    /**
+     * Date and time when the risk detection was last updated.
+     */
     private OffsetDateTime lastUpdatedDateTime;
-    /** Location from where the sign-in was initiated. */
+    /**
+     * Location from where the sign-in was initiated.
+     */
     private SignInLocation location;
-    /** Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq). */
+    /**
+     * Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
+     */
     private String requestId;
-    /** Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal. */
+    /**
+     * Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
+     */
     private RiskDetail riskDetail;
-    /** The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication. */
+    /**
+     * The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
+     */
     private String riskEventType;
-    /** Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none. */
+    /**
+     * Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
+     */
     private RiskLevel riskLevel;
-    /** The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised. */
+    /**
+     * The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
+     */
     private RiskState riskState;
-    /** The display name for the service principal. */
+    /**
+     * The display name for the service principal.
+     */
     private String servicePrincipalDisplayName;
-    /** The unique identifier for the service principal. Supports $filter (eq). */
+    /**
+     * The unique identifier for the service principal. Supports $filter (eq).
+     */
     private String servicePrincipalId;
-    /** Source of the risk detection. For example, identityProtection. */
+    /**
+     * Source of the risk detection. For example, identityProtection.
+     */
     private String source;
-    /** Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD. */
+    /**
+     * Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
+     */
     private TokenIssuerType tokenIssuerType;
     /**
-     * Instantiates a new ServicePrincipalRiskDetection and sets the default values.
+     * Instantiates a new servicePrincipalRiskDetection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -59,7 +99,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipalRiskDetection
+     * @return a servicePrincipalRiskDetection
      */
     @javax.annotation.Nonnull
     public static ServicePrincipalRiskDetection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

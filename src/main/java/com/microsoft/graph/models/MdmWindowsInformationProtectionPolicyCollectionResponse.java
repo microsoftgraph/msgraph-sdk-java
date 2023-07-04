@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MdmWindowsInformationProtectionPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<MdmWindowsInformationProtectionPolicy> value;
     /**
      * Instantiates a new MdmWindowsInformationProtectionPolicyCollectionResponse and sets the default values.

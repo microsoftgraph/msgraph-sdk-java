@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion implements Parsable {
-    /** List of answer choices. */
+    /**
+     * List of answer choices.
+     */
     private java.util.List<AccessPackageAnswerChoice> choices;
-    /** Indicates whether requestor can select multiple choices as their answer. */
+    /**
+     * Indicates whether requestor can select multiple choices as their answer.
+     */
     private Boolean isMultipleSelectionAllowed;
     /**
      * Instantiates a new AccessPackageMultipleChoiceQuestion and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
-    /** The description to set for the directory role. Read-only. */
+    /**
+     * The description to set for the directory role. Read-only.
+     */
     private String description;
-    /** The display name to set for the directory role. Read-only. */
+    /**
+     * The display name to set for the directory role. Read-only.
+     */
     private String displayName;
     /**
      * Instantiates a new DirectoryRoleTemplate and sets the default values.

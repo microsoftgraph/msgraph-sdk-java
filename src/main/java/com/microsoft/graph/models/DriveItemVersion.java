@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItemVersion extends BaseItemVersion implements Parsable {
-    /** The content stream for this version of the item. */
+    /**
+     * The content stream for this version of the item.
+     */
     private byte[] content;
-    /** Indicates the size of the content stream for this version of the item. */
+    /**
+     * Indicates the size of the content stream for this version of the item.
+     */
     private Long size;
     /**
      * Instantiates a new DriveItemVersion and sets the default values.

@@ -10,13 +10,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Tag extends Entity implements Parsable {
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private IdentitySet createdBy;
-    /** The description property */
+    /**
+     * The description property
+     */
     private String description;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The lastModifiedDateTime property */
+    /**
+     * The lastModifiedDateTime property
+     */
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new tag and sets the default values.

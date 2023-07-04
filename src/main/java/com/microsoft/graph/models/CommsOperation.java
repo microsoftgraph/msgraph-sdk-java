@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CommsOperation extends Entity implements Parsable {
-    /** Unique Client Context string. Max limit is 256 chars. */
+    /**
+     * Unique Client Context string. Max limit is 256 chars.
+     */
     private String clientContext;
-    /** The result information. Read-only. */
+    /**
+     * The result information. Read-only.
+     */
     private ResultInfo resultInfo;
-    /** The status property */
+    /**
+     * The status property
+     */
     private OperationStatus status;
     /**
      * Instantiates a new commsOperation and sets the default values.

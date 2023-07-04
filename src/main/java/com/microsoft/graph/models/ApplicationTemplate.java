@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplicationTemplate extends Entity implements Parsable {
-    /** The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting. */
+    /**
+     * The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting.
+     */
     private java.util.List<String> categories;
-    /** A description of the application. */
+    /**
+     * A description of the application.
+     */
     private String description;
-    /** The name of the application. */
+    /**
+     * The name of the application.
+     */
     private String displayName;
-    /** The home page URL of the application. */
+    /**
+     * The home page URL of the application.
+     */
     private String homePageUrl;
-    /** The URL to get the logo for this application. */
+    /**
+     * The URL to get the logo for this application.
+     */
     private String logoUrl;
-    /** The name of the publisher for this application. */
+    /**
+     * The name of the publisher for this application.
+     */
     private String publisher;
-    /** The list of provisioning modes supported by this application. The only valid value is sync. */
+    /**
+     * The list of provisioning modes supported by this application. The only valid value is sync.
+     */
     private java.util.List<String> supportedProvisioningTypes;
-    /** The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported. */
+    /**
+     * The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
+     */
     private java.util.List<String> supportedSingleSignOnModes;
     /**
      * Instantiates a new ApplicationTemplate and sets the default values.

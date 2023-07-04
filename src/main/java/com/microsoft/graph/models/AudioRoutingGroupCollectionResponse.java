@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AudioRoutingGroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AudioRoutingGroup> value;
     /**
      * Instantiates a new AudioRoutingGroupCollectionResponse and sets the default values.

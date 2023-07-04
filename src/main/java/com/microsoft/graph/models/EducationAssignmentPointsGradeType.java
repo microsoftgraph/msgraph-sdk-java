@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType implements Parsable {
-    /** Max points possible for this assignment. */
+    /**
+     * Max points possible for this assignment.
+     */
     private Float maxPoints;
     /**
      * Instantiates a new EducationAssignmentPointsGradeType and sets the default values.

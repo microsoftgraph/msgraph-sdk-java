@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Service principal IDs excluded from the policy scope. */
+    /**
+     * Service principal IDs excluded from the policy scope.
+     */
     private java.util.List<String> excludeServicePrincipals;
-    /** Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant. */
+    /**
+     * Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
+     */
     private java.util.List<String> includeServicePrincipals;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new conditionalAccessClientApplications and sets the default values.

@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookSortField implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Represents whether the sorting is done in an ascending fashion. */
+    /**
+     * Represents whether the sorting is done in an ascending fashion.
+     */
     private Boolean ascending;
-    /** Represents the color that is the target of the condition if the sorting is on font or cell color. */
+    /**
+     * Represents the color that is the target of the condition if the sorting is on font or cell color.
+     */
     private String color;
-    /** Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber. */
+    /**
+     * Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
+     */
     private String dataOption;
-    /** Represents the icon that is the target of the condition if the sorting is on the cell's icon. */
+    /**
+     * Represents the icon that is the target of the condition if the sorting is on the cell's icon.
+     */
     private WorkbookIcon icon;
-    /** Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row). */
+    /**
+     * Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
+     */
     private Integer key;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon. */
+    /**
+     * Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
+     */
     private String sortOn;
     /**
      * Instantiates a new workbookSortField and sets the default values.

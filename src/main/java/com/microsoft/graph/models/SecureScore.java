@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecureScore extends Entity implements Parsable {
-    /** Active user count of the given tenant. */
+    /**
+     * Active user count of the given tenant.
+     */
     private Integer activeUserCount;
-    /** Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope. */
+    /**
+     * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
+     */
     private java.util.List<AverageComparativeScore> averageComparativeScores;
-    /** GUID string for tenant ID. */
+    /**
+     * GUID string for tenant ID.
+     */
     private String azureTenantId;
-    /** Contains tenant scores for a set of controls. */
+    /**
+     * Contains tenant scores for a set of controls.
+     */
     private java.util.List<ControlScore> controlScores;
-    /** The date when the entity is created. */
+    /**
+     * The date when the entity is created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Tenant current attained score on specified date. */
+    /**
+     * Tenant current attained score on specified date.
+     */
     private Double currentScore;
-    /** Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint). */
+    /**
+     * Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     */
     private java.util.List<String> enabledServices;
-    /** Licensed user count of the given tenant. */
+    /**
+     * Licensed user count of the given tenant.
+     */
     private Integer licensedUserCount;
-    /** Tenant maximum possible score on specified date. */
+    /**
+     * Tenant maximum possible score on specified date.
+     */
     private Double maxScore;
-    /** Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required. */
+    /**
+     * Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
+     */
     private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new secureScore and sets the default values.

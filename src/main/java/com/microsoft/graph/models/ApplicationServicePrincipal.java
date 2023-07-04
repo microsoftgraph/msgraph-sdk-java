@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplicationServicePrincipal implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The application property */
+    /**
+     * The application property
+     */
     private Application application;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The servicePrincipal property */
+    /**
+     * The servicePrincipal property
+     */
     private ServicePrincipal servicePrincipal;
     /**
      * Instantiates a new applicationServicePrincipal and sets the default values.

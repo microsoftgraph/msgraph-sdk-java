@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkforceIntegration extends ChangeTrackedEntity implements Parsable {
-    /** API version for the call back URL. Start with 1. */
+    /**
+     * API version for the call back URL. Start with 1.
+     */
     private Integer apiVersion;
-    /** Name of the workforce integration. */
+    /**
+     * Name of the workforce integration.
+     */
     private String displayName;
-    /** The workforce integration encryption resource. */
+    /**
+     * The workforce integration encryption resource.
+     */
     private WorkforceIntegrationEncryption encryption;
-    /** Indicates whether this workforce integration is currently active and available. */
+    /**
+     * Indicates whether this workforce integration is currently active and available.
+     */
     private Boolean isActive;
-    /** The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue. */
+    /**
+     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, userShiftPreferences, openshift, openShiftRequest, offerShiftRequest, unknownFutureValue.
+     */
     private WorkforceIntegrationSupportedEntities supportedEntities;
-    /** Workforce Integration URL for callbacks from the Shifts service. */
+    /**
+     * Workforce Integration URL for callbacks from the Shifts service.
+     */
     private String url;
     /**
      * Instantiates a new WorkforceIntegration and sets the default values.

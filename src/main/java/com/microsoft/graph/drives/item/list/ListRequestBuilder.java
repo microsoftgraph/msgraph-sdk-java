@@ -28,42 +28,58 @@ import java.util.Objects;
  * Provides operations to manage the list property of the microsoft.graph.drive entity.
  */
 public class ListRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the columns property of the microsoft.graph.list entity. */
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.list entity.
+     */
     @javax.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the contentTypes property of the microsoft.graph.list entity. */
+    /**
+     * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
+     */
     @javax.annotation.Nonnull
     public ContentTypesRequestBuilder contentTypes() {
         return new ContentTypesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drive property of the microsoft.graph.list entity. */
+    /**
+     * Provides operations to manage the drive property of the microsoft.graph.list entity.
+     */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the items property of the microsoft.graph.list entity. */
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.list entity.
+     */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.list entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.list entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the subscriptions property of the microsoft.graph.list entity. */
+    /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
+     */
     @javax.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
@@ -299,11 +315,15 @@ public class ListRequestBuilder extends BaseRequestBuilder {
      * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -312,7 +332,9 @@ public class ListRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

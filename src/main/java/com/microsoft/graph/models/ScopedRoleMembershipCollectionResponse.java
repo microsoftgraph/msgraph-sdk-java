@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScopedRoleMembershipCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ScopedRoleMembership> value;
     /**
      * Instantiates a new ScopedRoleMembershipCollectionResponse and sets the default values.

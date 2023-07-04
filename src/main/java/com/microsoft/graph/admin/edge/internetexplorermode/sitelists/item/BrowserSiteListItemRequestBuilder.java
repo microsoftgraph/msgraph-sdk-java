@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the siteLists property of the microsoft.graph.internetExplorerMode entity.
  */
 public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the publish method. */
+    /**
+     * Provides operations to call the publish method.
+     */
     @javax.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity. */
+    /**
+     * Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity.
+     */
     @javax.annotation.Nonnull
     public SharedCookiesRequestBuilder sharedCookies() {
         return new SharedCookiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sites property of the microsoft.graph.browserSiteList entity. */
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.browserSiteList entity.
+     */
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
@@ -275,11 +281,15 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -288,7 +298,9 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

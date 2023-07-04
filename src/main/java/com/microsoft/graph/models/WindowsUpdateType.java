@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Which branch devices will receive their updates from */
+/**
+ * Which branch devices will receive their updates from
+ */
 public enum WindowsUpdateType implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

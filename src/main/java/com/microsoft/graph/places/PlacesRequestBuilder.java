@@ -2,6 +2,7 @@ package com.microsoft.graph.places;
 
 import com.microsoft.graph.places.count.CountRequestBuilder;
 import com.microsoft.graph.places.graphroom.GraphRoomRequestBuilder;
+import com.microsoft.graph.places.graphroomlist.GraphRoomListRequestBuilder;
 import com.microsoft.graph.places.item.PlaceItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
@@ -11,15 +12,26 @@ import java.util.Objects;
  * Builds and executes requests for operations under /places
  */
 public class PlacesRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to room. */
+    /**
+     * Casts the previous resource to room.
+     */
     @javax.annotation.Nonnull
     public GraphRoomRequestBuilder graphRoom() {
         return new GraphRoomRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to roomList.
+     */
+    @javax.annotation.Nonnull
+    public GraphRoomListRequestBuilder graphRoomList() {
+        return new GraphRoomListRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of place entities.

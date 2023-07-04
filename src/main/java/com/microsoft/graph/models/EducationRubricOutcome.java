@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationRubricOutcome extends EducationOutcome implements Parsable {
-    /** A copy of the rubricQualityFeedback property that is made when the grade is released to the student. */
+    /**
+     * A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
+     */
     private java.util.List<RubricQualityFeedbackModel> publishedRubricQualityFeedback;
-    /** A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student. */
+    /**
+     * A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
+     */
     private java.util.List<RubricQualitySelectedColumnModel> publishedRubricQualitySelectedLevels;
-    /** A collection of specific feedback for each quality of this rubric. */
+    /**
+     * A collection of specific feedback for each quality of this rubric.
+     */
     private java.util.List<RubricQualityFeedbackModel> rubricQualityFeedback;
-    /** The level that the teacher has selected for each quality while grading this assignment. */
+    /**
+     * The level that the teacher has selected for each quality while grading this assignment.
+     */
     private java.util.List<RubricQualitySelectedColumnModel> rubricQualitySelectedLevels;
     /**
      * Instantiates a new EducationRubricOutcome and sets the default values.

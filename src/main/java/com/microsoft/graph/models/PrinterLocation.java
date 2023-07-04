@@ -8,43 +8,81 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterLocation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The altitude, in meters, that the printer is located at. */
+    /**
+     * The altitude, in meters, that the printer is located at.
+     */
     private Integer altitudeInMeters;
-    /** The building that the printer is located in. */
+    /**
+     * The building that the printer is located in.
+     */
     private String building;
-    /** The city that the printer is located in. */
+    /**
+     * The city that the printer is located in.
+     */
     private String city;
-    /** The country or region that the printer is located in. */
+    /**
+     * The country or region that the printer is located in.
+     */
     private String countryOrRegion;
-    /** The floor that the printer is located on. Only numerical values are supported right now. */
+    /**
+     * The floor that the printer is located on. Only numerical values are supported right now.
+     */
     private String floor;
-    /** The description of the floor that the printer is located on. */
+    /**
+     * The description of the floor that the printer is located on.
+     */
     private String floorDescription;
-    /** The latitude that the printer is located at. */
+    /**
+     * The latitude that the printer is located at.
+     */
     private Double latitude;
-    /** The longitude that the printer is located at. */
+    /**
+     * The longitude that the printer is located at.
+     */
     private Double longitude;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order. */
+    /**
+     * The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
+     */
     private java.util.List<String> organization;
-    /** The postal code that the printer is located in. */
+    /**
+     * The postal code that the printer is located in.
+     */
     private String postalCode;
-    /** The description of the room that the printer is located in. */
+    /**
+     * The description of the room that the printer is located in.
+     */
     private String roomDescription;
-    /** The room that the printer is located in. Only numerical values are supported right now. */
+    /**
+     * The room that the printer is located in. Only numerical values are supported right now.
+     */
     private String roomName;
-    /** The site that the printer is located in. */
+    /**
+     * The site that the printer is located in.
+     */
     private String site;
-    /** The state or province that the printer is located in. */
+    /**
+     * The state or province that the printer is located in.
+     */
     private String stateOrProvince;
-    /** The street address where the printer is located. */
+    /**
+     * The street address where the printer is located.
+     */
     private String streetAddress;
-    /** The subdivision that the printer is located in. The elements should be in hierarchical order. */
+    /**
+     * The subdivision that the printer is located in. The elements should be in hierarchical order.
+     */
     private java.util.List<String> subdivision;
-    /** The subunit property */
+    /**
+     * The subunit property
+     */
     private java.util.List<String> subunit;
     /**
      * Instantiates a new printerLocation and sets the default values.

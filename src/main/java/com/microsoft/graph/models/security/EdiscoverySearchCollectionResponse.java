@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoverySearchCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<EdiscoverySearch> value;
     /**
      * Instantiates a new EdiscoverySearchCollectionResponse and sets the default values.

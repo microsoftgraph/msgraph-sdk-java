@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the axes property of the microsoft.graph.workbookChart entity.
  */
 public class AxesRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the categoryAxis property of the microsoft.graph.workbookChartAxes entity. */
+    /**
+     * Provides operations to manage the categoryAxis property of the microsoft.graph.workbookChartAxes entity.
+     */
     @javax.annotation.Nonnull
     public CategoryAxisRequestBuilder categoryAxis() {
         return new CategoryAxisRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the seriesAxis property of the microsoft.graph.workbookChartAxes entity. */
+    /**
+     * Provides operations to manage the seriesAxis property of the microsoft.graph.workbookChartAxes entity.
+     */
     @javax.annotation.Nonnull
     public SeriesAxisRequestBuilder seriesAxis() {
         return new SeriesAxisRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the valueAxis property of the microsoft.graph.workbookChartAxes entity. */
+    /**
+     * Provides operations to manage the valueAxis property of the microsoft.graph.workbookChartAxes entity.
+     */
     @javax.annotation.Nonnull
     public ValueAxisRequestBuilder valueAxis() {
         return new ValueAxisRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +275,15 @@ public class AxesRequestBuilder extends BaseRequestBuilder {
      * Represents chart axes. Read-only.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +292,9 @@ public class AxesRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

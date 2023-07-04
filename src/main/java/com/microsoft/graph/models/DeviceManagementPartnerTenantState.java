@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Partner state of this tenant. */
+/**
+ * Partner state of this tenant.
+ */
 public enum DeviceManagementPartnerTenantState implements ValuedEnum {
     /** Partner state is unknown. */
     Unknown("unknown"),

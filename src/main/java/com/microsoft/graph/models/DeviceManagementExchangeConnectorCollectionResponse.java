@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementExchangeConnectorCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DeviceManagementExchangeConnector> value;
     /**
      * Instantiates a new DeviceManagementExchangeConnectorCollectionResponse and sets the default values.

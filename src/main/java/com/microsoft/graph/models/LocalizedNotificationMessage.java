@@ -11,15 +11,25 @@ import java.util.Objects;
  * The text content of a Notification Message Template for the specified locale.
  */
 public class LocalizedNotificationMessage extends Entity implements Parsable {
-    /** Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message. */
+    /**
+     * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
+     */
     private Boolean isDefault;
-    /** DateTime the object was last modified. */
+    /**
+     * DateTime the object was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The Locale for which this message is destined. */
+    /**
+     * The Locale for which this message is destined.
+     */
     private String locale;
-    /** The Message Template content. */
+    /**
+     * The Message Template content.
+     */
     private String messageTemplate;
-    /** The Message Template Subject. */
+    /**
+     * The Message Template Subject.
+     */
     private String subject;
     /**
      * Instantiates a new localizedNotificationMessage and sets the default values.

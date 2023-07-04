@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosiPadOSWebClip extends MobileApp implements Parsable {
-    /** Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com' */
+    /**
+     * Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
+     */
     private String appUrl;
-    /** Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE. */
+    /**
+     * Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
+     */
     private Boolean useManagedBrowser;
     /**
      * Instantiates a new IosiPadOSWebClip and sets the default values.

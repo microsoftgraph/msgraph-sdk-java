@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallRecordingEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Unique identifier of the call. */
+    /**
+     * Unique identifier of the call.
+     */
     private String callId;
-    /** Display name for the call recording. */
+    /**
+     * Display name for the call recording.
+     */
     private String callRecordingDisplayName;
-    /** Duration of the call recording. */
+    /**
+     * Duration of the call recording.
+     */
     private Period callRecordingDuration;
-    /** Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue. */
+    /**
+     * Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
+     */
     private CallRecordingStatus callRecordingStatus;
-    /** Call recording URL. */
+    /**
+     * Call recording URL.
+     */
     private String callRecordingUrl;
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** Organizer of the meeting. */
+    /**
+     * Organizer of the meeting.
+     */
     private IdentitySet meetingOrganizer;
     /**
      * Instantiates a new CallRecordingEventMessageDetail and sets the default values.

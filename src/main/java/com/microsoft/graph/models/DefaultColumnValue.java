@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The formula used to compute the default value for this column. */
+    /**
+     * The formula used to compute the default value for the column.
+     */
     private String formula;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The direct value to use as the default value for this column. */
+    /**
+     * The direct value to use as the default value for the column.
+     */
     private String value;
     /**
      * Instantiates a new defaultColumnValue and sets the default values.
@@ -55,7 +63,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the formula property value. The formula used to compute the default value for this column.
+     * Gets the formula property value. The formula used to compute the default value for the column.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +79,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the value property value. The direct value to use as the default value for this column.
+     * Gets the value property value. The direct value to use as the default value for the column.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +109,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the formula property value. The formula used to compute the default value for this column.
+     * Sets the formula property value. The formula used to compute the default value for the column.
      * @param value Value to set for the formula property.
      * @return a void
      */
@@ -119,7 +127,7 @@ public class DefaultColumnValue implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the value property value. The direct value to use as the default value for this column.
+     * Sets the value property value. The direct value to use as the default value for the column.
      * @param value Value to set for the value property.
      * @return a void
      */

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Attachment extends Entity implements Parsable {
-    /** The MIME type. */
+    /**
+     * The MIME type.
+     */
     private String contentType;
-    /** true if the attachment is an inline attachment; otherwise, false. */
+    /**
+     * true if the attachment is an inline attachment; otherwise, false.
+     */
     private Boolean isInline;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The attachment's file name. */
+    /**
+     * The attachment's file name.
+     */
     private String name;
-    /** The length of the attachment in bytes. */
+    /**
+     * The length of the attachment in bytes.
+     */
     private Integer size;
     /**
      * Instantiates a new attachment and sets the default values.

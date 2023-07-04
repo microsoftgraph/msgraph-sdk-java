@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BitlockerRecoveryKeyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<BitlockerRecoveryKey> value;
     /**
      * Instantiates a new BitlockerRecoveryKeyCollectionResponse and sets the default values.

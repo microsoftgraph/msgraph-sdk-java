@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConvertIdResult implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded. */
+    /**
+     * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
+     */
     private GenericError errorDetails;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The identifier that was converted. This value is the original, un-converted identifier. */
+    /**
+     * The identifier that was converted. This value is the original, un-converted identifier.
+     */
     private String sourceId;
-    /** The converted identifier. This value is not present if the conversion failed. */
+    /**
+     * The converted identifier. This value is not present if the conversion failed.
+     */
     private String targetId;
     /**
      * Instantiates a new ConvertIdResult and sets the default values.

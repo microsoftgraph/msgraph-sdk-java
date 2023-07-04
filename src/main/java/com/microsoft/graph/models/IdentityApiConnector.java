@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityApiConnector extends Entity implements Parsable {
-    /** The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported. */
+    /**
+     * The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
+     */
     private ApiAuthenticationConfigurationBase authenticationConfiguration;
-    /** The name of the API connector. */
+    /**
+     * The name of the API connector.
+     */
     private String displayName;
-    /** The URL of the API endpoint to call. */
+    /**
+     * The URL of the API endpoint to call.
+     */
     private String targetUrl;
     /**
      * Instantiates a new IdentityApiConnector and sets the default values.

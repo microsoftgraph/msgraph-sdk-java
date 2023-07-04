@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
  */
 public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity. */
+    /**
+     * Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity.
+     */
     @javax.annotation.Nonnull
     public TeamsAppRequestBuilder teamsApp() {
         return new TeamsAppRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity. */
+    /**
+     * Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity.
+     */
     @javax.annotation.Nonnull
     public TeamsAppDefinitionRequestBuilder teamsAppDefinition() {
         return new TeamsAppDefinitionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the upgrade method. */
+    /**
+     * Provides operations to call the upgrade method.
+     */
     @javax.annotation.Nonnull
     public UpgradeRequestBuilder upgrade() {
         return new UpgradeRequestBuilder(pathParameters, requestAdapter);
@@ -273,11 +279,15 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
      * Get an app installed in a chat.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -286,7 +296,9 @@ public class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

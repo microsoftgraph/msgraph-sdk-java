@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailboxEvidence extends AlertEvidence implements Parsable {
-    /** The name associated with the mailbox. */
+    /**
+     * The name associated with the mailbox.
+     */
     private String displayName;
-    /** The primary email address of the mailbox. */
+    /**
+     * The primary email address of the mailbox.
+     */
     private String primaryAddress;
-    /** The user account of the mailbox. */
+    /**
+     * The user account of the mailbox.
+     */
     private UserAccount userAccount;
     /**
      * Instantiates a new MailboxEvidence and sets the default values.

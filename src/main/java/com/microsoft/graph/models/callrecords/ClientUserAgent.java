@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ClientUserAgent extends UserAgent implements Parsable {
-    /** The unique identifier of the Azure AD application used by this endpoint. */
+    /**
+     * The unique identifier of the Azure AD application used by this endpoint.
+     */
     private String azureADAppId;
-    /** Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs. */
+    /**
+     * Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
+     */
     private String communicationServiceId;
-    /** The platform property */
+    /**
+     * The platform property
+     */
     private ClientPlatform platform;
-    /** The productFamily property */
+    /**
+     * The productFamily property
+     */
     private ProductFamily productFamily;
     /**
      * Instantiates a new ClientUserAgent and sets the default values.

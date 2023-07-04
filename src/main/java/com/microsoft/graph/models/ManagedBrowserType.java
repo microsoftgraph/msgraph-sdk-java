@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Type of managed browser */
+/**
+ * Type of managed browser
+ */
 public enum ManagedBrowserType implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),

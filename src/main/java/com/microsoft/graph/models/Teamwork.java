@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Teamwork extends Entity implements Parsable {
-    /** The deleted team. */
+    /**
+     * The deleted team.
+     */
     private java.util.List<DeletedTeam> deletedTeams;
-    /** The workforceIntegrations property */
+    /**
+     * The workforceIntegrations property
+     */
     private java.util.List<WorkforceIntegration> workforceIntegrations;
     /**
      * Instantiates a new Teamwork and sets the default values.

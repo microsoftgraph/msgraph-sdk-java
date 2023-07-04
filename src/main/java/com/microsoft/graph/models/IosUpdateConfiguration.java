@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosUpdateConfiguration extends DeviceConfiguration implements Parsable {
-    /** Active Hours End (active hours mean the time window when updates install should not happen) */
+    /**
+     * Active Hours End (active hours mean the time window when updates install should not happen)
+     */
     private LocalTime activeHoursEnd;
-    /** Active Hours Start (active hours mean the time window when updates install should not happen) */
+    /**
+     * Active Hours Start (active hours mean the time window when updates install should not happen)
+     */
     private LocalTime activeHoursStart;
-    /** Days in week for which active hours are configured. This collection can contain a maximum of 7 elements. */
+    /**
+     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
+     */
     private java.util.List<DayOfWeek> scheduledInstallDays;
-    /** UTC Time Offset indicated in minutes */
+    /**
+     * UTC Time Offset indicated in minutes
+     */
     private Integer utcTimeOffsetInMinutes;
     /**
      * Instantiates a new IosUpdateConfiguration and sets the default values.

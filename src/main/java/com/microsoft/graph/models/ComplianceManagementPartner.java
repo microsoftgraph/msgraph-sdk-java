@@ -11,23 +11,41 @@ import java.util.Objects;
  * Compliance management partner for all platforms
  */
 public class ComplianceManagementPartner extends Entity implements Parsable {
-    /** User groups which enroll Android devices through partner. */
+    /**
+     * User groups which enroll Android devices through partner.
+     */
     private java.util.List<ComplianceManagementPartnerAssignment> androidEnrollmentAssignments;
-    /** Partner onboarded for Android devices. */
+    /**
+     * Partner onboarded for Android devices.
+     */
     private Boolean androidOnboarded;
-    /** Partner display name */
+    /**
+     * Partner display name
+     */
     private String displayName;
-    /** User groups which enroll ios devices through partner. */
+    /**
+     * User groups which enroll ios devices through partner.
+     */
     private java.util.List<ComplianceManagementPartnerAssignment> iosEnrollmentAssignments;
-    /** Partner onboarded for ios devices. */
+    /**
+     * Partner onboarded for ios devices.
+     */
     private Boolean iosOnboarded;
-    /** Timestamp of last heartbeat after admin onboarded to the compliance management partner */
+    /**
+     * Timestamp of last heartbeat after admin onboarded to the compliance management partner
+     */
     private OffsetDateTime lastHeartbeatDateTime;
-    /** User groups which enroll Mac devices through partner. */
+    /**
+     * User groups which enroll Mac devices through partner.
+     */
     private java.util.List<ComplianceManagementPartnerAssignment> macOsEnrollmentAssignments;
-    /** Partner onboarded for Mac devices. */
+    /**
+     * Partner onboarded for Mac devices.
+     */
     private Boolean macOsOnboarded;
-    /** Partner state of this tenant. */
+    /**
+     * Partner state of this tenant.
+     */
     private DeviceManagementPartnerTenantState partnerState;
     /**
      * Instantiates a new complianceManagementPartner and sets the default values.

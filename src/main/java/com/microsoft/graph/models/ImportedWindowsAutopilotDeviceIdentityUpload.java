@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Parsable {
-    /** DateTime when the entity is created. */
+    /**
+     * DateTime when the entity is created.
+     */
     private OffsetDateTime createdDateTimeUtc;
-    /** Collection of all Autopilot devices as a part of this upload. */
+    /**
+     * Collection of all Autopilot devices as a part of this upload.
+     */
     private java.util.List<ImportedWindowsAutopilotDeviceIdentity> deviceIdentities;
-    /** The status property */
+    /**
+     * The status property
+     */
     private ImportedWindowsAutopilotDeviceIdentityUploadStatus status;
     /**
      * Instantiates a new ImportedWindowsAutopilotDeviceIdentityUpload and sets the default values.

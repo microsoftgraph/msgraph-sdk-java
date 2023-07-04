@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignment extends Entity implements Parsable {
-    /** Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters. */
+    /**
+     * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
+     */
     private AccessPackage accessPackage;
-    /** Read-only. Supports $filter (eq) on the id property and $expand query parameters. */
+    /**
+     * Read-only. Supports $filter (eq) on the id property and $expand query parameters.
+     */
     private AccessPackageAssignmentPolicy assignmentPolicy;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime expiredDateTime;
-    /** When the access assignment is to be in place. Read-only. */
+    /**
+     * When the access assignment is to be in place. Read-only.
+     */
     private EntitlementManagementSchedule schedule;
-    /** The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq). */
+    /**
+     * The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
+     */
     private AccessPackageAssignmentState state;
-    /** More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only. */
+    /**
+     * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
+     */
     private String status;
-    /** The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId. */
+    /**
+     * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
+     */
     private AccessPackageSubject target;
     /**
      * Instantiates a new accessPackageAssignment and sets the default values.

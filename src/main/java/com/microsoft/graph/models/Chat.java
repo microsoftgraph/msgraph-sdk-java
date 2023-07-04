@@ -8,36 +8,64 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Chat extends Entity implements Parsable {
-    /** The chatType property */
+    /**
+     * The chatType property
+     */
     private ChatType chatType;
-    /** Date and time at which the chat was created. Read-only. */
+    /**
+     * Date and time at which the chat was created. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** A collection of all the apps in the chat. Nullable. */
+    /**
+     * A collection of all the apps in the chat. Nullable.
+     */
     private java.util.List<TeamsAppInstallation> installedApps;
-    /** Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property. */
+    /**
+     * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     */
     private ChatMessageInfo lastMessagePreview;
-    /** Date and time at which the chat was renamed or list of members were last changed. Read-only. */
+    /**
+     * Date and time at which the chat was renamed or list of members were last changed. Read-only.
+     */
     private OffsetDateTime lastUpdatedDateTime;
-    /** A collection of all the members in the chat. Nullable. */
+    /**
+     * A collection of all the members in the chat. Nullable.
+     */
     private java.util.List<ConversationMember> members;
-    /** A collection of all the messages in the chat. Nullable. */
+    /**
+     * A collection of all the messages in the chat. Nullable.
+     */
     private java.util.List<ChatMessage> messages;
-    /** Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only. */
+    /**
+     * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+     */
     private TeamworkOnlineMeetingInfo onlineMeetingInfo;
-    /** A collection of all the pinned messages in the chat. Nullable. */
+    /**
+     * A collection of all the pinned messages in the chat. Nullable.
+     */
     private java.util.List<PinnedChatMessageInfo> pinnedMessages;
-    /** A collection of all the tabs in the chat. Nullable. */
+    /**
+     * A collection of all the tabs in the chat. Nullable.
+     */
     private java.util.List<TeamsTab> tabs;
-    /** The identifier of the tenant in which the chat was created. Read-only. */
+    /**
+     * The identifier of the tenant in which the chat was created. Read-only.
+     */
     private String tenantId;
-    /** (Optional) Subject or topic for the chat. Only available for group chats. */
+    /**
+     * (Optional) Subject or topic for the chat. Only available for group chats.
+     */
     private String topic;
-    /** Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context. */
+    /**
+     * Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     */
     private ChatViewpoint viewpoint;
-    /** The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only. */
+    /**
+     * The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
+     */
     private String webUrl;
     /**
-     * Instantiates a new chat and sets the default values.
+     * Instantiates a new Chat and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -47,7 +75,7 @@ public class Chat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chat
+     * @return a Chat
      */
     @javax.annotation.Nonnull
     public static Chat createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

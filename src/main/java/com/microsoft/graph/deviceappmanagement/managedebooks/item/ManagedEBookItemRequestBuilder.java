@@ -25,27 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
  */
 public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the assign method. */
+    /**
+     * Provides operations to call the assign method.
+     */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity. */
+    /**
+     * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
+     */
     @javax.annotation.Nonnull
     public DeviceStatesRequestBuilder deviceStates() {
         return new DeviceStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the installSummary property of the microsoft.graph.managedEBook entity. */
+    /**
+     * Provides operations to manage the installSummary property of the microsoft.graph.managedEBook entity.
+     */
     @javax.annotation.Nonnull
     public InstallSummaryRequestBuilder installSummary() {
         return new InstallSummaryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity. */
+    /**
+     * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
+     */
     @javax.annotation.Nonnull
     public UserStateSummaryRequestBuilder userStateSummary() {
         return new UserStateSummaryRequestBuilder(pathParameters, requestAdapter);
@@ -71,8 +81,9 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property managedEBooks for deviceAppManagement
+     * Deletes a iosVppEBook.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -89,9 +100,10 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property managedEBooks for deviceAppManagement
+     * Deletes a iosVppEBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -108,8 +120,9 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Managed eBook.
+     * Read properties and relationships of the iosVppEBook object.
      * @return a CompletableFuture of managedEBook
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> get() {
@@ -126,9 +139,10 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Managed eBook.
+     * Read properties and relationships of the iosVppEBook object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedEBook
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -145,9 +159,10 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property managedEBooks in deviceAppManagement
+     * Update the properties of a iosVppEBook object.
      * @param body The request body
      * @return a CompletableFuture of managedEBook
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> patch(@javax.annotation.Nonnull final ManagedEBook body) {
@@ -164,10 +179,11 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property managedEBooks in deviceAppManagement
+     * Update the properties of a iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedEBook
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> patch(@javax.annotation.Nonnull final ManagedEBook body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +201,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property managedEBooks for deviceAppManagement
+     * Deletes a iosVppEBook.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -193,7 +209,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property managedEBooks for deviceAppManagement
+     * Deletes a iosVppEBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +228,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The Managed eBook.
+     * Read properties and relationships of the iosVppEBook object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +236,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Managed eBook.
+     * Read properties and relationships of the iosVppEBook object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -241,7 +257,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property managedEBooks in deviceAppManagement
+     * Update the properties of a iosVppEBook object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -250,7 +266,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property managedEBooks in deviceAppManagement
+     * Update the properties of a iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -278,14 +294,18 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Managed eBook.
+     * Read properties and relationships of the iosVppEBook object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -294,7 +314,9 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

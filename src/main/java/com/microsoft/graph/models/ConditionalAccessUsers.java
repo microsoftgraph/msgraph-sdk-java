@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessUsers implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Group IDs excluded from scope of policy. */
+    /**
+     * Group IDs excluded from scope of policy.
+     */
     private java.util.List<String> excludeGroups;
-    /** Internal guests or external users excluded from the policy scope. Optionally populated. */
+    /**
+     * Internal guests or external users excluded from the policy scope. Optionally populated.
+     */
     private ConditionalAccessGuestsOrExternalUsers excludeGuestsOrExternalUsers;
-    /** Role IDs excluded from scope of policy. */
+    /**
+     * Role IDs excluded from scope of policy.
+     */
     private java.util.List<String> excludeRoles;
-    /** User IDs excluded from scope of policy and/or GuestsOrExternalUsers. */
+    /**
+     * User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
+     */
     private java.util.List<String> excludeUsers;
-    /** Group IDs in scope of policy unless explicitly excluded. */
+    /**
+     * Group IDs in scope of policy unless explicitly excluded.
+     */
     private java.util.List<String> includeGroups;
-    /** Internal guests or external users included in the policy scope. Optionally populated. */
+    /**
+     * Internal guests or external users included in the policy scope. Optionally populated.
+     */
     private ConditionalAccessGuestsOrExternalUsers includeGuestsOrExternalUsers;
-    /** Role IDs in scope of policy unless explicitly excluded. */
+    /**
+     * Role IDs in scope of policy unless explicitly excluded.
+     */
     private java.util.List<String> includeRoles;
-    /** User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers. */
+    /**
+     * User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
+     */
     private java.util.List<String> includeUsers;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new conditionalAccessUsers and sets the default values.

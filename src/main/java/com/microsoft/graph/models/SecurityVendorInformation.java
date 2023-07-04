@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecurityVendorInformation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specific provider (product/service - not vendor company); for example, WindowsDefenderATP. */
+    /**
+     * Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
+     */
     private String provider;
-    /** Version of the provider or subprovider, if it exists, that generated the alert. Required */
+    /**
+     * Version of the provider or subprovider, if it exists, that generated the alert. Required
+     */
     private String providerVersion;
-    /** Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen. */
+    /**
+     * Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
+     */
     private String subProvider;
-    /** Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required */
+    /**
+     * Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
+     */
     private String vendor;
     /**
      * Instantiates a new securityVendorInformation and sets the default values.

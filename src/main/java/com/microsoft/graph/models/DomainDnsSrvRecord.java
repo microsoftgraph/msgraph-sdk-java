@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
-    /** Value to use when configuring the Target property of the SRV record at the DNS host. */
+    /**
+     * Value to use when configuring the Target property of the SRV record at the DNS host.
+     */
     private String nameTarget;
-    /** Value to use when configuring the port property of the SRV record at the DNS host. */
+    /**
+     * Value to use when configuring the port property of the SRV record at the DNS host.
+     */
     private Integer port;
-    /** Value to use when configuring the priority property of the SRV record at the DNS host. */
+    /**
+     * Value to use when configuring the priority property of the SRV record at the DNS host.
+     */
     private Integer priority;
-    /** Value to use when configuring the protocol property of the SRV record at the DNS host. */
+    /**
+     * Value to use when configuring the protocol property of the SRV record at the DNS host.
+     */
     private String protocol;
-    /** Value to use when configuring the service property of the SRV record at the DNS host. */
+    /**
+     * Value to use when configuring the service property of the SRV record at the DNS host.
+     */
     private String service;
-    /** Value to use when configuring the weight property of the SRV record at the DNS host. */
+    /**
+     * Value to use when configuring the weight property of the SRV record at the DNS host.
+     */
     private Integer weight;
     /**
      * Instantiates a new DomainDnsSrvRecord and sets the default values.

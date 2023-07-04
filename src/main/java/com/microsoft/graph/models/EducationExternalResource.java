@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationExternalResource extends EducationResource implements Parsable {
-    /** Location of the resource. Required */
+    /**
+     * Location of the resource. Required
+     */
     private String webUrl;
     /**
      * Instantiates a new EducationExternalResource and sets the default values.

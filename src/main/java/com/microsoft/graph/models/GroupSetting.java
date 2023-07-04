@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupSetting extends Entity implements Parsable {
-    /** Display name of this group of settings, which comes from the associated template. */
+    /**
+     * Display name of this group of settings, which comes from the associated template.
+     */
     private String displayName;
-    /** Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only. */
+    /**
+     * Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
+     */
     private String templateId;
-    /** Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object. */
+    /**
+     * Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
+     */
     private java.util.List<SettingValue> values;
     /**
      * Instantiates a new groupSetting and sets the default values.

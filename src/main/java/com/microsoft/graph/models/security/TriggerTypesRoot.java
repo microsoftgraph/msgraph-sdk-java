@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TriggerTypesRoot extends Entity implements Parsable {
-    /** The retentionEventTypes property */
+    /**
+     * The retentionEventTypes property
+     */
     private java.util.List<RetentionEventType> retentionEventTypes;
     /**
      * Instantiates a new triggerTypesRoot and sets the default values.

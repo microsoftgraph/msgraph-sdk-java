@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalGroupCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ExternalGroup> value;
     /**
      * Instantiates a new ExternalGroupCollectionResponse and sets the default values.

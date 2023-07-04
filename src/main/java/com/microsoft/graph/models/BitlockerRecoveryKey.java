@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BitlockerRecoveryKey extends Entity implements Parsable {
-    /** The date and time when the key was originally backed up to Azure Active Directory. Not nullable. */
+    /**
+     * The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
+     */
     private OffsetDateTime createdDateTime;
-    /** Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq). */
+    /**
+     * Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
+     */
     private String deviceId;
-    /** The BitLocker recovery key. Returned only on $select. Not nullable. */
+    /**
+     * The BitLocker recovery key. Returned only on $select. Not nullable.
+     */
     private String key;
-    /** Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue). */
+    /**
+     * Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
+     */
     private VolumeType volumeType;
     /**
      * Instantiates a new bitlockerRecoveryKey and sets the default values.

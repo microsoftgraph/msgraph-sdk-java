@@ -11,31 +11,57 @@ import java.util.Objects;
  * An abstract class containing the base properties for Managed eBook.
  */
 public class ManagedEBook extends Entity implements Parsable {
-    /** The list of assignments for this eBook. */
+    /**
+     * The list of assignments for this eBook.
+     */
     private java.util.List<ManagedEBookAssignment> assignments;
-    /** The date and time when the eBook file was created. */
+    /**
+     * The date and time when the eBook file was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Description. */
+    /**
+     * Description.
+     */
     private String description;
-    /** The list of installation states for this eBook. */
+    /**
+     * The list of installation states for this eBook.
+     */
     private java.util.List<DeviceInstallState> deviceStates;
-    /** Name of the eBook. */
+    /**
+     * Name of the eBook.
+     */
     private String displayName;
-    /** The more information Url. */
+    /**
+     * The more information Url.
+     */
     private String informationUrl;
-    /** Mobile App Install Summary. */
+    /**
+     * Mobile App Install Summary.
+     */
     private EBookInstallSummary installSummary;
-    /** Book cover. */
+    /**
+     * Book cover.
+     */
     private MimeContent largeCover;
-    /** The date and time when the eBook was last modified. */
+    /**
+     * The date and time when the eBook was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The privacy statement Url. */
+    /**
+     * The privacy statement Url.
+     */
     private String privacyInformationUrl;
-    /** The date and time when the eBook was published. */
+    /**
+     * The date and time when the eBook was published.
+     */
     private OffsetDateTime publishedDateTime;
-    /** Publisher. */
+    /**
+     * Publisher.
+     */
     private String publisher;
-    /** The list of installation states for this eBook. */
+    /**
+     * The list of installation states for this eBook.
+     */
     private java.util.List<UserInstallStateSummary> userStateSummary;
     /**
      * Instantiates a new managedEBook and sets the default values.

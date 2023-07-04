@@ -61,207 +61,289 @@ import java.util.Objects;
  * Provides operations to manage the collection of group entities.
  */
 public class GroupItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the acceptedSenders property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the acceptedSenders property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public AcceptedSendersRequestBuilder acceptedSenders() {
         return new AcceptedSendersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the addFavorite method. */
+    /**
+     * Provides operations to call the addFavorite method.
+     */
     @javax.annotation.Nonnull
     public AddFavoriteRequestBuilder addFavorite() {
         return new AddFavoriteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
         return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the assignLicense method. */
+    /**
+     * Provides operations to call the assignLicense method.
+     */
     @javax.annotation.Nonnull
     public AssignLicenseRequestBuilder assignLicense() {
         return new AssignLicenseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendar property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the calendar property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendarView property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkGrantedPermissionsForApp method. */
+    /**
+     * Provides operations to call the checkGrantedPermissionsForApp method.
+     */
     @javax.annotation.Nonnull
     public CheckGrantedPermissionsForAppRequestBuilder checkGrantedPermissionsForApp() {
         return new CheckGrantedPermissionsForAppRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberGroups method. */
+    /**
+     * Provides operations to call the checkMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberObjects method. */
+    /**
+     * Provides operations to call the checkMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the conversations property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the conversations property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public ConversationsRequestBuilder conversations() {
         return new ConversationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public CreatedOnBehalfOfRequestBuilder createdOnBehalfOf() {
         return new CreatedOnBehalfOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drive property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the drive property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drives property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the drives property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public DrivesRequestBuilder drives() {
         return new DrivesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the events property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the events property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public EventsRequestBuilder events() {
         return new EventsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the extensions property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberGroups method. */
+    /**
+     * Provides operations to call the getMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberObjects method. */
+    /**
+     * Provides operations to call the getMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public GroupLifecyclePoliciesRequestBuilder groupLifecyclePolicies() {
         return new GroupLifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the memberOf property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the memberOf property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the members property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public MembersWithLicenseErrorsRequestBuilder membersWithLicenseErrors() {
         return new MembersWithLicenseErrorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the onenote property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the onenote property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the owners property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the owners property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public OwnersRequestBuilder owners() {
         return new OwnersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the permissionGrants property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the photo property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the photo property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the photos property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the photos property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public PhotosRequestBuilder photos() {
         return new PhotosRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the planner property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the planner property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public PlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the rejectedSenders property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the rejectedSenders property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public RejectedSendersRequestBuilder rejectedSenders() {
         return new RejectedSendersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the removeFavorite method. */
+    /**
+     * Provides operations to call the removeFavorite method.
+     */
     @javax.annotation.Nonnull
     public RemoveFavoriteRequestBuilder removeFavorite() {
         return new RemoveFavoriteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the renew method. */
+    /**
+     * Provides operations to call the renew method.
+     */
     @javax.annotation.Nonnull
     public RenewRequestBuilder renew() {
         return new RenewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the resetUnseenCount method. */
+    /**
+     * Provides operations to call the resetUnseenCount method.
+     */
     @javax.annotation.Nonnull
     public ResetUnseenCountRequestBuilder resetUnseenCount() {
         return new ResetUnseenCountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the restore method. */
+    /**
+     * Provides operations to call the restore method.
+     */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the settings property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sites property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the subscribeByMail method. */
+    /**
+     * Provides operations to call the subscribeByMail method.
+     */
     @javax.annotation.Nonnull
     public SubscribeByMailRequestBuilder subscribeByMail() {
         return new SubscribeByMailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the team property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the team property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the threads property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the threads property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public ThreadsRequestBuilder threads() {
         return new ThreadsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity. */
+    /**
+     * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
+     */
     @javax.annotation.Nonnull
     public TransitiveMembersRequestBuilder transitiveMembers() {
         return new TransitiveMembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unsubscribeByMail method. */
+    /**
+     * Provides operations to call the unsubscribeByMail method.
+     */
     @javax.annotation.Nonnull
     public UnsubscribeByMailRequestBuilder unsubscribeByMail() {
         return new UnsubscribeByMailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the validateProperties method. */
+    /**
+     * Provides operations to call the validateProperties method.
+     */
     @javax.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
         return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -503,11 +585,15 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** and **isArchived** properties are an exception and are not returned in the `$select` query.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -516,7 +602,9 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

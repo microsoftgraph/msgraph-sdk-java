@@ -28,37 +28,51 @@ import java.util.Objects;
  * Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity.
  */
 public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the assign method. */
+    /**
+     * Provides operations to call the assign method.
+     */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity. */
+    /**
+     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public DeviceSettingStateSummariesRequestBuilder deviceSettingStateSummaries() {
         return new DeviceSettingStateSummariesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceConfiguration entity. */
+    /**
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public DeviceStatusesRequestBuilder deviceStatuses() {
         return new DeviceStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceConfiguration entity. */
+    /**
+     * Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public DeviceStatusOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceStatusOverviewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity. */
+    /**
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public UserStatusesRequestBuilder userStatuses() {
         return new UserStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the userStatusOverview property of the microsoft.graph.deviceConfiguration entity. */
+    /**
+     * Provides operations to manage the userStatusOverview property of the microsoft.graph.deviceConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public UserStatusOverviewRequestBuilder userStatusOverview() {
         return new UserStatusOverviewRequestBuilder(pathParameters, requestAdapter);
@@ -84,8 +98,9 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a editionUpgradeConfiguration.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -102,9 +117,10 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a editionUpgradeConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -121,8 +137,9 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get() {
@@ -139,9 +156,10 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -168,9 +186,10 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@javax.annotation.Nonnull final DeviceConfiguration body) {
@@ -187,10 +206,11 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@javax.annotation.Nonnull final DeviceConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -208,7 +228,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a editionUpgradeConfiguration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -216,7 +236,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a editionUpgradeConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +255,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -243,7 +263,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -264,7 +284,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -273,7 +293,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a sharedPCConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -301,14 +321,18 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the androidGeneralDeviceConfiguration object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -317,7 +341,9 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

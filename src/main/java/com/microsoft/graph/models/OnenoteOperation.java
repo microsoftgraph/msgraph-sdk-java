@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteOperation extends Operation implements Parsable {
-    /** The error returned by the operation. */
+    /**
+     * The error returned by the operation.
+     */
     private OnenoteOperationError error;
-    /** The operation percent complete if the operation is still in running status. */
+    /**
+     * The operation percent complete if the operation is still in running status.
+     */
     private String percentComplete;
-    /** The resource id. */
+    /**
+     * The resource id.
+     */
     private String resourceId;
-    /** The resource URI for the object. For example, the resource URI for a copied page or section. */
+    /**
+     * The resource URI for the object. For example, the resource URI for a copied page or section.
+     */
     private String resourceLocation;
     /**
      * Instantiates a new OnenoteOperation and sets the default values.

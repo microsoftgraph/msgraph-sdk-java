@@ -7,126 +7,245 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Devices that are managed or pre-enrolled through Intune
- */
 public class ManagedDevice extends Entity implements Parsable {
-    /** The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only. */
+    /**
+     * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     */
     private String activationLockBypassCode;
-    /** Android security patch level. This property is read-only. */
+    /**
+     * Android security patch level. This property is read-only.
+     */
     private String androidSecurityPatchLevel;
-    /** The unique identifier for the Azure Active Directory device. Read only. This property is read-only. */
+    /**
+     * The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
+     */
     private String azureADDeviceId;
-    /** Whether the device is Azure Active Directory registered. This property is read-only. */
+    /**
+     * Whether the device is Azure Active Directory registered. This property is read-only.
+     */
     private Boolean azureADRegistered;
-    /** The DateTime when device compliance grace period expires. This property is read-only. */
+    /**
+     * The DateTime when device compliance grace period expires. This property is read-only.
+     */
     private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /** Compliance state. */
+    /**
+     * Compliance state.
+     */
     private ComplianceState complianceState;
-    /** ConfigrMgr client enabled features. This property is read-only. */
+    /**
+     * ConfigrMgr client enabled features. This property is read-only.
+     */
     private ConfigurationManagerClientEnabledFeatures configurationManagerClientEnabledFeatures;
-    /** List of ComplexType deviceActionResult objects. This property is read-only. */
+    /**
+     * List of ComplexType deviceActionResult objects. This property is read-only.
+     */
     private java.util.List<DeviceActionResult> deviceActionResults;
-    /** Device category */
+    /**
+     * Device category
+     */
     private DeviceCategory deviceCategory;
-    /** Device category display name. This property is read-only. */
+    /**
+     * Device category display name. This property is read-only.
+     */
     private String deviceCategoryDisplayName;
-    /** Device compliance policy states for this device. */
+    /**
+     * Device compliance policy states for this device.
+     */
     private java.util.List<DeviceCompliancePolicyState> deviceCompliancePolicyStates;
-    /** Device configuration states for this device. */
+    /**
+     * Device configuration states for this device.
+     */
     private java.util.List<DeviceConfigurationState> deviceConfigurationStates;
-    /** Possible ways of adding a mobile device to management. */
+    /**
+     * Possible ways of adding a mobile device to management.
+     */
     private DeviceEnrollmentType deviceEnrollmentType;
-    /** The device health attestation state. This property is read-only. */
+    /**
+     * The device health attestation state. This property is read-only.
+     */
     private DeviceHealthAttestationState deviceHealthAttestationState;
-    /** Name of the device. This property is read-only. */
+    /**
+     * Name of the device. This property is read-only.
+     */
     private String deviceName;
-    /** Device registration status. */
+    /**
+     * Device registration status.
+     */
     private DeviceRegistrationState deviceRegistrationState;
-    /** Whether the device is Exchange ActiveSync activated. This property is read-only. */
+    /**
+     * Whether the device is Exchange ActiveSync activated. This property is read-only.
+     */
     private Boolean easActivated;
-    /** Exchange ActivationSync activation time of the device. This property is read-only. */
+    /**
+     * Exchange ActivationSync activation time of the device. This property is read-only.
+     */
     private OffsetDateTime easActivationDateTime;
-    /** Exchange ActiveSync Id of the device. This property is read-only. */
+    /**
+     * Exchange ActiveSync Id of the device. This property is read-only.
+     */
     private String easDeviceId;
-    /** Email(s) for the user associated with the device. This property is read-only. */
+    /**
+     * Email(s) for the user associated with the device. This property is read-only.
+     */
     private String emailAddress;
-    /** Enrollment time of the device. This property is read-only. */
+    /**
+     * Enrollment time of the device. This property is read-only.
+     */
     private OffsetDateTime enrolledDateTime;
-    /** Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only. */
+    /**
+     * Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     */
     private String ethernetMacAddress;
-    /** Device Exchange Access State. */
+    /**
+     * Device Exchange Access State.
+     */
     private DeviceManagementExchangeAccessState exchangeAccessState;
-    /** Device Exchange Access State Reason. */
+    /**
+     * Device Exchange Access State Reason.
+     */
     private DeviceManagementExchangeAccessStateReason exchangeAccessStateReason;
-    /** Last time the device contacted Exchange. This property is read-only. */
+    /**
+     * Last time the device contacted Exchange. This property is read-only.
+     */
     private OffsetDateTime exchangeLastSuccessfulSyncDateTime;
-    /** Free Storage in Bytes. Default value is 0. Read-only. This property is read-only. */
+    /**
+     * Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
+     */
     private Long freeStorageSpaceInBytes;
-    /** Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only. */
+    /**
+     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     */
     private String iccid;
-    /** IMEI. This property is read-only. */
+    /**
+     * IMEI. This property is read-only.
+     */
     private String imei;
-    /** Device encryption status. This property is read-only. */
+    /**
+     * Device encryption status. This property is read-only.
+     */
     private Boolean isEncrypted;
-    /** Device supervised status. This property is read-only. */
+    /**
+     * Device supervised status. This property is read-only.
+     */
     private Boolean isSupervised;
-    /** whether the device is jail broken or rooted. This property is read-only. */
+    /**
+     * whether the device is jail broken or rooted. This property is read-only.
+     */
     private String jailBroken;
-    /** The date and time that the device last completed a successful sync with Intune. This property is read-only. */
+    /**
+     * The date and time that the device last completed a successful sync with Intune. This property is read-only.
+     */
     private OffsetDateTime lastSyncDateTime;
-    /** Automatically generated name to identify a device. Can be overwritten to a user friendly name. */
+    /**
+     * List of log collection requests
+     */
+    private java.util.List<DeviceLogCollectionResponse> logCollectionRequests;
+    /**
+     * Automatically generated name to identify a device. Can be overwritten to a user friendly name.
+     */
     private String managedDeviceName;
-    /** Owner type of device. */
+    /**
+     * Owner type of device.
+     */
     private ManagedDeviceOwnerType managedDeviceOwnerType;
-    /** The managementAgent property */
+    /**
+     * The managementAgent property
+     */
     private ManagementAgentType managementAgent;
-    /** Reports device management certificate expiration date. This property is read-only. */
+    /**
+     * Reports device management certificate expiration date. This property is read-only.
+     */
     private OffsetDateTime managementCertificateExpirationDate;
-    /** Manufacturer of the device. This property is read-only. */
+    /**
+     * Manufacturer of the device. This property is read-only.
+     */
     private String manufacturer;
-    /** MEID. This property is read-only. */
+    /**
+     * MEID. This property is read-only.
+     */
     private String meid;
-    /** Model of the device. This property is read-only. */
+    /**
+     * Model of the device. This property is read-only.
+     */
     private String model;
-    /** Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported. */
+    /**
+     * Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
+     */
     private String notes;
-    /** Operating system of the device. Windows, iOS, etc. This property is read-only. */
+    /**
+     * Operating system of the device. Windows, iOS, etc. This property is read-only.
+     */
     private String operatingSystem;
-    /** Operating system version of the device. This property is read-only. */
+    /**
+     * Operating system version of the device. This property is read-only.
+     */
     private String osVersion;
-    /** Available health states for the Device Health API */
+    /**
+     * Available health states for the Device Health API
+     */
     private ManagedDevicePartnerReportedHealthState partnerReportedThreatState;
-    /** Phone number of the device. This property is read-only. */
+    /**
+     * Phone number of the device. This property is read-only.
+     */
     private String phoneNumber;
-    /** Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only. */
+    /**
+     * Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
+     */
     private Long physicalMemoryInBytes;
-    /** An error string that identifies issues when creating Remote Assistance session objects. This property is read-only. */
+    /**
+     * An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
+     */
     private String remoteAssistanceSessionErrorDetails;
-    /** Url that allows a Remote Assistance session to be established with the device. This property is read-only. */
+    /**
+     * Url that allows a Remote Assistance session to be established with the device. This property is read-only.
+     */
     private String remoteAssistanceSessionUrl;
-    /** Reports if the managed iOS device is user approval enrollment. This property is read-only. */
+    /**
+     * Reports if the managed iOS device is user approval enrollment. This property is read-only.
+     */
     private Boolean requireUserEnrollmentApproval;
-    /** SerialNumber. This property is read-only. */
+    /**
+     * SerialNumber. This property is read-only.
+     */
     private String serialNumber;
-    /** Subscriber Carrier. This property is read-only. */
+    /**
+     * Subscriber Carrier. This property is read-only.
+     */
     private String subscriberCarrier;
-    /** Total Storage in Bytes. This property is read-only. */
+    /**
+     * Total Storage in Bytes. This property is read-only.
+     */
     private Long totalStorageSpaceInBytes;
-    /** Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only. */
+    /**
+     * Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     */
     private String udid;
-    /** User display name. This property is read-only. */
+    /**
+     * User display name. This property is read-only.
+     */
     private String userDisplayName;
-    /** Unique Identifier for the user associated with the device. This property is read-only. */
+    /**
+     * Unique Identifier for the user associated with the device. This property is read-only.
+     */
     private String userId;
-    /** Device user principal name. This property is read-only. */
+    /**
+     * Device user principal name. This property is read-only.
+     */
     private String userPrincipalName;
-    /** The primary users associated with the managed device. */
+    /**
+     * The primary users associated with the managed device.
+     */
     private java.util.List<User> users;
-    /** Wi-Fi MAC. This property is read-only. */
+    /**
+     * Wi-Fi MAC. This property is read-only.
+     */
     private String wiFiMacAddress;
     /**
-     * Instantiates a new managedDevice and sets the default values.
+     * The device protection status. This property is read-only.
+     */
+    private WindowsProtectionState windowsProtectionState;
+    /**
+     * Instantiates a new ManagedDevice and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -136,7 +255,7 @@ public class ManagedDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDevice
+     * @return a ManagedDevice
      */
     @javax.annotation.Nonnull
     public static ManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -382,6 +501,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("isSupervised", (n) -> { this.setIsSupervised(n.getBooleanValue()); });
         deserializerMap.put("jailBroken", (n) -> { this.setJailBroken(n.getStringValue()); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("logCollectionRequests", (n) -> { this.setLogCollectionRequests(n.getCollectionOfObjectValues(DeviceLogCollectionResponse::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceName", (n) -> { this.setManagedDeviceName(n.getStringValue()); });
         deserializerMap.put("managedDeviceOwnerType", (n) -> { this.setManagedDeviceOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
         deserializerMap.put("managementAgent", (n) -> { this.setManagementAgent(n.getEnumValue(ManagementAgentType.class)); });
@@ -407,6 +527,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("users", (n) -> { this.setUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
         deserializerMap.put("wiFiMacAddress", (n) -> { this.setWiFiMacAddress(n.getStringValue()); });
+        deserializerMap.put("windowsProtectionState", (n) -> { this.setWindowsProtectionState(n.getObjectValue(WindowsProtectionState::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -464,6 +585,14 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
+    }
+    /**
+     * Gets the logCollectionRequests property value. List of log collection requests
+     * @return a deviceLogCollectionResponse
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceLogCollectionResponse> getLogCollectionRequests() {
+        return this.logCollectionRequests;
     }
     /**
      * Gets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
@@ -666,6 +795,14 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.wiFiMacAddress;
     }
     /**
+     * Gets the windowsProtectionState property value. The device protection status. This property is read-only.
+     * @return a windowsProtectionState
+     */
+    @javax.annotation.Nullable
+    public WindowsProtectionState getWindowsProtectionState() {
+        return this.windowsProtectionState;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -682,12 +819,14 @@ public class ManagedDevice extends Entity implements Parsable {
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
         writer.writeEnumValue("exchangeAccessStateReason", this.getExchangeAccessStateReason());
+        writer.writeCollectionOfObjectValues("logCollectionRequests", this.getLogCollectionRequests());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managedDeviceOwnerType", this.getManagedDeviceOwnerType());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeEnumValue("partnerReportedThreatState", this.getPartnerReportedThreatState());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
+        writer.writeObjectValue("windowsProtectionState", this.getWindowsProtectionState());
     }
     /**
      * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
@@ -978,6 +1117,15 @@ public class ManagedDevice extends Entity implements Parsable {
         this.lastSyncDateTime = value;
     }
     /**
+     * Sets the logCollectionRequests property value. List of log collection requests
+     * @param value Value to set for the logCollectionRequests property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLogCollectionRequests(@javax.annotation.Nullable final java.util.List<DeviceLogCollectionResponse> value) {
+        this.logCollectionRequests = value;
+    }
+    /**
      * Sets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      * @param value Value to set for the managedDeviceName property.
      * @return a void
@@ -1201,5 +1349,14 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setWiFiMacAddress(@javax.annotation.Nullable final String value) {
         this.wiFiMacAddress = value;
+    }
+    /**
+     * Sets the windowsProtectionState property value. The device protection status. This property is read-only.
+     * @param value Value to set for the windowsProtectionState property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWindowsProtectionState(@javax.annotation.Nullable final WindowsProtectionState value) {
+        this.windowsProtectionState = value;
     }
 }

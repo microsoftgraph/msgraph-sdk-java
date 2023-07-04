@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable {
-    /** eDiscovery review set to which items matching source collection query gets added. */
+    /**
+     * eDiscovery review set to which items matching source collection query gets added.
+     */
     private EdiscoveryReviewSet reviewSet;
-    /** eDiscovery search that gets added to review set. */
+    /**
+     * eDiscovery search that gets added to review set.
+     */
     private EdiscoverySearch search;
     /**
      * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.

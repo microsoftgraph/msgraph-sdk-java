@@ -2,6 +2,7 @@ package com.microsoft.graph.reports;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReportRoot;
+import com.microsoft.graph.reports.authenticationmethods.AuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
@@ -128,62 +129,93 @@ import java.util.Objects;
  * Provides operations to manage the reportRoot singleton.
  */
 public class ReportsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
+    /**
+     * Provides operations to manage the authenticationMethods property of the microsoft.graph.reportRoot entity.
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationMethodsRequestBuilder authenticationMethods() {
+        return new AuthenticationMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
+     */
     @javax.annotation.Nonnull
     public DailyPrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter() {
         return new DailyPrintUsageByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity. */
+    /**
+     * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
+     */
     @javax.annotation.Nonnull
     public DailyPrintUsageByUserRequestBuilder dailyPrintUsageByUser() {
         return new DailyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the deviceConfigurationDeviceActivity method. */
+    /**
+     * Provides operations to call the deviceConfigurationDeviceActivity method.
+     */
     @javax.annotation.Nonnull
     public DeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
         return new DeviceConfigurationDeviceActivityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the deviceConfigurationUserActivity method. */
+    /**
+     * Provides operations to call the deviceConfigurationUserActivity method.
+     */
     @javax.annotation.Nonnull
     public DeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity() {
         return new DeviceConfigurationUserActivityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getOffice365ActivationCounts method. */
+    /**
+     * Provides operations to call the getOffice365ActivationCounts method.
+     */
     @javax.annotation.Nonnull
     public GetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts() {
         return new GetOffice365ActivationCountsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getOffice365ActivationsUserCounts method. */
+    /**
+     * Provides operations to call the getOffice365ActivationsUserCounts method.
+     */
     @javax.annotation.Nonnull
     public GetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts() {
         return new GetOffice365ActivationsUserCountsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getOffice365ActivationsUserDetail method. */
+    /**
+     * Provides operations to call the getOffice365ActivationsUserDetail method.
+     */
     @javax.annotation.Nonnull
     public GetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
         return new GetOffice365ActivationsUserDetailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the managedDeviceEnrollmentFailureDetails method. */
+    /**
+     * Provides operations to call the managedDeviceEnrollmentFailureDetails method.
+     */
     @javax.annotation.Nonnull
     public ManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails() {
         return new ManagedDeviceEnrollmentFailureDetailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the managedDeviceEnrollmentTopFailures method. */
+    /**
+     * Provides operations to call the managedDeviceEnrollmentTopFailures method.
+     */
     @javax.annotation.Nonnull
     public ManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures() {
         return new ManagedDeviceEnrollmentTopFailuresRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity. */
+    /**
+     * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
+     */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter() {
         return new MonthlyPrintUsageByPrinterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity. */
+    /**
+     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
+     */
     @javax.annotation.Nonnull
     public MonthlyPrintUsageByUserRequestBuilder monthlyPrintUsageByUser() {
         return new MonthlyPrintUsageByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the security property of the microsoft.graph.reportRoot entity. */
+    /**
+     * Provides operations to manage the security property of the microsoft.graph.reportRoot entity.
+     */
     @javax.annotation.Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(pathParameters, requestAdapter);
@@ -209,8 +241,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @return a CompletableFuture of ReportRoot
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get() {
@@ -227,9 +260,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ReportRoot
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -1204,9 +1238,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @return a CompletableFuture of ReportRoot
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body) {
@@ -1223,10 +1258,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ReportRoot
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -1244,7 +1280,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -1252,7 +1288,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -1273,7 +1309,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -1282,7 +1318,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -1305,14 +1341,18 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -1321,7 +1361,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

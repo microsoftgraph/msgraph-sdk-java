@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InviteParticipantsOperation extends CommsOperation implements Parsable {
-    /** The participants to invite. */
+    /**
+     * The participants to invite.
+     */
     private java.util.List<InvitationParticipantInfo> participants;
     /**
      * Instantiates a new InviteParticipantsOperation and sets the default values.

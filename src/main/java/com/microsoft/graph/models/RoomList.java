@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RoomList extends Place implements Parsable {
-    /** The email address of the room list. */
+    /**
+     * The email address of the room list.
+     */
     private String emailAddress;
-    /** The rooms property */
+    /**
+     * The rooms property
+     */
     private java.util.List<Room> rooms;
     /**
      * Instantiates a new RoomList and sets the default values.

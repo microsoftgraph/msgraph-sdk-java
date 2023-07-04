@@ -9,23 +9,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The bargeInAllowed property */
+    /**
+     * The bargeInAllowed property
+     */
     private Boolean bargeInAllowed;
-    /** The clientContext property */
+    /**
+     * The clientContext property
+     */
     private String clientContext;
-    /** The initialSilenceTimeoutInSeconds property */
+    /**
+     * The initialSilenceTimeoutInSeconds property
+     */
     private Integer initialSilenceTimeoutInSeconds;
-    /** The maxRecordDurationInSeconds property */
+    /**
+     * The maxRecordDurationInSeconds property
+     */
     private Integer maxRecordDurationInSeconds;
-    /** The maxSilenceTimeoutInSeconds property */
+    /**
+     * The maxSilenceTimeoutInSeconds property
+     */
     private Integer maxSilenceTimeoutInSeconds;
-    /** The playBeep property */
+    /**
+     * The playBeep property
+     */
     private Boolean playBeep;
-    /** The prompts property */
+    /**
+     * The prompts property
+     */
     private java.util.List<Prompt> prompts;
-    /** The stopTones property */
+    /**
+     * The stopTones property
+     */
     private java.util.List<String> stopTones;
     /**
      * Instantiates a new recordResponsePostRequestBody and sets the default values.

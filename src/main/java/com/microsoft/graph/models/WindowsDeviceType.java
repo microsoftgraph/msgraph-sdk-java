@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains properties for Windows device type. */
+/**
+ * Contains properties for Windows device type.
+ */
 public enum WindowsDeviceType implements ValuedEnum {
     /** No flags set. */
     None("none"),

@@ -3,7 +3,7 @@ package com.microsoft.graph.education.users.item.assignments.item.submissions.it
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.outcomes.OutcomesRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.reassign.ReassignRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.resources.ResourcesRequestBuilder;
-import com.microsoft.graph.education.users.item.assignments.item.submissions.item.returnEscaped.ReturnRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.returnescaped.ReturnRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.submit.SubmitRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.SubmittedResourcesRequestBuilder;
@@ -28,42 +28,58 @@ import java.util.Objects;
  * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
  */
 public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity. */
+    /**
+     * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
+     */
     @javax.annotation.Nonnull
     public OutcomesRequestBuilder outcomes() {
         return new OutcomesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reassign method. */
+    /**
+     * Provides operations to call the reassign method.
+     */
     @javax.annotation.Nonnull
     public ReassignRequestBuilder reassign() {
         return new ReassignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity. */
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
+     */
     @javax.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
         return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the return method. */
+    /**
+     * Provides operations to call the return method.
+     */
     @javax.annotation.Nonnull
     public ReturnRequestBuilder returnEscaped() {
         return new ReturnRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setUpResourcesFolder method. */
+    /**
+     * Provides operations to call the setUpResourcesFolder method.
+     */
     @javax.annotation.Nonnull
     public SetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
         return new SetUpResourcesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the submit method. */
+    /**
+     * Provides operations to call the submit method.
+     */
     @javax.annotation.Nonnull
     public SubmitRequestBuilder submit() {
         return new SubmitRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity. */
+    /**
+     * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
+     */
     @javax.annotation.Nonnull
     public SubmittedResourcesRequestBuilder submittedResources() {
         return new SubmittedResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unsubmit method. */
+    /**
+     * Provides operations to call the unsubmit method.
+     */
     @javax.annotation.Nonnull
     public UnsubmitRequestBuilder unsubmit() {
         return new UnsubmitRequestBuilder(pathParameters, requestAdapter);
@@ -301,11 +317,15 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A **submission** object represents a student's work for an assignment. Resources associated with the **submission** represent this work. Only the **assignedTo** student can see and modify the **submission**. A teacher or application with application permissions has full access to all **submissions**. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the **assignment** has been released.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -314,7 +334,9 @@ public class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

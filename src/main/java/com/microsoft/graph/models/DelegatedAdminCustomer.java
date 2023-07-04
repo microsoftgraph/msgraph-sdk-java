@@ -7,14 +7,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminCustomer extends Entity implements Parsable {
-    /** The Azure AD display name of the customer tenant. Read-only. Supports $orderBy. */
+    /**
+     * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
+     */
     private String displayName;
-    /** Contains the management details of a service in the customer tenant that's managed by delegated administration. */
+    /**
+     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
+     */
     private java.util.List<DelegatedAdminServiceManagementDetail> serviceManagementDetails;
-    /** The Azure AD-assigned tenant ID of the customer. Read-only. */
+    /**
+     * The Azure AD-assigned tenant ID of the customer. Read-only.
+     */
     private String tenantId;
     /**
-     * Instantiates a new delegatedAdminCustomer and sets the default values.
+     * Instantiates a new DelegatedAdminCustomer and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +30,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminCustomer
+     * @return a DelegatedAdminCustomer
      */
     @javax.annotation.Nonnull
     public static DelegatedAdminCustomer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

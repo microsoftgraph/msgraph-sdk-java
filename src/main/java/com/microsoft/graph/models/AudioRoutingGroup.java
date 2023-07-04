@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AudioRoutingGroup extends Entity implements Parsable {
-    /** The receivers property */
+    /**
+     * The receivers property
+     */
     private java.util.List<String> receivers;
-    /** The routingMode property */
+    /**
+     * The routingMode property
+     */
     private RoutingMode routingMode;
-    /** The sources property */
+    /**
+     * The sources property
+     */
     private java.util.List<String> sources;
     /**
      * Instantiates a new audioRoutingGroup and sets the default values.

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains properties for detection operator. */
+/**
+ * Contains properties for detection operator.
+ */
 public enum Win32LobAppRuleOperator implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InnerError implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Client request Id as sent by the client application. */
+    /**
+     * Client request Id as sent by the client application.
+     */
     private String clientRequestId;
-    /** Date when the error occured. */
+    /**
+     * Date when the error occured.
+     */
     private OffsetDateTime date;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Request Id as tracked internally by the service */
+    /**
+     * Request Id as tracked internally by the service
+     */
     private String requestId;
     /**
      * Instantiates a new InnerError and sets the default values.

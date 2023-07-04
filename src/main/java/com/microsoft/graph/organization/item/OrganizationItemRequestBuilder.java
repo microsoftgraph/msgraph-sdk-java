@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the collection of organization entities.
  */
 public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the branding property of the microsoft.graph.organization entity. */
+    /**
+     * Provides operations to manage the branding property of the microsoft.graph.organization entity.
+     */
     @javax.annotation.Nonnull
     public BrandingRequestBuilder branding() {
         return new BrandingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity. */
+    /**
+     * Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity.
+     */
     @javax.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberGroups method. */
+    /**
+     * Provides operations to call the checkMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberObjects method. */
+    /**
+     * Provides operations to call the checkMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the extensions property of the microsoft.graph.organization entity. */
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.organization entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberGroups method. */
+    /**
+     * Provides operations to call the getMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberObjects method. */
+    /**
+     * Provides operations to call the getMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the restore method. */
+    /**
+     * Provides operations to call the restore method.
+     */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setMobileDeviceManagementAuthority method. */
+    /**
+     * Provides operations to call the setMobileDeviceManagementAuthority method.
+     */
     @javax.annotation.Nonnull
     public SetMobileDeviceManagementAuthorityRequestBuilder setMobileDeviceManagementAuthority() {
         return new SetMobileDeviceManagementAuthorityRequestBuilder(pathParameters, requestAdapter);
@@ -171,10 +189,10 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @return a CompletableFuture of organization
-     * @see <a href="https://docs.microsoft.com/graph/api/organization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-organization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> patch(@javax.annotation.Nonnull final Organization body) {
@@ -191,11 +209,11 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organization
-     * @see <a href="https://docs.microsoft.com/graph/api/organization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-organization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> patch(@javax.annotation.Nonnull final Organization body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -269,7 +287,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -278,7 +296,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -309,11 +327,15 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of the currently authenticated organization. Since the **organization** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **organization** instance.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -322,7 +344,9 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

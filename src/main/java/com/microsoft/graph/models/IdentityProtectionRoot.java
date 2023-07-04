@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Risk detection in Azure AD Identity Protection and the associated information about the detection. */
+    /**
+     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     */
     private java.util.List<RiskDetection> riskDetections;
-    /** Azure AD service principals that are at risk. */
+    /**
+     * Azure AD service principals that are at risk.
+     */
     private java.util.List<RiskyServicePrincipal> riskyServicePrincipals;
-    /** Users that are flagged as at-risk by Azure AD Identity Protection. */
+    /**
+     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     */
     private java.util.List<RiskyUser> riskyUsers;
-    /** Represents information about detected at-risk service principals in an Azure AD tenant. */
+    /**
+     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     */
     private java.util.List<ServicePrincipalRiskDetection> servicePrincipalRiskDetections;
     /**
      * Instantiates a new IdentityProtectionRoot and sets the default values.

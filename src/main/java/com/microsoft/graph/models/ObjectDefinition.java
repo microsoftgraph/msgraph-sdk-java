@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ObjectDefinition implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The attributes property */
+    /**
+     * The attributes property
+     */
     private java.util.List<AttributeDefinition> attributes;
-    /** The metadata property */
+    /**
+     * The metadata property
+     */
     private java.util.List<ObjectDefinitionMetadataEntry> metadata;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The supportedApis property */
+    /**
+     * The supportedApis property
+     */
     private java.util.List<String> supportedApis;
     /**
      * Instantiates a new objectDefinition and sets the default values.

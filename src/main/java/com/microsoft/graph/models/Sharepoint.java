@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Sharepoint extends Entity implements Parsable {
-    /** The settings property */
+    /**
+     * The settings property
+     */
     private SharepointSettings settings;
     /**
      * Instantiates a new Sharepoint and sets the default values.

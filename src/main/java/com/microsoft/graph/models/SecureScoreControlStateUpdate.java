@@ -9,19 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Assigns the control to the user who will take the action. */
+    /**
+     * Assigns the control to the user who will take the action.
+     */
     private String assignedTo;
-    /** Provides optional comment about the control. */
+    /**
+     * Provides optional comment about the control.
+     */
     private String comment;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty). */
+    /**
+     * State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
+     */
     private String state;
-    /** ID of the user who updated tenant state. */
+    /**
+     * ID of the user who updated tenant state.
+     */
     private String updatedBy;
-    /** Time at which the control state was updated. */
+    /**
+     * Time at which the control state was updated.
+     */
     private OffsetDateTime updatedDateTime;
     /**
      * Instantiates a new secureScoreControlStateUpdate and sets the default values.

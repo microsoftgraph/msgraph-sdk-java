@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookOperation extends Entity implements Parsable {
-    /** The error returned by the operation. */
+    /**
+     * The error returned by the operation.
+     */
     private WorkbookOperationError error;
-    /** The resource URI for the result. */
+    /**
+     * The resource URI for the result.
+     */
     private String resourceLocation;
-    /** The status property */
+    /**
+     * The status property
+     */
     private WorkbookOperationStatus status;
     /**
      * Instantiates a new workbookOperation and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InferenceClassificationOverride extends Entity implements Parsable {
-    /** Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other. */
+    /**
+     * Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
+     */
     private InferenceClassificationType classifyAs;
-    /** The email address information of the sender for whom the override is created. */
+    /**
+     * The email address information of the sender for whom the override is created.
+     */
     private EmailAddress senderEmailAddress;
     /**
      * Instantiates a new inferenceClassificationOverride and sets the default values.

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The unique identifier of a message in a Microsoft Teams channel. */
+    /**
+     * The unique identifier of a message in a Microsoft Teams channel.
+     */
     private String messageId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The ID of the reply message. */
+    /**
+     * The ID of the reply message.
+     */
     private String replyChainMessageId;
-    /** The unique identifier for a thread in Microsoft Teams. */
+    /**
+     * The unique identifier for a thread in Microsoft Teams.
+     */
     private String threadId;
     /**
      * Instantiates a new chatInfo and sets the default values.

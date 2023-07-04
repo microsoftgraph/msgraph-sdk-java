@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedGroupSource extends DataSource implements Parsable {
-    /** The group property */
+    /**
+     * The group property
+     */
     private Group group;
-    /** Specifies which sources are included in this group. Possible values are: mailbox, site. */
+    /**
+     * Specifies which sources are included in this group. Possible values are: mailbox, site.
+     */
     private SourceType includedSources;
     /**
      * Instantiates a new UnifiedGroupSource and sets the default values.

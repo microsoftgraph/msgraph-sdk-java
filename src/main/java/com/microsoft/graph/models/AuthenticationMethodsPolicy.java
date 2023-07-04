@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodsPolicy extends Entity implements Parsable {
-    /** Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy. */
+    /**
+     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     */
     private java.util.List<AuthenticationMethodConfiguration> authenticationMethodConfigurations;
-    /** A description of the policy. Read-only. */
+    /**
+     * A description of the policy. Read-only.
+     */
     private String description;
-    /** The name of the policy. Read-only. */
+    /**
+     * The name of the policy. Read-only.
+     */
     private String displayName;
-    /** The date and time of the last update to the policy. Read-only. */
+    /**
+     * The date and time of the last update to the policy. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use. */
+    /**
+     * The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     */
     private AuthenticationMethodsPolicyMigrationState policyMigrationState;
-    /** The version of the policy in use. Read-only. */
+    /**
+     * The version of the policy in use. Read-only.
+     */
     private String policyVersion;
-    /** The reconfirmationInDays property */
+    /**
+     * The reconfirmationInDays property
+     */
     private Integer reconfirmationInDays;
-    /** Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods. */
+    /**
+     * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+     */
     private RegistrationEnforcement registrationEnforcement;
     /**
      * Instantiates a new AuthenticationMethodsPolicy and sets the default values.

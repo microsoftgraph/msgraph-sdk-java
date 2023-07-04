@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingFloatingPoint extends OmaSetting implements Parsable {
-    /** Value. */
+    /**
+     * Value.
+     */
     private Float value;
     /**
      * Instantiates a new OmaSettingFloatingPoint and sets the default values.

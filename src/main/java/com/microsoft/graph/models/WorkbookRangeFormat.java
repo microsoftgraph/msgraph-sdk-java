@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookRangeFormat extends Entity implements Parsable {
-    /** Collection of border objects that apply to the overall range selected Read-only. */
+    /**
+     * Collection of border objects that apply to the overall range selected Read-only.
+     */
     private java.util.List<WorkbookRangeBorder> borders;
-    /** Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned. */
+    /**
+     * Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
+     */
     private Double columnWidth;
-    /** Returns the fill object defined on the overall range. Read-only. */
+    /**
+     * Returns the fill object defined on the overall range. Read-only.
+     */
     private WorkbookRangeFill fill;
-    /** Returns the font object defined on the overall range selected Read-only. */
+    /**
+     * Returns the font object defined on the overall range selected Read-only.
+     */
     private WorkbookRangeFont font;
-    /** Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed. */
+    /**
+     * Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     */
     private String horizontalAlignment;
-    /** Returns the format protection object for a range. Read-only. */
+    /**
+     * Returns the format protection object for a range. Read-only.
+     */
     private WorkbookFormatProtection protection;
-    /** Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned. */
+    /**
+     * Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
+     */
     private Double rowHeight;
-    /** Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed. */
+    /**
+     * Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
+     */
     private String verticalAlignment;
-    /** Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting */
+    /**
+     * Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
+     */
     private Boolean wrapText;
     /**
      * Instantiates a new workbookRangeFormat and sets the default values.

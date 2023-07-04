@@ -40,87 +40,121 @@ import java.util.Objects;
  * Provides operations to manage the collection of site entities.
  */
 public class SiteItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the analytics property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the analytics property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the columns property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the contentTypes property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public ContentTypesRequestBuilder contentTypes() {
         return new ContentTypesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drive property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the drive property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drives property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the drives property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public DrivesRequestBuilder drives() {
         return new DrivesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the externalColumns property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public ExternalColumnsRequestBuilder externalColumns() {
         return new ExternalColumnsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getActivitiesByInterval method. */
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     */
     @javax.annotation.Nonnull
     public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
         return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the items property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lists property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the lists property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public ListsRequestBuilder lists() {
         return new ListsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the onenote property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the onenote property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the permissions property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sites property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the termStore property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the termStore property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public TermStoreRequestBuilder termStore() {
         return new TermStoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the termStores property of the microsoft.graph.site entity. */
+    /**
+     * Provides operations to manage the termStores property of the microsoft.graph.site entity.
+     */
     @javax.annotation.Nonnull
     public TermStoresRequestBuilder termStores() {
         return new TermStoresRequestBuilder(pathParameters, requestAdapter);
@@ -323,11 +357,15 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve properties and relationships for a [site][] resource.A **site** resource represents a team site in SharePoint.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -336,7 +374,9 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

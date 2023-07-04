@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In. */
+    /**
+     * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
+     */
     private OffsetDateTime createdDateTime;
-    /** The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In. */
+    /**
+     * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     */
     private Device device;
-    /** Tags containing app metadata. */
+    /**
+     * Tags containing app metadata.
+     */
     private String deviceTag;
-    /** The name of the device on which this app is registered. */
+    /**
+     * The name of the device on which this app is registered.
+     */
     private String displayName;
-    /** Numerical version of this instance of the Authenticator app. */
+    /**
+     * Numerical version of this instance of the Authenticator app.
+     */
     private String phoneAppVersion;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.

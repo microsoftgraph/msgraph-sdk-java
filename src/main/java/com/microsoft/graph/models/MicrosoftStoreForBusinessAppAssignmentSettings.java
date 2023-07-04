@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** Whether or not to use device execution context for Microsoft Store for Business mobile app. */
+    /**
+     * Whether or not to use device execution context for Microsoft Store for Business mobile app.
+     */
     private Boolean useDeviceContext;
     /**
      * Instantiates a new MicrosoftStoreForBusinessAppAssignmentSettings and sets the default values.

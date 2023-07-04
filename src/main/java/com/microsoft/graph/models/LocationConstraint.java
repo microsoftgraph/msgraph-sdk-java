@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LocationConstraint implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations. */
+    /**
+     * The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
+     */
     private Boolean isRequired;
-    /** Constraint information for one or more locations that the client requests for the meeting. */
+    /**
+     * Constraint information for one or more locations that the client requests for the meeting.
+     */
     private java.util.List<LocationConstraintItem> locations;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The client requests the service to suggest one or more meeting locations. */
+    /**
+     * The client requests the service to suggest one or more meeting locations.
+     */
     private Boolean suggestLocation;
     /**
      * Instantiates a new locationConstraint and sets the default values.

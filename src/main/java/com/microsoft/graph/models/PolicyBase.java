@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PolicyBase extends DirectoryObject implements Parsable {
-    /** Description for this policy. Required. */
+    /**
+     * Description for this policy. Required.
+     */
     private String description;
-    /** Display name for this policy. Required. */
+    /**
+     * Display name for this policy. Required.
+     */
     private String displayName;
     /**
      * Instantiates a new policyBase and sets the default values.

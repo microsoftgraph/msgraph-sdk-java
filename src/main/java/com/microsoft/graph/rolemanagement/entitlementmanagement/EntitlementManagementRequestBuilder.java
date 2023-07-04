@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the entitlementManagement property of the microsoft.graph.roleManagement entity.
  */
 public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public ResourceNamespacesRequestBuilder resourceNamespaces() {
         return new ResourceNamespacesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
         return new RoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder roleAssignmentScheduleInstances() {
         return new RoleAssignmentScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleAssignmentScheduleRequestsRequestBuilder roleAssignmentScheduleRequests() {
         return new RoleAssignmentScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleAssignmentSchedulesRequestBuilder roleAssignmentSchedules() {
         return new RoleAssignmentSchedulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleDefinitionsRequestBuilder roleDefinitions() {
         return new RoleDefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleEligibilityScheduleInstancesRequestBuilder roleEligibilityScheduleInstances() {
         return new RoleEligibilityScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleEligibilityScheduleRequestsRequestBuilder roleEligibilityScheduleRequests() {
         return new RoleEligibilityScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity. */
+    /**
+     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
+     */
     @javax.annotation.Nonnull
     public RoleEligibilitySchedulesRequestBuilder roleEligibilitySchedules() {
         return new RoleEligibilitySchedulesRequestBuilder(pathParameters, requestAdapter);
@@ -305,11 +323,15 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Container for roles and assignments for entitlement management resources.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -318,7 +340,9 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

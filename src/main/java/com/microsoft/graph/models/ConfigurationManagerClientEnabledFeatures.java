@@ -11,21 +11,37 @@ import java.util.Objects;
  * configuration Manager client enabled features
  */
 public class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Whether compliance policy is managed by Intune */
+    /**
+     * Whether compliance policy is managed by Intune
+     */
     private Boolean compliancePolicy;
-    /** Whether device configuration is managed by Intune */
+    /**
+     * Whether device configuration is managed by Intune
+     */
     private Boolean deviceConfiguration;
-    /** Whether inventory is managed by Intune */
+    /**
+     * Whether inventory is managed by Intune
+     */
     private Boolean inventory;
-    /** Whether modern application is managed by Intune */
+    /**
+     * Whether modern application is managed by Intune
+     */
     private Boolean modernApps;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Whether resource access is managed by Intune */
+    /**
+     * Whether resource access is managed by Intune
+     */
     private Boolean resourceAccess;
-    /** Whether Windows Update for Business is managed by Intune */
+    /**
+     * Whether Windows Update for Business is managed by Intune
+     */
     private Boolean windowsUpdateForBusiness;
     /**
      * Instantiates a new configurationManagerClientEnabledFeatures and sets the default values.

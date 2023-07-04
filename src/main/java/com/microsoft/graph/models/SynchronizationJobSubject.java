@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The links property */
+    /**
+     * The links property
+     */
     private SynchronizationLinkedObjects links;
-    /** The objectId property */
+    /**
+     * The objectId property
+     */
     private String objectId;
-    /** The objectTypeName property */
+    /**
+     * The objectTypeName property
+     */
     private String objectTypeName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new SynchronizationJobSubject and sets the default values.

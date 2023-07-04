@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StsPolicy extends PolicyBase implements Parsable {
-    /** The appliesTo property */
+    /**
+     * The appliesTo property
+     */
     private java.util.List<DirectoryObject> appliesTo;
-    /** A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required. */
+    /**
+     * A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
+     */
     private java.util.List<String> definition;
-    /** If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false. */
+    /**
+     * If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
+     */
     private Boolean isOrganizationDefault;
     /**
      * Instantiates a new StsPolicy and sets the default values.

@@ -8,33 +8,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
-    /** Access package containing this policy. Read-only. */
+    /**
+     * Access package containing this policy. Read-only.
+     */
     private AccessPackage accessPackage;
-    /** Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue. */
+    /**
+     * Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
+     */
     private AllowedTargetScope allowedTargetScope;
-    /** This property is only present for an auto assignment policy; if absent, this is a request-based policy. */
+    /**
+     * This property is only present for an auto assignment policy; if absent, this is a request-based policy.
+     */
     private AccessPackageAutomaticRequestSettings automaticRequestSettings;
-    /** Catalog of the access package containing this policy. Read-only. */
+    /**
+     * Catalog of the access package containing this policy. Read-only.
+     */
     private AccessPackageCatalog catalog;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
-    /** The description of the policy. */
+    /**
+     * The description of the policy.
+     */
     private String description;
-    /** The display name of the policy. */
+    /**
+     * The display name of the policy.
+     */
     private String displayName;
-    /** The expiration date for assignments created in this policy. */
+    /**
+     * The expiration date for assignments created in this policy.
+     */
     private ExpirationPattern expiration;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime modifiedDateTime;
-    /** Questions that are posed to the  requestor. */
+    /**
+     * Questions that are posed to the  requestor.
+     */
     private java.util.List<AccessPackageQuestion> questions;
-    /** Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests. */
+    /**
+     * Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
+     */
     private AccessPackageAssignmentApprovalSettings requestApprovalSettings;
-    /** Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request. */
+    /**
+     * Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
+     */
     private AccessPackageAssignmentRequestorSettings requestorSettings;
-    /** Settings for access reviews of assignments through this policy. */
+    /**
+     * Settings for access reviews of assignments through this policy.
+     */
     private AccessPackageAssignmentReviewSettings reviewSettings;
-    /** The principals that can be assigned access from an access package through this policy. */
+    /**
+     * The principals that can be assigned access from an access package through this policy.
+     */
     private java.util.List<SubjectSet> specificAllowedTargets;
     /**
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.

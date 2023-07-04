@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Tenant mobile device management subscription state. */
+/**
+ * Tenant mobile device management subscription state.
+ */
 public enum DeviceManagementSubscriptionState implements ValuedEnum {
     /** Pending */
     Pending("pending"),

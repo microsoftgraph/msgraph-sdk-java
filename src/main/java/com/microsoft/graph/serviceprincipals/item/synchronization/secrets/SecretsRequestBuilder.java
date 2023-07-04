@@ -20,7 +20,9 @@ import java.util.Objects;
  * Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/synchronization/secrets
  */
 public class SecretsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);

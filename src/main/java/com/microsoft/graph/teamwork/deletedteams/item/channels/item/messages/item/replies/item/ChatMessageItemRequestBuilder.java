@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
  */
 public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity. */
+    /**
+     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
+     */
     @javax.annotation.Nonnull
     public HostedContentsRequestBuilder hostedContents() {
         return new HostedContentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the softDelete method. */
+    /**
+     * Provides operations to call the softDelete method.
+     */
     @javax.annotation.Nonnull
     public SoftDeleteRequestBuilder softDelete() {
         return new SoftDeleteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the undoSoftDelete method. */
+    /**
+     * Provides operations to call the undoSoftDelete method.
+     */
     @javax.annotation.Nonnull
     public UndoSoftDeleteRequestBuilder undoSoftDelete() {
         return new UndoSoftDeleteRequestBuilder(pathParameters, requestAdapter);
@@ -271,11 +277,15 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single message or a message reply in a channel or a chat.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -284,7 +294,9 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

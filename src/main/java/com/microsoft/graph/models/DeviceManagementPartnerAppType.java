@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Partner App Type. */
+/**
+ * Partner App Type.
+ */
 public enum DeviceManagementPartnerAppType implements ValuedEnum {
     /** Partner App type is unknown. */
     Unknown("unknown"),

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values to specify which cookies are allowed in Microsoft Edge. */
+/**
+ * Possible values to specify which cookies are allowed in Microsoft Edge.
+ */
 public enum EdgeCookiePolicy implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

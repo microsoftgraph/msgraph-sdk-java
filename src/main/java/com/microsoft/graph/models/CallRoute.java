@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallRoute implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The final property */
+    /**
+     * The final property
+     */
     private IdentitySet finalEscaped;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The original property */
+    /**
+     * The original property
+     */
     private IdentitySet original;
-    /** The routingType property */
+    /**
+     * The routingType property
+     */
     private RoutingType routingType;
     /**
      * Instantiates a new callRoute and sets the default values.

@@ -10,9 +10,13 @@ import java.util.Objects;
  * Represents app protection and configuration status for the organization.
  */
 public class ManagedAppStatus extends Entity implements Parsable {
-    /** Friendly name of the status report. */
+    /**
+     * Friendly name of the status report.
+     */
     private String displayName;
-    /** Version of the entity. */
+    /**
+     * Version of the entity.
+     */
     private String version;
     /**
      * Instantiates a new managedAppStatus and sets the default values.

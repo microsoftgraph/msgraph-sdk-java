@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingDateTime extends OmaSetting implements Parsable {
-    /** Value. */
+    /**
+     * Value.
+     */
     private OffsetDateTime value;
     /**
      * Instantiates a new OmaSettingDateTime and sets the default values.

@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AudioConferencing implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The conference id of the online meeting. */
+    /**
+     * The conference id of the online meeting.
+     */
     private String conferenceId;
-    /** A URL to the externally-accessible web page that contains dial-in information. */
+    /**
+     * A URL to the externally-accessible web page that contains dial-in information.
+     */
     private String dialinUrl;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The tollFreeNumber property */
+    /**
+     * The tollFreeNumber property
+     */
     private String tollFreeNumber;
-    /** List of toll-free numbers that are displayed in the meeting invite. */
+    /**
+     * List of toll-free numbers that are displayed in the meeting invite.
+     */
     private java.util.List<String> tollFreeNumbers;
-    /** The tollNumber property */
+    /**
+     * The tollNumber property
+     */
     private String tollNumber;
-    /** List of toll numbers that are displayed in the meeting invite. */
+    /**
+     * List of toll numbers that are displayed in the meeting invite.
+     */
     private java.util.List<String> tollNumbers;
     /**
      * Instantiates a new audioConferencing and sets the default values.

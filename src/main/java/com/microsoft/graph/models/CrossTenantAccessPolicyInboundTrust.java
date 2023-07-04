@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Specifies whether compliant devices from external Azure AD organizations are trusted. */
+    /**
+     * Specifies whether compliant devices from external Azure AD organizations are trusted.
+     */
     private Boolean isCompliantDeviceAccepted;
-    /** Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted. */
+    /**
+     * Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
+     */
     private Boolean isHybridAzureADJoinedDeviceAccepted;
-    /** Specifies whether MFA from external Azure AD organizations is trusted. */
+    /**
+     * Specifies whether MFA from external Azure AD organizations is trusted.
+     */
     private Boolean isMfaAccepted;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new crossTenantAccessPolicyInboundTrust and sets the default values.

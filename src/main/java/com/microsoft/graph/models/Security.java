@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.Incident;
+import com.microsoft.graph.models.security.ThreatIntelligence;
 import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
 import com.microsoft.kiota.serialization.Parsable;
@@ -12,23 +13,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Security extends Entity implements Parsable {
-    /** The alerts property */
+    /**
+     * The alerts property
+     */
     private java.util.List<Alert> alerts;
-    /** A collection of alerts in Microsoft 365 Defender. */
+    /**
+     * A collection of alerts in Microsoft 365 Defender.
+     */
     private java.util.List<Alert> alertsV2;
-    /** The attackSimulation property */
+    /**
+     * The attackSimulation property
+     */
     private AttackSimulationRoot attackSimulation;
-    /** The cases property */
+    /**
+     * The cases property
+     */
     private CasesRoot cases;
-    /** A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack. */
+    /**
+     * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     */
     private java.util.List<Incident> incidents;
-    /** The secureScoreControlProfiles property */
+    /**
+     * The secureScoreControlProfiles property
+     */
     private java.util.List<SecureScoreControlProfile> secureScoreControlProfiles;
-    /** The secureScores property */
+    /**
+     * The secureScores property
+     */
     private java.util.List<SecureScore> secureScores;
-    /** The triggers property */
+    /**
+     * The threatIntelligence property
+     */
+    private ThreatIntelligence threatIntelligence;
+    /**
+     * The triggers property
+     */
     private TriggersRoot triggers;
-    /** The triggerTypes property */
+    /**
+     * The triggerTypes property
+     */
     private TriggerTypesRoot triggerTypes;
     /**
      * Instantiates a new Security and sets the default values.
@@ -94,6 +117,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("threatIntelligence", (n) -> { this.setThreatIntelligence(n.getObjectValue(ThreatIntelligence::createFromDiscriminatorValue)); });
         deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("triggerTypes", (n) -> { this.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -121,6 +145,14 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<SecureScore> getSecureScores() {
         return this.secureScores;
+    }
+    /**
+     * Gets the threatIntelligence property value. The threatIntelligence property
+     * @return a threatIntelligence
+     */
+    @javax.annotation.Nullable
+    public ThreatIntelligence getThreatIntelligence() {
+        return this.threatIntelligence;
     }
     /**
      * Gets the triggers property value. The triggers property
@@ -154,6 +186,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
+        writer.writeObjectValue("threatIntelligence", this.getThreatIntelligence());
         writer.writeObjectValue("triggers", this.getTriggers());
         writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
     }
@@ -219,6 +252,15 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setSecureScores(@javax.annotation.Nullable final java.util.List<SecureScore> value) {
         this.secureScores = value;
+    }
+    /**
+     * Sets the threatIntelligence property value. The threatIntelligence property
+     * @param value Value to set for the threatIntelligence property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setThreatIntelligence(@javax.annotation.Nullable final ThreatIntelligence value) {
+        this.threatIntelligence = value;
     }
     /**
      * Sets the triggers property value. The triggers property

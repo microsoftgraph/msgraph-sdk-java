@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InsightIdentity implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The email address of the user who shared the item. */
+    /**
+     * The email address of the user who shared the item.
+     */
     private String address;
-    /** The display name of the user who shared the item. */
+    /**
+     * The display name of the user who shared the item.
+     */
     private String displayName;
-    /** The id of the user who shared the item. */
+    /**
+     * The id of the user who shared the item.
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new insightIdentity and sets the default values.

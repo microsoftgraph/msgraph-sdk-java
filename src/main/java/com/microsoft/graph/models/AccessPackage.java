@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackage extends Entity implements Parsable {
-    /** The access packages that are incompatible with this package. Read-only. */
+    /**
+     * The access packages that are incompatible with this package. Read-only.
+     */
     private java.util.List<AccessPackage> accessPackagesIncompatibleWith;
-    /** The assignmentPolicies property */
+    /**
+     * The assignmentPolicies property
+     */
     private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
-    /** The catalog property */
+    /**
+     * The catalog property
+     */
     private AccessPackageCatalog catalog;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The description of the access package. */
+    /**
+     * The description of the access package.
+     */
     private String description;
-    /** The display name of the access package. Supports $filter (eq, contains). */
+    /**
+     * The display name of the access package. Supports $filter (eq, contains).
+     */
     private String displayName;
-    /** The access packages whose assigned users are ineligible to be assigned this access package. */
+    /**
+     * The access packages whose assigned users are ineligible to be assigned this access package.
+     */
     private java.util.List<AccessPackage> incompatibleAccessPackages;
-    /** The groups whose members are ineligible to be assigned this access package. */
+    /**
+     * The groups whose members are ineligible to be assigned this access package.
+     */
     private java.util.List<Group> incompatibleGroups;
-    /** Whether the access package is hidden from the requestor. */
+    /**
+     * Whether the access package is hidden from the requestor.
+     */
     private Boolean isHidden;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime modifiedDateTime;
     /**
      * Instantiates a new accessPackage and sets the default values.

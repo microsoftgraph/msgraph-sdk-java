@@ -11,29 +11,53 @@ import java.util.Objects;
  * Singleton entity which is used to specify IE mode site metadata
  */
 public class BrowserSite extends Entity implements Parsable {
-    /** Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain. */
+    /**
+     * Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
+     */
     private Boolean allowRedirect;
-    /** The comment for the site. */
+    /**
+     * The comment for the site.
+     */
     private String comment;
-    /** The compatibilityMode property */
+    /**
+     * The compatibilityMode property
+     */
     private BrowserSiteCompatibilityMode compatibilityMode;
-    /** The date and time when the site was created. */
+    /**
+     * The date and time when the site was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The date and time when the site was deleted. */
+    /**
+     * The date and time when the site was deleted.
+     */
     private OffsetDateTime deletedDateTime;
-    /** The history of modifications applied to the site. */
+    /**
+     * The history of modifications applied to the site.
+     */
     private java.util.List<BrowserSiteHistory> history;
-    /** The user who last modified the site. */
+    /**
+     * The user who last modified the site.
+     */
     private IdentitySet lastModifiedBy;
-    /** The date and time when the site was last modified. */
+    /**
+     * The date and time when the site was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The mergeType property */
+    /**
+     * The mergeType property
+     */
     private BrowserSiteMergeType mergeType;
-    /** The status property */
+    /**
+     * The status property
+     */
     private BrowserSiteStatus status;
-    /** The targetEnvironment property */
+    /**
+     * The targetEnvironment property
+     */
     private BrowserSiteTargetEnvironment targetEnvironment;
-    /** The URL of the site. */
+    /**
+     * The URL of the site.
+     */
     private String webUrl;
     /**
      * Instantiates a new browserSite and sets the default values.

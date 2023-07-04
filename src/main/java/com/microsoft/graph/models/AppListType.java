@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values of the compliance app list. */
+/**
+ * Possible values of the compliance app list.
+ */
 public enum AppListType implements ValuedEnum {
     /** Default value, no intent. */
     None("none"),

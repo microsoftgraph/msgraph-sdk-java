@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
-    /** Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets. */
+    /**
+     * Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
+     */
     private String itemId;
-    /** Configurations to match and resolve URL. */
+    /**
+     * Configurations to match and resolve URL.
+     */
     private UrlMatchInfo urlMatchInfo;
     /**
      * Instantiates a new ItemIdResolver and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ThumbnailSetCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ThumbnailSet> value;
     /**
      * Instantiates a new ThumbnailSetCollectionResponse and sets the default values.

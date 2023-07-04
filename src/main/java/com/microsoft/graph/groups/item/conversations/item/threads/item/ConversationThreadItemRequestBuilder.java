@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
  */
 public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the posts property of the microsoft.graph.conversationThread entity. */
+    /**
+     * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
+     */
     @javax.annotation.Nonnull
     public PostsRequestBuilder posts() {
         return new PostsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reply method. */
+    /**
+     * Provides operations to call the reply method.
+     */
     @javax.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
@@ -263,11 +267,15 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -276,7 +284,9 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

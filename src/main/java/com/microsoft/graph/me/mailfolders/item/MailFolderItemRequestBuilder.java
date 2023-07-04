@@ -25,27 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
  */
 public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity. */
+    /**
+     * Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity.
+     */
     @javax.annotation.Nonnull
     public ChildFoldersRequestBuilder childFolders() {
         return new ChildFoldersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the copy method. */
+    /**
+     * Provides operations to call the copy method.
+     */
     @javax.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity. */
+    /**
+     * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
+     */
     @javax.annotation.Nonnull
     public MessageRulesRequestBuilder messageRules() {
         return new MessageRulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the messages property of the microsoft.graph.mailFolder entity. */
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.mailFolder entity.
+     */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the move method. */
+    /**
+     * Provides operations to call the move method.
+     */
     @javax.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
@@ -149,10 +159,10 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@javax.annotation.Nonnull final MailFolder body) {
@@ -169,11 +179,11 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@javax.annotation.Nonnull final MailFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -247,7 +257,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -256,7 +266,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of mailfolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -287,14 +297,20 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
      * The user's mail folders. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Include Hidden Folders */
+        /**
+         * Include Hidden Folders
+         */
         @javax.annotation.Nullable
         public String includeHiddenFolders;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -303,7 +319,9 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

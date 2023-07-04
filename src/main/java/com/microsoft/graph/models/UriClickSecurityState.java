@@ -9,24 +9,40 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The clickAction property */
+    /**
+     * The clickAction property
+     */
     private String clickAction;
-    /** The clickDateTime property */
+    /**
+     * The clickDateTime property
+     */
     private OffsetDateTime clickDateTime;
-    /** The id property */
+    /**
+     * The id property
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The sourceId property */
+    /**
+     * The sourceId property
+     */
     private String sourceId;
-    /** The uriDomain property */
+    /**
+     * The uriDomain property
+     */
     private String uriDomain;
-    /** The verdict property */
+    /**
+     * The verdict property
+     */
     private String verdict;
     /**
-     * Instantiates a new UriClickSecurityState and sets the default values.
+     * Instantiates a new uriClickSecurityState and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -36,7 +52,7 @@ public class UriClickSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UriClickSecurityState
+     * @return a uriClickSecurityState
      */
     @javax.annotation.Nonnull
     public static UriClickSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

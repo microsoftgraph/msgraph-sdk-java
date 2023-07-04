@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Whether this is the default Content Type */
+    /**
+     * Indicates whether this is the default content type
+     */
     private Boolean defaultEscaped;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies the position in which the Content Type appears in the selection UI. */
+    /**
+     * Specifies the position in which the content type appears in the selection UI.
+     */
     private Integer position;
     /**
      * Instantiates a new contentTypeOrder and sets the default values.
@@ -43,7 +51,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the default property value. Whether this is the default Content Type
+     * Gets the default property value. Indicates whether this is the default content type
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -71,7 +79,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the position property value. Specifies the position in which the Content Type appears in the selection UI.
+     * Gets the position property value. Specifies the position in which the content type appears in the selection UI.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -101,7 +109,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the default property value. Whether this is the default Content Type
+     * Sets the default property value. Indicates whether this is the default content type
      * @param value Value to set for the default property.
      * @return a void
      */
@@ -119,7 +127,7 @@ public class ContentTypeOrder implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the position property value. Specifies the position in which the Content Type appears in the selection UI.
+     * Sets the position property value. Specifies the position in which the content type appears in the selection UI.
      * @param value Value to set for the position property.
      * @return a void
      */

@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ControlScore implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Control action category (Identity, Data, Device, Apps, Infrastructure). */
+    /**
+     * Control action category (Identity, Data, Device, Apps, Infrastructure).
+     */
     private String controlCategory;
-    /** Control unique name. */
+    /**
+     * Control unique name.
+     */
     private String controlName;
-    /** Description of the control. */
+    /**
+     * Description of the control.
+     */
     private String description;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Tenant achieved score for the control (it varies day by day depending on tenant operations on the control). */
+    /**
+     * Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
+     */
     private Double score;
     /**
      * Instantiates a new controlScore and sets the default values.

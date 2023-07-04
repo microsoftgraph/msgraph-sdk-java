@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Parsable {
-    /** Indicates whether the answer will be in single or multiple line format. */
+    /**
+     * Indicates whether the answer will be in single or multiple line format.
+     */
     private Boolean isSingleLineQuestion;
-    /** The regular expression pattern which any answer to this question must match. */
+    /**
+     * The regular expression pattern which any answer to this question must match.
+     */
     private String regexPattern;
     /**
      * Instantiates a new AccessPackageTextInputQuestion and sets the default values.

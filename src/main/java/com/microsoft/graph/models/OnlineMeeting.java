@@ -8,58 +8,108 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnlineMeeting extends Entity implements Parsable {
-    /** Indicates whether attendees can turn on their camera. */
+    /**
+     * Indicates whether attendees can turn on their camera.
+     */
     private Boolean allowAttendeeToEnableCamera;
-    /** Indicates whether attendees can turn on their microphone. */
+    /**
+     * Indicates whether attendees can turn on their microphone.
+     */
     private Boolean allowAttendeeToEnableMic;
-    /** Specifies who can be a presenter in a meeting. Possible values are listed in the following table. */
+    /**
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+     */
     private OnlineMeetingPresenters allowedPresenters;
-    /** Specifies the mode of meeting chat. */
+    /**
+     * Specifies the mode of meeting chat.
+     */
     private MeetingChatMode allowMeetingChat;
-    /** Indicates whether Teams reactions are enabled for the meeting. */
+    /**
+     * Indicates whether Teams reactions are enabled for the meeting.
+     */
     private Boolean allowTeamworkReactions;
-    /** The attendance reports of an online meeting. Read-only. */
+    /**
+     * The attendance reports of an online meeting. Read-only.
+     */
     private java.util.List<MeetingAttendanceReport> attendanceReports;
-    /** The content stream of the attendee report of a Microsoft Teams live event. Read-only. */
+    /**
+     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
+     */
     private byte[] attendeeReport;
-    /** The phone access (dial-in) information for an online meeting. Read-only. */
+    /**
+     * The phone access (dial-in) information for an online meeting. Read-only.
+     */
     private AudioConferencing audioConferencing;
-    /** Settings related to a live event. */
+    /**
+     * Settings related to a live event.
+     */
     private BroadcastMeetingSettings broadcastSettings;
-    /** The chat information associated with this online meeting. */
+    /**
+     * The chat information associated with this online meeting.
+     */
     private ChatInfo chatInfo;
-    /** The meeting creation time in UTC. Read-only. */
+    /**
+     * The meeting creation time in UTC. Read-only.
+     */
     private OffsetDateTime creationDateTime;
-    /** The meeting end time in UTC. */
+    /**
+     * The meeting end time in UTC.
+     */
     private OffsetDateTime endDateTime;
-    /** The externalId property */
+    /**
+     * The externalId property
+     */
     private String externalId;
-    /** Indicates if this is a Teams live event. */
+    /**
+     * Indicates if this is a Teams live event.
+     */
     private Boolean isBroadcast;
-    /** Indicates whether to announce when callers join or leave. */
+    /**
+     * Indicates whether to announce when callers join or leave.
+     */
     private Boolean isEntryExitAnnounced;
-    /** The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only. */
+    /**
+     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+     */
     private ItemBody joinInformation;
-    /** Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created. */
+    /**
+     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
+     */
     private JoinMeetingIdSettings joinMeetingIdSettings;
-    /** The join URL of the online meeting. Read-only. */
+    /**
+     * The join URL of the online meeting. Read-only.
+     */
     private String joinWebUrl;
-    /** Specifies which participants can bypass the meeting   lobby. */
+    /**
+     * Specifies which participants can bypass the meeting   lobby.
+     */
     private LobbyBypassSettings lobbyBypassSettings;
-    /** The participants associated with the online meeting.  This includes the organizer and the attendees. */
+    /**
+     * The participants associated with the online meeting.  This includes the organizer and the attendees.
+     */
     private MeetingParticipants participants;
-    /** Indicates whether to record the meeting automatically. */
+    /**
+     * Indicates whether to record the meeting automatically.
+     */
     private Boolean recordAutomatically;
-    /** The meeting start time in UTC. */
+    /**
+     * The meeting start time in UTC.
+     */
     private OffsetDateTime startDateTime;
-    /** The subject of the online meeting. */
+    /**
+     * The subject of the online meeting.
+     */
     private String subject;
-    /** The video teleconferencing ID. Read-only. */
+    /**
+     * The video teleconferencing ID. Read-only.
+     */
     private String videoTeleconferenceId;
-    /** Specifies whether a watermark should be applied to a content type by the client application. */
+    /**
+     * Specifies whether a watermark should be applied to a content type by the client application.
+     */
     private WatermarkProtectionValues watermarkProtection;
     /**
-     * Instantiates a new onlineMeeting and sets the default values.
+     * Instantiates a new OnlineMeeting and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -69,7 +119,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onlineMeeting
+     * @return a OnlineMeeting
      */
     @javax.annotation.Nonnull
     public static OnlineMeeting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

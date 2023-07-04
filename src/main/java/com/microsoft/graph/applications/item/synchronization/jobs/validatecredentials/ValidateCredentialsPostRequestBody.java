@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The applicationIdentifier property */
+    /**
+     * The applicationIdentifier property
+     */
     private String applicationIdentifier;
-    /** The credentials property */
+    /**
+     * The credentials property
+     */
     private java.util.List<SynchronizationSecretKeyStringValuePair> credentials;
-    /** The templateId property */
+    /**
+     * The templateId property
+     */
     private String templateId;
-    /** The useSavedCredentials property */
+    /**
+     * The useSavedCredentials property
+     */
     private Boolean useSavedCredentials;
     /**
      * Instantiates a new validateCredentialsPostRequestBody and sets the default values.

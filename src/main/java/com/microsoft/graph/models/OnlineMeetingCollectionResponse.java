@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnlineMeetingCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<OnlineMeeting> value;
     /**
      * Instantiates a new OnlineMeetingCollectionResponse and sets the default values.

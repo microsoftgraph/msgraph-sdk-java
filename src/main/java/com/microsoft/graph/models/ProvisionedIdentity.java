@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisionedIdentity extends Identity implements Parsable {
-    /** Details of the identity. */
+    /**
+     * Details of the identity.
+     */
     private DetailsInfo details;
-    /** Type of identity that has been provisioned, such as 'user' or 'group'. */
+    /**
+     * Type of identity that has been provisioned, such as 'user' or 'group'.
+     */
     private String identityType;
     /**
      * Instantiates a new ProvisionedIdentity and sets the default values.

@@ -7,73 +7,141 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates whether or not to block fingerprint unlock. */
+    /**
+     * Indicates whether or not to block fingerprint unlock.
+     */
     private Boolean passwordBlockFingerprintUnlock;
-    /** Indicates whether or not to block Smart Lock and other trust agents. */
+    /**
+     * Indicates whether or not to block Smart Lock and other trust agents.
+     */
     private Boolean passwordBlockTrustAgents;
-    /** Number of days before the password expires. Valid values 1 to 365 */
+    /**
+     * Number of days before the password expires. Valid values 1 to 365
+     */
     private Integer passwordExpirationDays;
-    /** Minimum length of passwords. Valid values 4 to 16 */
+    /**
+     * Minimum length of passwords. Valid values 4 to 16
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before the screen times out. */
+    /**
+     * Minutes of inactivity before the screen times out.
+     */
     private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /** Number of previous passwords to block. Valid values 0 to 24 */
+    /**
+     * Number of previous passwords to block. Valid values 0 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Android Work Profile required password type. */
+    /**
+     * Android Work Profile required password type.
+     */
     private AndroidWorkProfileRequiredPasswordType passwordRequiredType;
-    /** Number of sign in failures allowed before factory reset. Valid values 1 to 16 */
+    /**
+     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
+     */
     private Integer passwordSignInFailureCountBeforeFactoryReset;
-    /** Require the Android Verify apps feature is turned on. */
+    /**
+     * Require the Android Verify apps feature is turned on.
+     */
     private Boolean securityRequireVerifyApps;
-    /** Block users from adding/removing accounts in work profile. */
+    /**
+     * Block users from adding/removing accounts in work profile.
+     */
     private Boolean workProfileBlockAddingAccounts;
-    /** Block work profile camera. */
+    /**
+     * Block work profile camera.
+     */
     private Boolean workProfileBlockCamera;
-    /** Block display work profile caller ID in personal profile. */
+    /**
+     * Block display work profile caller ID in personal profile.
+     */
     private Boolean workProfileBlockCrossProfileCallerId;
-    /** Block work profile contacts availability in personal profile. */
+    /**
+     * Block work profile contacts availability in personal profile.
+     */
     private Boolean workProfileBlockCrossProfileContactsSearch;
-    /** Boolean that indicates if the setting disallow cross profile copy/paste is enabled. */
+    /**
+     * Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
+     */
     private Boolean workProfileBlockCrossProfileCopyPaste;
-    /** Indicates whether or not to block notifications while device locked. */
+    /**
+     * Indicates whether or not to block notifications while device locked.
+     */
     private Boolean workProfileBlockNotificationsWhileDeviceLocked;
-    /** Block screen capture in work profile. */
+    /**
+     * Block screen capture in work profile.
+     */
     private Boolean workProfileBlockScreenCapture;
-    /** Allow bluetooth devices to access enterprise contacts. */
+    /**
+     * Allow bluetooth devices to access enterprise contacts.
+     */
     private Boolean workProfileBluetoothEnableContactSharing;
-    /** Android Work Profile cross profile data sharing type. */
+    /**
+     * Android Work Profile cross profile data sharing type.
+     */
     private AndroidWorkProfileCrossProfileDataSharingType workProfileDataSharingType;
-    /** Android Work Profile default app permission policy type. */
+    /**
+     * Android Work Profile default app permission policy type.
+     */
     private AndroidWorkProfileDefaultAppPermissionPolicyType workProfileDefaultAppPermissionPolicy;
-    /** Indicates whether or not to block fingerprint unlock for work profile. */
+    /**
+     * Indicates whether or not to block fingerprint unlock for work profile.
+     */
     private Boolean workProfilePasswordBlockFingerprintUnlock;
-    /** Indicates whether or not to block Smart Lock and other trust agents for work profile. */
+    /**
+     * Indicates whether or not to block Smart Lock and other trust agents for work profile.
+     */
     private Boolean workProfilePasswordBlockTrustAgents;
-    /** Number of days before the work profile password expires. Valid values 1 to 365 */
+    /**
+     * Number of days before the work profile password expires. Valid values 1 to 365
+     */
     private Integer workProfilePasswordExpirationDays;
-    /** Minimum length of work profile password. Valid values 4 to 16 */
+    /**
+     * Minimum length of work profile password. Valid values 4 to 16
+     */
     private Integer workProfilePasswordMinimumLength;
-    /** Minimum # of letter characters required in work profile password. Valid values 1 to 10 */
+    /**
+     * Minimum # of letter characters required in work profile password. Valid values 1 to 10
+     */
     private Integer workProfilePasswordMinLetterCharacters;
-    /** Minimum # of lower-case characters required in work profile password. Valid values 1 to 10 */
+    /**
+     * Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
+     */
     private Integer workProfilePasswordMinLowerCaseCharacters;
-    /** Minimum # of non-letter characters required in work profile password. Valid values 1 to 10 */
+    /**
+     * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
+     */
     private Integer workProfilePasswordMinNonLetterCharacters;
-    /** Minimum # of numeric characters required in work profile password. Valid values 1 to 10 */
+    /**
+     * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
+     */
     private Integer workProfilePasswordMinNumericCharacters;
-    /** Minimum # of symbols required in work profile password. Valid values 1 to 10 */
+    /**
+     * Minimum # of symbols required in work profile password. Valid values 1 to 10
+     */
     private Integer workProfilePasswordMinSymbolCharacters;
-    /** Minimum # of upper-case characters required in work profile password. Valid values 1 to 10 */
+    /**
+     * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
+     */
     private Integer workProfilePasswordMinUpperCaseCharacters;
-    /** Minutes of inactivity before the screen times out. */
+    /**
+     * Minutes of inactivity before the screen times out.
+     */
     private Integer workProfilePasswordMinutesOfInactivityBeforeScreenTimeout;
-    /** Number of previous work profile passwords to block. Valid values 0 to 24 */
+    /**
+     * Number of previous work profile passwords to block. Valid values 0 to 24
+     */
     private Integer workProfilePasswordPreviousPasswordBlockCount;
-    /** Android Work Profile required password type. */
+    /**
+     * Android Work Profile required password type.
+     */
     private AndroidWorkProfileRequiredPasswordType workProfilePasswordRequiredType;
-    /** Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16 */
+    /**
+     * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
+     */
     private Integer workProfilePasswordSignInFailureCountBeforeFactoryReset;
-    /** Password is required or not for work profile */
+    /**
+     * Password is required or not for work profile
+     */
     private Boolean workProfileRequirePassword;
     /**
      * Instantiates a new AndroidWorkProfileGeneralDeviceConfiguration and sets the default values.

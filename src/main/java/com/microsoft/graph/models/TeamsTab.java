@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsTab extends Entity implements Parsable {
-    /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
+    /**
+     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+     */
     private TeamsTabConfiguration configuration;
-    /** Name of the tab. */
+    /**
+     * Name of the tab.
+     */
     private String displayName;
-    /** The application that is linked to the tab. This cannot be changed after tab creation. */
+    /**
+     * The application that is linked to the tab. This cannot be changed after tab creation.
+     */
     private TeamsApp teamsApp;
-    /** Deep link URL of the tab instance. Read only. */
+    /**
+     * Deep link URL of the tab instance. Read only.
+     */
     private String webUrl;
     /**
      * Instantiates a new teamsTab and sets the default values.

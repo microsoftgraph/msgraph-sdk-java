@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the incidents property of the microsoft.graph.security entity.
  */
 public class IncidentItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the alerts property of the microsoft.graph.security.incident entity. */
+    /**
+     * Provides operations to manage the alerts property of the microsoft.graph.security.incident entity.
+     */
     @javax.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
@@ -261,11 +263,15 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an incident object. Attacks are typically inflicted on different types of entities, such as devices, users, and mailboxes, resulting in multiple alert objects. Microsoft 365 Defender correlates alerts with the same attack techniques or the same attacker into an **incident**. 
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -274,7 +280,9 @@ public class IncidentItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

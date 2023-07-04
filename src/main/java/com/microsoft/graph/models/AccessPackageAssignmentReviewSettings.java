@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue. */
+    /**
+     * The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
+     */
     private AccessReviewExpirationBehavior expirationBehavior;
-    /** This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond. */
+    /**
+     * This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
+     */
     private java.util.List<SubjectSet> fallbackReviewers;
-    /** If true, access reviews are required for assignments through this policy. */
+    /**
+     * If true, access reviews are required for assignments through this policy.
+     */
     private Boolean isEnabled;
-    /** Specifies whether to display recommendations to the reviewer. The default value is true. */
+    /**
+     * Specifies whether to display recommendations to the reviewer. The default value is true.
+     */
     private Boolean isRecommendationEnabled;
-    /** Specifies whether the reviewer must provide justification for the approval. The default value is true. */
+    /**
+     * Specifies whether the reviewer must provide justification for the approval. The default value is true.
+     */
     private Boolean isReviewerJustificationRequired;
-    /** Specifies whether the principals can review their own assignments. */
+    /**
+     * Specifies whether the principals can review their own assignments.
+     */
     private Boolean isSelfReview;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** This collection specifies the users or group of users who will review the access package assignments. */
+    /**
+     * This collection specifies the users or group of users who will review the access package assignments.
+     */
     private java.util.List<SubjectSet> primaryReviewers;
-    /** When the first review should start and how often it should recur. */
+    /**
+     * When the first review should start and how often it should recur.
+     */
     private EntitlementManagementSchedule schedule;
     /**
      * Instantiates a new accessPackageAssignmentReviewSettings and sets the default values.

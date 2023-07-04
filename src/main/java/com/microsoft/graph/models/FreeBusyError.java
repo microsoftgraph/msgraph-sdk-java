@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FreeBusyError implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Describes the error. */
+    /**
+     * Describes the error.
+     */
     private String message;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The response code from querying for the availability of the user, distribution list, or resource. */
+    /**
+     * The response code from querying for the availability of the user, distribution list, or resource.
+     */
     private String responseCode;
     /**
      * Instantiates a new freeBusyError and sets the default values.

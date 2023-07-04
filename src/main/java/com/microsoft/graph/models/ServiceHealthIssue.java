@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable {
-    /** The classification property */
+    /**
+     * The classification property
+     */
     private ServiceHealthClassificationType classification;
-    /** The feature name of the service issue. */
+    /**
+     * The feature name of the service issue.
+     */
     private String feature;
-    /** The feature group name of the service issue. */
+    /**
+     * The feature group name of the service issue.
+     */
     private String featureGroup;
-    /** The description of the service issue impact. */
+    /**
+     * The description of the service issue impact.
+     */
     private String impactDescription;
-    /** Indicates whether the issue is resolved. */
+    /**
+     * Indicates whether the issue is resolved.
+     */
     private Boolean isResolved;
-    /** The origin property */
+    /**
+     * The origin property
+     */
     private ServiceHealthOrigin origin;
-    /** Collection of historical posts for the service issue. */
+    /**
+     * Collection of historical posts for the service issue.
+     */
     private java.util.List<ServiceHealthIssuePost> posts;
-    /** Indicates the service affected by the issue. */
+    /**
+     * Indicates the service affected by the issue.
+     */
     private String service;
-    /** The status property */
+    /**
+     * The status property
+     */
     private ServiceHealthStatus status;
     /**
      * Instantiates a new ServiceHealthIssue and sets the default values.

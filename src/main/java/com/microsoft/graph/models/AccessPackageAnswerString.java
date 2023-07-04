@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAnswerString extends AccessPackageAnswer implements Parsable {
-    /** The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute. */
+    /**
+     * The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
+     */
     private String value;
     /**
      * Instantiates a new AccessPackageAnswerString and sets the default values.

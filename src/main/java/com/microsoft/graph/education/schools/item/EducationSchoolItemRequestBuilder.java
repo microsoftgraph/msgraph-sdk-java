@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.
  */
 public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the administrativeUnit property of the microsoft.graph.educationSchool entity. */
+    /**
+     * Provides operations to manage the administrativeUnit property of the microsoft.graph.educationSchool entity.
+     */
     @javax.annotation.Nonnull
     public AdministrativeUnitRequestBuilder administrativeUnit() {
         return new AdministrativeUnitRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the classes property of the microsoft.graph.educationSchool entity. */
+    /**
+     * Provides operations to manage the classes property of the microsoft.graph.educationSchool entity.
+     */
     @javax.annotation.Nonnull
     public ClassesRequestBuilder classes() {
         return new ClassesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the users property of the microsoft.graph.educationSchool entity. */
+    /**
+     * Provides operations to manage the users property of the microsoft.graph.educationSchool entity.
+     */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
@@ -275,11 +281,15 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an educationSchool object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -288,7 +298,9 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

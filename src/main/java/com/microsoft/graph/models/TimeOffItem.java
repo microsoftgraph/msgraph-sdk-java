@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOffItem extends ScheduleEntity implements Parsable {
-    /** ID of the timeOffReason for this timeOffItem. Required. */
+    /**
+     * ID of the timeOffReason for this timeOffItem. Required.
+     */
     private String timeOffReasonId;
     /**
      * Instantiates a new TimeOffItem and sets the default values.

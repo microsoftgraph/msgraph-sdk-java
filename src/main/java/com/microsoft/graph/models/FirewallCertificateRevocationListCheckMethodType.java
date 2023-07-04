@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for firewallCertificateRevocationListCheckMethod */
+/**
+ * Possible values for firewallCertificateRevocationListCheckMethod
+ */
 public enum FirewallCertificateRevocationListCheckMethodType implements ValuedEnum {
     /** No value configured by Intune, do not override the user-configured device default value */
     DeviceDefault("deviceDefault"),

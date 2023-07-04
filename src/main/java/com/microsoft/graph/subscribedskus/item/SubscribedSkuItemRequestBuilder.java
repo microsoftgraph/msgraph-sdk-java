@@ -253,7 +253,9 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
      * Get a specific commercial subscription that an organization has acquired.
      */
     public class GetQueryParameters {
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -262,7 +264,9 @@ public class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

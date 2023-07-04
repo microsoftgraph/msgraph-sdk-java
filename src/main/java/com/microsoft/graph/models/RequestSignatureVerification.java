@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RequestSignatureVerification implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue. */
+    /**
+     * Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
+     */
     private WeakAlgorithms allowedWeakAlgorithms;
-    /** Specifies whether signed authentication requests for this application should be required. */
+    /**
+     * Specifies whether signed authentication requests for this application should be required.
+     */
     private Boolean isSignedRequestRequired;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new requestSignatureVerification and sets the default values.

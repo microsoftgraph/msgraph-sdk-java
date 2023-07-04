@@ -7,28 +7,48 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Authentication extends Entity implements Parsable {
-    /** The email address registered to a user for authentication. */
+    /**
+     * The email address registered to a user for authentication.
+     */
     private java.util.List<EmailAuthenticationMethod> emailMethods;
-    /** Represents the FIDO2 security keys registered to a user for authentication. */
+    /**
+     * Represents the FIDO2 security keys registered to a user for authentication.
+     */
     private java.util.List<Fido2AuthenticationMethod> fido2Methods;
-    /** Represents all authentication methods registered to a user. */
+    /**
+     * Represents all authentication methods registered to a user.
+     */
     private java.util.List<AuthenticationMethod> methods;
-    /** The details of the Microsoft Authenticator app registered to a user for authentication. */
+    /**
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     */
     private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> microsoftAuthenticatorMethods;
-    /** Represents the status of a long-running operation. */
+    /**
+     * Represents the status of a long-running operation.
+     */
     private java.util.List<LongRunningOperation> operations;
-    /** Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password. */
+    /**
+     * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     */
     private java.util.List<PasswordAuthenticationMethod> passwordMethods;
-    /** The phone numbers registered to a user for authentication. */
+    /**
+     * The phone numbers registered to a user for authentication.
+     */
     private java.util.List<PhoneAuthenticationMethod> phoneMethods;
-    /** The software OATH TOTP applications registered to a user for authentication. */
+    /**
+     * The software OATH TOTP applications registered to a user for authentication.
+     */
     private java.util.List<SoftwareOathAuthenticationMethod> softwareOathMethods;
-    /** Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes. */
+    /**
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     */
     private java.util.List<TemporaryAccessPassAuthenticationMethod> temporaryAccessPassMethods;
-    /** Represents the Windows Hello for Business authentication method registered to a user for authentication. */
+    /**
+     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     */
     private java.util.List<WindowsHelloForBusinessAuthenticationMethod> windowsHelloForBusinessMethods;
     /**
-     * Instantiates a new authentication and sets the default values.
+     * Instantiates a new Authentication and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -38,7 +58,7 @@ public class Authentication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authentication
+     * @return a Authentication
      */
     @javax.annotation.Nonnull
     public static Authentication createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

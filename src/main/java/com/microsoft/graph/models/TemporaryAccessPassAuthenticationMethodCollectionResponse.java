@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TemporaryAccessPassAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TemporaryAccessPassAuthenticationMethod> value;
     /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethodCollectionResponse and sets the default values.

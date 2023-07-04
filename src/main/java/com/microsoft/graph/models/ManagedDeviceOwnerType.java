@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Owner type of device. */
+/**
+ * Owner type of device.
+ */
 public enum ManagedDeviceOwnerType implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),

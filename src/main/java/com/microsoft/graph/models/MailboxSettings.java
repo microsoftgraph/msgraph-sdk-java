@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailboxSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Folder ID of an archive folder for the user. */
+    /**
+     * Folder ID of an archive folder for the user.
+     */
     private String archiveFolder;
-    /** Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user. */
+    /**
+     * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
+     */
     private AutomaticRepliesSetting automaticRepliesSetting;
-    /** The date format for the user's mailbox. */
+    /**
+     * The date format for the user's mailbox.
+     */
     private String dateFormat;
-    /** If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. */
+    /**
+     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     */
     private DelegateMeetingMessageDeliveryOptions delegateMeetingMessageDeliveryOptions;
-    /** The locale information for the user, including the preferred language and country/region. */
+    /**
+     * The locale information for the user, including the preferred language and country/region.
+     */
     private LocaleInfo language;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The time format for the user's mailbox. */
+    /**
+     * The time format for the user's mailbox.
+     */
     private String timeFormat;
-    /** The default time zone for the user's mailbox. */
+    /**
+     * The default time zone for the user's mailbox.
+     */
     private String timeZone;
-    /** The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only. */
+    /**
+     * The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
+     */
     private UserPurpose userPurpose;
-    /** The days of the week and hours in a specific time zone that the user works. */
+    /**
+     * The days of the week and hours in a specific time zone that the user works.
+     */
     private WorkingHours workingHours;
     /**
      * Instantiates a new mailboxSettings and sets the default values.

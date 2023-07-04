@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable {
-    /** Active Hours End */
+    /**
+     * Active Hours End
+     */
     private LocalTime activeHoursEnd;
-    /** Active Hours Start */
+    /**
+     * Active Hours Start
+     */
     private LocalTime activeHoursStart;
     /**
      * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.

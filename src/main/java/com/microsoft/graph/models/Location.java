@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Location implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The street address of the location. */
+    /**
+     * The street address of the location.
+     */
     private PhysicalAddress address;
-    /** The geographic coordinates and elevation of the location. */
+    /**
+     * The geographic coordinates and elevation of the location.
+     */
     private OutlookGeoCoordinates coordinates;
-    /** The name associated with the location. */
+    /**
+     * The name associated with the location.
+     */
     private String displayName;
-    /** Optional email address of the location. */
+    /**
+     * Optional email address of the location.
+     */
     private String locationEmailAddress;
-    /** The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only. */
+    /**
+     * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     */
     private LocationType locationType;
-    /** Optional URI representing the location. */
+    /**
+     * Optional URI representing the location.
+     */
     private String locationUri;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** For internal use only. */
+    /**
+     * For internal use only.
+     */
     private String uniqueId;
-    /** For internal use only. */
+    /**
+     * For internal use only.
+     */
     private LocationUniqueIdType uniqueIdType;
     /**
      * Instantiates a new location and sets the default values.

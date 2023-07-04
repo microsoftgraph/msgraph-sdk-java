@@ -8,37 +8,69 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisioningObjectSummary extends Entity implements Parsable {
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime activityDateTime;
-    /** Unique ID of this change in this cycle. */
+    /**
+     * Unique ID of this change in this cycle.
+     */
     private String changeId;
-    /** Unique ID per job iteration. */
+    /**
+     * Unique ID per job iteration.
+     */
     private String cycleId;
-    /** Indicates how long this provisioning action took to finish. Measured in milliseconds. */
+    /**
+     * Indicates how long this provisioning action took to finish. Measured in milliseconds.
+     */
     private Integer durationInMilliseconds;
-    /** Details of who initiated this provisioning. */
+    /**
+     * Details of who initiated this provisioning.
+     */
     private Initiator initiatedBy;
-    /** The unique ID for the whole provisioning job. */
+    /**
+     * The unique ID for the whole provisioning job.
+     */
     private String jobId;
-    /** Details of each property that was modified in this provisioning action on this object. */
+    /**
+     * Details of each property that was modified in this provisioning action on this object.
+     */
     private java.util.List<ModifiedProperty> modifiedProperties;
-    /** Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. */
+    /**
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+     */
     private ProvisioningAction provisioningAction;
-    /** Details of provisioning status. */
+    /**
+     * Details of provisioning status.
+     */
     private ProvisioningStatusInfo provisioningStatusInfo;
-    /** Details of each step in provisioning. */
+    /**
+     * Details of each step in provisioning.
+     */
     private java.util.List<ProvisioningStep> provisioningSteps;
-    /** Represents the service principal used for provisioning. */
+    /**
+     * Represents the service principal used for provisioning.
+     */
     private ProvisioningServicePrincipal servicePrincipal;
-    /** Details of source object being provisioned. */
+    /**
+     * Details of source object being provisioned.
+     */
     private ProvisionedIdentity sourceIdentity;
-    /** Details of source system of the object being provisioned. */
+    /**
+     * Details of source system of the object being provisioned.
+     */
     private ProvisioningSystem sourceSystem;
-    /** Details of target object being provisioned. */
+    /**
+     * Details of target object being provisioned.
+     */
     private ProvisionedIdentity targetIdentity;
-    /** Details of target system of the object being provisioned. */
+    /**
+     * Details of target system of the object being provisioned.
+     */
     private ProvisioningSystem targetSystem;
-    /** Unique Azure AD tenant ID. */
+    /**
+     * Unique Azure AD tenant ID.
+     */
     private String tenantId;
     /**
      * Instantiates a new provisioningObjectSummary and sets the default values.

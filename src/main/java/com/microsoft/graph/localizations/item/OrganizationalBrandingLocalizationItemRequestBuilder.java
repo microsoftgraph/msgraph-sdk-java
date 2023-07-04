@@ -27,37 +27,51 @@ import java.util.Objects;
  * Provides operations to manage the collection of organizationalBrandingLocalization entities.
  */
 public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the media for the organizationalBrandingLocalization entity. */
+    /**
+     * Provides operations to manage the media for the organizationalBrandingLocalization entity.
+     */
     @javax.annotation.Nonnull
     public BackgroundImageRequestBuilder backgroundImage() {
         return new BackgroundImageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organizationalBrandingLocalization entity. */
+    /**
+     * Provides operations to manage the media for the organizationalBrandingLocalization entity.
+     */
     @javax.annotation.Nonnull
     public BannerLogoRequestBuilder bannerLogo() {
         return new BannerLogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organizationalBrandingLocalization entity. */
+    /**
+     * Provides operations to manage the media for the organizationalBrandingLocalization entity.
+     */
     @javax.annotation.Nonnull
     public CustomCSSRequestBuilder customCSS() {
         return new CustomCSSRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organizationalBrandingLocalization entity. */
+    /**
+     * Provides operations to manage the media for the organizationalBrandingLocalization entity.
+     */
     @javax.annotation.Nonnull
     public FaviconRequestBuilder favicon() {
         return new FaviconRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organizationalBrandingLocalization entity. */
+    /**
+     * Provides operations to manage the media for the organizationalBrandingLocalization entity.
+     */
     @javax.annotation.Nonnull
     public HeaderLogoRequestBuilder headerLogo() {
         return new HeaderLogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organizationalBrandingLocalization entity. */
+    /**
+     * Provides operations to manage the media for the organizationalBrandingLocalization entity.
+     */
     @javax.annotation.Nonnull
     public SquareLogoRequestBuilder squareLogo() {
         return new SquareLogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the organizationalBrandingLocalization entity. */
+    /**
+     * Provides operations to manage the media for the organizationalBrandingLocalization entity.
+     */
     @javax.annotation.Nonnull
     public SquareLogoDarkRequestBuilder squareLogoDark() {
         return new SquareLogoDarkRequestBuilder(pathParameters, requestAdapter);
@@ -293,11 +307,15 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
      * Get entity from localizations by key
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -306,7 +324,9 @@ public class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRe
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -11,9 +11,13 @@ import java.util.Objects;
  * Base type for assignment targets.
  */
 public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new deviceAndAppManagementAssignmentTarget and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceCompliancePolicySettingStateSummaryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DeviceCompliancePolicySettingStateSummary> value;
     /**
      * Instantiates a new DeviceCompliancePolicySettingStateSummaryCollectionResponse and sets the default values.

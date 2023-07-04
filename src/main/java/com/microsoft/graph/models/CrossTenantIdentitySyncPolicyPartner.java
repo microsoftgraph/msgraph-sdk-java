@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional. */
+    /**
+     * Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Tenant identifier for the partner Azure AD organization. Read-only. */
+    /**
+     * Tenant identifier for the partner Azure AD organization. Read-only.
+     */
     private String tenantId;
-    /** Defines whether users can be synchronized from the partner tenant. Key. */
+    /**
+     * Defines whether users can be synchronized from the partner tenant. Key.
+     */
     private CrossTenantUserSyncInbound userSyncInbound;
     /**
      * Instantiates a new crossTenantIdentitySyncPolicyPartner and sets the default values.

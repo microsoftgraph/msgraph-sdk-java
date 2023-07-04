@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Indicates the publishing state of an app. */
+/**
+ * Indicates the publishing state of an app.
+ */
 public enum MobileAppPublishingState implements ValuedEnum {
     /** The app is not yet published. */
     NotPublished("notPublished"),

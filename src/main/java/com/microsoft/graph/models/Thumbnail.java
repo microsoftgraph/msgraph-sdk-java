@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Thumbnail implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The content stream for the thumbnail. */
+    /**
+     * The content stream for the thumbnail.
+     */
     private byte[] content;
-    /** The height of the thumbnail, in pixels. */
+    /**
+     * The height of the thumbnail, in pixels.
+     */
     private Integer height;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested. */
+    /**
+     * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
+     */
     private String sourceItemId;
-    /** The URL used to fetch the thumbnail content. */
+    /**
+     * The URL used to fetch the thumbnail content.
+     */
     private String url;
-    /** The width of the thumbnail, in pixels. */
+    /**
+     * The width of the thumbnail, in pixels.
+     */
     private Integer width;
     /**
      * Instantiates a new thumbnail and sets the default values.

@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalActivity extends Entity implements Parsable {
-    /** Represents an identity used to identify who is responsible for the activity. */
+    /**
+     * Represents an identity used to identify who is responsible for the activity.
+     */
     private Identity performedBy;
-    /** The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when the particular activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime startDateTime;
-    /** The type property */
+    /**
+     * The type property
+     */
     private ExternalActivityType type;
     /**
      * Instantiates a new externalActivity and sets the default values.

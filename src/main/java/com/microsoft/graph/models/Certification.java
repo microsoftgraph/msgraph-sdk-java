@@ -9,19 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Certification implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** URL that shows certification details for the application. */
+    /**
+     * URL that shows certification details for the application.
+     */
     private String certificationDetailsUrl;
-    /** The timestamp when the current certification for the application will expire. */
+    /**
+     * The timestamp when the current certification for the application will expire.
+     */
     private OffsetDateTime certificationExpirationDateTime;
-    /** Indicates whether the application is certified by Microsoft. */
+    /**
+     * Indicates whether the application is certified by Microsoft.
+     */
     private Boolean isCertifiedByMicrosoft;
-    /** Indicates whether the application has been self-attested by the application developer or the publisher. */
+    /**
+     * Indicates whether the application has been self-attested by the application developer or the publisher.
+     */
     private Boolean isPublisherAttested;
-    /** The timestamp when the certification for the application was most recently added or updated. */
+    /**
+     * The timestamp when the certification for the application was most recently added or updated.
+     */
     private OffsetDateTime lastCertificationDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new certification and sets the default values.

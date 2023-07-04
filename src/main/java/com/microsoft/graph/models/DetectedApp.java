@@ -10,19 +10,33 @@ import java.util.Objects;
  * A managed or unmanaged app that is installed on a managed device. Unmanaged apps will only appear for devices marked as corporate owned.
  */
 public class DetectedApp extends Entity implements Parsable {
-    /** The number of devices that have installed this application */
+    /**
+     * The number of devices that have installed this application
+     */
     private Integer deviceCount;
-    /** Name of the discovered application. Read-only */
+    /**
+     * Name of the discovered application. Read-only
+     */
     private String displayName;
-    /** The devices that have the discovered application installed */
+    /**
+     * The devices that have the discovered application installed
+     */
     private java.util.List<ManagedDevice> managedDevices;
-    /** Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0). */
+    /**
+     * Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+     */
     private DetectedAppPlatformType platform;
-    /** Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string. */
+    /**
+     * Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
+     */
     private String publisher;
-    /** Discovered application size in bytes. Read-only */
+    /**
+     * Discovered application size in bytes. Read-only
+     */
     private Long sizeInByte;
-    /** Version of the discovered application. Read-only */
+    /**
+     * Version of the discovered application. Read-only
+     */
     private String version;
     /**
      * Instantiates a new detectedApp and sets the default values.

@@ -11,19 +11,33 @@ import java.util.Objects;
  * The Base Class of Device Enrollment Configuration
  */
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
-    /** The list of group assignments for the device configuration profile */
+    /**
+     * The list of group assignments for the device configuration profile
+     */
     private java.util.List<EnrollmentConfigurationAssignment> assignments;
-    /** Created date time in UTC of the device enrollment configuration */
+    /**
+     * Created date time in UTC of the device enrollment configuration
+     */
     private OffsetDateTime createdDateTime;
-    /** The description of the device enrollment configuration */
+    /**
+     * The description of the device enrollment configuration
+     */
     private String description;
-    /** The display name of the device enrollment configuration */
+    /**
+     * The display name of the device enrollment configuration
+     */
     private String displayName;
-    /** Last modified date time in UTC of the device enrollment configuration */
+    /**
+     * Last modified date time in UTC of the device enrollment configuration
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value. */
+    /**
+     * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
+     */
     private Integer priority;
-    /** The version of the device enrollment configuration */
+    /**
+     * The version of the device enrollment configuration
+     */
     private Integer version;
     /**
      * Instantiates a new deviceEnrollmentConfiguration and sets the default values.

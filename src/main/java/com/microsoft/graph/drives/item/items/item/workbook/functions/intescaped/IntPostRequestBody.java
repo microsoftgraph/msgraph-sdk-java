@@ -1,4 +1,4 @@
-package com.microsoft.graph.drives.item.items.item.workbook.functions.intEscaped;
+package com.microsoft.graph.drives.item.items.item.workbook.functions.intescaped;
 
 import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
@@ -9,9 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IntPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The number property */
+    /**
+     * The number property
+     */
     private Json number;
     /**
      * Instantiates a new intPostRequestBody and sets the default values.

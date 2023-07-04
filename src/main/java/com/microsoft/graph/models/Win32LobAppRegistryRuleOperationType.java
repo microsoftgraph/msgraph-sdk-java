@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains all supported registry data detection type. */
+/**
+ * Contains all supported registry data detection type.
+ */
 public enum Win32LobAppRegistryRuleOperationType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

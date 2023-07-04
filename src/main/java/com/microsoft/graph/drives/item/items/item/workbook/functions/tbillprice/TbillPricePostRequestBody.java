@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TbillPricePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The discount property */
+    /**
+     * The discount property
+     */
     private Json discount;
-    /** The maturity property */
+    /**
+     * The maturity property
+     */
     private Json maturity;
-    /** The settlement property */
+    /**
+     * The settlement property
+     */
     private Json settlement;
     /**
      * Instantiates a new tbillPricePostRequestBody and sets the default values.

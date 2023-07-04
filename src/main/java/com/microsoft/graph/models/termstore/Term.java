@@ -10,21 +10,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Term extends Entity implements Parsable {
-    /** Children of current term. */
+    /**
+     * Children of current term.
+     */
     private java.util.List<Term> children;
-    /** Date and time of term creation. Read-only. */
+    /**
+     * Date and time of term creation. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** Description about term that is dependent on the languageTag. */
+    /**
+     * Description about term that is dependent on the languageTag.
+     */
     private java.util.List<LocalizedDescription> descriptions;
-    /** Label metadata for a term. */
+    /**
+     * Label metadata for a term.
+     */
     private java.util.List<LocalizedLabel> labels;
-    /** Last date and time of term modification. Read-only. */
+    /**
+     * Last date and time of term modification. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Collection of properties on the term. */
+    /**
+     * Collection of properties on the term.
+     */
     private java.util.List<KeyValue> properties;
-    /** To indicate which terms are related to the current term as either pinned or reused. */
+    /**
+     * To indicate which terms are related to the current term as either pinned or reused.
+     */
     private java.util.List<Relation> relations;
-    /** The [set] in which the term is created. */
+    /**
+     * The [set] in which the term is created.
+     */
     private Set set;
     /**
      * Instantiates a new term and sets the default values.

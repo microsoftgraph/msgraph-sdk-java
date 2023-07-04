@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalDomainFederation extends IdentitySource implements Parsable {
-    /** The name of the identity source, typically also the domain name. Read only. */
+    /**
+     * The name of the identity source, typically also the domain name. Read only.
+     */
     private String displayName;
-    /** The domain name. Read only. */
+    /**
+     * The domain name. Read only.
+     */
     private String domainName;
-    /** The issuerURI of the incoming federation. Read only. */
+    /**
+     * The issuerURI of the incoming federation. Read only.
+     */
     private String issuerUri;
     /**
      * Instantiates a new ExternalDomainFederation and sets the default values.

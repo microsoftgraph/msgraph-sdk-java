@@ -25,27 +25,37 @@ import java.util.Objects;
  * Provides operations to manage the cloudCommunications singleton.
  */
 public class CommunicationsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity. */
+    /**
+     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
+     */
     @javax.annotation.Nonnull
     public CallRecordsRequestBuilder callRecords() {
         return new CallRecordsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity. */
+    /**
+     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
+     */
     @javax.annotation.Nonnull
     public CallsRequestBuilder calls() {
         return new CallsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getPresencesByUserId method. */
+    /**
+     * Provides operations to call the getPresencesByUserId method.
+     */
     @javax.annotation.Nonnull
     public GetPresencesByUserIdRequestBuilder getPresencesByUserId() {
         return new GetPresencesByUserIdRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity. */
+    /**
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
+     */
     @javax.annotation.Nonnull
     public OnlineMeetingsRequestBuilder onlineMeetings() {
         return new OnlineMeetingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity. */
+    /**
+     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
+     */
     @javax.annotation.Nonnull
     public PresencesRequestBuilder presences() {
         return new PresencesRequestBuilder(pathParameters, requestAdapter);
@@ -212,11 +222,15 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
      * Get communications
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -225,7 +239,9 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

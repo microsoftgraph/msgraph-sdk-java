@@ -12,17 +12,29 @@ import java.util.Objects;
  * Windows Information Protection DataRecoveryCertificate
  */
 public class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Data recovery Certificate */
+    /**
+     * Data recovery Certificate
+     */
     private byte[] certificate;
-    /** Data recovery Certificate description */
+    /**
+     * Data recovery Certificate description
+     */
     private String description;
-    /** Data recovery Certificate expiration datetime */
+    /**
+     * Data recovery Certificate expiration datetime
+     */
     private OffsetDateTime expirationDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Data recovery Certificate subject name */
+    /**
+     * Data recovery Certificate subject name
+     */
     private String subjectName;
     /**
      * Instantiates a new windowsInformationProtectionDataRecoveryCertificate and sets the default values.

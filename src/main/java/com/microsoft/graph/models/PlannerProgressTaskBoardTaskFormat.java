@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable {
-    /** Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner. */
+    /**
+     * Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
+     */
     private String orderHint;
     /**
      * Instantiates a new plannerProgressTaskBoardTaskFormat and sets the default values.

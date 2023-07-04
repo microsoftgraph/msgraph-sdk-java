@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessApplications implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365 */
+    /**
+     * Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     */
     private java.util.List<String> excludeApplications;
-    /** Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365 */
+    /**
+     * Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
+     */
     private java.util.List<String> includeApplications;
-    /** The includeAuthenticationContextClassReferences property */
+    /**
+     * The includeAuthenticationContextClassReferences property
+     */
     private java.util.List<String> includeAuthenticationContextClassReferences;
-    /** User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice */
+    /**
+     * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
+     */
     private java.util.List<String> includeUserActions;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new conditionalAccessApplications and sets the default values.

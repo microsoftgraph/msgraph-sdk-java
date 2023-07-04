@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ComplianceInformation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Collection of the certification controls associated with certification */
+    /**
+     * Collection of the certification controls associated with certification
+     */
     private java.util.List<CertificationControl> certificationControls;
-    /** Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171) */
+    /**
+     * Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     */
     private String certificationName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new complianceInformation and sets the default values.

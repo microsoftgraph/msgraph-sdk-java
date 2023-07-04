@@ -24,22 +24,30 @@ import java.util.Objects;
  * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
  */
 public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the getFinalAttachment method. */
+    /**
+     * Provides operations to call the getFinalAttachment method.
+     */
     @javax.annotation.Nonnull
     public GetFinalAttachmentRequestBuilder getFinalAttachment() {
         return new GetFinalAttachmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getFinalReport method. */
+    /**
+     * Provides operations to call the getFinalReport method.
+     */
     @javax.annotation.Nonnull
     public GetFinalReportRequestBuilder getFinalReport() {
         return new GetFinalReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity. */
+    /**
+     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
+     */
     @javax.annotation.Nonnull
     public NotesRequestBuilder notes() {
         return new NotesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the team property of the microsoft.graph.subjectRightsRequest entity. */
+    /**
+     * Provides operations to manage the team property of the microsoft.graph.subjectRightsRequest entity.
+     */
     @javax.annotation.Nonnull
     public TeamRequestBuilder team() {
         return new TeamRequestBuilder(pathParameters, requestAdapter);
@@ -279,11 +287,15 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a subjectRightsRequest object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -292,7 +304,9 @@ public class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

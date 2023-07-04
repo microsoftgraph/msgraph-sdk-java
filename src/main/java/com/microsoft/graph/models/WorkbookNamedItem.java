@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookNamedItem extends Entity implements Parsable {
-    /** Represents the comment associated with this name. */
+    /**
+     * Represents the comment associated with this name.
+     */
     private String comment;
-    /** The name of the object. Read-only. */
+    /**
+     * The name of the object. Read-only.
+     */
     private String name;
-    /** Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only. */
+    /**
+     * Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
+     */
     private String scope;
-    /** Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only. */
+    /**
+     * Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     */
     private String type;
-    /** Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only. */
+    /**
+     * Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
+     */
     private Json value;
-    /** Specifies whether the object is visible or not. */
+    /**
+     * Specifies whether the object is visible or not.
+     */
     private Boolean visible;
-    /** Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only. */
+    /**
+     * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+     */
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookNamedItem and sets the default values.

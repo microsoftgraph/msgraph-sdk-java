@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** The type of Exchange Connector sync requested. */
+/**
+ * The type of Exchange Connector sync requested.
+ */
 public enum DeviceManagementExchangeConnectorSyncType implements ValuedEnum {
     /** Discover all the device in Exchange. */
     FullSync("fullSync"),

@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProcessEvidence extends AlertEvidence implements Parsable {
-    /** The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue. */
+    /**
+     * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
+     */
     private DetectionStatus detectionStatus;
-    /** Image file details. */
+    /**
+     * Image file details.
+     */
     private FileDetails imageFile;
-    /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
+    /**
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
+     */
     private String mdeDeviceId;
-    /** Date and time when the parent of the process was created. */
+    /**
+     * Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime parentProcessCreationDateTime;
-    /** Process ID (PID) of the parent process that spawned the process. */
+    /**
+     * Process ID (PID) of the parent process that spawned the process.
+     */
     private Long parentProcessId;
-    /** Parent process image file details. */
+    /**
+     * Parent process image file details.
+     */
     private FileDetails parentProcessImageFile;
-    /** Command line used to create the new process. */
+    /**
+     * Command line used to create the new process.
+     */
     private String processCommandLine;
-    /** Date and time the process was created. */
+    /**
+     * Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime processCreationDateTime;
-    /** Process ID (PID) of the newly created process. */
+    /**
+     * Process ID (PID) of the newly created process.
+     */
     private Long processId;
-    /** User details of the user that ran the process. */
+    /**
+     * User details of the user that ran the process.
+     */
     private UserAccount userAccount;
     /**
      * Instantiates a new ProcessEvidence and sets the default values.
@@ -90,7 +110,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this.mdeDeviceId;
     }
     /**
-     * Gets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created.
+     * Gets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -122,7 +142,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         return this.processCommandLine;
     }
     /**
-     * Gets the processCreationDateTime property value. Date and time the process was created.
+     * Gets the processCreationDateTime property value. Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -193,7 +213,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this.mdeDeviceId = value;
     }
     /**
-     * Sets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created.
+     * Sets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the parentProcessCreationDateTime property.
      * @return a void
      */
@@ -229,7 +249,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
         this.processCommandLine = value;
     }
     /**
-     * Sets the processCreationDateTime property value. Date and time the process was created.
+     * Sets the processCreationDateTime property value. Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the processCreationDateTime property.
      * @return a void
      */

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<EmailAuthenticationMethod> value;
     /**
      * Instantiates a new EmailAuthenticationMethodCollectionResponse and sets the default values.

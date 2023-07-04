@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If true, indicates that content types are enabled for this list. */
+    /**
+     * If true, indicates that content types are enabled for this list.
+     */
     private Boolean contentTypesEnabled;
-    /** If true, indicates that the list is not normally visible in the SharePoint user experience. */
+    /**
+     * If true, indicates that the list is not normally visible in the SharePoint user experience.
+     */
     private Boolean hidden;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more. */
+    /**
+     * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
+     */
     private String template;
     /**
      * Instantiates a new listInfo and sets the default values.

@@ -7,101 +7,197 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates whether or not to block clipboard sharing to copy and paste between applications. */
+    /**
+     * Indicates whether or not to block clipboard sharing to copy and paste between applications.
+     */
     private Boolean appsBlockClipboardSharing;
-    /** Indicates whether or not to block copy and paste within applications. */
+    /**
+     * Indicates whether or not to block copy and paste within applications.
+     */
     private Boolean appsBlockCopyPaste;
-    /** Indicates whether or not to block the YouTube app. */
+    /**
+     * Indicates whether or not to block the YouTube app.
+     */
     private Boolean appsBlockYouTube;
-    /** List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements. */
+    /**
+     * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<AppListItem> appsHideList;
-    /** List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements. */
+    /**
+     * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<AppListItem> appsInstallAllowList;
-    /** List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements. */
+    /**
+     * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<AppListItem> appsLaunchBlockList;
-    /** Indicates whether or not to block Bluetooth. */
+    /**
+     * Indicates whether or not to block Bluetooth.
+     */
     private Boolean bluetoothBlocked;
-    /** Indicates whether or not to block the use of the camera. */
+    /**
+     * Indicates whether or not to block the use of the camera.
+     */
     private Boolean cameraBlocked;
-    /** Indicates whether or not to block data roaming. */
+    /**
+     * Indicates whether or not to block data roaming.
+     */
     private Boolean cellularBlockDataRoaming;
-    /** Indicates whether or not to block SMS/MMS messaging. */
+    /**
+     * Indicates whether or not to block SMS/MMS messaging.
+     */
     private Boolean cellularBlockMessaging;
-    /** Indicates whether or not to block voice roaming. */
+    /**
+     * Indicates whether or not to block voice roaming.
+     */
     private Boolean cellularBlockVoiceRoaming;
-    /** Indicates whether or not to block syncing Wi-Fi tethering. */
+    /**
+     * Indicates whether or not to block syncing Wi-Fi tethering.
+     */
     private Boolean cellularBlockWiFiTethering;
-    /** Possible values of the compliance app list. */
+    /**
+     * Possible values of the compliance app list.
+     */
     private AppListType compliantAppListType;
-    /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
+    /**
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
     private java.util.List<AppListItem> compliantAppsList;
-    /** Indicates whether or not to allow device sharing mode. */
+    /**
+     * Indicates whether or not to allow device sharing mode.
+     */
     private Boolean deviceSharingAllowed;
-    /** Indicates whether or not to block diagnostic data submission. */
+    /**
+     * Indicates whether or not to block diagnostic data submission.
+     */
     private Boolean diagnosticDataBlockSubmission;
-    /** Indicates whether or not to block user performing a factory reset. */
+    /**
+     * Indicates whether or not to block user performing a factory reset.
+     */
     private Boolean factoryResetBlocked;
-    /** Indicates whether or not to block Google account auto sync. */
+    /**
+     * Indicates whether or not to block Google account auto sync.
+     */
     private Boolean googleAccountBlockAutoSync;
-    /** Indicates whether or not to block the Google Play store. */
+    /**
+     * Indicates whether or not to block the Google Play store.
+     */
     private Boolean googlePlayStoreBlocked;
-    /** A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements. */
+    /**
+     * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<AppListItem> kioskModeApps;
-    /** Indicates whether or not to block the screen sleep button while in Kiosk Mode. */
+    /**
+     * Indicates whether or not to block the screen sleep button while in Kiosk Mode.
+     */
     private Boolean kioskModeBlockSleepButton;
-    /** Indicates whether or not to block the volume buttons while in Kiosk Mode. */
+    /**
+     * Indicates whether or not to block the volume buttons while in Kiosk Mode.
+     */
     private Boolean kioskModeBlockVolumeButtons;
-    /** Indicates whether or not to block location services. */
+    /**
+     * Indicates whether or not to block location services.
+     */
     private Boolean locationServicesBlocked;
-    /** Indicates whether or not to block Near-Field Communication. */
+    /**
+     * Indicates whether or not to block Near-Field Communication.
+     */
     private Boolean nfcBlocked;
-    /** Indicates whether or not to block fingerprint unlock. */
+    /**
+     * Indicates whether or not to block fingerprint unlock.
+     */
     private Boolean passwordBlockFingerprintUnlock;
-    /** Indicates whether or not to block Smart Lock and other trust agents. */
+    /**
+     * Indicates whether or not to block Smart Lock and other trust agents.
+     */
     private Boolean passwordBlockTrustAgents;
-    /** Number of days before the password expires. Valid values 1 to 365 */
+    /**
+     * Number of days before the password expires. Valid values 1 to 365
+     */
     private Integer passwordExpirationDays;
-    /** Minimum length of passwords. Valid values 4 to 16 */
+    /**
+     * Minimum length of passwords. Valid values 4 to 16
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before the screen times out. */
+    /**
+     * Minutes of inactivity before the screen times out.
+     */
     private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /** Number of previous passwords to block. Valid values 0 to 24 */
+    /**
+     * Number of previous passwords to block. Valid values 0 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Indicates whether or not to require a password. */
+    /**
+     * Indicates whether or not to require a password.
+     */
     private Boolean passwordRequired;
-    /** Android required password type. */
+    /**
+     * Android required password type.
+     */
     private AndroidRequiredPasswordType passwordRequiredType;
-    /** Number of sign in failures allowed before factory reset. Valid values 1 to 16 */
+    /**
+     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
+     */
     private Integer passwordSignInFailureCountBeforeFactoryReset;
-    /** Indicates whether or not to block powering off the device. */
+    /**
+     * Indicates whether or not to block powering off the device.
+     */
     private Boolean powerOffBlocked;
-    /** Indicates whether or not to block screenshots. */
+    /**
+     * Indicates whether or not to block screenshots.
+     */
     private Boolean screenCaptureBlocked;
-    /** Require the Android Verify apps feature is turned on. */
+    /**
+     * Require the Android Verify apps feature is turned on.
+     */
     private Boolean securityRequireVerifyApps;
-    /** Indicates whether or not to block Google Backup. */
+    /**
+     * Indicates whether or not to block Google Backup.
+     */
     private Boolean storageBlockGoogleBackup;
-    /** Indicates whether or not to block removable storage usage. */
+    /**
+     * Indicates whether or not to block removable storage usage.
+     */
     private Boolean storageBlockRemovableStorage;
-    /** Indicates whether or not to require device encryption. */
+    /**
+     * Indicates whether or not to require device encryption.
+     */
     private Boolean storageRequireDeviceEncryption;
-    /** Indicates whether or not to require removable storage encryption. */
+    /**
+     * Indicates whether or not to require removable storage encryption.
+     */
     private Boolean storageRequireRemovableStorageEncryption;
-    /** Indicates whether or not to block the use of the Voice Assistant. */
+    /**
+     * Indicates whether or not to block the use of the Voice Assistant.
+     */
     private Boolean voiceAssistantBlocked;
-    /** Indicates whether or not to block voice dialing. */
+    /**
+     * Indicates whether or not to block voice dialing.
+     */
     private Boolean voiceDialingBlocked;
-    /** Indicates whether or not to block the web browser's auto fill feature. */
+    /**
+     * Indicates whether or not to block the web browser's auto fill feature.
+     */
     private Boolean webBrowserBlockAutofill;
-    /** Indicates whether or not to block the web browser. */
+    /**
+     * Indicates whether or not to block the web browser.
+     */
     private Boolean webBrowserBlocked;
-    /** Indicates whether or not to block JavaScript within the web browser. */
+    /**
+     * Indicates whether or not to block JavaScript within the web browser.
+     */
     private Boolean webBrowserBlockJavaScript;
-    /** Indicates whether or not to block popups within the web browser. */
+    /**
+     * Indicates whether or not to block popups within the web browser.
+     */
     private Boolean webBrowserBlockPopups;
-    /** Web Browser Cookie Settings. */
+    /**
+     * Web Browser Cookie Settings.
+     */
     private WebBrowserCookieSettings webBrowserCookieSettings;
-    /** Indicates whether or not to block syncing Wi-Fi. */
+    /**
+     * Indicates whether or not to block syncing Wi-Fi.
+     */
     private Boolean wiFiBlocked;
     /**
      * Instantiates a new AndroidGeneralDeviceConfiguration and sets the default values.

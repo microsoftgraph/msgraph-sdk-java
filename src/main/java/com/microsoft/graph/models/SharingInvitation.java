@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharingInvitation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The email address provided for the recipient of the sharing invitation. Read-only. */
+    /**
+     * The email address provided for the recipient of the sharing invitation. Read-only.
+     */
     private String email;
-    /** Provides information about who sent the invitation that created this permission, if that information is available. Read-only. */
+    /**
+     * Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
+     */
     private IdentitySet invitedBy;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The redeemedBy property */
+    /**
+     * The redeemedBy property
+     */
     private String redeemedBy;
-    /** If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only. */
+    /**
+     * If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
+     */
     private Boolean signInRequired;
     /**
      * Instantiates a new sharingInvitation and sets the default values.

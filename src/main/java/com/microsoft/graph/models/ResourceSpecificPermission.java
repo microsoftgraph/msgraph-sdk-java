@@ -9,19 +9,33 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class ResourceSpecificPermission implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Describes the level of access that the resource-specific permission represents. */
+    /**
+     * Describes the level of access that the resource-specific permission represents.
+     */
     private String description;
-    /** The display name for the resource-specific permission. */
+    /**
+     * The display name for the resource-specific permission.
+     */
     private String displayName;
-    /** The unique identifier for the resource-specific application permission. */
+    /**
+     * The unique identifier for the resource-specific application permission.
+     */
     private UUID id;
-    /** Indicates whether the permission is enabled. */
+    /**
+     * Indicates whether the permission is enabled.
+     */
     private Boolean isEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The value of the permission. */
+    /**
+     * The value of the permission.
+     */
     private String value;
     /**
      * Instantiates a new ResourceSpecificPermission and sets the default values.

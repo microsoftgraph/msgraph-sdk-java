@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SupportedLanguagesResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<LocaleInfo> value;
     /**
      * Instantiates a new supportedLanguagesResponse and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person. */
+    /**
+     * The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+     */
     private AttendeeBase attendee;
-    /** The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /**
+     * The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     */
     private FreeBusyStatus availability;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new attendeeAvailability and sets the default values.

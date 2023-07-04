@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MatchPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The lookupArray property */
+    /**
+     * The lookupArray property
+     */
     private Json lookupArray;
-    /** The lookupValue property */
+    /**
+     * The lookupValue property
+     */
     private Json lookupValue;
-    /** The matchType property */
+    /**
+     * The matchType property
+     */
     private Json matchType;
     /**
      * Instantiates a new matchPostRequestBody and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<SubjectRightsRequest> value;
     /**
      * Instantiates a new SubjectRightsRequestCollectionResponse and sets the default values.

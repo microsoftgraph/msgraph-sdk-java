@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable {
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime recipientActionDateTime;
-    /** Custom message sent by recipient of the offer shift request. */
+    /**
+     * Custom message sent by recipient of the offer shift request.
+     */
     private String recipientActionMessage;
-    /** User ID of the recipient of the offer shift request. */
+    /**
+     * User ID of the recipient of the offer shift request.
+     */
     private String recipientUserId;
-    /** User ID of the sender of the offer shift request. */
+    /**
+     * User ID of the sender of the offer shift request.
+     */
     private String senderShiftId;
     /**
      * Instantiates a new OfferShiftRequest and sets the default values.

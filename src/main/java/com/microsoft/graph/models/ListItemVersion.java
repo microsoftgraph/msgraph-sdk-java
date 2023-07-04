@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListItemVersion extends BaseItemVersion implements Parsable {
-    /** A collection of the fields and values for this version of the list item. */
+    /**
+     * A collection of the fields and values for this version of the list item.
+     */
     private FieldValueSet fields;
     /**
      * Instantiates a new ListItemVersion and sets the default values.

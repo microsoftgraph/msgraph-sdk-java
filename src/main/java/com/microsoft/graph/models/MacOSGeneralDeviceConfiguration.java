@@ -7,29 +7,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
-    /** Possible values of the compliance app list. */
+    /**
+     * Possible values of the compliance app list.
+     */
     private AppListType compliantAppListType;
-    /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
+    /**
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
     private java.util.List<AppListItem> compliantAppsList;
-    /** An email address lacking a suffix that matches any of these strings will be considered out-of-domain. */
+    /**
+     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
+     */
     private java.util.List<String> emailInDomainSuffixes;
-    /** Block simple passwords. */
+    /**
+     * Block simple passwords.
+     */
     private Boolean passwordBlockSimple;
-    /** Number of days before the password expires. */
+    /**
+     * Number of days before the password expires.
+     */
     private Integer passwordExpirationDays;
-    /** Number of character sets a password must contain. Valid values 0 to 4 */
+    /**
+     * Number of character sets a password must contain. Valid values 0 to 4
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** Minimum length of passwords. */
+    /**
+     * Minimum length of passwords.
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity required before a password is required. */
+    /**
+     * Minutes of inactivity required before a password is required.
+     */
     private Integer passwordMinutesOfInactivityBeforeLock;
-    /** Minutes of inactivity required before the screen times out. */
+    /**
+     * Minutes of inactivity required before the screen times out.
+     */
     private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /** Number of previous passwords to block. */
+    /**
+     * Number of previous passwords to block.
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Whether or not to require a password. */
+    /**
+     * Whether or not to require a password.
+     */
     private Boolean passwordRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
     /**
      * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.

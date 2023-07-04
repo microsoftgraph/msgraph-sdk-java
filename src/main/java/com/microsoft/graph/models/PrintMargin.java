@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintMargin implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The margin in microns from the bottom edge. */
+    /**
+     * The margin in microns from the bottom edge.
+     */
     private Integer bottom;
-    /** The margin in microns from the left edge. */
+    /**
+     * The margin in microns from the left edge.
+     */
     private Integer left;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The margin in microns from the right edge. */
+    /**
+     * The margin in microns from the right edge.
+     */
     private Integer right;
-    /** The margin in microns from the top edge. */
+    /**
+     * The margin in microns from the top edge.
+     */
     private Integer top;
     /**
      * Instantiates a new printMargin and sets the default values.

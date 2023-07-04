@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SingleServicePrincipal extends SubjectSet implements Parsable {
-    /** Description of this service principal. */
+    /**
+     * Description of this service principal.
+     */
     private String description;
-    /** ID of the servicePrincipal. */
+    /**
+     * ID of the servicePrincipal.
+     */
     private String servicePrincipalId;
     /**
      * Instantiates a new SingleServicePrincipal and sets the default values.

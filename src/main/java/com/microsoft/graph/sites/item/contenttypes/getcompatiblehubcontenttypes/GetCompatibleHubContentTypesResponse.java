@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetCompatibleHubContentTypesResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ContentType> value;
     /**
      * Instantiates a new getCompatibleHubContentTypesResponse and sets the default values.

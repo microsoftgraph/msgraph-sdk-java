@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Store extends Entity implements Parsable {
-    /** Default language of the term store. */
+    /**
+     * Default language of the term store.
+     */
     private String defaultLanguageTag;
-    /** Collection of all groups available in the term store. */
+    /**
+     * Collection of all groups available in the term store.
+     */
     private java.util.List<Group> groups;
-    /** List of languages for the term store. */
+    /**
+     * List of languages for the term store.
+     */
     private java.util.List<String> languageTags;
-    /** Collection of all sets available in the term store. This relationship can only be used to load a specific term set. */
+    /**
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
+     */
     private java.util.List<Set> sets;
     /**
      * Instantiates a new store and sets the default values.

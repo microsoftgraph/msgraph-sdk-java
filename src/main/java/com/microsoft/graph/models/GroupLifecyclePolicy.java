@@ -7,14 +7,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupLifecyclePolicy extends Entity implements Parsable {
-    /** List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon. */
+    /**
+     * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
+     */
     private String alternateNotificationEmails;
-    /** Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined. */
+    /**
+     * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
+     */
     private Integer groupLifetimeInDays;
-    /** The group type for which the expiration policy applies. Possible values are All, Selected or None. */
+    /**
+     * The group type for which the expiration policy applies. Possible values are All, Selected or None.
+     */
     private String managedGroupTypes;
     /**
-     * Instantiates a new groupLifecyclePolicy and sets the default values.
+     * Instantiates a new GroupLifecyclePolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +30,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupLifecyclePolicy
+     * @return a GroupLifecyclePolicy
      */
     @javax.annotation.Nonnull
     public static GroupLifecyclePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

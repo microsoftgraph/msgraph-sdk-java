@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** The current status of the Exchange Connector. */
+/**
+ * The current status of the Exchange Connector.
+ */
 public enum DeviceManagementExchangeConnectorStatus implements ValuedEnum {
     /** No Connector exists. */
     None("none"),

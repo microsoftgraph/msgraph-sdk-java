@@ -11,13 +11,21 @@ import java.util.Objects;
  * Set of allowed and not allowed actions for a resource.
  */
 public class ResourceAction implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Allowed Actions */
+    /**
+     * Allowed Actions
+     */
     private java.util.List<String> allowedResourceActions;
-    /** Not Allowed Actions. */
+    /**
+     * Not Allowed Actions.
+     */
     private java.util.List<String> notAllowedResourceActions;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new resourceAction and sets the default values.

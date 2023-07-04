@@ -11,17 +11,29 @@ import java.util.Objects;
  * Represents an app in the list of managed applications
  */
 public class AppListItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The application or bundle identifier of the application */
+    /**
+     * The application or bundle identifier of the application
+     */
     private String appId;
-    /** The Store URL of the application */
+    /**
+     * The Store URL of the application
+     */
     private String appStoreUrl;
-    /** The application name */
+    /**
+     * The application name
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The publisher of the application */
+    /**
+     * The publisher of the application
+     */
     private String publisher;
     /**
      * Instantiates a new appListItem and sets the default values.

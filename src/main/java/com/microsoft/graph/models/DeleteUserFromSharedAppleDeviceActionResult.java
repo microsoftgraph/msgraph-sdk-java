@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult implements Parsable {
-    /** User principal name of the user to be deleted */
+    /**
+     * User principal name of the user to be deleted
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new DeleteUserFromSharedAppleDeviceActionResult and sets the default values.

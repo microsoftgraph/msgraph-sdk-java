@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AccessPackageAssignmentPolicy> value;
     /**
      * Instantiates a new AccessPackageAssignmentPolicyCollectionResponse and sets the default values.

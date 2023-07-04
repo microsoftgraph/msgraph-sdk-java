@@ -41,8 +41,9 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceManagement/telecomExpenseManagementPartners/{telecomExpenseManagementPartner%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> get() {
@@ -96,9 +99,10 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> patch(@javax.annotation.Nonnull final TelecomExpenseManagementPartner body) {
@@ -134,10 +139,11 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> patch(@javax.annotation.Nonnull final TelecomExpenseManagementPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property telecomExpenseManagementPartners for deviceManagement
+     * Deletes a telecomExpenseManagementPartner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * Update the properties of a telecomExpenseManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,14 +254,18 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The telecom expense management partners.
+     * Read properties and relationships of the telecomExpenseManagementPartner object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -264,7 +274,9 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

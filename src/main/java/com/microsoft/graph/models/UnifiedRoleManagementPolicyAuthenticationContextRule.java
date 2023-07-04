@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleManagementPolicyRule implements Parsable {
-    /** The value of the authentication context claim. */
+    /**
+     * The value of the authentication context claim.
+     */
     private String claimValue;
-    /** Whether this rule is enabled. */
+    /**
+     * Whether this rule is enabled.
+     */
     private Boolean isEnabled;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.

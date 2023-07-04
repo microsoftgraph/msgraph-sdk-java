@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Parsable {
-    /** The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only. */
+    /**
+     * The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
+     */
     private String cloudInstance;
-    /** The name of the Azure Active Directory tenant. Read only. */
+    /**
+     * The name of the Azure Active Directory tenant. Read only.
+     */
     private String displayName;
-    /** The ID of the Azure Active Directory tenant. Read only. */
+    /**
+     * The ID of the Azure Active Directory tenant. Read only.
+     */
     private String tenantId;
     /**
      * Instantiates a new CrossCloudAzureActiveDirectoryTenant and sets the default values.

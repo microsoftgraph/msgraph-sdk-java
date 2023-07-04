@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable {
-    /** Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule */
+    /**
+     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
+     */
     private Boolean allowSampleSharing;
-    /** Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency. */
+    /**
+     * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
+     */
     private Boolean enableExpeditedTelemetryReporting;
     /**
      * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.

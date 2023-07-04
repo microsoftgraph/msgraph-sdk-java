@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Data can be transferred from/to these classes of apps */
+/**
+ * Data can be transferred from/to these classes of apps
+ */
 public enum ManagedAppDataTransferLevel implements ValuedEnum {
     /** All apps. */
     AllApps("allApps"),

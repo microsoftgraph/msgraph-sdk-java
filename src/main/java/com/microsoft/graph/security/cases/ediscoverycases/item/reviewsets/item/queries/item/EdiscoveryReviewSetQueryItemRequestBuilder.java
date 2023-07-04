@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.
  */
 public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the applyTags method. */
+    /**
+     * Provides operations to call the applyTags method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityApplyTagsRequestBuilder microsoftGraphSecurityApplyTags() {
         return new MicrosoftGraphSecurityApplyTagsRequestBuilder(pathParameters, requestAdapter);
@@ -263,11 +265,15 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
      * Read the properties and relationships of an ediscoveryReviewSetQuery object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -276,7 +282,9 @@ public class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuild
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

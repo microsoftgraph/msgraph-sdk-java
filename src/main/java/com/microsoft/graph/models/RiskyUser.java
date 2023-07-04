@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskyUser extends Entity implements Parsable {
-    /** The activity related to user risk level change */
+    /**
+     * The activity related to user risk level change
+     */
     private java.util.List<RiskyUserHistoryItem> history;
-    /** Indicates whether the user is deleted. Possible values are: true, false. */
+    /**
+     * Indicates whether the user is deleted. Possible values are: true, false.
+     */
     private Boolean isDeleted;
-    /** Indicates whether a user's risky state is being processed by the backend. */
+    /**
+     * Indicates whether a user's risky state is being processed by the backend.
+     */
     private Boolean isProcessing;
-    /** Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. */
+    /**
+     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     */
     private RiskDetail riskDetail;
-    /** The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime riskLastUpdatedDateTime;
-    /** Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue. */
+    /**
+     * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     */
     private RiskLevel riskLevel;
-    /** State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. */
+    /**
+     * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     */
     private RiskState riskState;
-    /** Risky user display name. */
+    /**
+     * Risky user display name.
+     */
     private String userDisplayName;
-    /** Risky user principal name. */
+    /**
+     * Risky user principal name.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new RiskyUser and sets the default values.

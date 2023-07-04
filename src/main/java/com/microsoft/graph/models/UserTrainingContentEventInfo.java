@@ -9,19 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Browser of the user from where the training event was generated. */
+    /**
+     * Browser of the user from where the training event was generated.
+     */
     private String browser;
-    /** Date and time of the training content playback by the user. */
+    /**
+     * Date and time of the training content playback by the user.
+     */
     private OffsetDateTime contentDateTime;
-    /** IP address of the user for the training event. */
+    /**
+     * IP address of the user for the training event.
+     */
     private String ipAddress;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The operating system, platform, and device details of the user for the training event. */
+    /**
+     * The operating system, platform, and device details of the user for the training event.
+     */
     private String osPlatformDeviceDetails;
-    /** Potential improvement in the tenant security posture after completion of the training by the user. */
+    /**
+     * Potential improvement in the tenant security posture after completion of the training by the user.
+     */
     private Double potentialScoreImpact;
     /**
      * Instantiates a new userTrainingContentEventInfo and sets the default values.

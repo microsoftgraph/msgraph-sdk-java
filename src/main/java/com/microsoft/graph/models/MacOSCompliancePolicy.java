@@ -7,39 +7,73 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** Require that devices have enabled device threat protection. */
+    /**
+     * Require that devices have enabled device threat protection.
+     */
     private Boolean deviceThreatProtectionEnabled;
-    /** Device threat protection levels for the Device Threat Protection API. */
+    /**
+     * Device threat protection levels for the Device Threat Protection API.
+     */
     private DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
-    /** Corresponds to the 'Block all incoming connections' option. */
+    /**
+     * Corresponds to the 'Block all incoming connections' option.
+     */
     private Boolean firewallBlockAllIncoming;
-    /** Whether the firewall should be enabled or not. */
+    /**
+     * Whether the firewall should be enabled or not.
+     */
     private Boolean firewallEnabled;
-    /** Corresponds to 'Enable stealth mode.' */
+    /**
+     * Corresponds to 'Enable stealth mode.'
+     */
     private Boolean firewallEnableStealthMode;
-    /** Maximum MacOS version. */
+    /**
+     * Maximum MacOS version.
+     */
     private String osMaximumVersion;
-    /** Minimum MacOS version. */
+    /**
+     * Minimum MacOS version.
+     */
     private String osMinimumVersion;
-    /** Indicates whether or not to block simple passwords. */
+    /**
+     * Indicates whether or not to block simple passwords.
+     */
     private Boolean passwordBlockSimple;
-    /** Number of days before the password expires. Valid values 1 to 65535 */
+    /**
+     * Number of days before the password expires. Valid values 1 to 65535
+     */
     private Integer passwordExpirationDays;
-    /** The number of character sets required in the password. */
+    /**
+     * The number of character sets required in the password.
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** Minimum length of password. Valid values 4 to 14 */
+    /**
+     * Minimum length of password. Valid values 4 to 14
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before a password is required. */
+    /**
+     * Minutes of inactivity before a password is required.
+     */
     private Integer passwordMinutesOfInactivityBeforeLock;
-    /** Number of previous passwords to block. Valid values 1 to 24 */
+    /**
+     * Number of previous passwords to block. Valid values 1 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Whether or not to require a password. */
+    /**
+     * Whether or not to require a password.
+     */
     private Boolean passwordRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
-    /** Require encryption on Mac OS devices. */
+    /**
+     * Require encryption on Mac OS devices.
+     */
     private Boolean storageRequireEncryption;
-    /** Require that devices have enabled system integrity protection. */
+    /**
+     * Require that devices have enabled system integrity protection.
+     */
     private Boolean systemIntegrityProtectionEnabled;
     /**
      * Instantiates a new MacOSCompliancePolicy and sets the default values.

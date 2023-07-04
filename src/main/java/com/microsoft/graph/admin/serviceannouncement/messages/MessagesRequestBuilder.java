@@ -29,37 +29,51 @@ import java.util.Objects;
  * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
  */
 public class MessagesRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the archive method. */
+    /**
+     * Provides operations to call the archive method.
+     */
     @javax.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
         return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the favorite method. */
+    /**
+     * Provides operations to call the favorite method.
+     */
     @javax.annotation.Nonnull
     public FavoriteRequestBuilder favorite() {
         return new FavoriteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the markRead method. */
+    /**
+     * Provides operations to call the markRead method.
+     */
     @javax.annotation.Nonnull
     public MarkReadRequestBuilder markRead() {
         return new MarkReadRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the markUnread method. */
+    /**
+     * Provides operations to call the markUnread method.
+     */
     @javax.annotation.Nonnull
     public MarkUnreadRequestBuilder markUnread() {
         return new MarkUnreadRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unarchive method. */
+    /**
+     * Provides operations to call the unarchive method.
+     */
     @javax.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unfavorite method. */
+    /**
+     * Provides operations to call the unfavorite method.
+     */
     @javax.annotation.Nonnull
     public UnfavoriteRequestBuilder unfavorite() {
         return new UnfavoriteRequestBuilder(pathParameters, requestAdapter);
@@ -240,35 +254,51 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * Retrieve the serviceUpdateMessage resources from the **messages** navigation property. This operation retrieves all service update messages that exist for the tenant.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -277,7 +307,9 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

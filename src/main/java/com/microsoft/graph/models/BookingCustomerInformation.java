@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable {
-    /** The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable. */
+    /**
+     * The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
+     */
     private String customerId;
-    /** It consists of the list of custom questions and answers given by the customer as part of the appointment */
+    /**
+     * It consists of the list of custom questions and answers given by the customer as part of the appointment
+     */
     private java.util.List<BookingQuestionAnswer> customQuestionAnswers;
-    /** The SMTP address of the bookingCustomer who is booking the appointment */
+    /**
+     * The SMTP address of the bookingCustomer who is booking the appointment
+     */
     private String emailAddress;
-    /** Represents location information for thebookingCustomerwho is booking the appointment. */
+    /**
+     * Represents location information for thebookingCustomerwho is booking the appointment.
+     */
     private Location location;
-    /** The customer's name. */
+    /**
+     * The customer's name.
+     */
     private String name;
-    /** Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId. */
+    /**
+     * Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
+     */
     private String notes;
-    /** The customer's phone number. */
+    /**
+     * The customer's phone number.
+     */
     private String phone;
-    /** The time zone of the customer. For a list of possible values, see dateTimeTimeZone. */
+    /**
+     * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
+     */
     private String timeZone;
     /**
      * Instantiates a new BookingCustomerInformation and sets the default values.

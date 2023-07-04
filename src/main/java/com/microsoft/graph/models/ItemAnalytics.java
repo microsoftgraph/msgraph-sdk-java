@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemAnalytics extends Entity implements Parsable {
-    /** The allTime property */
+    /**
+     * The allTime property
+     */
     private ItemActivityStat allTime;
-    /** The itemActivityStats property */
+    /**
+     * The itemActivityStats property
+     */
     private java.util.List<ItemActivityStat> itemActivityStats;
-    /** The lastSevenDays property */
+    /**
+     * The lastSevenDays property
+     */
     private ItemActivityStat lastSevenDays;
     /**
      * Instantiates a new itemAnalytics and sets the default values.

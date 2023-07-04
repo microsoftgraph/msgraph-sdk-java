@@ -8,13 +8,21 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable {
-    /** Description of the object returned. Read-only. */
+    /**
+     * Description of the object returned. Read-only.
+     */
     private String description;
-    /** Name of directory object being returned, like group or application. Read-only. */
+    /**
+     * Name of directory object being returned, like group or application. Read-only.
+     */
     private String displayName;
-    /** The tenant identifier for the partner tenant. Read-only. */
+    /**
+     * The tenant identifier for the partner tenant. Read-only.
+     */
     private UUID externalPartnerTenantId;
-    /** The type of the referenced object in the partner tenant. Read-only. */
+    /**
+     * The type of the referenced object in the partner tenant. Read-only.
+     */
     private String objectType;
     /**
      * Instantiates a new DirectoryObjectPartnerReference and sets the default values.

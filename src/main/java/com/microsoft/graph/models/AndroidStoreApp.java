@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidStoreApp extends MobileApp implements Parsable {
-    /** The Android app store URL. */
+    /**
+     * The Android app store URL.
+     */
     private String appStoreUrl;
-    /** The value for the minimum applicable operating system. */
+    /**
+     * The value for the minimum applicable operating system.
+     */
     private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /** The package identifier. */
+    /**
+     * The package identifier.
+     */
     private String packageId;
     /**
      * Instantiates a new AndroidStoreApp and sets the default values.

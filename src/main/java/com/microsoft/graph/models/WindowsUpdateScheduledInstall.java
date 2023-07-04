@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable {
-    /** Possible values for a weekly schedule. */
+    /**
+     * Possible values for a weekly schedule.
+     */
     private WeeklySchedule scheduledInstallDay;
-    /** Scheduled Install Time during day */
+    /**
+     * Scheduled Install Time during day
+     */
     private LocalTime scheduledInstallTime;
     /**
      * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.

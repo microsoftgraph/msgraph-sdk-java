@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** False indicates that the requestor is not permitted to include a schedule in their request. */
+    /**
+     * False indicates that the requestor is not permitted to include a schedule in their request.
+     */
     private Boolean allowCustomAssignmentSchedule;
-    /** True allows on-behalf-of requestors to create a request to add access for another principal. */
+    /**
+     * True allows on-behalf-of requestors to create a request to add access for another principal.
+     */
     private Boolean enableOnBehalfRequestorsToAddAccess;
-    /** True allows on-behalf-of requestors to create a request to remove access for another principal. */
+    /**
+     * True allows on-behalf-of requestors to create a request to remove access for another principal.
+     */
     private Boolean enableOnBehalfRequestorsToRemoveAccess;
-    /** True allows on-behalf-of requestors to create a request to update access for another principal. */
+    /**
+     * True allows on-behalf-of requestors to create a request to update access for another principal.
+     */
     private Boolean enableOnBehalfRequestorsToUpdateAccess;
-    /** True allows requestors to create a request to add access for themselves. */
+    /**
+     * True allows requestors to create a request to add access for themselves.
+     */
     private Boolean enableTargetsToSelfAddAccess;
-    /** True allows requestors to create a request to remove their access. */
+    /**
+     * True allows requestors to create a request to remove their access.
+     */
     private Boolean enableTargetsToSelfRemoveAccess;
-    /** True allows requestors to create a request to update their access. */
+    /**
+     * True allows requestors to create a request to update their access.
+     */
     private Boolean enableTargetsToSelfUpdateAccess;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The principals who can request on-behalf-of others. */
+    /**
+     * The principals who can request on-behalf-of others.
+     */
     private java.util.List<SubjectSet> onBehalfRequestors;
     /**
      * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.

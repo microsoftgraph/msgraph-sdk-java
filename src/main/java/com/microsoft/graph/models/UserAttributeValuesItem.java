@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Determines whether the value is set as the default. */
+    /**
+     * Determines whether the value is set as the default.
+     */
     private Boolean isDefault;
-    /** The display name of the property displayed to the user in the user flow. */
+    /**
+     * The display name of the property displayed to the user in the user flow.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The value that is set when this item is selected. */
+    /**
+     * The value that is set when this item is selected.
+     */
     private String value;
     /**
      * Instantiates a new userAttributeValuesItem and sets the default values.

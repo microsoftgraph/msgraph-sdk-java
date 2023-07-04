@@ -30,37 +30,51 @@ import java.util.Objects;
  * Provides operations to manage the worksheets property of the microsoft.graph.workbook entity.
  */
 public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity. */
+    /**
+     * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
+     */
     @javax.annotation.Nonnull
     public ChartsRequestBuilder charts() {
         return new ChartsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity. */
+    /**
+     * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
+     */
     @javax.annotation.Nonnull
     public NamesRequestBuilder names() {
         return new NamesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the pivotTables property of the microsoft.graph.workbookWorksheet entity. */
+    /**
+     * Provides operations to manage the pivotTables property of the microsoft.graph.workbookWorksheet entity.
+     */
     @javax.annotation.Nonnull
     public PivotTablesRequestBuilder pivotTables() {
         return new PivotTablesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the protection property of the microsoft.graph.workbookWorksheet entity. */
+    /**
+     * Provides operations to manage the protection property of the microsoft.graph.workbookWorksheet entity.
+     */
     @javax.annotation.Nonnull
     public ProtectionRequestBuilder protection() {
         return new ProtectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the range method. */
+    /**
+     * Provides operations to call the range method.
+     */
     @javax.annotation.Nonnull
     public RangeRequestBuilder range() {
         return new RangeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tables property of the microsoft.graph.workbookWorksheet entity. */
+    /**
+     * Provides operations to manage the tables property of the microsoft.graph.workbookWorksheet entity.
+     */
     @javax.annotation.Nonnull
     public TablesRequestBuilder tables() {
         return new TablesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the usedRange method. */
+    /**
+     * Provides operations to call the usedRange method.
+     */
     @javax.annotation.Nonnull
     public UsedRangeRequestBuilder usedRange() {
         return new UsedRangeRequestBuilder(pathParameters, requestAdapter);
@@ -334,11 +348,15 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of worksheet object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -347,7 +365,9 @@ public class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

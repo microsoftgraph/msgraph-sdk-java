@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplePushNotificationCertificate extends Entity implements Parsable {
-    /** Apple Id of the account used to create the MDM push certificate. */
+    /**
+     * Apple Id of the account used to create the MDM push certificate.
+     */
     private String appleIdentifier;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String certificate;
-    /** Certificate serial number. This property is read-only. */
+    /**
+     * Certificate serial number. This property is read-only.
+     */
     private String certificateSerialNumber;
-    /** The reason the certificate upload failed. */
+    /**
+     * The reason the certificate upload failed.
+     */
     private String certificateUploadFailureReason;
-    /** The certificate upload status. */
+    /**
+     * The certificate upload status.
+     */
     private String certificateUploadStatus;
-    /** The expiration date and time for Apple push notification certificate. */
+    /**
+     * The expiration date and time for Apple push notification certificate.
+     */
     private OffsetDateTime expirationDateTime;
-    /** Last modified date and time for Apple push notification certificate. */
+    /**
+     * Last modified date and time for Apple push notification certificate.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Topic Id. */
+    /**
+     * Topic Id.
+     */
     private String topicIdentifier;
     /**
      * Instantiates a new applePushNotificationCertificate and sets the default values.

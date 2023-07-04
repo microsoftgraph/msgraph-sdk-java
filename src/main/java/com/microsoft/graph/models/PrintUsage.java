@@ -8,13 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintUsage extends Entity implements Parsable {
-    /** The completedBlackAndWhiteJobCount property */
+    /**
+     * The blackAndWhitePageCount property
+     */
+    private Long blackAndWhitePageCount;
+    /**
+     * The colorPageCount property
+     */
+    private Long colorPageCount;
+    /**
+     * The completedBlackAndWhiteJobCount property
+     */
     private Long completedBlackAndWhiteJobCount;
-    /** The completedColorJobCount property */
+    /**
+     * The completedColorJobCount property
+     */
     private Long completedColorJobCount;
-    /** The incompleteJobCount property */
+    /**
+     * The completedJobCount property
+     */
+    private Long completedJobCount;
+    /**
+     * The doubleSidedSheetCount property
+     */
+    private Long doubleSidedSheetCount;
+    /**
+     * The incompleteJobCount property
+     */
     private Long incompleteJobCount;
-    /** The usageDate property */
+    /**
+     * The mediaSheetCount property
+     */
+    private Long mediaSheetCount;
+    /**
+     * The pageCount property
+     */
+    private Long pageCount;
+    /**
+     * The singleSidedSheetCount property
+     */
+    private Long singleSidedSheetCount;
+    /**
+     * The usageDate property
+     */
     private LocalDate usageDate;
     /**
      * Instantiates a new printUsage and sets the default values.
@@ -43,6 +79,22 @@ public class PrintUsage extends Entity implements Parsable {
         return new PrintUsage();
     }
     /**
+     * Gets the blackAndWhitePageCount property value. The blackAndWhitePageCount property
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getBlackAndWhitePageCount() {
+        return this.blackAndWhitePageCount;
+    }
+    /**
+     * Gets the colorPageCount property value. The colorPageCount property
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getColorPageCount() {
+        return this.colorPageCount;
+    }
+    /**
      * Gets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
      * @return a int64
      */
@@ -59,15 +111,38 @@ public class PrintUsage extends Entity implements Parsable {
         return this.completedColorJobCount;
     }
     /**
+     * Gets the completedJobCount property value. The completedJobCount property
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getCompletedJobCount() {
+        return this.completedJobCount;
+    }
+    /**
+     * Gets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getDoubleSidedSheetCount() {
+        return this.doubleSidedSheetCount;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("blackAndWhitePageCount", (n) -> { this.setBlackAndWhitePageCount(n.getLongValue()); });
+        deserializerMap.put("colorPageCount", (n) -> { this.setColorPageCount(n.getLongValue()); });
         deserializerMap.put("completedBlackAndWhiteJobCount", (n) -> { this.setCompletedBlackAndWhiteJobCount(n.getLongValue()); });
         deserializerMap.put("completedColorJobCount", (n) -> { this.setCompletedColorJobCount(n.getLongValue()); });
+        deserializerMap.put("completedJobCount", (n) -> { this.setCompletedJobCount(n.getLongValue()); });
+        deserializerMap.put("doubleSidedSheetCount", (n) -> { this.setDoubleSidedSheetCount(n.getLongValue()); });
         deserializerMap.put("incompleteJobCount", (n) -> { this.setIncompleteJobCount(n.getLongValue()); });
+        deserializerMap.put("mediaSheetCount", (n) -> { this.setMediaSheetCount(n.getLongValue()); });
+        deserializerMap.put("pageCount", (n) -> { this.setPageCount(n.getLongValue()); });
+        deserializerMap.put("singleSidedSheetCount", (n) -> { this.setSingleSidedSheetCount(n.getLongValue()); });
         deserializerMap.put("usageDate", (n) -> { this.setUsageDate(n.getLocalDateValue()); });
         return deserializerMap;
     }
@@ -78,6 +153,30 @@ public class PrintUsage extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Long getIncompleteJobCount() {
         return this.incompleteJobCount;
+    }
+    /**
+     * Gets the mediaSheetCount property value. The mediaSheetCount property
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getMediaSheetCount() {
+        return this.mediaSheetCount;
+    }
+    /**
+     * Gets the pageCount property value. The pageCount property
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getPageCount() {
+        return this.pageCount;
+    }
+    /**
+     * Gets the singleSidedSheetCount property value. The singleSidedSheetCount property
+     * @return a int64
+     */
+    @javax.annotation.Nullable
+    public Long getSingleSidedSheetCount() {
+        return this.singleSidedSheetCount;
     }
     /**
      * Gets the usageDate property value. The usageDate property
@@ -96,10 +195,35 @@ public class PrintUsage extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeLongValue("blackAndWhitePageCount", this.getBlackAndWhitePageCount());
+        writer.writeLongValue("colorPageCount", this.getColorPageCount());
         writer.writeLongValue("completedBlackAndWhiteJobCount", this.getCompletedBlackAndWhiteJobCount());
         writer.writeLongValue("completedColorJobCount", this.getCompletedColorJobCount());
+        writer.writeLongValue("completedJobCount", this.getCompletedJobCount());
+        writer.writeLongValue("doubleSidedSheetCount", this.getDoubleSidedSheetCount());
         writer.writeLongValue("incompleteJobCount", this.getIncompleteJobCount());
+        writer.writeLongValue("mediaSheetCount", this.getMediaSheetCount());
+        writer.writeLongValue("pageCount", this.getPageCount());
+        writer.writeLongValue("singleSidedSheetCount", this.getSingleSidedSheetCount());
         writer.writeLocalDateValue("usageDate", this.getUsageDate());
+    }
+    /**
+     * Sets the blackAndWhitePageCount property value. The blackAndWhitePageCount property
+     * @param value Value to set for the blackAndWhitePageCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setBlackAndWhitePageCount(@javax.annotation.Nullable final Long value) {
+        this.blackAndWhitePageCount = value;
+    }
+    /**
+     * Sets the colorPageCount property value. The colorPageCount property
+     * @param value Value to set for the colorPageCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setColorPageCount(@javax.annotation.Nullable final Long value) {
+        this.colorPageCount = value;
     }
     /**
      * Sets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
@@ -120,6 +244,24 @@ public class PrintUsage extends Entity implements Parsable {
         this.completedColorJobCount = value;
     }
     /**
+     * Sets the completedJobCount property value. The completedJobCount property
+     * @param value Value to set for the completedJobCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCompletedJobCount(@javax.annotation.Nullable final Long value) {
+        this.completedJobCount = value;
+    }
+    /**
+     * Sets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
+     * @param value Value to set for the doubleSidedSheetCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDoubleSidedSheetCount(@javax.annotation.Nullable final Long value) {
+        this.doubleSidedSheetCount = value;
+    }
+    /**
      * Sets the incompleteJobCount property value. The incompleteJobCount property
      * @param value Value to set for the incompleteJobCount property.
      * @return a void
@@ -127,6 +269,33 @@ public class PrintUsage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setIncompleteJobCount(@javax.annotation.Nullable final Long value) {
         this.incompleteJobCount = value;
+    }
+    /**
+     * Sets the mediaSheetCount property value. The mediaSheetCount property
+     * @param value Value to set for the mediaSheetCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMediaSheetCount(@javax.annotation.Nullable final Long value) {
+        this.mediaSheetCount = value;
+    }
+    /**
+     * Sets the pageCount property value. The pageCount property
+     * @param value Value to set for the pageCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPageCount(@javax.annotation.Nullable final Long value) {
+        this.pageCount = value;
+    }
+    /**
+     * Sets the singleSidedSheetCount property value. The singleSidedSheetCount property
+     * @param value Value to set for the singleSidedSheetCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSingleSidedSheetCount(@javax.annotation.Nullable final Long value) {
+        this.singleSidedSheetCount = value;
     }
     /**
      * Sets the usageDate property value. The usageDate property

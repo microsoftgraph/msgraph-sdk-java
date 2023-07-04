@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
-    /** The display name for the schedulingGroup. Required. */
+    /**
+     * The display name for the schedulingGroup. Required.
+     */
     private String displayName;
-    /** Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required. */
+    /**
+     * Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
+     */
     private Boolean isActive;
-    /** The list of user IDs that are a member of the schedulingGroup. Required. */
+    /**
+     * The list of user IDs that are a member of the schedulingGroup. Required.
+     */
     private java.util.List<String> userIds;
     /**
      * Instantiates a new SchedulingGroup and sets the default values.

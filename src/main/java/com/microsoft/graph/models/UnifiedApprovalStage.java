@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedApprovalStage implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The number of days that a request can be pending a response before it is automatically denied. */
+    /**
+     * The number of days that a request can be pending a response before it is automatically denied.
+     */
     private Integer approvalStageTimeOutInDays;
-    /** The escalation approvers for this stage when the primary approvers don't respond. */
+    /**
+     * The escalation approvers for this stage when the primary approvers don't respond.
+     */
     private java.util.List<SubjectSet> escalationApprovers;
-    /** The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers. */
+    /**
+     * The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
+     */
     private Integer escalationTimeInMinutes;
-    /** Indicates whether the approver must provide justification for their reponse. */
+    /**
+     * Indicates whether the approver must provide justification for their reponse.
+     */
     private Boolean isApproverJustificationRequired;
-    /** Indicates whether escalation if enabled. */
+    /**
+     * Indicates whether escalation if enabled.
+     */
     private Boolean isEscalationEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The primary approvers of this stage. */
+    /**
+     * The primary approvers of this stage.
+     */
     private java.util.List<SubjectSet> primaryApprovers;
     /**
      * Instantiates a new unifiedApprovalStage and sets the default values.

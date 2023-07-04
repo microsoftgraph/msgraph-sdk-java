@@ -11,13 +11,21 @@ import java.util.Objects;
  * RemoteAssistPartner resources represent the metadata and status of a given Remote Assistance partner service.
  */
 public class RemoteAssistancePartner extends Entity implements Parsable {
-    /** Display name of the partner. */
+    /**
+     * Display name of the partner.
+     */
     private String displayName;
-    /** Timestamp of the last request sent to Intune by the TEM partner. */
+    /**
+     * Timestamp of the last request sent to Intune by the TEM partner.
+     */
     private OffsetDateTime lastConnectionDateTime;
-    /** The current TeamViewer connector status */
+    /**
+     * The current TeamViewer connector status
+     */
     private RemoteAssistanceOnboardingStatus onboardingStatus;
-    /** URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service. */
+    /**
+     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+     */
     private String onboardingUrl;
     /**
      * Instantiates a new remoteAssistancePartner and sets the default values.

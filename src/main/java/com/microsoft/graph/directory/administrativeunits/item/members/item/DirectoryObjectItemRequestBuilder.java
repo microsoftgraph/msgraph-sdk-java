@@ -15,37 +15,51 @@ import java.util.Objects;
  * Builds and executes requests for operations under /directory/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id}
  */
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
-    /** Casts the previous resource to application. */
+    /**
+     * Casts the previous resource to application.
+     */
     @javax.annotation.Nonnull
     public GraphApplicationRequestBuilder graphApplication() {
         return new GraphApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to device. */
+    /**
+     * Casts the previous resource to device.
+     */
     @javax.annotation.Nonnull
     public GraphDeviceRequestBuilder graphDevice() {
         return new GraphDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to group. */
+    /**
+     * Casts the previous resource to group.
+     */
     @javax.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
         return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to orgContact. */
+    /**
+     * Casts the previous resource to orgContact.
+     */
     @javax.annotation.Nonnull
     public GraphOrgContactRequestBuilder graphOrgContact() {
         return new GraphOrgContactRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to servicePrincipal. */
+    /**
+     * Casts the previous resource to servicePrincipal.
+     */
     @javax.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
         return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to user. */
+    /**
+     * Casts the previous resource to user.
+     */
     @javax.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
         return new GraphUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of directory entities. */
+    /**
+     * Provides operations to manage the collection of directory entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

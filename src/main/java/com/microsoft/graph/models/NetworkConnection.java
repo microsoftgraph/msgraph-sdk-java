@@ -9,49 +9,93 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NetworkConnection implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Name of the application managing the network connection (for example, Facebook or SMTP). */
+    /**
+     * Name of the application managing the network connection (for example, Facebook or SMTP).
+     */
     private String applicationName;
-    /** Destination IP address (of the network connection). */
+    /**
+     * Destination IP address (of the network connection).
+     */
     private String destinationAddress;
-    /** Destination domain portion of the destination URL. (for example 'www.contoso.com'). */
+    /**
+     * Destination domain portion of the destination URL. (for example 'www.contoso.com').
+     */
     private String destinationDomain;
-    /** Location (by IP address mapping) associated with the destination of a network connection. */
+    /**
+     * Location (by IP address mapping) associated with the destination of a network connection.
+     */
     private String destinationLocation;
-    /** Destination port (of the network connection). */
+    /**
+     * Destination port (of the network connection).
+     */
     private String destinationPort;
-    /** Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html') */
+    /**
+     * Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
+     */
     private String destinationUrl;
-    /** Network connection direction. Possible values are: unknown, inbound, outbound. */
+    /**
+     * Network connection direction. Possible values are: unknown, inbound, outbound.
+     */
     private ConnectionDirection direction;
-    /** Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime domainRegisteredDateTime;
-    /** The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with). */
+    /**
+     * The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
+     */
     private String localDnsName;
-    /** Network Address Translation destination IP address. */
+    /**
+     * Network Address Translation destination IP address.
+     */
     private String natDestinationAddress;
-    /** Network Address Translation destination port. */
+    /**
+     * Network Address Translation destination port.
+     */
     private String natDestinationPort;
-    /** Network Address Translation source IP address. */
+    /**
+     * Network Address Translation source IP address.
+     */
     private String natSourceAddress;
-    /** Network Address Translation source port. */
+    /**
+     * Network Address Translation source port.
+     */
     private String natSourcePort;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII. */
+    /**
+     * Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
+     */
     private SecurityNetworkProtocol protocol;
-    /** Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
+     */
     private String riskScore;
-    /** Source (i.e. origin) IP address (of the network connection). */
+    /**
+     * Source (i.e. origin) IP address (of the network connection).
+     */
     private String sourceAddress;
-    /** Location (by IP address mapping) associated with the source of a network connection. */
+    /**
+     * Location (by IP address mapping) associated with the source of a network connection.
+     */
     private String sourceLocation;
-    /** Source (i.e. origin) IP port (of the network connection). */
+    /**
+     * Source (i.e. origin) IP port (of the network connection).
+     */
     private String sourcePort;
-    /** Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed. */
+    /**
+     * Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
+     */
     private ConnectionStatus status;
-    /** Parameters (suffix) of the destination URL. */
+    /**
+     * Parameters (suffix) of the destination URL.
+     */
     private String urlParameters;
     /**
      * Instantiates a new networkConnection and sets the default values.

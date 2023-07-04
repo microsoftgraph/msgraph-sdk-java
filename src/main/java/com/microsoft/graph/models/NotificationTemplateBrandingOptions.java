@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Branding Options for the Message Template. Branding is defined in the Intune Admin Console. */
+/**
+ * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
+ */
 public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     /** Indicates that no branding options are set in the message template. */
     None("none"),

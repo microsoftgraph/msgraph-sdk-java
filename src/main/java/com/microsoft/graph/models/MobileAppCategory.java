@@ -11,9 +11,13 @@ import java.util.Objects;
  * Contains properties for a single Intune app category.
  */
 public class MobileAppCategory extends Entity implements Parsable {
-    /** The name of the app category. */
+    /**
+     * The name of the app category.
+     */
     private String displayName;
-    /** The date and time the mobileAppCategory was last modified. */
+    /**
+     * The date and time the mobileAppCategory was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new mobileAppCategory and sets the default values.

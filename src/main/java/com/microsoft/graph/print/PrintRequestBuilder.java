@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the print singleton.
  */
 public class PrintRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the connectors property of the microsoft.graph.print entity. */
+    /**
+     * Provides operations to manage the connectors property of the microsoft.graph.print entity.
+     */
     @javax.annotation.Nonnull
     public ConnectorsRequestBuilder connectors() {
         return new ConnectorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.print entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.print entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the printers property of the microsoft.graph.print entity. */
+    /**
+     * Provides operations to manage the printers property of the microsoft.graph.print entity.
+     */
     @javax.annotation.Nonnull
     public PrintersRequestBuilder printers() {
         return new PrintersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the services property of the microsoft.graph.print entity. */
+    /**
+     * Provides operations to manage the services property of the microsoft.graph.print entity.
+     */
     @javax.annotation.Nonnull
     public ServicesRequestBuilder services() {
         return new ServicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the shares property of the microsoft.graph.print entity. */
+    /**
+     * Provides operations to manage the shares property of the microsoft.graph.print entity.
+     */
     @javax.annotation.Nonnull
     public SharesRequestBuilder shares() {
         return new SharesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity. */
+    /**
+     * Provides operations to manage the taskDefinitions property of the microsoft.graph.print entity.
+     */
     @javax.annotation.Nonnull
     public TaskDefinitionsRequestBuilder taskDefinitions() {
         return new TaskDefinitionsRequestBuilder(pathParameters, requestAdapter);
@@ -218,11 +230,15 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
      * Get print
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -231,7 +247,9 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PersonType implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The type of data source, such as Person. */
+    /**
+     * The type of data source, such as Person.
+     */
     private String classEscaped;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The secondary type of data source, such as OrganizationUser. */
+    /**
+     * The secondary type of data source, such as OrganizationUser.
+     */
     private String subclass;
     /**
      * Instantiates a new personType and sets the default values.

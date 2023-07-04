@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookTableColumn extends Entity implements Parsable {
-    /** Retrieve the filter applied to the column. Read-only. */
+    /**
+     * Retrieve the filter applied to the column. Read-only.
+     */
     private WorkbookFilter filter;
-    /** Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only. */
+    /**
+     * Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+     */
     private Integer index;
-    /** Returns the name of the table column. */
+    /**
+     * Returns the name of the table column.
+     */
     private String name;
-    /** Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string. */
+    /**
+     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     */
     private Json values;
     /**
      * Instantiates a new workbookTableColumn and sets the default values.

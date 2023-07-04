@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedMobileLobAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ManagedMobileLobApp> value;
     /**
      * Instantiates a new ManagedMobileLobAppCollectionResponse and sets the default values.

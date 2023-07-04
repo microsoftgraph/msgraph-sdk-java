@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationSchema extends Entity implements Parsable {
-    /** The directories property */
+    /**
+     * The directories property
+     */
     private java.util.List<DirectoryDefinition> directories;
-    /** The synchronizationRules property */
+    /**
+     * The synchronizationRules property
+     */
     private java.util.List<SynchronizationRule> synchronizationRules;
-    /** The version property */
+    /**
+     * The version property
+     */
     private String version;
     /**
      * Instantiates a new synchronizationSchema and sets the default values.

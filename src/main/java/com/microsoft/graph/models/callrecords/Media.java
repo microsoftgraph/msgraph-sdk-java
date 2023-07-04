@@ -8,24 +8,40 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Media implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Device information associated with the callee endpoint of this media. */
+    /**
+     * Device information associated with the callee endpoint of this media.
+     */
     private DeviceInfo calleeDevice;
-    /** Network information associated with the callee endpoint of this media. */
+    /**
+     * Network information associated with the callee endpoint of this media.
+     */
     private NetworkInfo calleeNetwork;
-    /** Device information associated with the caller endpoint of this media. */
+    /**
+     * Device information associated with the caller endpoint of this media.
+     */
     private DeviceInfo callerDevice;
-    /** Network information associated with the caller endpoint of this media. */
+    /**
+     * Network information associated with the caller endpoint of this media.
+     */
     private NetworkInfo callerNetwork;
-    /** How the media was identified during media negotiation stage. */
+    /**
+     * How the media was identified during media negotiation stage.
+     */
     private String label;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Network streams associated with this media. */
+    /**
+     * Network streams associated with this media.
+     */
     private java.util.List<MediaStream> streams;
     /**
-     * Instantiates a new Media and sets the default values.
+     * Instantiates a new media and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +51,7 @@ public class Media implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Media
+     * @return a media
      */
     @javax.annotation.Nonnull
     public static Media createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

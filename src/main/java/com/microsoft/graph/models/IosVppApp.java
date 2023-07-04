@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosVppApp extends MobileApp implements Parsable {
-    /** The applicable iOS Device Type. */
+    /**
+     * The applicable iOS Device Type.
+     */
     private IosDeviceType applicableDeviceType;
-    /** The store URL. */
+    /**
+     * The store URL.
+     */
     private String appStoreUrl;
-    /** The Identity Name. */
+    /**
+     * The Identity Name.
+     */
     private String bundleId;
-    /** The supported License Type. */
+    /**
+     * The supported License Type.
+     */
     private VppLicensingType licensingType;
-    /** The VPP application release date and time. */
+    /**
+     * The VPP application release date and time.
+     */
     private OffsetDateTime releaseDateTime;
-    /** The total number of VPP licenses. */
+    /**
+     * The total number of VPP licenses.
+     */
     private Integer totalLicenseCount;
-    /** The number of VPP licenses in use. */
+    /**
+     * The number of VPP licenses in use.
+     */
     private Integer usedLicenseCount;
-    /** Possible types of an Apple Volume Purchase Program token. */
+    /**
+     * Possible types of an Apple Volume Purchase Program token.
+     */
     private VppTokenAccountType vppTokenAccountType;
-    /** The Apple Id associated with the given Apple Volume Purchase Program Token. */
+    /**
+     * The Apple Id associated with the given Apple Volume Purchase Program Token.
+     */
     private String vppTokenAppleId;
-    /** The organization associated with the Apple Volume Purchase Program Token */
+    /**
+     * The organization associated with the Apple Volume Purchase Program Token
+     */
     private String vppTokenOrganizationName;
     /**
      * Instantiates a new IosVppApp and sets the default values.

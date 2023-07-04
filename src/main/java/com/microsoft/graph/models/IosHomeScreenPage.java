@@ -11,16 +11,24 @@ import java.util.Objects;
  * A page containing apps, folders, and web clips on the Home Screen.
  */
 public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Name of the page */
+    /**
+     * Name of the page
+     */
     private String displayName;
-    /** A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements. */
+    /**
+     * A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<IosHomeScreenItem> icons;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
-     * Instantiates a new iosHomeScreenPage and sets the default values.
+     * Instantiates a new IosHomeScreenPage and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -30,7 +38,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosHomeScreenPage
+     * @return a IosHomeScreenPage
      */
     @javax.annotation.Nonnull
     public static IosHomeScreenPage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class File implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Hashes of the file's binary content, if available. Read-only. */
+    /**
+     * Hashes of the file's binary content, if available. Read-only.
+     */
     private Hashes hashes;
-    /** The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only. */
+    /**
+     * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
+     */
     private String mimeType;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The processingMetadata property */
+    /**
+     * The processingMetadata property
+     */
     private Boolean processingMetadata;
     /**
      * Instantiates a new file and sets the default values.

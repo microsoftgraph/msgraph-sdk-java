@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
-    /** Represents the level to which app data is encrypted for managed apps */
+    /**
+     * Represents the level to which app data is encrypted for managed apps
+     */
     private ManagedAppDataEncryptionType appDataEncryptionType;
-    /** List of apps to which the policy is deployed. */
+    /**
+     * List of apps to which the policy is deployed.
+     */
     private java.util.List<ManagedMobileApp> apps;
-    /** A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. */
+    /**
+     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     */
     private String customBrowserProtocol;
-    /** Count of apps to which the current policy is deployed. */
+    /**
+     * Count of apps to which the current policy is deployed.
+     */
     private Integer deployedAppCount;
-    /** Navigation property to deployment summary of the configuration. */
+    /**
+     * Navigation property to deployment summary of the configuration.
+     */
     private ManagedAppPolicyDeploymentSummary deploymentSummary;
-    /** Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. */
+    /**
+     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+     */
     private Boolean faceIdBlocked;
-    /** Versions less than the specified version will block the managed app from accessing company data. */
+    /**
+     * Versions less than the specified version will block the managed app from accessing company data.
+     */
     private String minimumRequiredSdkVersion;
     /**
      * Instantiates a new IosManagedAppProtection and sets the default values.

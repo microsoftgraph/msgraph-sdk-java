@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryEstimateOperation extends CaseOperation implements Parsable {
-    /** The estimated count of items for the search that matched the content query. */
+    /**
+     * The estimated count of items for the search that matched the content query.
+     */
     private Long indexedItemCount;
-    /** The estimated size of items for the search that matched the content query. */
+    /**
+     * The estimated size of items for the search that matched the content query.
+     */
     private Long indexedItemsSize;
-    /** The number of mailboxes that had search hits. */
+    /**
+     * The number of mailboxes that had search hits.
+     */
     private Integer mailboxCount;
-    /** eDiscovery search. */
+    /**
+     * eDiscovery search.
+     */
     private EdiscoverySearch search;
-    /** The number of mailboxes that had search hits. */
+    /**
+     * The number of mailboxes that had search hits.
+     */
     private Integer siteCount;
-    /** The estimated count of unindexed items for the collection. */
+    /**
+     * The estimated count of unindexed items for the collection.
+     */
     private Long unindexedItemCount;
-    /** The estimated size of unindexed items for the collection. */
+    /**
+     * The estimated size of unindexed items for the collection.
+     */
     private Long unindexedItemsSize;
     /**
      * Instantiates a new EdiscoveryEstimateOperation and sets the default values.

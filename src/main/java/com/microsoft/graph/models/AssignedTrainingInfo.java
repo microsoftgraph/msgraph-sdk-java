@@ -8,18 +8,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Number of users who were assigned the training in an attack simulation and training campaign. */
+    /**
+     * Number of users who were assigned the training in an attack simulation and training campaign.
+     */
     private Integer assignedUserCount;
-    /** Number of users who completed the training in an attack simulation and training campaign. */
+    /**
+     * Number of users who completed the training in an attack simulation and training campaign.
+     */
     private Integer completedUserCount;
-    /** Display name of the training in an attack simulation and training campaign. */
+    /**
+     * Display name of the training in an attack simulation and training campaign.
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
-     * Instantiates a new assignedTrainingInfo and sets the default values.
+     * Instantiates a new AssignedTrainingInfo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +39,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignedTrainingInfo
+     * @return a AssignedTrainingInfo
      */
     @javax.annotation.Nonnull
     public static AssignedTrainingInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

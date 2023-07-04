@@ -8,24 +8,40 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationStrengthPolicy extends Entity implements Parsable {
-    /** A collection of authentication method modes that are required be used to satify this authentication strength. */
+    /**
+     * A collection of authentication method modes that are required be used to satify this authentication strength.
+     */
     private java.util.List<AuthenticationMethodModes> allowedCombinations;
-    /** Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods. */
+    /**
+     * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
+     */
     private java.util.List<AuthenticationCombinationConfiguration> combinationConfigurations;
-    /** The datetime when this policy was created. */
+    /**
+     * The datetime when this policy was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The human-readable description of this policy. */
+    /**
+     * The human-readable description of this policy.
+     */
     private String description;
-    /** The human-readable display name of this policy. Supports $filter (eq, ne, not , and in). */
+    /**
+     * The human-readable display name of this policy. Supports $filter (eq, ne, not , and in).
+     */
     private String displayName;
-    /** The datetime when this policy was last modified. */
+    /**
+     * The datetime when this policy was last modified.
+     */
     private OffsetDateTime modifiedDateTime;
-    /** The policyType property */
+    /**
+     * The policyType property
+     */
     private AuthenticationStrengthPolicyType policyType;
-    /** The requirementsSatisfied property */
+    /**
+     * The requirementsSatisfied property
+     */
     private AuthenticationStrengthRequirements requirementsSatisfied;
     /**
-     * Instantiates a new authenticationStrengthPolicy and sets the default values.
+     * Instantiates a new AuthenticationStrengthPolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +51,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationStrengthPolicy
+     * @return a AuthenticationStrengthPolicy
      */
     @javax.annotation.Nonnull
     public static AuthenticationStrengthPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

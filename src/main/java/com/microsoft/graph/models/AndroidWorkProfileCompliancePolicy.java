@@ -7,47 +7,89 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** Require that devices have enabled device threat protection. */
+    /**
+     * Require that devices have enabled device threat protection.
+     */
     private Boolean deviceThreatProtectionEnabled;
-    /** Device threat protection levels for the Device Threat Protection API. */
+    /**
+     * Device threat protection levels for the Device Threat Protection API.
+     */
     private DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
-    /** Minimum Android security patch level. */
+    /**
+     * Minimum Android security patch level.
+     */
     private String minAndroidSecurityPatchLevel;
-    /** Maximum Android version. */
+    /**
+     * Maximum Android version.
+     */
     private String osMaximumVersion;
-    /** Minimum Android version. */
+    /**
+     * Minimum Android version.
+     */
     private String osMinimumVersion;
-    /** Number of days before the password expires. Valid values 1 to 365 */
+    /**
+     * Number of days before the password expires. Valid values 1 to 365
+     */
     private Integer passwordExpirationDays;
-    /** Minimum password length. Valid values 4 to 16 */
+    /**
+     * Minimum password length. Valid values 4 to 16
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before a password is required. */
+    /**
+     * Minutes of inactivity before a password is required.
+     */
     private Integer passwordMinutesOfInactivityBeforeLock;
-    /** Number of previous passwords to block. Valid values 1 to 24 */
+    /**
+     * Number of previous passwords to block. Valid values 1 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Require a password to unlock device. */
+    /**
+     * Require a password to unlock device.
+     */
     private Boolean passwordRequired;
-    /** Android required password type. */
+    /**
+     * Android required password type.
+     */
     private AndroidRequiredPasswordType passwordRequiredType;
-    /** Devices must not be jailbroken or rooted. */
+    /**
+     * Devices must not be jailbroken or rooted.
+     */
     private Boolean securityBlockJailbrokenDevices;
-    /** Disable USB debugging on Android devices. */
+    /**
+     * Disable USB debugging on Android devices.
+     */
     private Boolean securityDisableUsbDebugging;
-    /** Require that devices disallow installation of apps from unknown sources. */
+    /**
+     * Require that devices disallow installation of apps from unknown sources.
+     */
     private Boolean securityPreventInstallAppsFromUnknownSources;
-    /** Require the device to pass the Company Portal client app runtime integrity check. */
+    /**
+     * Require the device to pass the Company Portal client app runtime integrity check.
+     */
     private Boolean securityRequireCompanyPortalAppIntegrity;
-    /** Require Google Play Services to be installed and enabled on the device. */
+    /**
+     * Require Google Play Services to be installed and enabled on the device.
+     */
     private Boolean securityRequireGooglePlayServices;
-    /** Require the device to pass the SafetyNet basic integrity check. */
+    /**
+     * Require the device to pass the SafetyNet basic integrity check.
+     */
     private Boolean securityRequireSafetyNetAttestationBasicIntegrity;
-    /** Require the device to pass the SafetyNet certified device check. */
+    /**
+     * Require the device to pass the SafetyNet certified device check.
+     */
     private Boolean securityRequireSafetyNetAttestationCertifiedDevice;
-    /** Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date. */
+    /**
+     * Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
+     */
     private Boolean securityRequireUpToDateSecurityProviders;
-    /** Require the Android Verify apps feature is turned on. */
+    /**
+     * Require the Android Verify apps feature is turned on.
+     */
     private Boolean securityRequireVerifyApps;
-    /** Require encryption on Android devices. */
+    /**
+     * Require encryption on Android devices.
+     */
     private Boolean storageRequireEncryption;
     /**
      * Instantiates a new AndroidWorkProfileCompliancePolicy and sets the default values.

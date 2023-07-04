@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartPointFormat extends Entity implements Parsable {
-    /** Represents the fill format of a chart, which includes background formating information. Read-only. */
+    /**
+     * Represents the fill format of a chart, which includes background formating information. Read-only.
+     */
     private WorkbookChartFill fill;
     /**
      * Instantiates a new workbookChartPointFormat and sets the default values.

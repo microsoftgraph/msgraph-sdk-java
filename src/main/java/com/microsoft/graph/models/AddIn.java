@@ -9,15 +9,25 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class AddIn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The id property */
+    /**
+     * The id property
+     */
     private UUID id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The properties property */
+    /**
+     * The properties property
+     */
     private java.util.List<KeyValue> properties;
-    /** The type property */
+    /**
+     * The type property
+     */
     private String type;
     /**
      * Instantiates a new AddIn and sets the default values.

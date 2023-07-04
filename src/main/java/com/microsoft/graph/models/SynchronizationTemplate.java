@@ -8,19 +8,33 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class SynchronizationTemplate extends Entity implements Parsable {
-    /** The applicationId property */
+    /**
+     * The applicationId property
+     */
     private UUID applicationId;
-    /** The default property */
+    /**
+     * The default property
+     */
     private Boolean defaultEscaped;
-    /** The description property */
+    /**
+     * The description property
+     */
     private String description;
-    /** The discoverable property */
+    /**
+     * The discoverable property
+     */
     private Boolean discoverable;
-    /** The factoryTag property */
+    /**
+     * The factoryTag property
+     */
     private String factoryTag;
-    /** The metadata property */
+    /**
+     * The metadata property
+     */
     private java.util.List<SynchronizationMetadataEntry> metadata;
-    /** The schema property */
+    /**
+     * The schema property
+     */
     private SynchronizationSchema schema;
     /**
      * Instantiates a new synchronizationTemplate and sets the default values.

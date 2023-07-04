@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewHistoryDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AccessReviewHistoryDefinition> value;
     /**
      * Instantiates a new AccessReviewHistoryDefinitionCollectionResponse and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PersistentBrowserSessionControl extends ConditionalAccessSessionControl implements Parsable {
-    /** Possible values are: always, never. */
+    /**
+     * Possible values are: always, never.
+     */
     private PersistentBrowserSessionMode mode;
     /**
      * Instantiates a new PersistentBrowserSessionControl and sets the default values.

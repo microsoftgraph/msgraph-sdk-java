@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether captions are enabled for this Teams live event. */
+    /**
+     * Indicates whether captions are enabled for this Teams live event.
+     */
     private Boolean isCaptionEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The spoken language. */
+    /**
+     * The spoken language.
+     */
     private String spokenLanguage;
-    /** The translation languages (choose up to 6). */
+    /**
+     * The translation languages (choose up to 6).
+     */
     private java.util.List<String> translationLanguages;
     /**
      * Instantiates a new broadcastMeetingCaptionSettings and sets the default values.

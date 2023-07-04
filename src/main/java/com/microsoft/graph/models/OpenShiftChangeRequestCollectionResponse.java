@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShiftChangeRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<OpenShiftChangeRequest> value;
     /**
      * Instantiates a new OpenShiftChangeRequestCollectionResponse and sets the default values.

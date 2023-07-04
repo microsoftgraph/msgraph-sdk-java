@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeRuleMembers extends SubjectSet implements Parsable {
-    /** A description of the membership rule. */
+    /**
+     * A description of the membership rule.
+     */
     private String description;
-    /** Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax. */
+    /**
+     * Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
+     */
     private String membershipRule;
     /**
      * Instantiates a new AttributeRuleMembers and sets the default values.

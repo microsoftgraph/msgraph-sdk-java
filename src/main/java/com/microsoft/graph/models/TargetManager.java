@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetManager extends SubjectSet implements Parsable {
-    /** Manager level, between 1 and 4. The direct manager is 1. */
+    /**
+     * Manager level, between 1 and 4. The direct manager is 1.
+     */
     private Integer managerLevel;
     /**
      * Instantiates a new TargetManager and sets the default values.

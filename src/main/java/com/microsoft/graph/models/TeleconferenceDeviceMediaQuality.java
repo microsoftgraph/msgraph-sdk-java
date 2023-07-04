@@ -9,51 +9,97 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The average inbound stream network jitter. */
+    /**
+     * The average inbound stream network jitter.
+     */
     private Period averageInboundJitter;
-    /** The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
     private Double averageInboundPacketLossRateInPercentage;
-    /** The average inbound stream network round trip delay. */
+    /**
+     * The average inbound stream network round trip delay.
+     */
     private Period averageInboundRoundTripDelay;
-    /** The average outbound stream network jitter. */
+    /**
+     * The average outbound stream network jitter.
+     */
     private Period averageOutboundJitter;
-    /** The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
     private Double averageOutboundPacketLossRateInPercentage;
-    /** The average outbound stream network round trip delay. */
+    /**
+     * The average outbound stream network round trip delay.
+     */
     private Period averageOutboundRoundTripDelay;
-    /** The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3. */
+    /**
+     * The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
+     */
     private Integer channelIndex;
-    /** The total number of the inbound packets. */
+    /**
+     * The total number of the inbound packets.
+     */
     private Long inboundPackets;
-    /** the local IP address for the media session. */
+    /**
+     * the local IP address for the media session.
+     */
     private String localIPAddress;
-    /** The local media port. */
+    /**
+     * The local media port.
+     */
     private Integer localPort;
-    /** The maximum inbound stream network jitter. */
+    /**
+     * The maximum inbound stream network jitter.
+     */
     private Period maximumInboundJitter;
-    /** The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
     private Double maximumInboundPacketLossRateInPercentage;
-    /** The maximum inbound stream network round trip delay. */
+    /**
+     * The maximum inbound stream network round trip delay.
+     */
     private Period maximumInboundRoundTripDelay;
-    /** The maximum outbound stream network jitter. */
+    /**
+     * The maximum outbound stream network jitter.
+     */
     private Period maximumOutboundJitter;
-    /** The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%. */
+    /**
+     * The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
     private Double maximumOutboundPacketLossRateInPercentage;
-    /** The maximum outbound stream network round trip delay. */
+    /**
+     * The maximum outbound stream network round trip delay.
+     */
     private Period maximumOutboundRoundTripDelay;
-    /** The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations. */
+    /**
+     * The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
+     */
     private Period mediaDuration;
-    /** The network link speed in bytes */
+    /**
+     * The network link speed in bytes
+     */
     private Long networkLinkSpeedInBytes;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The total number of the outbound packets. */
+    /**
+     * The total number of the outbound packets.
+     */
     private Long outboundPackets;
-    /** The remote IP address for the media session. */
+    /**
+     * The remote IP address for the media session.
+     */
     private String remoteIPAddress;
-    /** The remote media port. */
+    /**
+     * The remote media port.
+     */
     private Integer remotePort;
     /**
      * Instantiates a new TeleconferenceDeviceMediaQuality and sets the default values.

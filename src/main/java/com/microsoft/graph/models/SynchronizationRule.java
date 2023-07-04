@@ -8,29 +8,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationRule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The containerFilter property */
+    /**
+     * The containerFilter property
+     */
     private ContainerFilter containerFilter;
-    /** The editable property */
+    /**
+     * The editable property
+     */
     private Boolean editable;
-    /** The groupFilter property */
+    /**
+     * The groupFilter property
+     */
     private GroupFilter groupFilter;
-    /** The id property */
+    /**
+     * The id property
+     */
     private String id;
-    /** The metadata property */
+    /**
+     * The metadata property
+     */
     private java.util.List<StringKeyStringValuePair> metadata;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The objectMappings property */
+    /**
+     * The objectMappings property
+     */
     private java.util.List<ObjectMapping> objectMappings;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The priority property */
+    /**
+     * The priority property
+     */
     private Integer priority;
-    /** The sourceDirectoryName property */
+    /**
+     * The sourceDirectoryName property
+     */
     private String sourceDirectoryName;
-    /** The targetDirectoryName property */
+    /**
+     * The targetDirectoryName property
+     */
     private String targetDirectoryName;
     /**
      * Instantiates a new synchronizationRule and sets the default values.

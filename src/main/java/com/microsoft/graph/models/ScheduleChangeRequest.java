@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable {
-    /** The assignedTo property */
+    /**
+     * The assignedTo property
+     */
     private ScheduleChangeRequestActor assignedTo;
-    /** The managerActionDateTime property */
+    /**
+     * The managerActionDateTime property
+     */
     private OffsetDateTime managerActionDateTime;
-    /** The managerActionMessage property */
+    /**
+     * The managerActionMessage property
+     */
     private String managerActionMessage;
-    /** The managerUserId property */
+    /**
+     * The managerUserId property
+     */
     private String managerUserId;
-    /** The senderDateTime property */
+    /**
+     * The senderDateTime property
+     */
     private OffsetDateTime senderDateTime;
-    /** The senderMessage property */
+    /**
+     * The senderMessage property
+     */
     private String senderMessage;
-    /** The senderUserId property */
+    /**
+     * The senderUserId property
+     */
     private String senderUserId;
-    /** The state property */
+    /**
+     * The state property
+     */
     private ScheduleChangeState state;
     /**
      * Instantiates a new ScheduleChangeRequest and sets the default values.

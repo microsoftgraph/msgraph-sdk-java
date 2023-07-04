@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResourceVisualization implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item. */
+    /**
+     * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
+     */
     private String containerDisplayName;
-    /** Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness. */
+    /**
+     * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
+     */
     private String containerType;
-    /** A path leading to the folder in which the item is stored. */
+    /**
+     * A path leading to the folder in which the item is stored.
+     */
     private String containerWebUrl;
-    /** The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported. */
+    /**
+     * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
+     */
     private String mediaType;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A URL leading to the preview image for the item. */
+    /**
+     * A URL leading to the preview image for the item.
+     */
     private String previewImageUrl;
-    /** A preview text for the item. */
+    /**
+     * A preview text for the item.
+     */
     private String previewText;
-    /** The item's title text. */
+    /**
+     * The item's title text.
+     */
     private String title;
-    /** The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types. */
+    /**
+     * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+     */
     private String type;
     /**
      * Instantiates a new resourceVisualization and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
-    /** The list of media to pre-fetch. */
+    /**
+     * The list of media to pre-fetch.
+     */
     private java.util.List<MediaInfo> preFetchMedia;
     /**
      * Instantiates a new ServiceHostedMediaConfig and sets the default values.

@@ -7,16 +7,17 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Event representing an general failure.
- */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
-    /** Id used for tracing the failure in the service. */
+    /**
+     * Id used for tracing the failure in the service.
+     */
     private String correlationId;
-    /** Time when the event occurred . */
+    /**
+     * Time when the event occurred .
+     */
     private OffsetDateTime eventDateTime;
     /**
-     * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
+     * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +27,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTroubleshootingEvent
+     * @return a DeviceManagementTroubleshootingEvent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -10,15 +10,25 @@ import java.util.Objects;
  * The Role Definition resource. The role definition is the foundation of role based access in Intune. The role combines an Intune resource such as a Mobile App and associated role permissions such as Create or Read for the resource. There are two types of roles, built-in and custom. Built-in roles cannot be modified. Both built-in roles and custom roles must have assignments to be enforced. Create custom roles if you want to define a role that allows any of the available resources and role permissions to be combined into a single role.
  */
 public class RoleDefinition extends Entity implements Parsable {
-    /** Description of the Role definition. */
+    /**
+     * Description of the Role definition.
+     */
     private String description;
-    /** Display Name of the Role definition. */
+    /**
+     * Display Name of the Role definition.
+     */
     private String displayName;
-    /** Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition. */
+    /**
+     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
+     */
     private Boolean isBuiltIn;
-    /** List of Role assignments for this role definition. */
+    /**
+     * List of Role assignments for this role definition.
+     */
     private java.util.List<RoleAssignment> roleAssignments;
-    /** List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission. */
+    /**
+     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
+     */
     private java.util.List<RolePermission> rolePermissions;
     /**
      * Instantiates a new roleDefinition and sets the default values.

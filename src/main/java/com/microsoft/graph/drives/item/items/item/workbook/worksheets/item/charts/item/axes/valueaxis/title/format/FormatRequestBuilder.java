@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the format property of the microsoft.graph.workbookChartAxisTitle entity.
  */
 public class FormatRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the font property of the microsoft.graph.workbookChartAxisTitleFormat entity. */
+    /**
+     * Provides operations to manage the font property of the microsoft.graph.workbookChartAxisTitleFormat entity.
+     */
     @javax.annotation.Nonnull
     public FontRequestBuilder font() {
         return new FontRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
      * Represents the formatting of chart axis title. Read-only.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class FormatRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

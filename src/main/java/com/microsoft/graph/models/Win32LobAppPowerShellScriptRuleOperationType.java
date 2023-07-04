@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains all supported Powershell Script output detection type. */
+/**
+ * Contains all supported Powershell Script output detection type.
+ */
 public enum Win32LobAppPowerShellScriptRuleOperationType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

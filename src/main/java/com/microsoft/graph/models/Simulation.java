@@ -8,35 +8,65 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Simulation extends Entity implements Parsable {
-    /** The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations. */
+    /**
+     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     */
     private SimulationAttackTechnique attackTechnique;
-    /** Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue. */
+    /**
+     * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     */
     private SimulationAttackType attackType;
-    /** Unique identifier for the attack simulation automation. */
+    /**
+     * Unique identifier for the attack simulation automation.
+     */
     private String automationId;
-    /** Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby. */
+    /**
+     * Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
+     */
     private OffsetDateTime completionDateTime;
-    /** Identity of the user who created the attack simulation and training campaign. */
+    /**
+     * Identity of the user who created the attack simulation and training campaign.
+     */
     private EmailIdentity createdBy;
-    /** Date and time of creation of the attack simulation and training campaign. */
+    /**
+     * Date and time of creation of the attack simulation and training campaign.
+     */
     private OffsetDateTime createdDateTime;
-    /** Description of the attack simulation and training campaign. */
+    /**
+     * Description of the attack simulation and training campaign.
+     */
     private String description;
-    /** Display name of the attack simulation and training campaign. Supports $filter and $orderby. */
+    /**
+     * Display name of the attack simulation and training campaign. Supports $filter and $orderby.
+     */
     private String displayName;
-    /** Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby. */
+    /**
+     * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
+     */
     private Boolean isAutomated;
-    /** Identity of the user who most recently modified the attack simulation and training campaign. */
+    /**
+     * Identity of the user who most recently modified the attack simulation and training campaign.
+     */
     private EmailIdentity lastModifiedBy;
-    /** Date and time of the most recent modification of the attack simulation and training campaign. */
+    /**
+     * Date and time of the most recent modification of the attack simulation and training campaign.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby. */
+    /**
+     * Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
+     */
     private OffsetDateTime launchDateTime;
-    /** Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue. */
+    /**
+     * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     */
     private PayloadDeliveryPlatform payloadDeliveryPlatform;
-    /** Report of the attack simulation and training campaign. */
+    /**
+     * Report of the attack simulation and training campaign.
+     */
     private SimulationReport report;
-    /** Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue. */
+    /**
+     * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
+     */
     private SimulationStatus status;
     /**
      * Instantiates a new simulation and sets the default values.

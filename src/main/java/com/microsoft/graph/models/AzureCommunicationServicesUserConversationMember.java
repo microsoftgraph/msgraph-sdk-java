@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AzureCommunicationServicesUserConversationMember extends ConversationMember implements Parsable {
-    /** Azure Communication Services ID of the user. */
+    /**
+     * Azure Communication Services ID of the user.
+     */
     private String azureCommunicationServicesId;
     /**
      * Instantiates a new AzureCommunicationServicesUserConversationMember and sets the default values.

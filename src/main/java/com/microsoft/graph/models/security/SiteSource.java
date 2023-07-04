@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SiteSource extends DataSource implements Parsable {
-    /** The site property */
+    /**
+     * The site property
+     */
     private Site site;
     /**
      * Instantiates a new SiteSource and sets the default values.

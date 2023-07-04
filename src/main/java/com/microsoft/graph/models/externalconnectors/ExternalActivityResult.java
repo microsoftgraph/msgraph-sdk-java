@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalActivityResult extends ExternalActivity implements Parsable {
-    /** Error information that explains the failure to process an external activity. */
+    /**
+     * Error information that explains the failure to process an external activity.
+     */
     private PublicError error;
     /**
      * Instantiates a new ExternalActivityResult and sets the default values.

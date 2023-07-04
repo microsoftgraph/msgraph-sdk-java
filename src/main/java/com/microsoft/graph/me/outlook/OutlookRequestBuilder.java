@@ -24,17 +24,23 @@ import java.util.Objects;
  * Provides operations to manage the outlook property of the microsoft.graph.user entity.
  */
 public class OutlookRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity. */
+    /**
+     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
+     */
     @javax.annotation.Nonnull
     public MasterCategoriesRequestBuilder masterCategories() {
         return new MasterCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the supportedLanguages method. */
+    /**
+     * Provides operations to call the supportedLanguages method.
+     */
     @javax.annotation.Nonnull
     public SupportedLanguagesRequestBuilder supportedLanguages() {
         return new SupportedLanguagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the supportedTimeZones method. */
+    /**
+     * Provides operations to call the supportedTimeZones method.
+     */
     @javax.annotation.Nonnull
     public SupportedTimeZonesRequestBuilder supportedTimeZones() {
         return new SupportedTimeZonesRequestBuilder(pathParameters, requestAdapter);
@@ -139,7 +145,9 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * Get outlook from me
      */
     public class GetQueryParameters {
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -148,7 +156,9 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

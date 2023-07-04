@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TodoTaskList extends Entity implements Parsable {
-    /** The name of the task list. */
+    /**
+     * The name of the task list.
+     */
     private String displayName;
-    /** The collection of open extensions defined for the task list. Nullable. */
+    /**
+     * The collection of open extensions defined for the task list. Nullable.
+     */
     private java.util.List<Extension> extensions;
-    /** True if the user is owner of the given task list. */
+    /**
+     * True if the user is owner of the given task list.
+     */
     private Boolean isOwner;
-    /** True if the task list is shared with other users */
+    /**
+     * True if the task list is shared with other users
+     */
     private Boolean isShared;
-    /** The tasks in this task list. Read-only. Nullable. */
+    /**
+     * The tasks in this task list. Read-only. Nullable.
+     */
     private java.util.List<TodoTask> tasks;
-    /** The wellknownListName property */
+    /**
+     * The wellknownListName property
+     */
     private WellknownListName wellknownListName;
     /**
      * Instantiates a new todoTaskList and sets the default values.

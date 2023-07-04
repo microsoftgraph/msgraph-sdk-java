@@ -8,43 +8,81 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequest extends Entity implements Parsable {
-    /** Identity that the request is assigned to. */
+    /**
+     * Identity that the request is assigned to.
+     */
     private Identity assignedTo;
-    /** The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime closedDateTime;
-    /** Identity information for the entity that created the request. */
+    /**
+     * Identity information for the entity that created the request.
+     */
     private IdentitySet createdBy;
-    /** The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
-    /** Information about the data subject. */
+    /**
+     * Information about the data subject.
+     */
     private DataSubject dataSubject;
-    /** The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue. */
+    /**
+     * The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
+     */
     private DataSubjectType dataSubjectType;
-    /** Description for the request. */
+    /**
+     * Description for the request.
+     */
     private String description;
-    /** The name of the request. */
+    /**
+     * The name of the request.
+     */
     private String displayName;
-    /** Collection of history change events. */
+    /**
+     * Collection of history change events.
+     */
     private java.util.List<SubjectRightsRequestHistory> history;
-    /** Insight about the request. */
+    /**
+     * Insight about the request.
+     */
     private SubjectRightsRequestDetail insight;
-    /** The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime internalDueDateTime;
-    /** Identity information for the entity that last modified the request. */
+    /**
+     * Identity information for the entity that last modified the request.
+     */
     private IdentitySet lastModifiedBy;
-    /** The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** List of notes associcated with the request. */
+    /**
+     * List of notes associcated with the request.
+     */
     private java.util.List<AuthoredNote> notes;
-    /** List of regulations that this request will fulfill. */
+    /**
+     * List of regulations that this request will fulfill.
+     */
     private java.util.List<String> regulations;
-    /** Information about the different stages for the request. */
+    /**
+     * Information about the different stages for the request.
+     */
     private java.util.List<SubjectRightsRequestStageDetail> stages;
-    /** The status of the request.. Possible values are: active, closed, unknownFutureValue. */
+    /**
+     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     */
     private SubjectRightsRequestStatus status;
-    /** Information about the Microsoft Teams team that was created for the request. */
+    /**
+     * Information about the Microsoft Teams team that was created for the request.
+     */
     private Team team;
-    /** The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue. */
+    /**
+     * The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
+     */
     private SubjectRightsRequestType type;
     /**
      * Instantiates a new SubjectRightsRequest and sets the default values.

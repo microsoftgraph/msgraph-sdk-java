@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlterationResponse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Defines the original user query string. */
+    /**
+     * Defines the original user query string.
+     */
     private String originalQueryString;
-    /** Defines the details of the alteration information for the spelling correction. */
+    /**
+     * Defines the details of the alteration information for the spelling correction.
+     */
     private SearchAlteration queryAlteration;
-    /** Defines the type of the spelling correction. Possible values are: suggestion, modification. */
+    /**
+     * Defines the type of the spelling correction. Possible values are: suggestion, modification.
+     */
     private SearchAlterationType queryAlterationType;
     /**
      * Instantiates a new alterationResponse and sets the default values.

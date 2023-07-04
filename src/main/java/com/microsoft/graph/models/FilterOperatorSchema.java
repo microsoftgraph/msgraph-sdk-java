@@ -7,14 +7,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FilterOperatorSchema extends Entity implements Parsable {
-    /** The arity property */
+    /**
+     * The arity property
+     */
     private ScopeOperatorType arity;
-    /** The multivaluedComparisonType property */
+    /**
+     * The multivaluedComparisonType property
+     */
     private ScopeOperatorMultiValuedComparisonType multivaluedComparisonType;
-    /** The supportedAttributeTypes property */
+    /**
+     * The supportedAttributeTypes property
+     */
     private java.util.List<AttributeType> supportedAttributeTypes;
     /**
-     * Instantiates a new filterOperatorSchema and sets the default values.
+     * Instantiates a new FilterOperatorSchema and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -24,7 +30,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filterOperatorSchema
+     * @return a FilterOperatorSchema
      */
     @javax.annotation.Nonnull
     public static FilterOperatorSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

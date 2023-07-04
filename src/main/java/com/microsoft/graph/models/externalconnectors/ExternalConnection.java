@@ -8,28 +8,48 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalConnection extends Entity implements Parsable {
-    /** Collects configurable settings related to activities involving connector content. */
+    /**
+     * Collects configurable settings related to activities involving connector content.
+     */
     private ActivitySettings activitySettings;
-    /** Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional. */
+    /**
+     * Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
+     */
     private Configuration configuration;
-    /** Description of the connection displayed in the Microsoft 365 admin center. Optional. */
+    /**
+     * Description of the connection displayed in the Microsoft 365 admin center. Optional.
+     */
     private String description;
-    /** The groups property */
+    /**
+     * The groups property
+     */
     private java.util.List<ExternalGroup> groups;
-    /** The items property */
+    /**
+     * The items property
+     */
     private java.util.List<ExternalItem> items;
-    /** The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required. */
+    /**
+     * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
+     */
     private String name;
-    /** The operations property */
+    /**
+     * The operations property
+     */
     private java.util.List<ConnectionOperation> operations;
-    /** The schema property */
+    /**
+     * The schema property
+     */
     private Schema schema;
-    /** The settings configuring the search experience for content in this connection, such as the display templates for search results. */
+    /**
+     * The settings configuring the search experience for content in this connection, such as the display templates for search results.
+     */
     private SearchSettings searchSettings;
-    /** Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue. */
+    /**
+     * Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+     */
     private ConnectionState state;
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +59,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalConnection
+     * @return a ExternalConnection
      */
     @javax.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

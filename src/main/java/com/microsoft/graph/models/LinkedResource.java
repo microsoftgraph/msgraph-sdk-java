@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LinkedResource extends Entity implements Parsable {
-    /** The app name of the source that sends the linkedResource. */
+    /**
+     * The app name of the source that sends the linkedResource.
+     */
     private String applicationName;
-    /** The title of the linkedResource. */
+    /**
+     * The title of the linkedResource.
+     */
     private String displayName;
-    /** ID of the object that is associated with this task on the third-party/partner system. */
+    /**
+     * ID of the object that is associated with this task on the third-party/partner system.
+     */
     private String externalId;
-    /** Deep link to the linkedResource. */
+    /**
+     * Deep link to the linkedResource.
+     */
     private String webUrl;
     /**
      * Instantiates a new linkedResource and sets the default values.

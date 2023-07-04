@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains properties for Windows architecture. */
+/**
+ * Contains properties for Windows architecture.
+ */
 public enum WindowsArchitecture implements ValuedEnum {
     /** No flags set. */
     None("none"),

@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the informationProtection singleton.
  */
 public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the bitlocker property of the microsoft.graph.informationProtection entity. */
+    /**
+     * Provides operations to manage the bitlocker property of the microsoft.graph.informationProtection entity.
+     */
     @javax.annotation.Nonnull
     public BitlockerRequestBuilder bitlocker() {
         return new BitlockerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity. */
+    /**
+     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
+     */
     @javax.annotation.Nonnull
     public ThreatAssessmentRequestsRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -194,11 +198,15 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Get informationProtection
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -207,7 +215,9 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
-    /** The endpoint where you can get details about the page. Read-only. */
+    /**
+     * The endpoint where you can get details about the page. Read-only.
+     */
     private String self;
     /**
      * Instantiates a new onenoteEntityBaseModel and sets the default values.

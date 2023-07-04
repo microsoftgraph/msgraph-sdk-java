@@ -10,6 +10,7 @@ import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
 import com.microsoft.graph.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.ThreatIntelligenceRequestBuilder;
 import com.microsoft.graph.security.triggers.TriggersRequestBuilder;
 import com.microsoft.graph.security.triggertypes.TriggerTypesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -30,52 +31,79 @@ import java.util.Objects;
  * Provides operations to manage the security singleton.
  */
 public class SecurityRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the alerts property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public AlertsV2RequestBuilder alerts_v2() {
         return new AlertsV2RequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the attackSimulation property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the attackSimulation property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public AttackSimulationRequestBuilder attackSimulation() {
         return new AttackSimulationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the cases property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the cases property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public CasesRequestBuilder cases() {
         return new CasesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the incidents property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public IncidentsRequestBuilder incidents() {
         return new IncidentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the runHuntingQuery method. */
+    /**
+     * Provides operations to call the runHuntingQuery method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder microsoftGraphSecurityRunHuntingQuery() {
         return new MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public SecureScoreControlProfilesRequestBuilder secureScoreControlProfiles() {
         return new SecureScoreControlProfilesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the secureScores property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public SecureScoresRequestBuilder secureScores() {
         return new SecureScoresRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the triggers property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the threatIntelligence property of the microsoft.graph.security entity.
+     */
+    @javax.annotation.Nonnull
+    public ThreatIntelligenceRequestBuilder threatIntelligence() {
+        return new ThreatIntelligenceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the triggers property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public TriggersRequestBuilder triggers() {
         return new TriggersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the triggerTypes property of the microsoft.graph.security entity. */
+    /**
+     * Provides operations to manage the triggerTypes property of the microsoft.graph.security entity.
+     */
     @javax.annotation.Nonnull
     public TriggerTypesRequestBuilder triggerTypes() {
         return new TriggerTypesRequestBuilder(pathParameters, requestAdapter);
@@ -242,11 +270,15 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Get security
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -255,7 +287,9 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Approval extends Entity implements Parsable {
-    /** A collection of stages in the approval decision. */
+    /**
+     * A collection of stages in the approval decision.
+     */
     private java.util.List<ApprovalStage> stages;
     /**
      * Instantiates a new approval and sets the default values.

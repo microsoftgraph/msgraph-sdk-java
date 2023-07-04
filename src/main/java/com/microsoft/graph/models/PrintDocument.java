@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintDocument extends Entity implements Parsable {
-    /** The document's content (MIME) type. Read-only. */
+    /**
+     * The document's content (MIME) type. Read-only.
+     */
     private String contentType;
-    /** The document's name. Read-only. */
+    /**
+     * The document's name. Read-only.
+     */
     private String displayName;
-    /** The document's size in bytes. Read-only. */
+    /**
+     * The document's size in bytes. Read-only.
+     */
     private Long size;
     /**
      * Instantiates a new printDocument and sets the default values.

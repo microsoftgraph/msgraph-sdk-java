@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IPv6Range extends IpRange implements Parsable {
-    /** Lower address. */
+    /**
+     * Lower address.
+     */
     private String lowerAddress;
-    /** Upper address. */
+    /**
+     * Upper address.
+     */
     private String upperAddress;
     /**
      * Instantiates a new IPv6Range and sets the default values.

@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable {
-    /** The notebook that contains the section group. Read-only. */
+    /**
+     * The notebook that contains the section group. Read-only.
+     */
     private Notebook parentNotebook;
-    /** The section group that contains the section group. Read-only. */
+    /**
+     * The section group that contains the section group. Read-only.
+     */
     private SectionGroup parentSectionGroup;
-    /** The section groups in the section. Read-only. Nullable. */
+    /**
+     * The section groups in the section. Read-only. Nullable.
+     */
     private java.util.List<SectionGroup> sectionGroups;
-    /** The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only. */
+    /**
+     * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
+     */
     private String sectionGroupsUrl;
-    /** The sections in the section group. Read-only. Nullable. */
+    /**
+     * The sections in the section group. Read-only. Nullable.
+     */
     private java.util.List<OnenoteSection> sections;
-    /** The URL for the sections navigation property, which returns all the sections in the section group. Read-only. */
+    /**
+     * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
+     */
     private String sectionsUrl;
     /**
      * Instantiates a new sectionGroup and sets the default values.

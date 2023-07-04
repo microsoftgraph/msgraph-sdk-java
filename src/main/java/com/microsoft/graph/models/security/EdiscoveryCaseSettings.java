@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryCaseSettings extends Entity implements Parsable {
-    /** The OCR (Optical Character Recognition) settings for the case. */
+    /**
+     * The OCR (Optical Character Recognition) settings for the case.
+     */
     private OcrSettings ocr;
-    /** The redundancy (near duplicate and email threading) detection settings for the case. */
+    /**
+     * The redundancy (near duplicate and email threading) detection settings for the case.
+     */
     private RedundancyDetectionSettings redundancyDetection;
-    /** The Topic Modeling (Themes) settings for the case. */
+    /**
+     * The Topic Modeling (Themes) settings for the case.
+     */
     private TopicModelingSettings topicModeling;
     /**
      * Instantiates a new ediscoveryCaseSettings and sets the default values.

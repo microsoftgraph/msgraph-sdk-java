@@ -41,8 +41,9 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/deviceManagement/importedWindowsAutopilotDeviceIdentities/{importedWindowsAutopilotDeviceIdentity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a importedWindowsAutopilotDeviceIdentity.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         }
     }
     /**
-     * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a importedWindowsAutopilotDeviceIdentity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         }
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
      * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> get() {
@@ -96,9 +99,10 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         }
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +159,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         }
     }
     /**
-     * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a importedWindowsAutopilotDeviceIdentity.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +167,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a importedWindowsAutopilotDeviceIdentity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +186,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,14 +252,18 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -264,7 +272,9 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

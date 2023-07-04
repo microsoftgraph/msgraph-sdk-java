@@ -11,15 +11,25 @@ import java.util.Objects;
  * Contains properties of a macOS .app in the package
  */
 public class MacOSLobChildApp implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The build number of the app. */
+    /**
+     * The build number of the app.
+     */
     private String buildNumber;
-    /** The bundleId of the app. */
+    /**
+     * The bundleId of the app.
+     */
     private String bundleId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The version number of the app. */
+    /**
+     * The version number of the app.
+     */
     private String versionNumber;
     /**
      * Instantiates a new macOSLobChildApp and sets the default values.

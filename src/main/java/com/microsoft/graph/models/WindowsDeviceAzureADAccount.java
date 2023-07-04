@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsable {
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new WindowsDeviceAzureADAccount and sets the default values.

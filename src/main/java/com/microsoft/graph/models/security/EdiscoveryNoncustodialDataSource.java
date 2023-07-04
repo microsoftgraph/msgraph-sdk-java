@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable {
-    /** User source or SharePoint site data source as non-custodial data source. */
+    /**
+     * User source or SharePoint site data source as non-custodial data source.
+     */
     private DataSource dataSource;
-    /** Operation entity that represents the latest indexing for the non-custodial data source. */
+    /**
+     * Operation entity that represents the latest indexing for the non-custodial data source.
+     */
     private EdiscoveryIndexOperation lastIndexOperation;
     /**
      * Instantiates a new EdiscoveryNoncustodialDataSource and sets the default values.

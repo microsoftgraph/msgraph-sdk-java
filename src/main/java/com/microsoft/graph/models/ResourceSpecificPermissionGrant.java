@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable {
-    /** ID of the service principal of the Azure AD app that has been granted access. Read-only. */
+    /**
+     * ID of the service principal of the Azure AD app that has been granted access. Read-only.
+     */
     private String clientAppId;
-    /** ID of the Azure AD app that has been granted access. Read-only. */
+    /**
+     * ID of the Azure AD app that has been granted access. Read-only.
+     */
     private String clientId;
-    /** The name of the resource-specific permission. Read-only. */
+    /**
+     * The name of the resource-specific permission. Read-only.
+     */
     private String permission;
-    /** The type of permission. Possible values are: Application, Delegated. Read-only. */
+    /**
+     * The type of permission. Possible values are: Application, Delegated. Read-only.
+     */
     private String permissionType;
-    /** ID of the Azure AD app that is hosting the resource. Read-only. */
+    /**
+     * ID of the Azure AD app that is hosting the resource. Read-only.
+     */
     private String resourceAppId;
     /**
      * Instantiates a new resourceSpecificPermissionGrant and sets the default values.

@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable {
-    /** The certificate data, which is a long string of text from the certificate. Can be null. */
+    /**
+     * The certificate data, which is a long string of text from the certificate. Can be null.
+     */
     private String certificateData;
-    /** The Apple developer identifier. Required. */
+    /**
+     * The Apple developer identifier. Required.
+     */
     private String developerId;
-    /** The Apple key identifier. Required. */
+    /**
+     * The Apple key identifier. Required.
+     */
     private String keyId;
-    /** The Apple service identifier. Required. */
+    /**
+     * The Apple service identifier. Required.
+     */
     private String serviceId;
     /**
      * Instantiates a new AppleManagedIdentityProvider and sets the default values.

@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageSubject extends Entity implements Parsable {
-    /** The connected organization of the subject. Read-only. Nullable. */
+    /**
+     * The connected organization of the subject. Read-only. Nullable.
+     */
     private ConnectedOrganization connectedOrganization;
-    /** The display name of the subject. */
+    /**
+     * The display name of the subject.
+     */
     private String displayName;
-    /** The email address of the subject. */
+    /**
+     * The email address of the subject.
+     */
     private String email;
-    /** The object identifier of the subject. null if the subject is not yet a user in the tenant. */
+    /**
+     * The object identifier of the subject. null if the subject is not yet a user in the tenant.
+     */
     private String objectId;
-    /** A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier. */
+    /**
+     * A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
+     */
     private String onPremisesSecurityIdentifier;
-    /** The principal name, if known, of the subject. */
+    /**
+     * The principal name, if known, of the subject.
+     */
     private String principalName;
-    /** The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue. */
+    /**
+     * The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
+     */
     private AccessPackageSubjectType subjectType;
     /**
      * Instantiates a new accessPackageSubject and sets the default values.

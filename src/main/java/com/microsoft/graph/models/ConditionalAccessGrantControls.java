@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The authenticationStrength property */
+    /**
+     * The authenticationStrength property
+     */
     private AuthenticationStrengthPolicy authenticationStrength;
-    /** List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue. */
+    /**
+     * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+     */
     private java.util.List<ConditionalAccessGrantControl> builtInControls;
-    /** List of custom controls IDs required by the policy. For more information, see Custom controls. */
+    /**
+     * List of custom controls IDs required by the policy. For more information, see Custom controls.
+     */
     private java.util.List<String> customAuthenticationFactors;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Defines the relationship of the grant controls. Possible values: AND, OR. */
+    /**
+     * Defines the relationship of the grant controls. Possible values: AND, OR.
+     */
     private String operator;
-    /** List of terms of use IDs required by the policy. */
+    /**
+     * List of terms of use IDs required by the policy.
+     */
     private java.util.List<String> termsOfUse;
     /**
      * Instantiates a new conditionalAccessGrantControls and sets the default values.

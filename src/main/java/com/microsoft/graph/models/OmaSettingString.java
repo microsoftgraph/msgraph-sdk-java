@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingString extends OmaSetting implements Parsable {
-    /** Value. */
+    /**
+     * Value.
+     */
     private String value;
     /**
      * Instantiates a new OmaSettingString and sets the default values.

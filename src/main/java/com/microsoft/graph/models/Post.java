@@ -8,31 +8,57 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Post extends OutlookItem implements Parsable {
-    /** Read-only. Nullable. Supports $expand. */
+    /**
+     * Read-only. Nullable. Supports $expand.
+     */
     private java.util.List<Attachment> attachments;
-    /** The contents of the post. This is a default property. This property can be null. */
+    /**
+     * The contents of the post. This is a default property. This property can be null.
+     */
     private ItemBody body;
-    /** Unique ID of the conversation. Read-only. */
+    /**
+     * Unique ID of the conversation. Read-only.
+     */
     private String conversationId;
-    /** Unique ID of the conversation thread. Read-only. */
+    /**
+     * Unique ID of the conversation thread. Read-only.
+     */
     private String conversationThreadId;
-    /** The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand. */
+    /**
+     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
+     */
     private java.util.List<Extension> extensions;
-    /** The from property */
+    /**
+     * The from property
+     */
     private Recipient from;
-    /** Indicates whether the post has at least one attachment. This is a default property. */
+    /**
+     * Indicates whether the post has at least one attachment. This is a default property.
+     */
     private Boolean hasAttachments;
-    /** Read-only. Supports $expand. */
+    /**
+     * Read-only. Supports $expand.
+     */
     private Post inReplyTo;
-    /** The collection of multi-value extended properties defined for the post. Read-only. Nullable. */
+    /**
+     * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
+     */
     private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /** Conversation participants that were added to the thread as part of this post. */
+    /**
+     * Conversation participants that were added to the thread as part of this post.
+     */
     private java.util.List<Recipient> newParticipants;
-    /** Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime receivedDateTime;
-    /** Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property. */
+    /**
+     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
+     */
     private Recipient sender;
-    /** The collection of single-value extended properties defined for the post. Read-only. Nullable. */
+    /**
+     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
+     */
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /**
      * Instantiates a new Post and sets the default values.

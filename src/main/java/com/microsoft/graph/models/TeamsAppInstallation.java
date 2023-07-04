@@ -7,9 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppInstallation extends Entity implements Parsable {
-    /** The app that is installed. */
+    /**
+     * The consentedPermissionSet property
+     */
+    private TeamsAppPermissionSet consentedPermissionSet;
+    /**
+     * The app that is installed.
+     */
     private TeamsApp teamsApp;
-    /** The details of this version of the app. */
+    /**
+     * The details of this version of the app.
+     */
     private TeamsAppDefinition teamsAppDefinition;
     /**
      * Instantiates a new teamsAppInstallation and sets the default values.
@@ -37,12 +45,21 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         return new TeamsAppInstallation();
     }
     /**
+     * Gets the consentedPermissionSet property value. The consentedPermissionSet property
+     * @return a teamsAppPermissionSet
+     */
+    @javax.annotation.Nullable
+    public TeamsAppPermissionSet getConsentedPermissionSet() {
+        return this.consentedPermissionSet;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("consentedPermissionSet", (n) -> { this.setConsentedPermissionSet(n.getObjectValue(TeamsAppPermissionSet::createFromDiscriminatorValue)); });
         deserializerMap.put("teamsApp", (n) -> { this.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
         deserializerMap.put("teamsAppDefinition", (n) -> { this.setTeamsAppDefinition(n.getObjectValue(TeamsAppDefinition::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -72,8 +89,18 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("consentedPermissionSet", this.getConsentedPermissionSet());
         writer.writeObjectValue("teamsApp", this.getTeamsApp());
         writer.writeObjectValue("teamsAppDefinition", this.getTeamsAppDefinition());
+    }
+    /**
+     * Sets the consentedPermissionSet property value. The consentedPermissionSet property
+     * @param value Value to set for the consentedPermissionSet property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setConsentedPermissionSet(@javax.annotation.Nullable final TeamsAppPermissionSet value) {
+        this.consentedPermissionSet = value;
     }
     /**
      * Sets the teamsApp property value. The app that is installed.

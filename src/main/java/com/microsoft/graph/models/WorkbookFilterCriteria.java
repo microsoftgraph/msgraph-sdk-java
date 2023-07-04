@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The color property */
+    /**
+     * The color property
+     */
     private String color;
-    /** The criterion1 property */
+    /**
+     * The criterion1 property
+     */
     private String criterion1;
-    /** The criterion2 property */
+    /**
+     * The criterion2 property
+     */
     private String criterion2;
-    /** The dynamicCriteria property */
+    /**
+     * The dynamicCriteria property
+     */
     private String dynamicCriteria;
-    /** The filterOn property */
+    /**
+     * The filterOn property
+     */
     private String filterOn;
-    /** The icon property */
+    /**
+     * The icon property
+     */
     private WorkbookIcon icon;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The operator property */
+    /**
+     * The operator property
+     */
     private String operator;
-    /** The values property */
+    /**
+     * The values property
+     */
     private Json values;
     /**
      * Instantiates a new workbookFilterCriteria and sets the default values.

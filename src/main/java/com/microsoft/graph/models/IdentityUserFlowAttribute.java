@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityUserFlowAttribute extends Entity implements Parsable {
-    /** The dataType property */
+    /**
+     * The dataType property
+     */
     private IdentityUserFlowAttributeDataType dataType;
-    /** The description of the user flow attribute that's shown to the user at the time of sign-up. */
+    /**
+     * The description of the user flow attribute that's shown to the user at the time of sign-up.
+     */
     private String description;
-    /** The display name of the user flow attribute. */
+    /**
+     * The display name of the user flow attribute.
+     */
     private String displayName;
-    /** The userFlowAttributeType property */
+    /**
+     * The userFlowAttributeType property
+     */
     private IdentityUserFlowAttributeType userFlowAttributeType;
     /**
      * Instantiates a new identityUserFlowAttribute and sets the default values.

@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
  */
 public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the syncLicenses method. */
+    /**
+     * Provides operations to call the syncLicenses method.
+     */
     @javax.annotation.Nonnull
     public SyncLicensesRequestBuilder syncLicenses() {
         return new SyncLicensesRequestBuilder(pathParameters, requestAdapter);
@@ -47,8 +49,9 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/vppTokens/{vppToken%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property vppTokens for deviceAppManagement
+     * Deletes a vppToken.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +68,10 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property vppTokens for deviceAppManagement
+     * Deletes a vppToken.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +88,9 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of Vpp tokens for this organization.
+     * Read properties and relationships of the vppToken object.
      * @return a CompletableFuture of vppToken
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> get() {
@@ -102,9 +107,10 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of Vpp tokens for this organization.
+     * Read properties and relationships of the vppToken object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of vppToken
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +127,10 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property vppTokens in deviceAppManagement
+     * Update the properties of a vppToken object.
      * @param body The request body
      * @return a CompletableFuture of vppToken
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> patch(@javax.annotation.Nonnull final VppToken body) {
@@ -140,10 +147,11 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property vppTokens in deviceAppManagement
+     * Update the properties of a vppToken object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of vppToken
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> patch(@javax.annotation.Nonnull final VppToken body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +169,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property vppTokens for deviceAppManagement
+     * Deletes a vppToken.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +177,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property vppTokens for deviceAppManagement
+     * Deletes a vppToken.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +196,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of Vpp tokens for this organization.
+     * Read properties and relationships of the vppToken object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +204,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of Vpp tokens for this organization.
+     * Read properties and relationships of the vppToken object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +225,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property vppTokens in deviceAppManagement
+     * Update the properties of a vppToken object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +234,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property vppTokens in deviceAppManagement
+     * Update the properties of a vppToken object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,14 +262,18 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of Vpp tokens for this organization.
+     * Read properties and relationships of the vppToken object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +282,9 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

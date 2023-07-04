@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible types of an Apple Volume Purchase Program token. */
+/**
+ * Possible types of an Apple Volume Purchase Program token.
+ */
 public enum VppTokenAccountType implements ValuedEnum {
     /** Apple Volume Purchase Program token associated with an business program. */
     Business("business"),

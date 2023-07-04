@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StaffAvailabilityItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Each item in this collection indicates a slot and the status of the staff member. */
+    /**
+     * Each item in this collection indicates a slot and the status of the staff member.
+     */
     private java.util.List<AvailabilityItem> availabilityItems;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The ID of the staff member. */
+    /**
+     * The ID of the staff member.
+     */
     private String staffId;
     /**
      * Instantiates a new staffAvailabilityItem and sets the default values.

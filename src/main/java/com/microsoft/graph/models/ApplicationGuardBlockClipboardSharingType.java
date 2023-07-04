@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for applicationGuardBlockClipboardSharingType */
+/**
+ * Possible values for applicationGuardBlockClipboardSharingType
+ */
 public enum ApplicationGuardBlockClipboardSharingType implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),

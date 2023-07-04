@@ -11,13 +11,21 @@ import java.util.Objects;
  * Contains properties of the possible iOS device types the mobile app can run on.
  */
 public class IosDeviceType implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Whether the app should run on iPads. */
+    /**
+     * Whether the app should run on iPads.
+     */
     private Boolean iPad;
-    /** Whether the app should run on iPhones and iPods. */
+    /**
+     * Whether the app should run on iPhones and iPods.
+     */
     private Boolean iPhoneAndIPod;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new IosDeviceType and sets the default values.

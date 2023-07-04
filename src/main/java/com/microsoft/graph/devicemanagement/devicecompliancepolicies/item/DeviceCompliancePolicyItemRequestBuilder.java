@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity.
  */
 public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the assign method. */
+    /**
+     * Provides operations to call the assign method.
+     */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity. */
+    /**
+     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity.
+     */
     @javax.annotation.Nonnull
     public DeviceSettingStateSummariesRequestBuilder deviceSettingStateSummaries() {
         return new DeviceSettingStateSummariesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity. */
+    /**
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
+     */
     @javax.annotation.Nonnull
     public DeviceStatusesRequestBuilder deviceStatuses() {
         return new DeviceStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity. */
+    /**
+     * Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity.
+     */
     @javax.annotation.Nonnull
     public DeviceStatusOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceStatusOverviewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the scheduleActionsForRules method. */
+    /**
+     * Provides operations to call the scheduleActionsForRules method.
+     */
     @javax.annotation.Nonnull
     public ScheduleActionsForRulesRequestBuilder scheduleActionsForRules() {
         return new ScheduleActionsForRulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity. */
+    /**
+     * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
+     */
     @javax.annotation.Nonnull
     public ScheduledActionsForRuleRequestBuilder scheduledActionsForRule() {
         return new ScheduledActionsForRuleRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity. */
+    /**
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
+     */
     @javax.annotation.Nonnull
     public UserStatusesRequestBuilder userStatuses() {
         return new UserStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the userStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity. */
+    /**
+     * Provides operations to manage the userStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity.
+     */
     @javax.annotation.Nonnull
     public UserStatusOverviewRequestBuilder userStatusOverview() {
         return new UserStatusOverviewRequestBuilder(pathParameters, requestAdapter);
@@ -95,8 +113,9 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windows81CompliancePolicy.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -113,9 +132,10 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windows81CompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -132,8 +152,9 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the androidCompliancePolicy object.
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> get() {
@@ -150,9 +171,10 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the androidCompliancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -169,9 +191,10 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a windows10CompliancePolicy object.
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> patch(@javax.annotation.Nonnull final DeviceCompliancePolicy body) {
@@ -188,10 +211,11 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a windows10CompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> patch(@javax.annotation.Nonnull final DeviceCompliancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -209,7 +233,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windows81CompliancePolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -217,7 +241,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windows81CompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -236,7 +260,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the androidCompliancePolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -244,7 +268,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the androidCompliancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -265,7 +289,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a windows10CompliancePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -274,7 +298,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a windows10CompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -302,14 +326,18 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the androidCompliancePolicy object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -318,7 +346,9 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

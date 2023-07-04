@@ -24,22 +24,30 @@ import java.util.Objects;
  * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
  */
 public class PresenceItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the clearPresence method. */
+    /**
+     * Provides operations to call the clearPresence method.
+     */
     @javax.annotation.Nonnull
     public ClearPresenceRequestBuilder clearPresence() {
         return new ClearPresenceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the clearUserPreferredPresence method. */
+    /**
+     * Provides operations to call the clearUserPreferredPresence method.
+     */
     @javax.annotation.Nonnull
     public ClearUserPreferredPresenceRequestBuilder clearUserPreferredPresence() {
         return new ClearUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setPresence method. */
+    /**
+     * Provides operations to call the setPresence method.
+     */
     @javax.annotation.Nonnull
     public SetPresenceRequestBuilder setPresence() {
         return new SetPresenceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setUserPreferredPresence method. */
+    /**
+     * Provides operations to call the setUserPreferredPresence method.
+     */
     @javax.annotation.Nonnull
     public SetUserPreferredPresenceRequestBuilder setUserPreferredPresence() {
         return new SetUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
@@ -277,11 +285,15 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
      * Get a user's presence information.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -290,7 +302,9 @@ public class PresenceItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

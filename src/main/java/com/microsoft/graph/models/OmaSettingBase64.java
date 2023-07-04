@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingBase64 extends OmaSetting implements Parsable {
-    /** File name associated with the Value property (.cer */
+    /**
+     * File name associated with the Value property (.cer
+     */
     private String fileName;
-    /** Value. (Base64 encoded string) */
+    /**
+     * Value. (Base64 encoded string)
+     */
     private String value;
     /**
      * Instantiates a new OmaSettingBase64 and sets the default values.

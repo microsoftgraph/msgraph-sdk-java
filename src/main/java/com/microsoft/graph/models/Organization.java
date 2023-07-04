@@ -8,59 +8,113 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Organization extends DirectoryObject implements Parsable {
-    /** The collection of service plans associated with the tenant. Not nullable. */
+    /**
+     * The collection of service plans associated with the tenant. Not nullable.
+     */
     private java.util.List<AssignedPlan> assignedPlans;
-    /** Branding for the organization. Nullable. */
+    /**
+     * Branding for the organization. Nullable.
+     */
     private OrganizationalBranding branding;
-    /** Telephone number for the organization. Although this is a string collection, only one number can be set for this property. */
+    /**
+     * Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
+     */
     private java.util.List<String> businessPhones;
-    /** Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection. */
+    /**
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     */
     private java.util.List<CertificateBasedAuthConfiguration> certificateBasedAuthConfiguration;
-    /** City name of the address for the organization. */
+    /**
+     * City name of the address for the organization.
+     */
     private String city;
-    /** Country/region name of the address for the organization. */
+    /**
+     * Country/region name of the address for the organization.
+     */
     private String country;
-    /** Country or region abbreviation for the organization in ISO 3166-2 format. */
+    /**
+     * Country or region abbreviation for the organization in ISO 3166-2 format.
+     */
     private String countryLetterCode;
-    /** Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** Two-letter ISO 3166 country code indicating the default service usage location of an organization. */
+    /**
+     * Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+     */
     private String defaultUsageLocation;
-    /** The display name for the tenant. */
+    /**
+     * The display name for the tenant.
+     */
     private String displayName;
-    /** The collection of open extensions defined for the organization. Read-only. Nullable. */
+    /**
+     * The collection of open extensions defined for the organization. Read-only. Nullable.
+     */
     private java.util.List<Extension> extensions;
-    /** Not nullable. */
+    /**
+     * Not nullable.
+     */
     private java.util.List<String> marketingNotificationEmails;
-    /** Mobile device management authority. */
+    /**
+     * Mobile device management authority.
+     */
     private MdmAuthority mobileDeviceManagementAuthority;
-    /** The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime onPremisesLastSyncDateTime;
-    /** true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default). */
+    /**
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
+     */
     private Boolean onPremisesSyncEnabled;
-    /** The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values. */
+    /**
+     * The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
+     */
     private PartnerTenantType partnerTenantType;
-    /** Postal code of the address for the organization. */
+    /**
+     * Postal code of the address for the organization.
+     */
     private String postalCode;
-    /** The preferred language for the organization. Should follow ISO 639-1 Code; for example, en. */
+    /**
+     * The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
+     */
     private String preferredLanguage;
-    /** The privacy profile of an organization. */
+    /**
+     * The privacy profile of an organization.
+     */
     private PrivacyProfile privacyProfile;
-    /** Not nullable. */
+    /**
+     * Not nullable.
+     */
     private java.util.List<ProvisionedPlan> provisionedPlans;
-    /** The securityComplianceNotificationMails property */
+    /**
+     * Not nullable.
+     */
     private java.util.List<String> securityComplianceNotificationMails;
-    /** The securityComplianceNotificationPhones property */
+    /**
+     * Not nullable.
+     */
     private java.util.List<String> securityComplianceNotificationPhones;
-    /** State name of the address for the organization. */
+    /**
+     * State name of the address for the organization.
+     */
     private String state;
-    /** Street name of the address for organization. */
+    /**
+     * Street name of the address for organization.
+     */
     private String street;
-    /** Not nullable. */
+    /**
+     * Not nullable.
+     */
     private java.util.List<String> technicalNotificationMails;
-    /** Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios. */
+    /**
+     * Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
+     */
     private String tenantType;
-    /** The collection of domains associated with this tenant. Not nullable. */
+    /**
+     * The collection of domains associated with this tenant. Not nullable.
+     */
     private java.util.List<VerifiedDomain> verifiedDomains;
     /**
      * Instantiates a new Organization and sets the default values.
@@ -278,7 +332,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.provisionedPlans;
     }
     /**
-     * Gets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
+     * Gets the securityComplianceNotificationMails property value. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -286,7 +340,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.securityComplianceNotificationMails;
     }
     /**
-     * Gets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
+     * Gets the securityComplianceNotificationPhones property value. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -551,7 +605,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.provisionedPlans = value;
     }
     /**
-     * Sets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
+     * Sets the securityComplianceNotificationMails property value. Not nullable.
      * @param value Value to set for the securityComplianceNotificationMails property.
      * @return a void
      */
@@ -560,7 +614,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.securityComplianceNotificationMails = value;
     }
     /**
-     * Sets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
+     * Sets the securityComplianceNotificationPhones property value. Not nullable.
      * @param value Value to set for the securityComplianceNotificationPhones property.
      * @return a void
      */

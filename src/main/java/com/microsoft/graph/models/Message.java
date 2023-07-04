@@ -8,68 +8,128 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Message extends OutlookItem implements Parsable {
-    /** The fileAttachment and itemAttachment attachments for the message. */
+    /**
+     * The fileAttachment and itemAttachment attachments for the message.
+     */
     private java.util.List<Attachment> attachments;
-    /** The Bcc: recipients for the message. */
+    /**
+     * The Bcc: recipients for the message.
+     */
     private java.util.List<Recipient> bccRecipients;
-    /** The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body. */
+    /**
+     * The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
+     */
     private ItemBody body;
-    /** The first 255 characters of the message body. It is in text format. */
+    /**
+     * The first 255 characters of the message body. It is in text format.
+     */
     private String bodyPreview;
-    /** The Cc: recipients for the message. */
+    /**
+     * The Cc: recipients for the message.
+     */
     private java.util.List<Recipient> ccRecipients;
-    /** The ID of the conversation the email belongs to. */
+    /**
+     * The ID of the conversation the email belongs to.
+     */
     private String conversationId;
-    /** Indicates the position of the message within the conversation. */
+    /**
+     * Indicates the position of the message within the conversation.
+     */
     private byte[] conversationIndex;
-    /** The collection of open extensions defined for the message. Nullable. */
+    /**
+     * The collection of open extensions defined for the message. Nullable.
+     */
     private java.util.List<Extension> extensions;
-    /** The flag value that indicates the status, start date, due date, or completion date for the message. */
+    /**
+     * The flag value that indicates the status, start date, due date, or completion date for the message.
+     */
     private FollowupFlag flag;
-    /** The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message. */
+    /**
+     * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     */
     private Recipient from;
-    /** Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>. */
+    /**
+     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
+     */
     private Boolean hasAttachments;
-    /** The importance property */
+    /**
+     * The importance property
+     */
     private Importance importance;
-    /** The inferenceClassification property */
+    /**
+     * The inferenceClassification property
+     */
     private InferenceClassificationType inferenceClassification;
-    /** The internetMessageHeaders property */
+    /**
+     * The internetMessageHeaders property
+     */
     private java.util.List<InternetMessageHeader> internetMessageHeaders;
-    /** The internetMessageId property */
+    /**
+     * The internetMessageId property
+     */
     private String internetMessageId;
-    /** The isDeliveryReceiptRequested property */
+    /**
+     * The isDeliveryReceiptRequested property
+     */
     private Boolean isDeliveryReceiptRequested;
-    /** The isDraft property */
+    /**
+     * The isDraft property
+     */
     private Boolean isDraft;
-    /** The isRead property */
+    /**
+     * The isRead property
+     */
     private Boolean isRead;
-    /** The isReadReceiptRequested property */
+    /**
+     * The isReadReceiptRequested property
+     */
     private Boolean isReadReceiptRequested;
-    /** The collection of multi-value extended properties defined for the message. Nullable. */
+    /**
+     * The collection of multi-value extended properties defined for the message. Nullable.
+     */
     private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /** The parentFolderId property */
+    /**
+     * The parentFolderId property
+     */
     private String parentFolderId;
-    /** The receivedDateTime property */
+    /**
+     * The receivedDateTime property
+     */
     private OffsetDateTime receivedDateTime;
-    /** The replyTo property */
+    /**
+     * The replyTo property
+     */
     private java.util.List<Recipient> replyTo;
-    /** The sender property */
+    /**
+     * The sender property
+     */
     private Recipient sender;
-    /** The sentDateTime property */
+    /**
+     * The sentDateTime property
+     */
     private OffsetDateTime sentDateTime;
-    /** The collection of single-value extended properties defined for the message. Nullable. */
+    /**
+     * The collection of single-value extended properties defined for the message. Nullable.
+     */
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /** The subject property */
+    /**
+     * The subject property
+     */
     private String subject;
-    /** The toRecipients property */
+    /**
+     * The toRecipients property
+     */
     private java.util.List<Recipient> toRecipients;
-    /** The uniqueBody property */
+    /**
+     * The uniqueBody property
+     */
     private ItemBody uniqueBody;
-    /** The webLink property */
+    /**
+     * The webLink property
+     */
     private String webLink;
     /**
-     * Instantiates a new message and sets the default values.
+     * Instantiates a new Message and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -80,7 +140,7 @@ public class Message extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a message
+     * @return a Message
      */
     @javax.annotation.Nonnull
     public static Message createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RemoteLockActionResult extends DeviceActionResult implements Parsable {
-    /** Pin to unlock the client */
+    /**
+     * Pin to unlock the client
+     */
     private String unlockPin;
     /**
      * Instantiates a new RemoteLockActionResult and sets the default values.

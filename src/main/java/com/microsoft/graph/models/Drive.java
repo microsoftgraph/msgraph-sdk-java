@@ -7,30 +7,52 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Drive extends BaseItem implements Parsable {
-    /** Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive. */
+    /**
+     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     */
     private java.util.List<DriveItem> bundles;
-    /** Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only. */
+    /**
+     * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+     */
     private String driveType;
-    /** The list of items the user is following. Only in OneDrive for Business. */
+    /**
+     * The list of items the user is following. Only in OneDrive for Business.
+     */
     private java.util.List<DriveItem> following;
-    /** All items contained in the drive. Read-only. Nullable. */
+    /**
+     * All items contained in the drive. Read-only. Nullable.
+     */
     private java.util.List<DriveItem> items;
-    /** For drives in SharePoint, the underlying document library list. Read-only. Nullable. */
+    /**
+     * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
+     */
     private List list;
-    /** Optional. The user account that owns the drive. Read-only. */
+    /**
+     * Optional. The user account that owns the drive. Read-only.
+     */
     private IdentitySet owner;
-    /** Optional. Information about the drive's storage space quota. Read-only. */
+    /**
+     * Optional. Information about the drive's storage space quota. Read-only.
+     */
     private Quota quota;
-    /** The root folder of the drive. Read-only. */
+    /**
+     * The root folder of the drive. Read-only.
+     */
     private DriveItem root;
-    /** The sharePointIds property */
+    /**
+     * The sharePointIds property
+     */
     private SharepointIds sharePointIds;
-    /** Collection of common folders available in OneDrive. Read-only. Nullable. */
+    /**
+     * Collection of common folders available in OneDrive. Read-only. Nullable.
+     */
     private java.util.List<DriveItem> special;
-    /** If present, indicates that this is a system-managed drive. Read-only. */
+    /**
+     * If present, indicates that this is a system-managed drive. Read-only.
+     */
     private SystemFacet system;
     /**
-     * Instantiates a new Drive and sets the default values.
+     * Instantiates a new drive and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -41,7 +63,7 @@ public class Drive extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Drive
+     * @return a drive
      */
     @javax.annotation.Nonnull
     public static Drive createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

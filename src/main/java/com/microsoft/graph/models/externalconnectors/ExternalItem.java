@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalItem extends Entity implements Parsable {
-    /** An array of access control entries. Each entry specifies the access granted to a user or group. Required. */
+    /**
+     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
+     */
     private java.util.List<Acl> acl;
-    /** Returns a list of activities performed on the item. Write-only. */
+    /**
+     * Returns a list of activities performed on the item. Write-only.
+     */
     private java.util.List<ExternalActivity> activities;
-    /** A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional. */
+    /**
+     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
+     */
     private ExternalItemContent content;
-    /** A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required. */
+    /**
+     * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
+     */
     private Properties properties;
     /**
      * Instantiates a new externalItem and sets the default values.

@@ -11,9 +11,13 @@ import java.util.Objects;
  * Abstract class to contain properties used to assign a mobile app to a group.
  */
 public class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new mobileAppAssignmentSettings and sets the default values.

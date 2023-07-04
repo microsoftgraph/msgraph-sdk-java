@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintTask extends Entity implements Parsable {
-    /** The definition property */
+    /**
+     * The definition property
+     */
     private PrintTaskDefinition definition;
-    /** The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only. */
+    /**
+     * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     */
     private String parentUrl;
-    /** The status property */
+    /**
+     * The status property
+     */
     private PrintTaskStatus status;
-    /** The trigger property */
+    /**
+     * The trigger property
+     */
     private PrintTaskTrigger trigger;
     /**
      * Instantiates a new printTask and sets the default values.

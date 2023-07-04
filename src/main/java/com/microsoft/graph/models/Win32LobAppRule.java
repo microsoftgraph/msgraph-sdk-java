@@ -11,11 +11,17 @@ import java.util.Objects;
  * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
  */
 public class Win32LobAppRule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Contains rule types for Win32 LOB apps. */
+    /**
+     * Contains rule types for Win32 LOB apps.
+     */
     private Win32LobAppRuleType ruleType;
     /**
      * Instantiates a new win32LobAppRule and sets the default values.

@@ -11,47 +11,89 @@ import java.util.Objects;
  * Represents a particular service offered by a booking business.
  */
 public class BookingService extends Entity implements Parsable {
-    /** Additional information that is sent to the customer when an appointment is confirmed. */
+    /**
+     * Additional information that is sent to the customer when an appointment is confirmed.
+     */
     private String additionalInformation;
-    /** Contains the set of custom questions associated with a particular service. */
+    /**
+     * Contains the set of custom questions associated with a particular service.
+     */
     private java.util.List<BookingQuestionAssignment> customQuestions;
-    /** The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S. */
+    /**
+     * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
+     */
     private Period defaultDuration;
-    /** The default physical location for the service. */
+    /**
+     * The default physical location for the service.
+     */
     private Location defaultLocation;
-    /** The default monetary price for the service. */
+    /**
+     * The default monetary price for the service.
+     */
     private Double defaultPrice;
-    /** Represents the type of pricing of a booking service. */
+    /**
+     * Represents the type of pricing of a booking service.
+     */
     private BookingPriceType defaultPriceType;
-    /** The default set of reminders for an appointment of this service. The value of this property is available only when reading this bookingService by its ID. */
+    /**
+     * The default set of reminders for an appointment of this service. The value of this property is available only when reading this bookingService by its ID.
+     */
     private java.util.List<BookingReminder> defaultReminders;
-    /** A text description for the service. */
+    /**
+     * A text description for the service.
+     */
     private String description;
-    /** A service name. */
+    /**
+     * A service name.
+     */
     private String displayName;
-    /** True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service. */
+    /**
+     * True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
+     */
     private Boolean isAnonymousJoinEnabled;
-    /** True means this service is not available to customers for booking. */
+    /**
+     * True means this service is not available to customers for booking.
+     */
     private Boolean isHiddenFromCustomers;
-    /** True indicates that the appointments for the service will be held online. Default value is false. */
+    /**
+     * True indicates that the appointments for the service will be held online. Default value is false.
+     */
     private Boolean isLocationOnline;
-    /** The language of the self-service booking page. */
+    /**
+     * The language of the self-service booking page.
+     */
     private String languageTag;
-    /** The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation. */
+    /**
+     * The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
+     */
     private Integer maximumAttendeesCount;
-    /** Additional information about this service. */
+    /**
+     * Additional information about this service.
+     */
     private String notes;
-    /** The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked. */
+    /**
+     * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
+     */
     private Period postBuffer;
-    /** The time to buffer before an appointment for this service can start. */
+    /**
+     * The time to buffer before an appointment for this service can start.
+     */
     private Period preBuffer;
-    /** The set of policies that determine how appointments for this type of service should be created and managed. */
+    /**
+     * The set of policies that determine how appointments for this type of service should be created and managed.
+     */
     private BookingSchedulingPolicy schedulingPolicy;
-    /** True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false. */
+    /**
+     * True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false.
+     */
     private Boolean smsNotificationsEnabled;
-    /** Represents those staff members who provide this service. */
+    /**
+     * Represents those staff members who provide this service.
+     */
     private java.util.List<String> staffMemberIds;
-    /** The URL a customer uses to access the service. */
+    /**
+     * The URL a customer uses to access the service.
+     */
     private String webUrl;
     /**
      * Instantiates a new bookingService and sets the default values.

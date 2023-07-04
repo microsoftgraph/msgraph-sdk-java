@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Edge extends Entity implements Parsable {
-    /** A container for Internet Explorer mode resources. */
+    /**
+     * A container for Internet Explorer mode resources.
+     */
     private InternetExplorerMode internetExplorerMode;
     /**
      * Instantiates a new Edge and sets the default values.

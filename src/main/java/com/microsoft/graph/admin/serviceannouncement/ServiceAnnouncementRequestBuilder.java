@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity.
  */
 public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity. */
+    /**
+     * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
+     */
     @javax.annotation.Nonnull
     public HealthOverviewsRequestBuilder healthOverviews() {
         return new HealthOverviewsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity. */
+    /**
+     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
+     */
     @javax.annotation.Nonnull
     public IssuesRequestBuilder issues() {
         return new IssuesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity. */
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
+     */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +275,15 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder {
      * A container for service communications resources. Read-only.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +292,9 @@ public class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

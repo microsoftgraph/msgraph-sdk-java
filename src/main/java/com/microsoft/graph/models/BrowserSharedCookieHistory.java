@@ -9,25 +9,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The comment for the shared cookie. */
+    /**
+     * The comment for the shared cookie.
+     */
     private String comment;
-    /** The name of the cookie. */
+    /**
+     * The name of the cookie.
+     */
     private String displayName;
-    /** Controls whether a cookie is a host-only or domain cookie. */
+    /**
+     * Controls whether a cookie is a host-only or domain cookie.
+     */
     private Boolean hostOnly;
-    /** The URL of the cookie. */
+    /**
+     * The URL of the cookie.
+     */
     private String hostOrDomain;
-    /** The lastModifiedBy property */
+    /**
+     * The lastModifiedBy property
+     */
     private IdentitySet lastModifiedBy;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The path of the cookie. */
+    /**
+     * The path of the cookie.
+     */
     private String path;
-    /** The date and time when the cookie was last published. */
+    /**
+     * The date and time when the cookie was last published.
+     */
     private OffsetDateTime publishedDateTime;
-    /** Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue. */
+    /**
+     * Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
+     */
     private BrowserSharedCookieSourceEnvironment sourceEnvironment;
     /**
      * Instantiates a new BrowserSharedCookieHistory and sets the default values.

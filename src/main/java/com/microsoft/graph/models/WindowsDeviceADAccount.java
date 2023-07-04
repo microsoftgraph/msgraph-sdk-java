@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable {
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String domainName;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String userName;
     /**
      * Instantiates a new WindowsDeviceADAccount and sets the default values.

@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Optional. Whether to hide the participant from the roster. */
+    /**
+     * Optional. Whether to hide the participant from the roster.
+     */
     private Boolean hidden;
-    /** The identity property */
+    /**
+     * The identity property
+     */
     private IdentitySet identity;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Optional. The ID of the target participant. */
+    /**
+     * Optional. The ID of the target participant.
+     */
     private String participantId;
-    /** Optional. Whether to remove them from the main mixer. */
+    /**
+     * Optional. Whether to remove them from the main mixer.
+     */
     private Boolean removeFromDefaultAudioRoutingGroup;
-    /** Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully. */
+    /**
+     * Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
+     */
     private String replacesCallId;
     /**
      * Instantiates a new InvitationParticipantInfo and sets the default values.

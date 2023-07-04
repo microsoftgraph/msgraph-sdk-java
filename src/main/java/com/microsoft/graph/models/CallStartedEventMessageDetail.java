@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallStartedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue. */
+    /**
+     * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     */
     private TeamworkCallEventType callEventType;
-    /** Unique identifier of the call. */
+    /**
+     * Unique identifier of the call.
+     */
     private String callId;
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
     /**
      * Instantiates a new CallStartedEventMessageDetail and sets the default values.

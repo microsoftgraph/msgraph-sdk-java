@@ -8,53 +8,101 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessage extends Entity implements Parsable {
-    /** References to attached objects like files, tabs, meetings etc. */
+    /**
+     * References to attached objects like files, tabs, meetings etc.
+     */
     private java.util.List<ChatMessageAttachment> attachments;
-    /** The body property */
+    /**
+     * The body property
+     */
     private ItemBody body;
-    /** If the message was sent in a channel, represents identity of the channel. */
+    /**
+     * If the message was sent in a channel, represents identity of the channel.
+     */
     private ChannelIdentity channelIdentity;
-    /** If the message was sent in a chat, represents the identity of the chat. */
+    /**
+     * If the message was sent in a chat, represents the identity of the chat.
+     */
     private String chatId;
-    /** Timestamp of when the chat message was created. */
+    /**
+     * Timestamp of when the chat message was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Read only. Timestamp at which the chat message was deleted, or null if not deleted. */
+    /**
+     * Read only. Timestamp at which the chat message was deleted, or null if not deleted.
+     */
     private OffsetDateTime deletedDateTime;
-    /** Read-only. Version number of the chat message. */
+    /**
+     * Read-only. Version number of the chat message.
+     */
     private String etag;
-    /** Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage. */
+    /**
+     * Read-only. If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
+     */
     private EventMessageDetail eventDetail;
-    /** Details of the sender of the chat message. Can only be set during migration. */
+    /**
+     * Details of the sender of the chat message. Can only be set during migration.
+     */
     private ChatMessageFromIdentitySet from;
-    /** Content in a message hosted by Microsoft Teams - for example, images or code snippets. */
+    /**
+     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     */
     private java.util.List<ChatMessageHostedContent> hostedContents;
-    /** The importance property */
+    /**
+     * The importance property
+     */
     private ChatMessageImportance importance;
-    /** Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null. */
+    /**
+     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+     */
     private OffsetDateTime lastEditedDateTime;
-    /** Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed. */
+    /**
+     * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Locale of the chat message set by the client. Always set to en-us. */
+    /**
+     * Locale of the chat message set by the client. Always set to en-us.
+     */
     private String locale;
-    /** List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel. */
+    /**
+     * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     */
     private java.util.List<ChatMessageMention> mentions;
-    /** List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message. */
+    /**
+     * List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
+     */
     private java.util.List<ChatMessageHistoryItem> messageHistory;
-    /** The messageType property */
+    /**
+     * The messageType property
+     */
     private ChatMessageType messageType;
-    /** Defines the properties of a policy violation set by a data loss prevention (DLP) application. */
+    /**
+     * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
+     */
     private ChatMessagePolicyViolation policyViolation;
-    /** Reactions for this chat message (for example, Like). */
+    /**
+     * Reactions for this chat message (for example, Like).
+     */
     private java.util.List<ChatMessageReaction> reactions;
-    /** Replies for a specified message. Supports $expand for channel messages. */
+    /**
+     * Replies for a specified message. Supports $expand for channel messages.
+     */
     private java.util.List<ChatMessage> replies;
-    /** Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.) */
+    /**
+     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+     */
     private String replyToId;
-    /** The subject of the chat message, in plaintext. */
+    /**
+     * The subject of the chat message, in plaintext.
+     */
     private String subject;
-    /** Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat. */
+    /**
+     * Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
+     */
     private String summary;
-    /** Read-only. Link to the message in Microsoft Teams. */
+    /**
+     * Read-only. Link to the message in Microsoft Teams.
+     */
     private String webUrl;
     /**
      * Instantiates a new chatMessage and sets the default values.

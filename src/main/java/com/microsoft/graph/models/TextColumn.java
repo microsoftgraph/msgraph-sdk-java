@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TextColumn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Whether to allow multiple lines of text. */
+    /**
+     * Whether to allow multiple lines of text.
+     */
     private Boolean allowMultipleLines;
-    /** Whether updates to this column should replace existing text, or append to it. */
+    /**
+     * Whether updates to this column should replace existing text, or append to it.
+     */
     private Boolean appendChangesToExistingText;
-    /** The size of the text box. */
+    /**
+     * The size of the text box.
+     */
     private Integer linesForEditing;
-    /** The maximum number of characters for the value. */
+    /**
+     * The maximum number of characters for the value.
+     */
     private Integer maxLength;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The type of text being stored. Must be one of plain or richText */
+    /**
+     * The type of text being stored. Must be one of plain or richText
+     */
     private String textType;
     /**
      * Instantiates a new textColumn and sets the default values.

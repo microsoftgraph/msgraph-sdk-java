@@ -8,19 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ReportRoot implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The dailyPrintUsageByPrinter property */
+    /**
+     * The authenticationMethods property
+     */
+    private AuthenticationMethodsRoot authenticationMethods;
+    /**
+     * The dailyPrintUsageByPrinter property
+     */
     private java.util.List<PrintUsageByPrinter> dailyPrintUsageByPrinter;
-    /** The dailyPrintUsageByUser property */
+    /**
+     * The dailyPrintUsageByUser property
+     */
     private java.util.List<PrintUsageByUser> dailyPrintUsageByUser;
-    /** The monthlyPrintUsageByPrinter property */
+    /**
+     * The monthlyPrintUsageByPrinter property
+     */
     private java.util.List<PrintUsageByPrinter> monthlyPrintUsageByPrinter;
-    /** The monthlyPrintUsageByUser property */
+    /**
+     * The monthlyPrintUsageByUser property
+     */
     private java.util.List<PrintUsageByUser> monthlyPrintUsageByUser;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The security property */
+    /**
+     * The security property
+     */
     private SecurityReportsRoot security;
     /**
      * Instantiates a new ReportRoot and sets the default values.
@@ -49,6 +67,14 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
+     * Gets the authenticationMethods property value. The authenticationMethods property
+     * @return a authenticationMethodsRoot
+     */
+    @javax.annotation.Nullable
+    public AuthenticationMethodsRoot getAuthenticationMethods() {
+        return this.authenticationMethods;
+    }
+    /**
      * Gets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
      * @return a printUsageByPrinter
      */
@@ -70,7 +96,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("authenticationMethods", (n) -> { this.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByPrinter", (n) -> { this.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByUser", (n) -> { this.setDailyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByPrinter", (n) -> { this.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
@@ -119,6 +146,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("authenticationMethods", this.getAuthenticationMethods());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByPrinter", this.getDailyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByUser", this.getDailyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByPrinter", this.getMonthlyPrintUsageByPrinter());
@@ -135,6 +163,15 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
+    }
+    /**
+     * Sets the authenticationMethods property value. The authenticationMethods property
+     * @param value Value to set for the authenticationMethods property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationMethods(@javax.annotation.Nullable final AuthenticationMethodsRoot value) {
+        this.authenticationMethods = value;
     }
     /**
      * Sets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property

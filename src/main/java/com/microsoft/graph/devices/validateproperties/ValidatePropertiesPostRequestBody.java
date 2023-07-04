@@ -9,15 +9,25 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The entityType property */
+    /**
+     * The entityType property
+     */
     private String entityType;
-    /** The mailNickname property */
+    /**
+     * The mailNickname property
+     */
     private String mailNickname;
-    /** The onBehalfOfUserId property */
+    /**
+     * The onBehalfOfUserId property
+     */
     private UUID onBehalfOfUserId;
     /**
      * Instantiates a new validatePropertiesPostRequestBody and sets the default values.

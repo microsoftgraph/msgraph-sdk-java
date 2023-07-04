@@ -9,29 +9,53 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId. */
+    /**
+     * A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+     */
     private UUID callChainId;
-    /** A geo-region where the service is deployed, such as ProdNoam. */
+    /**
+     * A geo-region where the service is deployed, such as ProdNoam.
+     */
     private String cloudServiceDeploymentEnvironment;
-    /** A unique deployment identifier assigned by Azure. */
+    /**
+     * A unique deployment identifier assigned by Azure.
+     */
     private String cloudServiceDeploymentId;
-    /** The Azure deployed cloud service instance name, such as FrontEnd_IN_3. */
+    /**
+     * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     */
     private String cloudServiceInstanceName;
-    /** The Azure deployed cloud service name, such as contoso.cloudapp.net. */
+    /**
+     * The Azure deployed cloud service name, such as contoso.cloudapp.net.
+     */
     private String cloudServiceName;
-    /** Any additional description, such as VTC Bldg 30/21. */
+    /**
+     * Any additional description, such as VTC Bldg 30/21.
+     */
     private String deviceDescription;
-    /** The user media agent name, such as Cisco SX80. */
+    /**
+     * The user media agent name, such as Cisco SX80.
+     */
     private String deviceName;
-    /** A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value. */
+    /**
+     * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
+     */
     private UUID mediaLegId;
-    /** The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality. */
+    /**
+     * The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
+     */
     private java.util.List<TeleconferenceDeviceMediaQuality> mediaQualityList;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property. */
+    /**
+     * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+     */
     private UUID participantId;
     /**
      * Instantiates a new TeleconferenceDeviceQuality and sets the default values.

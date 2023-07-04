@@ -11,27 +11,49 @@ import java.util.Objects;
  * Device compliance setting State for a given device.
  */
 public class DeviceComplianceSettingState extends Entity implements Parsable {
-    /** The DateTime when device compliance grace period expires */
+    /**
+     * The DateTime when device compliance grace period expires
+     */
     private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /** The Device Id that is being reported */
+    /**
+     * The Device Id that is being reported
+     */
     private String deviceId;
-    /** The device model that is being reported */
+    /**
+     * The device model that is being reported
+     */
     private String deviceModel;
-    /** The Device Name that is being reported */
+    /**
+     * The Device Name that is being reported
+     */
     private String deviceName;
-    /** The setting class name and property name. */
+    /**
+     * The setting class name and property name.
+     */
     private String setting;
-    /** The Setting Name that is being reported */
+    /**
+     * The Setting Name that is being reported
+     */
     private String settingName;
-    /** The state property */
+    /**
+     * The state property
+     */
     private ComplianceStatus state;
-    /** The User email address that is being reported */
+    /**
+     * The User email address that is being reported
+     */
     private String userEmail;
-    /** The user Id that is being reported */
+    /**
+     * The user Id that is being reported
+     */
     private String userId;
-    /** The User Name that is being reported */
+    /**
+     * The User Name that is being reported
+     */
     private String userName;
-    /** The User PrincipalName that is being reported */
+    /**
+     * The User PrincipalName that is being reported
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new deviceComplianceSettingState and sets the default values.

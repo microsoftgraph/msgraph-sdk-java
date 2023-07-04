@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implements Parsable {
-    /** OMA settings. This collection can contain a maximum of 500 elements. */
+    /**
+     * OMA settings. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<OmaSetting> omaSettings;
     /**
      * Instantiates a new AndroidWorkProfileCustomConfiguration and sets the default values.

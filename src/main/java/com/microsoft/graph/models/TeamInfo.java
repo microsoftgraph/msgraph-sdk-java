@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamInfo extends Entity implements Parsable {
-    /** The name of the team. */
+    /**
+     * The name of the team.
+     */
     private String displayName;
-    /** The team property */
+    /**
+     * The team property
+     */
     private Team team;
-    /** The ID of the Azure Active Directory tenant. */
+    /**
+     * The ID of the Azure Active Directory tenant.
+     */
     private String tenantId;
     /**
      * Instantiates a new teamInfo and sets the default values.

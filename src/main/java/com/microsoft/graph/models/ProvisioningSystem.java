@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisioningSystem extends Identity implements Parsable {
-    /** Details of the system. */
+    /**
+     * Details of the system.
+     */
     private DetailsInfo details;
     /**
      * Instantiates a new ProvisioningSystem and sets the default values.

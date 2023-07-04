@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
-    /** The group Id that is the target of the assignment. */
+    /**
+     * The group Id that is the target of the assignment.
+     */
     private String groupId;
     /**
      * Instantiates a new GroupAssignmentTarget and sets the default values.

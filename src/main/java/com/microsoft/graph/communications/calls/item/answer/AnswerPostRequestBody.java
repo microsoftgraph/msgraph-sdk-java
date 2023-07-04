@@ -11,17 +11,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The acceptedModalities property */
+    /**
+     * The acceptedModalities property
+     */
     private java.util.List<Modality> acceptedModalities;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The callbackUri property */
+    /**
+     * The callbackUri property
+     */
     private String callbackUri;
-    /** The callOptions property */
+    /**
+     * The callOptions property
+     */
     private IncomingCallOptions callOptions;
-    /** The mediaConfig property */
+    /**
+     * The mediaConfig property
+     */
     private MediaConfig mediaConfig;
-    /** The participantCapacity property */
+    /**
+     * The participantCapacity property
+     */
     private Integer participantCapacity;
     /**
      * Instantiates a new answerPostRequestBody and sets the default values.

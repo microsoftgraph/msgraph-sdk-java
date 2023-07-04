@@ -11,13 +11,21 @@ import java.util.Objects;
  * Contains properties for iOS Volume-Purchased Program (Vpp) Licensing Type.
  */
 public class VppLicensingType implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Whether the program supports the device licensing type. */
+    /**
+     * Whether the program supports the device licensing type.
+     */
     private Boolean supportsDeviceLicensing;
-    /** Whether the program supports the user licensing type. */
+    /**
+     * Whether the program supports the user licensing type.
+     */
     private Boolean supportsUserLicensing;
     /**
      * Instantiates a new vppLicensingType and sets the default values.

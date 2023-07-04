@@ -8,51 +8,97 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignIn extends Entity implements Parsable {
-    /** App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
+    /**
+     * App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
+     */
     private String appDisplayName;
-    /** Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only). */
+    /**
+     * Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).
+     */
     private String appId;
-    /** Provides a list of conditional access policies that are triggered by the corresponding sign-in activity. */
+    /**
+     * Provides a list of conditional access policies that are triggered by the corresponding sign-in activity.
+     */
     private java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
-    /** Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only). */
+    /**
+     * Identifies the client used for the sign-in activity. Modern authentication clients include Browser and modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients. Supports $filter (eq operator only).
+     */
     private String clientAppUsed;
-    /** Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only). */
+    /**
+     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).
+     */
     private ConditionalAccessStatus conditionalAccessStatus;
-    /** The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only). */
+    /**
+     * The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).
+     */
     private String correlationId;
-    /** Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only). */
+    /**
+     * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).
+     */
     private OffsetDateTime createdDateTime;
-    /** Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties. */
+    /**
+     * Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.
+     */
     private DeviceDetail deviceDetail;
-    /** IP address of the client used to sign in. Supports $filter (eq and startsWith operators only). */
+    /**
+     * IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).
+     */
     private String ipAddress;
-    /** Indicates if a sign-in is interactive or not. */
+    /**
+     * Indicates if a sign-in is interactive or not.
+     */
     private Boolean isInteractive;
-    /** Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties. */
+    /**
+     * Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
+     */
     private SignInLocation location;
-    /** Name of the resource the user signed into. Supports $filter (eq operator only). */
+    /**
+     * Name of the resource the user signed into. Supports $filter (eq operator only).
+     */
     private String resourceDisplayName;
-    /** ID of the resource that the user signed into. Supports $filter (eq operator only). */
+    /**
+     * ID of the resource that the user signed into. Supports $filter (eq operator only).
+     */
     private String resourceId;
-    /** Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden. */
+    /**
+     * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
+     */
     private RiskDetail riskDetail;
-    /** Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only). */
+    /**
+     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
+     */
     private java.util.List<RiskEventType> riskEventTypes;
-    /** The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only). */
+    /**
+     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
+     */
     private java.util.List<String> riskEventTypesV2;
-    /** Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden. */
+    /**
+     * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+     */
     private RiskLevel riskLevelAggregated;
-    /** Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden. */
+    /**
+     * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+     */
     private RiskLevel riskLevelDuringSignIn;
-    /** Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only). */
+    /**
+     * Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).
+     */
     private RiskState riskState;
-    /** Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property. */
+    /**
+     * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.
+     */
     private SignInStatus status;
-    /** Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only). */
+    /**
+     * Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
+     */
     private String userDisplayName;
-    /** ID of the user that initiated the sign-in. Supports $filter (eq operator only). */
+    /**
+     * ID of the user that initiated the sign-in. Supports $filter (eq operator only).
+     */
     private String userId;
-    /** User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only). */
+    /**
+     * User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new signIn and sets the default values.

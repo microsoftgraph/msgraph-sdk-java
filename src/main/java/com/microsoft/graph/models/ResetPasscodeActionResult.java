@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResetPasscodeActionResult extends DeviceActionResult implements Parsable {
-    /** Newly generated passcode for the device */
+    /**
+     * Newly generated passcode for the device
+     */
     private String passcode;
     /**
      * Instantiates a new ResetPasscodeActionResult and sets the default values.

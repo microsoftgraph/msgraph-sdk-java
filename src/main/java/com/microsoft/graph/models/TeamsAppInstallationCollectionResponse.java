@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppInstallationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TeamsAppInstallation> value;
     /**
      * Instantiates a new TeamsAppInstallationCollectionResponse and sets the default values.

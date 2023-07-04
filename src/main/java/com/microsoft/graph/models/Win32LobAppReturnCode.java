@@ -11,13 +11,21 @@ import java.util.Objects;
  * Contains return code properties for a Win32 App
  */
 public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Return code. */
+    /**
+     * Return code.
+     */
     private Integer returnCode;
-    /** Indicates the type of return code. */
+    /**
+     * Indicates the type of return code.
+     */
     private Win32LobAppReturnCodeType type;
     /**
      * Instantiates a new win32LobAppReturnCode and sets the default values.

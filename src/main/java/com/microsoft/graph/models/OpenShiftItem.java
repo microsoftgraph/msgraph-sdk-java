@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OpenShiftItem extends ShiftItem implements Parsable {
-    /** Count of the number of slots for the given open shift. */
+    /**
+     * Count of the number of slots for the given open shift.
+     */
     private Integer openSlotCount;
     /**
      * Instantiates a new OpenShiftItem and sets the default values.

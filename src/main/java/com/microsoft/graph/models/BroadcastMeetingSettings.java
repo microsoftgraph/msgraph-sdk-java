@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Defines who can join the Teams live event. Possible values are listed in the following table. */
+    /**
+     * Defines who can join the Teams live event. Possible values are listed in the following table.
+     */
     private BroadcastMeetingAudience allowedAudience;
-    /** Caption settings of a Teams live event. */
+    /**
+     * Caption settings of a Teams live event.
+     */
     private BroadcastMeetingCaptionSettings captions;
-    /** Indicates whether attendee report is enabled for this Teams live event. Default value is false. */
+    /**
+     * Indicates whether attendee report is enabled for this Teams live event. Default value is false.
+     */
     private Boolean isAttendeeReportEnabled;
-    /** Indicates whether Q&A is enabled for this Teams live event. Default value is false. */
+    /**
+     * Indicates whether Q&A is enabled for this Teams live event. Default value is false.
+     */
     private Boolean isQuestionAndAnswerEnabled;
-    /** Indicates whether recording is enabled for this Teams live event. Default value is false. */
+    /**
+     * Indicates whether recording is enabled for this Teams live event. Default value is false.
+     */
     private Boolean isRecordingEnabled;
-    /** Indicates whether video on demand is enabled for this Teams live event. Default value is false. */
+    /**
+     * Indicates whether video on demand is enabled for this Teams live event. Default value is false.
+     */
     private Boolean isVideoOnDemandEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new broadcastMeetingSettings and sets the default values.

@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuditLogRoot extends Entity implements Parsable {
-    /** The directoryAudits property */
+    /**
+     * The directoryAudits property
+     */
     private java.util.List<DirectoryAudit> directoryAudits;
-    /** The provisioning property */
+    /**
+     * The provisioning property
+     */
     private java.util.List<ProvisioningObjectSummary> provisioning;
-    /** The signIns property */
+    /**
+     * The signIns property
+     */
     private java.util.List<SignIn> signIns;
     /**
      * Instantiates a new AuditLogRoot and sets the default values.

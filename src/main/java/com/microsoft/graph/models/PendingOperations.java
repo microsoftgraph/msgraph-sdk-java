@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PendingOperations implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A property that indicates that an operation that might update the binary content of a file is pending completion. */
+    /**
+     * A property that indicates that an operation that might update the binary content of a file is pending completion.
+     */
     private PendingContentUpdate pendingContentUpdate;
     /**
      * Instantiates a new pendingOperations and sets the default values.

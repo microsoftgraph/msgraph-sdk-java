@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Quota implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Total space consumed by files in the recycle bin, in bytes. Read-only. */
+    /**
+     * Total space consumed by files in the recycle bin, in bytes. Read-only.
+     */
     private Long deleted;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Total space remaining before reaching the quota limit, in bytes. Read-only. */
+    /**
+     * Total space remaining before reaching the quota limit, in bytes. Read-only.
+     */
     private Long remaining;
-    /** Enumeration value that indicates the state of the storage space. Read-only. */
+    /**
+     * Enumeration value that indicates the state of the storage space. Read-only.
+     */
     private String state;
-    /** Information about the drive's storage quota plans. Only in Personal OneDrive. */
+    /**
+     * Information about the drive's storage quota plans. Only in Personal OneDrive.
+     */
     private StoragePlanInformation storagePlanInformation;
-    /** Total allowed storage space, in bytes. Read-only. */
+    /**
+     * Total allowed storage space, in bytes. Read-only.
+     */
     private Long total;
-    /** Total space used, in bytes. Read-only. */
+    /**
+     * Total space used, in bytes. Read-only.
+     */
     private Long used;
     /**
      * Instantiates a new quota and sets the default values.

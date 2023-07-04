@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttackSimulationRoot extends Entity implements Parsable {
-    /** Represents simulation automation created to run on a tenant. */
+    /**
+     * Represents simulation automation created to run on a tenant.
+     */
     private java.util.List<SimulationAutomation> simulationAutomations;
-    /** Represents an attack simulation training campaign in a tenant. */
+    /**
+     * Represents an attack simulation training campaign in a tenant.
+     */
     private java.util.List<Simulation> simulations;
     /**
      * Instantiates a new attackSimulationRoot and sets the default values.

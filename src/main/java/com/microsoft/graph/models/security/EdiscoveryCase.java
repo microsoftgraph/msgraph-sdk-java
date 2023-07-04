@@ -9,25 +9,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryCase extends CaseEscaped implements Parsable {
-    /** The user who closed the case. */
+    /**
+     * The user who closed the case.
+     */
     private IdentitySet closedBy;
-    /** The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime closedDateTime;
-    /** Returns a list of case ediscoveryCustodian objects for this case. */
+    /**
+     * Returns a list of case ediscoveryCustodian objects for this case.
+     */
     private java.util.List<EdiscoveryCustodian> custodians;
-    /** The external case number for customer reference. */
+    /**
+     * The external case number for customer reference.
+     */
     private String externalId;
-    /** Returns a list of case ediscoveryNoncustodialDataSource objects for this case. */
+    /**
+     * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
+     */
     private java.util.List<EdiscoveryNoncustodialDataSource> noncustodialDataSources;
-    /** Returns a list of case caseOperation objects for this case. */
+    /**
+     * Returns a list of case caseOperation objects for this case.
+     */
     private java.util.List<CaseOperation> operations;
-    /** Returns a list of eDiscoveryReviewSet objects in the case. */
+    /**
+     * Returns a list of eDiscoveryReviewSet objects in the case.
+     */
     private java.util.List<EdiscoveryReviewSet> reviewSets;
-    /** Returns a list of eDiscoverySearch objects associated with this case. */
+    /**
+     * Returns a list of eDiscoverySearch objects associated with this case.
+     */
     private java.util.List<EdiscoverySearch> searches;
-    /** Returns a list of eDIscoverySettings objects in the case. */
+    /**
+     * Returns a list of eDIscoverySettings objects in the case.
+     */
     private EdiscoveryCaseSettings settings;
-    /** Returns a list of ediscoveryReviewTag objects associated to this case. */
+    /**
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
+     */
     private java.util.List<EdiscoveryReviewTag> tags;
     /**
      * Instantiates a new EdiscoveryCase and sets the default values.

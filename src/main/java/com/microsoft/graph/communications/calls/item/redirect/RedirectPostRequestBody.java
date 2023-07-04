@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The callbackUri property */
+    /**
+     * The callbackUri property
+     */
     private String callbackUri;
-    /** The targets property */
+    /**
+     * The targets property
+     */
     private java.util.List<InvitationParticipantInfo> targets;
-    /** The timeout property */
+    /**
+     * The timeout property
+     */
     private Integer timeout;
     /**
      * Instantiates a new redirectPostRequestBody and sets the default values.

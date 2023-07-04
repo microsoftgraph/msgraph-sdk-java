@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AadUserNotificationRecipient extends TeamworkNotificationRecipient implements Parsable {
-    /** Azure AD user identifier. Use the List users method to get this ID. */
+    /**
+     * Azure AD user identifier. Use the List users method to get this ID.
+     */
     private String userId;
     /**
      * Instantiates a new AadUserNotificationRecipient and sets the default values.

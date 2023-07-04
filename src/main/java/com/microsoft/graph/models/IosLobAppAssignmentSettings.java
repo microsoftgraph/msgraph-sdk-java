@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE. */
+    /**
+     * When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
+     */
     private Boolean isRemovable;
-    /** When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE. */
+    /**
+     * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
+     */
     private Boolean uninstallOnDeviceRemoval;
-    /** This is the unique identifier (Id) of the VPN Configuration to apply to the app. */
+    /**
+     * This is the unique identifier (Id) of the VPN Configuration to apply to the app.
+     */
     private String vpnConfigurationId;
     /**
      * Instantiates a new IosLobAppAssignmentSettings and sets the default values.

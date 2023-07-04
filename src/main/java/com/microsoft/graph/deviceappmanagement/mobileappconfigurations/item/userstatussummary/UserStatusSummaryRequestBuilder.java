@@ -78,8 +78,9 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * App configuration user status summary.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> get() {
@@ -96,9 +97,10 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * App configuration user status summary.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property userStatusSummary in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
      * @param body The request body
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserSummary body) {
@@ -134,10 +137,11 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property userStatusSummary in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * App configuration user status summary.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * App configuration user status summary.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property userStatusSummary in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property userStatusSummary in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,14 +252,18 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * App configuration user status summary.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -264,7 +272,9 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityApiConnectorCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<IdentityApiConnector> value;
     /**
      * Instantiates a new IdentityApiConnectorCollectionResponse and sets the default values.

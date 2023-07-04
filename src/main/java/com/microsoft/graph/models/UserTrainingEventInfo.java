@@ -8,22 +8,36 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Display name of the training. */
+    /**
+     * Display name of the training.
+     */
     private String displayName;
-    /** Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
+    /**
+     * Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     */
     private TrainingStatus latestTrainingStatus;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Event details of the training when it was assigned to the user. */
+    /**
+     * Event details of the training when it was assigned to the user.
+     */
     private UserTrainingContentEventInfo trainingAssignedProperties;
-    /** Event details of the training when it was completed by the user. */
+    /**
+     * Event details of the training when it was completed by the user.
+     */
     private UserTrainingContentEventInfo trainingCompletedProperties;
-    /** Event details of the training when it was updated/in-progress by the user. */
+    /**
+     * Event details of the training when it was updated/in-progress by the user.
+     */
     private UserTrainingContentEventInfo trainingUpdatedProperties;
     /**
-     * Instantiates a new UserTrainingEventInfo and sets the default values.
+     * Instantiates a new userTrainingEventInfo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -33,7 +47,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserTrainingEventInfo
+     * @return a userTrainingEventInfo
      */
     @javax.annotation.Nonnull
     public static UserTrainingEventInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

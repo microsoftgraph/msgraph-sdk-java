@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
-    /** Description for the policy. */
+    /**
+     * Description for the policy.
+     */
     private String description;
-    /** Display name for the policy. */
+    /**
+     * Display name for the policy.
+     */
     private String displayName;
-    /** The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand. */
+    /**
+     * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
+     */
     private java.util.List<UnifiedRoleManagementPolicyRule> effectiveRules;
-    /** This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne). */
+    /**
+     * This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
+     */
     private Boolean isOrganizationDefault;
-    /** The identity who last modified the role setting. */
+    /**
+     * The identity who last modified the role setting.
+     */
     private Identity lastModifiedBy;
-    /** The time when the role setting was last modified. */
+    /**
+     * The time when the role setting was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The collection of rules like approval rules and expiration rules. Supports $expand. */
+    /**
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
+     */
     private java.util.List<UnifiedRoleManagementPolicyRule> rules;
-    /** The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required. */
+    /**
+     * The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
+     */
     private String scopeId;
-    /** The type of the scope where the policy is created. One of Directory, DirectoryRole. Required. */
+    /**
+     * The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
+     */
     private String scopeType;
     /**
      * Instantiates a new unifiedRoleManagementPolicy and sets the default values.

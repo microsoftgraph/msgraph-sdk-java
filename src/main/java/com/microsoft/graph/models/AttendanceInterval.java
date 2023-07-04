@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttendanceInterval implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime. */
+    /**
+     * Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
+     */
     private Integer durationInSeconds;
-    /** The time the attendee joined in UTC. */
+    /**
+     * The time the attendee joined in UTC.
+     */
     private OffsetDateTime joinDateTime;
-    /** The time the attendee left in UTC. */
+    /**
+     * The time the attendee left in UTC.
+     */
     private OffsetDateTime leaveDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new attendanceInterval and sets the default values.

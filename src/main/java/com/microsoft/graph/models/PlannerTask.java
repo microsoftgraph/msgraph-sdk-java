@@ -8,55 +8,105 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerTask extends Entity implements Parsable {
-    /** Number of checklist items with value set to false, representing incomplete items. */
+    /**
+     * Number of checklist items with value set to false, representing incomplete items.
+     */
     private Integer activeChecklistItemCount;
-    /** The categories to which the task has been applied. See applied Categories for possible values. */
+    /**
+     * The categories to which the task has been applied. See applied Categories for possible values.
+     */
     private PlannerAppliedCategories appliedCategories;
-    /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo. */
+    /**
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+     */
     private PlannerAssignedToTaskBoardTaskFormat assignedToTaskBoardFormat;
-    /** Hint used to order items of this type in a list view. The format is defined as outlined here. */
+    /**
+     * Hint used to order items of this type in a list view. The format is defined as outlined here.
+     */
     private String assigneePriority;
-    /** The set of assignees the task is assigned to. */
+    /**
+     * The set of assignees the task is assigned to.
+     */
     private PlannerAssignments assignments;
-    /** Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service. */
+    /**
+     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+     */
     private String bucketId;
-    /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket. */
+    /**
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
+     */
     private PlannerBucketTaskBoardTaskFormat bucketTaskBoardFormat;
-    /** Number of checklist items that are present on the task. */
+    /**
+     * Number of checklist items that are present on the task.
+     */
     private Integer checklistItemCount;
-    /** Identity of the user that completed the task. */
+    /**
+     * Identity of the user that completed the task.
+     */
     private IdentitySet completedBy;
-    /** Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime completedDateTime;
-    /** Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group. */
+    /**
+     * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
+     */
     private String conversationThreadId;
-    /** Identity of the user that created the task. */
+    /**
+     * Identity of the user that created the task.
+     */
     private IdentitySet createdBy;
-    /** Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime createdDateTime;
-    /** Read-only. Nullable. Additional details about the task. */
+    /**
+     * Read-only. Nullable. Additional details about the task.
+     */
     private PlannerTaskDetails details;
-    /** Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime dueDateTime;
-    /** Read-only. Value is true if the details object of the task has a non-empty description and false otherwise. */
+    /**
+     * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+     */
     private Boolean hasDescription;
-    /** Hint used to order items of this type in a list view. The format is defined as outlined here. */
+    /**
+     * Hint used to order items of this type in a list view. The format is defined as outlined here.
+     */
     private String orderHint;
-    /** Percentage of task completion. When set to 100, the task is considered completed. */
+    /**
+     * Percentage of task completion. When set to 100, the task is considered completed.
+     */
     private Integer percentComplete;
-    /** Plan ID to which the task belongs. */
+    /**
+     * Plan ID to which the task belongs.
+     */
     private String planId;
-    /** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. */
+    /**
+     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+     */
     private PlannerPreviewType previewType;
-    /** Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'. */
+    /**
+     * Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     */
     private Integer priority;
-    /** Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress. */
+    /**
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     */
     private PlannerProgressTaskBoardTaskFormat progressTaskBoardFormat;
-    /** Number of external references that exist on the task. */
+    /**
+     * Number of external references that exist on the task.
+     */
     private Integer referenceCount;
-    /** Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime startDateTime;
-    /** Title of the task. */
+    /**
+     * Title of the task.
+     */
     private String title;
     /**
      * Instantiates a new plannerTask and sets the default values.

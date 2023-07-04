@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RbacApplication extends Entity implements Parsable {
-    /** The resourceNamespaces property */
+    /**
+     * The resourceNamespaces property
+     */
     private java.util.List<UnifiedRbacResourceNamespace> resourceNamespaces;
-    /** Resource to grant access to users or groups. */
+    /**
+     * Resource to grant access to users or groups.
+     */
     private java.util.List<UnifiedRoleAssignment> roleAssignments;
-    /** Instances for active role assignments. */
+    /**
+     * Instances for active role assignments.
+     */
     private java.util.List<UnifiedRoleAssignmentScheduleInstance> roleAssignmentScheduleInstances;
-    /** Requests for active role assignments to principals through PIM. */
+    /**
+     * Requests for active role assignments to principals through PIM.
+     */
     private java.util.List<UnifiedRoleAssignmentScheduleRequest> roleAssignmentScheduleRequests;
-    /** Schedules for active role assignment operations. */
+    /**
+     * Schedules for active role assignment operations.
+     */
     private java.util.List<UnifiedRoleAssignmentSchedule> roleAssignmentSchedules;
-    /** Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles. */
+    /**
+     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+     */
     private java.util.List<UnifiedRoleDefinition> roleDefinitions;
-    /** Instances for role eligibility requests. */
+    /**
+     * Instances for role eligibility requests.
+     */
     private java.util.List<UnifiedRoleEligibilityScheduleInstance> roleEligibilityScheduleInstances;
-    /** Requests for role eligibilities for principals through PIM. */
+    /**
+     * Requests for role eligibilities for principals through PIM.
+     */
     private java.util.List<UnifiedRoleEligibilityScheduleRequest> roleEligibilityScheduleRequests;
-    /** Schedules for role eligibility operations. */
+    /**
+     * Schedules for role eligibility operations.
+     */
     private java.util.List<UnifiedRoleEligibilitySchedule> roleEligibilitySchedules;
     /**
      * Instantiates a new RbacApplication and sets the default values.

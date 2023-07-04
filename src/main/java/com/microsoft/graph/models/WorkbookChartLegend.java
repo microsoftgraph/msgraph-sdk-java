@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartLegend extends Entity implements Parsable {
-    /** Represents the formatting of a chart legend, which includes fill and font formatting. Read-only. */
+    /**
+     * Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
+     */
     private WorkbookChartLegendFormat format;
-    /** Boolean value for whether the chart legend should overlap with the main body of the chart. */
+    /**
+     * Boolean value for whether the chart legend should overlap with the main body of the chart.
+     */
     private Boolean overlay;
-    /** Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom. */
+    /**
+     * Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
+     */
     private String position;
-    /** A boolean value the represents the visibility of a ChartLegend object. */
+    /**
+     * A boolean value the represents the visibility of a ChartLegend object.
+     */
     private Boolean visible;
     /**
      * Instantiates a new workbookChartLegend and sets the default values.

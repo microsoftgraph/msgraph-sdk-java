@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
-    /** Android restrictions based on platform, platform operating system version, and device ownership */
+    /**
+     * Android restrictions based on platform, platform operating system version, and device ownership
+     */
     private DeviceEnrollmentPlatformRestriction androidRestriction;
-    /** Ios restrictions based on platform, platform operating system version, and device ownership */
+    /**
+     * Ios restrictions based on platform, platform operating system version, and device ownership
+     */
     private DeviceEnrollmentPlatformRestriction iosRestriction;
-    /** Mac restrictions based on platform, platform operating system version, and device ownership */
+    /**
+     * Mac restrictions based on platform, platform operating system version, and device ownership
+     */
     private DeviceEnrollmentPlatformRestriction macOSRestriction;
-    /** Windows mobile restrictions based on platform, platform operating system version, and device ownership */
+    /**
+     * Windows mobile restrictions based on platform, platform operating system version, and device ownership
+     */
     private DeviceEnrollmentPlatformRestriction windowsMobileRestriction;
-    /** Windows restrictions based on platform, platform operating system version, and device ownership */
+    /**
+     * Windows restrictions based on platform, platform operating system version, and device ownership
+     */
     private DeviceEnrollmentPlatformRestriction windowsRestriction;
     /**
      * Instantiates a new DeviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.

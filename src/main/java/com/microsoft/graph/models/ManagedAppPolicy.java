@@ -11,15 +11,25 @@ import java.util.Objects;
  * The ManagedAppPolicy resource represents a base type for platform specific policies.
  */
 public class ManagedAppPolicy extends Entity implements Parsable {
-    /** The date and time the policy was created. */
+    /**
+     * The date and time the policy was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The policy's description. */
+    /**
+     * The policy's description.
+     */
     private String description;
-    /** Policy display name. */
+    /**
+     * Policy display name.
+     */
     private String displayName;
-    /** Last time the policy was modified. */
+    /**
+     * Last time the policy was modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Version of the entity. */
+    /**
+     * Version of the entity.
+     */
     private String version;
     /**
      * Instantiates a new managedAppPolicy and sets the default values.

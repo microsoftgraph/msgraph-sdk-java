@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VlookupPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The colIndexNum property */
+    /**
+     * The colIndexNum property
+     */
     private Json colIndexNum;
-    /** The lookupValue property */
+    /**
+     * The lookupValue property
+     */
     private Json lookupValue;
-    /** The rangeLookup property */
+    /**
+     * The rangeLookup property
+     */
     private Json rangeLookup;
-    /** The tableArray property */
+    /**
+     * The tableArray property
+     */
     private Json tableArray;
     /**
      * Instantiates a new vlookupPostRequestBody and sets the default values.

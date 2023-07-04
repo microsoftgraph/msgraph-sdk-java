@@ -9,23 +9,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccrIntPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The basis property */
+    /**
+     * The basis property
+     */
     private Json basis;
-    /** The calcMethod property */
+    /**
+     * The calcMethod property
+     */
     private Json calcMethod;
-    /** The firstInterest property */
+    /**
+     * The firstInterest property
+     */
     private Json firstInterest;
-    /** The frequency property */
+    /**
+     * The frequency property
+     */
     private Json frequency;
-    /** The issue property */
+    /**
+     * The issue property
+     */
     private Json issue;
-    /** The par property */
+    /**
+     * The par property
+     */
     private Json par;
-    /** The rate property */
+    /**
+     * The rate property
+     */
     private Json rate;
-    /** The settlement property */
+    /**
+     * The settlement property
+     */
     private Json settlement;
     /**
      * Instantiates a new accrIntPostRequestBody and sets the default values.

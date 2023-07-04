@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If set to true, members can add and remove apps. */
+    /**
+     * If set to true, members can add and remove apps.
+     */
     private Boolean allowAddRemoveApps;
-    /** If set to true, members can add and update private channels. */
+    /**
+     * If set to true, members can add and update private channels.
+     */
     private Boolean allowCreatePrivateChannels;
-    /** If set to true, members can add and update channels. */
+    /**
+     * If set to true, members can add and update channels.
+     */
     private Boolean allowCreateUpdateChannels;
-    /** If set to true, members can add, update, and remove connectors. */
+    /**
+     * If set to true, members can add, update, and remove connectors.
+     */
     private Boolean allowCreateUpdateRemoveConnectors;
-    /** If set to true, members can add, update, and remove tabs. */
+    /**
+     * If set to true, members can add, update, and remove tabs.
+     */
     private Boolean allowCreateUpdateRemoveTabs;
-    /** If set to true, members can delete channels. */
+    /**
+     * If set to true, members can delete channels.
+     */
     private Boolean allowDeleteChannels;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new teamMemberSettings and sets the default values.

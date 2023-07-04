@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains rule types for Win32 LOB apps. */
+/**
+ * Contains rule types for Win32 LOB apps.
+ */
 public enum Win32LobAppRuleType implements ValuedEnum {
     /** Detection rule. */
     Detection("detection"),

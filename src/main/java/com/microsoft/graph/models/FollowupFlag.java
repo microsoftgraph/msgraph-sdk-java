@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FollowupFlag implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The date and time that the follow-up was finished. */
+    /**
+     * The date and time that the follow-up was finished.
+     */
     private DateTimeTimeZone completedDateTime;
-    /** The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response. */
+    /**
+     * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     */
     private DateTimeTimeZone dueDateTime;
-    /** The status for follow-up for an item. Possible values are notFlagged, complete, and flagged. */
+    /**
+     * The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
+     */
     private FollowupFlagStatus flagStatus;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The date and time that the follow-up is to begin. */
+    /**
+     * The date and time that the follow-up is to begin.
+     */
     private DateTimeTimeZone startDateTime;
     /**
      * Instantiates a new followupFlag and sets the default values.

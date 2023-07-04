@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttachmentSession extends Entity implements Parsable {
-    /** The content streams that are uploaded. */
+    /**
+     * The content streams that are uploaded.
+     */
     private byte[] content;
-    /** The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached. */
+    /**
+     * The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+     */
     private OffsetDateTime expirationDateTime;
-    /** Indicates a single value {start} that represents the location in the file where the next upload should begin. */
+    /**
+     * Indicates a single value {start} that represents the location in the file where the next upload should begin.
+     */
     private java.util.List<String> nextExpectedRanges;
     /**
      * Instantiates a new attachmentSession and sets the default values.

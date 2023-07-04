@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PermissionGrantPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PermissionGrantPolicy> value;
     /**
      * Instantiates a new PermissionGrantPolicyCollectionResponse and sets the default values.

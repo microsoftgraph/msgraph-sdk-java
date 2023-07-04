@@ -7,69 +7,133 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ColumnDefinition extends Entity implements Parsable {
-    /** This column stores boolean values. */
+    /**
+     * This column stores boolean values.
+     */
     private BooleanColumn booleanEscaped;
-    /** This column's data is calculated based on other columns. */
+    /**
+     * This column's data is calculated based on other columns.
+     */
     private CalculatedColumn calculated;
-    /** This column stores data from a list of choices. */
+    /**
+     * This column stores data from a list of choices.
+     */
     private ChoiceColumn choice;
-    /** For site columns, the name of the group this column belongs to. Helps organize related columns. */
+    /**
+     * For site columns, the name of the group this column belongs to. Helps organize related columns.
+     */
     private String columnGroup;
-    /** This column stores content approval status. */
+    /**
+     * This column stores content approval status.
+     */
     private ContentApprovalStatusColumn contentApprovalStatus;
-    /** This column stores currency values. */
+    /**
+     * This column stores currency values.
+     */
     private CurrencyColumn currency;
-    /** This column stores DateTime values. */
+    /**
+     * This column stores DateTime values.
+     */
     private DateTimeColumn dateTime;
-    /** The default value for this column. */
+    /**
+     * The default value for this column.
+     */
     private DefaultColumnValue defaultValue;
-    /** The user-facing description of the column. */
+    /**
+     * The user-facing description of the column.
+     */
     private String description;
-    /** The user-facing name of the column. */
+    /**
+     * The user-facing name of the column.
+     */
     private String displayName;
-    /** If true, no two list items may have the same value for this column. */
+    /**
+     * If true, no two list items may have the same value for this column.
+     */
     private Boolean enforceUniqueValues;
-    /** This column stores a geolocation. */
+    /**
+     * This column stores a geolocation.
+     */
     private GeolocationColumn geolocation;
-    /** Specifies whether the column is displayed in the user interface. */
+    /**
+     * Specifies whether the column is displayed in the user interface.
+     */
     private Boolean hidden;
-    /** This column stores hyperlink or picture values. */
+    /**
+     * This column stores hyperlink or picture values.
+     */
     private HyperlinkOrPictureColumn hyperlinkOrPicture;
-    /** Specifies whether the column values can be used for sorting and searching. */
+    /**
+     * Specifies whether the column values can be used for sorting and searching.
+     */
     private Boolean indexed;
-    /** Indicates whether this column can be deleted. */
+    /**
+     * Indicates whether this column can be deleted.
+     */
     private Boolean isDeletable;
-    /** Indicates whether values in the column can be reordered. Read-only. */
+    /**
+     * Indicates whether values in the column can be reordered. Read-only.
+     */
     private Boolean isReorderable;
-    /** Specifies whether the column can be changed. */
+    /**
+     * Specifies whether the column can be changed.
+     */
     private Boolean isSealed;
-    /** This column's data is looked up from another source in the site. */
+    /**
+     * This column's data is looked up from another source in the site.
+     */
     private LookupColumn lookup;
-    /** The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName. */
+    /**
+     * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
+     */
     private String name;
-    /** This column stores number values. */
+    /**
+     * This column stores number values.
+     */
     private NumberColumn number;
-    /** This column stores Person or Group values. */
+    /**
+     * This column stores Person or Group values.
+     */
     private PersonOrGroupColumn personOrGroup;
-    /** If 'true', changes to this column will be propagated to lists that implement the column. */
+    /**
+     * If 'true', changes to this column will be propagated to lists that implement the column.
+     */
     private Boolean propagateChanges;
-    /** Specifies whether the column values can be modified. */
+    /**
+     * Specifies whether the column values can be modified.
+     */
     private Boolean readOnly;
-    /** Specifies whether the column value isn't optional. */
+    /**
+     * Specifies whether the column value isn't optional.
+     */
     private Boolean required;
-    /** The source column for the content type column. */
+    /**
+     * The source column for the content type column.
+     */
     private ColumnDefinition sourceColumn;
-    /** ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only. */
+    /**
+     * ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     */
     private ContentTypeInfo sourceContentType;
-    /** This column stores taxonomy terms. */
+    /**
+     * This column stores taxonomy terms.
+     */
     private TermColumn term;
-    /** This column stores text values. */
+    /**
+     * This column stores text values.
+     */
     private TextColumn text;
-    /** This column stores thumbnail values. */
+    /**
+     * This column stores thumbnail values.
+     */
     private ThumbnailColumn thumbnail;
-    /** For site columns, the type of column. Read-only. */
+    /**
+     * For site columns, the type of column. Read-only.
+     */
     private ColumnTypes type;
-    /** This column stores validation formula and message for the column. */
+    /**
+     * This column stores validation formula and message for the column.
+     */
     private ColumnValidation validation;
     /**
      * Instantiates a new columnDefinition and sets the default values.

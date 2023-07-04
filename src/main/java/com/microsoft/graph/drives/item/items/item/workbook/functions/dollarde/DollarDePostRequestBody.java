@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DollarDePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The fraction property */
+    /**
+     * The fraction property
+     */
     private Json fraction;
-    /** The fractionalDollar property */
+    /**
+     * The fractionalDollar property
+     */
     private Json fractionalDollar;
     /**
      * Instantiates a new dollarDePostRequestBody and sets the default values.

@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RegistryValueEvidence extends AlertEvidence implements Parsable {
-    /** The mdeDeviceId property */
+    /**
+     * The mdeDeviceId property
+     */
     private String mdeDeviceId;
-    /** Registry hive of the key that the recorded action was applied to. */
+    /**
+     * Registry hive of the key that the recorded action was applied to.
+     */
     private String registryHive;
-    /** Registry key that the recorded action was applied to. */
+    /**
+     * Registry key that the recorded action was applied to.
+     */
     private String registryKey;
-    /** Data of the registry value that the recorded action was applied to. */
+    /**
+     * Data of the registry value that the recorded action was applied to.
+     */
     private String registryValue;
-    /** Name of the registry value that the recorded action was applied to. */
+    /**
+     * Name of the registry value that the recorded action was applied to.
+     */
     private String registryValueName;
-    /** Data type, such as binary or string, of the registry value that the recorded action was applied to. */
+    /**
+     * Data type, such as binary or string, of the registry value that the recorded action was applied to.
+     */
     private String registryValueType;
     /**
      * Instantiates a new RegistryValueEvidence and sets the default values.

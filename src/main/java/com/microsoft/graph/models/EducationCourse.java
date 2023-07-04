@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationCourse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Unique identifier for the course. */
+    /**
+     * Unique identifier for the course.
+     */
     private String courseNumber;
-    /** Description of the course. */
+    /**
+     * Description of the course.
+     */
     private String description;
-    /** Name of the course. */
+    /**
+     * Name of the course.
+     */
     private String displayName;
-    /** ID of the course from the syncing system. */
+    /**
+     * ID of the course from the syncing system.
+     */
     private String externalId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Subject of the course. */
+    /**
+     * Subject of the course.
+     */
     private String subject;
     /**
      * Instantiates a new educationCourse and sets the default values.

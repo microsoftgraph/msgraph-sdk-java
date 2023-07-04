@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable {
-    /** The action property */
+    /**
+     * The action property
+     */
     private OnenotePatchActionType action;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part. */
+    /**
+     * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
+     */
     private String content;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The location to add the supplied content, relative to the target element. The possible values are: after (default) or before. */
+    /**
+     * The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
+     */
     private OnenotePatchInsertPosition position;
-    /** The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword. */
+    /**
+     * The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
+     */
     private String target;
     /**
      * Instantiates a new onenotePatchContentCommand and sets the default values.

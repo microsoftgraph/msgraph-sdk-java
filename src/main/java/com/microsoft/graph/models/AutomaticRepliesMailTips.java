@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The automatic reply message. */
+    /**
+     * The automatic reply message.
+     */
     private String message;
-    /** The language that the automatic reply message is in. */
+    /**
+     * The language that the automatic reply message is in.
+     */
     private LocaleInfo messageLanguage;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The date and time that automatic replies are set to end. */
+    /**
+     * The date and time that automatic replies are set to end.
+     */
     private DateTimeTimeZone scheduledEndTime;
-    /** The date and time that automatic replies are set to begin. */
+    /**
+     * The date and time that automatic replies are set to begin.
+     */
     private DateTimeTimeZone scheduledStartTime;
     /**
      * Instantiates a new automaticRepliesMailTips and sets the default values.

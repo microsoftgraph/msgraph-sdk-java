@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationOutcome extends Entity implements Parsable {
-    /** The individual who updated the resource. */
+    /**
+     * The individual who updated the resource.
+     */
     private IdentitySet lastModifiedBy;
-    /** The moment in time when the resource was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. */
+    /**
+     * The moment in time when the resource was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
+     */
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new educationOutcome and sets the default values.

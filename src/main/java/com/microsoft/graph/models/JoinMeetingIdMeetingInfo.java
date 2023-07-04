@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable {
-    /** The ID used to join the meeting. */
+    /**
+     * The ID used to join the meeting.
+     */
     private String joinMeetingId;
-    /** The passcode used to join the meeting. Optional. */
+    /**
+     * The passcode used to join the meeting. Optional.
+     */
     private String passcode;
     /**
      * Instantiates a new JoinMeetingIdMeetingInfo and sets the default values.

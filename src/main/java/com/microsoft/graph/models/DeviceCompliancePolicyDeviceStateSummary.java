@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements Parsable {
-    /** Number of compliant devices */
+    /**
+     * Number of compliant devices
+     */
     private Integer compliantDeviceCount;
-    /** Number of devices that have compliance managed by System Center Configuration Manager */
+    /**
+     * Number of devices that have compliance managed by System Center Configuration Manager
+     */
     private Integer configManagerCount;
-    /** Number of conflict devices */
+    /**
+     * Number of conflict devices
+     */
     private Integer conflictDeviceCount;
-    /** Number of error devices */
+    /**
+     * Number of error devices
+     */
     private Integer errorDeviceCount;
-    /** Number of devices that are in grace period */
+    /**
+     * Number of devices that are in grace period
+     */
     private Integer inGracePeriodCount;
-    /** Number of NonCompliant devices */
+    /**
+     * Number of NonCompliant devices
+     */
     private Integer nonCompliantDeviceCount;
-    /** Number of not applicable devices */
+    /**
+     * Number of not applicable devices
+     */
     private Integer notApplicableDeviceCount;
-    /** Number of remediated devices */
+    /**
+     * Number of remediated devices
+     */
     private Integer remediatedDeviceCount;
-    /** Number of unknown devices */
+    /**
+     * Number of unknown devices
+     */
     private Integer unknownDeviceCount;
     /**
      * Instantiates a new deviceCompliancePolicyDeviceStateSummary and sets the default values.

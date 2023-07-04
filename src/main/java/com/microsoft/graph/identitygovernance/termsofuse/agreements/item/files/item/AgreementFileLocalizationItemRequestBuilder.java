@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the files property of the microsoft.graph.agreement entity.
  */
 public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity. */
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
+     */
     @javax.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuil
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

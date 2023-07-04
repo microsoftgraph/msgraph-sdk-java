@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for applicationGuardBlockFileTransfer */
+/**
+ * Possible values for applicationGuardBlockFileTransfer
+ */
 public enum ApplicationGuardBlockFileTransferType implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),

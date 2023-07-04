@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecurityResource implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Name of the resource that is related to current alert. Required. */
+    /**
+     * Name of the resource that is related to current alert. Required.
+     */
     private String resource;
-    /** Represents type of security resources related to an alert. Possible values are: attacked, related. */
+    /**
+     * Represents type of security resources related to an alert. Possible values are: attacked, related.
+     */
     private SecurityResourceType resourceType;
     /**
      * Instantiates a new securityResource and sets the default values.

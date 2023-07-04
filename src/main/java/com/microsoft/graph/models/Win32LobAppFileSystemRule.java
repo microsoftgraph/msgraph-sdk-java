@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable {
-    /** A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems. */
+    /**
+     * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
+     */
     private Boolean check32BitOn64System;
-    /** The file or folder comparison value. */
+    /**
+     * The file or folder comparison value.
+     */
     private String comparisonValue;
-    /** The file or folder name to look up. */
+    /**
+     * The file or folder name to look up.
+     */
     private String fileOrFolderName;
-    /** Contains all supported file system detection type. */
+    /**
+     * Contains all supported file system detection type.
+     */
     private Win32LobAppFileSystemOperationType operationType;
-    /** Contains properties for detection operator. */
+    /**
+     * Contains properties for detection operator.
+     */
     private Win32LobAppRuleOperator operator;
-    /** The file or folder path to look up. */
+    /**
+     * The file or folder path to look up.
+     */
     private String path;
     /**
      * Instantiates a new Win32LobAppFileSystemRule and sets the default values.

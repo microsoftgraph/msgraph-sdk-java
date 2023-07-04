@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppCatalogs extends Entity implements Parsable {
-    /** The teamsApps property */
+    /**
+     * The teamsApps property
+     */
     private java.util.List<TeamsApp> teamsApps;
     /**
      * Instantiates a new AppCatalogs and sets the default values.

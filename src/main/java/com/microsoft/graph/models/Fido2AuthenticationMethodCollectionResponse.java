@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Fido2AuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<Fido2AuthenticationMethod> value;
     /**
      * Instantiates a new Fido2AuthenticationMethodCollectionResponse and sets the default values.

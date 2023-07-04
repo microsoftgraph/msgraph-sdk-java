@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
-    /** Asset tag information for the device, displayed on the login window and lock screen. */
+    /**
+     * Asset tag information for the device, displayed on the login window and lock screen.
+     */
     private String assetTagTemplate;
-    /** A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements. */
+    /**
+     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<IosHomeScreenItem> homeScreenDockIcons;
-    /** A list of pages on the Home Screen. This collection can contain a maximum of 500 elements. */
+    /**
+     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<IosHomeScreenPage> homeScreenPages;
-    /** A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later. */
+    /**
+     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
+     */
     private String lockScreenFootnote;
-    /** Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements. */
+    /**
+     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<IosNotificationSettings> notificationSettings;
     /**
      * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.

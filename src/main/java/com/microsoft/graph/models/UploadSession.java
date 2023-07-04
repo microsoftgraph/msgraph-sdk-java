@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UploadSession implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached. */
+    /**
+     * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+     */
     private OffsetDateTime expirationDateTime;
-    /** A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin. */
+    /**
+     * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
+     */
     private java.util.List<String> nextExpectedRanges;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The URL endpoint that accepts PUT requests for byte ranges of the file. */
+    /**
+     * The URL endpoint that accepts PUT requests for byte ranges of the file.
+     */
     private String uploadUrl;
     /**
      * Instantiates a new uploadSession and sets the default values.

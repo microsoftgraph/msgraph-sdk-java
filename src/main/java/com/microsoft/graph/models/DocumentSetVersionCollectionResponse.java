@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DocumentSetVersionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DocumentSetVersion> value;
     /**
      * Instantiates a new DocumentSetVersionCollectionResponse and sets the default values.

@@ -8,59 +8,113 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A list of supported bottom margins(in microns) for the printer. */
+    /**
+     * A list of supported bottom margins(in microns) for the printer.
+     */
     private java.util.List<Integer> bottomMargins;
-    /** True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise. */
+    /**
+     * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
+     */
     private Boolean collation;
-    /** The color modes supported by the printer. Valid values are described in the following table. */
+    /**
+     * The color modes supported by the printer. Valid values are described in the following table.
+     */
     private java.util.List<PrintColorMode> colorModes;
-    /** A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types. */
+    /**
+     * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
+     */
     private java.util.List<String> contentTypes;
-    /** The range of copies per job supported by the printer. */
+    /**
+     * The range of copies per job supported by the printer.
+     */
     private IntegerRange copiesPerJob;
-    /** The list of print resolutions in DPI that are supported by the printer. */
+    /**
+     * The list of print resolutions in DPI that are supported by the printer.
+     */
     private java.util.List<Integer> dpis;
-    /** The list of duplex modes that are supported by the printer. Valid values are described in the following table. */
+    /**
+     * The list of duplex modes that are supported by the printer. Valid values are described in the following table.
+     */
     private java.util.List<PrintDuplexMode> duplexModes;
-    /** The list of feed orientations that are supported by the printer. */
+    /**
+     * The list of feed orientations that are supported by the printer.
+     */
     private java.util.List<PrinterFeedOrientation> feedOrientations;
-    /** Finishing processes the printer supports for a printed document. */
+    /**
+     * Finishing processes the printer supports for a printed document.
+     */
     private java.util.List<PrintFinishing> finishings;
-    /** Supported input bins for the printer. */
+    /**
+     * Supported input bins for the printer.
+     */
     private java.util.List<String> inputBins;
-    /** True if color printing is supported by the printer; false otherwise. Read-only. */
+    /**
+     * True if color printing is supported by the printer; false otherwise. Read-only.
+     */
     private Boolean isColorPrintingSupported;
-    /** True if the printer supports printing by page ranges; false otherwise. */
+    /**
+     * True if the printer supports printing by page ranges; false otherwise.
+     */
     private Boolean isPageRangeSupported;
-    /** A list of supported left margins(in microns) for the printer. */
+    /**
+     * A list of supported left margins(in microns) for the printer.
+     */
     private java.util.List<Integer> leftMargins;
-    /** The media (i.e., paper) colors supported by the printer. */
+    /**
+     * The media (i.e., paper) colors supported by the printer.
+     */
     private java.util.List<String> mediaColors;
-    /** The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table. */
+    /**
+     * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
+     */
     private java.util.List<String> mediaSizes;
-    /** The media types supported by the printer. */
+    /**
+     * The media types supported by the printer.
+     */
     private java.util.List<String> mediaTypes;
-    /** The presentation directions supported by the printer. Supported values are described in the following table. */
+    /**
+     * The presentation directions supported by the printer. Supported values are described in the following table.
+     */
     private java.util.List<PrintMultipageLayout> multipageLayouts;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The print orientations supported by the printer. Valid values are described in the following table. */
+    /**
+     * The print orientations supported by the printer. Valid values are described in the following table.
+     */
     private java.util.List<PrintOrientation> orientations;
-    /** The printer's supported output bins (trays). */
+    /**
+     * The printer's supported output bins (trays).
+     */
     private java.util.List<String> outputBins;
-    /** Supported number of Input Pages to impose upon a single Impression. */
+    /**
+     * Supported number of Input Pages to impose upon a single Impression.
+     */
     private java.util.List<Integer> pagesPerSheet;
-    /** The print qualities supported by the printer. */
+    /**
+     * The print qualities supported by the printer.
+     */
     private java.util.List<PrintQuality> qualities;
-    /** A list of supported right margins(in microns) for the printer. */
+    /**
+     * A list of supported right margins(in microns) for the printer.
+     */
     private java.util.List<Integer> rightMargins;
-    /** Supported print scalings. */
+    /**
+     * Supported print scalings.
+     */
     private java.util.List<PrintScaling> scalings;
-    /** True if the printer supports scaling PDF pages to match the print media size; false otherwise. */
+    /**
+     * True if the printer supports scaling PDF pages to match the print media size; false otherwise.
+     */
     private Boolean supportsFitPdfToPage;
-    /** A list of supported top margins(in microns) for the printer. */
+    /**
+     * A list of supported top margins(in microns) for the printer.
+     */
     private java.util.List<Integer> topMargins;
     /**
      * Instantiates a new printerCapabilities and sets the default values.

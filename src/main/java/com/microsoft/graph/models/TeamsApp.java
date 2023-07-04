@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsApp extends Entity implements Parsable {
-    /** The details for each version of the app. */
+    /**
+     * The details for each version of the app.
+     */
     private java.util.List<TeamsAppDefinition> appDefinitions;
-    /** The name of the catalog app provided by the app developer in the Microsoft Teams zip app package. */
+    /**
+     * The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
+     */
     private String displayName;
-    /** The method of distribution for the app. Read-only. */
+    /**
+     * The method of distribution for the app. Read-only.
+     */
     private TeamsAppDistributionMethod distributionMethod;
-    /** The ID of the catalog provided by the app developer in the Microsoft Teams zip app package. */
+    /**
+     * The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
+     */
     private String externalId;
     /**
      * Instantiates a new teamsApp and sets the default values.

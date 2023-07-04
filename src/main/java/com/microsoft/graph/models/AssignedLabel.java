@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AssignedLabel implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The display name of the label. Read-only. */
+    /**
+     * The display name of the label. Read-only.
+     */
     private String displayName;
-    /** The unique identifier of the label. */
+    /**
+     * The unique identifier of the label.
+     */
     private String labelId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new assignedLabel and sets the default values.

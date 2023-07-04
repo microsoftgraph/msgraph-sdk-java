@@ -9,19 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharingDetail implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The user who shared the document. */
+    /**
+     * The user who shared the document.
+     */
     private InsightIdentity sharedBy;
-    /** The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime sharedDateTime;
-    /** The sharingReference property */
+    /**
+     * The sharingReference property
+     */
     private ResourceReference sharingReference;
-    /** The subject with which the document was shared. */
+    /**
+     * The subject with which the document was shared.
+     */
     private String sharingSubject;
-    /** Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'. */
+    /**
+     * Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+     */
     private String sharingType;
     /**
      * Instantiates a new sharingDetail and sets the default values.

@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventPropagationResult implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The name of the specific location in the workload associated with the event. */
+    /**
+     * The name of the specific location in the workload associated with the event.
+     */
     private String location;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The name of the workload associated with the event. */
+    /**
+     * The name of the workload associated with the event.
+     */
     private String serviceName;
-    /** Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue. */
+    /**
+     * Indicates the status of the event creation request. The possible values are: none, inProcessing, failed, success, unknownFutureValue.
+     */
     private EventPropagationStatus status;
-    /** Additional information about the status of the event creation request. */
+    /**
+     * Additional information about the status of the event creation request.
+     */
     private String statusInformation;
     /**
      * Instantiates a new eventPropagationResult and sets the default values.

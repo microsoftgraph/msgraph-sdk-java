@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetCachedReportPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The groupBy property */
+    /**
+     * The groupBy property
+     */
     private java.util.List<String> groupBy;
-    /** The id property */
+    /**
+     * The id property
+     */
     private String id;
-    /** The orderBy property */
+    /**
+     * The orderBy property
+     */
     private java.util.List<String> orderBy;
-    /** The search property */
+    /**
+     * The search property
+     */
     private String search;
-    /** The select property */
+    /**
+     * The select property
+     */
     private java.util.List<String> select;
-    /** The skip property */
+    /**
+     * The skip property
+     */
     private Integer skip;
-    /** The top property */
+    /**
+     * The top property
+     */
     private Integer top;
     /**
      * Instantiates a new getCachedReportPostRequestBody and sets the default values.

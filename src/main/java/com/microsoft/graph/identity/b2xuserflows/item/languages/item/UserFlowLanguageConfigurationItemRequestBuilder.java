@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
  */
 public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity. */
+    /**
+     * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public DefaultPagesRequestBuilder defaultPages() {
         return new DefaultPagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity. */
+    /**
+     * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public OverridesPagesRequestBuilder overridesPages() {
         return new OverridesPagesRequestBuilder(pathParameters, requestAdapter);
@@ -265,11 +269,15 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
      * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. **Note:** Language customization is enabled by default in Azure Active Directory user flows.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -278,7 +286,9 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

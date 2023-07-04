@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchQuery implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The search query containing the search terms. Required. */
+    /**
+     * The search query containing the search terms. Required.
+     */
     private String queryString;
-    /** Provides a way to decorate the query string. Supports both KQL and query variables. Optional. */
+    /**
+     * Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
+     */
     private String queryTemplate;
     /**
      * Instantiates a new SearchQuery and sets the default values.

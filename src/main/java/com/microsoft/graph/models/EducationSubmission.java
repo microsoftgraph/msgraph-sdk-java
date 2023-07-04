@@ -8,33 +8,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationSubmission extends Entity implements Parsable {
-    /** The outcomes property */
+    /**
+     * The outcomes property
+     */
     private java.util.List<EducationOutcome> outcomes;
-    /** User who moved the status of this submission to reassigned. */
+    /**
+     * User who moved the status of this submission to reassigned.
+     */
     private IdentitySet reassignedBy;
-    /** Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime reassignedDateTime;
-    /** Who this submission is assigned to. */
+    /**
+     * Who this submission is assigned to.
+     */
     private EducationSubmissionRecipient recipient;
-    /** The resources property */
+    /**
+     * The resources property
+     */
     private java.util.List<EducationSubmissionResource> resources;
-    /** Folder where all file resources for this submission need to be stored. */
+    /**
+     * Folder where all file resources for this submission need to be stored.
+     */
     private String resourcesFolderUrl;
-    /** User who moved the status of this submission to returned. */
+    /**
+     * User who moved the status of this submission to returned.
+     */
     private IdentitySet returnedBy;
-    /** Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime returnedDateTime;
-    /** Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned. */
+    /**
+     * Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     */
     private EducationSubmissionStatus status;
-    /** User who moved the resource into the submitted state. */
+    /**
+     * User who moved the resource into the submitted state.
+     */
     private IdentitySet submittedBy;
-    /** Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime submittedDateTime;
-    /** The submittedResources property */
+    /**
+     * The submittedResources property
+     */
     private java.util.List<EducationSubmissionResource> submittedResources;
-    /** User who moved the resource from submitted into the working state. */
+    /**
+     * User who moved the resource from submitted into the working state.
+     */
     private IdentitySet unsubmittedBy;
-    /** Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime unsubmittedDateTime;
     /**
      * Instantiates a new educationSubmission and sets the default values.

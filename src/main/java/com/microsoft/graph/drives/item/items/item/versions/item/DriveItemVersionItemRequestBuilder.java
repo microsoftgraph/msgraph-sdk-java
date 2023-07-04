@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
  */
 public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the media for the drive entity. */
+    /**
+     * Provides operations to manage the media for the drive entity.
+     */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the restoreVersion method. */
+    /**
+     * Provides operations to call the restoreVersion method.
+     */
     @javax.annotation.Nonnull
     public RestoreVersionRequestBuilder restoreVersion() {
         return new RestoreVersionRequestBuilder(pathParameters, requestAdapter);
@@ -265,11 +269,15 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the metadata for a specific version of a DriveItem.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -278,7 +286,9 @@ public class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

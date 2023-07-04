@@ -37,87 +37,121 @@ import java.util.Objects;
  * Provides operations to manage the collection of team entities.
  */
 public class TeamItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the allChannels property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public AllChannelsRequestBuilder allChannels() {
         return new AllChannelsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the archive method. */
+    /**
+     * Provides operations to call the archive method.
+     */
     @javax.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
         return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the channels property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the channels property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public ChannelsRequestBuilder channels() {
         return new ChannelsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the clone method. */
+    /**
+     * Provides operations to call the clone method.
+     */
     @javax.annotation.Nonnull
     public CloneRequestBuilder clone() {
         return new CloneRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the completeMigration method. */
+    /**
+     * Provides operations to call the completeMigration method.
+     */
     @javax.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
         return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the group property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the group property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the incomingChannels property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public IncomingChannelsRequestBuilder incomingChannels() {
         return new IncomingChannelsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the installedApps property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the members property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the photo property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the photo property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the primaryChannel property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the primaryChannel property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public PrimaryChannelRequestBuilder primaryChannel() {
         return new PrimaryChannelRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the schedule property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the schedule property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public ScheduleRequestBuilder schedule() {
         return new ScheduleRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the sendActivityNotification method. */
+    /**
+     * Provides operations to call the sendActivityNotification method.
+     */
     @javax.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tags property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public TagsRequestBuilder tags() {
         return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the template property of the microsoft.graph.team entity. */
+    /**
+     * Provides operations to manage the template property of the microsoft.graph.team entity.
+     */
     @javax.annotation.Nonnull
     public TemplateRequestBuilder template() {
         return new TemplateRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unarchive method. */
+    /**
+     * Provides operations to call the unarchive method.
+     */
     @javax.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
@@ -357,11 +391,15 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of the specified team.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -370,7 +408,9 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

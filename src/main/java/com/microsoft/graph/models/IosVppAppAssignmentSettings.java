@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** Whether or not to use device licensing. */
+    /**
+     * Whether or not to use device licensing.
+     */
     private Boolean useDeviceLicensing;
-    /** The VPN Configuration Id to apply for this app. */
+    /**
+     * The VPN Configuration Id to apply for this app.
+     */
     private String vpnConfigurationId;
     /**
      * Instantiates a new IosVppAppAssignmentSettings and sets the default values.

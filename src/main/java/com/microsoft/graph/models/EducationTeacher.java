@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationTeacher implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** ID of the teacher in the source system. */
+    /**
+     * ID of the teacher in the source system.
+     */
     private String externalId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Teacher number. */
+    /**
+     * Teacher number.
+     */
     private String teacherNumber;
     /**
      * Instantiates a new educationTeacher and sets the default values.

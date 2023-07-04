@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10CustomConfiguration extends DeviceConfiguration implements Parsable {
-    /** OMA settings. This collection can contain a maximum of 1000 elements. */
+    /**
+     * OMA settings. This collection can contain a maximum of 1000 elements.
+     */
     private java.util.List<OmaSetting> omaSettings;
     /**
      * Instantiates a new Windows10CustomConfiguration and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeMappingFunctionSchema extends Entity implements Parsable {
-    /** The parameters property */
+    /**
+     * The parameters property
+     */
     private java.util.List<AttributeMappingParameterSchema> parameters;
     /**
      * Instantiates a new AttributeMappingFunctionSchema and sets the default values.

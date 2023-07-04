@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChecklistItem extends Entity implements Parsable {
-    /** The date and time when the checklistItem was finished. */
+    /**
+     * The date and time when the checklistItem was finished.
+     */
     private OffsetDateTime checkedDateTime;
-    /** The date and time when the checklistItem was created. */
+    /**
+     * The date and time when the checklistItem was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Field indicating the title of checklistItem. */
+    /**
+     * Field indicating the title of checklistItem.
+     */
     private String displayName;
-    /** State indicating whether the item is checked off or not. */
+    /**
+     * State indicating whether the item is checked off or not.
+     */
     private Boolean isChecked;
     /**
      * Instantiates a new checklistItem and sets the default values.

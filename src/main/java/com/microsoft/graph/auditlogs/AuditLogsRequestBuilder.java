@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the auditLogRoot singleton.
  */
 public class AuditLogsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity. */
+    /**
+     * Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity.
+     */
     @javax.annotation.Nonnull
     public DirectoryAuditsRequestBuilder directoryAudits() {
         return new DirectoryAuditsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity. */
+    /**
+     * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
+     */
     @javax.annotation.Nonnull
     public ProvisioningRequestBuilder provisioning() {
         return new ProvisioningRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity. */
+    /**
+     * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
+     */
     @javax.annotation.Nonnull
     public SignInsRequestBuilder signIns() {
         return new SignInsRequestBuilder(pathParameters, requestAdapter);
@@ -200,11 +206,15 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
      * Get auditLogs
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -213,7 +223,9 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

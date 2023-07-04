@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Url used for rendering tab contents in Teams. Required. */
+    /**
+     * Url used for rendering tab contents in Teams. Required.
+     */
     private String contentUrl;
-    /** Identifier for the entity hosted by the tab provider. */
+    /**
+     * Identifier for the entity hosted by the tab provider.
+     */
     private String entityId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Url called by Teams client when a Tab is removed using the Teams Client. */
+    /**
+     * Url called by Teams client when a Tab is removed using the Teams Client.
+     */
     private String removeUrl;
-    /** Url for showing tab contents outside of Teams. */
+    /**
+     * Url for showing tab contents outside of Teams.
+     */
     private String websiteUrl;
     /**
      * Instantiates a new teamsTabConfiguration and sets the default values.

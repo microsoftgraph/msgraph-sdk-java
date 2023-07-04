@@ -7,53 +7,101 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Call extends Entity implements Parsable {
-    /** The audioRoutingGroups property */
+    /**
+     * The audioRoutingGroups property
+     */
     private java.util.List<AudioRoutingGroup> audioRoutingGroups;
-    /** The callback URL on which callbacks will be delivered. Must be https. */
+    /**
+     * The callback URL on which callbacks will be delivered. Must be https.
+     */
     private String callbackUri;
-    /** A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId. */
+    /**
+     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+     */
     private String callChainId;
-    /** Contains the optional features for the call. */
+    /**
+     * Contains the optional features for the call.
+     */
     private CallOptions callOptions;
-    /** The routing information on how the call was retargeted. Read-only. */
+    /**
+     * The routing information on how the call was retargeted. Read-only.
+     */
     private java.util.List<CallRoute> callRoutes;
-    /** The chat information. Required information for joining a meeting. */
+    /**
+     * The chat information. Required information for joining a meeting.
+     */
     private ChatInfo chatInfo;
-    /** The contentSharingSessions property */
+    /**
+     * The contentSharingSessions property
+     */
     private java.util.List<ContentSharingSession> contentSharingSessions;
-    /** The direction of the call. The possible value are incoming or outgoing. Read-only. */
+    /**
+     * The direction of the call. The possible value are incoming or outgoing. Read-only.
+     */
     private CallDirection direction;
-    /** Call context associated with an incoming call. */
+    /**
+     * Call context associated with an incoming call.
+     */
     private IncomingContext incomingContext;
-    /** The media configuration. Required. */
+    /**
+     * The media configuration. Required.
+     */
     private MediaConfig mediaConfig;
-    /** Read-only. The call media state. */
+    /**
+     * Read-only. The call media state.
+     */
     private CallMediaState mediaState;
-    /** The meeting information. Required information for meeting scenarios. */
+    /**
+     * The meeting information. Required information for meeting scenarios.
+     */
     private MeetingInfo meetingInfo;
-    /** The myParticipantId property */
+    /**
+     * The myParticipantId property
+     */
     private String myParticipantId;
-    /** The operations property */
+    /**
+     * The operations property
+     */
     private java.util.List<CommsOperation> operations;
-    /** The participants property */
+    /**
+     * The participants property
+     */
     private java.util.List<Participant> participants;
-    /** The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. */
+    /**
+     * The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
+     */
     private java.util.List<Modality> requestedModalities;
-    /** The result information. For example can hold termination reason. Read-only. */
+    /**
+     * The result information. For example can hold termination reason. Read-only.
+     */
     private ResultInfo resultInfo;
-    /** The originator of the call. */
+    /**
+     * The originator of the call.
+     */
     private ParticipantInfo source;
-    /** The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only. */
+    /**
+     * The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
+     */
     private CallState state;
-    /** The subject of the conversation. */
+    /**
+     * The subject of the conversation.
+     */
     private String subject;
-    /** The targets of the call. Required information for creating peer to peer call. */
+    /**
+     * The targets of the call. Required information for creating peer to peer call.
+     */
     private java.util.List<InvitationParticipantInfo> targets;
-    /** The tenantId property */
+    /**
+     * The tenantId property
+     */
     private String tenantId;
-    /** The toneInfo property */
+    /**
+     * The toneInfo property
+     */
     private ToneInfo toneInfo;
-    /** The transcription information for the call. Read-only. */
+    /**
+     * The transcription information for the call. Read-only.
+     */
     private CallTranscriptionInfo transcription;
     /**
      * Instantiates a new Call and sets the default values.

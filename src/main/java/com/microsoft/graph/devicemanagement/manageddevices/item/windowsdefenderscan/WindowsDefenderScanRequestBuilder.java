@@ -39,9 +39,10 @@ public class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/windowsDefenderScan", rawUrl);
     }
     /**
-     * Invoke action windowsDefenderScan
+     * Not yet documented
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderscan?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final WindowsDefenderScanPostRequestBody body) {
@@ -58,10 +59,11 @@ public class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action windowsDefenderScan
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderscan?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final WindowsDefenderScanPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action windowsDefenderScan
+     * Not yet documented
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action windowsDefenderScan
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

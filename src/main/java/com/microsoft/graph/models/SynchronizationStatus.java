@@ -9,33 +9,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The code property */
+    /**
+     * The code property
+     */
     private SynchronizationStatusCode code;
-    /** The countSuccessiveCompleteFailures property */
+    /**
+     * The countSuccessiveCompleteFailures property
+     */
     private Long countSuccessiveCompleteFailures;
-    /** The escrowsPruned property */
+    /**
+     * The escrowsPruned property
+     */
     private Boolean escrowsPruned;
-    /** The lastExecution property */
+    /**
+     * The lastExecution property
+     */
     private SynchronizationTaskExecution lastExecution;
-    /** The lastSuccessfulExecution property */
+    /**
+     * The lastSuccessfulExecution property
+     */
     private SynchronizationTaskExecution lastSuccessfulExecution;
-    /** The lastSuccessfulExecutionWithExports property */
+    /**
+     * The lastSuccessfulExecutionWithExports property
+     */
     private SynchronizationTaskExecution lastSuccessfulExecutionWithExports;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The progress property */
+    /**
+     * The progress property
+     */
     private java.util.List<SynchronizationProgress> progress;
-    /** The quarantine property */
+    /**
+     * The quarantine property
+     */
     private SynchronizationQuarantine quarantine;
-    /** The steadyStateFirstAchievedTime property */
+    /**
+     * The steadyStateFirstAchievedTime property
+     */
     private OffsetDateTime steadyStateFirstAchievedTime;
-    /** The steadyStateLastAchievedTime property */
+    /**
+     * The steadyStateLastAchievedTime property
+     */
     private OffsetDateTime steadyStateLastAchievedTime;
-    /** The synchronizedEntryCountByType property */
+    /**
+     * The synchronizedEntryCountByType property
+     */
     private java.util.List<StringKeyLongValuePair> synchronizedEntryCountByType;
-    /** The troubleshootingUrl property */
+    /**
+     * The troubleshootingUrl property
+     */
     private String troubleshootingUrl;
     /**
      * Instantiates a new synchronizationStatus and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TenantRelationship implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The customer who has a delegated admin relationship with a Microsoft partner. */
+    /**
+     * The customer who has a delegated admin relationship with a Microsoft partner.
+     */
     private java.util.List<DelegatedAdminCustomer> delegatedAdminCustomers;
-    /** The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant. */
+    /**
+     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     */
     private java.util.List<DelegatedAdminRelationship> delegatedAdminRelationships;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new TenantRelationship and sets the default values.

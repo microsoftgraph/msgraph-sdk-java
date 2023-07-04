@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedMobileLobApp extends ManagedApp implements Parsable {
-    /** The internal committed content version. */
+    /**
+     * The internal committed content version.
+     */
     private String committedContentVersion;
-    /** The list of content versions for this app. */
+    /**
+     * The list of content versions for this app.
+     */
     private java.util.List<MobileAppContent> contentVersions;
-    /** The name of the main Lob application file. */
+    /**
+     * The name of the main Lob application file.
+     */
     private String fileName;
-    /** The total size, including all uploaded files. */
+    /**
+     * The total size, including all uploaded files.
+     */
     private Long size;
     /**
      * Instantiates a new ManagedMobileLobApp and sets the default values.

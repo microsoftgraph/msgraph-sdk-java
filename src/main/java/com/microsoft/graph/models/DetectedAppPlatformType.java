@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0). */
+/**
+ * Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
+ */
 public enum DetectedAppPlatformType implements ValuedEnum {
     /** Default. Set to unknown when platform cannot be determined. */
     Unknown("unknown"),
@@ -26,7 +28,9 @@ public enum DetectedAppPlatformType implements ValuedEnum {
     /** Indicates that the platform of the detected application is Android work profile. */
     AndroidWorkProfile("androidWorkProfile"),
     /** Indicates that the platform of the detected application is Android dedicated and fully managed. */
-    AndroidDedicatedAndFullyManaged("androidDedicatedAndFullyManaged");
+    AndroidDedicatedAndFullyManaged("androidDedicatedAndFullyManaged"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DetectedAppPlatformType(final String value) {
         this.value = value;
@@ -48,6 +52,7 @@ public enum DetectedAppPlatformType implements ValuedEnum {
             case "androidDeviceAdministrator": return AndroidDeviceAdministrator;
             case "androidWorkProfile": return AndroidWorkProfile;
             case "androidDedicatedAndFullyManaged": return AndroidDedicatedAndFullyManaged;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

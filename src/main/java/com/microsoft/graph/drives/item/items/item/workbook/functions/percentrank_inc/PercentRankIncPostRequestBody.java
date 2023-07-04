@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PercentRankIncPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The array property */
+    /**
+     * The array property
+     */
     private Json array;
-    /** The significance property */
+    /**
+     * The significance property
+     */
     private Json significance;
-    /** The x property */
+    /**
+     * The x property
+     */
     private Json x;
     /**
      * Instantiates a new PercentRankIncPostRequestBody and sets the default values.

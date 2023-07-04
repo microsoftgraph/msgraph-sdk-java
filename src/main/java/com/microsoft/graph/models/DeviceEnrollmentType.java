@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible ways of adding a mobile device to management. */
+/**
+ * Possible ways of adding a mobile device to management.
+ */
 public enum DeviceEnrollmentType implements ValuedEnum {
     /** Default value, enrollment type was not collected. */
     Unknown("unknown"),

@@ -8,26 +8,44 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The answer given by the user in case the answerInputType is text. */
+    /**
+     * The answer given by the user in case the answerInputType is text.
+     */
     private String answer;
-    /** The expected answer type. The possible values are: text, radioButton, unknownFutureValue. */
+    /**
+     * The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
+     */
     private AnswerInputType answerInputType;
-    /** In case the answerInputType is radioButton, this will consists of a list of possible answer values. */
+    /**
+     * In case the answerInputType is radioButton, this will consists of a list of possible answer values.
+     */
     private java.util.List<String> answerOptions;
-    /** Indicates whether it is mandatory to answer the custom question. */
+    /**
+     * Indicates whether it is mandatory to answer the custom question.
+     */
     private Boolean isRequired;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The question. */
+    /**
+     * The question.
+     */
     private String question;
-    /** The ID of the custom question. */
+    /**
+     * The ID of the custom question.
+     */
     private String questionId;
-    /** The answers selected by the user. */
+    /**
+     * The answers selected by the user.
+     */
     private java.util.List<String> selectedOptions;
     /**
-     * Instantiates a new BookingQuestionAnswer and sets the default values.
+     * Instantiates a new bookingQuestionAnswer and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -37,7 +55,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingQuestionAnswer
+     * @return a bookingQuestionAnswer
      */
     @javax.annotation.Nonnull
     public static BookingQuestionAnswer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

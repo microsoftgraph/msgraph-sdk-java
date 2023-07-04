@@ -7,48 +7,88 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationClass extends Entity implements Parsable {
-    /** All categories associated with this class. Nullable. */
+    /**
+     * All categories associated with this class. Nullable.
+     */
     private java.util.List<EducationCategory> assignmentCategories;
-    /** Specifies class-level defaults respected by new assignments created in the class. */
+    /**
+     * Specifies class-level defaults respected by new assignments created in the class.
+     */
     private EducationAssignmentDefaults assignmentDefaults;
-    /** All assignments associated with this class. Nullable. */
+    /**
+     * All assignments associated with this class. Nullable.
+     */
     private java.util.List<EducationAssignment> assignments;
-    /** Specifies class-level assignments settings. */
+    /**
+     * Specifies class-level assignments settings.
+     */
     private EducationAssignmentSettings assignmentSettings;
-    /** Class code used by the school to identify the class. */
+    /**
+     * Class code used by the school to identify the class.
+     */
     private String classCode;
-    /** The course property */
+    /**
+     * The course property
+     */
     private EducationCourse course;
-    /** Entity who created the class */
+    /**
+     * Entity who created the class
+     */
     private IdentitySet createdBy;
-    /** Description of the class. */
+    /**
+     * Description of the class.
+     */
     private String description;
-    /** Name of the class. */
+    /**
+     * Name of the class.
+     */
     private String displayName;
-    /** ID of the class from the syncing system. */
+    /**
+     * ID of the class from the syncing system.
+     */
     private String externalId;
-    /** Name of the class in the syncing system. */
+    /**
+     * Name of the class in the syncing system.
+     */
     private String externalName;
-    /** How this class was created. Possible values are: sis, manual. */
+    /**
+     * How this class was created. Possible values are: sis, manual.
+     */
     private EducationExternalSource externalSource;
-    /** The name of the external source this resources was generated from. */
+    /**
+     * The name of the external source this resources was generated from.
+     */
     private String externalSourceDetail;
-    /** Grade level of the class. */
+    /**
+     * Grade level of the class.
+     */
     private String grade;
-    /** The underlying Microsoft 365 group object. */
+    /**
+     * The underlying Microsoft 365 group object.
+     */
     private Group group;
-    /** Mail name for sending email to all members, if this is enabled. */
+    /**
+     * Mail name for sending email to all members, if this is enabled.
+     */
     private String mailNickname;
-    /** All users in the class. Nullable. */
+    /**
+     * All users in the class. Nullable.
+     */
     private java.util.List<EducationUser> members;
-    /** All schools that this class is associated with. Nullable. */
+    /**
+     * All schools that this class is associated with. Nullable.
+     */
     private java.util.List<EducationSchool> schools;
-    /** All teachers in the class. Nullable. */
+    /**
+     * All teachers in the class. Nullable.
+     */
     private java.util.List<EducationUser> teachers;
-    /** Term for this class. */
+    /**
+     * Term for this class.
+     */
     private EducationTerm term;
     /**
-     * Instantiates a new educationClass and sets the default values.
+     * Instantiates a new EducationClass and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -58,7 +98,7 @@ public class EducationClass extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationClass
+     * @return a EducationClass
      */
     @javax.annotation.Nonnull
     public static EducationClass createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

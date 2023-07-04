@@ -11,11 +11,17 @@ import java.util.Objects;
  * Contains the set of ResourceActions determining the allowed and not allowed permissions for each role.
  */
 public class RolePermission implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Resource Actions each containing a set of allowed and not allowed permissions. */
+    /**
+     * Resource Actions each containing a set of allowed and not allowed permissions.
+     */
     private java.util.List<ResourceAction> resourceActions;
     /**
      * Instantiates a new rolePermission and sets the default values.

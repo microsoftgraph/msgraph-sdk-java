@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NperPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The fv property */
+    /**
+     * The fv property
+     */
     private Json fv;
-    /** The pmt property */
+    /**
+     * The pmt property
+     */
     private Json pmt;
-    /** The pv property */
+    /**
+     * The pv property
+     */
     private Json pv;
-    /** The rate property */
+    /**
+     * The rate property
+     */
     private Json rate;
-    /** The type property */
+    /**
+     * The type property
+     */
     private Json type;
     /**
      * Instantiates a new nperPostRequestBody and sets the default values.

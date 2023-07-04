@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceAnnouncementAttachment extends Entity implements Parsable {
-    /** The attachment content. */
+    /**
+     * The attachment content.
+     */
     private byte[] content;
-    /** The contentType property */
+    /**
+     * The contentType property
+     */
     private String contentType;
-    /** The lastModifiedDateTime property */
+    /**
+     * The lastModifiedDateTime property
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The size property */
+    /**
+     * The size property
+     */
     private Integer size;
     /**
      * Instantiates a new serviceAnnouncementAttachment and sets the default values.

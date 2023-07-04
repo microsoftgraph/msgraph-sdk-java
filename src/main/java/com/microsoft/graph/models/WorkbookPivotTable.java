@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookPivotTable extends Entity implements Parsable {
-    /** Name of the PivotTable. */
+    /**
+     * Name of the PivotTable.
+     */
     private String name;
-    /** The worksheet containing the current PivotTable. Read-only. */
+    /**
+     * The worksheet containing the current PivotTable. Read-only.
+     */
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookPivotTable and sets the default values.

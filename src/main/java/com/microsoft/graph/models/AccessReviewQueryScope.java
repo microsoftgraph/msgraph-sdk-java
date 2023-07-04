@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewQueryScope extends AccessReviewScope implements Parsable {
-    /** The query representing what will be reviewed in an access review. */
+    /**
+     * The query representing what will be reviewed in an access review.
+     */
     private String query;
-    /** In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager. */
+    /**
+     * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
+     */
     private String queryRoot;
-    /** Indicates the type of query. Types include MicrosoftGraph and ARM. */
+    /**
+     * Indicates the type of query. Types include MicrosoftGraph and ARM.
+     */
     private String queryType;
     /**
      * Instantiates a new AccessReviewQueryScope and sets the default values.

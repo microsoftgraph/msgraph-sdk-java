@@ -12,19 +12,33 @@ import java.util.Objects;
  * This type represents the set of policies that dictate how bookings can be created in a Booking Calendar.
  */
 public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** True if to allow customers to choose a specific person for the booking. */
+    /**
+     * True if to allow customers to choose a specific person for the booking.
+     */
     private Boolean allowStaffSelection;
-    /** Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format. */
+    /**
+     * Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
+     */
     private Period maximumAdvance;
-    /** The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format. */
+    /**
+     * The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
+     */
     private Period minimumLeadTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business. */
+    /**
+     * True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
+     */
     private Boolean sendConfirmationsToOwner;
-    /** Duration of each time slot, denoted in ISO 8601 format. */
+    /**
+     * Duration of each time slot, denoted in ISO 8601 format.
+     */
     private Period timeSlotInterval;
     /**
      * Instantiates a new bookingSchedulingPolicy and sets the default values.

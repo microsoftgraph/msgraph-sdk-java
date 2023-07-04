@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisioningStep implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Summary of what occurred during the step. */
+    /**
+     * Summary of what occurred during the step.
+     */
     private String description;
-    /** Details of what occurred during the step. */
+    /**
+     * Details of what occurred during the step.
+     */
     private DetailsInfo details;
-    /** Name of the step. */
+    /**
+     * Name of the step.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue. */
+    /**
+     * Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
+     */
     private ProvisioningStepType provisioningStepType;
-    /** Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue. */
+    /**
+     * Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
+     */
     private ProvisioningResult status;
     /**
      * Instantiates a new provisioningStep and sets the default values.

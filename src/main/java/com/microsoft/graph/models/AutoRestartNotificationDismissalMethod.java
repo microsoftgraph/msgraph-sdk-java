@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Auto restart required notification dismissal method */
+/**
+ * Auto restart required notification dismissal method
+ */
 public enum AutoRestartNotificationDismissalMethod implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),

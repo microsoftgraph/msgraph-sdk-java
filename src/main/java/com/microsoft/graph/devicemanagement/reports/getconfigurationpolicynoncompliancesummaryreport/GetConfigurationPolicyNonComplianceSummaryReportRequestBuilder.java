@@ -40,9 +40,10 @@ public class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder exte
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/getConfigurationPolicyNonComplianceSummaryReport", rawUrl);
     }
     /**
-     * Invoke action getConfigurationPolicyNonComplianceSummaryReport
+     * Not yet documented
      * @param body The request body
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getconfigurationpolicynoncompliancesummaryreport?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetConfigurationPolicyNonComplianceSummaryReportPostRequestBody body) {
@@ -59,10 +60,11 @@ public class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder exte
         }
     }
     /**
-     * Invoke action getConfigurationPolicyNonComplianceSummaryReport
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getconfigurationpolicynoncompliancesummaryreport?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetConfigurationPolicyNonComplianceSummaryReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder exte
         }
     }
     /**
-     * Invoke action getConfigurationPolicyNonComplianceSummaryReport
+     * Not yet documented
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder exte
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getConfigurationPolicyNonComplianceSummaryReport
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

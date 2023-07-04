@@ -7,43 +7,81 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Schedule extends Entity implements Parsable {
-    /** Indicates whether the schedule is enabled for the team. Required. */
+    /**
+     * Indicates whether the schedule is enabled for the team. Required.
+     */
     private Boolean enabled;
-    /** The offerShiftRequests property */
+    /**
+     * The offer requests for shifts in the schedule.
+     */
     private java.util.List<OfferShiftRequest> offerShiftRequests;
-    /** Indicates whether offer shift requests are enabled for the schedule. */
+    /**
+     * Indicates whether offer shift requests are enabled for the schedule.
+     */
     private Boolean offerShiftRequestsEnabled;
-    /** The open shift requests in the schedule. */
+    /**
+     * The open shift requests in the schedule.
+     */
     private java.util.List<OpenShiftChangeRequest> openShiftChangeRequests;
-    /** The set of open shifts in a scheduling group in the schedule. */
+    /**
+     * The set of open shifts in a scheduling group in the schedule.
+     */
     private java.util.List<OpenShift> openShifts;
-    /** Indicates whether open shifts are enabled for the schedule. */
+    /**
+     * Indicates whether open shifts are enabled for the schedule.
+     */
     private Boolean openShiftsEnabled;
-    /** The status of the schedule provisioning. The possible values are notStarted, running, completed, failed. */
+    /**
+     * The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
+     */
     private OperationStatus provisionStatus;
-    /** Additional information about why schedule provisioning failed. */
+    /**
+     * Additional information about why schedule provisioning failed.
+     */
     private String provisionStatusCode;
-    /** The logical grouping of users in the schedule (usually by role). */
+    /**
+     * The logical grouping of users in the schedule (usually by role).
+     */
     private java.util.List<SchedulingGroup> schedulingGroups;
-    /** The shifts in the schedule. */
+    /**
+     * The shifts in the schedule.
+     */
     private java.util.List<Shift> shifts;
-    /** The swapShiftsChangeRequests property */
+    /**
+     * The swap requests for shifts in the schedule.
+     */
     private java.util.List<SwapShiftsChangeRequest> swapShiftsChangeRequests;
-    /** Indicates whether swap shifts requests are enabled for the schedule. */
+    /**
+     * Indicates whether swap shifts requests are enabled for the schedule.
+     */
     private Boolean swapShiftsRequestsEnabled;
-    /** Indicates whether time clock is enabled for the schedule. */
+    /**
+     * Indicates whether time clock is enabled for the schedule.
+     */
     private Boolean timeClockEnabled;
-    /** The set of reasons for a time off in the schedule. */
+    /**
+     * The set of reasons for a time off in the schedule.
+     */
     private java.util.List<TimeOffReason> timeOffReasons;
-    /** The timeOffRequests property */
+    /**
+     * The time off requests in the schedule.
+     */
     private java.util.List<TimeOffRequest> timeOffRequests;
-    /** Indicates whether time off requests are enabled for the schedule. */
+    /**
+     * Indicates whether time off requests are enabled for the schedule.
+     */
     private Boolean timeOffRequestsEnabled;
-    /** The instances of times off in the schedule. */
+    /**
+     * The instances of times off in the schedule.
+     */
     private java.util.List<TimeOff> timesOff;
-    /** Indicates the time zone of the schedule team using tz database format. Required. */
+    /**
+     * Indicates the time zone of the schedule team using tz database format. Required.
+     */
     private String timeZone;
-    /** The workforceIntegrationIds property */
+    /**
+     * The workforceIntegrationIds property
+     */
     private java.util.List<String> workforceIntegrationIds;
     /**
      * Instantiates a new schedule and sets the default values.
@@ -100,7 +138,7 @@ public class Schedule extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the offerShiftRequests property value. The offerShiftRequests property
+     * Gets the offerShiftRequests property value. The offer requests for shifts in the schedule.
      * @return a offerShiftRequest
      */
     @javax.annotation.Nullable
@@ -172,7 +210,7 @@ public class Schedule extends Entity implements Parsable {
         return this.shifts;
     }
     /**
-     * Gets the swapShiftsChangeRequests property value. The swapShiftsChangeRequests property
+     * Gets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.
      * @return a swapShiftsChangeRequest
      */
     @javax.annotation.Nullable
@@ -204,7 +242,7 @@ public class Schedule extends Entity implements Parsable {
         return this.timeOffReasons;
     }
     /**
-     * Gets the timeOffRequests property value. The timeOffRequests property
+     * Gets the timeOffRequests property value. The time off requests in the schedule.
      * @return a timeOffRequest
      */
     @javax.annotation.Nullable
@@ -280,7 +318,7 @@ public class Schedule extends Entity implements Parsable {
         this.enabled = value;
     }
     /**
-     * Sets the offerShiftRequests property value. The offerShiftRequests property
+     * Sets the offerShiftRequests property value. The offer requests for shifts in the schedule.
      * @param value Value to set for the offerShiftRequests property.
      * @return a void
      */
@@ -361,7 +399,7 @@ public class Schedule extends Entity implements Parsable {
         this.shifts = value;
     }
     /**
-     * Sets the swapShiftsChangeRequests property value. The swapShiftsChangeRequests property
+     * Sets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.
      * @param value Value to set for the swapShiftsChangeRequests property.
      * @return a void
      */
@@ -397,7 +435,7 @@ public class Schedule extends Entity implements Parsable {
         this.timeOffReasons = value;
     }
     /**
-     * Sets the timeOffRequests property value. The timeOffRequests property
+     * Sets the timeOffRequests property value. The time off requests in the schedule.
      * @param value Value to set for the timeOffRequests property.
      * @return a void
      */

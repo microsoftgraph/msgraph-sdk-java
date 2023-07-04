@@ -10,15 +10,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationSchedule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The expiration property */
+    /**
+     * The expiration property
+     */
     private OffsetDateTime expiration;
-    /** The interval property */
+    /**
+     * The interval property
+     */
     private Period interval;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The state property */
+    /**
+     * The state property
+     */
     private SynchronizationScheduleState state;
     /**
      * Instantiates a new synchronizationSchedule and sets the default values.

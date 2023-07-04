@@ -8,20 +8,32 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppIdentity implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Refers to the Unique GUID representing Application Id in the Azure Active Directory. */
+    /**
+     * Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+     */
     private String appId;
-    /** Refers to the Application Name displayed in the Azure Portal. */
+    /**
+     * Refers to the Application Name displayed in the Azure Portal.
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App. */
+    /**
+     * Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     */
     private String servicePrincipalId;
-    /** Refers to the Service Principal Name is the Application name in the tenant. */
+    /**
+     * Refers to the Service Principal Name is the Application name in the tenant.
+     */
     private String servicePrincipalName;
     /**
-     * Instantiates a new appIdentity and sets the default values.
+     * Instantiates a new AppIdentity and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +43,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appIdentity
+     * @return a AppIdentity
      */
     @javax.annotation.Nonnull
     public static AppIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

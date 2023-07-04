@@ -38,92 +38,128 @@ import java.util.Objects;
  * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
  */
 public class CallItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the addLargeGalleryView method. */
+    /**
+     * Provides operations to call the addLargeGalleryView method.
+     */
     @javax.annotation.Nonnull
     public AddLargeGalleryViewRequestBuilder addLargeGalleryView() {
         return new AddLargeGalleryViewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the answer method. */
+    /**
+     * Provides operations to call the answer method.
+     */
     @javax.annotation.Nonnull
     public AnswerRequestBuilder answer() {
         return new AnswerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity. */
+    /**
+     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
+     */
     @javax.annotation.Nonnull
     public AudioRoutingGroupsRequestBuilder audioRoutingGroups() {
         return new AudioRoutingGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the cancelMediaProcessing method. */
+    /**
+     * Provides operations to call the cancelMediaProcessing method.
+     */
     @javax.annotation.Nonnull
     public CancelMediaProcessingRequestBuilder cancelMediaProcessing() {
         return new CancelMediaProcessingRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the changeScreenSharingRole method. */
+    /**
+     * Provides operations to call the changeScreenSharingRole method.
+     */
     @javax.annotation.Nonnull
     public ChangeScreenSharingRoleRequestBuilder changeScreenSharingRole() {
         return new ChangeScreenSharingRoleRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity. */
+    /**
+     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
+     */
     @javax.annotation.Nonnull
     public ContentSharingSessionsRequestBuilder contentSharingSessions() {
         return new ContentSharingSessionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the keepAlive method. */
+    /**
+     * Provides operations to call the keepAlive method.
+     */
     @javax.annotation.Nonnull
     public KeepAliveRequestBuilder keepAlive() {
         return new KeepAliveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the mute method. */
+    /**
+     * Provides operations to call the mute method.
+     */
     @javax.annotation.Nonnull
     public MuteRequestBuilder mute() {
         return new MuteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.call entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.call entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the participants property of the microsoft.graph.call entity. */
+    /**
+     * Provides operations to manage the participants property of the microsoft.graph.call entity.
+     */
     @javax.annotation.Nonnull
     public ParticipantsRequestBuilder participants() {
         return new ParticipantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the playPrompt method. */
+    /**
+     * Provides operations to call the playPrompt method.
+     */
     @javax.annotation.Nonnull
     public PlayPromptRequestBuilder playPrompt() {
         return new PlayPromptRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the recordResponse method. */
+    /**
+     * Provides operations to call the recordResponse method.
+     */
     @javax.annotation.Nonnull
     public RecordResponseRequestBuilder recordResponse() {
         return new RecordResponseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the redirect method. */
+    /**
+     * Provides operations to call the redirect method.
+     */
     @javax.annotation.Nonnull
     public RedirectRequestBuilder redirect() {
         return new RedirectRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reject method. */
+    /**
+     * Provides operations to call the reject method.
+     */
     @javax.annotation.Nonnull
     public RejectRequestBuilder reject() {
         return new RejectRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the subscribeToTone method. */
+    /**
+     * Provides operations to call the subscribeToTone method.
+     */
     @javax.annotation.Nonnull
     public SubscribeToToneRequestBuilder subscribeToTone() {
         return new SubscribeToToneRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the transfer method. */
+    /**
+     * Provides operations to call the transfer method.
+     */
     @javax.annotation.Nonnull
     public TransferRequestBuilder transfer() {
         return new TransferRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unmute method. */
+    /**
+     * Provides operations to call the unmute method.
+     */
     @javax.annotation.Nonnull
     public UnmuteRequestBuilder unmute() {
         return new UnmuteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the updateRecordingStatus method. */
+    /**
+     * Provides operations to call the updateRecordingStatus method.
+     */
     @javax.annotation.Nonnull
     public UpdateRecordingStatusRequestBuilder updateRecordingStatus() {
         return new UpdateRecordingStatusRequestBuilder(pathParameters, requestAdapter);
@@ -363,11 +399,15 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a call object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -376,7 +416,9 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileSystemInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The UTC date and time the file was created on a client. */
+    /**
+     * The UTC date and time the file was created on a client.
+     */
     private OffsetDateTime createdDateTime;
-    /** The UTC date and time the file was last accessed. Available for the recent file list only. */
+    /**
+     * The UTC date and time the file was last accessed. Available for the recent file list only.
+     */
     private OffsetDateTime lastAccessedDateTime;
-    /** The UTC date and time the file was last modified on a client. */
+    /**
+     * The UTC date and time the file was last modified on a client.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new fileSystemInfo and sets the default values.

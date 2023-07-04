@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CertificateBasedAuthConfiguration extends Entity implements Parsable {
-    /** Collection of certificate authorities which creates a trusted certificate chain. */
+    /**
+     * Collection of certificate authorities which creates a trusted certificate chain.
+     */
     private java.util.List<CertificateAuthority> certificateAuthorities;
     /**
      * Instantiates a new certificateBasedAuthConfiguration and sets the default values.

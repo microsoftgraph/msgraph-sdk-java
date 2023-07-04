@@ -8,24 +8,40 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ThreatAssessmentRequest extends Entity implements Parsable {
-    /** The category property */
+    /**
+     * The category property
+     */
     private ThreatCategory category;
-    /** The content type of threat assessment. Possible values are: mail, url, file. */
+    /**
+     * The content type of threat assessment. Possible values are: mail, url, file.
+     */
     private ThreatAssessmentContentType contentType;
-    /** The threat assessment request creator. */
+    /**
+     * The threat assessment request creator.
+     */
     private IdentitySet createdBy;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
-    /** The expectedAssessment property */
+    /**
+     * The expectedAssessment property
+     */
     private ThreatExpectedAssessment expectedAssessment;
-    /** The source of the threat assessment request. Possible values are: administrator. */
+    /**
+     * The source of the threat assessment request. Possible values are: administrator.
+     */
     private ThreatAssessmentRequestSource requestSource;
-    /** A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it. */
+    /**
+     * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
+     */
     private java.util.List<ThreatAssessmentResult> results;
-    /** The assessment process status. Possible values are: pending, completed. */
+    /**
+     * The assessment process status. Possible values are: pending, completed.
+     */
     private ThreatAssessmentStatus status;
     /**
-     * Instantiates a new threatAssessmentRequest and sets the default values.
+     * Instantiates a new ThreatAssessmentRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +51,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatAssessmentRequest
+     * @return a ThreatAssessmentRequest
      */
     @javax.annotation.Nonnull
     public static ThreatAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

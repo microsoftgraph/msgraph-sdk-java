@@ -7,41 +7,77 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingBusiness extends Entity implements Parsable {
-    /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others. */
+    /**
+     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
+     */
     private PhysicalAddress address;
-    /** All the appointments of this business. Read-only. Nullable. */
+    /**
+     * All the appointments of this business. Read-only. Nullable.
+     */
     private java.util.List<BookingAppointment> appointments;
-    /** The hours of operation for the business. */
+    /**
+     * The hours of operation for the business.
+     */
     private java.util.List<BookingWorkHours> businessHours;
-    /** The type of business. */
+    /**
+     * The type of business.
+     */
     private String businessType;
-    /** The set of appointments of this business in a specified date range. Read-only. Nullable. */
+    /**
+     * The set of appointments of this business in a specified date range. Read-only. Nullable.
+     */
     private java.util.List<BookingAppointment> calendarView;
-    /** All the customers of this business. Read-only. Nullable. */
+    /**
+     * All the customers of this business. Read-only. Nullable.
+     */
     private java.util.List<BookingCustomerBase> customers;
-    /** All the custom questions of this business. Read-only. Nullable. */
+    /**
+     * All the custom questions of this business. Read-only. Nullable.
+     */
     private java.util.List<BookingCustomQuestion> customQuestions;
-    /** The code for the currency that the business operates in on Microsoft Bookings. */
+    /**
+     * The code for the currency that the business operates in on Microsoft Bookings.
+     */
     private String defaultCurrencyIso;
-    /** The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page. */
+    /**
+     * The name of the business, which interfaces with customers. This name appears at the top of the business scheduling page.
+     */
     private String displayName;
-    /** The email address for the business. */
+    /**
+     * The email address for the business.
+     */
     private String email;
-    /** The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only. */
+    /**
+     * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
+     */
     private Boolean isPublished;
-    /** The language of the self-service booking page. */
+    /**
+     * The language of the self-service booking page.
+     */
     private String languageTag;
-    /** The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page. */
+    /**
+     * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
+     */
     private String phone;
-    /** The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only. */
+    /**
+     * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
+     */
     private String publicUrl;
-    /** Specifies how bookings can be created for this business. */
+    /**
+     * Specifies how bookings can be created for this business.
+     */
     private BookingSchedulingPolicy schedulingPolicy;
-    /** All the services offered by this business. Read-only. Nullable. */
+    /**
+     * All the services offered by this business. Read-only. Nullable.
+     */
     private java.util.List<BookingService> services;
-    /** All the staff members that provide services in this business. Read-only. Nullable. */
+    /**
+     * All the staff members that provide services in this business. Read-only. Nullable.
+     */
     private java.util.List<BookingStaffMemberBase> staffMembers;
-    /** The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page. */
+    /**
+     * The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page.
+     */
     private String webSiteUrl;
     /**
      * Instantiates a new BookingBusiness and sets the default values.

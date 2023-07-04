@@ -22,6 +22,7 @@ import com.microsoft.graph.users.item.devicemanagementtroubleshootingevents.Devi
 import com.microsoft.graph.users.item.directreports.DirectReportsRequestBuilder;
 import com.microsoft.graph.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.users.item.drives.DrivesRequestBuilder;
+import com.microsoft.graph.users.item.employeeexperience.EmployeeExperienceRequestBuilder;
 import com.microsoft.graph.users.item.events.EventsRequestBuilder;
 import com.microsoft.graph.users.item.exportdeviceandappmanagementdata.ExportDeviceAndAppManagementDataRequestBuilder;
 import com.microsoft.graph.users.item.exportdeviceandappmanagementdatawithskipwithtop.ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder;
@@ -89,337 +90,478 @@ import java.util.Objects;
  * Provides operations to manage the collection of user entities.
  */
 public class UserItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the activities property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ActivitiesRequestBuilder activities() {
         return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder agreementAcceptances() {
         return new AgreementAcceptancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
         return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the assignLicense method. */
+    /**
+     * Provides operations to call the assignLicense method.
+     */
     @javax.annotation.Nonnull
     public AssignLicenseRequestBuilder assignLicense() {
         return new AssignLicenseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the authentication property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the authentication property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public AuthenticationRequestBuilder authentication() {
         return new AuthenticationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendar property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the calendar property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendarGroups property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the calendarGroups property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public CalendarGroupsRequestBuilder calendarGroups() {
         return new CalendarGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendars property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the calendars property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public CalendarsRequestBuilder calendars() {
         return new CalendarsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendarView property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the calendarView property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the changePassword method. */
+    /**
+     * Provides operations to call the changePassword method.
+     */
     @javax.annotation.Nonnull
     public ChangePasswordRequestBuilder changePassword() {
         return new ChangePasswordRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the chats property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the chats property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ChatsRequestBuilder chats() {
         return new ChatsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberGroups method. */
+    /**
+     * Provides operations to call the checkMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberObjects method. */
+    /**
+     * Provides operations to call the checkMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the contactFolders property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the contactFolders property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ContactFoldersRequestBuilder contactFolders() {
         return new ContactFoldersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the contacts property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the contacts property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
         return new ContactsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdObjects property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the createdObjects property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public CreatedObjectsRequestBuilder createdObjects() {
         return new CreatedObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceManagementTroubleshootingEvents property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the deviceManagementTroubleshootingEvents property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public DeviceManagementTroubleshootingEventsRequestBuilder deviceManagementTroubleshootingEvents() {
         return new DeviceManagementTroubleshootingEventsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the directReports property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the directReports property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public DirectReportsRequestBuilder directReports() {
         return new DirectReportsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drive property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the drive property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the drives property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the drives property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public DrivesRequestBuilder drives() {
         return new DrivesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the events property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the employeeExperience property of the microsoft.graph.user entity.
+     */
+    @javax.annotation.Nonnull
+    public EmployeeExperienceRequestBuilder employeeExperience() {
+        return new EmployeeExperienceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the events property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public EventsRequestBuilder events() {
         return new EventsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the exportDeviceAndAppManagementData method. */
+    /**
+     * Provides operations to call the exportDeviceAndAppManagementData method.
+     */
     @javax.annotation.Nonnull
     public ExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData() {
         return new ExportDeviceAndAppManagementDataRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the exportPersonalData method. */
+    /**
+     * Provides operations to call the exportPersonalData method.
+     */
     @javax.annotation.Nonnull
     public ExportPersonalDataRequestBuilder exportPersonalData() {
         return new ExportPersonalDataRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the extensions property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the findMeetingTimes method. */
+    /**
+     * Provides operations to call the findMeetingTimes method.
+     */
     @javax.annotation.Nonnull
     public FindMeetingTimesRequestBuilder findMeetingTimes() {
         return new FindMeetingTimesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the followedSites property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the followedSites property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public FollowedSitesRequestBuilder followedSites() {
         return new FollowedSitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMailTips method. */
+    /**
+     * Provides operations to call the getMailTips method.
+     */
     @javax.annotation.Nonnull
     public GetMailTipsRequestBuilder getMailTips() {
         return new GetMailTipsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getManagedAppDiagnosticStatuses method. */
+    /**
+     * Provides operations to call the getManagedAppDiagnosticStatuses method.
+     */
     @javax.annotation.Nonnull
     public GetManagedAppDiagnosticStatusesRequestBuilder getManagedAppDiagnosticStatuses() {
         return new GetManagedAppDiagnosticStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getManagedAppPolicies method. */
+    /**
+     * Provides operations to call the getManagedAppPolicies method.
+     */
     @javax.annotation.Nonnull
     public GetManagedAppPoliciesRequestBuilder getManagedAppPolicies() {
         return new GetManagedAppPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getManagedDevicesWithAppFailures method. */
+    /**
+     * Provides operations to call the getManagedDevicesWithAppFailures method.
+     */
     @javax.annotation.Nonnull
     public GetManagedDevicesWithAppFailuresRequestBuilder getManagedDevicesWithAppFailures() {
         return new GetManagedDevicesWithAppFailuresRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberGroups method. */
+    /**
+     * Provides operations to call the getMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberObjects method. */
+    /**
+     * Provides operations to call the getMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the inferenceClassification property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the inferenceClassification property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public InferenceClassificationRequestBuilder inferenceClassification() {
         return new InferenceClassificationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the insights property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the insights property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public InsightsRequestBuilder insights() {
         return new InsightsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public JoinedTeamsRequestBuilder joinedTeams() {
         return new JoinedTeamsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the licenseDetails property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public LicenseDetailsRequestBuilder licenseDetails() {
         return new LicenseDetailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mailboxSettings property */
+    /**
+     * The mailboxSettings property
+     */
     @javax.annotation.Nonnull
     public MailboxSettingsRequestBuilder mailboxSettings() {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the mailFolders property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public MailFoldersRequestBuilder mailFolders() {
         return new MailFoldersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ManagedAppRegistrationsRequestBuilder managedAppRegistrations() {
         return new ManagedAppRegistrationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the managedDevices property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the managedDevices property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ManagedDevicesRequestBuilder managedDevices() {
         return new ManagedDevicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the manager property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the manager property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ManagerRequestBuilder manager() {
         return new ManagerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the memberOf property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the memberOf property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the messages property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder oauth2PermissionGrants() {
         return new Oauth2PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the onenote property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the onenote property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public OnlineMeetingsRequestBuilder onlineMeetings() {
         return new OnlineMeetingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the outlook property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the outlook property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public OutlookRequestBuilder outlook() {
         return new OutlookRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the ownedDevices property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the ownedDevices property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public OwnedDevicesRequestBuilder ownedDevices() {
         return new OwnedDevicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the ownedObjects property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the ownedObjects property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public OwnedObjectsRequestBuilder ownedObjects() {
         return new OwnedObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the people property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the people property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public PeopleRequestBuilder people() {
         return new PeopleRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the photo property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the photo property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the photos property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the photos property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public PhotosRequestBuilder photos() {
         return new PhotosRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the planner property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the planner property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public PlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the presence property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the presence property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public PresenceRequestBuilder presence() {
         return new PresenceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the registeredDevices property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the registeredDevices property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public RegisteredDevicesRequestBuilder registeredDevices() {
         return new RegisteredDevicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the removeAllDevicesFromManagement method. */
+    /**
+     * Provides operations to call the removeAllDevicesFromManagement method.
+     */
     @javax.annotation.Nonnull
     public RemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {
         return new RemoveAllDevicesFromManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reprocessLicenseAssignment method. */
+    /**
+     * Provides operations to call the reprocessLicenseAssignment method.
+     */
     @javax.annotation.Nonnull
     public ReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
         return new ReprocessLicenseAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the restore method. */
+    /**
+     * Provides operations to call the restore method.
+     */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the revokeSignInSessions method. */
+    /**
+     * Provides operations to call the revokeSignInSessions method.
+     */
     @javax.annotation.Nonnull
     public RevokeSignInSessionsRequestBuilder revokeSignInSessions() {
         return new RevokeSignInSessionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public ScopedRoleMemberOfRequestBuilder scopedRoleMemberOf() {
         return new ScopedRoleMemberOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the sendMail method. */
+    /**
+     * Provides operations to call the sendMail method.
+     */
     @javax.annotation.Nonnull
     public SendMailRequestBuilder sendMail() {
         return new SendMailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the settings property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the teamwork property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the teamwork property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the todo property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the todo property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public TodoRequestBuilder todo() {
         return new TodoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the transitiveMemberOf property of the microsoft.graph.user entity. */
+    /**
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.user entity.
+     */
     @javax.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the translateExchangeIds method. */
+    /**
+     * Provides operations to call the translateExchangeIds method.
+     */
     @javax.annotation.Nonnull
     public TranslateExchangeIdsRequestBuilder translateExchangeIds() {
         return new TranslateExchangeIdsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the wipeManagedAppRegistrationsByDeviceTag method. */
+    /**
+     * Provides operations to call the wipeManagedAppRegistrationsByDeviceTag method.
+     */
     @javax.annotation.Nonnull
     public WipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag() {
         return new WipeManagedAppRegistrationsByDeviceTagRequestBuilder(pathParameters, requestAdapter);
@@ -445,9 +587,9 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Deletes a user.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/user-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -464,10 +606,10 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Deletes a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/user-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -535,10 +677,10 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
+     * Update the properties of a user object.
      * @param body The request body
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body) {
@@ -555,11 +697,11 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
+     * Update the properties of a user object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> patch(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -589,7 +731,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Deletes a user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -597,7 +739,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * Deletes a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -645,7 +787,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
+     * Update the properties of a user object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -654,7 +796,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
+     * Update the properties of a user object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -685,11 +827,15 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of user object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -698,7 +844,9 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

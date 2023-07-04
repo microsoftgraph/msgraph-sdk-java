@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
-    /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand. */
+    /**
+     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
+     */
     private AccessPackage accessPackage;
-    /** Answers provided by the requestor to accessPackageQuestions asked of them at the time of request. */
+    /**
+     * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
+     */
     private java.util.List<AccessPackageAnswer> answers;
-    /** For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand. */
+    /**
+     * For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     */
     private AccessPackageAssignment assignment;
-    /** The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime completedDateTime;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
+     */
     private OffsetDateTime createdDateTime;
-    /** The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand. */
+    /**
+     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
+     */
     private AccessPackageSubject requestor;
-    /** The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set. */
+    /**
+     * The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set.
+     */
     private AccessPackageRequestType requestType;
-    /** The range of dates that access is to be assigned to the requestor. This property cannot be changed once set. */
+    /**
+     * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
+     */
     private EntitlementManagementSchedule schedule;
-    /** The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq). */
+    /**
+     * The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
+     */
     private AccessPackageRequestState state;
-    /** More information on the request processing status. Read-only. */
+    /**
+     * More information on the request processing status. Read-only.
+     */
     private String status;
     /**
      * Instantiates a new accessPackageAssignmentRequest and sets the default values.

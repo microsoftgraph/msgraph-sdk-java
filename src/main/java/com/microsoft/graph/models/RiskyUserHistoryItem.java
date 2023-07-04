@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
-    /** The activity related to user risk level change. */
+    /**
+     * The activity related to user risk level change.
+     */
     private RiskUserActivity activity;
-    /** The ID of actor that does the operation. */
+    /**
+     * The ID of actor that does the operation.
+     */
     private String initiatedBy;
-    /** The ID of the user. */
+    /**
+     * The ID of the user.
+     */
     private String userId;
     /**
      * Instantiates a new riskyUserHistoryItem and sets the default values.

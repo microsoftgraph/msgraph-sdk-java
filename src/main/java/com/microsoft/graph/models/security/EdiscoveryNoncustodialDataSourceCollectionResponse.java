@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryNoncustodialDataSourceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<EdiscoveryNoncustodialDataSource> value;
     /**
      * Instantiates a new EdiscoveryNoncustodialDataSourceCollectionResponse and sets the default values.

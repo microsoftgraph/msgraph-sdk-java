@@ -10,11 +10,17 @@ import java.util.Objects;
  * A class containing the properties used for Group Assignment of a Mobile App.
  */
 public class MobileAppAssignment extends Entity implements Parsable {
-    /** Possible values for the install intent chosen by the admin. */
+    /**
+     * Possible values for the install intent chosen by the admin.
+     */
     private InstallIntent intent;
-    /** The settings for target assignment defined by the admin. */
+    /**
+     * The settings for target assignment defined by the admin.
+     */
     private MobileAppAssignmentSettings settings;
-    /** The target group assignment defined by the admin. */
+    /**
+     * The target group assignment defined by the admin.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new mobileAppAssignment and sets the default values.

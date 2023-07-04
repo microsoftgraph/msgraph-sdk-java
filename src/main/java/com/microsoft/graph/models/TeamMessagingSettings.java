@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamMessagingSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If set to true, @channel mentions are allowed. */
+    /**
+     * If set to true, @channel mentions are allowed.
+     */
     private Boolean allowChannelMentions;
-    /** If set to true, owners can delete any message. */
+    /**
+     * If set to true, owners can delete any message.
+     */
     private Boolean allowOwnerDeleteMessages;
-    /** If set to true, @team mentions are allowed. */
+    /**
+     * If set to true, @team mentions are allowed.
+     */
     private Boolean allowTeamMentions;
-    /** If set to true, users can delete their messages. */
+    /**
+     * If set to true, users can delete their messages.
+     */
     private Boolean allowUserDeleteMessages;
-    /** If set to true, users can edit their messages. */
+    /**
+     * If set to true, users can edit their messages.
+     */
     private Boolean allowUserEditMessages;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new teamMessagingSettings and sets the default values.

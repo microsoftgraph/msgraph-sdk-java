@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates whether or not to uninstall a fixed list of built-in Windows apps. */
+    /**
+     * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
+     */
     private Boolean uninstallBuiltInApps;
     /**
      * Instantiates a new Windows10EnterpriseModernAppManagementConfiguration and sets the default values.

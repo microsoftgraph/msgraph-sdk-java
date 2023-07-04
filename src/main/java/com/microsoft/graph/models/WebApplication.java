@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WebApplication implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Home page or landing page of the application. */
+    /**
+     * Home page or landing page of the application.
+     */
     private String homePageUrl;
-    /** Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow. */
+    /**
+     * Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
+     */
     private ImplicitGrantSettings implicitGrantSettings;
-    /** Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols. */
+    /**
+     * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     */
     private String logoutUrl;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. */
+    /**
+     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     */
     private java.util.List<String> redirectUris;
-    /** The redirectUriSettings property */
+    /**
+     * The redirectUriSettings property
+     */
     private java.util.List<RedirectUriSettings> redirectUriSettings;
     /**
      * Instantiates a new webApplication and sets the default values.

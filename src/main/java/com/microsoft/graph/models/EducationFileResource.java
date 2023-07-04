@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationFileResource extends EducationResource implements Parsable {
-    /** Location on disk of the file resource. */
+    /**
+     * Location on disk of the file resource.
+     */
     private String fileUrl;
     /**
      * Instantiates a new EducationFileResource and sets the default values.

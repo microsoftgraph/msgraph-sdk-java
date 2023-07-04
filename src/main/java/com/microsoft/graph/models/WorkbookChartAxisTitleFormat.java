@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxisTitleFormat extends Entity implements Parsable {
-    /** Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only. */
+    /**
+     * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
+     */
     private WorkbookChartFont font;
     /**
      * Instantiates a new workbookChartAxisTitleFormat and sets the default values.

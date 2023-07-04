@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintConnector extends Entity implements Parsable {
-    /** The connector's version. */
+    /**
+     * The connector's version.
+     */
     private String appVersion;
-    /** The name of the connector. */
+    /**
+     * The name of the connector.
+     */
     private String displayName;
-    /** The connector machine's hostname. */
+    /**
+     * The connector machine's hostname.
+     */
     private String fullyQualifiedDomainName;
-    /** The physical and/or organizational location of the connector. */
+    /**
+     * The physical and/or organizational location of the connector.
+     */
     private PrinterLocation location;
-    /** The connector machine's operating system version. */
+    /**
+     * The connector machine's operating system version.
+     */
     private String operatingSystem;
-    /** The DateTimeOffset when the connector was registered. */
+    /**
+     * The DateTimeOffset when the connector was registered.
+     */
     private OffsetDateTime registeredDateTime;
     /**
      * Instantiates a new printConnector and sets the default values.

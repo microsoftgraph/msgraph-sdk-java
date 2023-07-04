@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRbacResourceNamespaceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<UnifiedRbacResourceNamespace> value;
     /**
      * Instantiates a new UnifiedRbacResourceNamespaceCollectionResponse and sets the default values.

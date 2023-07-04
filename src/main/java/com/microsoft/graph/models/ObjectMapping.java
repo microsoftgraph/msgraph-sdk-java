@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ObjectMapping implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The attributeMappings property */
+    /**
+     * The attributeMappings property
+     */
     private java.util.List<AttributeMapping> attributeMappings;
-    /** The enabled property */
+    /**
+     * The enabled property
+     */
     private Boolean enabled;
-    /** The flowTypes property */
+    /**
+     * The flowTypes property
+     */
     private ObjectFlowTypes flowTypes;
-    /** The metadata property */
+    /**
+     * The metadata property
+     */
     private java.util.List<ObjectMappingMetadataEntry> metadata;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The scope property */
+    /**
+     * The scope property
+     */
     private Filter scope;
-    /** The sourceObjectName property */
+    /**
+     * The sourceObjectName property
+     */
     private String sourceObjectName;
-    /** The targetObjectName property */
+    /**
+     * The targetObjectName property
+     */
     private String targetObjectName;
     /**
      * Instantiates a new objectMapping and sets the default values.

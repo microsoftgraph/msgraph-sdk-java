@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InformationalUrl implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** CDN URL to the application's logo, Read-only. */
+    /**
+     * CDN URL to the application's logo, Read-only.
+     */
     private String logoUrl;
-    /** Link to the application's marketing page. For example, https://www.contoso.com/app/marketing */
+    /**
+     * Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
+     */
     private String marketingUrl;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy */
+    /**
+     * Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
+     */
     private String privacyStatementUrl;
-    /** Link to the application's support page. For example, https://www.contoso.com/app/support */
+    /**
+     * Link to the application's support page. For example, https://www.contoso.com/app/support
+     */
     private String supportUrl;
-    /** Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice */
+    /**
+     * Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
+     */
     private String termsOfServiceUrl;
     /**
      * Instantiates a new informationalUrl and sets the default values.

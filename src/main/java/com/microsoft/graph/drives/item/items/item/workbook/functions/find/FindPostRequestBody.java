@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FindPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The findText property */
+    /**
+     * The findText property
+     */
     private Json findText;
-    /** The startNum property */
+    /**
+     * The startNum property
+     */
     private Json startNum;
-    /** The withinText property */
+    /**
+     * The withinText property
+     */
     private Json withinText;
     /**
      * Instantiates a new findPostRequestBody and sets the default values.

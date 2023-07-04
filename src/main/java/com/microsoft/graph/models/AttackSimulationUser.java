@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttackSimulationUser implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Display name of the user. */
+    /**
+     * Display name of the user.
+     */
     private String displayName;
-    /** Email address of the user. */
+    /**
+     * Email address of the user.
+     */
     private String email;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** This is the id property value of the user resource that represents the user in the Azure Active Directory tenant. */
+    /**
+     * This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
+     */
     private String userId;
     /**
      * Instantiates a new attackSimulationUser and sets the default values.

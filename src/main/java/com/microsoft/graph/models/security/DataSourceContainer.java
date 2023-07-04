@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DataSourceContainer extends Entity implements Parsable {
-    /** Created date and time of the dataSourceContainer entity. */
+    /**
+     * Created date and time of the dataSourceContainer entity.
+     */
     private OffsetDateTime createdDateTime;
-    /** Display name of the dataSourceContainer entity. */
+    /**
+     * Display name of the dataSourceContainer entity.
+     */
     private String displayName;
-    /** The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial */
+    /**
+     * The hold status of the dataSourceContainer. The possible values are: notApplied, applied, applying, removing, partial
+     */
     private DataSourceHoldStatus holdStatus;
-    /** Last modified date and time of the dataSourceContainer. */
+    /**
+     * Last modified date and time of the dataSourceContainer.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Date and time that the dataSourceContainer was released from the case. */
+    /**
+     * Date and time that the dataSourceContainer was released from the case.
+     */
     private OffsetDateTime releasedDateTime;
-    /** Latest status of the dataSourceContainer. Possible values are: Active, Released. */
+    /**
+     * Latest status of the dataSourceContainer. Possible values are: Active, Released.
+     */
     private DataSourceContainerStatus status;
     /**
      * Instantiates a new dataSourceContainer and sets the default values.

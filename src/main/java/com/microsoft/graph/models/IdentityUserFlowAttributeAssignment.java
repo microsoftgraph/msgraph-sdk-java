@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityUserFlowAttributeAssignment extends Entity implements Parsable {
-    /** The display name of the identityUserFlowAttribute within a user flow. */
+    /**
+     * The display name of the identityUserFlowAttribute within a user flow.
+     */
     private String displayName;
-    /** Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value. */
+    /**
+     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+     */
     private Boolean isOptional;
-    /** Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address. */
+    /**
+     * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
+     */
     private Boolean requiresVerification;
-    /** The user attribute that you want to add to your user flow. */
+    /**
+     * The user attribute that you want to add to your user flow.
+     */
     private IdentityUserFlowAttribute userAttribute;
-    /** The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect. */
+    /**
+     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
+     */
     private java.util.List<UserAttributeValuesItem> userAttributeValues;
-    /** The userInputType property */
+    /**
+     * The userInputType property
+     */
     private IdentityUserFlowAttributeInputType userInputType;
     /**
      * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.

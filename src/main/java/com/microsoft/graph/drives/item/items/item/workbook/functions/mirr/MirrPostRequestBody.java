@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MirrPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The financeRate property */
+    /**
+     * The financeRate property
+     */
     private Json financeRate;
-    /** The reinvestRate property */
+    /**
+     * The reinvestRate property
+     */
     private Json reinvestRate;
-    /** The values property */
+    /**
+     * The values property
+     */
     private Json values;
     /**
      * Instantiates a new mirrPostRequestBody and sets the default values.

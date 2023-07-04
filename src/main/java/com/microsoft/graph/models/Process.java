@@ -9,33 +9,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Process implements AdditionalDataHolder, Parsable {
-    /** User account identifier (user account context the process ran under) for example, AccountName, SID, and so on. */
+    /**
+     * User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
+     */
     private String accountName;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The full process invocation commandline including all parameters. */
+    /**
+     * The full process invocation commandline including all parameters.
+     */
     private String commandLine;
-    /** Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
-    /** Complex type containing file hashes (cryptographic and location-sensitive). */
+    /**
+     * Complex type containing file hashes (cryptographic and location-sensitive).
+     */
     private FileHash fileHash;
-    /** The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system. */
+    /**
+     * The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
+     */
     private ProcessIntegrityLevel integrityLevel;
-    /** True if the process is elevated. */
+    /**
+     * True if the process is elevated.
+     */
     private Boolean isElevated;
-    /** The name of the process' Image file. */
+    /**
+     * The name of the process' Image file.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime parentProcessCreatedDateTime;
-    /** The Process ID (PID) of the parent process. */
+    /**
+     * The Process ID (PID) of the parent process.
+     */
     private Integer parentProcessId;
-    /** The name of the image file of the parent process. */
+    /**
+     * The name of the image file of the parent process.
+     */
     private String parentProcessName;
-    /** Full path, including filename. */
+    /**
+     * Full path, including filename.
+     */
     private String path;
-    /** The Process ID (PID) of the process. */
+    /**
+     * The Process ID (PID) of the process.
+     */
     private Integer processId;
     /**
      * Instantiates a new process and sets the default values.

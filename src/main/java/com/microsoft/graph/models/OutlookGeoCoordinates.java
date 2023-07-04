@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
-    /** The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters. */
+    /**
+     * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
+     */
     private Double accuracy;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The altitude of the location. */
+    /**
+     * The altitude of the location.
+     */
     private Double altitude;
-    /** The accuracy of the altitude. */
+    /**
+     * The accuracy of the altitude.
+     */
     private Double altitudeAccuracy;
-    /** The latitude of the location. */
+    /**
+     * The latitude of the location.
+     */
     private Double latitude;
-    /** The longitude of the location. */
+    /**
+     * The longitude of the location.
+     */
     private Double longitude;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new outlookGeoCoordinates and sets the default values.

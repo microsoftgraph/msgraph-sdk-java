@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains properties for upload request states. */
+/**
+ * Contains properties for upload request states.
+ */
 public enum MobileAppContentFileUploadState implements ValuedEnum {
     Success("success"),
     TransientError("transientError"),

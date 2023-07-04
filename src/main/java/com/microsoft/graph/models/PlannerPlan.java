@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerPlan extends Entity implements Parsable {
-    /** Read-only. Nullable. Collection of buckets in the plan. */
+    /**
+     * Read-only. Nullable. Collection of buckets in the plan.
+     */
     private java.util.List<PlannerBucket> buckets;
-    /** Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required. */
+    /**
+     * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
+     */
     private PlannerPlanContainer container;
-    /** Read-only. The user who created the plan. */
+    /**
+     * Read-only. The user who created the plan.
+     */
     private IdentitySet createdBy;
-    /** Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime createdDateTime;
-    /** Read-only. Nullable. Additional details about the plan. */
+    /**
+     * Read-only. Nullable. Additional details about the plan.
+     */
     private PlannerPlanDetails details;
-    /** The owner property */
+    /**
+     * The owner property
+     */
     private String owner;
-    /** Read-only. Nullable. Collection of tasks in the plan. */
+    /**
+     * Read-only. Nullable. Collection of tasks in the plan.
+     */
     private java.util.List<PlannerTask> tasks;
-    /** Required. Title of the plan. */
+    /**
+     * Required. Title of the plan.
+     */
     private String title;
     /**
      * Instantiates a new plannerPlan and sets the default values.

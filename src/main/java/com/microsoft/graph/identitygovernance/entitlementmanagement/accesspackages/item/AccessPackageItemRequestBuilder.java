@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
  */
 public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity. */
+    /**
+     * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackagesIncompatibleWithRequestBuilder accessPackagesIncompatibleWith() {
         return new AccessPackagesIncompatibleWithRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity. */
+    /**
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentPoliciesRequestBuilder assignmentPolicies() {
         return new AssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the catalog property of the microsoft.graph.accessPackage entity. */
+    /**
+     * Provides operations to manage the catalog property of the microsoft.graph.accessPackage entity.
+     */
     @javax.annotation.Nonnull
     public CatalogRequestBuilder catalog() {
         return new CatalogRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getApplicablePolicyRequirements method. */
+    /**
+     * Provides operations to call the getApplicablePolicyRequirements method.
+     */
     @javax.annotation.Nonnull
     public GetApplicablePolicyRequirementsRequestBuilder getApplicablePolicyRequirements() {
         return new GetApplicablePolicyRequirementsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the incompatibleAccessPackages property of the microsoft.graph.accessPackage entity. */
+    /**
+     * Provides operations to manage the incompatibleAccessPackages property of the microsoft.graph.accessPackage entity.
+     */
     @javax.annotation.Nonnull
     public IncompatibleAccessPackagesRequestBuilder incompatibleAccessPackages() {
         return new IncompatibleAccessPackagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the incompatibleGroups property of the microsoft.graph.accessPackage entity. */
+    /**
+     * Provides operations to manage the incompatibleGroups property of the microsoft.graph.accessPackage entity.
+     */
     @javax.annotation.Nonnull
     public IncompatibleGroupsRequestBuilder incompatibleGroups() {
         return new IncompatibleGroupsRequestBuilder(pathParameters, requestAdapter);
@@ -293,11 +305,15 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an accessPackage object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -306,7 +322,9 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

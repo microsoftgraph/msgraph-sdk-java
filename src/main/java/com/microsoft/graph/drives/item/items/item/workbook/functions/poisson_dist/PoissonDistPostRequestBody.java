@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PoissonDistPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The cumulative property */
+    /**
+     * The cumulative property
+     */
     private Json cumulative;
-    /** The mean property */
+    /**
+     * The mean property
+     */
     private Json mean;
-    /** The x property */
+    /**
+     * The x property
+     */
     private Json x;
     /**
      * Instantiates a new PoissonDistPostRequestBody and sets the default values.

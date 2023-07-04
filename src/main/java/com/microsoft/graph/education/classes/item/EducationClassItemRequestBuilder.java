@@ -28,42 +28,58 @@ import java.util.Objects;
  * Provides operations to manage the classes property of the microsoft.graph.educationRoot entity.
  */
 public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentCategoriesRequestBuilder assignmentCategories() {
         return new AssignmentCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignmentDefaults property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the assignmentDefaults property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentDefaultsRequestBuilder assignmentDefaults() {
         return new AssignmentDefaultsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignments property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignmentSettings property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the assignmentSettings property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentSettingsRequestBuilder assignmentSettings() {
         return new AssignmentSettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the group property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the group property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the members property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the schools property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
         return new SchoolsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the teachers property of the microsoft.graph.educationClass entity. */
+    /**
+     * Provides operations to manage the teachers property of the microsoft.graph.educationClass entity.
+     */
     @javax.annotation.Nonnull
     public TeachersRequestBuilder teachers() {
         return new TeachersRequestBuilder(pathParameters, requestAdapter);
@@ -305,11 +321,15 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -318,7 +338,9 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

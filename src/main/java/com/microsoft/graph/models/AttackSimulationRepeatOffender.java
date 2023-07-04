@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttackSimulationRepeatOffender implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The user in an attack simulation and training campaign. */
+    /**
+     * The user in an attack simulation and training campaign.
+     */
     private AttackSimulationUser attackSimulationUser;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Number of repeat offences of the user in attack simulation and training campaigns. */
+    /**
+     * Number of repeat offences of the user in attack simulation and training campaigns.
+     */
     private Integer repeatOffenceCount;
     /**
      * Instantiates a new attackSimulationRepeatOffender and sets the default values.

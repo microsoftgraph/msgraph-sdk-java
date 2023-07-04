@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
  */
 public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity. */
+    /**
+     * Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
+     */
     @javax.annotation.Nonnull
     public EffectiveRulesRequestBuilder effectiveRules() {
         return new EffectiveRulesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity. */
+    /**
+     * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
+     */
     @javax.annotation.Nonnull
     public RulesRequestBuilder rules() {
         return new RulesRequestBuilder(pathParameters, requestAdapter);
@@ -265,11 +269,15 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
      * Retrieve the details of a role management policy.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -278,7 +286,9 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

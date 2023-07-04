@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InferenceClassification extends Entity implements Parsable {
-    /** A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable. */
+    /**
+     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
+     */
     private java.util.List<InferenceClassificationOverride> overrides;
     /**
      * Instantiates a new inferenceClassification and sets the default values.

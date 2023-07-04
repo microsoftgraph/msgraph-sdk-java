@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
  */
 public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the targetApps method. */
+    /**
+     * Provides operations to call the targetApps method.
+     */
     @javax.annotation.Nonnull
     public TargetAppsRequestBuilder targetApps() {
         return new TargetAppsRequestBuilder(pathParameters, requestAdapter);
@@ -84,8 +86,9 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Managed app policies.
+     * Read properties and relationships of the windowsInformationProtection object.
      * @return a CompletableFuture of managedAppPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> get() {
@@ -102,9 +105,10 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Managed app policies.
+     * Read properties and relationships of the windowsInformationProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -188,7 +192,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Managed app policies.
+     * Read properties and relationships of the windowsInformationProtection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +200,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Managed app policies.
+     * Read properties and relationships of the windowsInformationProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,14 +258,18 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Managed app policies.
+     * Read properties and relationships of the windowsInformationProtection object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +278,9 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationFeedbackOutcome extends EducationOutcome implements Parsable {
-    /** Teacher's written feedback to the student. */
+    /**
+     * Teacher's written feedback to the student.
+     */
     private EducationFeedback feedback;
-    /** A copy of the feedback property that is made when the grade is released to the student. */
+    /**
+     * A copy of the feedback property that is made when the grade is released to the student.
+     */
     private EducationFeedback publishedFeedback;
     /**
      * Instantiates a new EducationFeedbackOutcome and sets the default values.

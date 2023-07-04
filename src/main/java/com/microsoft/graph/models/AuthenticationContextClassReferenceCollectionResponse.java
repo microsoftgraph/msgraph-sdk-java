@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationContextClassReferenceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AuthenticationContextClassReference> value;
     /**
      * Instantiates a new AuthenticationContextClassReferenceCollectionResponse and sets the default values.

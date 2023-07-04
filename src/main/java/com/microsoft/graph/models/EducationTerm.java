@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationTerm implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Display name of the term. */
+    /**
+     * Display name of the term.
+     */
     private String displayName;
-    /** End of the term. */
+    /**
+     * End of the term.
+     */
     private LocalDate endDate;
-    /** ID of term in the syncing system. */
+    /**
+     * ID of term in the syncing system.
+     */
     private String externalId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Start of the term. */
+    /**
+     * Start of the term.
+     */
     private LocalDate startDate;
     /**
      * Instantiates a new educationTerm and sets the default values.

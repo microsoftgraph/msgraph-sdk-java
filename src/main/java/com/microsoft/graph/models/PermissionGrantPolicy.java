@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PermissionGrantPolicy extends PolicyBase implements Parsable {
-    /** Condition sets which are excluded in this permission grant policy. Automatically expanded on GET. */
+    /**
+     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
+     */
     private java.util.List<PermissionGrantConditionSet> excludes;
-    /** Condition sets which are included in this permission grant policy. Automatically expanded on GET. */
+    /**
+     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     */
     private java.util.List<PermissionGrantConditionSet> includes;
     /**
      * Instantiates a new PermissionGrantPolicy and sets the default values.

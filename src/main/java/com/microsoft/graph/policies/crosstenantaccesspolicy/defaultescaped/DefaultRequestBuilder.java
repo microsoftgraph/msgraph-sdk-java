@@ -1,8 +1,8 @@
-package com.microsoft.graph.policies.crosstenantaccesspolicy.defaultEscaped;
+package com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped;
 
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultEscaped.resettosystemdefault.ResetToSystemDefaultRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped.resettosystemdefault.ResetToSystemDefaultRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the default property of the microsoft.graph.crossTenantAccessPolicy entity.
  */
 public class DefaultRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the resetToSystemDefault method. */
+    /**
+     * Provides operations to call the resetToSystemDefault method.
+     */
     @javax.annotation.Nonnull
     public ResetToSystemDefaultRequestBuilder resetToSystemDefault() {
         return new ResetToSystemDefaultRequestBuilder(pathParameters, requestAdapter);
@@ -261,11 +263,15 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
      * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Azure AD (**isServiceDefault** is `true`) or may be customized in your tenant (**isServiceDefault** is `false`).
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -274,7 +280,9 @@ public class DefaultRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

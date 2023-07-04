@@ -9,19 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign. */
+    /**
+     * Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
+     */
     private String browser;
-    /** Date and time of the simulation event by a user in an attack simulation and training campaign. */
+    /**
+     * Date and time of the simulation event by a user in an attack simulation and training campaign.
+     */
     private OffsetDateTime eventDateTime;
-    /** Name of the simulation event by a user in an attack simulation and training campaign. */
+    /**
+     * Name of the simulation event by a user in an attack simulation and training campaign.
+     */
     private String eventName;
-    /** IP address from where the simulation event was initiated by a user in an attack simulation and training campaign. */
+    /**
+     * IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
+     */
     private String ipAddress;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign. */
+    /**
+     * The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
+     */
     private String osPlatformDeviceDetails;
     /**
      * Instantiates a new userSimulationEventInfo and sets the default values.

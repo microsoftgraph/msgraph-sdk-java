@@ -10,19 +10,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The classification property */
+    /**
+     * The classification property
+     */
     private String classification;
-    /** The description property */
+    /**
+     * The description property
+     */
     private String description;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The mailNickname property */
+    /**
+     * The mailNickname property
+     */
     private String mailNickname;
-    /** The partsToClone property */
+    /**
+     * The partsToClone property
+     */
     private ClonableTeamParts partsToClone;
-    /** The visibility property */
+    /**
+     * The visibility property
+     */
     private TeamVisibilityType visibility;
     /**
      * Instantiates a new clonePostRequestBody and sets the default values.

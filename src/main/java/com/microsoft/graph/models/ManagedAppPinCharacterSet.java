@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Character set which is to be used for a user's app PIN */
+/**
+ * Character set which is to be used for a user's app PIN
+ */
 public enum ManagedAppPinCharacterSet implements ValuedEnum {
     /** Numeric characters */
     Numeric("numeric"),

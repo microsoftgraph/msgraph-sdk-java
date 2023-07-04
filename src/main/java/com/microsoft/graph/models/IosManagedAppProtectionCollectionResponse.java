@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosManagedAppProtectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<IosManagedAppProtection> value;
     /**
      * Instantiates a new IosManagedAppProtectionCollectionResponse and sets the default values.

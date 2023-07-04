@@ -27,37 +27,51 @@ import java.util.Objects;
  * Provides operations to manage the searches property of the microsoft.graph.security.ediscoveryCase entity.
  */
 public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the additionalSources property of the microsoft.graph.security.ediscoverySearch entity. */
+    /**
+     * Provides operations to manage the additionalSources property of the microsoft.graph.security.ediscoverySearch entity.
+     */
     @javax.annotation.Nonnull
     public AdditionalSourcesRequestBuilder additionalSources() {
         return new AdditionalSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the addToReviewSetOperation property of the microsoft.graph.security.ediscoverySearch entity. */
+    /**
+     * Provides operations to manage the addToReviewSetOperation property of the microsoft.graph.security.ediscoverySearch entity.
+     */
     @javax.annotation.Nonnull
     public AddToReviewSetOperationRequestBuilder addToReviewSetOperation() {
         return new AddToReviewSetOperationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity. */
+    /**
+     * Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity.
+     */
     @javax.annotation.Nonnull
     public CustodianSourcesRequestBuilder custodianSources() {
         return new CustodianSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastEstimateStatisticsOperation property of the microsoft.graph.security.ediscoverySearch entity. */
+    /**
+     * Provides operations to manage the lastEstimateStatisticsOperation property of the microsoft.graph.security.ediscoverySearch entity.
+     */
     @javax.annotation.Nonnull
     public LastEstimateStatisticsOperationRequestBuilder lastEstimateStatisticsOperation() {
         return new LastEstimateStatisticsOperationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the estimateStatistics method. */
+    /**
+     * Provides operations to call the estimateStatistics method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityEstimateStatisticsRequestBuilder microsoftGraphSecurityEstimateStatistics() {
         return new MicrosoftGraphSecurityEstimateStatisticsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the purgeData method. */
+    /**
+     * Provides operations to call the purgeData method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityPurgeDataRequestBuilder microsoftGraphSecurityPurgeData() {
         return new MicrosoftGraphSecurityPurgeDataRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity. */
+    /**
+     * Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity.
+     */
     @javax.annotation.Nonnull
     public NoncustodialSourcesRequestBuilder noncustodialSources() {
         return new NoncustodialSourcesRequestBuilder(pathParameters, requestAdapter);
@@ -299,11 +313,15 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an ediscoverySearch object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -312,7 +330,9 @@ public class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

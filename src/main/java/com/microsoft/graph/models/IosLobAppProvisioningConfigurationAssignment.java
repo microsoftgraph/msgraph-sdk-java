@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosLobAppProvisioningConfigurationAssignment extends Entity implements Parsable {
-    /** The target group assignment defined by the admin. */
+    /**
+     * The target group assignment defined by the admin.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new IosLobAppProvisioningConfigurationAssignment and sets the default values.

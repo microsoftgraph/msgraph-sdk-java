@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Device error code reported by Device Directory Service(DDS). */
+    /**
+     * Device error code reported by Device Directory Service(DDS).
+     */
     private Integer deviceErrorCode;
-    /** Device error name reported by Device Directory Service(DDS). */
+    /**
+     * Device error name reported by Device Directory Service(DDS).
+     */
     private String deviceErrorName;
-    /** The deviceImportStatus property */
+    /**
+     * The deviceImportStatus property
+     */
     private ImportedWindowsAutopilotDeviceIdentityImportStatus deviceImportStatus;
-    /** Device Registration ID for successfully added device reported by Device Directory Service(DDS). */
+    /**
+     * Device Registration ID for successfully added device reported by Device Directory Service(DDS).
+     */
     private String deviceRegistrationId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentityState and sets the default values.

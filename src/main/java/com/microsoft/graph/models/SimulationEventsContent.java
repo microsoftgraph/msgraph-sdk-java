@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SimulationEventsContent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign. */
+    /**
+     * Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
+     */
     private Double compromisedRate;
-    /** List of simulation events in an attack simulation and training campaign. */
+    /**
+     * List of simulation events in an attack simulation and training campaign.
+     */
     private java.util.List<SimulationEvent> events;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new simulationEventsContent and sets the default values.

@@ -32,62 +32,86 @@ import java.util.Objects;
  * Provides operations to manage the filter property of the microsoft.graph.workbookTableColumn entity.
  */
 public class FilterRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the apply method. */
+    /**
+     * Provides operations to call the apply method.
+     */
     @javax.annotation.Nonnull
     public ApplyRequestBuilder apply() {
         return new ApplyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyBottomItemsFilter method. */
+    /**
+     * Provides operations to call the applyBottomItemsFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyBottomItemsFilterRequestBuilder applyBottomItemsFilter() {
         return new ApplyBottomItemsFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyBottomPercentFilter method. */
+    /**
+     * Provides operations to call the applyBottomPercentFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyBottomPercentFilterRequestBuilder applyBottomPercentFilter() {
         return new ApplyBottomPercentFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyCellColorFilter method. */
+    /**
+     * Provides operations to call the applyCellColorFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyCellColorFilterRequestBuilder applyCellColorFilter() {
         return new ApplyCellColorFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyCustomFilter method. */
+    /**
+     * Provides operations to call the applyCustomFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyCustomFilterRequestBuilder applyCustomFilter() {
         return new ApplyCustomFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyDynamicFilter method. */
+    /**
+     * Provides operations to call the applyDynamicFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyDynamicFilterRequestBuilder applyDynamicFilter() {
         return new ApplyDynamicFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyFontColorFilter method. */
+    /**
+     * Provides operations to call the applyFontColorFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyFontColorFilterRequestBuilder applyFontColorFilter() {
         return new ApplyFontColorFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyIconFilter method. */
+    /**
+     * Provides operations to call the applyIconFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyIconFilterRequestBuilder applyIconFilter() {
         return new ApplyIconFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyTopItemsFilter method. */
+    /**
+     * Provides operations to call the applyTopItemsFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyTopItemsFilterRequestBuilder applyTopItemsFilter() {
         return new ApplyTopItemsFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyTopPercentFilter method. */
+    /**
+     * Provides operations to call the applyTopPercentFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyTopPercentFilterRequestBuilder applyTopPercentFilter() {
         return new ApplyTopPercentFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyValuesFilter method. */
+    /**
+     * Provides operations to call the applyValuesFilter method.
+     */
     @javax.annotation.Nonnull
     public ApplyValuesFilterRequestBuilder applyValuesFilter() {
         return new ApplyValuesFilterRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the clear method. */
+    /**
+     * Provides operations to call the clear method.
+     */
     @javax.annotation.Nonnull
     public ClearRequestBuilder clear() {
         return new ClearRequestBuilder(pathParameters, requestAdapter);
@@ -323,11 +347,15 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
      * Retrieve the filter applied to the column. Read-only.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -336,7 +364,9 @@ public class FilterRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

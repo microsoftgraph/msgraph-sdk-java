@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Shared implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The identity of the owner of the shared item. Read-only. */
+    /**
+     * The identity of the owner of the shared item. Read-only.
+     */
     private IdentitySet owner;
-    /** Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only. */
+    /**
+     * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
+     */
     private String scope;
-    /** The identity of the user who shared the item. Read-only. */
+    /**
+     * The identity of the user who shared the item. Read-only.
+     */
     private IdentitySet sharedBy;
-    /** The UTC date and time when the item was shared. Read-only. */
+    /**
+     * The UTC date and time when the item was shared. Read-only.
+     */
     private OffsetDateTime sharedDateTime;
     /**
      * Instantiates a new shared and sets the default values.

@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity.
  */
 public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the assign method. */
+    /**
+     * Provides operations to call the assign method.
+     */
     @javax.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setPriority method. */
+    /**
+     * Provides operations to call the setPriority method.
+     */
     @javax.annotation.Nonnull
     public SetPriorityRequestBuilder setPriority() {
         return new SetPriorityRequestBuilder(pathParameters, requestAdapter);
@@ -59,8 +65,9 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +84,10 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +104,9 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * The list of device enrollment configurations
+     * Read properties and relationships of the deviceEnrollmentLimitConfiguration object.
      * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> get() {
@@ -114,9 +123,10 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * The list of device enrollment configurations
+     * Read properties and relationships of the deviceEnrollmentLimitConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,9 +143,10 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
+     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@javax.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
@@ -152,10 +163,11 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
+     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@javax.annotation.Nonnull final DeviceEnrollmentConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -173,7 +185,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +193,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
+     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +212,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * The list of device enrollment configurations
+     * Read properties and relationships of the deviceEnrollmentLimitConfiguration object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +220,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * The list of device enrollment configurations
+     * Read properties and relationships of the deviceEnrollmentLimitConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +241,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
+     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -238,7 +250,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
+     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,14 +278,18 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of device enrollment configurations
+     * Read properties and relationships of the deviceEnrollmentLimitConfiguration object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +298,9 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

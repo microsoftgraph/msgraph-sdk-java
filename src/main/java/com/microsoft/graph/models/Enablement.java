@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values of a property */
+/**
+ * Possible values of a property
+ */
 public enum Enablement implements ValuedEnum {
     /** Device default value, no intent. */
     NotConfigured("notConfigured"),

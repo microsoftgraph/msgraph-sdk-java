@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** Contains value for delivery optimization priority. */
+    /**
+     * Contains value for delivery optimization priority.
+     */
     private Win32LobAppDeliveryOptimizationPriority deliveryOptimizationPriority;
-    /** The install time settings to apply for this app assignment. */
+    /**
+     * The install time settings to apply for this app assignment.
+     */
     private MobileAppInstallTimeSettings installTimeSettings;
-    /** Contains value for notification status. */
+    /**
+     * Contains value for notification status.
+     */
     private Win32LobAppNotification notifications;
-    /** The reboot settings to apply for this app assignment. */
+    /**
+     * The reboot settings to apply for this app assignment.
+     */
     private Win32LobAppRestartSettings restartSettings;
     /**
      * Instantiates a new Win32LobAppAssignmentSettings and sets the default values.

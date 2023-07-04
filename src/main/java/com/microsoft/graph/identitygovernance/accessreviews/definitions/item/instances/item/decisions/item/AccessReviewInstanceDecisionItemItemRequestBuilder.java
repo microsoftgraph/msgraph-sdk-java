@@ -1,5 +1,6 @@
 package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.decisions.item;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.decisions.item.insights.InsightsRequestBuilder;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,13 @@ import java.util.Objects;
  * Provides operations to manage the decisions property of the microsoft.graph.accessReviewInstance entity.
  */
 public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the insights property of the microsoft.graph.accessReviewInstanceDecisionItem entity.
+     */
+    @javax.annotation.Nonnull
+    public InsightsRequestBuilder insights() {
+        return new InsightsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -253,11 +261,15 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
      * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -266,7 +278,9 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

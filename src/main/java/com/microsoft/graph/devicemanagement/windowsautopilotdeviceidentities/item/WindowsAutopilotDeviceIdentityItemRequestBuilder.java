@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
  */
 public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the assignUserToDevice method. */
+    /**
+     * Provides operations to call the assignUserToDevice method.
+     */
     @javax.annotation.Nonnull
     public AssignUserToDeviceRequestBuilder assignUserToDevice() {
         return new AssignUserToDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unassignUserFromDevice method. */
+    /**
+     * Provides operations to call the unassignUserFromDevice method.
+     */
     @javax.annotation.Nonnull
     public UnassignUserFromDeviceRequestBuilder unassignUserFromDevice() {
         return new UnassignUserFromDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the updateDeviceProperties method. */
+    /**
+     * Provides operations to call the updateDeviceProperties method.
+     */
     @javax.annotation.Nonnull
     public UpdateDevicePropertiesRequestBuilder updateDeviceProperties() {
         return new UpdateDevicePropertiesRequestBuilder(pathParameters, requestAdapter);
@@ -59,8 +65,9 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotDeviceIdentities/{windowsAutopilotDeviceIdentity%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +84,10 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +104,9 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> get() {
@@ -114,9 +123,10 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -173,7 +183,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +191,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+     * Deletes a windowsAutopilotDeviceIdentity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +210,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +218,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,14 +276,18 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Windows autopilot device identities contained collection.
+     * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +296,9 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

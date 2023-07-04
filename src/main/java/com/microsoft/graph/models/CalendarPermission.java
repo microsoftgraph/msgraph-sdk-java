@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CalendarPermission extends Entity implements Parsable {
-    /** List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom. */
+    /**
+     * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+     */
     private java.util.List<CalendarRoleType> allowedRoles;
-    /** Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only. */
+    /**
+     * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
+     */
     private EmailAddress emailAddress;
-    /** True if the user in context (sharee or delegate) is inside the same organization as the calendar owner. */
+    /**
+     * True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
+     */
     private Boolean isInsideOrganization;
-    /** True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar. */
+    /**
+     * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
+     */
     private Boolean isRemovable;
-    /** Current permission level of the calendar sharee or delegate. */
+    /**
+     * Current permission level of the calendar sharee or delegate.
+     */
     private CalendarRoleType role;
     /**
      * Instantiates a new calendarPermission and sets the default values.

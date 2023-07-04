@@ -1,7 +1,7 @@
 package com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities;
 
 import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.count.CountRequestBuilder;
-import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.importEscaped.ImportRequestBuilder;
+import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.importescaped.ImportRequestBuilder;
 import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.item.ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
@@ -24,12 +24,16 @@ import java.util.Objects;
  * Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
  */
 public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the import method. */
+    /**
+     * Provides operations to call the import method.
+     */
     @javax.annotation.Nonnull
     public ImportRequestBuilder importEscaped() {
         return new ImportRequestBuilder(pathParameters, requestAdapter);
@@ -67,8 +71,9 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/deviceManagement/importedWindowsAutopilotDeviceIdentities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentityCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentityCollectionResponse> get() {
@@ -85,9 +90,10 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         }
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentityCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentityCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,9 +110,10 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         }
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> post(@javax.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
@@ -123,10 +130,11 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         }
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> post(@javax.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +152,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         }
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +160,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +181,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +190,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,38 +213,54 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -245,7 +269,9 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends Base
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

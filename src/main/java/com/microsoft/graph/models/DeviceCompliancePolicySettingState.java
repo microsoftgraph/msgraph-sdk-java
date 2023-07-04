@@ -11,33 +11,61 @@ import java.util.Objects;
  * Device Compilance Policy Setting State for a given device.
  */
 public class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Current value of setting on device */
+    /**
+     * Current value of setting on device
+     */
     private String currentValue;
-    /** Error code for the setting */
+    /**
+     * Error code for the setting
+     */
     private Long errorCode;
-    /** Error description */
+    /**
+     * Error description
+     */
     private String errorDescription;
-    /** Name of setting instance that is being reported. */
+    /**
+     * Name of setting instance that is being reported.
+     */
     private String instanceDisplayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The setting that is being reported */
+    /**
+     * The setting that is being reported
+     */
     private String setting;
-    /** Localized/user friendly setting name that is being reported */
+    /**
+     * Localized/user friendly setting name that is being reported
+     */
     private String settingName;
-    /** Contributing policies */
+    /**
+     * Contributing policies
+     */
     private java.util.List<SettingSource> sources;
-    /** The state property */
+    /**
+     * The state property
+     */
     private ComplianceStatus state;
-    /** UserEmail */
+    /**
+     * UserEmail
+     */
     private String userEmail;
-    /** UserId */
+    /**
+     * UserId
+     */
     private String userId;
-    /** UserName */
+    /**
+     * UserName
+     */
     private String userName;
-    /** UserPrincipalName. */
+    /**
+     * UserPrincipalName.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new deviceCompliancePolicySettingState and sets the default values.

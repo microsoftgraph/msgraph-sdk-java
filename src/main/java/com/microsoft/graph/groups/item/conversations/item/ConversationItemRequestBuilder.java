@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the conversations property of the microsoft.graph.group entity.
  */
 public class ConversationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the threads property of the microsoft.graph.conversation entity. */
+    /**
+     * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
+     */
     @javax.annotation.Nonnull
     public ThreadsRequestBuilder threads() {
         return new ThreadsRequestBuilder(pathParameters, requestAdapter);
@@ -49,7 +51,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete conversation.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/group-delete-conversation?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -69,7 +71,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
      * Delete conversation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/group-delete-conversation?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -189,7 +191,9 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
      * The group's conversations.
      */
     public class GetQueryParameters {
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -198,7 +202,9 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

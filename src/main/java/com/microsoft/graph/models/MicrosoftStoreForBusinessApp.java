@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
-    /** The licenseType property */
+    /**
+     * The licenseType property
+     */
     private MicrosoftStoreForBusinessLicenseType licenseType;
-    /** The app package identifier */
+    /**
+     * The app package identifier
+     */
     private String packageIdentityName;
-    /** The app product key */
+    /**
+     * The app product key
+     */
     private String productKey;
-    /** The total number of Microsoft Store for Business licenses. */
+    /**
+     * The total number of Microsoft Store for Business licenses.
+     */
     private Integer totalLicenseCount;
-    /** The number of Microsoft Store for Business licenses in use. */
+    /**
+     * The number of Microsoft Store for Business licenses in use.
+     */
     private Integer usedLicenseCount;
     /**
      * Instantiates a new MicrosoftStoreForBusinessApp and sets the default values.

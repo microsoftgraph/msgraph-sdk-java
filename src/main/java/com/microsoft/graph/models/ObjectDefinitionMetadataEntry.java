@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The key property */
+    /**
+     * The key property
+     */
     private ObjectDefinitionMetadata key;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The value property */
+    /**
+     * The value property
+     */
     private String value;
     /**
      * Instantiates a new objectDefinitionMetadataEntry and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable {
-    /** The enum to specify the channels for Microsoft Edge apps. */
+    /**
+     * The enum to specify the channels for Microsoft Edge apps.
+     */
     private MicrosoftEdgeChannel channel;
     /**
      * Instantiates a new MacOSMicrosoftEdgeApp and sets the default values.

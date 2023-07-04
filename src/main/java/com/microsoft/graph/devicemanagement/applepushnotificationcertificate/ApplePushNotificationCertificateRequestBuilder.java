@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the applePushNotificationCertificate property of the microsoft.graph.deviceManagement entity.
  */
 public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method. */
+    /**
+     * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
+     */
     @javax.annotation.Nonnull
     public DownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
         return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder(pathParameters, requestAdapter);
@@ -84,8 +86,9 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @return a CompletableFuture of applePushNotificationCertificate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> get() {
@@ -102,9 +105,10 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of applePushNotificationCertificate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +125,10 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @return a CompletableFuture of applePushNotificationCertificate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> patch(@javax.annotation.Nonnull final ApplePushNotificationCertificate body) {
@@ -140,10 +145,11 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of applePushNotificationCertificate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> patch(@javax.annotation.Nonnull final ApplePushNotificationCertificate body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -188,7 +194,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +202,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +223,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +232,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * Update the properties of a applePushNotificationCertificate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,14 +260,18 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Apple push notification certificate.
+     * Read properties and relationships of the applePushNotificationCertificate object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +280,9 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

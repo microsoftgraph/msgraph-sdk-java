@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsWebApp extends MobileApp implements Parsable {
-    /** Indicates the Windows web app URL. Example: 'https://www.contoso.com' */
+    /**
+     * Indicates the Windows web app URL. Example: 'https://www.contoso.com'
+     */
     private String appUrl;
     /**
      * Instantiates a new WindowsWebApp and sets the default values.

@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IrrPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The guess property */
+    /**
+     * The guess property
+     */
     private Json guess;
-    /** The values property */
+    /**
+     * The values property
+     */
     private Json values;
     /**
      * Instantiates a new irrPostRequestBody and sets the default values.

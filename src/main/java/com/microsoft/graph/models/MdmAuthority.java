@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Mobile device management authority. */
+/**
+ * Mobile device management authority.
+ */
 public enum MdmAuthority implements ValuedEnum {
     /** Unknown */
     Unknown("unknown"),

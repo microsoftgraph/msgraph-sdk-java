@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Participant extends Entity implements Parsable {
-    /** The info property */
+    /**
+     * The info property
+     */
     private ParticipantInfo info;
-    /** true if the participant is in lobby. */
+    /**
+     * true if the participant is in lobby.
+     */
     private Boolean isInLobby;
-    /** true if the participant is muted (client or server muted). */
+    /**
+     * true if the participant is muted (client or server muted).
+     */
     private Boolean isMuted;
-    /** The list of media streams. */
+    /**
+     * The list of media streams.
+     */
     private java.util.List<MediaStream> mediaStreams;
-    /** A blob of data provided by the participant in the roster. */
+    /**
+     * A blob of data provided by the participant in the roster.
+     */
     private String metadata;
-    /** Information about whether the participant has recording capability. */
+    /**
+     * Information about whether the participant has recording capability.
+     */
     private RecordingInfo recordingInfo;
-    /** Indicates the reason or reasons media content from this participant is restricted. */
+    /**
+     * Indicates the reason or reasons media content from this participant is restricted.
+     */
     private OnlineMeetingRestricted restrictedExperience;
     /**
      * Instantiates a new participant and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ColumnLink extends Entity implements Parsable {
-    /** The name of the column  in this content type. */
+    /**
+     * The name of the column  in this content type.
+     */
     private String name;
     /**
      * Instantiates a new columnLink and sets the default values.

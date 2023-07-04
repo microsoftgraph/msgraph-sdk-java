@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceConfigurationDeviceOverview extends Entity implements Parsable {
-    /** Version of the policy for that overview */
+    /**
+     * Version of the policy for that overview
+     */
     private Integer configurationVersion;
-    /** Number of error devices */
+    /**
+     * Number of error devices
+     */
     private Integer errorCount;
-    /** Number of failed devices */
+    /**
+     * Number of failed devices
+     */
     private Integer failedCount;
-    /** Last update time */
+    /**
+     * Last update time
+     */
     private OffsetDateTime lastUpdateDateTime;
-    /** Number of not applicable devices */
+    /**
+     * Number of not applicable devices
+     */
     private Integer notApplicableCount;
-    /** Number of pending devices */
+    /**
+     * Number of pending devices
+     */
     private Integer pendingCount;
-    /** Number of succeeded devices */
+    /**
+     * Number of succeeded devices
+     */
     private Integer successCount;
     /**
      * Instantiates a new deviceConfigurationDeviceOverview and sets the default values.

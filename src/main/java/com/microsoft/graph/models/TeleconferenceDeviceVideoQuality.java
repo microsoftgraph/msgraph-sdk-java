@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality implements Parsable {
-    /** The average inbound stream video bit rate per second. */
+    /**
+     * The average inbound stream video bit rate per second.
+     */
     private Double averageInboundBitRate;
-    /** The average inbound stream video frame rate per second. */
+    /**
+     * The average inbound stream video frame rate per second.
+     */
     private Double averageInboundFrameRate;
-    /** The average outbound stream video bit rate per second. */
+    /**
+     * The average outbound stream video bit rate per second.
+     */
     private Double averageOutboundBitRate;
-    /** The average outbound stream video frame rate per second. */
+    /**
+     * The average outbound stream video frame rate per second.
+     */
     private Double averageOutboundFrameRate;
     /**
      * Instantiates a new TeleconferenceDeviceVideoQuality and sets the default values.

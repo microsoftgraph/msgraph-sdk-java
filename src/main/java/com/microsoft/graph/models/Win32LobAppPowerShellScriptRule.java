@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsable {
-    /** The script output comparison value. Do not specify a value if the rule is used for detection. */
+    /**
+     * The script output comparison value. Do not specify a value if the rule is used for detection.
+     */
     private String comparisonValue;
-    /** The display name for the rule. Do not specify this value if the rule is used for detection. */
+    /**
+     * The display name for the rule. Do not specify this value if the rule is used for detection.
+     */
     private String displayName;
-    /** A value indicating whether a signature check is enforced. */
+    /**
+     * A value indicating whether a signature check is enforced.
+     */
     private Boolean enforceSignatureCheck;
-    /** Contains all supported Powershell Script output detection type. */
+    /**
+     * Contains all supported Powershell Script output detection type.
+     */
     private Win32LobAppPowerShellScriptRuleOperationType operationType;
-    /** Contains properties for detection operator. */
+    /**
+     * Contains properties for detection operator.
+     */
     private Win32LobAppRuleOperator operator;
-    /** A value indicating whether the script should run as 32-bit. */
+    /**
+     * A value indicating whether the script should run as 32-bit.
+     */
     private Boolean runAs32Bit;
-    /** The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user. */
+    /**
+     * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
+     */
     private RunAsAccountType runAsAccount;
-    /** The base64-encoded script content. */
+    /**
+     * The base64-encoded script content.
+     */
     private String scriptContent;
     /**
      * Instantiates a new Win32LobAppPowerShellScriptRule and sets the default values.

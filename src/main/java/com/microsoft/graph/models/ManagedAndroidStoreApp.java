@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAndroidStoreApp extends ManagedApp implements Parsable {
-    /** The Android AppStoreUrl. */
+    /**
+     * The Android AppStoreUrl.
+     */
     private String appStoreUrl;
-    /** Contains properties for the minimum operating system required for an Android mobile app. */
+    /**
+     * Contains properties for the minimum operating system required for an Android mobile app.
+     */
     private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /** The app's package ID. */
+    /**
+     * The app's package ID.
+     */
     private String packageId;
     /**
      * Instantiates a new ManagedAndroidStoreApp and sets the default values.

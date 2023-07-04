@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ListItem extends BaseItem implements Parsable {
-    /** Analytics about the view activities that took place on this item. */
+    /**
+     * Analytics about the view activities that took place on this item.
+     */
     private ItemAnalytics analytics;
-    /** The content type of this list item */
+    /**
+     * The content type of this list item
+     */
     private ContentTypeInfo contentType;
-    /** Version information for a document set version created by a user. */
+    /**
+     * Version information for a document set version created by a user.
+     */
     private java.util.List<DocumentSetVersion> documentSetVersions;
-    /** For document libraries, the driveItem relationship exposes the listItem as a [driveItem][] */
+    /**
+     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     */
     private DriveItem driveItem;
-    /** The values of the columns set on this list item. */
+    /**
+     * The values of the columns set on this list item.
+     */
     private FieldValueSet fields;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     */
     private SharepointIds sharepointIds;
-    /** The list of previous versions of the list item. */
+    /**
+     * The list of previous versions of the list item.
+     */
     private java.util.List<ListItemVersion> versions;
     /**
      * Instantiates a new listItem and sets the default values.

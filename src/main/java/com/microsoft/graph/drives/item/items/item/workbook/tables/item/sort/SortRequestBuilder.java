@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the sort property of the microsoft.graph.workbookTable entity.
  */
 public class SortRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the apply method. */
+    /**
+     * Provides operations to call the apply method.
+     */
     @javax.annotation.Nonnull
     public ApplyRequestBuilder apply() {
         return new ApplyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the clear method. */
+    /**
+     * Provides operations to call the clear method.
+     */
     @javax.annotation.Nonnull
     public ClearRequestBuilder clear() {
         return new ClearRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the reapply method. */
+    /**
+     * Provides operations to call the reapply method.
+     */
     @javax.annotation.Nonnull
     public ReapplyRequestBuilder reapply() {
         return new ReapplyRequestBuilder(pathParameters, requestAdapter);
@@ -271,11 +277,15 @@ public class SortRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of tablesort object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -284,7 +294,9 @@ public class SortRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

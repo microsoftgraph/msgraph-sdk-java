@@ -8,38 +8,68 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * An abstract class containing the base properties for Intune mobile apps.
+ * An abstract class containing the base properties for Intune mobile apps. Note: Listing mobile apps with `$expand=assignments` has been deprecated. Instead get the list of apps without the `$expand` query on `assignments`. Then, perform the expansion on individual applications.
  */
 public class MobileApp extends Entity implements Parsable {
-    /** The list of group assignments for this mobile app. */
+    /**
+     * The list of group assignments for this mobile app.
+     */
     private java.util.List<MobileAppAssignment> assignments;
-    /** The list of categories for this app. */
+    /**
+     * The list of categories for this app.
+     */
     private java.util.List<MobileAppCategory> categories;
-    /** The date and time the app was created. */
+    /**
+     * The date and time the app was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The description of the app. */
+    /**
+     * The description of the app.
+     */
     private String description;
-    /** The developer of the app. */
+    /**
+     * The developer of the app.
+     */
     private String developer;
-    /** The admin provided or imported title of the app. */
+    /**
+     * The admin provided or imported title of the app.
+     */
     private String displayName;
-    /** The more information Url. */
+    /**
+     * The more information Url.
+     */
     private String informationUrl;
-    /** The value indicating whether the app is marked as featured by the admin. */
+    /**
+     * The value indicating whether the app is marked as featured by the admin.
+     */
     private Boolean isFeatured;
-    /** The large icon, to be displayed in the app details and used for upload of the icon. */
+    /**
+     * The large icon, to be displayed in the app details and used for upload of the icon.
+     */
     private MimeContent largeIcon;
-    /** The date and time the app was last modified. */
+    /**
+     * The date and time the app was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Notes for the app. */
+    /**
+     * Notes for the app.
+     */
     private String notes;
-    /** The owner of the app. */
+    /**
+     * The owner of the app.
+     */
     private String owner;
-    /** The privacy statement Url. */
+    /**
+     * The privacy statement Url.
+     */
     private String privacyInformationUrl;
-    /** The publisher of the app. */
+    /**
+     * The publisher of the app.
+     */
     private String publisher;
-    /** Indicates the publishing state of an app. */
+    /**
+     * Indicates the publishing state of an app.
+     */
     private MobileAppPublishingState publishingState;
     /**
      * Instantiates a new mobileApp and sets the default values.
@@ -68,6 +98,7 @@ public class MobileApp extends Entity implements Parsable {
                 case "#microsoft.graph.iosStoreApp": return new IosStoreApp();
                 case "#microsoft.graph.iosVppApp": return new IosVppApp();
                 case "#microsoft.graph.macOSLobApp": return new MacOSLobApp();
+                case "#microsoft.graph.macOSMicrosoftDefenderApp": return new MacOSMicrosoftDefenderApp();
                 case "#microsoft.graph.macOSMicrosoftEdgeApp": return new MacOSMicrosoftEdgeApp();
                 case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
                 case "#microsoft.graph.managedAndroidLobApp": return new ManagedAndroidLobApp();

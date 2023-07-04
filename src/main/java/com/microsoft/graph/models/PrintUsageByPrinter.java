@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintUsageByPrinter extends PrintUsage implements Parsable {
-    /** The printerId property */
+    /**
+     * The printerId property
+     */
     private String printerId;
     /**
      * Instantiates a new PrintUsageByPrinter and sets the default values.

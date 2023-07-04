@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityUserFlowAttributeAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<IdentityUserFlowAttributeAssignment> value;
     /**
      * Instantiates a new IdentityUserFlowAttributeAssignmentCollectionResponse and sets the default values.

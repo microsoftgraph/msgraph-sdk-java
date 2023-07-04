@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MainError implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The code property */
+    /**
+     * The code property
+     */
     private String code;
-    /** The details property */
+    /**
+     * The details property
+     */
     private java.util.List<ErrorDetails> details;
-    /** The innerError property */
+    /**
+     * The innerError property
+     */
     private InnerError innerError;
-    /** The message property */
+    /**
+     * The message property
+     */
     private String message;
-    /** The target property */
+    /**
+     * The target property
+     */
     private String target;
     /**
      * Instantiates a new MainError and sets the default values.

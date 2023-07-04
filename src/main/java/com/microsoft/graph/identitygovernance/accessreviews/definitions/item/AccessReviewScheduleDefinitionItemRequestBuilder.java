@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
  */
 public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity. */
+    /**
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity.
+     */
     @javax.annotation.Nonnull
     public InstancesRequestBuilder instances() {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the stop method. */
+    /**
+     * Provides operations to call the stop method.
+     */
     @javax.annotation.Nonnull
     public StopRequestBuilder stop() {
         return new StopRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +273,15 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +290,9 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

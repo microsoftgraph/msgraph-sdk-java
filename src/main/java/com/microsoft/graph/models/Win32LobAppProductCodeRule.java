@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable {
-    /** The product code of the app. */
+    /**
+     * The product code of the app.
+     */
     private String productCode;
-    /** The product version comparison value. */
+    /**
+     * The product version comparison value.
+     */
     private String productVersion;
-    /** Contains properties for detection operator. */
+    /**
+     * Contains properties for detection operator.
+     */
     private Win32LobAppRuleOperator productVersionOperator;
     /**
      * Instantiates a new Win32LobAppProductCodeRule and sets the default values.

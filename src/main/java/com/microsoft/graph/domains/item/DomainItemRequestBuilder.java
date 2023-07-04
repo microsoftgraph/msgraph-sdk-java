@@ -27,37 +27,51 @@ import java.util.Objects;
  * Provides operations to manage the collection of domain entities.
  */
 public class DomainItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity. */
+    /**
+     * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
+     */
     @javax.annotation.Nonnull
     public DomainNameReferencesRequestBuilder domainNameReferences() {
         return new DomainNameReferencesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity. */
+    /**
+     * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
+     */
     @javax.annotation.Nonnull
     public FederationConfigurationRequestBuilder federationConfiguration() {
         return new FederationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the forceDelete method. */
+    /**
+     * Provides operations to call the forceDelete method.
+     */
     @javax.annotation.Nonnull
     public ForceDeleteRequestBuilder forceDelete() {
         return new ForceDeleteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the promote method. */
+    /**
+     * Provides operations to call the promote method.
+     */
     @javax.annotation.Nonnull
     public PromoteRequestBuilder promote() {
         return new PromoteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity. */
+    /**
+     * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
+     */
     @javax.annotation.Nonnull
     public ServiceConfigurationRecordsRequestBuilder serviceConfigurationRecords() {
         return new ServiceConfigurationRecordsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity. */
+    /**
+     * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
+     */
     @javax.annotation.Nonnull
     public VerificationDnsRecordsRequestBuilder verificationDnsRecords() {
         return new VerificationDnsRecordsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the verify method. */
+    /**
+     * Provides operations to call the verify method.
+     */
     @javax.annotation.Nonnull
     public VerifyRequestBuilder verify() {
         return new VerifyRequestBuilder(pathParameters, requestAdapter);
@@ -299,11 +313,15 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of domain object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -312,7 +330,9 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

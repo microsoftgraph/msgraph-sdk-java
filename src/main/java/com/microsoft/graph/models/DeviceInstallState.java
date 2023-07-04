@@ -11,21 +11,37 @@ import java.util.Objects;
  * Contains properties for the installation state for a device.
  */
 public class DeviceInstallState extends Entity implements Parsable {
-    /** Device Id. */
+    /**
+     * Device Id.
+     */
     private String deviceId;
-    /** Device name. */
+    /**
+     * Device name.
+     */
     private String deviceName;
-    /** The error code for install failures. */
+    /**
+     * The error code for install failures.
+     */
     private String errorCode;
-    /** Possible values for install state. */
+    /**
+     * Possible values for install state.
+     */
     private InstallState installState;
-    /** Last sync date and time. */
+    /**
+     * Last sync date and time.
+     */
     private OffsetDateTime lastSyncDateTime;
-    /** OS Description. */
+    /**
+     * OS Description.
+     */
     private String osDescription;
-    /** OS Version. */
+    /**
+     * OS Version.
+     */
     private String osVersion;
-    /** Device User Name. */
+    /**
+     * Device User Name.
+     */
     private String userName;
     /**
      * Instantiates a new deviceInstallState and sets the default values.

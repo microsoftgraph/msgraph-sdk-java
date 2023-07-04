@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppPolicyAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TargetedManagedAppPolicyAssignment> value;
     /**
      * Instantiates a new TargetedManagedAppPolicyAssignmentCollectionResponse and sets the default values.

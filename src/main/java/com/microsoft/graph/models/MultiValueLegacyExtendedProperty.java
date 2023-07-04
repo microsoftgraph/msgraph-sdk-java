@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MultiValueLegacyExtendedProperty extends Entity implements Parsable {
-    /** A collection of property values. */
+    /**
+     * A collection of property values.
+     */
     private java.util.List<String> value;
     /**
      * Instantiates a new multiValueLegacyExtendedProperty and sets the default values.

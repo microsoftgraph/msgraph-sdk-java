@@ -9,7 +9,9 @@ import java.util.Objects;
  * Builds and executes requests for operations under /print/shares/{printerShare-id}/allowedGroups/{group-id}
  */
 public class GroupItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the collection of print entities. */
+    /**
+     * Provides operations to manage the collection of print entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

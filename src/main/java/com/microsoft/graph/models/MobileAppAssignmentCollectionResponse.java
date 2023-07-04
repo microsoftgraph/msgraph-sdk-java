@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileAppAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<MobileAppAssignment> value;
     /**
      * Instantiates a new MobileAppAssignmentCollectionResponse and sets the default values.

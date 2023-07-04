@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TermsAndConditionsAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TermsAndConditionsAssignment> value;
     /**
      * Instantiates a new TermsAndConditionsAssignmentCollectionResponse and sets the default values.

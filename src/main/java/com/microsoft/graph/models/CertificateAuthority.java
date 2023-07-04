@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CertificateAuthority implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Required. The base64 encoded string representing the public certificate. */
+    /**
+     * Required. The base64 encoded string representing the public certificate.
+     */
     private byte[] certificate;
-    /** The URL of the certificate revocation list. */
+    /**
+     * The URL of the certificate revocation list.
+     */
     private String certificateRevocationListUrl;
-    /** The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created. */
+    /**
+     * The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
+     */
     private String deltaCertificateRevocationListUrl;
-    /** Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority. */
+    /**
+     * Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
+     */
     private Boolean isRootAuthority;
-    /** The issuer of the certificate, calculated from the certificate value. Read-only. */
+    /**
+     * The issuer of the certificate, calculated from the certificate value. Read-only.
+     */
     private String issuer;
-    /** The subject key identifier of the certificate, calculated from the certificate value. Read-only. */
+    /**
+     * The subject key identifier of the certificate, calculated from the certificate value. Read-only.
+     */
     private String issuerSki;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new CertificateAuthority and sets the default values.

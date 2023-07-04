@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
  */
 public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the chat property of the microsoft.graph.userScopeTeamsAppInstallation entity. */
+    /**
+     * Provides operations to manage the chat property of the microsoft.graph.userScopeTeamsAppInstallation entity.
+     */
     @javax.annotation.Nonnull
     public ChatRequestBuilder chat() {
         return new ChatRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity. */
+    /**
+     * Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity.
+     */
     @javax.annotation.Nonnull
     public TeamsAppRequestBuilder teamsApp() {
         return new TeamsAppRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity. */
+    /**
+     * Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity.
+     */
     @javax.annotation.Nonnull
     public TeamsAppDefinitionRequestBuilder teamsAppDefinition() {
         return new TeamsAppDefinitionRequestBuilder(pathParameters, requestAdapter);
@@ -273,11 +279,15 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
      * Retrieve the app installed in the personal scope of the specified user.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -286,7 +296,9 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequest
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

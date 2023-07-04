@@ -12,21 +12,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The activityType property */
+    /**
+     * The activityType property
+     */
     private String activityType;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The chainId property */
+    /**
+     * The chainId property
+     */
     private Long chainId;
-    /** The previewText property */
+    /**
+     * The previewText property
+     */
     private ItemBody previewText;
-    /** The recipients property */
+    /**
+     * The recipients property
+     */
     private java.util.List<TeamworkNotificationRecipient> recipients;
-    /** The teamsAppId property */
+    /**
+     * The teamsAppId property
+     */
     private String teamsAppId;
-    /** The templateParameters property */
+    /**
+     * The templateParameters property
+     */
     private java.util.List<KeyValuePair> templateParameters;
-    /** The topic property */
+    /**
+     * The topic property
+     */
     private TeamworkActivityTopic topic;
     /**
      * Instantiates a new sendActivityNotificationToRecipientsPostRequestBody and sets the default values.

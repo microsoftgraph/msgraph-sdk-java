@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemAttachment extends Attachment implements Parsable {
-    /** The attached message or event. Navigation property. */
+    /**
+     * The attached message or event. Navigation property.
+     */
     private OutlookItem item;
     /**
      * Instantiates a new ItemAttachment and sets the default values.

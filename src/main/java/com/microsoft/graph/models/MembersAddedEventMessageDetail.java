@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** List of members added. */
+    /**
+     * List of members added.
+     */
     private java.util.List<TeamworkUserIdentity> members;
-    /** The timestamp that denotes how far back a conversation's history is shared with the conversation members. */
+    /**
+     * The timestamp that denotes how far back a conversation's history is shared with the conversation members.
+     */
     private OffsetDateTime visibleHistoryStartDateTime;
     /**
      * Instantiates a new MembersAddedEventMessageDetail and sets the default values.

@@ -8,26 +8,44 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchHit implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The name of the content source that the externalItem is part of. */
+    /**
+     * The name of the content source that the externalItem is part of.
+     */
     private String contentSource;
-    /** The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format. */
+    /**
+     * The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
+     */
     private String hitId;
-    /** Indicates whether the current result is collapsed when the collapseProperties property is used. */
+    /**
+     * Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
+     */
     private Boolean isCollapsed;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The rank or the order of the result. */
+    /**
+     * The rank or the order of the result.
+     */
     private Integer rank;
-    /** The resource property */
+    /**
+     * The resource property
+     */
     private Entity resource;
-    /** ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse. */
+    /**
+     * ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
+     */
     private String resultTemplateId;
-    /** A summary of the result, if a summary is available. */
+    /**
+     * A summary of the result, if a summary is available.
+     */
     private String summary;
     /**
-     * Instantiates a new searchHit and sets the default values.
+     * Instantiates a new SearchHit and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -37,7 +55,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchHit
+     * @return a SearchHit
      */
     @javax.annotation.Nonnull
     public static SearchHit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +104,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         return this.hitId;
     }
     /**
-     * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property is used.
+     * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -179,7 +197,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         this.hitId = value;
     }
     /**
-     * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property is used.
+     * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @param value Value to set for the isCollapsed property.
      * @return a void
      */

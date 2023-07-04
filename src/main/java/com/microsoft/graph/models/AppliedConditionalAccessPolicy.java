@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce'). */
+    /**
+     * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
+     */
     private String displayName;
-    /** Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication'). */
+    /**
+     * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
+     */
     private java.util.List<String> enforcedGrantControls;
-    /** Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls'). */
+    /**
+     * Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
+     */
     private java.util.List<String> enforcedSessionControls;
-    /** An identifier of the conditional access policy. */
+    /**
+     * An identifier of the conditional access policy.
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue. */
+    /**
+     * Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
+     */
     private AppliedConditionalAccessPolicyResult result;
     /**
      * Instantiates a new appliedConditionalAccessPolicy and sets the default values.

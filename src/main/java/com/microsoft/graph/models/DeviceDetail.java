@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceDetail implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates the browser information of the used for signing in. */
+    /**
+     * Indicates the browser information of the used for signing in.
+     */
     private String browser;
-    /** Refers to the UniqueID of the device used for signing in. */
+    /**
+     * Refers to the UniqueID of the device used for signing in.
+     */
     private String deviceId;
-    /** Refers to the name of the device used for signing in. */
+    /**
+     * Refers to the name of the device used for signing in.
+     */
     private String displayName;
-    /** Indicates whether the device is compliant. */
+    /**
+     * Indicates whether the device is compliant.
+     */
     private Boolean isCompliant;
-    /** Indicates whether the device is managed. */
+    /**
+     * Indicates whether the device is managed.
+     */
     private Boolean isManaged;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates the operating system name and version used for signing in. */
+    /**
+     * Indicates the operating system name and version used for signing in.
+     */
     private String operatingSystem;
-    /** Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined. */
+    /**
+     * Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+     */
     private String trustType;
     /**
      * Instantiates a new deviceDetail and sets the default values.

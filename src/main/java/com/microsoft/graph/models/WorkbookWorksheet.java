@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookWorksheet extends Entity implements Parsable {
-    /** Returns collection of charts that are part of the worksheet. Read-only. */
+    /**
+     * Returns collection of charts that are part of the worksheet. Read-only.
+     */
     private java.util.List<WorkbookChart> charts;
-    /** The display name of the worksheet. */
+    /**
+     * The display name of the worksheet.
+     */
     private String name;
-    /** Returns collection of names that are associated with the worksheet. Read-only. */
+    /**
+     * Returns collection of names that are associated with the worksheet. Read-only.
+     */
     private java.util.List<WorkbookNamedItem> names;
-    /** Collection of PivotTables that are part of the worksheet. */
+    /**
+     * Collection of PivotTables that are part of the worksheet.
+     */
     private java.util.List<WorkbookPivotTable> pivotTables;
-    /** The zero-based position of the worksheet within the workbook. */
+    /**
+     * The zero-based position of the worksheet within the workbook.
+     */
     private Integer position;
-    /** Returns sheet protection object for a worksheet. Read-only. */
+    /**
+     * Returns sheet protection object for a worksheet. Read-only.
+     */
     private WorkbookWorksheetProtection protection;
-    /** Collection of tables that are part of the worksheet. Read-only. */
+    /**
+     * Collection of tables that are part of the worksheet. Read-only.
+     */
     private java.util.List<WorkbookTable> tables;
-    /** The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden. */
+    /**
+     * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+     */
     private String visibility;
     /**
      * Instantiates a new workbookWorksheet and sets the default values.

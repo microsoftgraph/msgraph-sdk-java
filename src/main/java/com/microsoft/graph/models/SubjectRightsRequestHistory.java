@@ -9,22 +9,36 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Identity of the user who changed the  subject rights request. */
+    /**
+     * Identity of the user who changed the  subject rights request.
+     */
     private IdentitySet changedBy;
-    /** Data and time when the entity was changed. */
+    /**
+     * Data and time when the entity was changed.
+     */
     private OffsetDateTime eventDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue. */
+    /**
+     * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+     */
     private SubjectRightsRequestStage stage;
-    /** The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue. */
+    /**
+     * The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     */
     private SubjectRightsRequestStageStatus stageStatus;
-    /** Type of history. */
+    /**
+     * Type of history.
+     */
     private String type;
     /**
-     * Instantiates a new SubjectRightsRequestHistory and sets the default values.
+     * Instantiates a new subjectRightsRequestHistory and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -34,7 +48,7 @@ public class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubjectRightsRequestHistory
+     * @return a subjectRightsRequestHistory
      */
     @javax.annotation.Nonnull
     public static SubjectRightsRequestHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

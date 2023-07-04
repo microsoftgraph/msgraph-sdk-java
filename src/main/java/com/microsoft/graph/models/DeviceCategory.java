@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceCategory extends Entity implements Parsable {
-    /** Optional description for the device category. */
+    /**
+     * Optional description for the device category.
+     */
     private String description;
-    /** Display name for the device category. */
+    /**
+     * Display name for the device category.
+     */
     private String displayName;
     /**
      * Instantiates a new deviceCategory and sets the default values.

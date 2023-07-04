@@ -10,55 +10,105 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft. */
+    /**
+     * The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
+     */
     private PstnCallDurationSource callDurationSource;
-    /** Number dialed in E.164 format. */
+    /**
+     * Number dialed in E.164 format.
+     */
     private String calleeNumber;
-    /** Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format. */
+    /**
+     * Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
+     */
     private String callerNumber;
-    /** Call identifier. Not guaranteed to be unique. */
+    /**
+     * Call identifier. Not guaranteed to be unique.
+     */
     private String callId;
-    /** Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference. */
+    /**
+     * Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
+     */
     private String callType;
-    /** Amount of money or cost of the call that is charged to your account. */
+    /**
+     * Amount of money or cost of the call that is charged to your account.
+     */
     private BigDecimal charge;
-    /** ID of the audio conference. */
+    /**
+     * ID of the audio conference.
+     */
     private String conferenceId;
-    /** Connection fee price. */
+    /**
+     * Connection fee price.
+     */
     private BigDecimal connectionCharge;
-    /** Type of currency used to calculate the cost of the call. For details, see (ISO 4217. */
+    /**
+     * Type of currency used to calculate the cost of the call. For details, see (ISO 4217.
+     */
     private String currency;
-    /** Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location. */
+    /**
+     * Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
+     */
     private String destinationContext;
-    /** Country or region dialed. */
+    /**
+     * Country or region dialed.
+     */
     private String destinationName;
-    /** How long the call was connected, in seconds. */
+    /**
+     * How long the call was connected, in seconds.
+     */
     private Integer duration;
-    /** Call end time. */
+    /**
+     * Call end time.
+     */
     private OffsetDateTime endDateTime;
-    /** Unique call identifier. GUID. */
+    /**
+     * Unique call identifier. GUID.
+     */
     private String id;
-    /** User's phone number type, such as a service of toll-free number. */
+    /**
+     * User's phone number type, such as a service of toll-free number.
+     */
     private String inventoryType;
-    /** The license used for the call. */
+    /**
+     * The license used for the call.
+     */
     private String licenseCapability;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program. */
+    /**
+     * The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     */
     private String operator;
-    /** Call start time. */
+    /**
+     * Call start time.
+     */
     private OffsetDateTime startDateTime;
-    /** Country code of the tenant. For details, see ISO 3166-1 alpha-2. */
+    /**
+     * Country code of the tenant. For details, see ISO 3166-1 alpha-2.
+     */
     private String tenantCountryCode;
-    /** Country code of the user. For details, see ISO 3166-1 alpha-2. */
+    /**
+     * Country code of the user. For details, see ISO 3166-1 alpha-2.
+     */
     private String usageCountryCode;
-    /** Display name of the user. */
+    /**
+     * Display name of the user.
+     */
     private String userDisplayName;
-    /** Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out). */
+    /**
+     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     */
     private String userId;
-    /** The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address. */
+    /**
+     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new pstnCallLogRow and sets the default values.

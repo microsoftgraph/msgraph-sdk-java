@@ -33,52 +33,72 @@ import java.util.Objects;
  * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
  */
 public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the axes property of the microsoft.graph.workbookChart entity. */
+    /**
+     * Provides operations to manage the axes property of the microsoft.graph.workbookChart entity.
+     */
     @javax.annotation.Nonnull
     public AxesRequestBuilder axes() {
         return new AxesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the dataLabels property of the microsoft.graph.workbookChart entity. */
+    /**
+     * Provides operations to manage the dataLabels property of the microsoft.graph.workbookChart entity.
+     */
     @javax.annotation.Nonnull
     public DataLabelsRequestBuilder dataLabels() {
         return new DataLabelsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the format property of the microsoft.graph.workbookChart entity. */
+    /**
+     * Provides operations to manage the format property of the microsoft.graph.workbookChart entity.
+     */
     @javax.annotation.Nonnull
     public FormatRequestBuilder format() {
         return new FormatRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the image method. */
+    /**
+     * Provides operations to call the image method.
+     */
     @javax.annotation.Nonnull
     public ImageRequestBuilder image() {
         return new ImageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the legend property of the microsoft.graph.workbookChart entity. */
+    /**
+     * Provides operations to manage the legend property of the microsoft.graph.workbookChart entity.
+     */
     @javax.annotation.Nonnull
     public LegendRequestBuilder legend() {
         return new LegendRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the series property of the microsoft.graph.workbookChart entity. */
+    /**
+     * Provides operations to manage the series property of the microsoft.graph.workbookChart entity.
+     */
     @javax.annotation.Nonnull
     public SeriesRequestBuilder series() {
         return new SeriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setData method. */
+    /**
+     * Provides operations to call the setData method.
+     */
     @javax.annotation.Nonnull
     public SetDataRequestBuilder setData() {
         return new SetDataRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setPosition method. */
+    /**
+     * Provides operations to call the setPosition method.
+     */
     @javax.annotation.Nonnull
     public SetPositionRequestBuilder setPosition() {
         return new SetPositionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the title property of the microsoft.graph.workbookChart entity. */
+    /**
+     * Provides operations to manage the title property of the microsoft.graph.workbookChart entity.
+     */
     @javax.annotation.Nonnull
     public TitleRequestBuilder title() {
         return new TitleRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the worksheet property of the microsoft.graph.workbookChart entity. */
+    /**
+     * Provides operations to manage the worksheet property of the microsoft.graph.workbookChart entity.
+     */
     @javax.annotation.Nonnull
     public WorksheetRequestBuilder worksheet() {
         return new WorksheetRequestBuilder(pathParameters, requestAdapter);
@@ -356,11 +376,15 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of chart object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -369,7 +393,9 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

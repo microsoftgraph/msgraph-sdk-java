@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the authenticationStrength property of the microsoft.graph.conditionalAccessRoot entity.
  */
 public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the authenticationMethodModes property of the microsoft.graph.authenticationStrengthRoot entity. */
+    /**
+     * Provides operations to manage the authenticationMethodModes property of the microsoft.graph.authenticationStrengthRoot entity.
+     */
     @javax.annotation.Nonnull
     public AuthenticationMethodModesRequestBuilder authenticationMethodModes() {
         return new AuthenticationMethodModesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the policies property of the microsoft.graph.authenticationStrengthRoot entity. */
+    /**
+     * Provides operations to manage the policies property of the microsoft.graph.authenticationStrengthRoot entity.
+     */
     @javax.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -263,11 +267,15 @@ public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
      * Get authenticationStrength from identity
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -276,7 +284,9 @@ public class AuthenticationStrengthRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

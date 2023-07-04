@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlteredQueryToken implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Defines the length of a changed segment. */
+    /**
+     * Defines the length of a changed segment.
+     */
     private Integer length;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Defines the offset of a changed segment. */
+    /**
+     * Defines the offset of a changed segment.
+     */
     private Integer offset;
-    /** Represents the corrected segment string. */
+    /**
+     * Represents the corrected segment string.
+     */
     private String suggestion;
     /**
      * Instantiates a new AlteredQueryToken and sets the default values.

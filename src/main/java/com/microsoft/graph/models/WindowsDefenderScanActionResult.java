@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDefenderScanActionResult extends DeviceActionResult implements Parsable {
-    /** Scan type either full scan or quick scan */
+    /**
+     * Scan type either full scan or quick scan
+     */
     private String scanType;
     /**
      * Instantiates a new WindowsDefenderScanActionResult and sets the default values.

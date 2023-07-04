@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Specifies what level of safe search (filtering adult content) is required */
+/**
+ * Specifies what level of safe search (filtering adult content) is required
+ */
 public enum SafeSearchFilterType implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),

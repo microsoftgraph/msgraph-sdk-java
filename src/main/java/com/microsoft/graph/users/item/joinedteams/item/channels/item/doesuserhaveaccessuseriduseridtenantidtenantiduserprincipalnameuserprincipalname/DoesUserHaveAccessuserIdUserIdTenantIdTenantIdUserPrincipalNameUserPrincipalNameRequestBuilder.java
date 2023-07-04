@@ -108,13 +108,19 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
      * Invoke function doesUserHaveAccess
      */
     public class GetQueryParameters {
-        /** Usage: tenantId='@tenantId' */
+        /**
+         * Usage: tenantId='@tenantId'
+         */
         @javax.annotation.Nullable
         public String tenantId;
-        /** Usage: userId='@userId' */
+        /**
+         * Usage: userId='@userId'
+         */
         @javax.annotation.Nullable
         public String userId;
-        /** Usage: userPrincipalName='@userPrincipalName' */
+        /**
+         * Usage: userPrincipalName='@userPrincipalName'
+         */
         @javax.annotation.Nullable
         public String userPrincipalName;
     }
@@ -122,7 +128,9 @@ public class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUser
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

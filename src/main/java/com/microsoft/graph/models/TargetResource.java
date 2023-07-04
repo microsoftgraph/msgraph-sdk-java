@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetResource implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates the visible name defined for the resource. Typically specified when the resource is created. */
+    /**
+     * Indicates the visible name defined for the resource. Typically specified when the resource is created.
+     */
     private String displayName;
-    /** When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue */
+    /**
+     * When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     */
     private GroupType groupType;
-    /** Indicates the unique ID of the resource. */
+    /**
+     * Indicates the unique ID of the resource.
+     */
     private String id;
-    /** Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type. */
+    /**
+     * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
+     */
     private java.util.List<ModifiedProperty> modifiedProperties;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User. */
+    /**
+     * Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
+     */
     private String type;
-    /** When type is set to User, this includes the user name that initiated the action; null for other types. */
+    /**
+     * When type is set to User, this includes the user name that initiated the action; null for other types.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new targetResource and sets the default values.
