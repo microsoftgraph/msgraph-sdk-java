@@ -8,33 +8,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeDefinition implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The anchor property */
+    /**
+     * The anchor property
+     */
     private Boolean anchor;
-    /** The apiExpressions property */
+    /**
+     * The apiExpressions property
+     */
     private java.util.List<StringKeyStringValuePair> apiExpressions;
-    /** The caseExact property */
+    /**
+     * The caseExact property
+     */
     private Boolean caseExact;
-    /** The defaultValue property */
+    /**
+     * The defaultValue property
+     */
     private String defaultValue;
-    /** The flowNullValues property */
+    /**
+     * The flowNullValues property
+     */
     private Boolean flowNullValues;
-    /** The metadata property */
+    /**
+     * The metadata property
+     */
     private java.util.List<AttributeDefinitionMetadataEntry> metadata;
-    /** The multivalued property */
+    /**
+     * The multivalued property
+     */
     private Boolean multivalued;
-    /** The mutability property */
+    /**
+     * The mutability property
+     */
     private Mutability mutability;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The referencedObjects property */
+    /**
+     * The referencedObjects property
+     */
     private java.util.List<ReferencedObject> referencedObjects;
-    /** The required property */
+    /**
+     * The required property
+     */
     private Boolean required;
-    /** The type property */
+    /**
+     * The type property
+     */
     private AttributeType type;
     /**
      * Instantiates a new attributeDefinition and sets the default values.

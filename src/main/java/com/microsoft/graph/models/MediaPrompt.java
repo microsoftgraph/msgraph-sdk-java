@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MediaPrompt extends Prompt implements Parsable {
-    /** The mediaInfo property */
+    /**
+     * The mediaInfo property
+     */
     private MediaInfo mediaInfo;
     /**
      * Instantiates a new MediaPrompt and sets the default values.

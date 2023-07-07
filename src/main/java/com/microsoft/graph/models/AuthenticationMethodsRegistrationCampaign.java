@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Users and groups of users that are excluded from being prompted to set up the authentication method. */
+    /**
+     * Users and groups of users that are excluded from being prompted to set up the authentication method.
+     */
     private java.util.List<ExcludeTarget> excludeTargets;
-    /** Users and groups of users that are prompted to set up the authentication method. */
+    /**
+     * Users and groups of users that are prompted to set up the authentication method.
+     */
     private java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> includeTargets;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt. */
+    /**
+     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
+     */
     private Integer snoozeDurationInDays;
-    /** The state property */
+    /**
+     * The state property
+     */
     private AdvancedConfigState state;
     /**
      * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.

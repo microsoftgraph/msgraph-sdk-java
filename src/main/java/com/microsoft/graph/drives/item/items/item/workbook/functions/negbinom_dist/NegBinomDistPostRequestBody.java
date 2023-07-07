@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NegBinomDistPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The cumulative property */
+    /**
+     * The cumulative property
+     */
     private Json cumulative;
-    /** The numberF property */
+    /**
+     * The numberF property
+     */
     private Json numberF;
-    /** The numberS property */
+    /**
+     * The numberS property
+     */
     private Json numberS;
-    /** The probabilityS property */
+    /**
+     * The probabilityS property
+     */
     private Json probabilityS;
     /**
      * Instantiates a new NegBinomDistPostRequestBody and sets the default values.

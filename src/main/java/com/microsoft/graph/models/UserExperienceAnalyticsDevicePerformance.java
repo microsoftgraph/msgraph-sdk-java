@@ -7,45 +7,85 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable {
-    /** Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999 */
+    /**
+     * Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
+     */
     private Double averageBlueScreens;
-    /** Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999 */
+    /**
+     * Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
+     */
     private Double averageRestarts;
-    /** Number of Blue Screens in the last 30 days. Valid values 0 to 9999999 */
+    /**
+     * Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
+     */
     private Integer blueScreenCount;
-    /** The user experience analytics device boot score. */
+    /**
+     * The user experience analytics device boot score.
+     */
     private Integer bootScore;
-    /** The user experience analytics device core boot time in milliseconds. */
+    /**
+     * The user experience analytics device core boot time in milliseconds.
+     */
     private Integer coreBootTimeInMs;
-    /** The user experience analytics device core login time in milliseconds. */
+    /**
+     * The user experience analytics device core login time in milliseconds.
+     */
     private Integer coreLoginTimeInMs;
-    /** User experience analytics summarized device count. */
+    /**
+     * User experience analytics summarized device count.
+     */
     private Long deviceCount;
-    /** The user experience analytics device name. */
+    /**
+     * The user experience analytics device name.
+     */
     private String deviceName;
-    /** The diskType property */
+    /**
+     * The diskType property
+     */
     private DiskType diskType;
-    /** The user experience analytics device group policy boot time in milliseconds. */
+    /**
+     * The user experience analytics device group policy boot time in milliseconds.
+     */
     private Integer groupPolicyBootTimeInMs;
-    /** The user experience analytics device group policy login time in milliseconds. */
+    /**
+     * The user experience analytics device group policy login time in milliseconds.
+     */
     private Integer groupPolicyLoginTimeInMs;
-    /** The healthStatus property */
+    /**
+     * The healthStatus property
+     */
     private UserExperienceAnalyticsHealthState healthStatus;
-    /** The user experience analytics device login score. */
+    /**
+     * The user experience analytics device login score.
+     */
     private Integer loginScore;
-    /** The user experience analytics device manufacturer. */
+    /**
+     * The user experience analytics device manufacturer.
+     */
     private String manufacturer;
-    /** The user experience analytics device model. */
+    /**
+     * The user experience analytics device model.
+     */
     private String model;
-    /** The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
+    /**
+     * The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
     private Double modelStartupPerformanceScore;
-    /** The user experience analytics device Operating System version. */
+    /**
+     * The user experience analytics device Operating System version.
+     */
     private String operatingSystemVersion;
-    /** The user experience analytics responsive desktop time in milliseconds. */
+    /**
+     * The user experience analytics responsive desktop time in milliseconds.
+     */
     private Integer responsiveDesktopTimeInMs;
-    /** Number of Restarts in the last 30 days. Valid values 0 to 9999999 */
+    /**
+     * Number of Restarts in the last 30 days. Valid values 0 to 9999999
+     */
     private Integer restartCount;
-    /** The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308 */
+    /**
+     * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
     private Double startupPerformanceScore;
     /**
      * Instantiates a new UserExperienceAnalyticsDevicePerformance and sets the default values.

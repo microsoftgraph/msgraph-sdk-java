@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServicePrincipalIdentity extends Identity implements Parsable {
-    /** The application identifier of the service principal. */
+    /**
+     * The application identifier of the service principal.
+     */
     private String appId;
     /**
      * Instantiates a new ServicePrincipalIdentity and sets the default values.

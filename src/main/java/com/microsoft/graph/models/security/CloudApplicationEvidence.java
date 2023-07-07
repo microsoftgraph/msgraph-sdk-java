@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudApplicationEvidence extends AlertEvidence implements Parsable {
-    /** Unique identifier of the application. */
+    /**
+     * Unique identifier of the application.
+     */
     private Long appId;
-    /** Name of the application. */
+    /**
+     * Name of the application.
+     */
     private String displayName;
-    /** Identifier of the instance of the Software as a Service (SaaS) application. */
+    /**
+     * Identifier of the instance of the Software as a Service (SaaS) application.
+     */
     private Long instanceId;
-    /** Name of the instance of the SaaS application. */
+    /**
+     * Name of the instance of the SaaS application.
+     */
     private String instanceName;
-    /** The identifier of the SaaS application. */
+    /**
+     * The identifier of the SaaS application.
+     */
     private Long saasAppId;
     /**
      * Instantiates a new CloudApplicationEvidence and sets the default values.

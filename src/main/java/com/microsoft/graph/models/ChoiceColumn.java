@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChoiceColumn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If true, allows custom values that aren't in the configured choices. */
+    /**
+     * If true, allows custom values that aren't in the configured choices.
+     */
     private Boolean allowTextEntry;
-    /** The list of values available for this column. */
+    /**
+     * The list of values available for this column.
+     */
     private java.util.List<String> choices;
-    /** How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons */
+    /**
+     * How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
+     */
     private String displayAs;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new choiceColumn and sets the default values.

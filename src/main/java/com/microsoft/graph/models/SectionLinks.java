@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SectionLinks implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Opens the section in the OneNote native client if it's installed. */
+    /**
+     * Opens the section in the OneNote native client if it's installed.
+     */
     private ExternalLink oneNoteClientUrl;
-    /** Opens the section in OneNote on the web. */
+    /**
+     * Opens the section in OneNote on the web.
+     */
     private ExternalLink oneNoteWebUrl;
     /**
      * Instantiates a new sectionLinks and sets the default values.

@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The callbackUri property */
+    /**
+     * The callbackUri property
+     */
     private String callbackUri;
-    /** The reason property */
+    /**
+     * The reason property
+     */
     private RejectReason reason;
     /**
      * Instantiates a new rejectPostRequestBody and sets the default values.

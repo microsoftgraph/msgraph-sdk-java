@@ -110,7 +110,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
      */
     public class DeleteQueryParameters {
-        /** Delete Uri */
+        /**
+         * Delete Uri
+         */
         @QueryParameter(name = "%40id")
         @javax.annotation.Nullable
         public String id;
@@ -119,7 +121,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationSubmissionResource extends Entity implements Parsable {
-    /** Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource. */
+    /**
+     * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+     */
     private String assignmentResourceUrl;
-    /** Resource object. */
+    /**
+     * Resource object.
+     */
     private EducationResource resource;
     /**
      * Instantiates a new educationSubmissionResource and sets the default values.

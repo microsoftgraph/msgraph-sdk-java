@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintUsage extends Entity implements Parsable {
-    /** The completedBlackAndWhiteJobCount property */
+    /**
+     * The completedBlackAndWhiteJobCount property
+     */
     private Long completedBlackAndWhiteJobCount;
-    /** The completedColorJobCount property */
+    /**
+     * The completedColorJobCount property
+     */
     private Long completedColorJobCount;
-    /** The incompleteJobCount property */
+    /**
+     * The incompleteJobCount property
+     */
     private Long incompleteJobCount;
-    /** The usageDate property */
+    /**
+     * The usageDate property
+     */
     private LocalDate usageDate;
     /**
      * Instantiates a new printUsage and sets the default values.

@@ -10,15 +10,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PasswordCredentialConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The maxLifetime property */
+    /**
+     * The maxLifetime property
+     */
     private Period maxLifetime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null. */
+    /**
+     * Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
+     */
     private OffsetDateTime restrictForAppsCreatedAfterDateTime;
-    /** The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy. */
+    /**
+     * The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     */
     private AppCredentialRestrictionType restrictionType;
     /**
      * Instantiates a new passwordCredentialConfiguration and sets the default values.

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Windows Update Notification Display Options */
+/**
+ * Windows Update Notification Display Options
+ */
 public enum WindowsUpdateNotificationDisplayOption implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),

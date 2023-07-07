@@ -9,9 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The attachmentInfo property */
+    /**
+     * The attachmentInfo property
+     */
     private AttachmentInfo attachmentInfo;
     /**
      * Instantiates a new createUploadSessionPostRequestBody and sets the default values.

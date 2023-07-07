@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserConsentRequest extends Request implements Parsable {
-    /** Approval decisions associated with a request. */
+    /**
+     * Approval decisions associated with a request.
+     */
     private Approval approval;
-    /** The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby. */
+    /**
+     * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
+     */
     private String reason;
     /**
      * Instantiates a new UserConsentRequest and sets the default values.

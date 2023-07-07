@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LookupColumn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether multiple values can be selected from the source. */
+    /**
+     * Indicates whether multiple values can be selected from the source.
+     */
     private Boolean allowMultipleValues;
-    /** Indicates whether values in the column should be able to exceed the standard limit of 255 characters. */
+    /**
+     * Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
+     */
     private Boolean allowUnlimitedLength;
-    /** The name of the lookup source column. */
+    /**
+     * The name of the lookup source column.
+     */
     private String columnName;
-    /** The unique identifier of the lookup source list. */
+    /**
+     * The unique identifier of the lookup source list.
+     */
     private String listId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here. */
+    /**
+     * If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
+     */
     private String primaryLookupColumnId;
     /**
      * Instantiates a new lookupColumn and sets the default values.

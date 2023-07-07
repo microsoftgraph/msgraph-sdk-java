@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentitySet implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Optional. The application associated with this action. */
+    /**
+     * Optional. The application associated with this action.
+     */
     private Identity application;
-    /** Optional. The device associated with this action. */
+    /**
+     * Optional. The device associated with this action.
+     */
     private Identity device;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Optional. The user associated with this action. */
+    /**
+     * Optional. The user associated with this action.
+     */
     private Identity user;
     /**
      * Instantiates a new identitySet and sets the default values.

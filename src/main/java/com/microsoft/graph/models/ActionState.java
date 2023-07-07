@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** State of the action on the device */
+/**
+ * State of the action on the device
+ */
 public enum ActionState implements ValuedEnum {
     /** Not a valid action state */
     None("none"),

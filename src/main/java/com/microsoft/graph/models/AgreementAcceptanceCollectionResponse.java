@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AgreementAcceptanceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AgreementAcceptance> value;
     /**
      * Instantiates a new AgreementAcceptanceCollectionResponse and sets the default values.

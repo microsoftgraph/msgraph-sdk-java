@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The gracePeriodBeforeAccessRemoval property */
+    /**
+     * The gracePeriodBeforeAccessRemoval property
+     */
     private Period gracePeriodBeforeAccessRemoval;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The removeAccessWhenTargetLeavesAllowedTargets property */
+    /**
+     * The removeAccessWhenTargetLeavesAllowedTargets property
+     */
     private Boolean removeAccessWhenTargetLeavesAllowedTargets;
-    /** If set to true, automatic assignments will be created for targets in the allowed target scope. */
+    /**
+     * If set to true, automatic assignments will be created for targets in the allowed target scope.
+     */
     private Boolean requestAccessForAllowedTargets;
     /**
      * Instantiates a new accessPackageAutomaticRequestSettings and sets the default values.

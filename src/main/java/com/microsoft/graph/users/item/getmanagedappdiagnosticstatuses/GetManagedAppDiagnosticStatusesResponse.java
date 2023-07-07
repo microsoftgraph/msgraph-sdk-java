@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetManagedAppDiagnosticStatusesResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ManagedAppDiagnosticStatus> value;
     /**
      * Instantiates a new getManagedAppDiagnosticStatusesResponse and sets the default values.

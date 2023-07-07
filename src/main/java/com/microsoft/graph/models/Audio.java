@@ -8,41 +8,77 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Audio implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The title of the album for this audio file. */
+    /**
+     * The title of the album for this audio file.
+     */
     private String album;
-    /** The artist named on the album for the audio file. */
+    /**
+     * The artist named on the album for the audio file.
+     */
     private String albumArtist;
-    /** The performing artist for the audio file. */
+    /**
+     * The performing artist for the audio file.
+     */
     private String artist;
-    /** Bitrate expressed in kbps. */
+    /**
+     * Bitrate expressed in kbps.
+     */
     private Long bitrate;
-    /** The name of the composer of the audio file. */
+    /**
+     * The name of the composer of the audio file.
+     */
     private String composers;
-    /** Copyright information for the audio file. */
+    /**
+     * Copyright information for the audio file.
+     */
     private String copyright;
-    /** The number of the disc this audio file came from. */
+    /**
+     * The number of the disc this audio file came from.
+     */
     private Integer disc;
-    /** The total number of discs in this album. */
+    /**
+     * The total number of discs in this album.
+     */
     private Integer discCount;
-    /** Duration of the audio file, expressed in milliseconds */
+    /**
+     * Duration of the audio file, expressed in milliseconds
+     */
     private Long duration;
-    /** The genre of this audio file. */
+    /**
+     * The genre of this audio file.
+     */
     private String genre;
-    /** Indicates if the file is protected with digital rights management. */
+    /**
+     * Indicates if the file is protected with digital rights management.
+     */
     private Boolean hasDrm;
-    /** Indicates if the file is encoded with a variable bitrate. */
+    /**
+     * Indicates if the file is encoded with a variable bitrate.
+     */
     private Boolean isVariableBitrate;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The title of the audio file. */
+    /**
+     * The title of the audio file.
+     */
     private String title;
-    /** The number of the track on the original disc for this audio file. */
+    /**
+     * The number of the track on the original disc for this audio file.
+     */
     private Integer track;
-    /** The total number of tracks on the original disc for this audio file. */
+    /**
+     * The total number of tracks on the original disc for this audio file.
+     */
     private Integer trackCount;
-    /** The year the audio file was recorded. */
+    /**
+     * The year the audio file was recorded.
+     */
     private Integer year;
     /**
      * Instantiates a new audio and sets the default values.

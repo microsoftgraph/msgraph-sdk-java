@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
-    /** The URL of the management portal for the managed service. Read-only. */
+    /**
+     * The URL of the management portal for the managed service. Read-only.
+     */
     private String serviceManagementUrl;
-    /** The name of a managed service. Read-only. */
+    /**
+     * The name of a managed service. Read-only.
+     */
     private String serviceName;
     /**
      * Instantiates a new delegatedAdminServiceManagementDetail and sets the default values.

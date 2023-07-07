@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharedInsight extends Entity implements Parsable {
-    /** Details about the shared item. Read only. */
+    /**
+     * Details about the shared item. Read only.
+     */
     private SharingDetail lastShared;
-    /** The lastSharedMethod property */
+    /**
+     * The lastSharedMethod property
+     */
     private Entity lastSharedMethod;
-    /** Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem. */
+    /**
+     * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+     */
     private Entity resource;
-    /** Reference properties of the shared document, such as the url and type of the document. Read-only */
+    /**
+     * Reference properties of the shared document, such as the url and type of the document. Read-only
+     */
     private ResourceReference resourceReference;
-    /** Properties that you can use to visualize the document in your experience. Read-only */
+    /**
+     * Properties that you can use to visualize the document in your experience. Read-only
+     */
     private ResourceVisualization resourceVisualization;
-    /** The sharingHistory property */
+    /**
+     * The sharingHistory property
+     */
     private java.util.List<SharingDetail> sharingHistory;
     /**
      * Instantiates a new sharedInsight and sets the default values.

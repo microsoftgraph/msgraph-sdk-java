@@ -8,7 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetUserIdsWithFlaggedAppRegistrationResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<String> value;
     /**
      * Instantiates a new getUserIdsWithFlaggedAppRegistrationResponse and sets the default values.

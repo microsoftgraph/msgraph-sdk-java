@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Pin Character Requirements */
+/**
+ * Pin Character Requirements
+ */
 public enum WindowsInformationProtectionPinCharacterRequirements implements ValuedEnum {
     /** Not allow */
     NotAllow("notAllow"),

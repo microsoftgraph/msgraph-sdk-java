@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ReportRoot implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The dailyPrintUsageByPrinter property */
+    /**
+     * The dailyPrintUsageByPrinter property
+     */
     private java.util.List<PrintUsageByPrinter> dailyPrintUsageByPrinter;
-    /** The dailyPrintUsageByUser property */
+    /**
+     * The dailyPrintUsageByUser property
+     */
     private java.util.List<PrintUsageByUser> dailyPrintUsageByUser;
-    /** The monthlyPrintUsageByPrinter property */
+    /**
+     * The monthlyPrintUsageByPrinter property
+     */
     private java.util.List<PrintUsageByPrinter> monthlyPrintUsageByPrinter;
-    /** The monthlyPrintUsageByUser property */
+    /**
+     * The monthlyPrintUsageByUser property
+     */
     private java.util.List<PrintUsageByUser> monthlyPrintUsageByUser;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The security property */
+    /**
+     * The security property
+     */
     private SecurityReportsRoot security;
     /**
      * Instantiates a new ReportRoot and sets the default values.

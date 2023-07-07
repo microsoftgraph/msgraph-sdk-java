@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttachmentItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The type of attachment. Possible values are: file, item, reference. Required. */
+    /**
+     * The type of attachment. Possible values are: file, item, reference. Required.
+     */
     private AttachmentType attachmentType;
-    /** The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional. */
+    /**
+     * The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
+     */
     private String contentId;
-    /** The nature of the data in the attachment. Optional. */
+    /**
+     * The nature of the data in the attachment. Optional.
+     */
     private String contentType;
-    /** true if the attachment is an inline attachment; otherwise, false. Optional. */
+    /**
+     * true if the attachment is an inline attachment; otherwise, false. Optional.
+     */
     private Boolean isInline;
-    /** The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required. */
+    /**
+     * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The length of the attachment in bytes. Required. */
+    /**
+     * The length of the attachment in bytes. Required.
+     */
     private Long size;
     /**
      * Instantiates a new AttachmentItem and sets the default values.

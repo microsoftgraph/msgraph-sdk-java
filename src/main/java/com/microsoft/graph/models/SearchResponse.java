@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchResponse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A collection of search results. */
+    /**
+     * A collection of search results.
+     */
     private java.util.List<SearchHitsContainer> hitsContainers;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Provides information related to spelling corrections in the alteration response. */
+    /**
+     * Provides information related to spelling corrections in the alteration response.
+     */
     private AlterationResponse queryAlterationResponse;
-    /** A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates. */
+    /**
+     * A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
+     */
     private ResultTemplateDictionary resultTemplates;
-    /** Contains the search terms sent in the initial search query. */
+    /**
+     * Contains the search terms sent in the initial search query.
+     */
     private java.util.List<String> searchTerms;
     /**
      * Instantiates a new SearchResponse and sets the default values.

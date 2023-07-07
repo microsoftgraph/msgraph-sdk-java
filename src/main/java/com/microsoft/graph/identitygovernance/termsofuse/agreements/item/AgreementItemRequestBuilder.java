@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
  */
 public class AgreementItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the acceptances property of the microsoft.graph.agreement entity. */
+    /**
+     * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
+     */
     @javax.annotation.Nonnull
     public AcceptancesRequestBuilder acceptances() {
         return new AcceptancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the file property of the microsoft.graph.agreement entity. */
+    /**
+     * Provides operations to manage the file property of the microsoft.graph.agreement entity.
+     */
     @javax.annotation.Nonnull
     public FileRequestBuilder file() {
         return new FileRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the files property of the microsoft.graph.agreement entity. */
+    /**
+     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
+     */
     @javax.annotation.Nonnull
     public FilesRequestBuilder files() {
         return new FilesRequestBuilder(pathParameters, requestAdapter);
@@ -275,11 +281,15 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an agreement object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -288,7 +298,9 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

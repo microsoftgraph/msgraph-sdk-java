@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CalculatedColumn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** For dateTime output types, the format of the value. Must be one of dateOnly or dateTime. */
+    /**
+     * For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
+     */
     private String format;
-    /** The formula used to compute the value for this column. */
+    /**
+     * The formula used to compute the value for this column.
+     */
     private String formula;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text. */
+    /**
+     * The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
+     */
     private String outputType;
     /**
      * Instantiates a new calculatedColumn and sets the default values.
@@ -58,7 +68,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+     * Gets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -82,7 +92,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+     * Gets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -113,7 +123,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+     * Sets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
      * @param value Value to set for the format property.
      * @return a void
      */
@@ -140,7 +150,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+     * Sets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
      * @param value Value to set for the outputType property.
      * @return a void
      */

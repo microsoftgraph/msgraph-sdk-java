@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RequiredResourceAccess implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource. */
+    /**
+     * The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
+     */
     private java.util.List<ResourceAccess> resourceAccess;
-    /** The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application. */
+    /**
+     * The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
+     */
     private String resourceAppId;
     /**
      * Instantiates a new RequiredResourceAccess and sets the default values.

@@ -10,17 +10,29 @@ import java.util.Objects;
  * Device Compliance Policy State for a given device.
  */
 public class DeviceCompliancePolicyState extends Entity implements Parsable {
-    /** The name of the policy for this policyBase */
+    /**
+     * The name of the policy for this policyBase
+     */
     private String displayName;
-    /** Supported platform types for policies. */
+    /**
+     * Supported platform types for policies.
+     */
     private PolicyPlatformType platformType;
-    /** Count of how many setting a policy holds */
+    /**
+     * Count of how many setting a policy holds
+     */
     private Integer settingCount;
-    /** The settingStates property */
+    /**
+     * The settingStates property
+     */
     private java.util.List<DeviceCompliancePolicySettingState> settingStates;
-    /** The state property */
+    /**
+     * The state property
+     */
     private ComplianceStatus state;
-    /** The version of the policy */
+    /**
+     * The version of the policy
+     */
     private Integer version;
     /**
      * Instantiates a new deviceCompliancePolicyState and sets the default values.

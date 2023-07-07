@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PublicErrorDetail implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The error code. */
+    /**
+     * The error code.
+     */
     private String code;
-    /** The error message. */
+    /**
+     * The error message.
+     */
     private String message;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The target of the error. */
+    /**
+     * The target of the error.
+     */
     private String target;
     /**
      * Instantiates a new publicErrorDetail and sets the default values.

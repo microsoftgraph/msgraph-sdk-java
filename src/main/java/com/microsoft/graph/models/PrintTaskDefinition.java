@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintTaskDefinition extends Entity implements Parsable {
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private AppIdentity createdBy;
-    /** The name of the printTaskDefinition. */
+    /**
+     * The name of the printTaskDefinition.
+     */
     private String displayName;
-    /** A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only. */
+    /**
+     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     */
     private java.util.List<PrintTask> tasks;
     /**
      * Instantiates a new printTaskDefinition and sets the default values.

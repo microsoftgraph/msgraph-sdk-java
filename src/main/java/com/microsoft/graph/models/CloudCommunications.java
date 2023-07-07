@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudCommunications implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The callRecords property */
+    /**
+     * The callRecords property
+     */
     private java.util.List<CallRecord> callRecords;
-    /** The calls property */
+    /**
+     * The calls property
+     */
     private java.util.List<Call> calls;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The onlineMeetings property */
+    /**
+     * The onlineMeetings property
+     */
     private java.util.List<OnlineMeeting> onlineMeetings;
-    /** The presences property */
+    /**
+     * The presences property
+     */
     private java.util.List<Presence> presences;
     /**
      * Instantiates a new CloudCommunications and sets the default values.

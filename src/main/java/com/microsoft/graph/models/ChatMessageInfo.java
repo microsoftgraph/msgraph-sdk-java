@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageInfo extends Entity implements Parsable {
-    /** Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments. */
+    /**
+     * Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
+     */
     private ItemBody body;
-    /** Date time object representing the time at which message was created. */
+    /**
+     * Date time object representing the time at which message was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage. */
+    /**
+     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+     */
     private EventMessageDetail eventDetail;
-    /** Information about the sender of the message. */
+    /**
+     * Information about the sender of the message.
+     */
     private ChatMessageFromIdentitySet from;
-    /** If set to true, the original message has been deleted. */
+    /**
+     * If set to true, the original message has been deleted.
+     */
     private Boolean isDeleted;
-    /** The messageType property */
+    /**
+     * The messageType property
+     */
     private ChatMessageType messageType;
     /**
      * Instantiates a new chatMessageInfo and sets the default values.

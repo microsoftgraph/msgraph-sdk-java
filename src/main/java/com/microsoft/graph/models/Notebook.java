@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
-    /** Indicates whether this is the user's default notebook. Read-only. */
+    /**
+     * Indicates whether this is the user's default notebook. Read-only.
+     */
     private Boolean isDefault;
-    /** Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only. */
+    /**
+     * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
+     */
     private Boolean isShared;
-    /** Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web. */
+    /**
+     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
+     */
     private NotebookLinks links;
-    /** The section groups in the notebook. Read-only. Nullable. */
+    /**
+     * The section groups in the notebook. Read-only. Nullable.
+     */
     private java.util.List<SectionGroup> sectionGroups;
-    /** The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only. */
+    /**
+     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
+     */
     private String sectionGroupsUrl;
-    /** The sections in the notebook. Read-only. Nullable. */
+    /**
+     * The sections in the notebook. Read-only. Nullable.
+     */
     private java.util.List<OnenoteSection> sections;
-    /** The URL for the sections navigation property, which returns all the sections in the notebook. Read-only. */
+    /**
+     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
+     */
     private String sectionsUrl;
-    /** Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only. */
+    /**
+     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+     */
     private OnenoteUserRole userRole;
     /**
      * Instantiates a new Notebook and sets the default values.

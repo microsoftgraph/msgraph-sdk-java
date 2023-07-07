@@ -11,17 +11,29 @@ import java.util.Objects;
  * A class containing the properties for Audit Resource.
  */
 public class AuditResource implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Audit resource's type. */
+    /**
+     * Audit resource's type.
+     */
     private String auditResourceType;
-    /** Display name. */
+    /**
+     * Display name.
+     */
     private String displayName;
-    /** List of modified properties. */
+    /**
+     * List of modified properties.
+     */
     private java.util.List<AuditProperty> modifiedProperties;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Audit resource's Id. */
+    /**
+     * Audit resource's Id.
+     */
     private String resourceId;
     /**
      * Instantiates a new auditResource and sets the default values.

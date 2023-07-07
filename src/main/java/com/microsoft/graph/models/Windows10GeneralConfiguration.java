@@ -8,407 +8,809 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsable {
-    /** Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account. */
+    /**
+     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
+     */
     private Boolean accountsBlockAddingNonMicrosoftAccountEmail;
-    /** Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only). */
+    /**
+     * Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
+     */
     private Boolean antiTheftModeBlocked;
-    /** State Management Setting. */
+    /**
+     * State Management Setting.
+     */
     private StateManagementSetting appsAllowTrustedAppsSideloading;
-    /** Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded. */
+    /**
+     * Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
+     */
     private Boolean appsBlockWindowsStoreOriginatedApps;
-    /** Specify a list of allowed Bluetooth services and profiles in hex formatted strings. */
+    /**
+     * Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
+     */
     private java.util.List<String> bluetoothAllowedServices;
-    /** Whether or not to Block the user from using bluetooth advertising. */
+    /**
+     * Whether or not to Block the user from using bluetooth advertising.
+     */
     private Boolean bluetoothBlockAdvertising;
-    /** Whether or not to Block the user from using bluetooth discoverable mode. */
+    /**
+     * Whether or not to Block the user from using bluetooth discoverable mode.
+     */
     private Boolean bluetoothBlockDiscoverableMode;
-    /** Whether or not to Block the user from using bluetooth. */
+    /**
+     * Whether or not to Block the user from using bluetooth.
+     */
     private Boolean bluetoothBlocked;
-    /** Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device. */
+    /**
+     * Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.
+     */
     private Boolean bluetoothBlockPrePairing;
-    /** Whether or not to Block the user from accessing the camera of the device. */
+    /**
+     * Whether or not to Block the user from accessing the camera of the device.
+     */
     private Boolean cameraBlocked;
-    /** Whether or not to Block the user from using data over cellular while roaming. */
+    /**
+     * Whether or not to Block the user from using data over cellular while roaming.
+     */
     private Boolean cellularBlockDataWhenRoaming;
-    /** Whether or not to Block the user from using VPN over cellular. */
+    /**
+     * Whether or not to Block the user from using VPN over cellular.
+     */
     private Boolean cellularBlockVpn;
-    /** Whether or not to Block the user from using VPN when roaming over cellular. */
+    /**
+     * Whether or not to Block the user from using VPN when roaming over cellular.
+     */
     private Boolean cellularBlockVpnWhenRoaming;
-    /** Whether or not to Block the user from doing manual root certificate installation. */
+    /**
+     * Whether or not to Block the user from doing manual root certificate installation.
+     */
     private Boolean certificatesBlockManualRootCertificateInstallation;
-    /** Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences. */
+    /**
+     * Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
+     */
     private Boolean connectedDevicesServiceBlocked;
-    /** Whether or not to Block the user from using copy paste. */
+    /**
+     * Whether or not to Block the user from using copy paste.
+     */
     private Boolean copyPasteBlocked;
-    /** Whether or not to Block the user from using Cortana. */
+    /**
+     * Whether or not to Block the user from using Cortana.
+     */
     private Boolean cortanaBlocked;
-    /** Whether or not to block end user access to Defender. */
+    /**
+     * Whether or not to block end user access to Defender.
+     */
     private Boolean defenderBlockEndUserAccess;
-    /** Possible values of Cloud Block Level */
+    /**
+     * Possible values of Cloud Block Level
+     */
     private DefenderCloudBlockLevelType defenderCloudBlockLevel;
-    /** Number of days before deleting quarantined malware. Valid values 0 to 90 */
+    /**
+     * Number of days before deleting quarantined malware. Valid values 0 to 90
+     */
     private Integer defenderDaysBeforeDeletingQuarantinedMalware;
-    /** Gets or sets Defenders actions to take on detected Malware per threat level. */
+    /**
+     * Gets or sets Defenders actions to take on detected Malware per threat level.
+     */
     private DefenderDetectedMalwareActions defenderDetectedMalwareActions;
-    /** File extensions to exclude from scans and real time protection. */
+    /**
+     * File extensions to exclude from scans and real time protection.
+     */
     private java.util.List<String> defenderFileExtensionsToExclude;
-    /** Files and folder to exclude from scans and real time protection. */
+    /**
+     * Files and folder to exclude from scans and real time protection.
+     */
     private java.util.List<String> defenderFilesAndFoldersToExclude;
-    /** Possible values for monitoring file activity. */
+    /**
+     * Possible values for monitoring file activity.
+     */
     private DefenderMonitorFileActivity defenderMonitorFileActivity;
-    /** Processes to exclude from scans and real time protection. */
+    /**
+     * Processes to exclude from scans and real time protection.
+     */
     private java.util.List<String> defenderProcessesToExclude;
-    /** Possible values for prompting user for samples submission. */
+    /**
+     * Possible values for prompting user for samples submission.
+     */
     private DefenderPromptForSampleSubmission defenderPromptForSampleSubmission;
-    /** Indicates whether or not to require behavior monitoring. */
+    /**
+     * Indicates whether or not to require behavior monitoring.
+     */
     private Boolean defenderRequireBehaviorMonitoring;
-    /** Indicates whether or not to require cloud protection. */
+    /**
+     * Indicates whether or not to require cloud protection.
+     */
     private Boolean defenderRequireCloudProtection;
-    /** Indicates whether or not to require network inspection system. */
+    /**
+     * Indicates whether or not to require network inspection system.
+     */
     private Boolean defenderRequireNetworkInspectionSystem;
-    /** Indicates whether or not to require real time monitoring. */
+    /**
+     * Indicates whether or not to require real time monitoring.
+     */
     private Boolean defenderRequireRealTimeMonitoring;
-    /** Indicates whether or not to scan archive files. */
+    /**
+     * Indicates whether or not to scan archive files.
+     */
     private Boolean defenderScanArchiveFiles;
-    /** Indicates whether or not to scan downloads. */
+    /**
+     * Indicates whether or not to scan downloads.
+     */
     private Boolean defenderScanDownloads;
-    /** Indicates whether or not to scan incoming mail messages. */
+    /**
+     * Indicates whether or not to scan incoming mail messages.
+     */
     private Boolean defenderScanIncomingMail;
-    /** Indicates whether or not to scan mapped network drives during full scan. */
+    /**
+     * Indicates whether or not to scan mapped network drives during full scan.
+     */
     private Boolean defenderScanMappedNetworkDrivesDuringFullScan;
-    /** Max CPU usage percentage during scan. Valid values 0 to 100 */
+    /**
+     * Max CPU usage percentage during scan. Valid values 0 to 100
+     */
     private Integer defenderScanMaxCpu;
-    /** Indicates whether or not to scan files opened from a network folder. */
+    /**
+     * Indicates whether or not to scan files opened from a network folder.
+     */
     private Boolean defenderScanNetworkFiles;
-    /** Indicates whether or not to scan removable drives during full scan. */
+    /**
+     * Indicates whether or not to scan removable drives during full scan.
+     */
     private Boolean defenderScanRemovableDrivesDuringFullScan;
-    /** Indicates whether or not to scan scripts loaded in Internet Explorer browser. */
+    /**
+     * Indicates whether or not to scan scripts loaded in Internet Explorer browser.
+     */
     private Boolean defenderScanScriptsLoadedInInternetExplorer;
-    /** Possible values for system scan type. */
+    /**
+     * Possible values for system scan type.
+     */
     private DefenderScanType defenderScanType;
-    /** The time to perform a daily quick scan. */
+    /**
+     * The time to perform a daily quick scan.
+     */
     private LocalTime defenderScheduledQuickScanTime;
-    /** The defender time for the system scan. */
+    /**
+     * The defender time for the system scan.
+     */
     private LocalTime defenderScheduledScanTime;
-    /** The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24 */
+    /**
+     * The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
+     */
     private Integer defenderSignatureUpdateIntervalInHours;
-    /** Possible values for a weekly schedule. */
+    /**
+     * Possible values for a weekly schedule.
+     */
     private WeeklySchedule defenderSystemScanSchedule;
-    /** State Management Setting. */
+    /**
+     * State Management Setting.
+     */
     private StateManagementSetting developerUnlockSetting;
-    /** Indicates whether or not to Block the user from resetting their phone. */
+    /**
+     * Indicates whether or not to Block the user from resetting their phone.
+     */
     private Boolean deviceManagementBlockFactoryResetOnMobile;
-    /** Indicates whether or not to Block the user from doing manual un-enrollment from device management. */
+    /**
+     * Indicates whether or not to Block the user from doing manual un-enrollment from device management.
+     */
     private Boolean deviceManagementBlockManualUnenroll;
-    /** Allow the device to send diagnostic and usage telemetry data, such as Watson. */
+    /**
+     * Allow the device to send diagnostic and usage telemetry data, such as Watson.
+     */
     private DiagnosticDataSubmissionMode diagnosticsDataSubmissionMode;
-    /** Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge. */
+    /**
+     * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
+     */
     private Boolean edgeAllowStartPagesModification;
-    /** Indicates whether or not to prevent access to about flags on Edge browser. */
+    /**
+     * Indicates whether or not to prevent access to about flags on Edge browser.
+     */
     private Boolean edgeBlockAccessToAboutFlags;
-    /** Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services. */
+    /**
+     * Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
+     */
     private Boolean edgeBlockAddressBarDropdown;
-    /** Indicates whether or not to block auto fill. */
+    /**
+     * Indicates whether or not to block auto fill.
+     */
     private Boolean edgeBlockAutofill;
-    /** Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues. */
+    /**
+     * Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
+     */
     private Boolean edgeBlockCompatibilityList;
-    /** Indicates whether or not to block developer tools in the Edge browser. */
+    /**
+     * Indicates whether or not to block developer tools in the Edge browser.
+     */
     private Boolean edgeBlockDeveloperTools;
-    /** Indicates whether or not to Block the user from using the Edge browser. */
+    /**
+     * Indicates whether or not to Block the user from using the Edge browser.
+     */
     private Boolean edgeBlocked;
-    /** Indicates whether or not to block extensions in the Edge browser. */
+    /**
+     * Indicates whether or not to block extensions in the Edge browser.
+     */
     private Boolean edgeBlockExtensions;
-    /** Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser. */
+    /**
+     * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
+     */
     private Boolean edgeBlockInPrivateBrowsing;
-    /** Indicates whether or not to Block the user from using JavaScript. */
+    /**
+     * Indicates whether or not to Block the user from using JavaScript.
+     */
     private Boolean edgeBlockJavaScript;
-    /** Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge. */
+    /**
+     * Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
+     */
     private Boolean edgeBlockLiveTileDataCollection;
-    /** Indicates whether or not to Block password manager. */
+    /**
+     * Indicates whether or not to Block password manager.
+     */
     private Boolean edgeBlockPasswordManager;
-    /** Indicates whether or not to block popups. */
+    /**
+     * Indicates whether or not to block popups.
+     */
     private Boolean edgeBlockPopups;
-    /** Indicates whether or not to block the user from using the search suggestions in the address bar. */
+    /**
+     * Indicates whether or not to block the user from using the search suggestions in the address bar.
+     */
     private Boolean edgeBlockSearchSuggestions;
-    /** Indicates whether or not to Block the user from sending the do not track header. */
+    /**
+     * Indicates whether or not to Block the user from sending the do not track header.
+     */
     private Boolean edgeBlockSendingDoNotTrackHeader;
-    /** Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead. */
+    /**
+     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
+     */
     private Boolean edgeBlockSendingIntranetTrafficToInternetExplorer;
-    /** Clear browsing data on exiting Microsoft Edge. */
+    /**
+     * Clear browsing data on exiting Microsoft Edge.
+     */
     private Boolean edgeClearBrowsingDataOnExit;
-    /** Possible values to specify which cookies are allowed in Microsoft Edge. */
+    /**
+     * Possible values to specify which cookies are allowed in Microsoft Edge.
+     */
     private EdgeCookiePolicy edgeCookiePolicy;
-    /** Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page. */
+    /**
+     * Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
+     */
     private Boolean edgeDisableFirstRunPage;
-    /** Indicates the enterprise mode site list location. Could be a local file, local network or http location. */
+    /**
+     * Indicates the enterprise mode site list location. Could be a local file, local network or http location.
+     */
     private String edgeEnterpriseModeSiteListLocation;
-    /** The first run URL for when Edge browser is opened for the first time. */
+    /**
+     * The first run URL for when Edge browser is opened for the first time.
+     */
     private String edgeFirstRunUrl;
-    /** The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser. */
+    /**
+     * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
+     */
     private java.util.List<String> edgeHomepageUrls;
-    /** Indicates whether or not to Require the user to use the smart screen filter. */
+    /**
+     * Indicates whether or not to Require the user to use the smart screen filter.
+     */
     private Boolean edgeRequireSmartScreen;
-    /** Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set. */
+    /**
+     * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
+     */
     private EdgeSearchEngineBase edgeSearchEngine;
-    /** Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. */
+    /**
+     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
+     */
     private Boolean edgeSendIntranetTrafficToInternetExplorer;
-    /** Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers. */
+    /**
+     * Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
+     */
     private Boolean edgeSyncFavoritesWithInternetExplorer;
-    /** Endpoint for discovering cloud printers. */
+    /**
+     * Endpoint for discovering cloud printers.
+     */
     private String enterpriseCloudPrintDiscoveryEndPoint;
-    /** Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535 */
+    /**
+     * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
+     */
     private Integer enterpriseCloudPrintDiscoveryMaxLimit;
-    /** OAuth resource URI for printer discovery service as configured in Azure portal. */
+    /**
+     * OAuth resource URI for printer discovery service as configured in Azure portal.
+     */
     private String enterpriseCloudPrintMopriaDiscoveryResourceIdentifier;
-    /** Authentication endpoint for acquiring OAuth tokens. */
+    /**
+     * Authentication endpoint for acquiring OAuth tokens.
+     */
     private String enterpriseCloudPrintOAuthAuthority;
-    /** GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority. */
+    /**
+     * GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
+     */
     private String enterpriseCloudPrintOAuthClientIdentifier;
-    /** OAuth resource URI for print service as configured in the Azure portal. */
+    /**
+     * OAuth resource URI for print service as configured in the Azure portal.
+     */
     private String enterpriseCloudPrintResourceIdentifier;
-    /** Indicates whether or not to enable device discovery UX. */
+    /**
+     * Indicates whether or not to enable device discovery UX.
+     */
     private Boolean experienceBlockDeviceDiscovery;
-    /** Indicates whether or not to allow the error dialog from displaying if no SIM card is detected. */
+    /**
+     * Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
+     */
     private Boolean experienceBlockErrorDialogWhenNoSIM;
-    /** Indicates whether or not to enable task switching on the device. */
+    /**
+     * Indicates whether or not to enable task switching on the device.
+     */
     private Boolean experienceBlockTaskSwitcher;
-    /** Indicates whether or not to block DVR and broadcasting. */
+    /**
+     * Indicates whether or not to block DVR and broadcasting.
+     */
     private Boolean gameDvrBlocked;
-    /** Indicates whether or not to Block the user from using internet sharing. */
+    /**
+     * Indicates whether or not to Block the user from using internet sharing.
+     */
     private Boolean internetSharingBlocked;
-    /** Indicates whether or not to Block the user from location services. */
+    /**
+     * Indicates whether or not to Block the user from location services.
+     */
     private Boolean locationServicesBlocked;
-    /** Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored. */
+    /**
+     * Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.
+     */
     private Boolean lockScreenAllowTimeoutConfiguration;
-    /** Indicates whether or not to block action center notifications over lock screen. */
+    /**
+     * Indicates whether or not to block action center notifications over lock screen.
+     */
     private Boolean lockScreenBlockActionCenterNotifications;
-    /** Indicates whether or not the user can interact with Cortana using speech while the system is locked. */
+    /**
+     * Indicates whether or not the user can interact with Cortana using speech while the system is locked.
+     */
     private Boolean lockScreenBlockCortana;
-    /** Indicates whether to allow toast notifications above the device lock screen. */
+    /**
+     * Indicates whether to allow toast notifications above the device lock screen.
+     */
     private Boolean lockScreenBlockToastNotifications;
-    /** Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800 */
+    /**
+     * Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800
+     */
     private Integer lockScreenTimeoutInSeconds;
-    /** Disables the ability to quickly switch between users that are logged on simultaneously without logging off. */
+    /**
+     * Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
+     */
     private Boolean logonBlockFastUserSwitching;
-    /** Indicates whether or not to Block a Microsoft account. */
+    /**
+     * Indicates whether or not to Block a Microsoft account.
+     */
     private Boolean microsoftAccountBlocked;
-    /** Indicates whether or not to Block Microsoft account settings sync. */
+    /**
+     * Indicates whether or not to Block Microsoft account settings sync.
+     */
     private Boolean microsoftAccountBlockSettingsSync;
-    /** If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM. */
+    /**
+     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
+     */
     private Boolean networkProxyApplySettingsDeviceWide;
-    /** Address to the proxy auto-config (PAC) script you want to use. */
+    /**
+     * Address to the proxy auto-config (PAC) script you want to use.
+     */
     private String networkProxyAutomaticConfigurationUrl;
-    /** Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script. */
+    /**
+     * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
+     */
     private Boolean networkProxyDisableAutoDetect;
-    /** Specifies manual proxy server settings. */
+    /**
+     * Specifies manual proxy server settings.
+     */
     private Windows10NetworkProxyServer networkProxyServer;
-    /** Indicates whether or not to Block the user from using near field communication. */
+    /**
+     * Indicates whether or not to Block the user from using near field communication.
+     */
     private Boolean nfcBlocked;
-    /** Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive. */
+    /**
+     * Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
+     */
     private Boolean oneDriveDisableFileSync;
-    /** Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords. */
+    /**
+     * Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
+     */
     private Boolean passwordBlockSimple;
-    /** The password expiration in days. Valid values 0 to 730 */
+    /**
+     * The password expiration in days. Valid values 0 to 730
+     */
     private Integer passwordExpirationDays;
-    /** The number of character sets required in the password. */
+    /**
+     * The number of character sets required in the password.
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** The minimum password length. Valid values 4 to 16 */
+    /**
+     * The minimum password length. Valid values 4 to 16
+     */
     private Integer passwordMinimumLength;
-    /** The minutes of inactivity before the screen times out. */
+    /**
+     * The minutes of inactivity before the screen times out.
+     */
     private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /** The number of previous passwords to prevent reuse of. Valid values 0 to 50 */
+    /**
+     * The number of previous passwords to prevent reuse of. Valid values 0 to 50
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Indicates whether or not to require the user to have a password. */
+    /**
+     * Indicates whether or not to require the user to have a password.
+     */
     private Boolean passwordRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
-    /** Indicates whether or not to require a password upon resuming from an idle state. */
+    /**
+     * Indicates whether or not to require a password upon resuming from an idle state.
+     */
     private Boolean passwordRequireWhenResumeFromIdleState;
-    /** The number of sign in failures before factory reset. Valid values 0 to 999 */
+    /**
+     * The number of sign in failures before factory reset. Valid values 0 to 999
+     */
     private Integer passwordSignInFailureCountBeforeFactoryReset;
-    /** A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image. */
+    /**
+     * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
+     */
     private String personalizationDesktopImageUrl;
-    /** A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image. */
+    /**
+     * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
+     */
     private String personalizationLockScreenImageUrl;
-    /** State Management Setting. */
+    /**
+     * State Management Setting.
+     */
     private StateManagementSetting privacyAdvertisingId;
-    /** Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps. */
+    /**
+     * Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps.
+     */
     private Boolean privacyAutoAcceptPairingAndConsentPrompts;
-    /** Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications. */
+    /**
+     * Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications.
+     */
     private Boolean privacyBlockInputPersonalization;
-    /** Indicates whether or not to Block the user from reset protection mode. */
+    /**
+     * Indicates whether or not to Block the user from reset protection mode.
+     */
     private Boolean resetProtectionModeBlocked;
-    /** Specifies what level of safe search (filtering adult content) is required */
+    /**
+     * Specifies what level of safe search (filtering adult content) is required
+     */
     private SafeSearchFilterType safeSearchFilter;
-    /** Indicates whether or not to Block the user from taking Screenshots. */
+    /**
+     * Indicates whether or not to Block the user from taking Screenshots.
+     */
     private Boolean screenCaptureBlocked;
-    /** Specifies if search can use diacritics. */
+    /**
+     * Specifies if search can use diacritics.
+     */
     private Boolean searchBlockDiacritics;
-    /** Specifies whether to use automatic language detection when indexing content and properties. */
+    /**
+     * Specifies whether to use automatic language detection when indexing content and properties.
+     */
     private Boolean searchDisableAutoLanguageDetection;
-    /** Indicates whether or not to disable the search indexer backoff feature. */
+    /**
+     * Indicates whether or not to disable the search indexer backoff feature.
+     */
     private Boolean searchDisableIndexerBackoff;
-    /** Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer. */
+    /**
+     * Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
+     */
     private Boolean searchDisableIndexingEncryptedItems;
-    /** Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed. */
+    /**
+     * Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
+     */
     private Boolean searchDisableIndexingRemovableDrive;
-    /** Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops. */
+    /**
+     * Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
+     */
     private Boolean searchEnableAutomaticIndexSizeManangement;
-    /** Indicates whether or not to block remote queries of this computers index. */
+    /**
+     * Indicates whether or not to block remote queries of this computers index.
+     */
     private Boolean searchEnableRemoteQueries;
-    /** Indicates whether or not to block access to Accounts in Settings app. */
+    /**
+     * Indicates whether or not to block access to Accounts in Settings app.
+     */
     private Boolean settingsBlockAccountsPage;
-    /** Indicates whether or not to block the user from installing provisioning packages. */
+    /**
+     * Indicates whether or not to block the user from installing provisioning packages.
+     */
     private Boolean settingsBlockAddProvisioningPackage;
-    /** Indicates whether or not to block access to Apps in Settings app. */
+    /**
+     * Indicates whether or not to block access to Apps in Settings app.
+     */
     private Boolean settingsBlockAppsPage;
-    /** Indicates whether or not to block the user from changing the language settings. */
+    /**
+     * Indicates whether or not to block the user from changing the language settings.
+     */
     private Boolean settingsBlockChangeLanguage;
-    /** Indicates whether or not to block the user from changing power and sleep settings. */
+    /**
+     * Indicates whether or not to block the user from changing power and sleep settings.
+     */
     private Boolean settingsBlockChangePowerSleep;
-    /** Indicates whether or not to block the user from changing the region settings. */
+    /**
+     * Indicates whether or not to block the user from changing the region settings.
+     */
     private Boolean settingsBlockChangeRegion;
-    /** Indicates whether or not to block the user from changing date and time settings. */
+    /**
+     * Indicates whether or not to block the user from changing date and time settings.
+     */
     private Boolean settingsBlockChangeSystemTime;
-    /** Indicates whether or not to block access to Devices in Settings app. */
+    /**
+     * Indicates whether or not to block access to Devices in Settings app.
+     */
     private Boolean settingsBlockDevicesPage;
-    /** Indicates whether or not to block access to Ease of Access in Settings app. */
+    /**
+     * Indicates whether or not to block access to Ease of Access in Settings app.
+     */
     private Boolean settingsBlockEaseOfAccessPage;
-    /** Indicates whether or not to block the user from editing the device name. */
+    /**
+     * Indicates whether or not to block the user from editing the device name.
+     */
     private Boolean settingsBlockEditDeviceName;
-    /** Indicates whether or not to block access to Gaming in Settings app. */
+    /**
+     * Indicates whether or not to block access to Gaming in Settings app.
+     */
     private Boolean settingsBlockGamingPage;
-    /** Indicates whether or not to block access to Network & Internet in Settings app. */
+    /**
+     * Indicates whether or not to block access to Network & Internet in Settings app.
+     */
     private Boolean settingsBlockNetworkInternetPage;
-    /** Indicates whether or not to block access to Personalization in Settings app. */
+    /**
+     * Indicates whether or not to block access to Personalization in Settings app.
+     */
     private Boolean settingsBlockPersonalizationPage;
-    /** Indicates whether or not to block access to Privacy in Settings app. */
+    /**
+     * Indicates whether or not to block access to Privacy in Settings app.
+     */
     private Boolean settingsBlockPrivacyPage;
-    /** Indicates whether or not to block the runtime configuration agent from removing provisioning packages. */
+    /**
+     * Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
+     */
     private Boolean settingsBlockRemoveProvisioningPackage;
-    /** Indicates whether or not to block access to Settings app. */
+    /**
+     * Indicates whether or not to block access to Settings app.
+     */
     private Boolean settingsBlockSettingsApp;
-    /** Indicates whether or not to block access to System in Settings app. */
+    /**
+     * Indicates whether or not to block access to System in Settings app.
+     */
     private Boolean settingsBlockSystemPage;
-    /** Indicates whether or not to block access to Time & Language in Settings app. */
+    /**
+     * Indicates whether or not to block access to Time & Language in Settings app.
+     */
     private Boolean settingsBlockTimeLanguagePage;
-    /** Indicates whether or not to block access to Update & Security in Settings app. */
+    /**
+     * Indicates whether or not to block access to Update & Security in Settings app.
+     */
     private Boolean settingsBlockUpdateSecurityPage;
-    /** Indicates whether or not to block multiple users of the same app to share data. */
+    /**
+     * Indicates whether or not to block multiple users of the same app to share data.
+     */
     private Boolean sharedUserAppDataAllowed;
-    /** Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites. */
+    /**
+     * Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
+     */
     private Boolean smartScreenBlockPromptOverride;
-    /** Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files */
+    /**
+     * Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
+     */
     private Boolean smartScreenBlockPromptOverrideForFiles;
-    /** This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store. */
+    /**
+     * This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+     */
     private Boolean smartScreenEnableAppInstallControl;
-    /** Indicates whether or not to block the user from unpinning apps from taskbar. */
+    /**
+     * Indicates whether or not to block the user from unpinning apps from taskbar.
+     */
     private Boolean startBlockUnpinningAppsFromTaskbar;
-    /** Type of start menu app list visibility. */
+    /**
+     * Type of start menu app list visibility.
+     */
     private WindowsStartMenuAppListVisibilityType startMenuAppListVisibility;
-    /** Enabling this policy hides the change account setting from appearing in the user tile in the start menu. */
+    /**
+     * Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
+     */
     private Boolean startMenuHideChangeAccountSettings;
-    /** Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app. */
+    /**
+     * Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
+     */
     private Boolean startMenuHideFrequentlyUsedApps;
-    /** Enabling this policy hides hibernate from appearing in the power button in the start menu. */
+    /**
+     * Enabling this policy hides hibernate from appearing in the power button in the start menu.
+     */
     private Boolean startMenuHideHibernate;
-    /** Enabling this policy hides lock from appearing in the user tile in the start menu. */
+    /**
+     * Enabling this policy hides lock from appearing in the user tile in the start menu.
+     */
     private Boolean startMenuHideLock;
-    /** Enabling this policy hides the power button from appearing in the start menu. */
+    /**
+     * Enabling this policy hides the power button from appearing in the start menu.
+     */
     private Boolean startMenuHidePowerButton;
-    /** Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app. */
+    /**
+     * Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app.
+     */
     private Boolean startMenuHideRecentJumpLists;
-    /** Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app. */
+    /**
+     * Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
+     */
     private Boolean startMenuHideRecentlyAddedApps;
-    /** Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu. */
+    /**
+     * Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
+     */
     private Boolean startMenuHideRestartOptions;
-    /** Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu. */
+    /**
+     * Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.
+     */
     private Boolean startMenuHideShutDown;
-    /** Enabling this policy hides sign out from appearing in the user tile in the start menu. */
+    /**
+     * Enabling this policy hides sign out from appearing in the user tile in the start menu.
+     */
     private Boolean startMenuHideSignOut;
-    /** Enabling this policy hides sleep from appearing in the power button in the start menu. */
+    /**
+     * Enabling this policy hides sleep from appearing in the power button in the start menu.
+     */
     private Boolean startMenuHideSleep;
-    /** Enabling this policy hides switch account from appearing in the user tile in the start menu. */
+    /**
+     * Enabling this policy hides switch account from appearing in the user tile in the start menu.
+     */
     private Boolean startMenuHideSwitchAccount;
-    /** Enabling this policy hides the user tile from appearing in the start menu. */
+    /**
+     * Enabling this policy hides the user tile from appearing in the start menu.
+     */
     private Boolean startMenuHideUserTile;
-    /** This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array. */
+    /**
+     * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
+     */
     private byte[] startMenuLayoutEdgeAssetsXml;
-    /** Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format. */
+    /**
+     * Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
+     */
     private byte[] startMenuLayoutXml;
-    /** Type of display modes for the start menu. */
+    /**
+     * Type of display modes for the start menu.
+     */
     private WindowsStartMenuModeType startMenuMode;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderDocuments;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderDownloads;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderFileExplorer;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderHomeGroup;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderMusic;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderNetwork;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderPersonalFolder;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderPictures;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderSettings;
-    /** Generic visibility state. */
+    /**
+     * Generic visibility state.
+     */
     private VisibilitySetting startMenuPinnedFolderVideos;
-    /** Indicates whether or not to Block the user from using removable storage. */
+    /**
+     * Indicates whether or not to Block the user from using removable storage.
+     */
     private Boolean storageBlockRemovableStorage;
-    /** Indicating whether or not to require encryption on a mobile device. */
+    /**
+     * Indicating whether or not to require encryption on a mobile device.
+     */
     private Boolean storageRequireMobileDeviceEncryption;
-    /** Indicates whether application data is restricted to the system drive. */
+    /**
+     * Indicates whether application data is restricted to the system drive.
+     */
     private Boolean storageRestrictAppDataToSystemVolume;
-    /** Indicates whether the installation of applications is restricted to the system drive. */
+    /**
+     * Indicates whether the installation of applications is restricted to the system drive.
+     */
     private Boolean storageRestrictAppInstallToSystemVolume;
-    /** Whether the device is required to connect to the network. */
+    /**
+     * Whether the device is required to connect to the network.
+     */
     private Boolean tenantLockdownRequireNetworkDuringOutOfBoxExperience;
-    /** Indicates whether or not to Block the user from USB connection. */
+    /**
+     * Indicates whether or not to Block the user from USB connection.
+     */
     private Boolean usbBlocked;
-    /** Indicates whether or not to Block the user from voice recording. */
+    /**
+     * Indicates whether or not to Block the user from voice recording.
+     */
     private Boolean voiceRecordingBlocked;
-    /** Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC */
+    /**
+     * Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
+     */
     private Boolean webRtcBlockLocalhostIpAddress;
-    /** Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked. */
+    /**
+     * Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
+     */
     private Boolean wiFiBlockAutomaticConnectHotspots;
-    /** Indicates whether or not to Block the user from using Wi-Fi. */
+    /**
+     * Indicates whether or not to Block the user from using Wi-Fi.
+     */
     private Boolean wiFiBlocked;
-    /** Indicates whether or not to Block the user from using Wi-Fi manual configuration. */
+    /**
+     * Indicates whether or not to Block the user from using Wi-Fi manual configuration.
+     */
     private Boolean wiFiBlockManualConfiguration;
-    /** Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500 */
+    /**
+     * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
+     */
     private Integer wiFiScanInterval;
-    /** Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles. */
+    /**
+     * Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles.
+     */
     private Boolean windowsSpotlightBlockConsumerSpecificFeatures;
-    /** Allows IT admins to turn off all Windows Spotlight features */
+    /**
+     * Allows IT admins to turn off all Windows Spotlight features
+     */
     private Boolean windowsSpotlightBlocked;
-    /** Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed */
+    /**
+     * Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed
+     */
     private Boolean windowsSpotlightBlockOnActionCenter;
-    /** Block personalized content in Windows spotlight based on users device usage. */
+    /**
+     * Block personalized content in Windows spotlight based on users device usage.
+     */
     private Boolean windowsSpotlightBlockTailoredExperiences;
-    /** Block third party content delivered via Windows Spotlight */
+    /**
+     * Block third party content delivered via Windows Spotlight
+     */
     private Boolean windowsSpotlightBlockThirdPartyNotifications;
-    /** Block Windows Spotlight Windows welcome experience */
+    /**
+     * Block Windows Spotlight Windows welcome experience
+     */
     private Boolean windowsSpotlightBlockWelcomeExperience;
-    /** Allows IT admins to turn off the popup of Windows Tips. */
+    /**
+     * Allows IT admins to turn off the popup of Windows Tips.
+     */
     private Boolean windowsSpotlightBlockWindowsTips;
-    /** Allows IT admind to set a predefined default search engine for MDM-Controlled devices */
+    /**
+     * Allows IT admind to set a predefined default search engine for MDM-Controlled devices
+     */
     private WindowsSpotlightEnablementSettings windowsSpotlightConfigureOnLockScreen;
-    /** Indicates whether or not to block automatic update of apps from Windows Store. */
+    /**
+     * Indicates whether or not to block automatic update of apps from Windows Store.
+     */
     private Boolean windowsStoreBlockAutoUpdate;
-    /** Indicates whether or not to Block the user from using the Windows store. */
+    /**
+     * Indicates whether or not to Block the user from using the Windows store.
+     */
     private Boolean windowsStoreBlocked;
-    /** Indicates whether or not to enable Private Store Only. */
+    /**
+     * Indicates whether or not to enable Private Store Only.
+     */
     private Boolean windowsStoreEnablePrivateStoreOnly;
-    /** Indicates whether or not to allow other devices from discovering this PC for projection. */
+    /**
+     * Indicates whether or not to allow other devices from discovering this PC for projection.
+     */
     private Boolean wirelessDisplayBlockProjectionToThisDevice;
-    /** Indicates whether or not to allow user input from wireless display receiver. */
+    /**
+     * Indicates whether or not to allow user input from wireless display receiver.
+     */
     private Boolean wirelessDisplayBlockUserInputFromReceiver;
-    /** Indicates whether or not to require a PIN for new devices to initiate pairing. */
+    /**
+     * Indicates whether or not to require a PIN for new devices to initiate pairing.
+     */
     private Boolean wirelessDisplayRequirePinForPairing;
     /**
      * Instantiates a new Windows10GeneralConfiguration and sets the default values.

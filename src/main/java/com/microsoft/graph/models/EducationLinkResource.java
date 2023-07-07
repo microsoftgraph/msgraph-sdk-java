@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationLinkResource extends EducationResource implements Parsable {
-    /** URL to the resource. */
+    /**
+     * URL to the resource.
+     */
     private String link;
     /**
      * Instantiates a new EducationLinkResource and sets the default values.

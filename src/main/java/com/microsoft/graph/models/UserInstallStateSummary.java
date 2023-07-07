@@ -10,15 +10,25 @@ import java.util.Objects;
  * Contains properties for the installation state summary for a user.
  */
 public class UserInstallStateSummary extends Entity implements Parsable {
-    /** The install state of the eBook. */
+    /**
+     * The install state of the eBook.
+     */
     private java.util.List<DeviceInstallState> deviceStates;
-    /** Failed Device Count. */
+    /**
+     * Failed Device Count.
+     */
     private Integer failedDeviceCount;
-    /** Installed Device Count. */
+    /**
+     * Installed Device Count.
+     */
     private Integer installedDeviceCount;
-    /** Not installed device count. */
+    /**
+     * Not installed device count.
+     */
     private Integer notInstalledDeviceCount;
-    /** User name. */
+    /**
+     * User name.
+     */
     private String userName;
     /**
      * Instantiates a new userInstallStateSummary and sets the default values.

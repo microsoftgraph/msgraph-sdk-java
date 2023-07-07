@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatMessageMention implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body. */
+    /**
+     * Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
+     */
     private Integer id;
-    /** The entity (user, application, team, or channel) that was @mentioned. */
+    /**
+     * The entity (user, application, team, or channel) that was @mentioned.
+     */
     private ChatMessageMentionedIdentitySet mentioned;
-    /** String used to represent the mention. For example, a user's display name, a team name. */
+    /**
+     * String used to represent the mention. For example, a user's display name, a team name.
+     */
     private String mentionText;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new chatMessageMention and sets the default values.

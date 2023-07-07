@@ -24,22 +24,30 @@ import java.util.Objects;
  * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
  */
 public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleAssignment entity. */
+    /**
+     * Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleAssignment entity.
+     */
     @javax.annotation.Nonnull
     public AppScopeRequestBuilder appScope() {
         return new AppScopeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleAssignment entity. */
+    /**
+     * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleAssignment entity.
+     */
     @javax.annotation.Nonnull
     public DirectoryScopeRequestBuilder directoryScope() {
         return new DirectoryScopeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the principal property of the microsoft.graph.unifiedRoleAssignment entity. */
+    /**
+     * Provides operations to manage the principal property of the microsoft.graph.unifiedRoleAssignment entity.
+     */
     @javax.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
         return new PrincipalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleAssignment entity. */
+    /**
+     * Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleAssignment entity.
+     */
     @javax.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
@@ -279,11 +287,15 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Retrieve the properties and relationships of a unifiedRoleAssignment object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -292,7 +304,9 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

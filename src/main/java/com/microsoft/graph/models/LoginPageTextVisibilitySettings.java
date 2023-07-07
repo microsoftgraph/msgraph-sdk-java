@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The hideAccountResetCredentials property */
+    /**
+     * The hideAccountResetCredentials property
+     */
     private Boolean hideAccountResetCredentials;
-    /** The hideCannotAccessYourAccount property */
+    /**
+     * The hideCannotAccessYourAccount property
+     */
     private Boolean hideCannotAccessYourAccount;
-    /** The hideForgotMyPassword property */
+    /**
+     * The hideForgotMyPassword property
+     */
     private Boolean hideForgotMyPassword;
-    /** The hidePrivacyAndCookies property */
+    /**
+     * The hidePrivacyAndCookies property
+     */
     private Boolean hidePrivacyAndCookies;
-    /** The hideResetItNow property */
+    /**
+     * The hideResetItNow property
+     */
     private Boolean hideResetItNow;
-    /** The hideTermsOfUse property */
+    /**
+     * The hideTermsOfUse property
+     */
     private Boolean hideTermsOfUse;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new loginPageTextVisibilitySettings and sets the default values.

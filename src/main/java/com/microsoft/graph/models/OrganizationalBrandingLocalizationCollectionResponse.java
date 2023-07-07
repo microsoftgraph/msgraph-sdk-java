@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizationalBrandingLocalizationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<OrganizationalBrandingLocalization> value;
     /**
      * Instantiates a new OrganizationalBrandingLocalizationCollectionResponse and sets the default values.

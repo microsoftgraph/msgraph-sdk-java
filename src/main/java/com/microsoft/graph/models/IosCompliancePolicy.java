@@ -7,33 +7,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** Require that devices have enabled device threat protection . */
+    /**
+     * Require that devices have enabled device threat protection .
+     */
     private Boolean deviceThreatProtectionEnabled;
-    /** Device threat protection levels for the Device Threat Protection API. */
+    /**
+     * Device threat protection levels for the Device Threat Protection API.
+     */
     private DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
-    /** Indicates whether or not to require a managed email profile. */
+    /**
+     * Indicates whether or not to require a managed email profile.
+     */
     private Boolean managedEmailProfileRequired;
-    /** Maximum IOS version. */
+    /**
+     * Maximum IOS version.
+     */
     private String osMaximumVersion;
-    /** Minimum IOS version. */
+    /**
+     * Minimum IOS version.
+     */
     private String osMinimumVersion;
-    /** Indicates whether or not to block simple passcodes. */
+    /**
+     * Indicates whether or not to block simple passcodes.
+     */
     private Boolean passcodeBlockSimple;
-    /** Number of days before the passcode expires. Valid values 1 to 65535 */
+    /**
+     * Number of days before the passcode expires. Valid values 1 to 65535
+     */
     private Integer passcodeExpirationDays;
-    /** The number of character sets required in the password. */
+    /**
+     * The number of character sets required in the password.
+     */
     private Integer passcodeMinimumCharacterSetCount;
-    /** Minimum length of passcode. Valid values 4 to 14 */
+    /**
+     * Minimum length of passcode. Valid values 4 to 14
+     */
     private Integer passcodeMinimumLength;
-    /** Minutes of inactivity before a passcode is required. */
+    /**
+     * Minutes of inactivity before a passcode is required.
+     */
     private Integer passcodeMinutesOfInactivityBeforeLock;
-    /** Number of previous passcodes to block. Valid values 1 to 24 */
+    /**
+     * Number of previous passcodes to block. Valid values 1 to 24
+     */
     private Integer passcodePreviousPasscodeBlockCount;
-    /** Indicates whether or not to require a passcode. */
+    /**
+     * Indicates whether or not to require a passcode.
+     */
     private Boolean passcodeRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passcodeRequiredType;
-    /** Devices must not be jailbroken or rooted. */
+    /**
+     * Devices must not be jailbroken or rooted.
+     */
     private Boolean securityBlockJailbrokenDevices;
     /**
      * Instantiates a new IosCompliancePolicy and sets the default values.

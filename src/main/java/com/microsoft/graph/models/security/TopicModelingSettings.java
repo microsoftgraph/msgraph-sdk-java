@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically. */
+    /**
+     * Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
+     */
     private Boolean dynamicallyAdjustTopicCount;
-    /** Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes. */
+    /**
+     * Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
+     */
     private Boolean ignoreNumbers;
-    /** Indicates whether themes model is enabled for the case. */
+    /**
+     * Indicates whether themes model is enabled for the case.
+     */
     private Boolean isEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes. */
+    /**
+     * The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
+     */
     private Integer topicCount;
     /**
      * Instantiates a new topicModelingSettings and sets the default values.

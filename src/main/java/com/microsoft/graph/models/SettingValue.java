@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SettingValue implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Name of the setting (as defined by the groupSettingTemplate). */
+    /**
+     * Name of the setting (as defined by the groupSettingTemplate).
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Value of the setting. */
+    /**
+     * Value of the setting.
+     */
     private String value;
     /**
      * Instantiates a new SettingValue and sets the default values.

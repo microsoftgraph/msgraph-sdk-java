@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UrlToItemResolverBase implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The priority which defines the sequence in which the urlToItemResolverBase instances are evaluated. */
+    /**
+     * The priority which defines the sequence in which the urlToItemResolverBase instances are evaluated.
+     */
     private Integer priority;
     /**
      * Instantiates a new urlToItemResolverBase and sets the default values.

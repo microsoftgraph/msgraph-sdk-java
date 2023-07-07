@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class HypGeomDistPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The cumulative property */
+    /**
+     * The cumulative property
+     */
     private Json cumulative;
-    /** The numberPop property */
+    /**
+     * The numberPop property
+     */
     private Json numberPop;
-    /** The numberSample property */
+    /**
+     * The numberSample property
+     */
     private Json numberSample;
-    /** The populationS property */
+    /**
+     * The populationS property
+     */
     private Json populationS;
-    /** The sampleS property */
+    /**
+     * The sampleS property
+     */
     private Json sampleS;
     /**
      * Instantiates a new HypGeomDistPostRequestBody and sets the default values.

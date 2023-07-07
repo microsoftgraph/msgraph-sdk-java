@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
  */
 public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity. */
+    /**
+     * Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity.
+     */
     @javax.annotation.Nonnull
     public LastIndexOperationRequestBuilder lastIndexOperation() {
         return new LastIndexOperationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the activate method. */
+    /**
+     * Provides operations to call the activate method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityActivateRequestBuilder microsoftGraphSecurityActivate() {
         return new MicrosoftGraphSecurityActivateRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the applyHold method. */
+    /**
+     * Provides operations to call the applyHold method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityApplyHoldRequestBuilder microsoftGraphSecurityApplyHold() {
         return new MicrosoftGraphSecurityApplyHoldRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the release method. */
+    /**
+     * Provides operations to call the release method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityReleaseRequestBuilder microsoftGraphSecurityRelease() {
         return new MicrosoftGraphSecurityReleaseRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the removeHold method. */
+    /**
+     * Provides operations to call the removeHold method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
         return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the updateIndex method. */
+    /**
+     * Provides operations to call the updateIndex method.
+     */
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityUpdateIndexRequestBuilder microsoftGraphSecurityUpdateIndex() {
         return new MicrosoftGraphSecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
+    /**
+     * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     */
     @javax.annotation.Nonnull
     public SiteSourcesRequestBuilder siteSources() {
         return new SiteSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
+    /**
+     * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     */
     @javax.annotation.Nonnull
     public UnifiedGroupSourcesRequestBuilder unifiedGroupSources() {
         return new UnifiedGroupSourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity. */
+    /**
+     * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
+     */
     @javax.annotation.Nonnull
     public UserSourcesRequestBuilder userSources() {
         return new UserSourcesRequestBuilder(pathParameters, requestAdapter);
@@ -307,11 +325,15 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an ediscoveryCustodian object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -320,7 +342,9 @@ public class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

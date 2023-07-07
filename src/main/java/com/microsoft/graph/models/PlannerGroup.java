@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerGroup extends Entity implements Parsable {
-    /** Read-only. Nullable. Returns the plannerPlans owned by the group. */
+    /**
+     * Read-only. Nullable. Returns the plannerPlans owned by the group.
+     */
     private java.util.List<PlannerPlan> plans;
     /**
      * Instantiates a new plannerGroup and sets the default values.

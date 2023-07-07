@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable {
-    /** The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes. */
+    /**
+     * The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
+     */
     private Integer daylightBias;
     /**
      * Instantiates a new DaylightTimeZoneOffset and sets the default values.

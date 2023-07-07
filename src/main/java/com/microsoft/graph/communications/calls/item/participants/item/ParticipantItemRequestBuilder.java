@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the participants property of the microsoft.graph.call entity.
  */
 public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the mute method. */
+    /**
+     * Provides operations to call the mute method.
+     */
     @javax.annotation.Nonnull
     public MuteRequestBuilder mute() {
         return new MuteRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the startHoldMusic method. */
+    /**
+     * Provides operations to call the startHoldMusic method.
+     */
     @javax.annotation.Nonnull
     public StartHoldMusicRequestBuilder startHoldMusic() {
         return new StartHoldMusicRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the stopHoldMusic method. */
+    /**
+     * Provides operations to call the stopHoldMusic method.
+     */
     @javax.annotation.Nonnull
     public StopHoldMusicRequestBuilder stopHoldMusic() {
         return new StopHoldMusicRequestBuilder(pathParameters, requestAdapter);
@@ -273,11 +279,15 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a **participant** object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -286,7 +296,9 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationPointsOutcome extends EducationOutcome implements Parsable {
-    /** The numeric grade the teacher has given the student for this assignment. */
+    /**
+     * The numeric grade the teacher has given the student for this assignment.
+     */
     private EducationAssignmentPointsGrade points;
-    /** A copy of the points property that is made when the grade is released to the student. */
+    /**
+     * A copy of the points property that is made when the grade is released to the student.
+     */
     private EducationAssignmentPointsGrade publishedPoints;
     /**
      * Instantiates a new EducationPointsOutcome and sets the default values.

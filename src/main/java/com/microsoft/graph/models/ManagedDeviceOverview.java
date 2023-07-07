@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedDeviceOverview extends Entity implements Parsable {
-    /** Distribution of Exchange Access State in Intune */
+    /**
+     * Distribution of Exchange Access State in Intune
+     */
     private DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
-    /** Device operating system summary. */
+    /**
+     * Device operating system summary.
+     */
     private DeviceOperatingSystemSummary deviceOperatingSystemSummary;
-    /** The number of devices enrolled in both MDM and EAS */
+    /**
+     * The number of devices enrolled in both MDM and EAS
+     */
     private Integer dualEnrolledDeviceCount;
-    /** Total enrolled device count. Does not include PC devices managed via Intune PC Agent */
+    /**
+     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
+     */
     private Integer enrolledDeviceCount;
-    /** The number of devices enrolled in MDM */
+    /**
+     * The number of devices enrolled in MDM
+     */
     private Integer mdmEnrolledCount;
     /**
      * Instantiates a new managedDeviceOverview and sets the default values.

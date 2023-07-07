@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookCommentReply extends Entity implements Parsable {
-    /** The content of a comment reply. */
+    /**
+     * The content of a comment reply.
+     */
     private String content;
-    /** Indicates the type for the comment reply. */
+    /**
+     * Indicates the type for the comment reply.
+     */
     private String contentType;
     /**
      * Instantiates a new workbookCommentReply and sets the default values.

@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EntitlementManagement extends Entity implements Parsable {
-    /** Approval stages for decisions associated with access package assignment requests. */
+    /**
+     * Approval stages for decisions associated with access package assignment requests.
+     */
     private java.util.List<Approval> accessPackageAssignmentApprovals;
-    /** Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources. */
+    /**
+     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     */
     private java.util.List<AccessPackage> accessPackages;
-    /** Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment. */
+    /**
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+     */
     private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
-    /** Access package assignment requests created by or on behalf of a subject. */
+    /**
+     * Access package assignment requests created by or on behalf of a subject.
+     */
     private java.util.List<AccessPackageAssignmentRequest> assignmentRequests;
-    /** The assignment of an access package to a subject for a period of time. */
+    /**
+     * The assignment of an access package to a subject for a period of time.
+     */
     private java.util.List<AccessPackageAssignment> assignments;
-    /** A container for access packages. */
+    /**
+     * A container for access packages.
+     */
     private java.util.List<AccessPackageCatalog> catalogs;
-    /** References to a directory or domain of another organization whose users can request access. */
+    /**
+     * References to a directory or domain of another organization whose users can request access.
+     */
     private java.util.List<ConnectedOrganization> connectedOrganizations;
-    /** The settings that control the behavior of Azure AD entitlement management. */
+    /**
+     * The settings that control the behavior of Azure AD entitlement management.
+     */
     private EntitlementManagementSettings settings;
     /**
      * Instantiates a new EntitlementManagement and sets the default values.

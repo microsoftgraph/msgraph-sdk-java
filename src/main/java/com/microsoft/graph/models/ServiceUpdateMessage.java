@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable {
-    /** The expected deadline of the action for the message. */
+    /**
+     * The expected deadline of the action for the message.
+     */
     private OffsetDateTime actionRequiredByDateTime;
-    /** A collection of serviceAnnouncementAttachments. */
+    /**
+     * A collection of serviceAnnouncementAttachments.
+     */
     private java.util.List<ServiceAnnouncementAttachment> attachments;
-    /** The zip file that contains all attachments for a message. */
+    /**
+     * The zip file that contains all attachments for a message.
+     */
     private byte[] attachmentsArchive;
-    /** The body property */
+    /**
+     * The body property
+     */
     private ItemBody body;
-    /** The category property */
+    /**
+     * The category property
+     */
     private ServiceUpdateCategory category;
-    /** Indicates whether the message has any attachment. */
+    /**
+     * Indicates whether the message has any attachment.
+     */
     private Boolean hasAttachments;
-    /** Indicates whether the message describes a major update for the service. */
+    /**
+     * Indicates whether the message describes a major update for the service.
+     */
     private Boolean isMajorChange;
-    /** The affected services by the service message. */
+    /**
+     * The affected services by the service message.
+     */
     private java.util.List<String> services;
-    /** The severity property */
+    /**
+     * The severity property
+     */
     private ServiceUpdateSeverity severity;
-    /** A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on. */
+    /**
+     * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
+     */
     private java.util.List<String> tags;
-    /** Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions. */
+    /**
+     * Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
+     */
     private ServiceUpdateMessageViewpoint viewPoint;
     /**
      * Instantiates a new ServiceUpdateMessage and sets the default values.

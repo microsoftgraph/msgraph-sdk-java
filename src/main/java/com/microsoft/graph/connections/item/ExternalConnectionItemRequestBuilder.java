@@ -24,22 +24,30 @@ import java.util.Objects;
  * Provides operations to manage the collection of externalConnection entities.
  */
 public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity. */
+    /**
+     * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
+     */
     @javax.annotation.Nonnull
     public GroupsRequestBuilder groups() {
         return new GroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity. */
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
+     */
     @javax.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the schema property of the microsoft.graph.externalConnectors.externalConnection entity. */
+    /**
+     * Provides operations to manage the schema property of the microsoft.graph.externalConnectors.externalConnection entity.
+     */
     @javax.annotation.Nonnull
     public SchemaRequestBuilder schema() {
         return new SchemaRequestBuilder(pathParameters, requestAdapter);
@@ -275,11 +283,15 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Get entity from connections by key
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -288,7 +300,9 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

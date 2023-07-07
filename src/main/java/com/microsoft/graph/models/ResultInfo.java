@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResultInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The result code. */
+    /**
+     * The result code.
+     */
     private Integer code;
-    /** The message. */
+    /**
+     * The message.
+     */
     private String message;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The result sub-code. */
+    /**
+     * The result sub-code.
+     */
     private Integer subcode;
     /**
      * Instantiates a new resultInfo and sets the default values.

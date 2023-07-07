@@ -29,42 +29,58 @@ import java.util.Objects;
  * Provides operations to manage the items property of the microsoft.graph.list entity.
  */
 public class ListItemItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the analytics property of the microsoft.graph.listItem entity. */
+    /**
+     * Provides operations to manage the analytics property of the microsoft.graph.listItem entity.
+     */
     @javax.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity. */
+    /**
+     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
+     */
     @javax.annotation.Nonnull
     public DocumentSetVersionsRequestBuilder documentSetVersions() {
         return new DocumentSetVersionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the driveItem property of the microsoft.graph.listItem entity. */
+    /**
+     * Provides operations to manage the driveItem property of the microsoft.graph.listItem entity.
+     */
     @javax.annotation.Nonnull
     public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the fields property of the microsoft.graph.listItem entity. */
+    /**
+     * Provides operations to manage the fields property of the microsoft.graph.listItem entity.
+     */
     @javax.annotation.Nonnull
     public FieldsRequestBuilder fields() {
         return new FieldsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getActivitiesByInterval method. */
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     */
     @javax.annotation.Nonnull
     public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
         return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity. */
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     */
     @javax.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the versions property of the microsoft.graph.listItem entity. */
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
+     */
     @javax.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
@@ -318,11 +334,15 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * Returns the metadata for an [item][] in a [list][].
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -331,7 +351,9 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

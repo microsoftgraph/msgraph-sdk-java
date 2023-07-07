@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements Parsable {
-    /** Identity of the user, device, and application which created the item. Read-only. */
+    /**
+     * Identity of the user, device, and application which created the item. Read-only.
+     */
     private IdentitySet createdBy;
-    /** The name of the notebook. */
+    /**
+     * The name of the notebook.
+     */
     private String displayName;
-    /** Identity of the user, device, and application which created the item. Read-only. */
+    /**
+     * Identity of the user, device, and application which created the item. Read-only.
+     */
     private IdentitySet lastModifiedBy;
-    /** The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new OnenoteEntityHierarchyModel and sets the default values.

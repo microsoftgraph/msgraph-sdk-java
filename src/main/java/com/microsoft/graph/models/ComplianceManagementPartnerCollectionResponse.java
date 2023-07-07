@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ComplianceManagementPartnerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ComplianceManagementPartner> value;
     /**
      * Instantiates a new ComplianceManagementPartnerCollectionResponse and sets the default values.

@@ -9,39 +9,73 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private String createdBy;
-    /** The createdByIdentity property */
+    /**
+     * The createdByIdentity property
+     */
     private IdentitySet createdByIdentity;
-    /** The createdTime property */
+    /**
+     * The createdTime property
+     */
     private OffsetDateTime createdTime;
-    /** The id property */
+    /**
+     * The id property
+     */
     private String id;
-    /** The isDefault property */
+    /**
+     * The isDefault property
+     */
     private Boolean isDefault;
-    /** The isShared property */
+    /**
+     * The isShared property
+     */
     private Boolean isShared;
-    /** The lastModifiedBy property */
+    /**
+     * The lastModifiedBy property
+     */
     private String lastModifiedBy;
-    /** The lastModifiedByIdentity property */
+    /**
+     * The lastModifiedByIdentity property
+     */
     private IdentitySet lastModifiedByIdentity;
-    /** The lastModifiedTime property */
+    /**
+     * The lastModifiedTime property
+     */
     private OffsetDateTime lastModifiedTime;
-    /** The links property */
+    /**
+     * The links property
+     */
     private NotebookLinks links;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The sectionGroupsUrl property */
+    /**
+     * The sectionGroupsUrl property
+     */
     private String sectionGroupsUrl;
-    /** The sectionsUrl property */
+    /**
+     * The sectionsUrl property
+     */
     private String sectionsUrl;
-    /** The self property */
+    /**
+     * The self property
+     */
     private String self;
-    /** The userRole property */
+    /**
+     * The userRole property
+     */
     private OnenoteUserRole userRole;
     /**
      * Instantiates a new CopyNotebookModel and sets the default values.

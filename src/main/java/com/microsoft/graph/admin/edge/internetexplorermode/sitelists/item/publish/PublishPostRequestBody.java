@@ -10,13 +10,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PublishPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The revision property */
+    /**
+     * The revision property
+     */
     private String revision;
-    /** The sharedCookies property */
+    /**
+     * The sharedCookies property
+     */
     private java.util.List<BrowserSharedCookie> sharedCookies;
-    /** The sites property */
+    /**
+     * The sites property
+     */
     private java.util.List<BrowserSite> sites;
     /**
      * Instantiates a new publishPostRequestBody and sets the default values.

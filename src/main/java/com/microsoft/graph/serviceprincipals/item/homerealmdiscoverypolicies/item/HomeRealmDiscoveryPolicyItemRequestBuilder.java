@@ -9,7 +9,9 @@ import java.util.Objects;
  * Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id}
  */
 public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the collection of servicePrincipal entities. */
+    /**
+     * Provides operations to manage the collection of servicePrincipal entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

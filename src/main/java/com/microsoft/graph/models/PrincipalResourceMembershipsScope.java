@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrincipalResourceMembershipsScope extends AccessReviewScope implements Parsable {
-    /** Defines the scopes of the principals whose access to resources are reviewed in the access review. */
+    /**
+     * Defines the scopes of the principals whose access to resources are reviewed in the access review.
+     */
     private java.util.List<AccessReviewScope> principalScopes;
-    /** Defines the scopes of the resources for which access is reviewed. */
+    /**
+     * Defines the scopes of the resources for which access is reviewed.
+     */
     private java.util.List<AccessReviewScope> resourceScopes;
     /**
      * Instantiates a new PrincipalResourceMembershipsScope and sets the default values.

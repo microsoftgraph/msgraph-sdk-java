@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceAnnouncementBase extends Entity implements Parsable {
-    /** Additional details about service event. This property doesn't support filters. */
+    /**
+     * Additional details about service event. This property doesn't support filters.
+     */
     private java.util.List<KeyValuePair> details;
-    /** The end time of the service event. */
+    /**
+     * The end time of the service event.
+     */
     private OffsetDateTime endDateTime;
-    /** The last modified time of the service event. */
+    /**
+     * The last modified time of the service event.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The start time of the service event. */
+    /**
+     * The start time of the service event.
+     */
     private OffsetDateTime startDateTime;
-    /** The title of the service event. */
+    /**
+     * The title of the service event.
+     */
     private String title;
     /**
      * Instantiates a new serviceAnnouncementBase and sets the default values.

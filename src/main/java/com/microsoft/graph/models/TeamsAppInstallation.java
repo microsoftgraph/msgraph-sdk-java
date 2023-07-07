@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppInstallation extends Entity implements Parsable {
-    /** The app that is installed. */
+    /**
+     * The app that is installed.
+     */
     private TeamsApp teamsApp;
-    /** The details of this version of the app. */
+    /**
+     * The details of this version of the app.
+     */
     private TeamsAppDefinition teamsAppDefinition;
     /**
      * Instantiates a new teamsAppInstallation and sets the default values.

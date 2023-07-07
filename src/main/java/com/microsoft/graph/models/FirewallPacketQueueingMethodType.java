@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for firewallPacketQueueingMethod */
+/**
+ * Possible values for firewallPacketQueueingMethod
+ */
 public enum FirewallPacketQueueingMethodType implements ValuedEnum {
     /** No value configured by Intune, do not override the user-configured device default value */
     DeviceDefault("deviceDefault"),

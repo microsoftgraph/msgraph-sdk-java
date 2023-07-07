@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificationRecipientScope implements Parsable {
-    /** Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user. */
+    /**
+     * Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
+     */
     private String query;
-    /** In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified. */
+    /**
+     * In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
+     */
     private String queryRoot;
-    /** Indicates the type of query. Allowed value is MicrosoftGraph. */
+    /**
+     * Indicates the type of query. Allowed value is MicrosoftGraph.
+     */
     private String queryType;
     /**
      * Instantiates a new AccessReviewNotificationRecipientQueryScope and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DateTimeTimeZone implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000). */
+    /**
+     * A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
+     */
     private String dateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values. */
+    /**
+     * Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
+     */
     private String timeZone;
     /**
      * Instantiates a new dateTimeTimeZone and sets the default values.

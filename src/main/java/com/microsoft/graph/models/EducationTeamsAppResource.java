@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationTeamsAppResource extends EducationResource implements Parsable {
-    /** URL that points to the icon of the app. */
+    /**
+     * URL that points to the icon of the app.
+     */
     private String appIconWebUrl;
-    /** Teams app ID of the application. */
+    /**
+     * Teams app ID of the application.
+     */
     private String appId;
-    /** URL for the app resource that will be opened by Teams. */
+    /**
+     * URL for the app resource that will be opened by Teams.
+     */
     private String teamsEmbeddedContentUrl;
-    /** URL for the app resource that can be opened in the browser. */
+    /**
+     * URL for the app resource that can be opened in the browser.
+     */
     private String webUrl;
     /**
      * Instantiates a new EducationTeamsAppResource and sets the default values.

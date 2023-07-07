@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Represents the type of pricing of a booking service. */
+/**
+ * Represents the type of pricing of a booking service.
+ */
 public enum BookingPriceType implements ValuedEnum {
     /** The price of the service is not defined. */
     Undefined("undefined"),

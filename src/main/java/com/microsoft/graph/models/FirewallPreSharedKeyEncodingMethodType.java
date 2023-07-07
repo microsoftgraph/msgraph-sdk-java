@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for firewallPreSharedKeyEncodingMethod */
+/**
+ * Possible values for firewallPreSharedKeyEncodingMethod
+ */
 public enum FirewallPreSharedKeyEncodingMethodType implements ValuedEnum {
     /** No value configured by Intune, do not override the user-configured device default value */
     DeviceDefault("deviceDefault"),

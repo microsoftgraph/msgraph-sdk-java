@@ -110,7 +110,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove an owner from a Microsoft 365 group or a security group through the **owners** navigation property. Once owners are assigned to a group, the last owner (a user object) of the group cannot be removed.
      */
     public class DeleteQueryParameters {
-        /** Delete Uri */
+        /**
+         * Delete Uri
+         */
         @QueryParameter(name = "%40id")
         @javax.annotation.Nullable
         public String id;
@@ -119,7 +121,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }

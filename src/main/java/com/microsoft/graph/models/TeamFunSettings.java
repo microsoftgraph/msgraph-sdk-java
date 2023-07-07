@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamFunSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If set to true, enables users to include custom memes. */
+    /**
+     * If set to true, enables users to include custom memes.
+     */
     private Boolean allowCustomMemes;
-    /** If set to true, enables Giphy use. */
+    /**
+     * If set to true, enables Giphy use.
+     */
     private Boolean allowGiphy;
-    /** If set to true, enables users to include stickers and memes. */
+    /**
+     * If set to true, enables users to include stickers and memes.
+     */
     private Boolean allowStickersAndMemes;
-    /** Giphy content rating. Possible values are: moderate, strict. */
+    /**
+     * Giphy content rating. Possible values are: moderate, strict.
+     */
     private GiphyRatingType giphyContentRating;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new teamFunSettings and sets the default values.

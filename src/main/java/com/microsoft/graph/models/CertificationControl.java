@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CertificationControl implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Certification control name */
+    /**
+     * Certification control name
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** URL for the Microsoft Service Trust Portal */
+    /**
+     * URL for the Microsoft Service Trust Portal
+     */
     private String url;
     /**
      * Instantiates a new certificationControl and sets the default values.

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlertTrigger implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Name of the property serving as a detection trigger. */
+    /**
+     * Name of the property serving as a detection trigger.
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Type of the property in the key:value pair for interpretation. For example, String, Boolean etc. */
+    /**
+     * Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
+     */
     private String type;
-    /** Value of the property serving as a detection trigger. */
+    /**
+     * Value of the property serving as a detection trigger.
+     */
     private String value;
     /**
      * Instantiates a new alertTrigger and sets the default values.

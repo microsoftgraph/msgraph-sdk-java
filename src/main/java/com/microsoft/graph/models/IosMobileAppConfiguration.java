@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
-    /** mdm app configuration Base64 binary. */
+    /**
+     * mdm app configuration Base64 binary.
+     */
     private byte[] encodedSettingXml;
-    /** app configuration setting items. */
+    /**
+     * app configuration setting items.
+     */
     private java.util.List<AppConfigurationSettingItem> settings;
     /**
      * Instantiates a new IosMobileAppConfiguration and sets the default values.

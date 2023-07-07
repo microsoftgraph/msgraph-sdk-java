@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MessagePinnedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Date and time when the event occurred. */
+    /**
+     * Date and time when the event occurred.
+     */
     private OffsetDateTime eventDateTime;
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
     /**
      * Instantiates a new MessagePinnedEventMessageDetail and sets the default values.

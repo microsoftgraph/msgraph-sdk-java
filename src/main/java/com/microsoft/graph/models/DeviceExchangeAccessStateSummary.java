@@ -11,19 +11,33 @@ import java.util.Objects;
  * Device Exchange Access State summary
  */
 public class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Total count of devices with Exchange Access State: Allowed. */
+    /**
+     * Total count of devices with Exchange Access State: Allowed.
+     */
     private Integer allowedDeviceCount;
-    /** Total count of devices with Exchange Access State: Blocked. */
+    /**
+     * Total count of devices with Exchange Access State: Blocked.
+     */
     private Integer blockedDeviceCount;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Total count of devices with Exchange Access State: Quarantined. */
+    /**
+     * Total count of devices with Exchange Access State: Quarantined.
+     */
     private Integer quarantinedDeviceCount;
-    /** Total count of devices for which no Exchange Access State could be found. */
+    /**
+     * Total count of devices for which no Exchange Access State could be found.
+     */
     private Integer unavailableDeviceCount;
-    /** Total count of devices with Exchange Access State: Unknown. */
+    /**
+     * Total count of devices with Exchange Access State: Unknown.
+     */
     private Integer unknownDeviceCount;
     /**
      * Instantiates a new deviceExchangeAccessStateSummary and sets the default values.

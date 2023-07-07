@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The unique identifier for the item. */
+    /**
+     * The unique identifier for the item.
+     */
     private String itemId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The title of the item. */
+    /**
+     * The title of the item.
+     */
     private String title;
-    /** The version ID of the item. */
+    /**
+     * The version ID of the item.
+     */
     private String versionId;
     /**
      * Instantiates a new documentSetVersionItem and sets the default values.

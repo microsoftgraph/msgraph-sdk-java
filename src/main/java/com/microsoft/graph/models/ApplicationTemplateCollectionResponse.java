@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplicationTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ApplicationTemplate> value;
     /**
      * Instantiates a new ApplicationTemplateCollectionResponse and sets the default values.

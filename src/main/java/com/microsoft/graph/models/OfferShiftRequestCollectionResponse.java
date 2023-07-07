@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OfferShiftRequestCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<OfferShiftRequest> value;
     /**
      * Instantiates a new OfferShiftRequestCollectionResponse and sets the default values.

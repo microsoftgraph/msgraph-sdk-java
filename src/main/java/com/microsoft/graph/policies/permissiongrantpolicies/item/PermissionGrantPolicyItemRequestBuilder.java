@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.
  */
 public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity. */
+    /**
+     * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
+     */
     @javax.annotation.Nonnull
     public ExcludesRequestBuilder excludes() {
         return new ExcludesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity. */
+    /**
+     * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
+     */
     @javax.annotation.Nonnull
     public IncludesRequestBuilder includes() {
         return new IncludesRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +273,15 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
      * Retrieve a single permissionGrantPolicy object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +290,9 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

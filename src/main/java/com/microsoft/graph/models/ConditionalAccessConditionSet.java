@@ -8,29 +8,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Applications and user actions included in and excluded from the policy. Required. */
+    /**
+     * Applications and user actions included in and excluded from the policy. Required.
+     */
     private ConditionalAccessApplications applications;
-    /** Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required. */
+    /**
+     * Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
+     */
     private ConditionalAccessClientApplications clientApplications;
-    /** Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required. */
+    /**
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     */
     private java.util.List<ConditionalAccessClientApp> clientAppTypes;
-    /** Devices in the policy. */
+    /**
+     * Devices in the policy.
+     */
     private ConditionalAccessDevices devices;
-    /** Locations included in and excluded from the policy. */
+    /**
+     * Locations included in and excluded from the policy.
+     */
     private ConditionalAccessLocations locations;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Platforms included in and excluded from the policy. */
+    /**
+     * Platforms included in and excluded from the policy.
+     */
     private ConditionalAccessPlatforms platforms;
-    /** Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue. */
+    /**
+     * Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     */
     private java.util.List<RiskLevel> servicePrincipalRiskLevels;
-    /** Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
+    /**
+     * Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     */
     private java.util.List<RiskLevel> signInRiskLevels;
-    /** User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required. */
+    /**
+     * User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     */
     private java.util.List<RiskLevel> userRiskLevels;
-    /** Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required. */
+    /**
+     * Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
+     */
     private ConditionalAccessUsers users;
     /**
      * Instantiates a new ConditionalAccessConditionSet and sets the default values.

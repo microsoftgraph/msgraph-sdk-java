@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AccessReviewInstanceDecisionItem> value;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemCollectionResponse and sets the default values.

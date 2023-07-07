@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
-    /** The URL string. */
+    /**
+     * The URL string.
+     */
     private String url;
     /**
      * Instantiates a new UrlAssessmentRequest and sets the default values.

@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OauthApplicationEvidence extends AlertEvidence implements Parsable {
-    /** Unique identifier of the application. */
+    /**
+     * Unique identifier of the application.
+     */
     private String appId;
-    /** Name of the application. */
+    /**
+     * Name of the application.
+     */
     private String displayName;
-    /** The unique identifier of the application object in Azure AD. */
+    /**
+     * The unique identifier of the application object in Azure AD.
+     */
     private String objectId;
-    /** The name of the application publisher. */
+    /**
+     * The name of the application publisher.
+     */
     private String publisher;
     /**
      * Instantiates a new OauthApplicationEvidence and sets the default values.

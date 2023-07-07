@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintUsageByUser extends PrintUsage implements Parsable {
-    /** The UPN of the user represented by these statistics. */
+    /**
+     * The UPN of the user represented by these statistics.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new PrintUsageByUser and sets the default values.

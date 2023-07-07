@@ -11,23 +11,41 @@ import java.util.Objects;
  * Entity which represents a connection to device management partner.
  */
 public class DeviceManagementPartner extends Entity implements Parsable {
-    /** Partner display name */
+    /**
+     * Partner display name
+     */
     private String displayName;
-    /** User groups that specifies whether enrollment is through partner. */
+    /**
+     * User groups that specifies whether enrollment is through partner.
+     */
     private java.util.List<DeviceManagementPartnerAssignment> groupsRequiringPartnerEnrollment;
-    /** Whether device management partner is configured or not */
+    /**
+     * Whether device management partner is configured or not
+     */
     private Boolean isConfigured;
-    /** Timestamp of last heartbeat after admin enabled option Connect to Device management Partner */
+    /**
+     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
+     */
     private OffsetDateTime lastHeartbeatDateTime;
-    /** Partner App Type. */
+    /**
+     * Partner App Type.
+     */
     private DeviceManagementPartnerAppType partnerAppType;
-    /** Partner state of this tenant. */
+    /**
+     * Partner state of this tenant.
+     */
     private DeviceManagementPartnerTenantState partnerState;
-    /** Partner Single tenant App id */
+    /**
+     * Partner Single tenant App id
+     */
     private String singleTenantAppId;
-    /** DateTime in UTC when PartnerDevices will be marked as NonCompliant */
+    /**
+     * DateTime in UTC when PartnerDevices will be marked as NonCompliant
+     */
     private OffsetDateTime whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
-    /** DateTime in UTC when PartnerDevices will be removed */
+    /**
+     * DateTime in UTC when PartnerDevices will be removed
+     */
     private OffsetDateTime whenPartnerDevicesWillBeRemovedDateTime;
     /**
      * Instantiates a new deviceManagementPartner and sets the default values.

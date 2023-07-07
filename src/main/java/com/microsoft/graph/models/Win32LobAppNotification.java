@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains value for notification status. */
+/**
+ * Contains value for notification status.
+ */
 public enum Win32LobAppNotification implements ValuedEnum {
     /** Show all notifications. */
     ShowAll("showAll"),

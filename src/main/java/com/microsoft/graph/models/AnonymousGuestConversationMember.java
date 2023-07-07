@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AnonymousGuestConversationMember extends ConversationMember implements Parsable {
-    /** Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device. */
+    /**
+     * Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
+     */
     private String anonymousGuestId;
     /**
      * Instantiates a new AnonymousGuestConversationMember and sets the default values.

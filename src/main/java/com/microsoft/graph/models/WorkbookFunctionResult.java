@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFunctionResult extends Entity implements Parsable {
-    /** The error property */
+    /**
+     * The error property
+     */
     private String error;
-    /** The value property */
+    /**
+     * The value property
+     */
     private Json value;
     /**
      * Instantiates a new WorkbookFunctionResult and sets the default values.

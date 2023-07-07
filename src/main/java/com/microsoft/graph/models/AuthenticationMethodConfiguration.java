@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodConfiguration extends Entity implements Parsable {
-    /** Groups of users that are excluded from a policy. */
+    /**
+     * Groups of users that are excluded from a policy.
+     */
     private java.util.List<ExcludeTarget> excludeTargets;
-    /** The state of the policy. Possible values are: enabled, disabled. */
+    /**
+     * The state of the policy. Possible values are: enabled, disabled.
+     */
     private AuthenticationMethodState state;
     /**
      * Instantiates a new authenticationMethodConfiguration and sets the default values.

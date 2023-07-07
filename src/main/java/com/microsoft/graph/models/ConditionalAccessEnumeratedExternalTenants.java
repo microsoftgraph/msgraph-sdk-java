@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessEnumeratedExternalTenants extends ConditionalAccessExternalTenants implements Parsable {
-    /** A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users. */
+    /**
+     * A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
+     */
     private java.util.List<String> members;
     /**
      * Instantiates a new ConditionalAccessEnumeratedExternalTenants and sets the default values.

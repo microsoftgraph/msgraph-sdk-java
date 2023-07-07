@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetDevicesWithoutCompliancePolicyReportPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The filter property */
+    /**
+     * The filter property
+     */
     private String filter;
-    /** The groupBy property */
+    /**
+     * The groupBy property
+     */
     private java.util.List<String> groupBy;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The orderBy property */
+    /**
+     * The orderBy property
+     */
     private java.util.List<String> orderBy;
-    /** The search property */
+    /**
+     * The search property
+     */
     private String search;
-    /** The select property */
+    /**
+     * The select property
+     */
     private java.util.List<String> select;
-    /** The sessionId property */
+    /**
+     * The sessionId property
+     */
     private String sessionId;
-    /** The skip property */
+    /**
+     * The skip property
+     */
     private Integer skip;
-    /** The top property */
+    /**
+     * The top property
+     */
     private Integer top;
     /**
      * Instantiates a new getDevicesWithoutCompliancePolicyReportPostRequestBody and sets the default values.

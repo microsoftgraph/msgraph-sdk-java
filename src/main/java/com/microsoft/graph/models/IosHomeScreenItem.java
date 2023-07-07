@@ -11,11 +11,17 @@ import java.util.Objects;
  * Represents an item on the iOS Home Screen
  */
 public class IosHomeScreenItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Name of the app */
+    /**
+     * Name of the app
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new iosHomeScreenItem and sets the default values.

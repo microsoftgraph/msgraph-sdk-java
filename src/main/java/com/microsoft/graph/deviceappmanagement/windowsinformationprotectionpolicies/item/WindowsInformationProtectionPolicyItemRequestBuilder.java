@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
  */
 public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the assignments property of the microsoft.graph.windowsInformationProtection entity. */
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.windowsInformationProtection entity.
+     */
     @javax.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the exemptAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity. */
+    /**
+     * Provides operations to manage the exemptAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
+     */
     @javax.annotation.Nonnull
     public ExemptAppLockerFilesRequestBuilder exemptAppLockerFiles() {
         return new ExemptAppLockerFilesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the protectedAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity. */
+    /**
+     * Provides operations to manage the protectedAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
+     */
     @javax.annotation.Nonnull
     public ProtectedAppLockerFilesRequestBuilder protectedAppLockerFiles() {
         return new ProtectedAppLockerFilesRequestBuilder(pathParameters, requestAdapter);
@@ -59,8 +65,9 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property windowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a windowsInformationProtectionPolicy.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -77,9 +84,10 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Delete navigation property windowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a windowsInformationProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,8 +104,9 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
+     * Read properties and relationships of the windowsInformationProtectionPolicy object.
      * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> get() {
@@ -114,9 +123,10 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
+     * Read properties and relationships of the windowsInformationProtectionPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,9 +143,10 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a windowsInformationProtectionPolicy object.
      * @param body The request body
      * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> patch(@javax.annotation.Nonnull final WindowsInformationProtectionPolicy body) {
@@ -152,10 +163,11 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a windowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> patch(@javax.annotation.Nonnull final WindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -173,7 +185,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Delete navigation property windowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a windowsInformationProtectionPolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -181,7 +193,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property windowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a windowsInformationProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +212,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
+     * Read properties and relationships of the windowsInformationProtectionPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +220,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
+     * Read properties and relationships of the windowsInformationProtectionPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -229,7 +241,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a windowsInformationProtectionPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -238,7 +250,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a windowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -266,14 +278,18 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
+     * Read properties and relationships of the windowsInformationProtectionPolicy object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +298,9 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Synchronization extends Entity implements Parsable {
-    /** The jobs property */
+    /**
+     * The jobs property
+     */
     private java.util.List<SynchronizationJob> jobs;
-    /** The secrets property */
+    /**
+     * The secrets property
+     */
     private java.util.List<SynchronizationSecretKeyStringValuePair> secrets;
-    /** The templates property */
+    /**
+     * The templates property
+     */
     private java.util.List<SynchronizationTemplate> templates;
     /**
      * Instantiates a new synchronization and sets the default values.

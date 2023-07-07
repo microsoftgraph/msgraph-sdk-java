@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
  */
 public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the lastSharedMethod property of the microsoft.graph.sharedInsight entity. */
+    /**
+     * Provides operations to manage the lastSharedMethod property of the microsoft.graph.sharedInsight entity.
+     */
     @javax.annotation.Nonnull
     public LastSharedMethodRequestBuilder lastSharedMethod() {
         return new LastSharedMethodRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the resource property of the microsoft.graph.sharedInsight entity. */
+    /**
+     * Provides operations to manage the resource property of the microsoft.graph.sharedInsight entity.
+     */
     @javax.annotation.Nonnull
     public ResourceRequestBuilder resource() {
         return new ResourceRequestBuilder(pathParameters, requestAdapter);
@@ -263,11 +267,15 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -276,7 +284,9 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

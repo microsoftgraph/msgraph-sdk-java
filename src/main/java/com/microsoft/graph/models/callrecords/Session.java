@@ -9,21 +9,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Session extends Entity implements Parsable {
-    /** Endpoint that answered the session. */
+    /**
+     * Endpoint that answered the session.
+     */
     private Endpoint callee;
-    /** Endpoint that initiated the session. */
+    /**
+     * Endpoint that initiated the session.
+     */
     private Endpoint caller;
-    /** UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime endDateTime;
-    /** Failure information associated with the session if the session failed. */
+    /**
+     * Failure information associated with the session if the session failed.
+     */
     private FailureInfo failureInfo;
-    /** Specifies whether the session is a test. */
+    /**
+     * Specifies whether the session is a test.
+     */
     private Boolean isTest;
-    /** List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue. */
+    /**
+     * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     */
     private java.util.List<Modality> modalities;
-    /** The list of segments involved in the session. Read-only. Nullable. */
+    /**
+     * The list of segments involved in the session. Read-only. Nullable.
+     */
     private java.util.List<Segment> segments;
-    /** UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new session and sets the default values.

@@ -31,57 +31,79 @@ import java.util.Objects;
  * Provides operations to manage the events property of the microsoft.graph.user entity.
  */
 public class EventItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the accept method. */
+    /**
+     * Provides operations to call the accept method.
+     */
     @javax.annotation.Nonnull
     public AcceptRequestBuilder accept() {
         return new AcceptRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the attachments property of the microsoft.graph.event entity. */
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
+     */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendar property of the microsoft.graph.event entity. */
+    /**
+     * Provides operations to manage the calendar property of the microsoft.graph.event entity.
+     */
     @javax.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the cancel method. */
+    /**
+     * Provides operations to call the cancel method.
+     */
     @javax.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the decline method. */
+    /**
+     * Provides operations to call the decline method.
+     */
     @javax.annotation.Nonnull
     public DeclineRequestBuilder decline() {
         return new DeclineRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the dismissReminder method. */
+    /**
+     * Provides operations to call the dismissReminder method.
+     */
     @javax.annotation.Nonnull
     public DismissReminderRequestBuilder dismissReminder() {
         return new DismissReminderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the extensions property of the microsoft.graph.event entity. */
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the forward method. */
+    /**
+     * Provides operations to call the forward method.
+     */
     @javax.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the instances property of the microsoft.graph.event entity. */
+    /**
+     * Provides operations to manage the instances property of the microsoft.graph.event entity.
+     */
     @javax.annotation.Nonnull
     public InstancesRequestBuilder instances() {
         return new InstancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the snoozeReminder method. */
+    /**
+     * Provides operations to call the snoozeReminder method.
+     */
     @javax.annotation.Nonnull
     public SnoozeReminderRequestBuilder snoozeReminder() {
         return new SnoozeReminderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the tentativelyAccept method. */
+    /**
+     * Provides operations to call the tentativelyAccept method.
+     */
     @javax.annotation.Nonnull
     public TentativelyAcceptRequestBuilder tentativelyAccept() {
         return new TentativelyAcceptRequestBuilder(pathParameters, requestAdapter);
@@ -323,11 +345,15 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of the specified event object. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get an event in another user's calendar: Since the **event** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in an **event** instance.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -336,7 +362,9 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

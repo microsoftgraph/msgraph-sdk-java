@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ShiftAvailability implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies the pattern for recurrence */
+    /**
+     * Specifies the pattern for recurrence
+     */
     private PatternedRecurrence recurrence;
-    /** The time slot(s) preferred by the user. */
+    /**
+     * The time slot(s) preferred by the user.
+     */
     private java.util.List<TimeRange> timeSlots;
-    /** Specifies the time zone for the indicated time. */
+    /**
+     * Specifies the time zone for the indicated time.
+     */
     private String timeZone;
     /**
      * Instantiates a new shiftAvailability and sets the default values.

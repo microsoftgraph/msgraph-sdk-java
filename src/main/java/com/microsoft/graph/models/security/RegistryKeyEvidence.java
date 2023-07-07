@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RegistryKeyEvidence extends AlertEvidence implements Parsable {
-    /** Registry hive of the key that the recorded action was applied to. */
+    /**
+     * Registry hive of the key that the recorded action was applied to.
+     */
     private String registryHive;
-    /** Registry key that the recorded action was applied to. */
+    /**
+     * Registry key that the recorded action was applied to.
+     */
     private String registryKey;
     /**
      * Instantiates a new RegistryKeyEvidence and sets the default values.

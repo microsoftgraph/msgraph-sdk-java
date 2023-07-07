@@ -7,27 +7,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailFolder extends Entity implements Parsable {
-    /** The number of immediate child mailFolders in the current mailFolder. */
+    /**
+     * The number of immediate child mailFolders in the current mailFolder.
+     */
     private Integer childFolderCount;
-    /** The collection of child folders in the mailFolder. */
+    /**
+     * The collection of child folders in the mailFolder.
+     */
     private java.util.List<MailFolder> childFolders;
-    /** The mailFolder's display name. */
+    /**
+     * The mailFolder's display name.
+     */
     private String displayName;
-    /** Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders. */
+    /**
+     * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
+     */
     private Boolean isHidden;
-    /** The collection of rules that apply to the user's Inbox folder. */
+    /**
+     * The collection of rules that apply to the user's Inbox folder.
+     */
     private java.util.List<MessageRule> messageRules;
-    /** The collection of messages in the mailFolder. */
+    /**
+     * The collection of messages in the mailFolder.
+     */
     private java.util.List<Message> messages;
-    /** The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable. */
+    /**
+     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+     */
     private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /** The unique identifier for the mailFolder's parent mailFolder. */
+    /**
+     * The unique identifier for the mailFolder's parent mailFolder.
+     */
     private String parentFolderId;
-    /** The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable. */
+    /**
+     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+     */
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /** The number of items in the mailFolder. */
+    /**
+     * The number of items in the mailFolder.
+     */
     private Integer totalItemCount;
-    /** The number of items in the mailFolder marked as unread. */
+    /**
+     * The number of items in the mailFolder marked as unread.
+     */
     private Integer unreadItemCount;
     /**
      * Instantiates a new mailFolder and sets the default values.

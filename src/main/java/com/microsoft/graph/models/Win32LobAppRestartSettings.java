@@ -11,15 +11,25 @@ import java.util.Objects;
  * Contains properties describing restart coordination following an app installation.
  */
 public class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The number of minutes before the restart time to display the countdown dialog for pending restarts. */
+    /**
+     * The number of minutes before the restart time to display the countdown dialog for pending restarts.
+     */
     private Integer countdownDisplayBeforeRestartInMinutes;
-    /** The number of minutes to wait before restarting the device after an app installation. */
+    /**
+     * The number of minutes to wait before restarting the device after an app installation.
+     */
     private Integer gracePeriodInMinutes;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The number of minutes to snooze the restart notification dialog when the snooze button is selected. */
+    /**
+     * The number of minutes to snooze the restart notification dialog when the snooze button is selected.
+     */
     private Integer restartNotificationSnoozeDurationInMinutes;
     /**
      * Instantiates a new win32LobAppRestartSettings and sets the default values.

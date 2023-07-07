@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
  */
 public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity. */
+    /**
+     * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
@@ -263,11 +265,15 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an accessPackageCatalog object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -276,7 +282,9 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

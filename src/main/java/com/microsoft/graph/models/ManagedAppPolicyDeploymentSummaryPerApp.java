@@ -11,13 +11,21 @@ import java.util.Objects;
  * Represents policy deployment summary per app.
  */
 public class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Number of users the policy is applied. */
+    /**
+     * Number of users the policy is applied.
+     */
     private Integer configurationAppliedUserCount;
-    /** Deployment of an app. */
+    /**
+     * Deployment of an app.
+     */
     private MobileAppIdentifier mobileAppIdentifier;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new managedAppPolicyDeploymentSummaryPerApp and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserIdentity extends Identity implements Parsable {
-    /** Indicates the client IP address used by user performing the activity (audit log only). */
+    /**
+     * Indicates the client IP address used by user performing the activity (audit log only).
+     */
     private String ipAddress;
-    /** The userPrincipalName attribute of the user. */
+    /**
+     * The userPrincipalName attribute of the user.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new UserIdentity and sets the default values.

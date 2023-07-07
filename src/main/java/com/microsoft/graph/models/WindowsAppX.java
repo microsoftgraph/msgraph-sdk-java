@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsAppX extends MobileLobApp implements Parsable {
-    /** Contains properties for Windows architecture. */
+    /**
+     * Contains properties for Windows architecture.
+     */
     private WindowsArchitecture applicableArchitectures;
-    /** The identity name of the uploaded app package. For example: 'Contoso.DemoApp'. */
+    /**
+     * The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
+     */
     private String identityName;
-    /** The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'. */
+    /**
+     * The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
+     */
     private String identityPublisherHash;
-    /** The identity resource identifier of the uploaded app package. For example: 'TestResourceId'. */
+    /**
+     * The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
+     */
     private String identityResourceIdentifier;
-    /** The identity version of the uploaded app package. For example: '1.0.0.0'. */
+    /**
+     * The identity version of the uploaded app package. For example: '1.0.0.0'.
+     */
     private String identityVersion;
-    /** When TRUE, indicates that the app is a bundle. When FALSE, indicates that the app is not a bundle. By default, property is set to FALSE. */
+    /**
+     * When TRUE, indicates that the app is a bundle. When FALSE, indicates that the app is not a bundle. By default, property is set to FALSE.
+     */
     private Boolean isBundle;
-    /** The minimum operating system required for a Windows mobile app. */
+    /**
+     * The minimum operating system required for a Windows mobile app.
+     */
     private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new WindowsAppX and sets the default values.

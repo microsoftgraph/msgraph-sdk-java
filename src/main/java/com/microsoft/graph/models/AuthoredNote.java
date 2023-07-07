@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthoredNote extends Entity implements Parsable {
-    /** Identity information about the note's author. */
+    /**
+     * Identity information about the note's author.
+     */
     private Identity author;
-    /** The content of the note. */
+    /**
+     * The content of the note.
+     */
     private ItemBody content;
-    /** The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime createdDateTime;
     /**
      * Instantiates a new AuthoredNote and sets the default values.

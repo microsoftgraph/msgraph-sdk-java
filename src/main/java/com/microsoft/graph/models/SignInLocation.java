@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SignInLocation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity. */
+    /**
+     * Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+     */
     private String city;
-    /** Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity. */
+    /**
+     * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+     */
     private String countryOrRegion;
-    /** Provides the latitude, longitude and altitude where the sign-in originated. */
+    /**
+     * Provides the latitude, longitude and altitude where the sign-in originated.
+     */
     private GeoCoordinates geoCoordinates;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity. */
+    /**
+     * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
+     */
     private String state;
     /**
      * Instantiates a new signInLocation and sets the default values.

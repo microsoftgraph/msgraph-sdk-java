@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConversationThread extends Entity implements Parsable {
-    /** The Cc: recipients for the thread. Returned only on $select. */
+    /**
+     * The Cc: recipients for the thread. Returned only on $select.
+     */
     private java.util.List<Recipient> ccRecipients;
-    /** Indicates whether any of the posts within this thread has at least one attachment. Returned by default. */
+    /**
+     * Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
+     */
     private Boolean hasAttachments;
-    /** Indicates if the thread is locked. Returned by default. */
+    /**
+     * Indicates if the thread is locked. Returned by default.
+     */
     private Boolean isLocked;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
+     */
     private OffsetDateTime lastDeliveredDateTime;
-    /** The posts property */
+    /**
+     * The posts property
+     */
     private java.util.List<Post> posts;
-    /** A short summary from the body of the latest post in this conversation. Returned by default. */
+    /**
+     * A short summary from the body of the latest post in this conversation. Returned by default.
+     */
     private String preview;
-    /** The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default. */
+    /**
+     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
+     */
     private String topic;
-    /** The To: recipients for the thread. Returned only on $select. */
+    /**
+     * The To: recipients for the thread. Returned only on $select.
+     */
     private java.util.List<Recipient> toRecipients;
-    /** All the users that sent a message to this thread. Returned by default. */
+    /**
+     * All the users that sent a message to this thread. Returned by default.
+     */
     private java.util.List<String> uniqueSenders;
     /**
      * Instantiates a new conversationThread and sets the default values.

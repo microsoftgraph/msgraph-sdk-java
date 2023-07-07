@@ -11,19 +11,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CaseOperation extends Entity implements Parsable {
-    /** The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData */
+    /**
+     * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
+     */
     private CaseAction action;
-    /** The date and time the operation was completed. */
+    /**
+     * The date and time the operation was completed.
+     */
     private OffsetDateTime completedDateTime;
-    /** The user that created the operation. */
+    /**
+     * The user that created the operation.
+     */
     private IdentitySet createdBy;
-    /** The date and time the operation was created. */
+    /**
+     * The date and time the operation was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The progress of the operation. */
+    /**
+     * The progress of the operation.
+     */
     private Integer percentProgress;
-    /** Contains success and failure-specific result information. */
+    /**
+     * Contains success and failure-specific result information.
+     */
     private ResultInfo resultInfo;
-    /** The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed. */
+    /**
+     * The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
+     */
     private CaseOperationStatus status;
     /**
      * Instantiates a new caseOperation and sets the default values.

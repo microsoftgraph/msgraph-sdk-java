@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Id of the workbook session. */
+    /**
+     * Id of the workbook session.
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** true for persistent session. false for non-persistent session (view mode) */
+    /**
+     * true for persistent session. false for non-persistent session (view mode)
+     */
     private Boolean persistChanges;
     /**
      * Instantiates a new workbookSessionInfo and sets the default values.

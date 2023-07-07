@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
  */
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
-    /** Casts the previous resource to application. */
+    /**
+     * Casts the previous resource to application.
+     */
     @javax.annotation.Nonnull
     public GraphApplicationRequestBuilder graphApplication() {
         return new GraphApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to device. */
+    /**
+     * Casts the previous resource to device.
+     */
     @javax.annotation.Nonnull
     public GraphDeviceRequestBuilder graphDevice() {
         return new GraphDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to group. */
+    /**
+     * Casts the previous resource to group.
+     */
     @javax.annotation.Nonnull
     public GraphGroupRequestBuilder graphGroup() {
         return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to orgContact. */
+    /**
+     * Casts the previous resource to orgContact.
+     */
     @javax.annotation.Nonnull
     public GraphOrgContactRequestBuilder graphOrgContact() {
         return new GraphOrgContactRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to servicePrincipal. */
+    /**
+     * Casts the previous resource to servicePrincipal.
+     */
     @javax.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
         return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Casts the previous resource to user. */
+    /**
+     * Casts the previous resource to user.
+     */
     @javax.annotation.Nonnull
     public GraphUserRequestBuilder graphUser() {
         return new GraphUserRequestBuilder(pathParameters, requestAdapter);
@@ -146,11 +158,15 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * The direct and transitive members of a group. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -159,7 +175,9 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

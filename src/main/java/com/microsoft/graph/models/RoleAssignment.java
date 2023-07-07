@@ -10,13 +10,21 @@ import java.util.Objects;
  * The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles.
  */
 public class RoleAssignment extends Entity implements Parsable {
-    /** Description of the Role Assignment. */
+    /**
+     * Description of the Role Assignment.
+     */
     private String description;
-    /** The display or friendly name of the role Assignment. */
+    /**
+     * The display or friendly name of the role Assignment.
+     */
     private String displayName;
-    /** List of ids of role scope member security groups.  These are IDs from Azure Active Directory. */
+    /**
+     * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
+     */
     private java.util.List<String> resourceScopes;
-    /** Role definition this assignment is part of. */
+    /**
+     * Role definition this assignment is part of.
+     */
     private RoleDefinition roleDefinition;
     /**
      * Instantiates a new roleAssignment and sets the default values.

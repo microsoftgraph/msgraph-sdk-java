@@ -8,37 +8,69 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceEvidence extends AlertEvidence implements Parsable {
-    /** A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined. */
+    /**
+     * A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
+     */
     private String azureAdDeviceId;
-    /** State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue. */
+    /**
+     * State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
+     */
     private DefenderAvStatus defenderAvStatus;
-    /** The fully qualified domain name (FQDN) for the device. */
+    /**
+     * The fully qualified domain name (FQDN) for the device.
+     */
     private String deviceDnsName;
-    /** The date and time when the device was first seen. */
+    /**
+     * The date and time when the device was first seen.
+     */
     private OffsetDateTime firstSeenDateTime;
-    /** The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue. */
+    /**
+     * The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+     */
     private DeviceHealthStatus healthStatus;
-    /** The ipInterfaces property */
+    /**
+     * The ipInterfaces property
+     */
     private java.util.List<String> ipInterfaces;
-    /** Users that were logged on the machine during the time of the alert. */
+    /**
+     * Users that were logged on the machine during the time of the alert.
+     */
     private java.util.List<LoggedOnUser> loggedOnUsers;
-    /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
+    /**
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
+     */
     private String mdeDeviceId;
-    /** The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue. */
+    /**
+     * The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+     */
     private OnboardingStatus onboardingStatus;
-    /** The build version for the operating system the device is running. */
+    /**
+     * The build version for the operating system the device is running.
+     */
     private Long osBuild;
-    /** The operating system platform the device is running. */
+    /**
+     * The operating system platform the device is running.
+     */
     private String osPlatform;
-    /** The ID of the role-based access control (RBAC) device group. */
+    /**
+     * The ID of the role-based access control (RBAC) device group.
+     */
     private Integer rbacGroupId;
-    /** The name of the RBAC device group. */
+    /**
+     * The name of the RBAC device group.
+     */
     private String rbacGroupName;
-    /** Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue. */
+    /**
+     * Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
+     */
     private DeviceRiskScore riskScore;
-    /** The version of the operating system platform. */
+    /**
+     * The version of the operating system platform.
+     */
     private String version;
-    /** Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running. */
+    /**
+     * Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
+     */
     private VmMetadata vmMetadata;
     /**
      * Instantiates a new DeviceEvidence and sets the default values.

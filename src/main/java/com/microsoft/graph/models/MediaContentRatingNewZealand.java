@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MediaContentRatingNewZealand implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Movies rating labels in New Zealand */
+    /**
+     * Movies rating labels in New Zealand
+     */
     private RatingNewZealandMoviesType movieRating;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** TV content rating labels in New Zealand */
+    /**
+     * TV content rating labels in New Zealand
+     */
     private RatingNewZealandTelevisionType tvRating;
     /**
      * Instantiates a new mediaContentRatingNewZealand and sets the default values.

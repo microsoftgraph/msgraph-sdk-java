@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationPowerPointResource extends EducationResource implements Parsable {
-    /** Location of the file on disk. */
+    /**
+     * Location of the file on disk.
+     */
     private String fileUrl;
     /**
      * Instantiates a new EducationPowerPointResource and sets the default values.

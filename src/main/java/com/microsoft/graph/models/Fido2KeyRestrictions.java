@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable {
-    /** A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers. */
+    /**
+     * A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
+     */
     private java.util.List<String> aaGuids;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Enforcement type. Possible values are: allow, block. */
+    /**
+     * Enforcement type. Possible values are: allow, block.
+     */
     private Fido2RestrictionEnforcementType enforcementType;
-    /** Determines if the configured key enforcement is enabled. */
+    /**
+     * Determines if the configured key enforcement is enabled.
+     */
     private Boolean isEnforced;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new fido2KeyRestrictions and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OutlookUser extends Entity implements Parsable {
-    /** A list of categories defined for the user. */
+    /**
+     * A list of categories defined for the user.
+     */
     private java.util.List<OutlookCategory> masterCategories;
     /**
      * Instantiates a new outlookUser and sets the default values.

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FolderView implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The method by which the folder should be sorted. */
+    /**
+     * The method by which the folder should be sorted.
+     */
     private String sortBy;
-    /** If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending. */
+    /**
+     * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
+     */
     private String sortOrder;
-    /** The type of view that should be used to represent the folder. */
+    /**
+     * The type of view that should be used to represent the folder.
+     */
     private String viewType;
     /**
      * Instantiates a new folderView and sets the default values.

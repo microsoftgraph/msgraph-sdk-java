@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ActivityBasedTimeoutPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ActivityBasedTimeoutPolicy> value;
     /**
      * Instantiates a new ActivityBasedTimeoutPolicyCollectionResponse and sets the default values.

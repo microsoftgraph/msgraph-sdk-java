@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeltaPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The number1 property */
+    /**
+     * The number1 property
+     */
     private Json number1;
-    /** The number2 property */
+    /**
+     * The number2 property
+     */
     private Json number2;
     /**
      * Instantiates a new deltaPostRequestBody and sets the default values.

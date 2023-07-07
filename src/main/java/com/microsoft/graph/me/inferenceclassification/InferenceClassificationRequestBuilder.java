@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the inferenceClassification property of the microsoft.graph.user entity.
  */
 public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity. */
+    /**
+     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
+     */
     @javax.annotation.Nonnull
     public OverridesRequestBuilder overrides() {
         return new OverridesRequestBuilder(pathParameters, requestAdapter);
@@ -188,7 +190,9 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
      * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
      */
     public class GetQueryParameters {
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -197,7 +201,9 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

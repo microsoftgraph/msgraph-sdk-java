@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SingleValueLegacyExtendedProperty extends Entity implements Parsable {
-    /** A property value. */
+    /**
+     * A property value.
+     */
     private String value;
     /**
      * Instantiates a new singleValueLegacyExtendedProperty and sets the default values.

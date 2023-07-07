@@ -25,12 +25,16 @@ import java.util.Objects;
  * Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity.
  */
 public class AuditEventsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getAuditCategories method. */
+    /**
+     * Provides operations to call the getAuditCategories method.
+     */
     @javax.annotation.Nonnull
     public GetAuditCategoriesRequestBuilder getAuditCategories() {
         return new GetAuditCategoriesRequestBuilder(pathParameters, requestAdapter);
@@ -68,8 +72,9 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/auditEvents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @return a CompletableFuture of AuditEventCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEventCollectionResponse> get() {
@@ -86,9 +91,10 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AuditEventCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +121,10 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return new GetAuditActivityTypesWithCategoryRequestBuilder(pathParameters, requestAdapter, category);
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @return a CompletableFuture of auditEvent
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> post(@javax.annotation.Nonnull final AuditEvent body) {
@@ -134,10 +141,11 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of auditEvent
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> post(@javax.annotation.Nonnull final AuditEvent body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -155,7 +163,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +171,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -184,7 +192,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -193,7 +201,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -216,38 +224,54 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -256,7 +280,9 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

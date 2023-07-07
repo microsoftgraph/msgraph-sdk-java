@@ -11,15 +11,25 @@ import java.util.Objects;
  * Represents diagnostics status.
  */
 public class ManagedAppDiagnosticStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Instruction on how to mitigate a failed validation */
+    /**
+     * Instruction on how to mitigate a failed validation
+     */
     private String mitigationInstruction;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The state of the operation */
+    /**
+     * The state of the operation
+     */
     private String state;
-    /** The validation friendly name */
+    /**
+     * The validation friendly name
+     */
     private String validationName;
     /**
      * Instantiates a new managedAppDiagnosticStatus and sets the default values.

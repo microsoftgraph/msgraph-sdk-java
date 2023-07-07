@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementExportJobCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DeviceManagementExportJob> value;
     /**
      * Instantiates a new DeviceManagementExportJobCollectionResponse and sets the default values.

@@ -10,9 +10,13 @@ import java.util.Objects;
  * Contains content properties for a specific app version. Each mobileAppContent can have multiple mobileAppContentFile.
  */
 public class MobileAppContent extends Entity implements Parsable {
-    /** The collection of contained apps in a MobileLobApp acting as a package. */
+    /**
+     * The collection of contained apps in a MobileLobApp acting as a package.
+     */
     private java.util.List<MobileContainedApp> containedApps;
-    /** The list of files for this app content version. */
+    /**
+     * The list of files for this app content version.
+     */
     private java.util.List<MobileAppContentFile> files;
     /**
      * Instantiates a new mobileAppContent and sets the default values.

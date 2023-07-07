@@ -10,27 +10,49 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class SelfSignedCertificate implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The customKeyIdentifier property */
+    /**
+     * The customKeyIdentifier property
+     */
     private byte[] customKeyIdentifier;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The endDateTime property */
+    /**
+     * The endDateTime property
+     */
     private OffsetDateTime endDateTime;
-    /** The key property */
+    /**
+     * The key property
+     */
     private byte[] key;
-    /** The keyId property */
+    /**
+     * The keyId property
+     */
     private UUID keyId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The startDateTime property */
+    /**
+     * The startDateTime property
+     */
     private OffsetDateTime startDateTime;
-    /** The thumbprint property */
+    /**
+     * The thumbprint property
+     */
     private String thumbprint;
-    /** The type property */
+    /**
+     * The type property
+     */
     private String type;
-    /** The usage property */
+    /**
+     * The usage property
+     */
     private String usage;
     /**
      * Instantiates a new SelfSignedCertificate and sets the default values.

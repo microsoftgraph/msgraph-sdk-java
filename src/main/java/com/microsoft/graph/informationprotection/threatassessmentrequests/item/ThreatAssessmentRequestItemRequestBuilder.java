@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
  */
 public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity. */
+    /**
+     * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
+     */
     @javax.annotation.Nonnull
     public ResultsRequestBuilder results() {
         return new ResultsRequestBuilder(pathParameters, requestAdapter);
@@ -259,11 +261,15 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
      * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -272,7 +278,9 @@ public class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilde
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable {
-    /** The identifier for an app, as specified in the play store. */
+    /**
+     * The identifier for an app, as specified in the play store.
+     */
     private String packageId;
     /**
      * Instantiates a new AndroidMobileAppIdentifier and sets the default values.

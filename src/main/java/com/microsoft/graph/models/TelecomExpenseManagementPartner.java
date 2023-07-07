@@ -11,15 +11,25 @@ import java.util.Objects;
  * telecomExpenseManagementPartner resources represent the metadata and status of a given TEM service. Once your organization has onboarded with a partner, the partner can be enabled or disabled to switch TEM functionality on or off.
  */
 public class TelecomExpenseManagementPartner extends Entity implements Parsable {
-    /** Whether the partner's AAD app has been authorized to access Intune. */
+    /**
+     * Whether the partner's AAD app has been authorized to access Intune.
+     */
     private Boolean appAuthorized;
-    /** Display name of the TEM partner. */
+    /**
+     * Display name of the TEM partner.
+     */
     private String displayName;
-    /** Whether Intune's connection to the TEM service is currently enabled or disabled. */
+    /**
+     * Whether Intune's connection to the TEM service is currently enabled or disabled.
+     */
     private Boolean enabled;
-    /** Timestamp of the last request sent to Intune by the TEM partner. */
+    /**
+     * Timestamp of the last request sent to Intune by the TEM partner.
+     */
     private OffsetDateTime lastConnectionDateTime;
-    /** URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service. */
+    /**
+     * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
+     */
     private String url;
     /**
      * Instantiates a new telecomExpenseManagementPartner and sets the default values.

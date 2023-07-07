@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserFeedback implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The rating property */
+    /**
+     * The rating property
+     */
     private UserFeedbackRating rating;
-    /** The feedback text provided by the user of this endpoint for the session. */
+    /**
+     * The feedback text provided by the user of this endpoint for the session.
+     */
     private String text;
-    /** The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user. */
+    /**
+     * The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user.
+     */
     private FeedbackTokenSet tokens;
     /**
      * Instantiates a new userFeedback and sets the default values.

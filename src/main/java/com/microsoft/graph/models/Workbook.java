@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Workbook extends Entity implements Parsable {
-    /** The application property */
+    /**
+     * The application property
+     */
     private WorkbookApplication application;
-    /** The comments property */
+    /**
+     * Represents a collection of comments in a workbook.
+     */
     private java.util.List<WorkbookComment> comments;
-    /** The functions property */
+    /**
+     * The functions property
+     */
     private WorkbookFunctions functions;
-    /** Represents a collection of workbooks scoped named items (named ranges and constants). Read-only. */
+    /**
+     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     */
     private java.util.List<WorkbookNamedItem> names;
-    /** The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. */
+    /**
+     * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+     */
     private java.util.List<WorkbookOperation> operations;
-    /** Represents a collection of tables associated with the workbook. Read-only. */
+    /**
+     * Represents a collection of tables associated with the workbook. Read-only.
+     */
     private java.util.List<WorkbookTable> tables;
-    /** Represents a collection of worksheets associated with the workbook. Read-only. */
+    /**
+     * Represents a collection of worksheets associated with the workbook. Read-only.
+     */
     private java.util.List<WorkbookWorksheet> worksheets;
     /**
      * Instantiates a new workbook and sets the default values.
@@ -48,7 +62,7 @@ public class Workbook extends Entity implements Parsable {
         return this.application;
     }
     /**
-     * Gets the comments property value. The comments property
+     * Gets the comments property value. Represents a collection of comments in a workbook.
      * @return a workbookComment
      */
     @javax.annotation.Nullable
@@ -138,7 +152,7 @@ public class Workbook extends Entity implements Parsable {
         this.application = value;
     }
     /**
-     * Sets the comments property value. The comments property
+     * Sets the comments property value. Represents a collection of comments in a workbook.
      * @param value Value to set for the comments property.
      * @return a void
      */

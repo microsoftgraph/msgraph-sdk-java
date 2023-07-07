@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationRubric extends Entity implements Parsable {
-    /** The user who created this resource. */
+    /**
+     * The user who created this resource.
+     */
     private IdentitySet createdBy;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime createdDateTime;
-    /** The description of this rubric. */
+    /**
+     * The description of this rubric.
+     */
     private EducationItemBody description;
-    /** The name of this rubric. */
+    /**
+     * The name of this rubric.
+     */
     private String displayName;
-    /** The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric. */
+    /**
+     * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
+     */
     private EducationAssignmentGradeType grading;
-    /** The last user to modify the resource. */
+    /**
+     * The last user to modify the resource.
+     */
     private IdentitySet lastModifiedBy;
-    /** Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The collection of levels making up this rubric. */
+    /**
+     * The collection of levels making up this rubric.
+     */
     private java.util.List<RubricLevel> levels;
-    /** The collection of qualities making up this rubric. */
+    /**
+     * The collection of qualities making up this rubric.
+     */
     private java.util.List<RubricQuality> qualities;
     /**
      * Instantiates a new educationRubric and sets the default values.

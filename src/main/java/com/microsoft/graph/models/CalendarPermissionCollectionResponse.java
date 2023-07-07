@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CalendarPermissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<CalendarPermission> value;
     /**
      * Instantiates a new CalendarPermissionCollectionResponse and sets the default values.

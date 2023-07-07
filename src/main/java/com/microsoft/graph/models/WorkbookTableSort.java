@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookTableSort extends Entity implements Parsable {
-    /** Represents the current conditions used to last sort the table. Read-only. */
+    /**
+     * Represents the current conditions used to last sort the table. Read-only.
+     */
     private java.util.List<WorkbookSortField> fields;
-    /** Represents whether the casing impacted the last sort of the table. Read-only. */
+    /**
+     * Represents whether the casing impacted the last sort of the table. Read-only.
+     */
     private Boolean matchCase;
-    /** Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only. */
+    /**
+     * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+     */
     private String method;
     /**
      * Instantiates a new workbookTableSort and sets the default values.

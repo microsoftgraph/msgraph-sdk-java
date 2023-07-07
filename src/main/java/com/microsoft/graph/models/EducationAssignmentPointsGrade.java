@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements Parsable {
-    /** Number of points a teacher is giving this submission object. */
+    /**
+     * Number of points a teacher is giving this submission object.
+     */
     private Float points;
     /**
      * Instantiates a new EducationAssignmentPointsGrade and sets the default values.

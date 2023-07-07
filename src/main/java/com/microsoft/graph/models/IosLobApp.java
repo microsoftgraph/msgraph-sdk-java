@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosLobApp extends MobileLobApp implements Parsable {
-    /** Contains properties of the possible iOS device types the mobile app can run on. */
+    /**
+     * Contains properties of the possible iOS device types the mobile app can run on.
+     */
     private IosDeviceType applicableDeviceType;
-    /** The build number of iOS Line of Business (LoB) app. */
+    /**
+     * The build number of iOS Line of Business (LoB) app.
+     */
     private String buildNumber;
-    /** The Identity Name. */
+    /**
+     * The Identity Name.
+     */
     private String bundleId;
-    /** The expiration time. */
+    /**
+     * The expiration time.
+     */
     private OffsetDateTime expirationDateTime;
-    /** The value for the minimum applicable operating system. */
+    /**
+     * The value for the minimum applicable operating system.
+     */
     private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /** The version number of iOS Line of Business (LoB) app. */
+    /**
+     * The version number of iOS Line of Business (LoB) app.
+     */
     private String versionNumber;
     /**
      * Instantiates a new IosLobApp and sets the default values.

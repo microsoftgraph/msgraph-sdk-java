@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The identifier of the calendar event associated with the meeting. */
+    /**
+     * The identifier of the calendar event associated with the meeting.
+     */
     private String calendarEventId;
-    /** The URL that users click to join or uniquely identify the meeting. */
+    /**
+     * The URL that users click to join or uniquely identify the meeting.
+     */
     private String joinWebUrl;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The organizer of the meeting. */
+    /**
+     * The organizer of the meeting.
+     */
     private TeamworkUserIdentity organizer;
     /**
      * Instantiates a new teamworkOnlineMeetingInfo and sets the default values.

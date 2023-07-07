@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values for the install intent chosen by the admin. */
+/**
+ * Possible values for the install intent chosen by the admin.
+ */
 public enum InstallIntent implements ValuedEnum {
     /** Available install intent. */
     Available("available"),

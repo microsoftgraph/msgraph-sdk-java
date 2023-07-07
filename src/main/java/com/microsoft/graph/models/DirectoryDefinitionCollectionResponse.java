@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectoryDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DirectoryDefinition> value;
     /**
      * Instantiates a new DirectoryDefinitionCollectionResponse and sets the default values.

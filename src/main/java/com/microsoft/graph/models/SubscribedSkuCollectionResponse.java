@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubscribedSkuCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<SubscribedSku> value;
     /**
      * Instantiates a new SubscribedSkuCollectionResponse and sets the default values.

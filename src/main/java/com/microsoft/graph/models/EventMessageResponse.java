@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventMessageResponse extends EventMessage implements Parsable {
-    /** The proposedNewTime property */
+    /**
+     * The proposedNewTime property
+     */
     private TimeSlot proposedNewTime;
-    /** The responseType property */
+    /**
+     * The responseType property
+     */
     private ResponseType responseType;
     /**
      * Instantiates a new EventMessageResponse and sets the default values.

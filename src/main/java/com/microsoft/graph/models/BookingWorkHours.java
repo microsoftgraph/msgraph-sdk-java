@@ -11,13 +11,21 @@ import java.util.Objects;
  * This type represents the set of working hours in a single day of the week.
  */
 public class BookingWorkHours implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The day property */
+    /**
+     * The day property
+     */
     private DayOfWeek day;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A list of start/end times during a day. */
+    /**
+     * A list of start/end times during a day.
+     */
     private java.util.List<BookingWorkTimeSlot> timeSlots;
     /**
      * Instantiates a new bookingWorkHours and sets the default values.

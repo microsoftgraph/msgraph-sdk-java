@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecurityGroupEvidence extends AlertEvidence implements Parsable {
-    /** The name of the security group. */
+    /**
+     * The name of the security group.
+     */
     private String displayName;
-    /** Unique identifier of the security group. */
+    /**
+     * Unique identifier of the security group.
+     */
     private String securityGroupId;
     /**
      * Instantiates a new SecurityGroupEvidence and sets the default values.

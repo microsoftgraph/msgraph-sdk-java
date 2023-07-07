@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
-    /** The maximum number of devices that a user can enroll */
+    /**
+     * The maximum number of devices that a user can enroll
+     */
     private Integer limit;
     /**
      * Instantiates a new DeviceEnrollmentLimitConfiguration and sets the default values.

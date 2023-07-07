@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserAccount implements AdditionalDataHolder, Parsable {
-    /** The displayed name of the user account. */
+    /**
+     * The displayed name of the user account.
+     */
     private String accountName;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The user object identifier in Azure Active Directory (Azure AD). */
+    /**
+     * The user object identifier in Azure Active Directory (Azure AD).
+     */
     private String azureAdUserId;
-    /** The user display name in Azure AD. */
+    /**
+     * The user display name in Azure AD.
+     */
     private String displayName;
-    /** The name of the Active Directory domain of which the user is a member. */
+    /**
+     * The name of the Active Directory domain of which the user is a member.
+     */
     private String domainName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The user principal name of the account in Azure AD. */
+    /**
+     * The user principal name of the account in Azure AD.
+     */
     private String userPrincipalName;
-    /** The local security identifier of the user account. */
+    /**
+     * The local security identifier of the user account.
+     */
     private String userSid;
     /**
      * Instantiates a new userAccount and sets the default values.

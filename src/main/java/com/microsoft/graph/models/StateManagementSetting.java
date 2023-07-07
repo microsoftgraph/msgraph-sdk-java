@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** State Management Setting. */
+/**
+ * State Management Setting.
+ */
 public enum StateManagementSetting implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

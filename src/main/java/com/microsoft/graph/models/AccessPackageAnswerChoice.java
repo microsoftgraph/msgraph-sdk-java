@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAnswerChoice implements AdditionalDataHolder, Parsable {
-    /** The actual value of the selected choice. This is typically a string value which is understandable by applications. Required. */
+    /**
+     * The actual value of the selected choice. This is typically a string value which is understandable by applications. Required.
+     */
     private String actualValue;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The text of the answer choice represented in a format for a specific locale. */
+    /**
+     * The text of the answer choice represented in a format for a specific locale.
+     */
     private java.util.List<AccessPackageLocalizedText> localizations;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The text property */
+    /**
+     * The text property
+     */
     private String text;
     /**
      * Instantiates a new accessPackageAnswerChoice and sets the default values.

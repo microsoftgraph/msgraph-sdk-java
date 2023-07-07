@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** List of members who left the chat. */
+    /**
+     * List of members who left the chat.
+     */
     private java.util.List<TeamworkUserIdentity> members;
     /**
      * Instantiates a new MembersLeftEventMessageDetail and sets the default values.

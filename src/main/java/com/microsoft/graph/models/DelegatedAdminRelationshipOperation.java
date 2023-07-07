@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminRelationshipOperation extends Entity implements Parsable {
-    /** The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only. */
+    /**
+     * The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The data (payload) for the operation. Read-only. */
+    /**
+     * The data (payload) for the operation. Read-only.
+     */
     private String data;
-    /** The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only. */
+    /**
+     * The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The operationType property */
+    /**
+     * The operationType property
+     */
     private DelegatedAdminRelationshipOperationType operationType;
-    /** The status property */
+    /**
+     * The status property
+     */
     private LongRunningOperationStatus status;
     /**
      * Instantiates a new delegatedAdminRelationshipOperation and sets the default values.

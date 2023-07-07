@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Count of items that are excluded from the request. */
+    /**
+     * Count of items that are excluded from the request.
+     */
     private Long excludedItemCount;
-    /** Count of items per insight. */
+    /**
+     * Count of items per insight.
+     */
     private java.util.List<KeyValuePair> insightCounts;
-    /** Count of items found. */
+    /**
+     * Count of items found.
+     */
     private Long itemCount;
-    /** Count of item that need review. */
+    /**
+     * Count of item that need review.
+     */
     private Long itemNeedReview;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams. */
+    /**
+     * Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
+     */
     private java.util.List<KeyValuePair> productItemCounts;
-    /** Count of items signed off by the administrator. */
+    /**
+     * Count of items signed off by the administrator.
+     */
     private Long signedOffItemCount;
-    /** Total item size in bytes. */
+    /**
+     * Total item size in bytes.
+     */
     private Long totalItemSize;
     /**
      * Instantiates a new subjectRightsRequestDetail and sets the default values.

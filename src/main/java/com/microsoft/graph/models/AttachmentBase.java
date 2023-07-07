@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttachmentBase extends Entity implements Parsable {
-    /** The MIME type. */
+    /**
+     * The MIME type.
+     */
     private String contentType;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The display name of the attachment. This does not need to be the actual file name. */
+    /**
+     * The display name of the attachment. This does not need to be the actual file name.
+     */
     private String name;
-    /** The length of the attachment in bytes. */
+    /**
+     * The length of the attachment in bytes.
+     */
     private Integer size;
     /**
      * Instantiates a new attachmentBase and sets the default values.

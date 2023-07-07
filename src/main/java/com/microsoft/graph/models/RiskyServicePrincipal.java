@@ -8,28 +8,48 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskyServicePrincipal extends Entity implements Parsable {
-    /** The globally unique identifier for the associated application (its appId property), if any. */
+    /**
+     * The globally unique identifier for the associated application (its appId property), if any.
+     */
     private String appId;
-    /** The display name for the service principal. */
+    /**
+     * The display name for the service principal.
+     */
     private String displayName;
-    /** Represents the risk history of Azure AD service principals. */
+    /**
+     * Represents the risk history of Azure AD service principals.
+     */
     private java.util.List<RiskyServicePrincipalHistoryItem> history;
-    /** true if the service principal account is enabled; otherwise, false. */
+    /**
+     * true if the service principal account is enabled; otherwise, false.
+     */
     private Boolean isEnabled;
-    /** Indicates whether Azure AD is currently processing the service principal's risky state. */
+    /**
+     * Indicates whether Azure AD is currently processing the service principal's risky state.
+     */
     private Boolean isProcessing;
-    /** Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal. */
+    /**
+     * Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
+     */
     private RiskDetail riskDetail;
-    /** The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq). */
+    /**
+     * The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq).
+     */
     private OffsetDateTime riskLastUpdatedDateTime;
-    /** Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq). */
+    /**
+     * Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
+     */
     private RiskLevel riskLevel;
-    /** State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. */
+    /**
+     * State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     */
     private RiskState riskState;
-    /** Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal. */
+    /**
+     * Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
+     */
     private String servicePrincipalType;
     /**
-     * Instantiates a new RiskyServicePrincipal and sets the default values.
+     * Instantiates a new riskyServicePrincipal and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +59,7 @@ public class RiskyServicePrincipal extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyServicePrincipal
+     * @return a riskyServicePrincipal
      */
     @javax.annotation.Nonnull
     public static RiskyServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

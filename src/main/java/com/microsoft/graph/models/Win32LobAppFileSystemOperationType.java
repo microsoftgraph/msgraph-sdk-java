@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Contains all supported file system detection type. */
+/**
+ * Contains all supported file system detection type.
+ */
 public enum Win32LobAppFileSystemOperationType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

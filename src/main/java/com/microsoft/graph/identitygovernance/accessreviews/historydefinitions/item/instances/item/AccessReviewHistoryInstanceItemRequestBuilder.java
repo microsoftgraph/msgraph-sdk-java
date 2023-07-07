@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity.
  */
 public class AccessReviewHistoryInstanceItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the generateDownloadUri method. */
+    /**
+     * Provides operations to call the generateDownloadUri method.
+     */
     @javax.annotation.Nonnull
     public GenerateDownloadUriRequestBuilder generateDownloadUri() {
         return new GenerateDownloadUriRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class AccessReviewHistoryInstanceItemRequestBuilder extends BaseRequestBu
      * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class AccessReviewHistoryInstanceItemRequestBuilder extends BaseRequestBu
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

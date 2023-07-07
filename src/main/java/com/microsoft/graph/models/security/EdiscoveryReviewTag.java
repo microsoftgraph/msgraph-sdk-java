@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryReviewTag extends Tag implements Parsable {
-    /** Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group. */
+    /**
+     * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
+     */
     private ChildSelectability childSelectability;
-    /** Returns the tags that are a child of a tag. */
+    /**
+     * Returns the tags that are a child of a tag.
+     */
     private java.util.List<EdiscoveryReviewTag> childTags;
-    /** Returns the parent tag of the specified tag. */
+    /**
+     * Returns the parent tag of the specified tag.
+     */
     private EdiscoveryReviewTag parent;
     /**
      * Instantiates a new EdiscoveryReviewTag and sets the default values.

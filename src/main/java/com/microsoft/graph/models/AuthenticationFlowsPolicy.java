@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationFlowsPolicy extends Entity implements Parsable {
-    /** Inherited property. A description of the policy. Optional. Read-only. */
+    /**
+     * Inherited property. A description of the policy. Optional. Read-only.
+     */
     private String description;
-    /** Inherited property. The human-readable name of the policy. Optional. Read-only. */
+    /**
+     * Inherited property. The human-readable name of the policy. Optional. Read-only.
+     */
     private String displayName;
-    /** Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only. */
+    /**
+     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
+     */
     private SelfServiceSignUpAuthenticationFlowConfiguration selfServiceSignUp;
     /**
      * Instantiates a new authenticationFlowsPolicy and sets the default values.

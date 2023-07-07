@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FilterOperatorsResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<FilterOperatorSchema> value;
     /**
      * Instantiates a new filterOperatorsResponse and sets the default values.

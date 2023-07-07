@@ -8,46 +8,84 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Site extends BaseItem implements Parsable {
-    /** Analytics about the view activities that took place in this site. */
+    /**
+     * Analytics about the view activities that took place in this site.
+     */
     private ItemAnalytics analytics;
-    /** The collection of column definitions reusable across lists under this site. */
+    /**
+     * The collection of column definitions reusable across lists under this site.
+     */
     private java.util.List<ColumnDefinition> columns;
-    /** The collection of content types defined for this site. */
+    /**
+     * The collection of content types defined for this site.
+     */
     private java.util.List<ContentType> contentTypes;
-    /** The full title for the site. Read-only. */
+    /**
+     * The full title for the site. Read-only.
+     */
     private String displayName;
-    /** The default drive (document library) for this site. */
+    /**
+     * The default drive (document library) for this site.
+     */
     private Drive drive;
-    /** The collection of drives (document libraries) under this site. */
+    /**
+     * The collection of drives (document libraries) under this site.
+     */
     private java.util.List<Drive> drives;
-    /** The error property */
+    /**
+     * The error property
+     */
     private PublicError error;
-    /** The externalColumns property */
+    /**
+     * The externalColumns property
+     */
     private java.util.List<ColumnDefinition> externalColumns;
-    /** Used to address any item contained in this site. This collection can't be enumerated. */
+    /**
+     * Used to address any item contained in this site. This collection can't be enumerated.
+     */
     private java.util.List<BaseItem> items;
-    /** The collection of lists under this site. */
+    /**
+     * The collection of lists under this site.
+     */
     private java.util.List<List> lists;
-    /** Calls the OneNote service for notebook related operations. */
+    /**
+     * Calls the OneNote service for notebook related operations.
+     */
     private Onenote onenote;
-    /** The collection of long-running operations on the site. */
+    /**
+     * The collection of long-running operations on the site.
+     */
     private java.util.List<RichLongRunningOperation> operations;
-    /** The permissions associated with the site. Nullable. */
+    /**
+     * The permissions associated with the site. Nullable.
+     */
     private java.util.List<Permission> permissions;
-    /** If present, indicates that this is the root site in the site collection. Read-only. */
+    /**
+     * If present, indicates that this is the root site in the site collection. Read-only.
+     */
     private Root root;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     */
     private SharepointIds sharepointIds;
-    /** Provides details about the site's site collection. Available only on the root site. Read-only. */
+    /**
+     * Provides details about the site's site collection. Available only on the root site. Read-only.
+     */
     private SiteCollection siteCollection;
-    /** The collection of the sub-sites under this site. */
+    /**
+     * The collection of the sub-sites under this site.
+     */
     private java.util.List<Site> sites;
-    /** The default termStore under this site. */
+    /**
+     * The default termStore under this site.
+     */
     private Store termStore;
-    /** The collection of termStores under this site. */
+    /**
+     * The collection of termStores under this site.
+     */
     private java.util.List<Store> termStores;
     /**
-     * Instantiates a new Site and sets the default values.
+     * Instantiates a new site and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -58,7 +96,7 @@ public class Site extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Site
+     * @return a site
      */
     @javax.annotation.Nonnull
     public static Site createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

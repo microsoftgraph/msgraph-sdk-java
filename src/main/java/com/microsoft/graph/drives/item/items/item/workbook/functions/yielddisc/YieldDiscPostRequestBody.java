@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class YieldDiscPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The basis property */
+    /**
+     * The basis property
+     */
     private Json basis;
-    /** The maturity property */
+    /**
+     * The maturity property
+     */
     private Json maturity;
-    /** The pr property */
+    /**
+     * The pr property
+     */
     private Json pr;
-    /** The redemption property */
+    /**
+     * The redemption property
+     */
     private Json redemption;
-    /** The settlement property */
+    /**
+     * The settlement property
+     */
     private Json settlement;
     /**
      * Instantiates a new yieldDiscPostRequestBody and sets the default values.

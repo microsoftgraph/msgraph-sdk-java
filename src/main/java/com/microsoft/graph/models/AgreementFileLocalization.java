@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
-    /** Read-only. Customized versions of the terms of use agreement in the Azure AD tenant. */
+    /**
+     * Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+     */
     private java.util.List<AgreementFileVersion> versions;
     /**
      * Instantiates a new agreementFileLocalization and sets the default values.

@@ -8,28 +8,48 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class SubscribedSku extends Entity implements Parsable {
-    /** The accountId property */
+    /**
+     * The accountId property
+     */
     private String accountId;
-    /** The accountName property */
+    /**
+     * The accountName property
+     */
     private String accountName;
-    /** For example, 'User' or 'Company'. */
+    /**
+     * For example, 'User' or 'Company'.
+     */
     private String appliesTo;
-    /** Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription. */
+    /**
+     * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
+     */
     private String capabilityStatus;
-    /** The number of licenses that have been assigned. */
+    /**
+     * The number of licenses that have been assigned.
+     */
     private Integer consumedUnits;
-    /** Information about the number and status of prepaid licenses. */
+    /**
+     * Information about the number and status of prepaid licenses.
+     */
     private LicenseUnitsDetail prepaidUnits;
-    /** Information about the service plans that are available with the SKU. Not nullable */
+    /**
+     * Information about the service plans that are available with the SKU. Not nullable
+     */
     private java.util.List<ServicePlanInfo> servicePlans;
-    /** The unique identifier (GUID) for the service SKU. */
+    /**
+     * The unique identifier (GUID) for the service SKU.
+     */
     private UUID skuId;
-    /** The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus. */
+    /**
+     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
+     */
     private String skuPartNumber;
-    /** The subscriptionIds property */
+    /**
+     * The subscriptionIds property
+     */
     private java.util.List<String> subscriptionIds;
     /**
-     * Instantiates a new subscribedSku and sets the default values.
+     * Instantiates a new SubscribedSku and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +59,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subscribedSku
+     * @return a SubscribedSku
      */
     @javax.annotation.Nonnull
     public static SubscribedSku createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

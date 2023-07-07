@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TargetedManagedAppConfiguration> value;
     /**
      * Instantiates a new TargetedManagedAppConfigurationCollectionResponse and sets the default values.

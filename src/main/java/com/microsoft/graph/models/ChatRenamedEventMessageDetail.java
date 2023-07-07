@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** The updated name of the chat. */
+    /**
+     * The updated name of the chat.
+     */
     private String chatDisplayName;
-    /** Unique identifier of the chat. */
+    /**
+     * Unique identifier of the chat.
+     */
     private String chatId;
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
     /**
      * Instantiates a new ChatRenamedEventMessageDetail and sets the default values.

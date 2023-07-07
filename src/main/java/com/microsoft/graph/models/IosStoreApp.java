@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosStoreApp extends MobileApp implements Parsable {
-    /** Contains properties of the possible iOS device types the mobile app can run on. */
+    /**
+     * Contains properties of the possible iOS device types the mobile app can run on.
+     */
     private IosDeviceType applicableDeviceType;
-    /** The Apple App Store URL */
+    /**
+     * The Apple App Store URL
+     */
     private String appStoreUrl;
-    /** The Identity Name. */
+    /**
+     * The Identity Name.
+     */
     private String bundleId;
-    /** The value for the minimum applicable operating system. */
+    /**
+     * The value for the minimum applicable operating system.
+     */
     private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new IosStoreApp and sets the default values.

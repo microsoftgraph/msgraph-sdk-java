@@ -7,27 +7,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements Parsable {
-    /** Maximum Windows 8.1 version. */
+    /**
+     * Maximum Windows 8.1 version.
+     */
     private String osMaximumVersion;
-    /** Minimum Windows 8.1 version. */
+    /**
+     * Minimum Windows 8.1 version.
+     */
     private String osMinimumVersion;
-    /** Indicates whether or not to block simple password. */
+    /**
+     * Indicates whether or not to block simple password.
+     */
     private Boolean passwordBlockSimple;
-    /** Password expiration in days. */
+    /**
+     * Password expiration in days.
+     */
     private Integer passwordExpirationDays;
-    /** The number of character sets required in the password. */
+    /**
+     * The number of character sets required in the password.
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** The minimum password length. */
+    /**
+     * The minimum password length.
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before a password is required. */
+    /**
+     * Minutes of inactivity before a password is required.
+     */
     private Integer passwordMinutesOfInactivityBeforeLock;
-    /** The number of previous passwords to prevent re-use of. Valid values 0 to 24 */
+    /**
+     * The number of previous passwords to prevent re-use of. Valid values 0 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Require a password to unlock Windows device. */
+    /**
+     * Require a password to unlock Windows device.
+     */
     private Boolean passwordRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
-    /** Indicates whether or not to require encryption on a windows 8.1 device. */
+    /**
+     * Indicates whether or not to require encryption on a windows 8.1 device.
+     */
     private Boolean storageRequireEncryption;
     /**
      * Instantiates a new Windows81CompliancePolicy and sets the default values.

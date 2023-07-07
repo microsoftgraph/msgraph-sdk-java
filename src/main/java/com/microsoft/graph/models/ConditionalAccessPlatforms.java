@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue. */
+    /**
+     * Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     */
     private java.util.List<ConditionalAccessDevicePlatform> excludePlatforms;
-    /** Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue. */
+    /**
+     * Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     */
     private java.util.List<ConditionalAccessDevicePlatform> includePlatforms;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new conditionalAccessPlatforms and sets the default values.

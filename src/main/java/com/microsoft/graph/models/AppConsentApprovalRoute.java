@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppConsentApprovalRoute extends Entity implements Parsable {
-    /** A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users. */
+    /**
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
+     */
     private java.util.List<AppConsentRequest> appConsentRequests;
     /**
      * Instantiates a new AppConsentApprovalRoute and sets the default values.

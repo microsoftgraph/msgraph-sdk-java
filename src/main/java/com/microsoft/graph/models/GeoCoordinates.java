@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GeoCoordinates implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Optional. The altitude (height), in feet,  above sea level for the item. Read-only. */
+    /**
+     * Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
+     */
     private Double altitude;
-    /** Optional. The latitude, in decimal, for the item. Read-only. */
+    /**
+     * Optional. The latitude, in decimal, for the item. Read-only.
+     */
     private Double latitude;
-    /** Optional. The longitude, in decimal, for the item. Read-only. */
+    /**
+     * Optional. The longitude, in decimal, for the item. Read-only.
+     */
     private Double longitude;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new geoCoordinates and sets the default values.

@@ -11,23 +11,41 @@ import java.util.Objects;
  * Contains properties for a single installer file that is associated with a given mobileAppContent version.
  */
 public class MobileAppContentFile extends Entity implements Parsable {
-    /** The Azure Storage URI. */
+    /**
+     * The Azure Storage URI.
+     */
     private String azureStorageUri;
-    /** The time the Azure storage Uri expires. */
+    /**
+     * The time the Azure storage Uri expires.
+     */
     private OffsetDateTime azureStorageUriExpirationDateTime;
-    /** The time the file was created. */
+    /**
+     * The time the file was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** A value indicating whether the file is committed. */
+    /**
+     * A value indicating whether the file is committed.
+     */
     private Boolean isCommitted;
-    /** The manifest information. */
+    /**
+     * The manifest information.
+     */
     private byte[] manifest;
-    /** the file name. */
+    /**
+     * the file name.
+     */
     private String name;
-    /** The size of the file prior to encryption. */
+    /**
+     * The size of the file prior to encryption.
+     */
     private Long size;
-    /** The size of the file after encryption. */
+    /**
+     * The size of the file after encryption.
+     */
     private Long sizeEncrypted;
-    /** Contains properties for upload request states. */
+    /**
+     * Contains properties for upload request states.
+     */
     private MobileAppContentFileUploadState uploadState;
     /**
      * Instantiates a new mobileAppContentFile and sets the default values.

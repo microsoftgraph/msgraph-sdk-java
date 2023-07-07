@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipient implements Parsable {
-    /** User ID of the user to whom the submission is assigned. */
+    /**
+     * User ID of the user to whom the submission is assigned.
+     */
     private String userId;
     /**
      * Instantiates a new EducationSubmissionIndividualRecipient and sets the default values.

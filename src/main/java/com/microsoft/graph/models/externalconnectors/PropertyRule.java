@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PropertyRule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The operation property */
+    /**
+     * The operation property
+     */
     private RuleOperation operation;
-    /** The property from the externalItem schema. Required. */
+    /**
+     * The property from the externalItem schema. Required.
+     */
     private String property;
-    /** A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required. */
+    /**
+     * A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
+     */
     private java.util.List<String> values;
-    /** The valuesJoinedBy property */
+    /**
+     * The valuesJoinedBy property
+     */
     private BinaryOperator valuesJoinedBy;
     /**
      * Instantiates a new propertyRule and sets the default values.

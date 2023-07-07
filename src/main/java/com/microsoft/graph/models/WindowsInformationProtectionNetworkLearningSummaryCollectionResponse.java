@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsInformationProtectionNetworkLearningSummaryCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<WindowsInformationProtectionNetworkLearningSummary> value;
     /**
      * Instantiates a new WindowsInformationProtectionNetworkLearningSummaryCollectionResponse and sets the default values.

@@ -86,347 +86,485 @@ import java.util.Objects;
  * The main entry point of the SDK, exposes the configuration and the fluent API.
  */
 public class BaseGraphServiceClient extends BaseRequestBuilder {
-    /** Provides operations to manage the admin singleton. */
+    /**
+     * Provides operations to manage the admin singleton.
+     */
     @javax.annotation.Nonnull
     public AdminRequestBuilder admin() {
         return new AdminRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of agreementAcceptance entities. */
+    /**
+     * Provides operations to manage the collection of agreementAcceptance entities.
+     */
     @javax.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder agreementAcceptances() {
         return new AgreementAcceptancesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of agreement entities. */
+    /**
+     * Provides operations to manage the collection of agreement entities.
+     */
     @javax.annotation.Nonnull
     public AgreementsRequestBuilder agreements() {
         return new AgreementsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the appCatalogs singleton. */
+    /**
+     * Provides operations to manage the appCatalogs singleton.
+     */
     @javax.annotation.Nonnull
     public AppCatalogsRequestBuilder appCatalogs() {
         return new AppCatalogsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of application entities. */
+    /**
+     * Provides operations to manage the collection of application entities.
+     */
     @javax.annotation.Nonnull
     public ApplicationsRequestBuilder applications() {
         return new ApplicationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of applicationTemplate entities. */
+    /**
+     * Provides operations to manage the collection of applicationTemplate entities.
+     */
     @javax.annotation.Nonnull
     public ApplicationTemplatesRequestBuilder applicationTemplates() {
         return new ApplicationTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the auditLogRoot singleton. */
+    /**
+     * Provides operations to manage the auditLogRoot singleton.
+     */
     @javax.annotation.Nonnull
     public AuditLogsRequestBuilder auditLogs() {
         return new AuditLogsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of authenticationMethodConfiguration entities. */
+    /**
+     * Provides operations to manage the collection of authenticationMethodConfiguration entities.
+     */
     @javax.annotation.Nonnull
     public AuthenticationMethodConfigurationsRequestBuilder authenticationMethodConfigurations() {
         return new AuthenticationMethodConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the authenticationMethodsPolicy singleton. */
+    /**
+     * Provides operations to manage the authenticationMethodsPolicy singleton.
+     */
     @javax.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of certificateBasedAuthConfiguration entities. */
+    /**
+     * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
+     */
     @javax.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of chat entities. */
+    /**
+     * Provides operations to manage the collection of chat entities.
+     */
     @javax.annotation.Nonnull
     public ChatsRequestBuilder chats() {
         return new ChatsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the cloudCommunications singleton. */
+    /**
+     * Provides operations to manage the cloudCommunications singleton.
+     */
     @javax.annotation.Nonnull
     public CommunicationsRequestBuilder communications() {
         return new CommunicationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the compliance singleton. */
+    /**
+     * Provides operations to manage the compliance singleton.
+     */
     @javax.annotation.Nonnull
     public ComplianceRequestBuilder compliance() {
         return new ComplianceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of externalConnection entities. */
+    /**
+     * Provides operations to manage the collection of externalConnection entities.
+     */
     @javax.annotation.Nonnull
     public ConnectionsRequestBuilder connections() {
         return new ConnectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of orgContact entities. */
+    /**
+     * Provides operations to manage the collection of orgContact entities.
+     */
     @javax.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
         return new ContactsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of contract entities. */
+    /**
+     * Provides operations to manage the collection of contract entities.
+     */
     @javax.annotation.Nonnull
     public ContractsRequestBuilder contracts() {
         return new ContractsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of dataPolicyOperation entities. */
+    /**
+     * Provides operations to manage the collection of dataPolicyOperation entities.
+     */
     @javax.annotation.Nonnull
     public DataPolicyOperationsRequestBuilder dataPolicyOperations() {
         return new DataPolicyOperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceAppManagement singleton. */
+    /**
+     * Provides operations to manage the deviceAppManagement singleton.
+     */
     @javax.annotation.Nonnull
     public DeviceAppManagementRequestBuilder deviceAppManagement() {
         return new DeviceAppManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceManagement singleton. */
+    /**
+     * Provides operations to manage the deviceManagement singleton.
+     */
     @javax.annotation.Nonnull
     public DeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of device entities. */
+    /**
+     * Provides operations to manage the collection of device entities.
+     */
     @javax.annotation.Nonnull
     public DevicesRequestBuilder devices() {
         return new DevicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the directory singleton. */
+    /**
+     * Provides operations to manage the directory singleton.
+     */
     @javax.annotation.Nonnull
     public DirectoryRequestBuilder directory() {
         return new DirectoryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of directoryObject entities. */
+    /**
+     * Provides operations to manage the collection of directoryObject entities.
+     */
     @javax.annotation.Nonnull
     public DirectoryObjectsRequestBuilder directoryObjects() {
         return new DirectoryObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of directoryRole entities. */
+    /**
+     * Provides operations to manage the collection of directoryRole entities.
+     */
     @javax.annotation.Nonnull
     public DirectoryRolesRequestBuilder directoryRoles() {
         return new DirectoryRolesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of directoryRoleTemplate entities. */
+    /**
+     * Provides operations to manage the collection of directoryRoleTemplate entities.
+     */
     @javax.annotation.Nonnull
     public DirectoryRoleTemplatesRequestBuilder directoryRoleTemplates() {
         return new DirectoryRoleTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of domainDnsRecord entities. */
+    /**
+     * Provides operations to manage the collection of domainDnsRecord entities.
+     */
     @javax.annotation.Nonnull
     public DomainDnsRecordsRequestBuilder domainDnsRecords() {
         return new DomainDnsRecordsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of domain entities. */
+    /**
+     * Provides operations to manage the collection of domain entities.
+     */
     @javax.annotation.Nonnull
     public DomainsRequestBuilder domains() {
         return new DomainsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of drive entities. */
+    /**
+     * Provides operations to manage the collection of drive entities.
+     */
     @javax.annotation.Nonnull
     public DrivesRequestBuilder drives() {
         return new DrivesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the educationRoot singleton. */
+    /**
+     * Provides operations to manage the educationRoot singleton.
+     */
     @javax.annotation.Nonnull
     public EducationRequestBuilder education() {
         return new EducationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the employeeExperience singleton. */
+    /**
+     * Provides operations to manage the employeeExperience singleton.
+     */
     @javax.annotation.Nonnull
     public EmployeeExperienceRequestBuilder employeeExperience() {
         return new EmployeeExperienceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the external singleton. */
+    /**
+     * Provides operations to manage the external singleton.
+     */
     @javax.annotation.Nonnull
     public ExternalRequestBuilder external() {
         return new ExternalRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of filterOperatorSchema entities. */
+    /**
+     * Provides operations to manage the collection of filterOperatorSchema entities.
+     */
     @javax.annotation.Nonnull
     public FilterOperatorsRequestBuilder filterOperators() {
         return new FilterOperatorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of attributeMappingFunctionSchema entities. */
+    /**
+     * Provides operations to manage the collection of attributeMappingFunctionSchema entities.
+     */
     @javax.annotation.Nonnull
     public FunctionsRequestBuilder functions() {
         return new FunctionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of groupLifecyclePolicy entities. */
+    /**
+     * Provides operations to manage the collection of groupLifecyclePolicy entities.
+     */
     @javax.annotation.Nonnull
     public GroupLifecyclePoliciesRequestBuilder groupLifecyclePolicies() {
         return new GroupLifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of group entities. */
+    /**
+     * Provides operations to manage the collection of group entities.
+     */
     @javax.annotation.Nonnull
     public GroupsRequestBuilder groups() {
         return new GroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of groupSetting entities. */
+    /**
+     * Provides operations to manage the collection of groupSetting entities.
+     */
     @javax.annotation.Nonnull
     public GroupSettingsRequestBuilder groupSettings() {
         return new GroupSettingsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of groupSettingTemplate entities. */
+    /**
+     * Provides operations to manage the collection of groupSettingTemplate entities.
+     */
     @javax.annotation.Nonnull
     public GroupSettingTemplatesRequestBuilder groupSettingTemplates() {
         return new GroupSettingTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the identityContainer singleton. */
+    /**
+     * Provides operations to manage the identityContainer singleton.
+     */
     @javax.annotation.Nonnull
     public IdentityRequestBuilder identity() {
         return new IdentityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the identityGovernance singleton. */
+    /**
+     * Provides operations to manage the identityGovernance singleton.
+     */
     @javax.annotation.Nonnull
     public IdentityGovernanceRequestBuilder identityGovernance() {
         return new IdentityGovernanceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the identityProtectionRoot singleton. */
+    /**
+     * Provides operations to manage the identityProtectionRoot singleton.
+     */
     @javax.annotation.Nonnull
     public IdentityProtectionRequestBuilder identityProtection() {
         return new IdentityProtectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of identityProvider entities. */
+    /**
+     * Provides operations to manage the collection of identityProvider entities.
+     */
     @javax.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the informationProtection singleton. */
+    /**
+     * Provides operations to manage the informationProtection singleton.
+     */
     @javax.annotation.Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
         return new InformationProtectionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of invitation entities. */
+    /**
+     * Provides operations to manage the collection of invitation entities.
+     */
     @javax.annotation.Nonnull
     public InvitationsRequestBuilder invitations() {
         return new InvitationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of organizationalBrandingLocalization entities. */
+    /**
+     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
+     */
     @javax.annotation.Nonnull
     public LocalizationsRequestBuilder localizations() {
         return new LocalizationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the user singleton. */
+    /**
+     * Provides operations to manage the user singleton.
+     */
     @javax.annotation.Nonnull
     public MeRequestBuilder me() {
         return new MeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of oAuth2PermissionGrant entities. */
+    /**
+     * Provides operations to manage the collection of oAuth2PermissionGrant entities.
+     */
     @javax.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder oauth2PermissionGrants() {
         return new Oauth2PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of organization entities. */
+    /**
+     * Provides operations to manage the collection of organization entities.
+     */
     @javax.annotation.Nonnull
     public OrganizationRequestBuilder organization() {
         return new OrganizationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of resourceSpecificPermissionGrant entities. */
+    /**
+     * Provides operations to manage the collection of resourceSpecificPermissionGrant entities.
+     */
     @javax.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The places property */
+    /**
+     * The places property
+     */
     @javax.annotation.Nonnull
     public PlacesRequestBuilder places() {
         return new PlacesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the planner singleton. */
+    /**
+     * Provides operations to manage the planner singleton.
+     */
     @javax.annotation.Nonnull
     public PlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the policyRoot singleton. */
+    /**
+     * Provides operations to manage the policyRoot singleton.
+     */
     @javax.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the print singleton. */
+    /**
+     * Provides operations to manage the print singleton.
+     */
     @javax.annotation.Nonnull
     public PrintRequestBuilder print() {
         return new PrintRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the privacy singleton. */
+    /**
+     * Provides operations to manage the privacy singleton.
+     */
     @javax.annotation.Nonnull
     public PrivacyRequestBuilder privacy() {
         return new PrivacyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the reportRoot singleton. */
+    /**
+     * Provides operations to manage the reportRoot singleton.
+     */
     @javax.annotation.Nonnull
     public ReportsRequestBuilder reports() {
         return new ReportsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the roleManagement singleton. */
+    /**
+     * Provides operations to manage the roleManagement singleton.
+     */
     @javax.annotation.Nonnull
     public RoleManagementRequestBuilder roleManagement() {
         return new RoleManagementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of schemaExtension entities. */
+    /**
+     * Provides operations to manage the collection of schemaExtension entities.
+     */
     @javax.annotation.Nonnull
     public SchemaExtensionsRequestBuilder schemaExtensions() {
         return new SchemaExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of scopedRoleMembership entities. */
+    /**
+     * Provides operations to manage the collection of scopedRoleMembership entities.
+     */
     @javax.annotation.Nonnull
     public ScopedRoleMembershipsRequestBuilder scopedRoleMemberships() {
         return new ScopedRoleMembershipsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the searchEntity singleton. */
+    /**
+     * Provides operations to manage the searchEntity singleton.
+     */
     @javax.annotation.Nonnull
     public SearchRequestBuilder search() {
         return new SearchRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the security singleton. */
+    /**
+     * Provides operations to manage the security singleton.
+     */
     @javax.annotation.Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of servicePrincipal entities. */
+    /**
+     * Provides operations to manage the collection of servicePrincipal entities.
+     */
     @javax.annotation.Nonnull
     public ServicePrincipalsRequestBuilder servicePrincipals() {
         return new ServicePrincipalsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of sharedDriveItem entities. */
+    /**
+     * Provides operations to manage the collection of sharedDriveItem entities.
+     */
     @javax.annotation.Nonnull
     public SharesRequestBuilder shares() {
         return new SharesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of site entities. */
+    /**
+     * Provides operations to manage the collection of site entities.
+     */
     @javax.annotation.Nonnull
     public SitesRequestBuilder sites() {
         return new SitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the solutionsRoot singleton. */
+    /**
+     * Provides operations to manage the solutionsRoot singleton.
+     */
     @javax.annotation.Nonnull
     public SolutionsRequestBuilder solutions() {
         return new SolutionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of subscribedSku entities. */
+    /**
+     * Provides operations to manage the collection of subscribedSku entities.
+     */
     @javax.annotation.Nonnull
     public SubscribedSkusRequestBuilder subscribedSkus() {
         return new SubscribedSkusRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of subscription entities. */
+    /**
+     * Provides operations to manage the collection of subscription entities.
+     */
     @javax.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of team entities. */
+    /**
+     * Provides operations to manage the collection of team entities.
+     */
     @javax.annotation.Nonnull
     public TeamsRequestBuilder teams() {
         return new TeamsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of teamsTemplate entities. */
+    /**
+     * Provides operations to manage the collection of teamsTemplate entities.
+     */
     @javax.annotation.Nonnull
     public TeamsTemplatesRequestBuilder teamsTemplates() {
         return new TeamsTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the teamwork singleton. */
+    /**
+     * Provides operations to manage the teamwork singleton.
+     */
     @javax.annotation.Nonnull
     public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tenantRelationship singleton. */
+    /**
+     * Provides operations to manage the tenantRelationship singleton.
+     */
     @javax.annotation.Nonnull
     public TenantRelationshipsRequestBuilder tenantRelationships() {
         return new TenantRelationshipsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the collection of user entities. */
+    /**
+     * Provides operations to manage the collection of user entities.
+     */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);

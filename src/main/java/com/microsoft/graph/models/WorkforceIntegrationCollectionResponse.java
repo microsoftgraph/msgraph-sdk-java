@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkforceIntegrationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<WorkforceIntegration> value;
     /**
      * Instantiates a new WorkforceIntegrationCollectionResponse and sets the default values.

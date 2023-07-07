@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class B2xIdentityUserFlowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<B2xIdentityUserFlow> value;
     /**
      * Instantiates a new B2xIdentityUserFlowCollectionResponse and sets the default values.

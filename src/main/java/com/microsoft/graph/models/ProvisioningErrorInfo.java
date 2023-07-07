@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Additional details in case of error. */
+    /**
+     * Additional details in case of error.
+     */
     private String additionalDetails;
-    /** Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue */
+    /**
+     * Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
+     */
     private ProvisioningStatusErrorCategory errorCategory;
-    /** Unique error code if any occurred. Learn more */
+    /**
+     * Unique error code if any occurred. Learn more
+     */
     private String errorCode;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Summarizes the status and describes why the status happened. */
+    /**
+     * Summarizes the status and describes why the status happened.
+     */
     private String reason;
-    /** Provides the resolution for the corresponding error. */
+    /**
+     * Provides the resolution for the corresponding error.
+     */
     private String recommendedAction;
     /**
      * Instantiates a new provisioningErrorInfo and sets the default values.

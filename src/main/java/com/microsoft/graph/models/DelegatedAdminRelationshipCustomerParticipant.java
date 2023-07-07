@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminRelationshipCustomerParticipant implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The display name of the customer tenant as set by Azure AD. Read-only */
+    /**
+     * The display name of the customer tenant as set by Azure AD. Read-only
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The Azure AD-assigned tenant ID of the customer tenant. */
+    /**
+     * The Azure AD-assigned tenant ID of the customer tenant.
+     */
     private String tenantId;
     /**
      * Instantiates a new delegatedAdminRelationshipCustomerParticipant and sets the default values.

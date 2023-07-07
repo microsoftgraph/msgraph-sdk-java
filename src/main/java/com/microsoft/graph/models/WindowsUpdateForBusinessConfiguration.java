@@ -9,77 +9,149 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable {
-    /** When TRUE, allows eligible Windows 10 devices to upgrade to Windows 11. When FALSE, implies the device stays on the existing operating system. Returned by default. Query parameters are not supported. */
+    /**
+     * When TRUE, allows eligible Windows 10 devices to upgrade to Windows 11. When FALSE, implies the device stays on the existing operating system. Returned by default. Query parameters are not supported.
+     */
     private Boolean allowWindows11Upgrade;
-    /** Possible values for automatic update mode. */
+    /**
+     * Possible values for automatic update mode.
+     */
     private AutomaticUpdateMode automaticUpdateMode;
-    /** Auto restart required notification dismissal method */
+    /**
+     * Auto restart required notification dismissal method
+     */
     private AutoRestartNotificationDismissalMethod autoRestartNotificationDismissal;
-    /** Which branch devices will receive their updates from */
+    /**
+     * Which branch devices will receive their updates from
+     */
     private WindowsUpdateType businessReadyUpdatesOnly;
-    /** Number of days before feature updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Number of days before feature updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
     private Integer deadlineForFeatureUpdatesInDays;
-    /** Number of days before quality updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Number of days before quality updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
     private Integer deadlineForQualityUpdatesInDays;
-    /** Number of days after deadline until restarts occur automatically with valid range from 0 to 7 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Number of days after deadline until restarts occur automatically with valid range from 0 to 7 days. Returned by default. Query parameters are not supported.
+     */
     private Integer deadlineGracePeriodInDays;
-    /** Delivery optimization mode for peer distribution */
+    /**
+     * Delivery optimization mode for peer distribution
+     */
     private WindowsDeliveryOptimizationMode deliveryOptimizationMode;
-    /** When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported. */
+    /**
+     * When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
+     */
     private Boolean driversExcluded;
-    /** Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days. Returned by default. Query parameters are not supported.
+     */
     private Integer engagedRestartDeadlineInDays;
-    /** Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days. Returned by default. Query parameters are not supported.
+     */
     private Integer engagedRestartSnoozeScheduleInDays;
-    /** Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
     private Integer engagedRestartTransitionScheduleInDays;
-    /** Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
     private Integer featureUpdatesDeferralPeriodInDays;
-    /** When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s */
+    /**
+     * When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
+     */
     private Boolean featureUpdatesPaused;
-    /** The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. */
+    /**
+     * The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
+     */
     private OffsetDateTime featureUpdatesPauseExpiryDateTime;
-    /** The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only. */
+    /**
+     * The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
+     */
     private LocalDate featureUpdatesPauseStartDate;
-    /** The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported. */
+    /**
+     * The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported.
+     */
     private OffsetDateTime featureUpdatesRollbackStartDateTime;
-    /** The number of days after a Feature Update for which a rollback is valid with valid range from 2 to 60 days. Returned by default. Query parameters are not supported. */
+    /**
+     * The number of days after a Feature Update for which a rollback is valid with valid range from 2 to 60 days. Returned by default. Query parameters are not supported.
+     */
     private Integer featureUpdatesRollbackWindowInDays;
-    /** When TRUE, rollback Feature Updates on the next device check in. When FALSE, do not rollback Feature Updates on the next device check in. Returned by default.Query parameters are not supported. */
+    /**
+     * When TRUE, rollback Feature Updates on the next device check in. When FALSE, do not rollback Feature Updates on the next device check in. Returned by default.Query parameters are not supported.
+     */
     private Boolean featureUpdatesWillBeRolledBack;
-    /** The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported. */
+    /**
+     * The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
+     */
     private WindowsUpdateInstallScheduleType installationSchedule;
-    /** When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported. */
+    /**
+     * When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
+     */
     private Boolean microsoftUpdateServiceAllowed;
-    /** When TRUE the device should wait until deadline for rebooting outside of active hours. When FALSE the device should not wait until deadline for rebooting outside of active hours. Returned by default. Query parameters are not supported. */
+    /**
+     * When TRUE the device should wait until deadline for rebooting outside of active hours. When FALSE the device should not wait until deadline for rebooting outside of active hours. Returned by default. Query parameters are not supported.
+     */
     private Boolean postponeRebootUntilAfterDeadline;
-    /** Possible values for pre-release features. */
+    /**
+     * Possible values for pre-release features.
+     */
     private PrereleaseFeatures prereleaseFeatures;
-    /** Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported. */
+    /**
+     * Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
+     */
     private Integer qualityUpdatesDeferralPeriodInDays;
-    /** When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported. */
+    /**
+     * When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
+     */
     private Boolean qualityUpdatesPaused;
-    /** The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. */
+    /**
+     * The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
+     */
     private OffsetDateTime qualityUpdatesPauseExpiryDateTime;
-    /** The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only. */
+    /**
+     * The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
+     */
     private LocalDate qualityUpdatesPauseStartDate;
-    /** The Quality Updates Rollback Start datetime. This value is the time when the admin rolled back the Quality update for the ring. Returned by default. Query parameters are not supported. */
+    /**
+     * The Quality Updates Rollback Start datetime. This value is the time when the admin rolled back the Quality update for the ring. Returned by default. Query parameters are not supported.
+     */
     private OffsetDateTime qualityUpdatesRollbackStartDateTime;
-    /** When TRUE, rollback Quality Updates on the next device check in. When FALSE, do not rollback Quality Updates on the next device check in. Returned by default. Query parameters are not supported. */
+    /**
+     * When TRUE, rollback Quality Updates on the next device check in. When FALSE, do not rollback Quality Updates on the next device check in. Returned by default. Query parameters are not supported.
+     */
     private Boolean qualityUpdatesWillBeRolledBack;
-    /** Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes). Returned by default. Query parameters are not supported. */
+    /**
+     * Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes). Returned by default. Query parameters are not supported.
+     */
     private Integer scheduleImminentRestartWarningInMinutes;
-    /** Specify the period for auto-restart warning reminder notifications. Supported values: 2, 4, 8, 12 or 24 (hours). Returned by default. Query parameters are not supported. */
+    /**
+     * Specify the period for auto-restart warning reminder notifications. Supported values: 2, 4, 8, 12 or 24 (hours). Returned by default. Query parameters are not supported.
+     */
     private Integer scheduleRestartWarningInHours;
-    /** When TRUE, skips all checks before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. When FALSE, does not skip all checks before restart. Returned by default. Query parameters are not supported. */
+    /**
+     * When TRUE, skips all checks before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. When FALSE, does not skip all checks before restart. Returned by default. Query parameters are not supported.
+     */
     private Boolean skipChecksBeforeRestart;
-    /** Windows Update Notification Display Options */
+    /**
+     * Windows Update Notification Display Options
+     */
     private WindowsUpdateNotificationDisplayOption updateNotificationLevel;
-    /** Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue. */
+    /**
+     * Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
+     */
     private WindowsUpdateForBusinessUpdateWeeks updateWeeks;
-    /** Possible values of a property */
+    /**
+     * Possible values of a property
+     */
     private Enablement userPauseAccess;
-    /** Possible values of a property */
+    /**
+     * Possible values of a property
+     */
     private Enablement userWindowsUpdateScanAccess;
     /**
      * Instantiates a new WindowsUpdateForBusinessConfiguration and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsRecordCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DomainDnsRecord> value;
     /**
      * Instantiates a new DomainDnsRecordCollectionResponse and sets the default values.

@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The fields property */
+    /**
+     * The fields property
+     */
     private java.util.List<WorkbookSortField> fields;
-    /** The matchCase property */
+    /**
+     * The matchCase property
+     */
     private Boolean matchCase;
-    /** The method property */
+    /**
+     * The method property
+     */
     private String method;
     /**
      * Instantiates a new applyPostRequestBody and sets the default values.

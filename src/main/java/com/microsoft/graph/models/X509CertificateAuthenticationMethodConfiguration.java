@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings. */
+    /**
+     * Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
+     */
     private X509CertificateAuthenticationModeConfiguration authenticationModeConfiguration;
-    /** Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored. */
+    /**
+     * Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     */
     private java.util.List<X509CertificateUserBinding> certificateUserBindings;
-    /** A collection of groups that are enabled to use the authentication method. */
+    /**
+     * A collection of groups that are enabled to use the authentication method.
+     */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
      * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.

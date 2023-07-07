@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The completedUnits property */
+    /**
+     * The completedUnits property
+     */
     private Long completedUnits;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The progressObservationDateTime property */
+    /**
+     * The progressObservationDateTime property
+     */
     private OffsetDateTime progressObservationDateTime;
-    /** The totalUnits property */
+    /**
+     * The totalUnits property
+     */
     private Long totalUnits;
-    /** The units property */
+    /**
+     * The units property
+     */
     private String units;
     /**
      * Instantiates a new synchronizationProgress and sets the default values.

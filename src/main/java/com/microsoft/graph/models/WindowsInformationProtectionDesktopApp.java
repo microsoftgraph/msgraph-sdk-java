@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp implements Parsable {
-    /** The binary name. */
+    /**
+     * The binary name.
+     */
     private String binaryName;
-    /** The high binary version. */
+    /**
+     * The high binary version.
+     */
     private String binaryVersionHigh;
-    /** The lower binary version. */
+    /**
+     * The lower binary version.
+     */
     private String binaryVersionLow;
     /**
      * Instantiates a new WindowsInformationProtectionDesktopApp and sets the default values.

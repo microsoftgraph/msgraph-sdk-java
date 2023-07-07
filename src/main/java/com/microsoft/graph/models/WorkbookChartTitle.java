@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartTitle extends Entity implements Parsable {
-    /** Represents the formatting of a chart title, which includes fill and font formatting. Read-only. */
+    /**
+     * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+     */
     private WorkbookChartTitleFormat format;
-    /** Boolean value representing if the chart title will overlay the chart or not. */
+    /**
+     * Boolean value representing if the chart title will overlay the chart or not.
+     */
     private Boolean overlay;
-    /** Represents the title text of a chart. */
+    /**
+     * Represents the title text of a chart.
+     */
     private String text;
-    /** A boolean value the represents the visibility of a chart title object. */
+    /**
+     * A boolean value the represents the visibility of a chart title object.
+     */
     private Boolean visible;
     /**
      * Instantiates a new workbookChartTitle and sets the default values.

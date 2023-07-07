@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** The reason for which a user has been flagged */
+/**
+ * The reason for which a user has been flagged
+ */
 public enum ManagedAppFlaggedReason implements ValuedEnum {
     /** No issue. */
     None("none"),

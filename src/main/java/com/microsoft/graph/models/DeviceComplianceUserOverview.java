@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceComplianceUserOverview extends Entity implements Parsable {
-    /** Version of the policy for that overview */
+    /**
+     * Version of the policy for that overview
+     */
     private Integer configurationVersion;
-    /** Number of error Users */
+    /**
+     * Number of error Users
+     */
     private Integer errorCount;
-    /** Number of failed Users */
+    /**
+     * Number of failed Users
+     */
     private Integer failedCount;
-    /** Last update time */
+    /**
+     * Last update time
+     */
     private OffsetDateTime lastUpdateDateTime;
-    /** Number of not applicable users */
+    /**
+     * Number of not applicable users
+     */
     private Integer notApplicableCount;
-    /** Number of pending Users */
+    /**
+     * Number of pending Users
+     */
     private Integer pendingCount;
-    /** Number of succeeded Users */
+    /**
+     * Number of succeeded Users
+     */
     private Integer successCount;
     /**
      * Instantiates a new deviceComplianceUserOverview and sets the default values.

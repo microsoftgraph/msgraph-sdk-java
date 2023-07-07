@@ -42,112 +42,156 @@ import java.util.Objects;
  * Provides operations to manage the managedDevices property of the microsoft.graph.user entity.
  */
 public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the bypassActivationLock method. */
+    /**
+     * Provides operations to call the bypassActivationLock method.
+     */
     @javax.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
         return new BypassActivationLockRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the cleanWindowsDevice method. */
+    /**
+     * Provides operations to call the cleanWindowsDevice method.
+     */
     @javax.annotation.Nonnull
     public CleanWindowsDeviceRequestBuilder cleanWindowsDevice() {
         return new CleanWindowsDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the deleteUserFromSharedAppleDevice method. */
+    /**
+     * Provides operations to call the deleteUserFromSharedAppleDevice method.
+     */
     @javax.annotation.Nonnull
     public DeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice() {
         return new DeleteUserFromSharedAppleDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity. */
+    /**
+     * Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity.
+     */
     @javax.annotation.Nonnull
     public DeviceCategoryRequestBuilder deviceCategory() {
         return new DeviceCategoryRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity. */
+    /**
+     * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
+     */
     @javax.annotation.Nonnull
     public DeviceCompliancePolicyStatesRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity. */
+    /**
+     * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
+     */
     @javax.annotation.Nonnull
     public DeviceConfigurationStatesRequestBuilder deviceConfigurationStates() {
         return new DeviceConfigurationStatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the disableLostMode method. */
+    /**
+     * Provides operations to call the disableLostMode method.
+     */
     @javax.annotation.Nonnull
     public DisableLostModeRequestBuilder disableLostMode() {
         return new DisableLostModeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the locateDevice method. */
+    /**
+     * Provides operations to call the locateDevice method.
+     */
     @javax.annotation.Nonnull
     public LocateDeviceRequestBuilder locateDevice() {
         return new LocateDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the logoutSharedAppleDeviceActiveUser method. */
+    /**
+     * Provides operations to call the logoutSharedAppleDeviceActiveUser method.
+     */
     @javax.annotation.Nonnull
     public LogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
         return new LogoutSharedAppleDeviceActiveUserRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the rebootNow method. */
+    /**
+     * Provides operations to call the rebootNow method.
+     */
     @javax.annotation.Nonnull
     public RebootNowRequestBuilder rebootNow() {
         return new RebootNowRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the recoverPasscode method. */
+    /**
+     * Provides operations to call the recoverPasscode method.
+     */
     @javax.annotation.Nonnull
     public RecoverPasscodeRequestBuilder recoverPasscode() {
         return new RecoverPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the remoteLock method. */
+    /**
+     * Provides operations to call the remoteLock method.
+     */
     @javax.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the requestRemoteAssistance method. */
+    /**
+     * Provides operations to call the requestRemoteAssistance method.
+     */
     @javax.annotation.Nonnull
     public RequestRemoteAssistanceRequestBuilder requestRemoteAssistance() {
         return new RequestRemoteAssistanceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the resetPasscode method. */
+    /**
+     * Provides operations to call the resetPasscode method.
+     */
     @javax.annotation.Nonnull
     public ResetPasscodeRequestBuilder resetPasscode() {
         return new ResetPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the retire method. */
+    /**
+     * Provides operations to call the retire method.
+     */
     @javax.annotation.Nonnull
     public RetireRequestBuilder retire() {
         return new RetireRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the shutDown method. */
+    /**
+     * Provides operations to call the shutDown method.
+     */
     @javax.annotation.Nonnull
     public ShutDownRequestBuilder shutDown() {
         return new ShutDownRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the syncDevice method. */
+    /**
+     * Provides operations to call the syncDevice method.
+     */
     @javax.annotation.Nonnull
     public SyncDeviceRequestBuilder syncDevice() {
         return new SyncDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the updateWindowsDeviceAccount method. */
+    /**
+     * Provides operations to call the updateWindowsDeviceAccount method.
+     */
     @javax.annotation.Nonnull
     public UpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount() {
         return new UpdateWindowsDeviceAccountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the users property of the microsoft.graph.managedDevice entity. */
+    /**
+     * Provides operations to manage the users property of the microsoft.graph.managedDevice entity.
+     */
     @javax.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the windowsDefenderScan method. */
+    /**
+     * Provides operations to call the windowsDefenderScan method.
+     */
     @javax.annotation.Nonnull
     public WindowsDefenderScanRequestBuilder windowsDefenderScan() {
         return new WindowsDefenderScanRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the windowsDefenderUpdateSignatures method. */
+    /**
+     * Provides operations to call the windowsDefenderUpdateSignatures method.
+     */
     @javax.annotation.Nonnull
     public WindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures() {
         return new WindowsDefenderUpdateSignaturesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the wipe method. */
+    /**
+     * Provides operations to call the wipe method.
+     */
     @javax.annotation.Nonnull
     public WipeRequestBuilder wipe() {
         return new WipeRequestBuilder(pathParameters, requestAdapter);
@@ -383,11 +427,15 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * The managed devices associated with the user.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -396,7 +444,9 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

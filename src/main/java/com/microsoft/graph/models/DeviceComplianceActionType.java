@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Scheduled Action Type Enum */
+/**
+ * Scheduled Action Type Enum
+ */
 public enum DeviceComplianceActionType implements ValuedEnum {
     /** No Action */
     NoAction("noAction"),

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible values of AppLocker Application Control Types */
+/**
+ * Possible values of AppLocker Application Control Types
+ */
 public enum AppLockerApplicationControlType implements ValuedEnum {
     /** Device default value, no Application Control type selected. */
     NotConfigured("notConfigured"),

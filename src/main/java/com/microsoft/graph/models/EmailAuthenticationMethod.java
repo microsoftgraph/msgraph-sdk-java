@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable {
-    /** The email address registered to this user. */
+    /**
+     * The email address registered to this user.
+     */
     private String emailAddress;
     /**
      * Instantiates a new EmailAuthenticationMethod and sets the default values.

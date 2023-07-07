@@ -11,27 +11,49 @@ import java.util.Objects;
  * You purchase multiple licenses for iOS apps through the Apple Volume Purchase Program for Business or Education. This involves setting up an Apple VPP account from the Apple website and uploading the Apple VPP Business or Education token to Intune. You can then synchronize your volume purchase information with Intune and track your volume-purchased app use. You can upload multiple Apple VPP Business or Education tokens.
  */
 public class VppToken extends Entity implements Parsable {
-    /** The apple Id associated with the given Apple Volume Purchase Program Token. */
+    /**
+     * The apple Id associated with the given Apple Volume Purchase Program Token.
+     */
     private String appleId;
-    /** Whether or not apps for the VPP token will be automatically updated. */
+    /**
+     * Whether or not apps for the VPP token will be automatically updated.
+     */
     private Boolean automaticallyUpdateApps;
-    /** Whether or not apps for the VPP token will be automatically updated. */
+    /**
+     * Whether or not apps for the VPP token will be automatically updated.
+     */
     private String countryOrRegion;
-    /** The expiration date time of the Apple Volume Purchase Program Token. */
+    /**
+     * The expiration date time of the Apple Volume Purchase Program Token.
+     */
     private OffsetDateTime expirationDateTime;
-    /** Last modification date time associated with the Apple Volume Purchase Program Token. */
+    /**
+     * Last modification date time associated with the Apple Volume Purchase Program Token.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token. */
+    /**
+     * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
+     */
     private OffsetDateTime lastSyncDateTime;
-    /** Possible sync statuses associated with an Apple Volume Purchase Program token. */
+    /**
+     * Possible sync statuses associated with an Apple Volume Purchase Program token.
+     */
     private VppTokenSyncStatus lastSyncStatus;
-    /** The organization associated with the Apple Volume Purchase Program Token */
+    /**
+     * The organization associated with the Apple Volume Purchase Program Token
+     */
     private String organizationName;
-    /** Possible states associated with an Apple Volume Purchase Program token. */
+    /**
+     * Possible states associated with an Apple Volume Purchase Program token.
+     */
     private VppTokenState state;
-    /** The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program. */
+    /**
+     * The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
+     */
     private String token;
-    /** Possible types of an Apple Volume Purchase Program token. */
+    /**
+     * Possible types of an Apple Volume Purchase Program token.
+     */
     private VppTokenAccountType vppTokenAccountType;
     /**
      * Instantiates a new vppToken and sets the default values.

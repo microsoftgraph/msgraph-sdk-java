@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser. */
+    /**
+     * The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
+     */
     private String caller;
-    /** The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings. */
+    /**
+     * The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
+     */
     private java.util.List<String> enforcedSettings;
-    /** The list of role settings that can be inherited by child scopes. Use All for all settings. */
+    /**
+     * The list of role settings that can be inherited by child scopes. Use All for all settings.
+     */
     private java.util.List<String> inheritableSettings;
-    /** The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment. */
+    /**
+     * The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
+     */
     private String level;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew. */
+    /**
+     * The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
+     */
     private java.util.List<UnifiedRoleManagementPolicyRuleTargetOperations> operations;
-    /** The targetObjects property */
+    /**
+     * The targetObjects property
+     */
     private java.util.List<DirectoryObject> targetObjects;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRuleTarget and sets the default values.

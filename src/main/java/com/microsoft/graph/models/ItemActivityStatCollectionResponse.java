@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemActivityStatCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ItemActivityStat> value;
     /**
      * Instantiates a new ItemActivityStatCollectionResponse and sets the default values.

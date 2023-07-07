@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserEvidence extends AlertEvidence implements Parsable {
-    /** The user account details. */
+    /**
+     * The user account details.
+     */
     private UserAccount userAccount;
     /**
      * Instantiates a new UserEvidence and sets the default values.

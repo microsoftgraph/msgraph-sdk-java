@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** Represents whether the meeting chat is enabled or not. */
+    /**
+     * Represents whether the meeting chat is enabled or not.
+     */
     private Boolean meetingChatEnabled;
-    /** Unique identifier of the meeting chat. */
+    /**
+     * Unique identifier of the meeting chat.
+     */
     private String meetingChatId;
     /**
      * Instantiates a new MeetingPolicyUpdatedEventMessageDetail and sets the default values.

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Android Work Profile default app permission policy type. */
+/**
+ * Android Work Profile default app permission policy type.
+ */
 public enum AndroidWorkProfileDefaultAppPermissionPolicyType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),

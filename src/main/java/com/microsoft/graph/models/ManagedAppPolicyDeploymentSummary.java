@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable {
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private Integer configurationDeployedUserCount;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> configurationDeploymentSummaryPerApp;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String displayName;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private OffsetDateTime lastRefreshTime;
-    /** Version of the entity. */
+    /**
+     * Version of the entity.
+     */
     private String version;
     /**
      * Instantiates a new managedAppPolicyDeploymentSummary and sets the default values.

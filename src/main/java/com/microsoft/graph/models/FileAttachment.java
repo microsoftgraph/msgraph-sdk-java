@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileAttachment extends Attachment implements Parsable {
-    /** The base64-encoded contents of the file. */
+    /**
+     * The base64-encoded contents of the file.
+     */
     private byte[] contentBytes;
-    /** The ID of the attachment in the Exchange store. */
+    /**
+     * The ID of the attachment in the Exchange store.
+     */
     private String contentId;
-    /** Do not use this property as it is not supported. */
+    /**
+     * Do not use this property as it is not supported.
+     */
     private String contentLocation;
     /**
      * Instantiates a new FileAttachment and sets the default values.

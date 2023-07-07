@@ -11,27 +11,49 @@ import java.util.Objects;
  * An abstract class for Mobile app configuration for enrolled devices.
  */
 public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable {
-    /** The list of group assignemenets for app configration. */
+    /**
+     * The list of group assignemenets for app configration.
+     */
     private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments;
-    /** DateTime the object was created. */
+    /**
+     * DateTime the object was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Admin provided description of the Device Configuration. */
+    /**
+     * Admin provided description of the Device Configuration.
+     */
     private String description;
-    /** List of ManagedDeviceMobileAppConfigurationDeviceStatus. */
+    /**
+     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
+     */
     private java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> deviceStatuses;
-    /** App configuration device status summary. */
+    /**
+     * App configuration device status summary.
+     */
     private ManagedDeviceMobileAppConfigurationDeviceSummary deviceStatusSummary;
-    /** Admin provided name of the device configuration. */
+    /**
+     * Admin provided name of the device configuration.
+     */
     private String displayName;
-    /** DateTime the object was last modified. */
+    /**
+     * DateTime the object was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** the associated app. */
+    /**
+     * the associated app.
+     */
     private java.util.List<String> targetedMobileApps;
-    /** List of ManagedDeviceMobileAppConfigurationUserStatus. */
+    /**
+     * List of ManagedDeviceMobileAppConfigurationUserStatus.
+     */
     private java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> userStatuses;
-    /** App configuration user status summary. */
+    /**
+     * App configuration user status summary.
+     */
     private ManagedDeviceMobileAppConfigurationUserSummary userStatusSummary;
-    /** Version of the device configuration. */
+    /**
+     * Version of the device configuration.
+     */
     private Integer version;
     /**
      * Instantiates a new managedDeviceMobileAppConfiguration and sets the default values.

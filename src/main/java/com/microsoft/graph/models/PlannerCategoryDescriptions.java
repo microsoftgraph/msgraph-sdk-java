@@ -8,59 +8,113 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The label associated with Category 1 */
+    /**
+     * The label associated with Category 1
+     */
     private String category1;
-    /** The label associated with Category 10 */
+    /**
+     * The label associated with Category 10
+     */
     private String category10;
-    /** The label associated with Category 11 */
+    /**
+     * The label associated with Category 11
+     */
     private String category11;
-    /** The label associated with Category 12 */
+    /**
+     * The label associated with Category 12
+     */
     private String category12;
-    /** The label associated with Category 13 */
+    /**
+     * The label associated with Category 13
+     */
     private String category13;
-    /** The label associated with Category 14 */
+    /**
+     * The label associated with Category 14
+     */
     private String category14;
-    /** The label associated with Category 15 */
+    /**
+     * The label associated with Category 15
+     */
     private String category15;
-    /** The label associated with Category 16 */
+    /**
+     * The label associated with Category 16
+     */
     private String category16;
-    /** The label associated with Category 17 */
+    /**
+     * The label associated with Category 17
+     */
     private String category17;
-    /** The label associated with Category 18 */
+    /**
+     * The label associated with Category 18
+     */
     private String category18;
-    /** The label associated with Category 19 */
+    /**
+     * The label associated with Category 19
+     */
     private String category19;
-    /** The label associated with Category 2 */
+    /**
+     * The label associated with Category 2
+     */
     private String category2;
-    /** The label associated with Category 20 */
+    /**
+     * The label associated with Category 20
+     */
     private String category20;
-    /** The label associated with Category 21 */
+    /**
+     * The label associated with Category 21
+     */
     private String category21;
-    /** The label associated with Category 22 */
+    /**
+     * The label associated with Category 22
+     */
     private String category22;
-    /** The label associated with Category 23 */
+    /**
+     * The label associated with Category 23
+     */
     private String category23;
-    /** The label associated with Category 24 */
+    /**
+     * The label associated with Category 24
+     */
     private String category24;
-    /** The label associated with Category 25 */
+    /**
+     * The label associated with Category 25
+     */
     private String category25;
-    /** The label associated with Category 3 */
+    /**
+     * The label associated with Category 3
+     */
     private String category3;
-    /** The label associated with Category 4 */
+    /**
+     * The label associated with Category 4
+     */
     private String category4;
-    /** The label associated with Category 5 */
+    /**
+     * The label associated with Category 5
+     */
     private String category5;
-    /** The label associated with Category 6 */
+    /**
+     * The label associated with Category 6
+     */
     private String category6;
-    /** The label associated with Category 7 */
+    /**
+     * The label associated with Category 7
+     */
     private String category7;
-    /** The label associated with Category 8 */
+    /**
+     * The label associated with Category 8
+     */
     private String category8;
-    /** The label associated with Category 9 */
+    /**
+     * The label associated with Category 9
+     */
     private String category9;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new plannerCategoryDescriptions and sets the default values.

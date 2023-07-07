@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BucketAggregationDefinition implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional. */
+    /**
+     * True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
+     */
     private Boolean isDescending;
-    /** The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional. */
+    /**
+     * The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
+     */
     private Integer minimumCount;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional. */
+    /**
+     * A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
+     */
     private String prefixFilter;
-    /** Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional. */
+    /**
+     * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     */
     private java.util.List<BucketAggregationRange> ranges;
-    /** The sortBy property */
+    /**
+     * The sortBy property
+     */
     private BucketAggregationSortProperty sortBy;
     /**
      * Instantiates a new BucketAggregationDefinition and sets the default values.

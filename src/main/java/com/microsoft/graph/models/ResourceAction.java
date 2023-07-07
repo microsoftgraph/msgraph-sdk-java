@@ -11,16 +11,24 @@ import java.util.Objects;
  * Set of allowed and not allowed actions for a resource.
  */
 public class ResourceAction implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Allowed Actions */
+    /**
+     * Allowed Actions
+     */
     private java.util.List<String> allowedResourceActions;
-    /** Not Allowed Actions. */
+    /**
+     * Not Allowed Actions.
+     */
     private java.util.List<String> notAllowedResourceActions;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
-     * Instantiates a new resourceAction and sets the default values.
+     * Instantiates a new ResourceAction and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -30,7 +38,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resourceAction
+     * @return a ResourceAction
      */
     @javax.annotation.Nonnull
     public static ResourceAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

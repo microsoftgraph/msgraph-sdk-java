@@ -10,13 +10,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DataSource extends Entity implements Parsable {
-    /** The user who created the dataSource. */
+    /**
+     * The user who created the dataSource.
+     */
     private IdentitySet createdBy;
-    /** The date and time the dataSource was created. */
+    /**
+     * The date and time the dataSource was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The display name of the dataSource. This will be the name of the SharePoint site. */
+    /**
+     * The display name of the dataSource. This will be the name of the SharePoint site.
+     */
     private String displayName;
-    /** The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial */
+    /**
+     * The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
+     */
     private DataSourceHoldStatus holdStatus;
     /**
      * Instantiates a new dataSource and sets the default values.

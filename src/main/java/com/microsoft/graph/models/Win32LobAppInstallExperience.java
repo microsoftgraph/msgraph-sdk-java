@@ -11,13 +11,21 @@ import java.util.Objects;
  * Contains installation experience properties for a Win32 App
  */
 public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates the type of restart action. */
+    /**
+     * Indicates the type of restart action.
+     */
     private Win32LobAppRestartBehavior deviceRestartBehavior;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates the type of execution context the app runs in. */
+    /**
+     * Indicates the type of execution context the app runs in.
+     */
     private RunAsAccountType runAsAccount;
     /**
      * Instantiates a new win32LobAppInstallExperience and sets the default values.

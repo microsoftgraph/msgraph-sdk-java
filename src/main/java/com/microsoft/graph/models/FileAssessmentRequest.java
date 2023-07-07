@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable {
-    /** Base64 encoded file content. The file content cannot fetch back because it isn't stored. */
+    /**
+     * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
+     */
     private String contentData;
-    /** The file name. */
+    /**
+     * The file name.
+     */
     private String fileName;
     /**
      * Instantiates a new FileAssessmentRequest and sets the default values.

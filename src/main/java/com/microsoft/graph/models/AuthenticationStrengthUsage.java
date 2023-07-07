@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationStrengthUsage implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The mfa property */
+    /**
+     * The mfa property
+     */
     private java.util.List<ConditionalAccessPolicy> mfa;
-    /** The none property */
+    /**
+     * The none property
+     */
     private java.util.List<ConditionalAccessPolicy> none;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new authenticationStrengthUsage and sets the default values.

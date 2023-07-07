@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TokenMeetingInfo extends MeetingInfo implements Parsable {
-    /** The token used to join the call. */
+    /**
+     * The token used to join the call.
+     */
     private String token;
     /**
      * Instantiates a new TokenMeetingInfo and sets the default values.

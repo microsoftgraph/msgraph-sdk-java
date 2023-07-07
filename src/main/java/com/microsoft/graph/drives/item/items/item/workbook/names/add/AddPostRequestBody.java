@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The comment property */
+    /**
+     * The comment property
+     */
     private String comment;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The reference property */
+    /**
+     * The reference property
+     */
     private Json reference;
     /**
      * Instantiates a new addPostRequestBody and sets the default values.

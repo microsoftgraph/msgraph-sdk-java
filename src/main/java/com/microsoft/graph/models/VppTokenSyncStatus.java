@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Possible sync statuses associated with an Apple Volume Purchase Program token. */
+/**
+ * Possible sync statuses associated with an Apple Volume Purchase Program token.
+ */
 public enum VppTokenSyncStatus implements ValuedEnum {
     /** Default status. */
     None("none"),

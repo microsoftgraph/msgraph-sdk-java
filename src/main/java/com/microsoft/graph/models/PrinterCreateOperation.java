@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterCreateOperation extends PrintOperation implements Parsable {
-    /** The signed certificate created during the registration process. Read-only. */
+    /**
+     * The signed certificate created during the registration process. Read-only.
+     */
     private String certificate;
-    /** The created printer entity. Read-only. */
+    /**
+     * The created printer entity. Read-only.
+     */
     private Printer printer;
     /**
      * Instantiates a new PrinterCreateOperation and sets the default values.

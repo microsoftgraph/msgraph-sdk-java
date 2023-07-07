@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintTaskStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A human-readable description of the current processing state of the printTask. */
+    /**
+     * A human-readable description of the current processing state of the printTask.
+     */
     private String description;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The state property */
+    /**
+     * The state property
+     */
     private PrintTaskProcessingState state;
     /**
      * Instantiates a new PrintTaskStatus and sets the default values.

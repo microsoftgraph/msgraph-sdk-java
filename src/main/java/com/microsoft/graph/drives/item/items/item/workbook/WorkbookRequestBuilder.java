@@ -32,52 +32,72 @@ import java.util.Objects;
  * Provides operations to manage the workbook property of the microsoft.graph.driveItem entity.
  */
 public class WorkbookRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the application property of the microsoft.graph.workbook entity. */
+    /**
+     * Provides operations to manage the application property of the microsoft.graph.workbook entity.
+     */
     @javax.annotation.Nonnull
     public ApplicationRequestBuilder application() {
         return new ApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the closeSession method. */
+    /**
+     * Provides operations to call the closeSession method.
+     */
     @javax.annotation.Nonnull
     public CloseSessionRequestBuilder closeSession() {
         return new CloseSessionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the comments property of the microsoft.graph.workbook entity. */
+    /**
+     * Provides operations to manage the comments property of the microsoft.graph.workbook entity.
+     */
     @javax.annotation.Nonnull
     public CommentsRequestBuilder comments() {
         return new CommentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the createSession method. */
+    /**
+     * Provides operations to call the createSession method.
+     */
     @javax.annotation.Nonnull
     public CreateSessionRequestBuilder createSession() {
         return new CreateSessionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the functions property of the microsoft.graph.workbook entity. */
+    /**
+     * Provides operations to manage the functions property of the microsoft.graph.workbook entity.
+     */
     @javax.annotation.Nonnull
     public FunctionsRequestBuilder functions() {
         return new FunctionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the names property of the microsoft.graph.workbook entity. */
+    /**
+     * Provides operations to manage the names property of the microsoft.graph.workbook entity.
+     */
     @javax.annotation.Nonnull
     public NamesRequestBuilder names() {
         return new NamesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.workbook entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.workbook entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the refreshSession method. */
+    /**
+     * Provides operations to call the refreshSession method.
+     */
     @javax.annotation.Nonnull
     public RefreshSessionRequestBuilder refreshSession() {
         return new RefreshSessionRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tables property of the microsoft.graph.workbook entity. */
+    /**
+     * Provides operations to manage the tables property of the microsoft.graph.workbook entity.
+     */
     @javax.annotation.Nonnull
     public TablesRequestBuilder tables() {
         return new TablesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the worksheets property of the microsoft.graph.workbook entity. */
+    /**
+     * Provides operations to manage the worksheets property of the microsoft.graph.workbook entity.
+     */
     @javax.annotation.Nonnull
     public WorksheetsRequestBuilder worksheets() {
         return new WorksheetsRequestBuilder(pathParameters, requestAdapter);
@@ -333,11 +353,15 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
      * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -346,7 +370,9 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

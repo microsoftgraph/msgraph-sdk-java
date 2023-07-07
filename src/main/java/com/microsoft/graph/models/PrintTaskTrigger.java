@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintTaskTrigger extends Entity implements Parsable {
-    /** The definition property */
+    /**
+     * The definition property
+     */
     private PrintTaskDefinition definition;
-    /** The event property */
+    /**
+     * The event property
+     */
     private PrintEvent event;
     /**
      * Instantiates a new printTaskTrigger and sets the default values.

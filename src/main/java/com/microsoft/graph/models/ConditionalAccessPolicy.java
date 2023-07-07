@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessPolicy extends Entity implements Parsable {
-    /** The conditions property */
+    /**
+     * The conditions property
+     */
     private ConditionalAccessConditionSet conditions;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
+     */
     private OffsetDateTime createdDateTime;
-    /** The description property */
+    /**
+     * The description property
+     */
     private String description;
-    /** Specifies a display name for the conditionalAccessPolicy object. */
+    /**
+     * Specifies a display name for the conditionalAccessPolicy object.
+     */
     private String displayName;
-    /** Specifies the grant controls that must be fulfilled to pass the policy. */
+    /**
+     * Specifies the grant controls that must be fulfilled to pass the policy.
+     */
     private ConditionalAccessGrantControls grantControls;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
+     */
     private OffsetDateTime modifiedDateTime;
-    /** Specifies the session controls that are enforced after sign-in. */
+    /**
+     * Specifies the session controls that are enforced after sign-in.
+     */
     private ConditionalAccessSessionControls sessionControls;
-    /** The state property */
+    /**
+     * The state property
+     */
     private ConditionalAccessPolicyState state;
     /**
      * Instantiates a new conditionalAccessPolicy and sets the default values.

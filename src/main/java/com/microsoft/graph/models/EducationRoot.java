@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationRoot implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The classes property */
+    /**
+     * The classes property
+     */
     private java.util.List<EducationClass> classes;
-    /** The me property */
+    /**
+     * The me property
+     */
     private EducationUser me;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The schools property */
+    /**
+     * The schools property
+     */
     private java.util.List<EducationSchool> schools;
-    /** The users property */
+    /**
+     * The users property
+     */
     private java.util.List<EducationUser> users;
     /**
      * Instantiates a new EducationRoot and sets the default values.

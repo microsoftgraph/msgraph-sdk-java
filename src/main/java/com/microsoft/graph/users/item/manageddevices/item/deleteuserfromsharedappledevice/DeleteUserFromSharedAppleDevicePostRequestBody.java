@@ -8,9 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeleteUserFromSharedAppleDevicePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The userPrincipalName property */
+    /**
+     * The userPrincipalName property
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new deleteUserFromSharedAppleDevicePostRequestBody and sets the default values.

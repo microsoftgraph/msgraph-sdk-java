@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the channels property of the microsoft.graph.team entity.
  */
 public class ChannelItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the completeMigration method. */
+    /**
+     * Provides operations to call the completeMigration method.
+     */
     @javax.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
         return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the doesUserHaveAccess method. */
+    /**
+     * Provides operations to call the doesUserHaveAccess method.
+     */
     @javax.annotation.Nonnull
     public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
         return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the filesFolder property of the microsoft.graph.channel entity. */
+    /**
+     * Provides operations to manage the filesFolder property of the microsoft.graph.channel entity.
+     */
     @javax.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the members property of the microsoft.graph.channel entity. */
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.channel entity.
+     */
     @javax.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the messages property of the microsoft.graph.channel entity. */
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
+     */
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the provisionEmail method. */
+    /**
+     * Provides operations to call the provisionEmail method.
+     */
     @javax.annotation.Nonnull
     public ProvisionEmailRequestBuilder provisionEmail() {
         return new ProvisionEmailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the removeEmail method. */
+    /**
+     * Provides operations to call the removeEmail method.
+     */
     @javax.annotation.Nonnull
     public RemoveEmailRequestBuilder removeEmail() {
         return new RemoveEmailRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity. */
+    /**
+     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
+     */
     @javax.annotation.Nonnull
     public SharedWithTeamsRequestBuilder sharedWithTeams() {
         return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tabs property of the microsoft.graph.channel entity. */
+    /**
+     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
+     */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
@@ -311,11 +329,15 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -324,7 +346,9 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

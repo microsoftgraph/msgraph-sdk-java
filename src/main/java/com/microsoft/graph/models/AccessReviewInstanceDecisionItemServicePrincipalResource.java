@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
-    /** The globally unique identifier of the application to which access has been granted. */
+    /**
+     * The globally unique identifier of the application to which access has been granted.
+     */
     private String appId;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.

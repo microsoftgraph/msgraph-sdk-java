@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AssignmentOrder implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow. */
+    /**
+     * A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
+     */
     private java.util.List<String> order;
     /**
      * Instantiates a new assignmentOrder and sets the default values.

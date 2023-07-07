@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Defenders default action to take on detected Malware threats. */
+/**
+ * Defenders default action to take on detected Malware threats.
+ */
 public enum DefenderThreatAction implements ValuedEnum {
     /** Apply action based on the update definition. */
     DeviceDefault("deviceDefault"),

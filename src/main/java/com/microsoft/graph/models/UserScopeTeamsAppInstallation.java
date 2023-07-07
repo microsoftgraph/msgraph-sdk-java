@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Parsable {
-    /** The chat between the user and Teams app. */
+    /**
+     * The chat between the user and Teams app.
+     */
     private Chat chat;
     /**
      * Instantiates a new UserScopeTeamsAppInstallation and sets the default values.

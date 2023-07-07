@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional. */
+    /**
+     * Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional.
+     */
     private Boolean isPasscodeRequired;
-    /** The meeting ID to be used to join a meeting. Optional. Read-only. */
+    /**
+     * The meeting ID to be used to join a meeting. Optional. Read-only.
+     */
     private String joinMeetingId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The passcode to join a meeting.  Optional. Read-only. */
+    /**
+     * The passcode to join a meeting.  Optional. Read-only.
+     */
     private String passcode;
     /**
      * Instantiates a new joinMeetingIdSettings and sets the default values.

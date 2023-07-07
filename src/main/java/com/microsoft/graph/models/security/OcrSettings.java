@@ -9,15 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OcrSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether or not OCR is enabled for the case. */
+    /**
+     * Indicates whether or not OCR is enabled for the case.
+     */
     private Boolean isEnabled;
-    /** Maximum image size that will be processed in KB). */
+    /**
+     * Maximum image size that will be processed in KB).
+     */
     private Integer maxImageSize;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time. */
+    /**
+     * The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time.
+     */
     private Period timeout;
     /**
      * Instantiates a new ocrSettings and sets the default values.

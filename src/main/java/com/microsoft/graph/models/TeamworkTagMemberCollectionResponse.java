@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkTagMemberCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<TeamworkTagMember> value;
     /**
      * Instantiates a new TeamworkTagMemberCollectionResponse and sets the default values.

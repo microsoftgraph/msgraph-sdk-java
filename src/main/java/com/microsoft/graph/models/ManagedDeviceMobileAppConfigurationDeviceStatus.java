@@ -11,19 +11,33 @@ import java.util.Objects;
  * Contains properties, inherited properties and actions for an MDM mobile app configuration status for a device.
  */
 public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity implements Parsable {
-    /** The DateTime when device compliance grace period expires */
+    /**
+     * The DateTime when device compliance grace period expires
+     */
     private OffsetDateTime complianceGracePeriodExpirationDateTime;
-    /** Device name of the DevicePolicyStatus. */
+    /**
+     * Device name of the DevicePolicyStatus.
+     */
     private String deviceDisplayName;
-    /** The device model that is being reported */
+    /**
+     * The device model that is being reported
+     */
     private String deviceModel;
-    /** Last modified date time of the policy report. */
+    /**
+     * Last modified date time of the policy report.
+     */
     private OffsetDateTime lastReportedDateTime;
-    /** The status property */
+    /**
+     * The status property
+     */
     private ComplianceStatus status;
-    /** The User Name that is being reported */
+    /**
+     * The User Name that is being reported
+     */
     private String userName;
-    /** UserPrincipalName. */
+    /**
+     * UserPrincipalName.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new managedDeviceMobileAppConfigurationDeviceStatus and sets the default values.

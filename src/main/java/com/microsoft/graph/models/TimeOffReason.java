@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
-    /** The name of the timeOffReason. Required. */
+    /**
+     * The name of the timeOffReason. Required.
+     */
     private String displayName;
-    /** Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required. */
+    /**
+     * Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
+     */
     private TimeOffReasonIconType iconType;
-    /** Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required. */
+    /**
+     * Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
+     */
     private Boolean isActive;
     /**
      * Instantiates a new TimeOffReason and sets the default values.

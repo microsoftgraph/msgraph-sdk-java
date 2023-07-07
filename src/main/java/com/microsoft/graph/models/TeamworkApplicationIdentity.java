@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkApplicationIdentity extends Identity implements Parsable {
-    /** Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue. */
+    /**
+     * Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
+     */
     private TeamworkApplicationIdentityType applicationIdentityType;
     /**
      * Instantiates a new TeamworkApplicationIdentity and sets the default values.

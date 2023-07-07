@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveRecipient implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The alias of the domain object, for cases where an email address is unavailable (e.g. security groups). */
+    /**
+     * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+     */
     private String alias;
-    /** The email address for the recipient, if the recipient has an associated email address. */
+    /**
+     * The email address for the recipient, if the recipient has an associated email address.
+     */
     private String email;
-    /** The unique identifier for the recipient in the directory. */
+    /**
+     * The unique identifier for the recipient in the directory.
+     */
     private String objectId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new DriveRecipient and sets the default values.

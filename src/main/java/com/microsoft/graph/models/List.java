@@ -7,25 +7,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class List extends BaseItem implements Parsable {
-    /** The collection of field definitions for this list. */
+    /**
+     * The collection of field definitions for this list.
+     */
     private java.util.List<ColumnDefinition> columns;
-    /** The collection of content types present in this list. */
+    /**
+     * The collection of content types present in this list.
+     */
     private java.util.List<ContentType> contentTypes;
-    /** The displayable title of the list. */
+    /**
+     * The displayable title of the list.
+     */
     private String displayName;
-    /** Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem]. */
+    /**
+     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     */
     private Drive drive;
-    /** All items contained in the list. */
+    /**
+     * All items contained in the list.
+     */
     private java.util.List<ListItem> items;
-    /** Provides additional details about the list. */
+    /**
+     * Provides additional details about the list.
+     */
     private ListInfo list;
-    /** The collection of long-running operations on the list. */
+    /**
+     * The collection of long-running operations on the list.
+     */
     private java.util.List<RichLongRunningOperation> operations;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     */
     private SharepointIds sharepointIds;
-    /** The set of subscriptions on the list. */
+    /**
+     * The set of subscriptions on the list.
+     */
     private java.util.List<Subscription> subscriptions;
-    /** If present, indicates that this is a system-managed list. Read-only. */
+    /**
+     * If present, indicates that this is a system-managed list. Read-only.
+     */
     private SystemFacet system;
     /**
      * Instantiates a new list and sets the default values.

@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements Parsable {
-    /** Initiator of the event. */
+    /**
+     * Initiator of the event.
+     */
     private IdentitySet initiator;
-    /** Display name of the teamsApp. */
+    /**
+     * Display name of the teamsApp.
+     */
     private String teamsAppDisplayName;
-    /** Unique identifier of the teamsApp. */
+    /**
+     * Unique identifier of the teamsApp.
+     */
     private String teamsAppId;
     /**
      * Instantiates a new TeamsAppUpgradedEventMessageDetail and sets the default values.

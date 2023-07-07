@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
-    /** The unique identifier for the Amazon account. */
+    /**
+     * The unique identifier for the Amazon account.
+     */
     private String amazonAccountId;
-    /** The Amazon resource identifier (ARN) for the cloud resource. */
+    /**
+     * The Amazon resource identifier (ARN) for the cloud resource.
+     */
     private String amazonResourceId;
-    /** The name of the resource. */
+    /**
+     * The name of the resource.
+     */
     private String resourceName;
-    /** The type of the resource. */
+    /**
+     * The type of the resource.
+     */
     private String resourceType;
     /**
      * Instantiates a new AmazonResourceEvidence and sets the default values.

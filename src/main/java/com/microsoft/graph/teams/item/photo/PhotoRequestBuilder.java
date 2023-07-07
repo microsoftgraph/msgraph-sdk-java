@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the photo property of the microsoft.graph.team entity.
  */
 public class PhotoRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the media for the team entity. */
+    /**
+     * Provides operations to manage the media for the team entity.
+     */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
      * The profile photo for the team.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

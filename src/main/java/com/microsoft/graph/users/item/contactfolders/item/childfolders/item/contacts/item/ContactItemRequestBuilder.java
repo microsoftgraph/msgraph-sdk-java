@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
  */
 public class ContactItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the extensions property of the microsoft.graph.contact entity. */
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.contact entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the photo property of the microsoft.graph.contact entity. */
+    /**
+     * Provides operations to manage the photo property of the microsoft.graph.contact entity.
+     */
     @javax.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
@@ -263,11 +267,15 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
      * The contacts in the folder. Navigation property. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -276,7 +284,9 @@ public class ContactItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

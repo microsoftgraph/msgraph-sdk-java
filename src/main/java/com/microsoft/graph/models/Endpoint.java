@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Endpoint extends DirectoryObject implements Parsable {
-    /** The capability property */
+    /**
+     * The capability property
+     */
     private String capability;
-    /** The providerId property */
+    /**
+     * The providerId property
+     */
     private String providerId;
-    /** The providerName property */
+    /**
+     * The providerName property
+     */
     private String providerName;
-    /** The providerResourceId property */
+    /**
+     * The providerResourceId property
+     */
     private String providerResourceId;
-    /** The uri property */
+    /**
+     * The uri property
+     */
     private String uri;
     /**
      * Instantiates a new endpoint and sets the default values.

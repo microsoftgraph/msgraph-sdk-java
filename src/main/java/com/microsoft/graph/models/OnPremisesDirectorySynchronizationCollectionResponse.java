@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnPremisesDirectorySynchronizationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<OnPremisesDirectorySynchronization> value;
     /**
      * Instantiates a new OnPremisesDirectorySynchronizationCollectionResponse and sets the default values.

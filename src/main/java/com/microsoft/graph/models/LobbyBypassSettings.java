@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LobbyBypassSettings implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Specifies whether or not to always let dial-in callers bypass the lobby. Optional. */
+    /**
+     * Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
+     */
     private Boolean isDialInBypassEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional. */
+    /**
+     * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
+     */
     private LobbyBypassScope scope;
     /**
      * Instantiates a new lobbyBypassSettings and sets the default values.

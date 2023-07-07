@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Folder implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Number of children contained immediately within this container. */
+    /**
+     * Number of children contained immediately within this container.
+     */
     private Integer childCount;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A collection of properties defining the recommended view for the folder. */
+    /**
+     * A collection of properties defining the recommended view for the folder.
+     */
     private FolderView view;
     /**
      * Instantiates a new folder and sets the default values.

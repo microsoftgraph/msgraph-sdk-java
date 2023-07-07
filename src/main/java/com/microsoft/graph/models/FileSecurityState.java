@@ -8,20 +8,32 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileSecurityState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Complex type containing file hashes (cryptographic and location-sensitive). */
+    /**
+     * Complex type containing file hashes (cryptographic and location-sensitive).
+     */
     private FileHash fileHash;
-    /** File name (without path). */
+    /**
+     * File name (without path).
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Full file path of the file/imageFile. */
+    /**
+     * Full file path of the file/imageFile.
+     */
     private String path;
-    /** Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
+     */
     private String riskScore;
     /**
-     * Instantiates a new FileSecurityState and sets the default values.
+     * Instantiates a new fileSecurityState and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +43,7 @@ public class FileSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileSecurityState
+     * @return a fileSecurityState
      */
     @javax.annotation.Nonnull
     public static FileSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

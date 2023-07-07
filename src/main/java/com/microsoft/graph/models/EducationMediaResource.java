@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationMediaResource extends EducationResource implements Parsable {
-    /** Location of the file on shared point folder. Required */
+    /**
+     * Location of the file on shared point folder. Required
+     */
     private String fileUrl;
     /**
      * Instantiates a new EducationMediaResource and sets the default values.

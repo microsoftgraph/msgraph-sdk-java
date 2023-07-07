@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** A collection of groups that are enabled to use the authentication method. */
+    /**
+     * A collection of groups that are enabled to use the authentication method.
+     */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
-    /** Determines whether attestation must be enforced for FIDO2 security key registration. */
+    /**
+     * Determines whether attestation must be enforced for FIDO2 security key registration.
+     */
     private Boolean isAttestationEnforced;
-    /** Determines if users can register new FIDO2 security keys. */
+    /**
+     * Determines if users can register new FIDO2 security keys.
+     */
     private Boolean isSelfServiceRegistrationAllowed;
-    /** Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator. */
+    /**
+     * Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
+     */
     private Fido2KeyRestrictions keyRestrictions;
     /**
      * Instantiates a new Fido2AuthenticationMethodConfiguration and sets the default values.

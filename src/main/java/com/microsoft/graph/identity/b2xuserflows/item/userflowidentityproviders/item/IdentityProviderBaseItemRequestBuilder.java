@@ -9,7 +9,9 @@ import java.util.Objects;
  * Builds and executes requests for operations under /identity/b2xUserFlows/{b2xIdentityUserFlow-id}/userFlowIdentityProviders/{identityProviderBase-id}
  */
 public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the collection of identityContainer entities. */
+    /**
+     * Provides operations to manage the collection of identityContainer entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

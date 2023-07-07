@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the jobs property of the microsoft.graph.printerBase entity.
  */
 public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the abort method. */
+    /**
+     * Provides operations to call the abort method.
+     */
     @javax.annotation.Nonnull
     public AbortRequestBuilder abort() {
         return new AbortRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the cancel method. */
+    /**
+     * Provides operations to call the cancel method.
+     */
     @javax.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the documents property of the microsoft.graph.printJob entity. */
+    /**
+     * Provides operations to manage the documents property of the microsoft.graph.printJob entity.
+     */
     @javax.annotation.Nonnull
     public DocumentsRequestBuilder documents() {
         return new DocumentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the redirect method. */
+    /**
+     * Provides operations to call the redirect method.
+     */
     @javax.annotation.Nonnull
     public RedirectRequestBuilder redirect() {
         return new RedirectRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the start method. */
+    /**
+     * Provides operations to call the start method.
+     */
     @javax.annotation.Nonnull
     public StartRequestBuilder start() {
         return new StartRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tasks property of the microsoft.graph.printJob entity. */
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.printJob entity.
+     */
     @javax.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -287,11 +299,15 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
      * The list of jobs that are queued for printing by the printer/printerShare.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -300,7 +316,9 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

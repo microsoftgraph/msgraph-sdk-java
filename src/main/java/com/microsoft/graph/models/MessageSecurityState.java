@@ -9,27 +9,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MessageSecurityState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The connectingIP property */
+    /**
+     * The connectingIP property
+     */
     private String connectingIP;
-    /** The deliveryAction property */
+    /**
+     * The deliveryAction property
+     */
     private String deliveryAction;
-    /** The deliveryLocation property */
+    /**
+     * The deliveryLocation property
+     */
     private String deliveryLocation;
-    /** The directionality property */
+    /**
+     * The directionality property
+     */
     private String directionality;
-    /** The internetMessageId property */
+    /**
+     * The internetMessageId property
+     */
     private String internetMessageId;
-    /** The messageFingerprint property */
+    /**
+     * The messageFingerprint property
+     */
     private String messageFingerprint;
-    /** The messageReceivedDateTime property */
+    /**
+     * The messageReceivedDateTime property
+     */
     private OffsetDateTime messageReceivedDateTime;
-    /** The messageSubject property */
+    /**
+     * The messageSubject property
+     */
     private String messageSubject;
-    /** The networkMessageId property */
+    /**
+     * The networkMessageId property
+     */
     private String networkMessageId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new messageSecurityState and sets the default values.

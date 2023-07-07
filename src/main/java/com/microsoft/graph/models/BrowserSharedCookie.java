@@ -8,29 +8,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BrowserSharedCookie extends Entity implements Parsable {
-    /** The comment for the shared cookie. */
+    /**
+     * The comment for the shared cookie.
+     */
     private String comment;
-    /** The date and time when the shared cookie was created. */
+    /**
+     * The date and time when the shared cookie was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** The date and time when the shared cookie was deleted. */
+    /**
+     * The date and time when the shared cookie was deleted.
+     */
     private OffsetDateTime deletedDateTime;
-    /** The name of the cookie. */
+    /**
+     * The name of the cookie.
+     */
     private String displayName;
-    /** The history of modifications applied to the cookie. */
+    /**
+     * The history of modifications applied to the cookie.
+     */
     private java.util.List<BrowserSharedCookieHistory> history;
-    /** Controls whether a cookie is a host-only or domain cookie. */
+    /**
+     * Controls whether a cookie is a host-only or domain cookie.
+     */
     private Boolean hostOnly;
-    /** The URL of the cookie. */
+    /**
+     * The URL of the cookie.
+     */
     private String hostOrDomain;
-    /** The user who last modified the cookie. */
+    /**
+     * The user who last modified the cookie.
+     */
     private IdentitySet lastModifiedBy;
-    /** The date and time when the cookie was last modified. */
+    /**
+     * The date and time when the cookie was last modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The path of the cookie. */
+    /**
+     * The path of the cookie.
+     */
     private String path;
-    /** The sourceEnvironment property */
+    /**
+     * The sourceEnvironment property
+     */
     private BrowserSharedCookieSourceEnvironment sourceEnvironment;
-    /** The status property */
+    /**
+     * The status property
+     */
     private BrowserSharedCookieStatus status;
     /**
      * Instantiates a new browserSharedCookie and sets the default values.

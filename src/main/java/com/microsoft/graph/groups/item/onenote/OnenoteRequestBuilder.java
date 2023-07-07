@@ -26,32 +26,44 @@ import java.util.Objects;
  * Provides operations to manage the onenote property of the microsoft.graph.group entity.
  */
 public class OnenoteRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the notebooks property of the microsoft.graph.onenote entity. */
+    /**
+     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
+     */
     @javax.annotation.Nonnull
     public NotebooksRequestBuilder notebooks() {
         return new NotebooksRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.onenote entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the pages property of the microsoft.graph.onenote entity. */
+    /**
+     * Provides operations to manage the pages property of the microsoft.graph.onenote entity.
+     */
     @javax.annotation.Nonnull
     public PagesRequestBuilder pages() {
         return new PagesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the resources property of the microsoft.graph.onenote entity. */
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
+     */
     @javax.annotation.Nonnull
     public ResourcesRequestBuilder resources() {
         return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity. */
+    /**
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity.
+     */
     @javax.annotation.Nonnull
     public SectionGroupsRequestBuilder sectionGroups() {
         return new SectionGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sections property of the microsoft.graph.onenote entity. */
+    /**
+     * Provides operations to manage the sections property of the microsoft.graph.onenote entity.
+     */
     @javax.annotation.Nonnull
     public SectionsRequestBuilder sections() {
         return new SectionsRequestBuilder(pathParameters, requestAdapter);
@@ -287,11 +299,15 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
      * Get onenote from groups
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -300,7 +316,9 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

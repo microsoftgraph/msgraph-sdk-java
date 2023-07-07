@@ -8,29 +8,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleScheduleBase extends Entity implements Parsable {
-    /** Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable. */
+    /**
+     * Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
+     */
     private AppScope appScope;
-    /** Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. */
+    /**
+     * Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
+     */
     private String appScopeId;
-    /** When the schedule was created. */
+    /**
+     * When the schedule was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Identifier of the object through which this schedule was created. */
+    /**
+     * Identifier of the object through which this schedule was created.
+     */
     private String createdUsing;
-    /** The directory object that is the scope of the role eligibility or assignment. Read-only. */
+    /**
+     * The directory object that is the scope of the role eligibility or assignment. Read-only.
+     */
     private DirectoryObject directoryScope;
-    /** Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. */
+    /**
+     * Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
+     */
     private String directoryScopeId;
-    /** When the schedule was last modified. */
+    /**
+     * When the schedule was last modified.
+     */
     private OffsetDateTime modifiedDateTime;
-    /** The principal that's getting a role assignment or that's eligible for a role through the request. */
+    /**
+     * The principal that's getting a role assignment or that's eligible for a role through the request.
+     */
     private DirectoryObject principal;
-    /** Identifier of the principal that has been granted the role assignment or eligibility. */
+    /**
+     * Identifier of the principal that has been granted the role assignment or eligibility.
+     */
     private String principalId;
-    /** Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property. */
+    /**
+     * Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+     */
     private UnifiedRoleDefinition roleDefinition;
-    /** Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for. */
+    /**
+     * Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
+     */
     private String roleDefinitionId;
-    /** The status of the role assignment or eligibility request. */
+    /**
+     * The status of the role assignment or eligibility request.
+     */
     private String status;
     /**
      * Instantiates a new unifiedRoleScheduleBase and sets the default values.

@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RriPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The fv property */
+    /**
+     * The fv property
+     */
     private Json fv;
-    /** The nper property */
+    /**
+     * The nper property
+     */
     private Json nper;
-    /** The pv property */
+    /**
+     * The pv property
+     */
     private Json pv;
     /**
      * Instantiates a new rriPostRequestBody and sets the default values.

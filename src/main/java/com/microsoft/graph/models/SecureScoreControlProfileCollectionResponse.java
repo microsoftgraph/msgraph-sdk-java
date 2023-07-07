@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SecureScoreControlProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<SecureScoreControlProfile> value;
     /**
      * Instantiates a new SecureScoreControlProfileCollectionResponse and sets the default values.

@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** BitLockerEncryptionMethod types */
+/**
+ * BitLockerEncryptionMethod types
+ */
 public enum BitLockerEncryptionMethod implements ValuedEnum {
     /** AES-CBC 128-bit. */
     AesCbc128("aesCbc128"),

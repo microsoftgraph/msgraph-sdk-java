@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AdminConsentRequestPolicy extends Entity implements Parsable {
-    /** Specifies whether the admin consent request feature is enabled or disabled. Required. */
+    /**
+     * Specifies whether the admin consent request feature is enabled or disabled. Required.
+     */
     private Boolean isEnabled;
-    /** Specifies whether reviewers will receive notifications. Required. */
+    /**
+     * Specifies whether reviewers will receive notifications. Required.
+     */
     private Boolean notifyReviewers;
-    /** Specifies whether reviewers will receive reminder emails. Required. */
+    /**
+     * Specifies whether reviewers will receive reminder emails. Required.
+     */
     private Boolean remindersEnabled;
-    /** Specifies the duration the request is active before it automatically expires if no decision is applied. */
+    /**
+     * Specifies the duration the request is active before it automatically expires if no decision is applied.
+     */
     private Integer requestDurationInDays;
-    /** The list of reviewers for the admin consent. Required. */
+    /**
+     * The list of reviewers for the admin consent. Required.
+     */
     private java.util.List<AccessReviewReviewerScope> reviewers;
-    /** Specifies the version of this policy. When the policy is updated, this version is updated. Read-only. */
+    /**
+     * Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
+     */
     private Integer version;
     /**
      * Instantiates a new adminConsentRequestPolicy and sets the default values.

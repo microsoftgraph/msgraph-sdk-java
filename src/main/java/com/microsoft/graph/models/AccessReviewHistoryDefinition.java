@@ -8,28 +8,48 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewHistoryDefinition extends Entity implements Parsable {
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private UserIdentity createdBy;
-    /** Timestamp when the access review definition was created. */
+    /**
+     * Timestamp when the access review definition was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified. */
+    /**
+     * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
+     */
     private java.util.List<AccessReviewHistoryDecisionFilter> decisions;
-    /** Name for the access review history data collection. Required. */
+    /**
+     * Name for the access review history data collection. Required.
+     */
     private String displayName;
-    /** If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance. */
+    /**
+     * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
+     */
     private java.util.List<AccessReviewHistoryInstance> instances;
-    /** A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined. */
+    /**
+     * A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
+     */
     private OffsetDateTime reviewHistoryPeriodEndDateTime;
-    /** A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined. */
+    /**
+     * A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
+     */
     private OffsetDateTime reviewHistoryPeriodStartDateTime;
-    /** The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet. */
+    /**
+     * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
+     */
     private AccessReviewHistoryScheduleSettings scheduleSettings;
-    /** Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required. */
+    /**
+     * Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required.
+     */
     private java.util.List<AccessReviewScope> scopes;
-    /** Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. */
+    /**
+     * Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
+     */
     private AccessReviewHistoryStatus status;
     /**
-     * Instantiates a new AccessReviewHistoryDefinition and sets the default values.
+     * Instantiates a new accessReviewHistoryDefinition and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +59,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewHistoryDefinition
+     * @return a accessReviewHistoryDefinition
      */
     @javax.annotation.Nonnull
     public static AccessReviewHistoryDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

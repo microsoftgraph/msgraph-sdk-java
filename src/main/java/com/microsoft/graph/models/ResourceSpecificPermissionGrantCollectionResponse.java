@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ResourceSpecificPermissionGrantCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<ResourceSpecificPermissionGrant> value;
     /**
      * Instantiates a new ResourceSpecificPermissionGrantCollectionResponse and sets the default values.

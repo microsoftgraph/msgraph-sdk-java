@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Hashes implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The CRC32 value of the file in little endian (if available). Read-only. */
+    /**
+     * The CRC32 value of the file in little endian (if available). Read-only.
+     */
     private String crc32Hash;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only. */
+    /**
+     * A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
+     */
     private String quickXorHash;
-    /** SHA1 hash for the contents of the file (if available). Read-only. */
+    /**
+     * SHA1 hash for the contents of the file (if available). Read-only.
+     */
     private String sha1Hash;
-    /** SHA256 hash for the contents of the file (if available). Read-only. */
+    /**
+     * SHA256 hash for the contents of the file (if available). Read-only.
+     */
     private String sha256Hash;
     /**
      * Instantiates a new hashes and sets the default values.

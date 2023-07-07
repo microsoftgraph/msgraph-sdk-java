@@ -10,25 +10,45 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class KeyCredential implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate. */
+    /**
+     * A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
+     */
     private byte[] customKeyIdentifier;
-    /** Friendly name for the key. Optional. */
+    /**
+     * Friendly name for the key. Optional.
+     */
     private String displayName;
-    /** The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime endDateTime;
-    /** The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key. */
+    /**
+     * The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
+     */
     private byte[] key;
-    /** The unique identifier (GUID) for the key. */
+    /**
+     * The unique identifier (GUID) for the key.
+     */
     private UUID keyId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime startDateTime;
-    /** The type of key credential; for example, Symmetric, AsymmetricX509Cert. */
+    /**
+     * The type of key credential; for example, Symmetric, AsymmetricX509Cert.
+     */
     private String type;
-    /** A string that describes the purpose for which the key can be used; for example, Verify. */
+    /**
+     * A string that describes the purpose for which the key can be used; for example, Verify.
+     */
     private String usage;
     /**
      * Instantiates a new KeyCredential and sets the default values.

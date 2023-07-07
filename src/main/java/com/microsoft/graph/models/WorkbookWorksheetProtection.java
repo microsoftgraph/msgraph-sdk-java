@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
-    /** Sheet protection options. Read-only. */
+    /**
+     * Sheet protection options. Read-only.
+     */
     private WorkbookWorksheetProtectionOptions options;
-    /** Indicates if the worksheet is protected.  Read-only. */
+    /**
+     * Indicates if the worksheet is protected.  Read-only.
+     */
     private Boolean protectedEscaped;
     /**
      * Instantiates a new workbookWorksheetProtection and sets the default values.

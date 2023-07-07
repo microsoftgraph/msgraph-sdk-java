@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
-    /** Allows IT admind to set a predefined default search engine for MDM-Controlled devices */
+    /**
+     * Allows IT admind to set a predefined default search engine for MDM-Controlled devices
+     */
     private EdgeSearchEngineType edgeSearchEngineType;
     /**
      * Instantiates a new EdgeSearchEngine and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserAgent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Identifies the version of application software used by this endpoint. */
+    /**
+     * Identifies the version of application software used by this endpoint.
+     */
     private String applicationVersion;
-    /** User-agent header value reported by this endpoint. */
+    /**
+     * User-agent header value reported by this endpoint.
+     */
     private String headerValue;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new userAgent and sets the default values.

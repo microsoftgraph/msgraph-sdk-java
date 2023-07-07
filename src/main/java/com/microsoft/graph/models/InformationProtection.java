@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InformationProtection implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The bitlocker property */
+    /**
+     * The bitlocker property
+     */
     private Bitlocker bitlocker;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The threatAssessmentRequests property */
+    /**
+     * The threatAssessmentRequests property
+     */
     private java.util.List<ThreatAssessmentRequest> threatAssessmentRequests;
     /**
      * Instantiates a new InformationProtection and sets the default values.

@@ -9,7 +9,9 @@ import java.util.Objects;
  * Builds and executes requests for operations under /groups/{group-id}/acceptedSenders/{directoryObject-id}
  */
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the collection of group entities. */
+    /**
+     * Provides operations to manage the collection of group entities.
+     */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

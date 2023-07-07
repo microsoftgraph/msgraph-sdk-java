@@ -7,21 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharedDriveItem extends BaseItem implements Parsable {
-    /** Used to access the underlying driveItem */
+    /**
+     * Used to access the underlying driveItem
+     */
     private DriveItem driveItem;
-    /** All driveItems contained in the sharing root. This collection cannot be enumerated. */
+    /**
+     * All driveItems contained in the sharing root. This collection cannot be enumerated.
+     */
     private java.util.List<DriveItem> items;
-    /** Used to access the underlying list */
+    /**
+     * Used to access the underlying list
+     */
     private List list;
-    /** Used to access the underlying listItem */
+    /**
+     * Used to access the underlying listItem
+     */
     private ListItem listItem;
-    /** Information about the owner of the shared item being referenced. */
+    /**
+     * Information about the owner of the shared item being referenced.
+     */
     private IdentitySet owner;
-    /** Used to access the permission representing the underlying sharing link */
+    /**
+     * Used to access the permission representing the underlying sharing link
+     */
     private Permission permission;
-    /** Used to access the underlying driveItem. Deprecated -- use driveItem instead. */
+    /**
+     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     */
     private DriveItem root;
-    /** Used to access the underlying site */
+    /**
+     * Used to access the underlying site
+     */
     private Site site;
     /**
      * Instantiates a new SharedDriveItem and sets the default values.

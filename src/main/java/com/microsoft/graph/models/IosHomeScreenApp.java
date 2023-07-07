@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
-    /** BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true. */
+    /**
+     * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
+     */
     private String bundleID;
     /**
      * Instantiates a new IosHomeScreenApp and sets the default values.

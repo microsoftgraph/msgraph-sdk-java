@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceAndAppManagementRoleAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DeviceAndAppManagementRoleAssignment> value;
     /**
      * Instantiates a new DeviceAndAppManagementRoleAssignmentCollectionResponse and sets the default values.

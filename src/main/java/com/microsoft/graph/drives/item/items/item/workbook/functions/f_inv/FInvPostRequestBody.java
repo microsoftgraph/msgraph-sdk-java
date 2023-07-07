@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FInvPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The degFreedom1 property */
+    /**
+     * The degFreedom1 property
+     */
     private Json degFreedom1;
-    /** The degFreedom2 property */
+    /**
+     * The degFreedom2 property
+     */
     private Json degFreedom2;
-    /** The probability property */
+    /**
+     * The probability property
+     */
     private Json probability;
     /**
      * Instantiates a new FInvPostRequestBody and sets the default values.

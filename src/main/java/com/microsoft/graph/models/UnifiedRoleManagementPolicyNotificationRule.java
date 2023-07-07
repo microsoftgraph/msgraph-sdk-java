@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementPolicyRule implements Parsable {
-    /** Indicates whether a default recipient will receive the notification email. */
+    /**
+     * Indicates whether a default recipient will receive the notification email.
+     */
     private Boolean isDefaultRecipientsEnabled;
-    /** The level of notification. The possible values are None, Critical, All. */
+    /**
+     * The level of notification. The possible values are None, Critical, All.
+     */
     private String notificationLevel;
-    /** The list of recipients of the email notifications. */
+    /**
+     * The list of recipients of the email notifications.
+     */
     private java.util.List<String> notificationRecipients;
-    /** The type of notification. Only Email is supported. */
+    /**
+     * The type of notification. Only Email is supported.
+     */
     private String notificationType;
-    /** The type of recipient of the notification. The possible values are Requestor, Approver, Admin. */
+    /**
+     * The type of recipient of the notification. The possible values are Requestor, Approver, Admin.
+     */
     private String recipientType;
     /**
      * Instantiates a new UnifiedRoleManagementPolicyNotificationRule and sets the default values.

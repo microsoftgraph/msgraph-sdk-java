@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleDefinition extends Entity implements Parsable {
-    /** The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true. */
+    /**
+     * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
+     */
     private String description;
-    /** The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in). */
+    /**
+     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
+     */
     private String displayName;
-    /** Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand. */
+    /**
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
+     */
     private java.util.List<UnifiedRoleDefinition> inheritsPermissionsFrom;
-    /** Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in). */
+    /**
+     * Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
+     */
     private Boolean isBuiltIn;
-    /** Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true. */
+    /**
+     * Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
+     */
     private Boolean isEnabled;
-    /** List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment. */
+    /**
+     * List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
+     */
     private java.util.List<String> resourceScopes;
-    /** List of permissions included in the role. Read-only when isBuiltIn is true. Required. */
+    /**
+     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
+     */
     private java.util.List<UnifiedRolePermission> rolePermissions;
-    /** Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories. */
+    /**
+     * Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
+     */
     private String templateId;
-    /** Indicates version of the role definition. Read-only when isBuiltIn is true. */
+    /**
+     * Indicates version of the role definition. Read-only when isBuiltIn is true.
+     */
     private String version;
     /**
      * Instantiates a new unifiedRoleDefinition and sets the default values.

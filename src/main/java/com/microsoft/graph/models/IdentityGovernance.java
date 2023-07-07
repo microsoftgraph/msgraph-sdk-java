@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.identitygovernance.LifecycleWorkflowsContainer;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,17 +9,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdentityGovernance implements AdditionalDataHolder, Parsable {
-    /** The accessReviews property */
+    /**
+     * The accessReviews property
+     */
     private AccessReviewSet accessReviews;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The appConsent property */
+    /**
+     * The appConsent property
+     */
     private AppConsentApprovalRoute appConsent;
-    /** The entitlementManagement property */
+    /**
+     * The entitlementManagement property
+     */
     private EntitlementManagement entitlementManagement;
-    /** The OdataType property */
+    /**
+     * The lifecycleWorkflows property
+     */
+    private LifecycleWorkflowsContainer lifecycleWorkflows;
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The termsOfUse property */
+    /**
+     * The termsOfUse property
+     */
     private TermsOfUseContainer termsOfUse;
     /**
      * Instantiates a new IdentityGovernance and sets the default values.
@@ -76,13 +93,22 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("accessReviews", (n) -> { this.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
         deserializerMap.put("appConsent", (n) -> { this.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
         deserializerMap.put("entitlementManagement", (n) -> { this.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
+        deserializerMap.put("lifecycleWorkflows", (n) -> { this.setLifecycleWorkflows(n.getObjectValue(LifecycleWorkflowsContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("termsOfUse", (n) -> { this.setTermsOfUse(n.getObjectValue(TermsOfUseContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lifecycleWorkflows property value. The lifecycleWorkflows property
+     * @return a lifecycleWorkflowsContainer
+     */
+    @javax.annotation.Nullable
+    public LifecycleWorkflowsContainer getLifecycleWorkflows() {
+        return this.lifecycleWorkflows;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -111,6 +137,7 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("accessReviews", this.getAccessReviews());
         writer.writeObjectValue("appConsent", this.getAppConsent());
         writer.writeObjectValue("entitlementManagement", this.getEntitlementManagement());
+        writer.writeObjectValue("lifecycleWorkflows", this.getLifecycleWorkflows());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("termsOfUse", this.getTermsOfUse());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -150,6 +177,15 @@ public class IdentityGovernance implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void setEntitlementManagement(@javax.annotation.Nullable final EntitlementManagement value) {
         this.entitlementManagement = value;
+    }
+    /**
+     * Sets the lifecycleWorkflows property value. The lifecycleWorkflows property
+     * @param value Value to set for the lifecycleWorkflows property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLifecycleWorkflows(@javax.annotation.Nullable final LifecycleWorkflowsContainer value) {
+        this.lifecycleWorkflows = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property

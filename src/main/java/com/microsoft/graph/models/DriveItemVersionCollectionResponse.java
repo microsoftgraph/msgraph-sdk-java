@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItemVersionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DriveItemVersion> value;
     /**
      * Instantiates a new DriveItemVersionCollectionResponse and sets the default values.

@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppManagementConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Collection of keyCredential restrictions settings to be applied to an application or service principal. */
+    /**
+     * Collection of keyCredential restrictions settings to be applied to an application or service principal.
+     */
     private java.util.List<KeyCredentialConfiguration> keyCredentials;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Collection of password restrictions settings to be applied to an application or service principal. */
+    /**
+     * Collection of password restrictions settings to be applied to an application or service principal.
+     */
     private java.util.List<PasswordCredentialConfiguration> passwordCredentials;
     /**
      * Instantiates a new appManagementConfiguration and sets the default values.

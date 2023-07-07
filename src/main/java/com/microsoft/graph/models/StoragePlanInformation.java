@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StoragePlanInformation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates whether there are higher storage quota plans available. Read-only. */
+    /**
+     * Indicates whether there are higher storage quota plans available. Read-only.
+     */
     private Boolean upgradeAvailable;
     /**
      * Instantiates a new storagePlanInformation and sets the default values.

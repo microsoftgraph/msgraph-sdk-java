@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The address property */
+    /**
+     * The address property
+     */
     private String address;
-    /** The hasHeaders property */
+    /**
+     * The hasHeaders property
+     */
     private Boolean hasHeaders;
     /**
      * Instantiates a new addPostRequestBody and sets the default values.

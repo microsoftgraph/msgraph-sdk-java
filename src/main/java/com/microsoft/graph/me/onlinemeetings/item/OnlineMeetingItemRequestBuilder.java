@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
  */
 public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity. */
+    /**
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+     */
     @javax.annotation.Nonnull
     public AttendanceReportsRequestBuilder attendanceReports() {
         return new AttendanceReportsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the user entity. */
+    /**
+     * Provides operations to manage the media for the user entity.
+     */
     @javax.annotation.Nonnull
     public AttendeeReportRequestBuilder attendeeReport() {
         return new AttendeeReportRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getVirtualAppointmentJoinWebUrl method. */
+    /**
+     * Provides operations to call the getVirtualAppointmentJoinWebUrl method.
+     */
     @javax.annotation.Nonnull
     public GetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
         return new GetVirtualAppointmentJoinWebUrlRequestBuilder(pathParameters, requestAdapter);
@@ -275,11 +281,15 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -288,7 +298,9 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

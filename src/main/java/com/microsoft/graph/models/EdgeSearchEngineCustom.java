@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable {
-    /** Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine. */
+    /**
+     * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
+     */
     private String edgeSearchEngineOpenSearchXmlUrl;
     /**
      * Instantiates a new EdgeSearchEngineCustom and sets the default values.

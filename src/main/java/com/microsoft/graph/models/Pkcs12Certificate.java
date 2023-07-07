@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable {
-    /** The password for the pfx file. Required. If no password is used, you must still provide a value of ''. */
+    /**
+     * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
+     */
     private String password;
-    /** Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required. */
+    /**
+     * Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
+     */
     private String pkcs12Value;
     /**
      * Instantiates a new Pkcs12Certificate and sets the default values.

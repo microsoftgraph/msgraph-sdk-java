@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PhoneAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PhoneAuthenticationMethod> value;
     /**
      * Instantiates a new PhoneAuthenticationMethodCollectionResponse and sets the default values.

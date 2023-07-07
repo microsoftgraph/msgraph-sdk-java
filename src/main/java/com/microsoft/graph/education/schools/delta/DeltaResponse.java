@@ -9,7 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<EducationSchool> value;
     /**
      * Instantiates a new deltaResponse and sets the default values.

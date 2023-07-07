@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoveryCustodian extends DataSourceContainer implements Parsable {
-    /** Date and time the custodian acknowledged a hold notification. */
+    /**
+     * Date and time the custodian acknowledged a hold notification.
+     */
     private OffsetDateTime acknowledgedDateTime;
-    /** Email address of the custodian. */
+    /**
+     * Email address of the custodian.
+     */
     private String email;
-    /** Operation entity that represents the latest indexing for the custodian. */
+    /**
+     * Operation entity that represents the latest indexing for the custodian.
+     */
     private EdiscoveryIndexOperation lastIndexOperation;
-    /** Data source entity for SharePoint sites associated with the custodian. */
+    /**
+     * Data source entity for SharePoint sites associated with the custodian.
+     */
     private java.util.List<SiteSource> siteSources;
-    /** Data source entity for groups associated with the custodian. */
+    /**
+     * Data source entity for groups associated with the custodian.
+     */
     private java.util.List<UnifiedGroupSource> unifiedGroupSources;
-    /** Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site. */
+    /**
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     */
     private java.util.List<UserSource> userSources;
     /**
      * Instantiates a new EdiscoveryCustodian and sets the default values.

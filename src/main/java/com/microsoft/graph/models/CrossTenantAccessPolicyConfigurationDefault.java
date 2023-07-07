@@ -7,19 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable {
-    /** Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only. */
+    /**
+     * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
+     */
     private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
-    /** Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration. */
+    /**
+     * Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
-    /** Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration. */
+    /**
+     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
-    /** Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect. */
+    /**
+     * Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
-    /** Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect. */
+    /**
+     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
-    /** Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations. */
+    /**
+     * Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
-    /** If true, the default configuration is set to the system default configuration. If false, the default settings have been customized. */
+    /**
+     * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
+     */
     private Boolean isServiceDefault;
     /**
      * Instantiates a new crossTenantAccessPolicyConfigurationDefault and sets the default values.

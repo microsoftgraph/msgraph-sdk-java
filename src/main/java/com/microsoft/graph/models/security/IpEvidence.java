@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IpEvidence extends AlertEvidence implements Parsable {
-    /** The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..). */
+    /**
+     * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
+     */
     private String countryLetterCode;
-    /** The value of the IP Address, can be either in V4 address or V6 address format. */
+    /**
+     * The value of the IP Address, can be either in V4 address or V6 address format.
+     */
     private String ipAddress;
     /**
      * Instantiates a new IpEvidence and sets the default values.

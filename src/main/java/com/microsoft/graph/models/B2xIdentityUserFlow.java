@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
-    /** Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration. */
+    /**
+     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     */
     private UserFlowApiConnectorConfiguration apiConnectorConfiguration;
-    /** The identity providers included in the user flow. */
+    /**
+     * The identity providers included in the user flow.
+     */
     private java.util.List<IdentityProvider> identityProviders;
-    /** The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows. */
+    /**
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     */
     private java.util.List<UserFlowLanguageConfiguration> languages;
-    /** The user attribute assignments included in the user flow. */
+    /**
+     * The user attribute assignments included in the user flow.
+     */
     private java.util.List<IdentityUserFlowAttributeAssignment> userAttributeAssignments;
-    /** The userFlowIdentityProviders property */
+    /**
+     * The userFlowIdentityProviders property
+     */
     private java.util.List<IdentityProviderBase> userFlowIdentityProviders;
     /**
      * Instantiates a new B2xIdentityUserFlow and sets the default values.

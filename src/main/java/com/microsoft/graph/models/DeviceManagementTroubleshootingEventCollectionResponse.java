@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementTroubleshootingEventCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<DeviceManagementTroubleshootingEvent> value;
     /**
      * Instantiates a new DeviceManagementTroubleshootingEventCollectionResponse and sets the default values.

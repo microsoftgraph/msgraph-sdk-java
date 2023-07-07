@@ -30,52 +30,72 @@ import java.util.Objects;
  * Provides operations to manage the schedule property of the microsoft.graph.team entity.
  */
 public class ScheduleRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public OfferShiftRequestsRequestBuilder offerShiftRequests() {
         return new OfferShiftRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public OpenShiftChangeRequestsRequestBuilder openShiftChangeRequests() {
         return new OpenShiftChangeRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the openShifts property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public OpenShiftsRequestBuilder openShifts() {
         return new OpenShiftsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public SchedulingGroupsRequestBuilder schedulingGroups() {
         return new SchedulingGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the share method. */
+    /**
+     * Provides operations to call the share method.
+     */
     @javax.annotation.Nonnull
     public ShareRequestBuilder share() {
         return new ShareRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the shifts property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public ShiftsRequestBuilder shifts() {
         return new ShiftsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public SwapShiftsChangeRequestsRequestBuilder swapShiftsChangeRequests() {
         return new SwapShiftsChangeRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public TimeOffReasonsRequestBuilder timeOffReasons() {
         return new TimeOffReasonsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public TimeOffRequestsRequestBuilder timeOffRequests() {
         return new TimeOffRequestsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the timesOff property of the microsoft.graph.schedule entity. */
+    /**
+     * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
+     */
     @javax.annotation.Nonnull
     public TimesOffRequestBuilder timesOff() {
         return new TimesOffRequestBuilder(pathParameters, requestAdapter);
@@ -313,11 +333,15 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the `provisionStatus` property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the `provisionStatusCode` property. Clients can also inspect the configuration of the schedule.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -326,7 +350,9 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

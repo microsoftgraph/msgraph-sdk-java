@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartGridlines extends Entity implements Parsable {
-    /** Represents the formatting of chart gridlines. Read-only. */
+    /**
+     * Represents the formatting of chart gridlines. Read-only.
+     */
     private WorkbookChartGridlinesFormat format;
-    /** Boolean value representing if the axis gridlines are visible or not. */
+    /**
+     * Boolean value representing if the axis gridlines are visible or not.
+     */
     private Boolean visible;
     /**
      * Instantiates a new workbookChartGridlines and sets the default values.

@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** The activity property */
+    /**
+     * The activity property
+     */
     private String activity;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The availability property */
+    /**
+     * The availability property
+     */
     private String availability;
-    /** The expirationDuration property */
+    /**
+     * The expirationDuration property
+     */
     private Period expirationDuration;
     /**
      * Instantiates a new setUserPreferredPresencePostRequestBody and sets the default values.

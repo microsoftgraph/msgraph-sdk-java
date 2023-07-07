@@ -30,52 +30,72 @@ import java.util.Objects;
  * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
  */
 public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the associateWithHubSites method. */
+    /**
+     * Provides operations to call the associateWithHubSites method.
+     */
     @javax.annotation.Nonnull
     public AssociateWithHubSitesRequestBuilder associateWithHubSites() {
         return new AssociateWithHubSitesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the base property of the microsoft.graph.contentType entity. */
+    /**
+     * Provides operations to manage the base property of the microsoft.graph.contentType entity.
+     */
     @javax.annotation.Nonnull
     public BaseRequestBuilderEscaped base() {
         return new BaseRequestBuilderEscaped(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity. */
+    /**
+     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
+     */
     @javax.annotation.Nonnull
     public BaseTypesRequestBuilder baseTypes() {
         return new BaseTypesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity. */
+    /**
+     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
+     */
     @javax.annotation.Nonnull
     public ColumnLinksRequestBuilder columnLinks() {
         return new ColumnLinksRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity. */
+    /**
+     * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
+     */
     @javax.annotation.Nonnull
     public ColumnPositionsRequestBuilder columnPositions() {
         return new ColumnPositionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the columns property of the microsoft.graph.contentType entity. */
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
+     */
     @javax.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the copyToDefaultContentLocation method. */
+    /**
+     * Provides operations to call the copyToDefaultContentLocation method.
+     */
     @javax.annotation.Nonnull
     public CopyToDefaultContentLocationRequestBuilder copyToDefaultContentLocation() {
         return new CopyToDefaultContentLocationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the isPublished method. */
+    /**
+     * Provides operations to call the isPublished method.
+     */
     @javax.annotation.Nonnull
     public IsPublishedRequestBuilder isPublished() {
         return new IsPublishedRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the publish method. */
+    /**
+     * Provides operations to call the publish method.
+     */
     @javax.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unpublish method. */
+    /**
+     * Provides operations to call the unpublish method.
+     */
     @javax.annotation.Nonnull
     public UnpublishRequestBuilder unpublish() {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
@@ -311,11 +331,15 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * The collection of content types present in this list.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -324,7 +348,9 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

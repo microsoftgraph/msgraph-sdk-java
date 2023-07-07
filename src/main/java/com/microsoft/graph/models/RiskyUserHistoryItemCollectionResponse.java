@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RiskyUserHistoryItemCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<RiskyUserHistoryItem> value;
     /**
      * Instantiates a new RiskyUserHistoryItemCollectionResponse and sets the default values.

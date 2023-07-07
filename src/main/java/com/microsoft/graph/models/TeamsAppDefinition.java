@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamsAppDefinition extends Entity implements Parsable {
-    /** The details of the bot specified in the Teams app manifest. */
+    /**
+     * The details of the bot specified in the Teams app manifest.
+     */
     private TeamworkBot bot;
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private IdentitySet createdBy;
-    /** Verbose description of the application. */
+    /**
+     * Verbose description of the application.
+     */
     private String description;
-    /** The name of the app provided by the app developer. */
+    /**
+     * The name of the app provided by the app developer.
+     */
     private String displayName;
-    /** The lastModifiedDateTime property */
+    /**
+     * The lastModifiedDateTime property
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin. */
+    /**
+     * The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
+     */
     private TeamsAppPublishingState publishingState;
-    /** Short description of the application. */
+    /**
+     * Short description of the application.
+     */
     private String shortDescription;
-    /** The ID from the Teams app manifest. */
+    /**
+     * The ID from the Teams app manifest.
+     */
     private String teamsAppId;
-    /** The version number of the application. */
+    /**
+     * The version number of the application.
+     */
     private String version;
     /**
      * Instantiates a new teamsAppDefinition and sets the default values.

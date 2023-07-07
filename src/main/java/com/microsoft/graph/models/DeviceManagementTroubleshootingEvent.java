@@ -11,9 +11,13 @@ import java.util.Objects;
  * Event representing an general failure.
  */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
-    /** Id used for tracing the failure in the service. */
+    /**
+     * Id used for tracing the failure in the service.
+     */
     private String correlationId;
-    /** Time when the event occurred . */
+    /**
+     * Time when the event occurred .
+     */
     private OffsetDateTime eventDateTime;
     /**
      * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.

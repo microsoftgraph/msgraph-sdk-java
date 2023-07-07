@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable {
-    /** The value for the minimum applicable operating system. */
+    /**
+     * The value for the minimum applicable operating system.
+     */
     private AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /** The package identifier. */
+    /**
+     * The package identifier.
+     */
     private String packageId;
-    /** The version code of managed Android Line of Business (LoB) app. */
+    /**
+     * The version code of managed Android Line of Business (LoB) app.
+     */
     private String versionCode;
-    /** The version name of managed Android Line of Business (LoB) app. */
+    /**
+     * The version name of managed Android Line of Business (LoB) app.
+     */
     private String versionName;
     /**
      * Instantiates a new ManagedAndroidLobApp and sets the default values.

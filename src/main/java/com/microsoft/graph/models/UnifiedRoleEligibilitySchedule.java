@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable {
-    /** How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne). */
+    /**
+     * How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
+     */
     private String memberType;
-    /** The period of the role eligibility. */
+    /**
+     * The period of the role eligibility.
+     */
     private RequestSchedule scheduleInfo;
     /**
      * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.

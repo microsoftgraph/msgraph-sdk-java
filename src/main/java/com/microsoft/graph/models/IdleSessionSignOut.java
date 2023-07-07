@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether the idle session sign-out policy is enabled. */
+    /**
+     * Indicates whether the idle session sign-out policy is enabled.
+     */
     private Boolean isEnabled;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Number of seconds of inactivity after which a user is signed out. */
+    /**
+     * Number of seconds of inactivity after which a user is signed out.
+     */
     private Long signOutAfterInSeconds;
-    /** Number of seconds of inactivity after which a user is notified that they'll be signed out. */
+    /**
+     * Number of seconds of inactivity after which a user is notified that they'll be signed out.
+     */
     private Long warnAfterInSeconds;
     /**
      * Instantiates a new idleSessionSignOut and sets the default values.

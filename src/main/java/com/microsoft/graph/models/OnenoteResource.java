@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable {
-    /** The content stream */
+    /**
+     * The content stream
+     */
     private byte[] content;
-    /** The URL for downloading the content */
+    /**
+     * The URL for downloading the content
+     */
     private String contentUrl;
     /**
      * Instantiates a new OnenoteResource and sets the default values.

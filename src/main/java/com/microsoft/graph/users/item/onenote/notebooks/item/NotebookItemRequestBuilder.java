@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
  */
 public class NotebookItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the copyNotebook method. */
+    /**
+     * Provides operations to call the copyNotebook method.
+     */
     @javax.annotation.Nonnull
     public CopyNotebookRequestBuilder copyNotebook() {
         return new CopyNotebookRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity. */
+    /**
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
+     */
     @javax.annotation.Nonnull
     public SectionGroupsRequestBuilder sectionGroups() {
         return new SectionGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sections property of the microsoft.graph.notebook entity. */
+    /**
+     * Provides operations to manage the sections property of the microsoft.graph.notebook entity.
+     */
     @javax.annotation.Nonnull
     public SectionsRequestBuilder sections() {
         return new SectionsRequestBuilder(pathParameters, requestAdapter);
@@ -271,11 +277,15 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a notebook object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -284,7 +294,9 @@ public class NotebookItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

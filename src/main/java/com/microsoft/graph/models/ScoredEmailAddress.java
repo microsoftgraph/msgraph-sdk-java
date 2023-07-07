@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The email address. */
+    /**
+     * The email address.
+     */
     private String address;
-    /** The itemId property */
+    /**
+     * The itemId property
+     */
     private String itemId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships. */
+    /**
+     * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
+     */
     private Double relevanceScore;
-    /** The selectionLikelihood property */
+    /**
+     * The selectionLikelihood property
+     */
     private SelectionLikelihoodInfo selectionLikelihood;
     /**
      * Instantiates a new scoredEmailAddress and sets the default values.

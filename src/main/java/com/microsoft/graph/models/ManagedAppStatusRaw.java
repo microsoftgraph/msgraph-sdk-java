@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
-    /** Status report content. */
+    /**
+     * Status report content.
+     */
     private Json content;
     /**
      * Instantiates a new ManagedAppStatusRaw and sets the default values.

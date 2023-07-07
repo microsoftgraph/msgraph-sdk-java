@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NormInvPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The mean property */
+    /**
+     * The mean property
+     */
     private Json mean;
-    /** The probability property */
+    /**
+     * The probability property
+     */
     private Json probability;
-    /** The standardDev property */
+    /**
+     * The standardDev property
+     */
     private Json standardDev;
     /**
      * Instantiates a new NormInvPostRequestBody and sets the default values.

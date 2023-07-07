@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ChatViewpoint implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Indicates whether the chat is hidden for the current user. */
+    /**
+     * Indicates whether the chat is hidden for the current user.
+     */
     private Boolean isHidden;
-    /** Represents the dateTime up until which the current user has read chatMessages in a specific chat. */
+    /**
+     * Represents the dateTime up until which the current user has read chatMessages in a specific chat.
+     */
     private OffsetDateTime lastMessageReadDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new chatViewpoint and sets the default values.

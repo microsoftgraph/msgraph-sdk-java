@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DataSubject implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Email of the data subject. */
+    /**
+     * Email of the data subject.
+     */
     private String email;
-    /** First name of the data subject. */
+    /**
+     * First name of the data subject.
+     */
     private String firstName;
-    /** Last Name of the data subject. */
+    /**
+     * Last Name of the data subject.
+     */
     private String lastName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The country/region of residency. The residency information is uesed only for internal reporting but not for the content search. */
+    /**
+     * The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
+     */
     private String residency;
     /**
      * Instantiates a new dataSubject and sets the default values.

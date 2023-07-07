@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
  */
 public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity. */
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
+     */
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the admin entity. */
+    /**
+     * Provides operations to manage the media for the admin entity.
+     */
     @javax.annotation.Nonnull
     public AttachmentsArchiveRequestBuilder attachmentsArchive() {
         return new AttachmentsArchiveRequestBuilder(pathParameters, requestAdapter);
@@ -265,11 +269,15 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a serviceUpdateMessage object. This operation retrieves a specified service update message for the tenant. The operation returns an error if the message does not exist for the tenant.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -278,7 +286,9 @@ public class ServiceUpdateMessageItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

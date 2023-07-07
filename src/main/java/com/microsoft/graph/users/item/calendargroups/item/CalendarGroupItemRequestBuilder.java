@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the calendarGroups property of the microsoft.graph.user entity.
  */
 public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity. */
+    /**
+     * Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity.
+     */
     @javax.annotation.Nonnull
     public CalendarsRequestBuilder calendars() {
         return new CalendarsRequestBuilder(pathParameters, requestAdapter);
@@ -263,7 +265,9 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a calendar group object.
      */
     public class GetQueryParameters {
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -272,7 +276,9 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

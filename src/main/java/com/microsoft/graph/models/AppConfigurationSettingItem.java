@@ -11,15 +11,25 @@ import java.util.Objects;
  * Contains properties for App configuration setting item.
  */
 public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** app configuration key. */
+    /**
+     * app configuration key.
+     */
     private String appConfigKey;
-    /** App configuration key types. */
+    /**
+     * App configuration key types.
+     */
     private MdmAppConfigKeyType appConfigKeyType;
-    /** app configuration key value. */
+    /**
+     * app configuration key value.
+     */
     private String appConfigKeyValue;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new appConfigurationSettingItem and sets the default values.

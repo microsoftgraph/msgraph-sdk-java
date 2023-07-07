@@ -7,33 +7,61 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationSchool extends EducationOrganization implements Parsable {
-    /** Address of the school. */
+    /**
+     * Address of the school.
+     */
     private PhysicalAddress address;
-    /** The underlying administrativeUnit for this school. */
+    /**
+     * The underlying administrativeUnit for this school.
+     */
     private AdministrativeUnit administrativeUnit;
-    /** Classes taught at the school. Nullable. */
+    /**
+     * Classes taught at the school. Nullable.
+     */
     private java.util.List<EducationClass> classes;
-    /** Entity who created the school. */
+    /**
+     * Entity who created the school.
+     */
     private IdentitySet createdBy;
-    /** ID of school in syncing system. */
+    /**
+     * ID of school in syncing system.
+     */
     private String externalId;
-    /** ID of principal in syncing system. */
+    /**
+     * ID of principal in syncing system.
+     */
     private String externalPrincipalId;
-    /** The fax property */
+    /**
+     * The fax property
+     */
     private String fax;
-    /** Highest grade taught. */
+    /**
+     * Highest grade taught.
+     */
     private String highestGrade;
-    /** Lowest grade taught. */
+    /**
+     * Lowest grade taught.
+     */
     private String lowestGrade;
-    /** Phone number of school. */
+    /**
+     * Phone number of school.
+     */
     private String phone;
-    /** Email address of the principal. */
+    /**
+     * Email address of the principal.
+     */
     private String principalEmail;
-    /** Name of the principal. */
+    /**
+     * Name of the principal.
+     */
     private String principalName;
-    /** School Number. */
+    /**
+     * School Number.
+     */
     private String schoolNumber;
-    /** Users in the school. Nullable. */
+    /**
+     * Users in the school. Nullable.
+     */
     private java.util.List<EducationUser> users;
     /**
      * Instantiates a new EducationSchool and sets the default values.

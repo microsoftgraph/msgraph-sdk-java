@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AdministrativeUnitCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AdministrativeUnit> value;
     /**
      * Instantiates a new AdministrativeUnitCollectionResponse and sets the default values.

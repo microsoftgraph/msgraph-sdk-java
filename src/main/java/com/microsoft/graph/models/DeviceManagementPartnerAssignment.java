@@ -11,14 +11,20 @@ import java.util.Objects;
  * User group targeting for Device Management Partner
  */
 public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** User groups targeting for devices to be enrolled through partner. */
+    /**
+     * User groups targeting for devices to be enrolled through partner.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new DeviceManagementPartnerAssignment and sets the default values.
+     * Instantiates a new deviceManagementPartnerAssignment and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -28,7 +34,7 @@ public class DeviceManagementPartnerAssignment implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementPartnerAssignment
+     * @return a deviceManagementPartnerAssignment
      */
     @javax.annotation.Nonnull
     public static DeviceManagementPartnerAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

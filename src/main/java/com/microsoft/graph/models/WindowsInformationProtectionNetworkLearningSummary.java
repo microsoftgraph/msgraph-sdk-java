@@ -10,9 +10,13 @@ import java.util.Objects;
  * Windows Information Protection Network learning Summary entity.
  */
 public class WindowsInformationProtectionNetworkLearningSummary extends Entity implements Parsable {
-    /** Device Count */
+    /**
+     * Device Count
+     */
     private Integer deviceCount;
-    /** Website url */
+    /**
+     * Website url
+     */
     private String url;
     /**
      * Instantiates a new windowsInformationProtectionNetworkLearningSummary and sets the default values.

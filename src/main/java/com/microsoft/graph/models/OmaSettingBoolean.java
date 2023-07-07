@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OmaSettingBoolean extends OmaSetting implements Parsable {
-    /** Value. */
+    /**
+     * Value.
+     */
     private Boolean value;
     /**
      * Instantiates a new OmaSettingBoolean and sets the default values.

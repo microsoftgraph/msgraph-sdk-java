@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsable {
-    /** The identifier for an app, as specified in the app store. */
+    /**
+     * The identifier for an app, as specified in the app store.
+     */
     private String bundleId;
     /**
      * Instantiates a new IosMobileAppIdentifier and sets the default values.

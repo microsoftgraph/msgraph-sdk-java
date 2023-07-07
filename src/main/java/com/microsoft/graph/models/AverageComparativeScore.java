@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AverageComparativeScore implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Average score within specified basis. */
+    /**
+     * Average score within specified basis.
+     */
     private Double averageScore;
-    /** Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes. */
+    /**
+     * Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
+     */
     private String basis;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new averageComparativeScore and sets the default values.

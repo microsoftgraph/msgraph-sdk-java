@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SimulationEvent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Count of the simulation event occurrence in an attack simulation and training campaign. */
+    /**
+     * Count of the simulation event occurrence in an attack simulation and training campaign.
+     */
     private Integer count;
-    /** Name of the simulation event in an attack simulation and training campaign. */
+    /**
+     * Name of the simulation event in an attack simulation and training campaign.
+     */
     private String eventName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new simulationEvent and sets the default values.

@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Agreement extends Entity implements Parsable {
-    /** Read-only. Information about acceptances of this agreement. */
+    /**
+     * Read-only. Information about acceptances of this agreement.
+     */
     private java.util.List<AgreementAcceptance> acceptances;
-    /** Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq). */
+    /**
+     * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     */
     private String displayName;
-    /** Default PDF linked to this agreement. */
+    /**
+     * Default PDF linked to this agreement.
+     */
     private AgreementFile file;
-    /** PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand. */
+    /**
+     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
+     */
     private java.util.List<AgreementFileLocalization> files;
-    /** Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq). */
+    /**
+     * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     */
     private Boolean isPerDeviceAcceptanceRequired;
-    /** Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq). */
+    /**
+     * Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq).
+     */
     private Boolean isViewingBeforeAcceptanceRequired;
-    /** Expiration schedule and frequency of agreement for all users. Supports $filter (eq). */
+    /**
+     * Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
+     */
     private TermsExpiration termsExpiration;
-    /** The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq). */
+    /**
+     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
+     */
     private Period userReacceptRequiredFrequency;
     /**
      * Instantiates a new agreement and sets the default values.

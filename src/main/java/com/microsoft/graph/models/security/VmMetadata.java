@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VmMetadata implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The cloudProvider property */
+    /**
+     * The cloudProvider property
+     */
     private VmCloudProvider cloudProvider;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Unique identifier of the Azure resource. */
+    /**
+     * Unique identifier of the Azure resource.
+     */
     private String resourceId;
-    /** Unique identifier of the Azure subscription the customer tenant belongs to. */
+    /**
+     * Unique identifier of the Azure subscription the customer tenant belongs to.
+     */
     private String subscriptionId;
-    /** Unique identifier of the virtual machine instance. */
+    /**
+     * Unique identifier of the virtual machine instance.
+     */
     private String vmId;
     /**
      * Instantiates a new vmMetadata and sets the default values.

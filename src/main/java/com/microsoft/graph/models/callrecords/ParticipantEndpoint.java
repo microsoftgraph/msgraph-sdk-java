@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantEndpoint extends Endpoint implements Parsable {
-    /** CPU number of cores used by the media endpoint. */
+    /**
+     * CPU number of cores used by the media endpoint.
+     */
     private Integer cpuCoresCount;
-    /** CPU name used by the media endpoint. */
+    /**
+     * CPU name used by the media endpoint.
+     */
     private String cpuName;
-    /** CPU processor speed used by the media endpoint. */
+    /**
+     * CPU processor speed used by the media endpoint.
+     */
     private Integer cpuProcessorSpeedInMhz;
-    /** The feedback provided by the user of this endpoint about the quality of the session. */
+    /**
+     * The feedback provided by the user of this endpoint about the quality of the session.
+     */
     private UserFeedback feedback;
-    /** Identity associated with the endpoint. */
+    /**
+     * Identity associated with the endpoint.
+     */
     private IdentitySet identity;
-    /** Name of the device used by the media endpoint. */
+    /**
+     * Name of the device used by the media endpoint.
+     */
     private String name;
     /**
      * Instantiates a new ParticipantEndpoint and sets the default values.

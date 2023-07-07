@@ -8,77 +8,149 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class DeviceManagement extends Entity implements Parsable {
-    /** Apple push notification certificate. */
+    /**
+     * Apple push notification certificate.
+     */
     private ApplePushNotificationCertificate applePushNotificationCertificate;
-    /** The Audit Events */
+    /**
+     * The Audit Events
+     */
     private java.util.List<AuditEvent> auditEvents;
-    /** The list of Compliance Management Partners configured by the tenant. */
+    /**
+     * The list of Compliance Management Partners configured by the tenant.
+     */
     private java.util.List<ComplianceManagementPartner> complianceManagementPartners;
-    /** The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access */
+    /**
+     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     */
     private OnPremisesConditionalAccessSettings conditionalAccessSettings;
-    /** The list of detected apps associated with a device. */
+    /**
+     * The list of detected apps associated with a device.
+     */
     private java.util.List<DetectedApp> detectedApps;
-    /** The list of device categories with the tenant. */
+    /**
+     * The list of device categories with the tenant.
+     */
     private java.util.List<DeviceCategory> deviceCategories;
-    /** The device compliance policies. */
+    /**
+     * The device compliance policies.
+     */
     private java.util.List<DeviceCompliancePolicy> deviceCompliancePolicies;
-    /** The device compliance state summary for this account. */
+    /**
+     * The device compliance state summary for this account.
+     */
     private DeviceCompliancePolicyDeviceStateSummary deviceCompliancePolicyDeviceStateSummary;
-    /** The summary states of compliance policy settings for this account. */
+    /**
+     * The summary states of compliance policy settings for this account.
+     */
     private java.util.List<DeviceCompliancePolicySettingStateSummary> deviceCompliancePolicySettingStateSummaries;
-    /** The device configuration device state summary for this account. */
+    /**
+     * The device configuration device state summary for this account.
+     */
     private DeviceConfigurationDeviceStateSummary deviceConfigurationDeviceStateSummaries;
-    /** The device configurations. */
+    /**
+     * The device configurations.
+     */
     private java.util.List<DeviceConfiguration> deviceConfigurations;
-    /** The list of device enrollment configurations */
+    /**
+     * The list of device enrollment configurations
+     */
     private java.util.List<DeviceEnrollmentConfiguration> deviceEnrollmentConfigurations;
-    /** The list of Device Management Partners configured by the tenant. */
+    /**
+     * The list of Device Management Partners configured by the tenant.
+     */
     private java.util.List<DeviceManagementPartner> deviceManagementPartners;
-    /** The list of Exchange Connectors configured by the tenant. */
+    /**
+     * The list of Exchange Connectors configured by the tenant.
+     */
     private java.util.List<DeviceManagementExchangeConnector> exchangeConnectors;
-    /** Collection of imported Windows autopilot devices. */
+    /**
+     * Collection of imported Windows autopilot devices.
+     */
     private java.util.List<ImportedWindowsAutopilotDeviceIdentity> importedWindowsAutopilotDeviceIdentities;
-    /** Intune Account Id for given tenant */
+    /**
+     * Intune Account Id for given tenant
+     */
     private UUID intuneAccountId;
-    /** intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal. */
+    /**
+     * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+     */
     private IntuneBrand intuneBrand;
-    /** The IOS software update installation statuses for this account. */
+    /**
+     * The IOS software update installation statuses for this account.
+     */
     private java.util.List<IosUpdateDeviceStatus> iosUpdateStatuses;
-    /** Device overview */
+    /**
+     * Device overview
+     */
     private ManagedDeviceOverview managedDeviceOverview;
-    /** The list of managed devices. */
+    /**
+     * The list of managed devices.
+     */
     private java.util.List<ManagedDevice> managedDevices;
-    /** The list of Mobile threat Defense connectors configured by the tenant. */
+    /**
+     * The list of Mobile threat Defense connectors configured by the tenant.
+     */
     private java.util.List<MobileThreatDefenseConnector> mobileThreatDefenseConnectors;
-    /** The Notification Message Templates. */
+    /**
+     * The Notification Message Templates.
+     */
     private java.util.List<NotificationMessageTemplate> notificationMessageTemplates;
-    /** The remote assist partners. */
+    /**
+     * The remote assist partners.
+     */
     private java.util.List<RemoteAssistancePartner> remoteAssistancePartners;
-    /** Reports singleton */
+    /**
+     * Reports singleton
+     */
     private DeviceManagementReports reports;
-    /** The Resource Operations. */
+    /**
+     * The Resource Operations.
+     */
     private java.util.List<ResourceOperation> resourceOperations;
-    /** The Role Assignments. */
+    /**
+     * The Role Assignments.
+     */
     private java.util.List<DeviceAndAppManagementRoleAssignment> roleAssignments;
-    /** The Role Definitions. */
+    /**
+     * The Role Definitions.
+     */
     private java.util.List<RoleDefinition> roleDefinitions;
-    /** Account level settings. */
+    /**
+     * Account level settings.
+     */
     private DeviceManagementSettings settings;
-    /** The software update status summary. */
+    /**
+     * The software update status summary.
+     */
     private SoftwareUpdateStatusSummary softwareUpdateStatusSummary;
-    /** Tenant mobile device management subscription state. */
+    /**
+     * Tenant mobile device management subscription state.
+     */
     private DeviceManagementSubscriptionState subscriptionState;
-    /** The telecom expense management partners. */
+    /**
+     * The telecom expense management partners.
+     */
     private java.util.List<TelecomExpenseManagementPartner> telecomExpenseManagementPartners;
-    /** The terms and conditions associated with device management of the company. */
+    /**
+     * The terms and conditions associated with device management of the company.
+     */
     private java.util.List<TermsAndConditions> termsAndConditions;
-    /** The list of troubleshooting events for the tenant. */
+    /**
+     * The list of troubleshooting events for the tenant.
+     */
     private java.util.List<DeviceManagementTroubleshootingEvent> troubleshootingEvents;
-    /** The Windows autopilot device identities contained collection. */
+    /**
+     * The Windows autopilot device identities contained collection.
+     */
     private java.util.List<WindowsAutopilotDeviceIdentity> windowsAutopilotDeviceIdentities;
-    /** The windows information protection app learning summaries. */
+    /**
+     * The windows information protection app learning summaries.
+     */
     private java.util.List<WindowsInformationProtectionAppLearningSummary> windowsInformationProtectionAppLearningSummaries;
-    /** The windows information protection network learning summaries. */
+    /**
+     * The windows information protection network learning summaries.
+     */
     private java.util.List<WindowsInformationProtectionNetworkLearningSummary> windowsInformationProtectionNetworkLearningSummaries;
     /**
      * Instantiates a new DeviceManagement and sets the default values.

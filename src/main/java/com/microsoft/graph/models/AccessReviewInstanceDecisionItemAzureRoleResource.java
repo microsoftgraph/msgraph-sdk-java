@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
-    /** Details of the scope this role is associated with. */
+    /**
+     * Details of the scope this role is associated with.
+     */
     private AccessReviewInstanceDecisionItemResource scope;
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemAzureRoleResource and sets the default values.

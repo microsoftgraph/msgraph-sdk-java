@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SimulationReportOverview implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type. */
+    /**
+     * List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
+     */
     private java.util.List<RecommendedAction> recommendedActions;
-    /** Number of valid users in the attack simulation and training campaign. */
+    /**
+     * Number of valid users in the attack simulation and training campaign.
+     */
     private Integer resolvedTargetsCount;
-    /** Summary of simulation events in the attack simulation and training campaign. */
+    /**
+     * Summary of simulation events in the attack simulation and training campaign.
+     */
     private SimulationEventsContent simulationEventsContent;
-    /** Summary of assigned trainings in the attack simulation and training campaign. */
+    /**
+     * Summary of assigned trainings in the attack simulation and training campaign.
+     */
     private TrainingEventsContent trainingEventsContent;
     /**
      * Instantiates a new simulationReportOverview and sets the default values.

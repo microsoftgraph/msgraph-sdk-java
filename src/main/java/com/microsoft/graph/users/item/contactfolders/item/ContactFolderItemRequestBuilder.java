@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the contactFolders property of the microsoft.graph.user entity.
  */
 public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity. */
+    /**
+     * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
+     */
     @javax.annotation.Nonnull
     public ChildFoldersRequestBuilder childFolders() {
         return new ChildFoldersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity. */
+    /**
+     * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
+     */
     @javax.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
         return new ContactsRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +273,15 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
      * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +290,9 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

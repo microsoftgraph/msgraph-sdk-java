@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the photos property of the microsoft.graph.group entity.
  */
 public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the media for the group entity. */
+    /**
+     * Provides operations to manage the media for the group entity.
+     */
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
@@ -116,7 +118,9 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
      * The profile photos owned by the group. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -125,7 +129,9 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

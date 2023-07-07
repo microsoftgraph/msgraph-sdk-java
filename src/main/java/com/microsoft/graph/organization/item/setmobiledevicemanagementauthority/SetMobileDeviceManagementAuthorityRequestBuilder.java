@@ -41,6 +41,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     /**
      * Set mobile device management authority
      * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityResponse> post() {
@@ -60,6 +61,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
      * Set mobile device management authority
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SearchHitsContainer implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The aggregations property */
+    /**
+     * The aggregations property
+     */
     private java.util.List<SearchAggregation> aggregations;
-    /** A collection of the search results. */
+    /**
+     * A collection of the search results.
+     */
     private java.util.List<SearchHit> hits;
-    /** Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly. */
+    /**
+     * Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
+     */
     private Boolean moreResultsAvailable;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query. */
+    /**
+     * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
+     */
     private Integer total;
     /**
      * Instantiates a new SearchHitsContainer and sets the default values.

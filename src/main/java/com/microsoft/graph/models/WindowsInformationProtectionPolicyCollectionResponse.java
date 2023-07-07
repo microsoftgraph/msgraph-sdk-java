@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsInformationProtectionPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<WindowsInformationProtectionPolicy> value;
     /**
      * Instantiates a new WindowsInformationProtectionPolicyCollectionResponse and sets the default values.

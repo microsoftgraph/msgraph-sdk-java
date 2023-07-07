@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipient implements Parsable {
-    /** A collection of IDs of the recipients. */
+    /**
+     * A collection of IDs of the recipients.
+     */
     private java.util.List<String> recipients;
     /**
      * Instantiates a new EducationAssignmentIndividualRecipient and sets the default values.

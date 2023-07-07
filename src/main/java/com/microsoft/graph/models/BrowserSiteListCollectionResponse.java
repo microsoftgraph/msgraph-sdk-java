@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BrowserSiteListCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<BrowserSiteList> value;
     /**
      * Instantiates a new BrowserSiteListCollectionResponse and sets the default values.

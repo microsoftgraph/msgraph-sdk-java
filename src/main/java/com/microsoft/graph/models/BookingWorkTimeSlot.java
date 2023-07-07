@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingWorkTimeSlot implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The time of the day when work stops. For example, 17:00:00.0000000. */
+    /**
+     * The time of the day when work stops. For example, 17:00:00.0000000.
+     */
     private LocalTime endTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The time of the day when work starts. For example, 08:00:00.0000000. */
+    /**
+     * The time of the day when work starts. For example, 08:00:00.0000000.
+     */
     private LocalTime startTime;
     /**
      * Instantiates a new bookingWorkTimeSlot and sets the default values.

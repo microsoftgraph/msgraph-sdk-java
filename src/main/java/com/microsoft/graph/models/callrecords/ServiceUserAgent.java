@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceUserAgent extends UserAgent implements Parsable {
-    /** The role property */
+    /**
+     * The role property
+     */
     private ServiceRole role;
     /**
      * Instantiates a new ServiceUserAgent and sets the default values.

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Admin implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A container for Microsoft Edge resources. Read-only. */
+    /**
+     * A container for Microsoft Edge resources. Read-only.
+     */
     private Edge edge;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** A container for service communications resources. Read-only. */
+    /**
+     * A container for service communications resources. Read-only.
+     */
     private ServiceAnnouncement serviceAnnouncement;
-    /** The sharepoint property */
+    /**
+     * The sharepoint property
+     */
     private Sharepoint sharepoint;
     /**
      * Instantiates a new Admin and sets the default values.

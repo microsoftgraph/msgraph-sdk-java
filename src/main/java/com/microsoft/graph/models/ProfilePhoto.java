@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProfilePhoto extends Entity implements Parsable {
-    /** The height of the photo. Read-only. */
+    /**
+     * The height of the photo. Read-only.
+     */
     private Integer height;
-    /** The width of the photo. Read-only. */
+    /**
+     * The width of the photo. Read-only.
+     */
     private Integer width;
     /**
      * Instantiates a new profilePhoto and sets the default values.

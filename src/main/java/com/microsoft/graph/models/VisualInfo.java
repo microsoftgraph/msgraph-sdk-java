@@ -8,19 +8,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class VisualInfo implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Optional. JSON object used to represent an icon which represents the application used to generate the activity */
+    /**
+     * Optional. JSON object used to represent an icon which represents the application used to generate the activity
+     */
     private ImageInfo attribution;
-    /** Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color */
+    /**
+     * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
+     */
     private String backgroundColor;
-    /** Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI */
+    /**
+     * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+     */
     private Json content;
-    /** Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata) */
+    /**
+     * Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
+     */
     private String description;
-    /** Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation) */
+    /**
+     * Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
+     */
     private String displayText;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new VisualInfo and sets the default values.

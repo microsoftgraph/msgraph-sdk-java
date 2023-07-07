@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The list of applications targeted with your cross-tenant access policy. */
+    /**
+     * The list of applications targeted with your cross-tenant access policy.
+     */
     private CrossTenantAccessPolicyTargetConfiguration applications;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The list of users and groups targeted with your cross-tenant access policy. */
+    /**
+     * The list of users and groups targeted with your cross-tenant access policy.
+     */
     private CrossTenantAccessPolicyTargetConfiguration usersAndGroups;
     /**
      * Instantiates a new crossTenantAccessPolicyB2BSetting and sets the default values.

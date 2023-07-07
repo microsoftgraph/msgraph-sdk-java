@@ -10,25 +10,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallRecord extends Entity implements Parsable {
-    /** UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime endDateTime;
-    /** Meeting URL associated to the call. May not be available for a peerToPeer call record type. */
+    /**
+     * Meeting URL associated to the call. May not be available for a peerToPeer call record type.
+     */
     private String joinWebUrl;
-    /** UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue. */
+    /**
+     * List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     */
     private java.util.List<Modality> modalities;
-    /** The organizing party's identity. */
+    /**
+     * The organizing party's identity.
+     */
     private IdentitySet organizer;
-    /** List of distinct identities involved in the call. */
+    /**
+     * List of distinct identities involved in the call.
+     */
     private java.util.List<IdentitySet> participants;
-    /** List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable. */
+    /**
+     * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
+     */
     private java.util.List<Session> sessions;
-    /** UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /**
+     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     */
     private OffsetDateTime startDateTime;
-    /** The type property */
+    /**
+     * The type property
+     */
     private CallType type;
-    /** Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version. */
+    /**
+     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
+     */
     private Long version;
     /**
      * Instantiates a new callRecord and sets the default values.

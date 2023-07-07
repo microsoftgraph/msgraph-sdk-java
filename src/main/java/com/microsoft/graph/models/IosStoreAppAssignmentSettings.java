@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** The VPN Configuration Id to apply for this app. */
+    /**
+     * The VPN Configuration Id to apply for this app.
+     */
     private String vpnConfigurationId;
     /**
      * Instantiates a new IosStoreAppAssignmentSettings and sets the default values.

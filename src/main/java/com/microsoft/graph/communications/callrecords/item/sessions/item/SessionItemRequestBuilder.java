@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
  */
 public class SessionItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity. */
+    /**
+     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
+     */
     @javax.annotation.Nonnull
     public SegmentsRequestBuilder segments() {
         return new SegmentsRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class SessionItemRequestBuilder extends BaseRequestBuilder {
      * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class SessionItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

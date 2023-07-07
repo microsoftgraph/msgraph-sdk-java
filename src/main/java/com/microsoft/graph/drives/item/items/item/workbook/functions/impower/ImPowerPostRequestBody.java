@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImPowerPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The inumber property */
+    /**
+     * The inumber property
+     */
     private Json inumber;
-    /** The number property */
+    /**
+     * The number property
+     */
     private Json number;
     /**
      * Instantiates a new imPowerPostRequestBody and sets the default values.

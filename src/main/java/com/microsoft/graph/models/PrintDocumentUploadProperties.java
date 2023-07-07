@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintDocumentUploadProperties implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The document's content (MIME) type. */
+    /**
+     * The document's content (MIME) type.
+     */
     private String contentType;
-    /** The document's name. */
+    /**
+     * The document's name.
+     */
     private String documentName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The document's size in bytes. */
+    /**
+     * The document's size in bytes.
+     */
     private Long size;
     /**
      * Instantiates a new PrintDocumentUploadProperties and sets the default values.

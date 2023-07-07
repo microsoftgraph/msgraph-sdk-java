@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemActivityStat extends Entity implements Parsable {
-    /** Statistics about the access actions in this interval. Read-only. */
+    /**
+     * Statistics about the access actions in this interval. Read-only.
+     */
     private ItemActionStat access;
-    /** Exposes the itemActivities represented in this itemActivityStat resource. */
+    /**
+     * Exposes the itemActivities represented in this itemActivityStat resource.
+     */
     private java.util.List<ItemActivity> activities;
-    /** Statistics about the create actions in this interval. Read-only. */
+    /**
+     * Statistics about the create actions in this interval. Read-only.
+     */
     private ItemActionStat create;
-    /** Statistics about the delete actions in this interval. Read-only. */
+    /**
+     * Statistics about the delete actions in this interval. Read-only.
+     */
     private ItemActionStat delete;
-    /** Statistics about the edit actions in this interval. Read-only. */
+    /**
+     * Statistics about the edit actions in this interval. Read-only.
+     */
     private ItemActionStat edit;
-    /** When the interval ends. Read-only. */
+    /**
+     * When the interval ends. Read-only.
+     */
     private OffsetDateTime endDateTime;
-    /** Indicates that the statistics in this interval are based on incomplete data. Read-only. */
+    /**
+     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
+     */
     private IncompleteData incompleteData;
-    /** Indicates whether the item is 'trending.' Read-only. */
+    /**
+     * Indicates whether the item is 'trending.' Read-only.
+     */
     private Boolean isTrending;
-    /** Statistics about the move actions in this interval. Read-only. */
+    /**
+     * Statistics about the move actions in this interval. Read-only.
+     */
     private ItemActionStat move;
-    /** When the interval starts. Read-only. */
+    /**
+     * When the interval starts. Read-only.
+     */
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new itemActivityStat and sets the default values.

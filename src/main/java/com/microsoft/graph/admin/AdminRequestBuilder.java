@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the admin singleton.
  */
 public class AdminRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the edge property of the microsoft.graph.admin entity. */
+    /**
+     * Provides operations to manage the edge property of the microsoft.graph.admin entity.
+     */
     @javax.annotation.Nonnull
     public EdgeRequestBuilder edge() {
         return new EdgeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity. */
+    /**
+     * Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity.
+     */
     @javax.annotation.Nonnull
     public ServiceAnnouncementRequestBuilder serviceAnnouncement() {
         return new ServiceAnnouncementRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the sharepoint property of the microsoft.graph.admin entity. */
+    /**
+     * Provides operations to manage the sharepoint property of the microsoft.graph.admin entity.
+     */
     @javax.annotation.Nonnull
     public SharepointRequestBuilder sharepoint() {
         return new SharepointRequestBuilder(pathParameters, requestAdapter);
@@ -200,11 +206,15 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
      * Get admin
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -213,7 +223,9 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

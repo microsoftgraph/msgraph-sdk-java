@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventMessageRequest extends EventMessage implements Parsable {
-    /** True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true. */
+    /**
+     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
+     */
     private Boolean allowNewTimeProposals;
-    /** The meetingRequestType property */
+    /**
+     * The meetingRequestType property
+     */
     private MeetingRequestType meetingRequestType;
-    /** If the meeting update changes the meeting end time, this property specifies the previous meeting end time. */
+    /**
+     * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
+     */
     private DateTimeTimeZone previousEndDateTime;
-    /** If the meeting update changes the meeting location, this property specifies the previous meeting location. */
+    /**
+     * If the meeting update changes the meeting location, this property specifies the previous meeting location.
+     */
     private Location previousLocation;
-    /** If the meeting update changes the meeting start time, this property specifies the previous meeting start time. */
+    /**
+     * If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
+     */
     private DateTimeTimeZone previousStartDateTime;
-    /** Set to true if the sender would like the invitee to send a response to the requested meeting. */
+    /**
+     * Set to true if the sender would like the invitee to send a response to the requested meeting.
+     */
     private Boolean responseRequested;
     /**
      * Instantiates a new EventMessageRequest and sets the default values.

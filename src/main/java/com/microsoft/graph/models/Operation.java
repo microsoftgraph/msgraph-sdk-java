@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Operation extends Entity implements Parsable {
-    /** The start time of the operation. */
+    /**
+     * The start time of the operation.
+     */
     private OffsetDateTime createdDateTime;
-    /** The time of the last action of the operation. */
+    /**
+     * The time of the last action of the operation.
+     */
     private OffsetDateTime lastActionDateTime;
-    /** The current status of the operation: notStarted, running, completed, failed */
+    /**
+     * The current status of the operation: notStarted, running, completed, failed
+     */
     private OperationStatus status;
     /**
      * Instantiates a new operation and sets the default values.

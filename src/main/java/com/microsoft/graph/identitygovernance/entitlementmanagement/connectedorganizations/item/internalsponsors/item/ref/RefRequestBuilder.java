@@ -110,7 +110,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove a user or a group from the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      */
     public class DeleteQueryParameters {
-        /** Delete Uri */
+        /**
+         * Delete Uri
+         */
         @QueryParameter(name = "%40id")
         @javax.annotation.Nullable
         public String id;
@@ -119,7 +121,9 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }

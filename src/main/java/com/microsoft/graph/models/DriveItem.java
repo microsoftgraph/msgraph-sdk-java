@@ -7,69 +7,133 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DriveItem extends BaseItem implements Parsable {
-    /** Analytics about the view activities that took place on this item. */
+    /**
+     * Analytics about the view activities that took place on this item.
+     */
     private ItemAnalytics analytics;
-    /** Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal. */
+    /**
+     * Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
+     */
     private Audio audio;
-    /** Bundle metadata, if the item is a bundle. Read-only. */
+    /**
+     * Bundle metadata, if the item is a bundle. Read-only.
+     */
     private Bundle bundle;
-    /** Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable. */
+    /**
+     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     */
     private java.util.List<DriveItem> children;
-    /** The content stream, if the item represents a file. */
+    /**
+     * The content stream, if the item represents a file.
+     */
     private byte[] content;
-    /** An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only. */
+    /**
+     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     */
     private String cTag;
-    /** Information about the deleted state of the item. Read-only. */
+    /**
+     * Information about the deleted state of the item. Read-only.
+     */
     private Deleted deleted;
-    /** File metadata, if the item is a file. Read-only. */
+    /**
+     * File metadata, if the item is a file. Read-only.
+     */
     private File file;
-    /** File system information on client. Read-write. */
+    /**
+     * File system information on client. Read-write.
+     */
     private FileSystemInfo fileSystemInfo;
-    /** Folder metadata, if the item is a folder. Read-only. */
+    /**
+     * Folder metadata, if the item is a folder. Read-only.
+     */
     private Folder folder;
-    /** Image metadata, if the item is an image. Read-only. */
+    /**
+     * Image metadata, if the item is an image. Read-only.
+     */
     private Image image;
-    /** For drives in SharePoint, the associated document library list item. Read-only. Nullable. */
+    /**
+     * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
+     */
     private ListItem listItem;
-    /** Location metadata, if the item has location data. Read-only. */
+    /**
+     * Location metadata, if the item has location data. Read-only.
+     */
     private GeoCoordinates location;
-    /** Malware metadata, if the item was detected to contain malware. Read-only. */
+    /**
+     * Malware metadata, if the item was detected to contain malware. Read-only.
+     */
     private Malware malware;
-    /** If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. */
+    /**
+     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+     */
     private PackageEscaped packageEscaped;
-    /** If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. */
+    /**
+     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     */
     private PendingOperations pendingOperations;
-    /** The set of permissions for the item. Read-only. Nullable. */
+    /**
+     * The set of permissions for the item. Read-only. Nullable.
+     */
     private java.util.List<Permission> permissions;
-    /** Photo metadata, if the item is a photo. Read-only. */
+    /**
+     * Photo metadata, if the item is a photo. Read-only.
+     */
     private Photo photo;
-    /** Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only. */
+    /**
+     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     */
     private PublicationFacet publication;
-    /** Remote item data, if the item is shared from a drive other than the one being accessed. Read-only. */
+    /**
+     * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
+     */
     private RemoteItem remoteItem;
-    /** If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. */
+    /**
+     * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
+     */
     private Root root;
-    /** Search metadata, if the item is from a search result. Read-only. */
+    /**
+     * Search metadata, if the item is from a search result. Read-only.
+     */
     private SearchResult searchResult;
-    /** Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. */
+    /**
+     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     */
     private Shared shared;
-    /** Returns identifiers useful for SharePoint REST compatibility. Read-only. */
+    /**
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     */
     private SharepointIds sharepointIds;
-    /** Size of the item in bytes. Read-only. */
+    /**
+     * Size of the item in bytes. Read-only.
+     */
     private Long size;
-    /** If the current item is also available as a special folder, this facet is returned. Read-only. */
+    /**
+     * If the current item is also available as a special folder, this facet is returned. Read-only.
+     */
     private SpecialFolder specialFolder;
-    /** The set of subscriptions on the item. Only supported on the root of a drive. */
+    /**
+     * The set of subscriptions on the item. Only supported on the root of a drive.
+     */
     private java.util.List<Subscription> subscriptions;
-    /** Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable. */
+    /**
+     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
+     */
     private java.util.List<ThumbnailSet> thumbnails;
-    /** The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable. */
+    /**
+     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     */
     private java.util.List<DriveItemVersion> versions;
-    /** Video metadata, if the item is a video. Read-only. */
+    /**
+     * Video metadata, if the item is a video. Read-only.
+     */
     private Video video;
-    /** WebDAV compatible URL for the item. */
+    /**
+     * WebDAV compatible URL for the item.
+     */
     private String webDavUrl;
-    /** For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable. */
+    /**
+     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     */
     private Workbook workbook;
     /**
      * Instantiates a new driveItem and sets the default values.

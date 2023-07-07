@@ -7,23 +7,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterBase extends Entity implements Parsable {
-    /** The capabilities of the printer/printerShare. */
+    /**
+     * The capabilities of the printer/printerShare.
+     */
     private PrinterCapabilities capabilities;
-    /** The default print settings of printer/printerShare. */
+    /**
+     * The default print settings of printer/printerShare.
+     */
     private PrinterDefaults defaults;
-    /** The name of the printer/printerShare. */
+    /**
+     * The name of the printer/printerShare.
+     */
     private String displayName;
-    /** Whether the printer/printerShare is currently accepting new print jobs. */
+    /**
+     * Whether the printer/printerShare is currently accepting new print jobs.
+     */
     private Boolean isAcceptingJobs;
-    /** The list of jobs that are queued for printing by the printer/printerShare. */
+    /**
+     * The list of jobs that are queued for printing by the printer/printerShare.
+     */
     private java.util.List<PrintJob> jobs;
-    /** The physical and/or organizational location of the printer/printerShare. */
+    /**
+     * The physical and/or organizational location of the printer/printerShare.
+     */
     private PrinterLocation location;
-    /** The manufacturer of the printer/printerShare. */
+    /**
+     * The manufacturer of the printer/printerShare.
+     */
     private String manufacturer;
-    /** The model name of the printer/printerShare. */
+    /**
+     * The model name of the printer/printerShare.
+     */
     private String model;
-    /** The status property */
+    /**
+     * The status property
+     */
     private PrinterStatus status;
     /**
      * Instantiates a new printerBase and sets the default values.

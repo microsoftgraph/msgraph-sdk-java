@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFilter extends Entity implements Parsable {
-    /** The currently applied filter on the given column. Read-only. */
+    /**
+     * The currently applied filter on the given column. Read-only.
+     */
     private WorkbookFilterCriteria criteria;
     /**
      * Instantiates a new workbookFilter and sets the default values.

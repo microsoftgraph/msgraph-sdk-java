@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConfidenceNormPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The alpha property */
+    /**
+     * The alpha property
+     */
     private Json alpha;
-    /** The size property */
+    /**
+     * The size property
+     */
     private Json size;
-    /** The standardDev property */
+    /**
+     * The standardDev property
+     */
     private Json standardDev;
     /**
      * Instantiates a new ConfidenceNormPostRequestBody and sets the default values.

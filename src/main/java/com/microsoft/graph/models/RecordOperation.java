@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RecordOperation extends CommsOperation implements Parsable {
-    /** The access token required to retrieve the recording. */
+    /**
+     * The access token required to retrieve the recording.
+     */
     private String recordingAccessToken;
-    /** The location where the recording is located. */
+    /**
+     * The location where the recording is located.
+     */
     private String recordingLocation;
     /**
      * Instantiates a new RecordOperation and sets the default values.

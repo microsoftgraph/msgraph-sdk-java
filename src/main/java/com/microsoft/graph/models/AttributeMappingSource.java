@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The expression property */
+    /**
+     * The expression property
+     */
     private String expression;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The parameters property */
+    /**
+     * The parameters property
+     */
     private java.util.List<StringKeyAttributeMappingSourceValuePair> parameters;
-    /** The type property */
+    /**
+     * The type property
+     */
     private AttributeMappingSourceType type;
     /**
      * Instantiates a new attributeMappingSource and sets the default values.

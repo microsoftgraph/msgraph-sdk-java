@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharepointIds implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The unique identifier (guid) for the item's list in SharePoint. */
+    /**
+     * The unique identifier (guid) for the item's list in SharePoint.
+     */
     private String listId;
-    /** An integer identifier for the item within the containing list. */
+    /**
+     * An integer identifier for the item within the containing list.
+     */
     private String listItemId;
-    /** The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site. */
+    /**
+     * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
+     */
     private String listItemUniqueId;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The unique identifier (guid) for the item's site collection (SPSite). */
+    /**
+     * The unique identifier (guid) for the item's site collection (SPSite).
+     */
     private String siteId;
-    /** The SharePoint URL for the site that contains the item. */
+    /**
+     * The SharePoint URL for the site that contains the item.
+     */
     private String siteUrl;
-    /** The unique identifier (guid) for the tenancy. */
+    /**
+     * The unique identifier (guid) for the tenancy.
+     */
     private String tenantId;
-    /** The unique identifier (guid) for the item's site (SPWeb). */
+    /**
+     * The unique identifier (guid) for the item's site (SPWeb).
+     */
     private String webId;
     /**
      * Instantiates a new sharepointIds and sets the default values.

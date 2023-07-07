@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
-    /** Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements. */
+    /**
+     * Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<IosHomeScreenFolderPage> pages;
     /**
      * Instantiates a new IosHomeScreenFolder and sets the default values.

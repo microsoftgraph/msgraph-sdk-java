@@ -8,21 +8,37 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class AuthorizationPolicy extends PolicyBase implements Parsable {
-    /** Indicates whether users can sign up for email based subscriptions. */
+    /**
+     * Indicates whether users can sign up for email based subscriptions.
+     */
     private Boolean allowedToSignUpEmailBasedSubscriptions;
-    /** Indicates whether users can use the Self-Serve Password Reset feature on the tenant. */
+    /**
+     * Indicates whether users can use the Self-Serve Password Reset feature on the tenant.
+     */
     private Boolean allowedToUseSSPR;
-    /** Indicates whether a user can join the tenant by email validation. */
+    /**
+     * Indicates whether a user can join the tenant by email validation.
+     */
     private Boolean allowEmailVerifiedUsersToJoinOrganization;
-    /** Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more details, see allowInvitesFrom values. */
+    /**
+     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. For more details, see allowInvitesFrom values.
+     */
     private AllowInvitesFrom allowInvitesFrom;
-    /** Indicates whether user consent for risky apps is allowed. We recommend to keep this as false. Default value is false. */
+    /**
+     * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false. Default value is false.
+     */
     private Boolean allowUserConsentForRiskyApps;
-    /** To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure Active Directory Connect or Microsoft Graph. */
+    /**
+     * To disable the use of MSOL PowerShell, set this property to true. This also disables user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure Active Directory Connect or Microsoft Graph.
+     */
     private Boolean blockMsolPowerShell;
-    /** The defaultUserRolePermissions property */
+    /**
+     * The defaultUserRolePermissions property
+     */
     private DefaultUserRolePermissions defaultUserRolePermissions;
-    /** Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b). */
+    /**
+     * Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     */
     private UUID guestUserRoleId;
     /**
      * Instantiates a new AuthorizationPolicy and sets the default values.

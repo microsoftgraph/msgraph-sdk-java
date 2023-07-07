@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity.
  */
 public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity. */
+    /**
+     * Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity.
+     */
     @javax.annotation.Nonnull
     public AppliedPoliciesRequestBuilder appliedPolicies() {
         return new AppliedPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity. */
+    /**
+     * Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity.
+     */
     @javax.annotation.Nonnull
     public IntendedPoliciesRequestBuilder intendedPolicies() {
         return new IntendedPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity. */
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity.
+     */
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
@@ -96,8 +102,9 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The managed app registrations.
+     * Read properties and relationships of the managedAppRegistration object.
      * @return a CompletableFuture of managedAppRegistration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get() {
@@ -114,9 +121,10 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The managed app registrations.
+     * Read properties and relationships of the managedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppRegistration
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -200,7 +208,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The managed app registrations.
+     * Read properties and relationships of the managedAppRegistration object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -208,7 +216,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The managed app registrations.
+     * Read properties and relationships of the managedAppRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -266,14 +274,18 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The managed app registrations.
+     * Read properties and relationships of the managedAppRegistration object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +294,9 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

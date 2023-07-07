@@ -9,21 +9,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The certificateSigningRequest property */
+    /**
+     * The certificateSigningRequest property
+     */
     private PrintCertificateSigningRequest certificateSigningRequest;
-    /** The connectorId property */
+    /**
+     * The connectorId property
+     */
     private String connectorId;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The hasPhysicalDevice property */
+    /**
+     * The hasPhysicalDevice property
+     */
     private Boolean hasPhysicalDevice;
-    /** The manufacturer property */
+    /**
+     * The manufacturer property
+     */
     private String manufacturer;
-    /** The model property */
+    /**
+     * The model property
+     */
     private String model;
-    /** The physicalDeviceId property */
+    /**
+     * The physicalDeviceId property
+     */
     private String physicalDeviceId;
     /**
      * Instantiates a new createPostRequestBody and sets the default values.

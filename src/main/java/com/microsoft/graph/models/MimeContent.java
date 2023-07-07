@@ -11,13 +11,21 @@ import java.util.Objects;
  * Contains properties for a generic mime content.
  */
 public class MimeContent implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates the content mime type. */
+    /**
+     * Indicates the content mime type.
+     */
     private String type;
-    /** The byte array that contains the actual content. */
+    /**
+     * The byte array that contains the actual content.
+     */
     private byte[] value;
     /**
      * Instantiates a new mimeContent and sets the default values.

@@ -11,15 +11,25 @@ import java.util.Objects;
  * Network Usage Rules allow enterprises to specify how managed apps use networks, such as cellular data networks.
  */
 public class IosNetworkUsageRule implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** If set to true, corresponding managed apps will not be allowed to use cellular data at any time. */
+    /**
+     * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
+     */
     private Boolean cellularDataBlocked;
-    /** If set to true, corresponding managed apps will not be allowed to use cellular data when roaming. */
+    /**
+     * If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
+     */
     private Boolean cellularDataBlockWhenRoaming;
-    /** Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements. */
+    /**
+     * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
+     */
     private java.util.List<AppListItem> managedApps;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new iosNetworkUsageRule and sets the default values.

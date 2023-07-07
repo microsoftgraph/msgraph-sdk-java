@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
-    /** Contains properties of the possible iOS device types the mobile app can run on. */
+    /**
+     * Contains properties of the possible iOS device types the mobile app can run on.
+     */
     private IosDeviceType applicableDeviceType;
-    /** The Apple AppStoreUrl. */
+    /**
+     * The Apple AppStoreUrl.
+     */
     private String appStoreUrl;
-    /** The app's Bundle ID. */
+    /**
+     * The app's Bundle ID.
+     */
     private String bundleId;
-    /** Contains properties of the minimum operating system required for an iOS mobile app. */
+    /**
+     * Contains properties of the minimum operating system required for an iOS mobile app.
+     */
     private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new ManagedIOSStoreApp and sets the default values.

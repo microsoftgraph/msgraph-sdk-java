@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity.
  */
 public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity. */
+    /**
+     * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
+     */
     @javax.annotation.Nonnull
     public DeviceComplianceSettingStatesRequestBuilder deviceComplianceSettingStates() {
         return new DeviceComplianceSettingStatesRequestBuilder(pathParameters, requestAdapter);
@@ -47,8 +49,9 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicySettingStateSummaries/{deviceCompliancePolicySettingStateSummary%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Deletes a deviceCompliancePolicySettingStateSummary.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +68,10 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         }
     }
     /**
-     * Delete navigation property deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Deletes a deviceCompliancePolicySettingStateSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +88,9 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         }
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> get() {
@@ -102,9 +107,10 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         }
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +127,10 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         }
     }
     /**
-     * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
+     * Update the properties of a deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> patch(@javax.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body) {
@@ -140,10 +147,11 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         }
     }
     /**
-     * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
+     * Update the properties of a deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> patch(@javax.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +169,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         }
     }
     /**
-     * Delete navigation property deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Deletes a deviceCompliancePolicySettingStateSummary.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +177,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Deletes a deviceCompliancePolicySettingStateSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +196,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         return requestInfo;
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +204,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         return toGetRequestInformation(null);
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +225,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
+     * Update the properties of a deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +234,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
+     * Update the properties of a deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,14 +262,18 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * Read properties and relationships of the deviceCompliancePolicySettingStateSummary object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +282,9 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

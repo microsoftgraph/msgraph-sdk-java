@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConversationMember extends Entity implements Parsable {
-    /** The display name of the user. */
+    /**
+     * The display name of the user.
+     */
     private String displayName;
-    /** The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role. */
+    /**
+     * The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.
+     */
     private java.util.List<String> roles;
-    /** The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat. */
+    /**
+     * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+     */
     private OffsetDateTime visibleHistoryStartDateTime;
     /**
      * Instantiates a new conversationMember and sets the default values.

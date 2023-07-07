@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The isFooterShown property */
+    /**
+     * The isFooterShown property
+     */
     private Boolean isFooterShown;
-    /** The isHeaderShown property */
+    /**
+     * The isHeaderShown property
+     */
     private Boolean isHeaderShown;
-    /** The layoutTemplateType property */
+    /**
+     * The layoutTemplateType property
+     */
     private LayoutTemplateType layoutTemplateType;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new loginPageLayoutConfiguration and sets the default values.

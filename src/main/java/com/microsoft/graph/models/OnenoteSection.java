@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable {
-    /** Indicates whether this is the user's default section. Read-only. */
+    /**
+     * Indicates whether this is the user's default section. Read-only.
+     */
     private Boolean isDefault;
-    /** Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web. */
+    /**
+     * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
+     */
     private SectionLinks links;
-    /** The collection of pages in the section.  Read-only. Nullable. */
+    /**
+     * The collection of pages in the section.  Read-only. Nullable.
+     */
     private java.util.List<OnenotePage> pages;
-    /** The pages endpoint where you can get details for all the pages in the section. Read-only. */
+    /**
+     * The pages endpoint where you can get details for all the pages in the section. Read-only.
+     */
     private String pagesUrl;
-    /** The notebook that contains the section.  Read-only. */
+    /**
+     * The notebook that contains the section.  Read-only.
+     */
     private Notebook parentNotebook;
-    /** The section group that contains the section.  Read-only. */
+    /**
+     * The section group that contains the section.  Read-only.
+     */
     private SectionGroup parentSectionGroup;
     /**
      * Instantiates a new onenoteSection and sets the default values.

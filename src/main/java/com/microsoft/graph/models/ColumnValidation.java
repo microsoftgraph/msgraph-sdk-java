@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ColumnValidation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Default BCP 47 language tag for the description. */
+    /**
+     * Default BCP 47 language tag for the description.
+     */
     private String defaultLanguage;
-    /** Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails. */
+    /**
+     * Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
+     */
     private java.util.List<DisplayNameLocalization> descriptions;
-    /** The formula to validate column value. For examples, see Examples of common formulas in lists. */
+    /**
+     * The formula to validate column value. For examples, see Examples of common formulas in lists.
+     */
     private String formula;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new columnValidation and sets the default values.

@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectoryDefinition extends Entity implements Parsable {
-    /** The discoverabilities property */
+    /**
+     * The discoverabilities property
+     */
     private DirectoryDefinitionDiscoverabilities discoverabilities;
-    /** The discoveryDateTime property */
+    /**
+     * The discoveryDateTime property
+     */
     private OffsetDateTime discoveryDateTime;
-    /** The name property */
+    /**
+     * The name property
+     */
     private String name;
-    /** The objects property */
+    /**
+     * The objects property
+     */
     private java.util.List<ObjectDefinition> objects;
-    /** The readOnly property */
+    /**
+     * The readOnly property
+     */
     private Boolean readOnly;
-    /** The version property */
+    /**
+     * The version property
+     */
     private String version;
     /**
      * Instantiates a new directoryDefinition and sets the default values.

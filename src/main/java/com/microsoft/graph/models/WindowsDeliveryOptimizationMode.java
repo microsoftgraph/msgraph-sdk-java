@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Delivery optimization mode for peer distribution */
+/**
+ * Delivery optimization mode for peer distribution
+ */
 public enum WindowsDeliveryOptimizationMode implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

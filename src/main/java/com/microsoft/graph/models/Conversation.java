@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Conversation extends Entity implements Parsable {
-    /** Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search. */
+    /**
+     * Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
+     */
     private Boolean hasAttachments;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime lastDeliveredDateTime;
-    /** A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge). */
+    /**
+     * A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
+     */
     private String preview;
-    /** A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable. */
+    /**
+     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
+     */
     private java.util.List<ConversationThread> threads;
-    /** The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. */
+    /**
+     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
+     */
     private String topic;
-    /** All the users that sent a message to this Conversation. */
+    /**
+     * All the users that sent a message to this Conversation.
+     */
     private java.util.List<String> uniqueSenders;
     /**
      * Instantiates a new conversation and sets the default values.

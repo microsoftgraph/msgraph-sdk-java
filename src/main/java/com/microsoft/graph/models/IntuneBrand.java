@@ -11,37 +11,69 @@ import java.util.Objects;
  * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
  */
 public class IntuneBrand implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Email address of the person/organization responsible for IT support. */
+    /**
+     * Email address of the person/organization responsible for IT support.
+     */
     private String contactITEmailAddress;
-    /** Name of the person/organization responsible for IT support. */
+    /**
+     * Name of the person/organization responsible for IT support.
+     */
     private String contactITName;
-    /** Text comments regarding the person/organization responsible for IT support. */
+    /**
+     * Text comments regarding the person/organization responsible for IT support.
+     */
     private String contactITNotes;
-    /** Phone number of the person/organization responsible for IT support. */
+    /**
+     * Phone number of the person/organization responsible for IT support.
+     */
     private String contactITPhoneNumber;
-    /** Logo image displayed in Company Portal apps which have a dark background behind the logo. */
+    /**
+     * Logo image displayed in Company Portal apps which have a dark background behind the logo.
+     */
     private MimeContent darkBackgroundLogo;
-    /** Company/organization name that is displayed to end users. */
+    /**
+     * Company/organization name that is displayed to end users.
+     */
     private String displayName;
-    /** Logo image displayed in Company Portal apps which have a light background behind the logo. */
+    /**
+     * Logo image displayed in Company Portal apps which have a light background behind the logo.
+     */
     private MimeContent lightBackgroundLogo;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Display name of the company/organizations IT helpdesk site. */
+    /**
+     * Display name of the company/organizations IT helpdesk site.
+     */
     private String onlineSupportSiteName;
-    /** URL to the company/organizations IT helpdesk site. */
+    /**
+     * URL to the company/organizations IT helpdesk site.
+     */
     private String onlineSupportSiteUrl;
-    /** URL to the company/organizations privacy policy. */
+    /**
+     * URL to the company/organizations privacy policy.
+     */
     private String privacyUrl;
-    /** Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
+    /**
+     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
+     */
     private Boolean showDisplayNameNextToLogo;
-    /** Boolean that represents whether the administrator-supplied logo images are shown or not shown. */
+    /**
+     * Boolean that represents whether the administrator-supplied logo images are shown or not shown.
+     */
     private Boolean showLogo;
-    /** Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
+    /**
+     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
+     */
     private Boolean showNameNextToLogo;
-    /** Primary theme color used in the Company Portal applications and web portal. */
+    /**
+     * Primary theme color used in the Company Portal applications and web portal.
+     */
     private RgbColor themeColor;
     /**
      * Instantiates a new intuneBrand and sets the default values.

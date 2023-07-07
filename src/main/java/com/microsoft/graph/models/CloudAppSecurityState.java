@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudAppSecurityState implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Destination IP Address of the connection to the cloud application/service. */
+    /**
+     * Destination IP Address of the connection to the cloud application/service.
+     */
     private String destinationServiceIp;
-    /** Cloud application/service name (for example 'Salesforce', 'DropBox', etc.). */
+    /**
+     * Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
+     */
     private String destinationServiceName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage. */
+    /**
+     * Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
+     */
     private String riskScore;
     /**
      * Instantiates a new CloudAppSecurityState and sets the default values.

@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Days360PostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The endDate property */
+    /**
+     * The endDate property
+     */
     private Json endDate;
-    /** The method property */
+    /**
+     * The method property
+     */
     private Json method;
-    /** The startDate property */
+    /**
+     * The startDate property
+     */
     private Json startDate;
     /**
      * Instantiates a new days360PostRequestBody and sets the default values.

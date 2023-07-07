@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConnectedOrganizationMembers extends SubjectSet implements Parsable {
-    /** The ID of the connected organization in entitlement management. */
+    /**
+     * The ID of the connected organization in entitlement management.
+     */
     private String connectedOrganizationId;
-    /** The name of the connected organization. */
+    /**
+     * The name of the connected organization.
+     */
     private String description;
     /**
      * Instantiates a new ConnectedOrganizationMembers and sets the default values.

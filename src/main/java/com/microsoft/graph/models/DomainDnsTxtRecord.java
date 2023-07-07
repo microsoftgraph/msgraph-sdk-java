@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
-    /** Value used when configuring the text property at the DNS host. */
+    /**
+     * Value used when configuring the text property at the DNS host.
+     */
     private String text;
     /**
      * Instantiates a new DomainDnsTxtRecord and sets the default values.

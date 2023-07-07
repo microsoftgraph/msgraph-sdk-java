@@ -8,18 +8,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Acl implements AdditionalDataHolder, Parsable {
-    /** The accessType property */
+    /**
+     * The accessType property
+     */
     private AccessType accessType;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The type property */
+    /**
+     * The type property
+     */
     private AclType type;
-    /** The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup */
+    /**
+     * The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup
+     */
     private String value;
     /**
-     * Instantiates a new Acl and sets the default values.
+     * Instantiates a new acl and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -29,7 +39,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Acl
+     * @return a acl
      */
     @javax.annotation.Nonnull
     public static Acl createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

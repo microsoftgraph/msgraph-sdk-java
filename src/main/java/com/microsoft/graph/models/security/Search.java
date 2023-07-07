@@ -10,19 +10,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Search extends Entity implements Parsable {
-    /** The contentQuery property */
+    /**
+     * The contentQuery property
+     */
     private String contentQuery;
-    /** The createdBy property */
+    /**
+     * The createdBy property
+     */
     private IdentitySet createdBy;
-    /** The createdDateTime property */
+    /**
+     * The createdDateTime property
+     */
     private OffsetDateTime createdDateTime;
-    /** The description property */
+    /**
+     * The description property
+     */
     private String description;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The lastModifiedBy property */
+    /**
+     * The lastModifiedBy property
+     */
     private IdentitySet lastModifiedBy;
-    /** The lastModifiedDateTime property */
+    /**
+     * The lastModifiedDateTime property
+     */
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new search and sets the default values.

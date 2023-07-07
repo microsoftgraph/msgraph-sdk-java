@@ -8,39 +8,73 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** First customizable extension attribute. */
+    /**
+     * First customizable extension attribute.
+     */
     private String extensionAttribute1;
-    /** Tenth customizable extension attribute. */
+    /**
+     * Tenth customizable extension attribute.
+     */
     private String extensionAttribute10;
-    /** Eleventh customizable extension attribute. */
+    /**
+     * Eleventh customizable extension attribute.
+     */
     private String extensionAttribute11;
-    /** Twelfth customizable extension attribute. */
+    /**
+     * Twelfth customizable extension attribute.
+     */
     private String extensionAttribute12;
-    /** Thirteenth customizable extension attribute. */
+    /**
+     * Thirteenth customizable extension attribute.
+     */
     private String extensionAttribute13;
-    /** Fourteenth customizable extension attribute. */
+    /**
+     * Fourteenth customizable extension attribute.
+     */
     private String extensionAttribute14;
-    /** Fifteenth customizable extension attribute. */
+    /**
+     * Fifteenth customizable extension attribute.
+     */
     private String extensionAttribute15;
-    /** Second customizable extension attribute. */
+    /**
+     * Second customizable extension attribute.
+     */
     private String extensionAttribute2;
-    /** Third customizable extension attribute. */
+    /**
+     * Third customizable extension attribute.
+     */
     private String extensionAttribute3;
-    /** Fourth customizable extension attribute. */
+    /**
+     * Fourth customizable extension attribute.
+     */
     private String extensionAttribute4;
-    /** Fifth customizable extension attribute. */
+    /**
+     * Fifth customizable extension attribute.
+     */
     private String extensionAttribute5;
-    /** Sixth customizable extension attribute. */
+    /**
+     * Sixth customizable extension attribute.
+     */
     private String extensionAttribute6;
-    /** Seventh customizable extension attribute. */
+    /**
+     * Seventh customizable extension attribute.
+     */
     private String extensionAttribute7;
-    /** Eighth customizable extension attribute. */
+    /**
+     * Eighth customizable extension attribute.
+     */
     private String extensionAttribute8;
-    /** Ninth customizable extension attribute. */
+    /**
+     * Ninth customizable extension attribute.
+     */
     private String extensionAttribute9;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new onPremisesExtensionAttributes and sets the default values.

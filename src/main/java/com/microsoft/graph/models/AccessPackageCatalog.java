@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageCatalog extends Entity implements Parsable {
-    /** The access packages in this catalog. Read-only. Nullable. */
+    /**
+     * The access packages in this catalog. Read-only. Nullable.
+     */
     private java.util.List<AccessPackage> accessPackages;
-    /** Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue. */
+    /**
+     * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
+     */
     private AccessPackageCatalogType catalogType;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The description of the access package catalog. */
+    /**
+     * The description of the access package catalog.
+     */
     private String description;
-    /** The display name of the access package catalog. */
+    /**
+     * The display name of the access package catalog.
+     */
     private String displayName;
-    /** Whether the access packages in this catalog can be requested by users outside of the tenant. */
+    /**
+     * Whether the access packages in this catalog can be requested by users outside of the tenant.
+     */
     private Boolean isExternallyVisible;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime modifiedDateTime;
-    /** Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue. */
+    /**
+     * Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
+     */
     private AccessPackageCatalogState state;
     /**
      * Instantiates a new accessPackageCatalog and sets the default values.

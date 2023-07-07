@@ -8,29 +8,53 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SharedPCConfiguration extends DeviceConfiguration implements Parsable {
-    /** Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false. */
+    /**
+     * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
+     */
     private SharedPCAccountManagerPolicy accountManagerPolicy;
-    /** Type of accounts that are allowed to share the PC. */
+    /**
+     * Type of accounts that are allowed to share the PC.
+     */
     private SharedPCAllowedAccountType allowedAccounts;
-    /** Specifies whether local storage is allowed on a shared PC. */
+    /**
+     * Specifies whether local storage is allowed on a shared PC.
+     */
     private Boolean allowLocalStorage;
-    /** Disables the account manager for shared PC mode. */
+    /**
+     * Disables the account manager for shared PC mode.
+     */
     private Boolean disableAccountManager;
-    /** Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. */
+    /**
+     * Specifies whether the default shared PC education environment policies should be disabled. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
+     */
     private Boolean disableEduPolicies;
-    /** Specifies whether the default shared PC power policies should be disabled. */
+    /**
+     * Specifies whether the default shared PC power policies should be disabled.
+     */
     private Boolean disablePowerPolicies;
-    /** Disables the requirement to sign in whenever the device wakes up from sleep mode. */
+    /**
+     * Disables the requirement to sign in whenever the device wakes up from sleep mode.
+     */
     private Boolean disableSignInOnResume;
-    /** Enables shared PC mode and applies the shared pc policies. */
+    /**
+     * Enables shared PC mode and applies the shared pc policies.
+     */
     private Boolean enabled;
-    /** Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring. */
+    /**
+     * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
+     */
     private Integer idleTimeBeforeSleepInSeconds;
-    /** Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set. */
+    /**
+     * Specifies the display text for the account shown on the sign-in screen which launches the app specified by SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
+     */
     private String kioskAppDisplayName;
-    /** Specifies the application user model ID of the app to use with assigned access. */
+    /**
+     * Specifies the application user model ID of the app to use with assigned access.
+     */
     private String kioskAppUserModelId;
-    /** Specifies the daily start time of maintenance hour. */
+    /**
+     * Specifies the daily start time of maintenance hour.
+     */
     private LocalTime maintenanceStartTime;
     /**
      * Instantiates a new SharedPCConfiguration and sets the default values.

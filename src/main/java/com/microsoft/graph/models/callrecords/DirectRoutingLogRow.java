@@ -9,51 +9,97 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Number of the user or bot who received the call. E.164 format, but may include additional data. */
+    /**
+     * Number of the user or bot who received the call. E.164 format, but may include additional data.
+     */
     private String calleeNumber;
-    /** In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue. */
+    /**
+     * In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
+     */
     private Integer callEndSubReason;
-    /** Number of the user or bot who made the call. E.164 format, but may include additional data. */
+    /**
+     * Number of the user or bot who made the call. E.164 format, but may include additional data.
+     */
     private String callerNumber;
-    /** Call type and direction. */
+    /**
+     * Call type and direction.
+     */
     private String callType;
-    /** Identifier for the call that you can use when calling Microsoft Support. GUID. */
+    /**
+     * Identifier for the call that you can use when calling Microsoft Support. GUID.
+     */
     private String correlationId;
-    /** Duration of the call in seconds. */
+    /**
+     * Duration of the call in seconds.
+     */
     private Integer duration;
-    /** Only exists for successful (fully established) calls. Time when call ended. */
+    /**
+     * Only exists for successful (fully established) calls. Time when call ended.
+     */
     private OffsetDateTime endDateTime;
-    /** Only exists for failed (not fully established) calls. */
+    /**
+     * Only exists for failed (not fully established) calls.
+     */
     private OffsetDateTime failureDateTime;
-    /** The code with which the call ended, RFC 3261. */
+    /**
+     * The code with which the call ended, RFC 3261.
+     */
     private Integer finalSipCode;
-    /** Description of the SIP code and Microsoft subcode. */
+    /**
+     * Description of the SIP code and Microsoft subcode.
+     */
     private String finalSipCodePhrase;
-    /** Unique call identifier. GUID. */
+    /**
+     * Unique call identifier. GUID.
+     */
     private String id;
-    /** When the initial invite was sent. */
+    /**
+     * When the initial invite was sent.
+     */
     private OffsetDateTime inviteDateTime;
-    /** Indicates if the trunk was enabled for media bypass or not. */
+    /**
+     * Indicates if the trunk was enabled for media bypass or not.
+     */
     private Boolean mediaBypassEnabled;
-    /** The datacenter used for media path in non-bypass call. */
+    /**
+     * The datacenter used for media path in non-bypass call.
+     */
     private String mediaPathLocation;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The datacenter used for signaling for both bypass and non-bypass calls. */
+    /**
+     * The datacenter used for signaling for both bypass and non-bypass calls.
+     */
     private String signalingLocation;
-    /** Call start time.For failed and unanswered calls, this can be equal to invite or failure time. */
+    /**
+     * Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     */
     private OffsetDateTime startDateTime;
-    /** Success or attempt. */
+    /**
+     * Success or attempt.
+     */
     private Boolean successfulCall;
-    /** Fully qualified domain name of the session border controller. */
+    /**
+     * Fully qualified domain name of the session border controller.
+     */
     private String trunkFullyQualifiedDomainName;
-    /** Display name of the user. */
+    /**
+     * Display name of the user.
+     */
     private String userDisplayName;
-    /** Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID. */
+    /**
+     * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     */
     private String userId;
-    /** UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address. */
+    /**
+     * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     */
     private String userPrincipalName;
     /**
      * Instantiates a new directRoutingLogRow and sets the default values.

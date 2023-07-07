@@ -11,13 +11,21 @@ import java.util.Objects;
  * Windows Information Protection Resource Collection
  */
 public class WindowsInformationProtectionResourceCollection implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Display name */
+    /**
+     * Display name
+     */
     private String displayName;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Collection of resources */
+    /**
+     * Collection of resources
+     */
     private java.util.List<String> resources;
     /**
      * Instantiates a new windowsInformationProtectionResourceCollection and sets the default values.

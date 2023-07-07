@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** User in an attack simulation and training campaign. */
+    /**
+     * User in an attack simulation and training campaign.
+     */
     private AttackSimulationUser attackSimulationUser;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** List of assigned trainings and their statuses for the user. */
+    /**
+     * List of assigned trainings and their statuses for the user.
+     */
     private java.util.List<UserTrainingStatusInfo> userTrainings;
     /**
      * Instantiates a new attackSimulationTrainingUserCoverage and sets the default values.

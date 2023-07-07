@@ -8,82 +8,156 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Contact extends OutlookItem implements Parsable {
-    /** The name of the contact's assistant. */
+    /**
+     * The name of the contact's assistant.
+     */
     private String assistantName;
-    /** The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /**
+     * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
     private OffsetDateTime birthday;
-    /** The contact's business address. */
+    /**
+     * The contact's business address.
+     */
     private PhysicalAddress businessAddress;
-    /** The business home page of the contact. */
+    /**
+     * The business home page of the contact.
+     */
     private String businessHomePage;
-    /** The contact's business phone numbers. */
+    /**
+     * The contact's business phone numbers.
+     */
     private java.util.List<String> businessPhones;
-    /** The names of the contact's children. */
+    /**
+     * The names of the contact's children.
+     */
     private java.util.List<String> children;
-    /** The name of the contact's company. */
+    /**
+     * The name of the contact's company.
+     */
     private String companyName;
-    /** The contact's department. */
+    /**
+     * The contact's department.
+     */
     private String department;
-    /** The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation. */
+    /**
+     * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
+     */
     private String displayName;
-    /** The contact's email addresses. */
+    /**
+     * The contact's email addresses.
+     */
     private java.util.List<EmailAddress> emailAddresses;
-    /** The collection of open extensions defined for the contact. Read-only. Nullable. */
+    /**
+     * The collection of open extensions defined for the contact. Read-only. Nullable.
+     */
     private java.util.List<Extension> extensions;
-    /** The name the contact is filed under. */
+    /**
+     * The name the contact is filed under.
+     */
     private String fileAs;
-    /** The contact's generation. */
+    /**
+     * The contact's generation.
+     */
     private String generation;
-    /** The contact's given name. */
+    /**
+     * The contact's given name.
+     */
     private String givenName;
-    /** The contact's home address. */
+    /**
+     * The contact's home address.
+     */
     private PhysicalAddress homeAddress;
-    /** The contact's home phone numbers. */
+    /**
+     * The contact's home phone numbers.
+     */
     private java.util.List<String> homePhones;
-    /** The imAddresses property */
+    /**
+     * The imAddresses property
+     */
     private java.util.List<String> imAddresses;
-    /** The initials property */
+    /**
+     * The initials property
+     */
     private String initials;
-    /** The jobTitle property */
+    /**
+     * The jobTitle property
+     */
     private String jobTitle;
-    /** The manager property */
+    /**
+     * The manager property
+     */
     private String manager;
-    /** The middleName property */
+    /**
+     * The middleName property
+     */
     private String middleName;
-    /** The mobilePhone property */
+    /**
+     * The mobilePhone property
+     */
     private String mobilePhone;
-    /** The collection of multi-value extended properties defined for the contact. Read-only. Nullable. */
+    /**
+     * The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
+     */
     private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
-    /** The nickName property */
+    /**
+     * The nickName property
+     */
     private String nickName;
-    /** The officeLocation property */
+    /**
+     * The officeLocation property
+     */
     private String officeLocation;
-    /** The otherAddress property */
+    /**
+     * The otherAddress property
+     */
     private PhysicalAddress otherAddress;
-    /** The parentFolderId property */
+    /**
+     * The parentFolderId property
+     */
     private String parentFolderId;
-    /** The personalNotes property */
+    /**
+     * The personalNotes property
+     */
     private String personalNotes;
-    /** Optional contact picture. You can get or set a photo for a contact. */
+    /**
+     * Optional contact picture. You can get or set a photo for a contact.
+     */
     private ProfilePhoto photo;
-    /** The profession property */
+    /**
+     * The profession property
+     */
     private String profession;
-    /** The collection of single-value extended properties defined for the contact. Read-only. Nullable. */
+    /**
+     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
+     */
     private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
-    /** The spouseName property */
+    /**
+     * The spouseName property
+     */
     private String spouseName;
-    /** The surname property */
+    /**
+     * The surname property
+     */
     private String surname;
-    /** The title property */
+    /**
+     * The title property
+     */
     private String title;
-    /** The yomiCompanyName property */
+    /**
+     * The yomiCompanyName property
+     */
     private String yomiCompanyName;
-    /** The yomiGivenName property */
+    /**
+     * The yomiGivenName property
+     */
     private String yomiGivenName;
-    /** The yomiSurname property */
+    /**
+     * The yomiSurname property
+     */
     private String yomiSurname;
     /**
-     * Instantiates a new contact and sets the default values.
+     * Instantiates a new Contact and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -94,7 +168,7 @@ public class Contact extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contact
+     * @return a Contact
      */
     @javax.annotation.Nonnull
     public static Contact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

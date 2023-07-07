@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SettingSource implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String displayName;
-    /** Not yet documented */
+    /**
+     * Not yet documented
+     */
     private String id;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The sourceType property */
+    /**
+     * The sourceType property
+     */
     private SettingSourceType sourceType;
     /**
      * Instantiates a new settingSource and sets the default values.

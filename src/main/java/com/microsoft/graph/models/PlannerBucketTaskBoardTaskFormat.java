@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable {
-    /** Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner. */
+    /**
+     * Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner.
+     */
     private String orderHint;
     /**
      * Instantiates a new plannerBucketTaskBoardTaskFormat and sets the default values.

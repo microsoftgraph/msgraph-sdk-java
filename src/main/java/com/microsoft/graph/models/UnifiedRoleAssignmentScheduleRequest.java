@@ -7,37 +7,69 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable {
-    /** Represents the type of the operation on the role assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign roles to principals.adminRemove: For administrators to remove principals from roles. adminUpdate: For administrators to change existing role assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.selfExtend: For principals to request to extend their expiring assignments.selfRenew: For principals to request to renew their expired assignments. */
+    /**
+     * Represents the type of the operation on the role assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign roles to principals.adminRemove: For administrators to remove principals from roles. adminUpdate: For administrators to change existing role assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.selfExtend: For principals to request to extend their expiring assignments.selfRenew: For principals to request to renew their expired assignments.
+     */
     private UnifiedRoleScheduleRequestActions action;
-    /** If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand. */
+    /**
+     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
+     */
     private UnifiedRoleEligibilitySchedule activatedUsing;
-    /** Read-only property with details of the app-specific scope when the assignment is scoped to an app. Nullable. Supports $expand. */
+    /**
+     * Read-only property with details of the app-specific scope when the assignment is scoped to an app. Nullable. Supports $expand.
+     */
     private AppScope appScope;
-    /** Identifier of the app-specific scope when the assignment is scoped to an app. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values). */
+    /**
+     * Identifier of the app-specific scope when the assignment is scoped to an app. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
+     */
     private String appScopeId;
-    /** The directory object that is the scope of the assignment. Read-only. Supports $expand. */
+    /**
+     * The directory object that is the scope of the assignment. Read-only. Supports $expand.
+     */
     private DirectoryObject directoryScope;
-    /** Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values). */
+    /**
+     * Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
+     */
     private String directoryScopeId;
-    /** Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request. */
+    /**
+     * Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
+     */
     private Boolean isValidationOnly;
-    /** A message provided by users and administrators when create they create the unifiedRoleAssignmentScheduleRequest object. */
+    /**
+     * A message provided by users and administrators when create they create the unifiedRoleAssignmentScheduleRequest object.
+     */
     private String justification;
-    /** The principal that's getting a role assignment through the request. Supports $expand. */
+    /**
+     * The principal that's getting a role assignment through the request. Supports $expand.
+     */
     private DirectoryObject principal;
-    /** Identifier of the principal that has been granted the assignment. Can be a user, role-assignable group, or a service principal. Supports $filter (eq, ne). */
+    /**
+     * Identifier of the principal that has been granted the assignment. Can be a user, role-assignable group, or a service principal. Supports $filter (eq, ne).
+     */
     private String principalId;
-    /** Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand. */
+    /**
+     * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
+     */
     private UnifiedRoleDefinition roleDefinition;
-    /** Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne). */
+    /**
+     * Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
+     */
     private String roleDefinitionId;
-    /** The period of the role assignment. Recurring schedules are currently unsupported. */
+    /**
+     * The period of the role assignment. Recurring schedules are currently unsupported.
+     */
     private RequestSchedule scheduleInfo;
-    /** The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand. */
+    /**
+     * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
+     */
     private UnifiedRoleAssignmentSchedule targetSchedule;
-    /** Identifier of the schedule object that's linked to the assignment request. Supports $filter (eq, ne). */
+    /**
+     * Identifier of the schedule object that's linked to the assignment request. Supports $filter (eq, ne).
+     */
     private String targetScheduleId;
-    /** Ticket details linked to the role assignment request including details of the ticket number and ticket system. */
+    /**
+     * Ticket details linked to the role assignment request including details of the ticket number and ticket system.
+     */
     private TicketInfo ticketInfo;
     /**
      * Instantiates a new UnifiedRoleAssignmentScheduleRequest and sets the default values.

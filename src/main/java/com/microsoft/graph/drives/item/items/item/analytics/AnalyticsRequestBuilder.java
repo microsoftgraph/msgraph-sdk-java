@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the analytics property of the microsoft.graph.driveItem entity.
  */
 public class AnalyticsRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the allTime property of the microsoft.graph.itemAnalytics entity. */
+    /**
+     * Provides operations to manage the allTime property of the microsoft.graph.itemAnalytics entity.
+     */
     @javax.annotation.Nonnull
     public AllTimeRequestBuilder allTime() {
         return new AllTimeRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity. */
+    /**
+     * Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity.
+     */
     @javax.annotation.Nonnull
     public ItemActivityStatsRequestBuilder itemActivityStats() {
         return new ItemActivityStatsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the lastSevenDays property of the microsoft.graph.itemAnalytics entity. */
+    /**
+     * Provides operations to manage the lastSevenDays property of the microsoft.graph.itemAnalytics entity.
+     */
     @javax.annotation.Nonnull
     public LastSevenDaysRequestBuilder lastSevenDays() {
         return new LastSevenDaysRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +275,15 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
      * Analytics about the view activities that took place on this item.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +292,9 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IPv4CidrRange extends IpRange implements Parsable {
-    /** IPv4 address in CIDR notation. Not nullable. */
+    /**
+     * IPv4 address in CIDR notation. Not nullable.
+     */
     private String cidrAddress;
     /**
      * Instantiates a new IPv4CidrRange and sets the default values.

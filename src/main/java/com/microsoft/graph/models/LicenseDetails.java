@@ -8,11 +8,17 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class LicenseDetails extends Entity implements Parsable {
-    /** Information about the service plans assigned with the license. Read-only, Not nullable */
+    /**
+     * Information about the service plans assigned with the license. Read-only, Not nullable
+     */
     private java.util.List<ServicePlanInfo> servicePlans;
-    /** Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only */
+    /**
+     * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
+     */
     private UUID skuId;
-    /** Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only */
+    /**
+     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
+     */
     private String skuPartNumber;
     /**
      * Instantiates a new licenseDetails and sets the default values.

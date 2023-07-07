@@ -7,63 +7,121 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements Parsable {
-    /** Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only. */
+    /**
+     * Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
+     */
     private Boolean applyOnlyToWindowsPhone81;
-    /** Indicates whether or not to block copy paste. */
+    /**
+     * Indicates whether or not to block copy paste.
+     */
     private Boolean appsBlockCopyPaste;
-    /** Indicates whether or not to block bluetooth. */
+    /**
+     * Indicates whether or not to block bluetooth.
+     */
     private Boolean bluetoothBlocked;
-    /** Indicates whether or not to block camera. */
+    /**
+     * Indicates whether or not to block camera.
+     */
     private Boolean cameraBlocked;
-    /** Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked. */
+    /**
+     * Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
+     */
     private Boolean cellularBlockWifiTethering;
-    /** Possible values of the compliance app list. */
+    /**
+     * Possible values of the compliance app list.
+     */
     private AppListType compliantAppListType;
-    /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
+    /**
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
     private java.util.List<AppListItem> compliantAppsList;
-    /** Indicates whether or not to block diagnostic data submission. */
+    /**
+     * Indicates whether or not to block diagnostic data submission.
+     */
     private Boolean diagnosticDataBlockSubmission;
-    /** Indicates whether or not to block custom email accounts. */
+    /**
+     * Indicates whether or not to block custom email accounts.
+     */
     private Boolean emailBlockAddingAccounts;
-    /** Indicates whether or not to block location services. */
+    /**
+     * Indicates whether or not to block location services.
+     */
     private Boolean locationServicesBlocked;
-    /** Indicates whether or not to block using a Microsoft Account. */
+    /**
+     * Indicates whether or not to block using a Microsoft Account.
+     */
     private Boolean microsoftAccountBlocked;
-    /** Indicates whether or not to block Near-Field Communication. */
+    /**
+     * Indicates whether or not to block Near-Field Communication.
+     */
     private Boolean nfcBlocked;
-    /** Indicates whether or not to block syncing the calendar. */
+    /**
+     * Indicates whether or not to block syncing the calendar.
+     */
     private Boolean passwordBlockSimple;
-    /** Number of days before the password expires. */
+    /**
+     * Number of days before the password expires.
+     */
     private Integer passwordExpirationDays;
-    /** Number of character sets a password must contain. */
+    /**
+     * Number of character sets a password must contain.
+     */
     private Integer passwordMinimumCharacterSetCount;
-    /** Minimum length of passwords. */
+    /**
+     * Minimum length of passwords.
+     */
     private Integer passwordMinimumLength;
-    /** Minutes of inactivity before screen timeout. */
+    /**
+     * Minutes of inactivity before screen timeout.
+     */
     private Integer passwordMinutesOfInactivityBeforeScreenTimeout;
-    /** Number of previous passwords to block. Valid values 0 to 24 */
+    /**
+     * Number of previous passwords to block. Valid values 0 to 24
+     */
     private Integer passwordPreviousPasswordBlockCount;
-    /** Indicates whether or not to require a password. */
+    /**
+     * Indicates whether or not to require a password.
+     */
     private Boolean passwordRequired;
-    /** Possible values of required passwords. */
+    /**
+     * Possible values of required passwords.
+     */
     private RequiredPasswordType passwordRequiredType;
-    /** Number of sign in failures allowed before factory reset. */
+    /**
+     * Number of sign in failures allowed before factory reset.
+     */
     private Integer passwordSignInFailureCountBeforeFactoryReset;
-    /** Indicates whether or not to block screenshots. */
+    /**
+     * Indicates whether or not to block screenshots.
+     */
     private Boolean screenCaptureBlocked;
-    /** Indicates whether or not to block removable storage. */
+    /**
+     * Indicates whether or not to block removable storage.
+     */
     private Boolean storageBlockRemovableStorage;
-    /** Indicates whether or not to require encryption. */
+    /**
+     * Indicates whether or not to require encryption.
+     */
     private Boolean storageRequireEncryption;
-    /** Indicates whether or not to block the web browser. */
+    /**
+     * Indicates whether or not to block the web browser.
+     */
     private Boolean webBrowserBlocked;
-    /** Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked. */
+    /**
+     * Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
+     */
     private Boolean wifiBlockAutomaticConnectHotspots;
-    /** Indicates whether or not to block Wi-Fi. */
+    /**
+     * Indicates whether or not to block Wi-Fi.
+     */
     private Boolean wifiBlocked;
-    /** Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked. */
+    /**
+     * Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
+     */
     private Boolean wifiBlockHotspotReporting;
-    /** Indicates whether or not to block the Windows Store. */
+    /**
+     * Indicates whether or not to block the Windows Store.
+     */
     private Boolean windowsStoreBlocked;
     /**
      * Instantiates a new WindowsPhone81GeneralConfiguration and sets the default values.

@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationStrengthRoot extends Entity implements Parsable {
-    /** Names and descriptions of all valid authentication method modes in the system. */
+    /**
+     * Names and descriptions of all valid authentication method modes in the system.
+     */
     private java.util.List<AuthenticationMethodModeDetail> authenticationMethodModes;
-    /** The combinations property */
+    /**
+     * The combinations property
+     */
     private java.util.List<AuthenticationMethodModes> combinations;
-    /** A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies. */
+    /**
+     * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
+     */
     private java.util.List<AuthenticationStrengthPolicy> policies;
     /**
      * Instantiates a new AuthenticationStrengthRoot and sets the default values.

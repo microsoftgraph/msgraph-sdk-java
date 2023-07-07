@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserFlowLanguageConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<UserFlowLanguageConfiguration> value;
     /**
      * Instantiates a new UserFlowLanguageConfigurationCollectionResponse and sets the default values.

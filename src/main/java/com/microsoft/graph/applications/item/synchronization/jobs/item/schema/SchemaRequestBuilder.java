@@ -24,22 +24,30 @@ import java.util.Objects;
  * Provides operations to manage the schema property of the microsoft.graph.synchronizationJob entity.
  */
 public class SchemaRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the directories property of the microsoft.graph.synchronizationSchema entity. */
+    /**
+     * Provides operations to manage the directories property of the microsoft.graph.synchronizationSchema entity.
+     */
     @javax.annotation.Nonnull
     public DirectoriesRequestBuilder directories() {
         return new DirectoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the filterOperators method. */
+    /**
+     * Provides operations to call the filterOperators method.
+     */
     @javax.annotation.Nonnull
     public FilterOperatorsRequestBuilder filterOperators() {
         return new FilterOperatorsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the functions method. */
+    /**
+     * Provides operations to call the functions method.
+     */
     @javax.annotation.Nonnull
     public FunctionsRequestBuilder functions() {
         return new FunctionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the parseExpression method. */
+    /**
+     * Provides operations to call the parseExpression method.
+     */
     @javax.annotation.Nonnull
     public ParseExpressionRequestBuilder parseExpression() {
         return new ParseExpressionRequestBuilder(pathParameters, requestAdapter);
@@ -275,11 +283,15 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Get schema from applications
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -288,7 +300,9 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

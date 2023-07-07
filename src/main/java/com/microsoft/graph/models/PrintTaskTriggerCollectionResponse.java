@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrintTaskTriggerCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<PrintTaskTrigger> value;
     /**
      * Instantiates a new PrintTaskTriggerCollectionResponse and sets the default values.

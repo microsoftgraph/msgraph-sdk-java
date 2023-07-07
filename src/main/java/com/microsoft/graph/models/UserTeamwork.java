@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserTeamwork extends Entity implements Parsable {
-    /** The list of associatedTeamInfo objects that a user is associated with. */
+    /**
+     * The list of associatedTeamInfo objects that a user is associated with.
+     */
     private java.util.List<AssociatedTeamInfo> associatedTeams;
-    /** The apps installed in the personal scope of this user. */
+    /**
+     * The apps installed in the personal scope of this user.
+     */
     private java.util.List<UserScopeTeamsAppInstallation> installedApps;
     /**
      * Instantiates a new userTeamwork and sets the default values.

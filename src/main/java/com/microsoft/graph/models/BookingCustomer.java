@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BookingCustomer extends BookingCustomerBase implements Parsable {
-    /** Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others. */
+    /**
+     * Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
+     */
     private java.util.List<PhysicalAddress> addresses;
-    /** The name of the customer. */
+    /**
+     * The name of the customer.
+     */
     private String displayName;
-    /** The SMTP address of the customer. */
+    /**
+     * The SMTP address of the customer.
+     */
     private String emailAddress;
-    /** Phone numbers associated with the customer, including home, business and mobile numbers. */
+    /**
+     * Phone numbers associated with the customer, including home, business and mobile numbers.
+     */
     private java.util.List<Phone> phones;
     /**
      * Instantiates a new BookingCustomer and sets the default values.

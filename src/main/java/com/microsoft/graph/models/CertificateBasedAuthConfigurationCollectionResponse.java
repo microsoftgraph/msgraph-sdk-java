@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CertificateBasedAuthConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<CertificateBasedAuthConfiguration> value;
     /**
      * Instantiates a new CertificateBasedAuthConfigurationCollectionResponse and sets the default values.

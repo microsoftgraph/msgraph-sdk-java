@@ -41,107 +41,149 @@ import java.util.Objects;
  * Provides operations to manage the collection of application entities.
  */
 public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the addKey method. */
+    /**
+     * Provides operations to call the addKey method.
+     */
     @javax.annotation.Nonnull
     public AddKeyRequestBuilder addKey() {
         return new AddKeyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the addPassword method. */
+    /**
+     * Provides operations to call the addPassword method.
+     */
     @javax.annotation.Nonnull
     public AddPasswordRequestBuilder addPassword() {
         return new AddPasswordRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the appManagementPolicies property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the appManagementPolicies property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public AppManagementPoliciesRequestBuilder appManagementPolicies() {
         return new AppManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberGroups method. */
+    /**
+     * Provides operations to call the checkMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the checkMemberObjects method. */
+    /**
+     * Provides operations to call the checkMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public CreatedOnBehalfOfRequestBuilder createdOnBehalfOf() {
         return new CreatedOnBehalfOfRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the extensionProperties property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public ExtensionPropertiesRequestBuilder extensionProperties() {
         return new ExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public FederatedIdentityCredentialsRequestBuilder federatedIdentityCredentials() {
         return new FederatedIdentityCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberGroups method. */
+    /**
+     * Provides operations to call the getMemberGroups method.
+     */
     @javax.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getMemberObjects method. */
+    /**
+     * Provides operations to call the getMemberObjects method.
+     */
     @javax.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the media for the application entity. */
+    /**
+     * Provides operations to manage the media for the application entity.
+     */
     @javax.annotation.Nonnull
     public LogoRequestBuilder logo() {
         return new LogoRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the owners property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the owners property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public OwnersRequestBuilder owners() {
         return new OwnersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the removeKey method. */
+    /**
+     * Provides operations to call the removeKey method.
+     */
     @javax.annotation.Nonnull
     public RemoveKeyRequestBuilder removeKey() {
         return new RemoveKeyRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the removePassword method. */
+    /**
+     * Provides operations to call the removePassword method.
+     */
     @javax.annotation.Nonnull
     public RemovePasswordRequestBuilder removePassword() {
         return new RemovePasswordRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the restore method. */
+    /**
+     * Provides operations to call the restore method.
+     */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the setVerifiedPublisher method. */
+    /**
+     * Provides operations to call the setVerifiedPublisher method.
+     */
     @javax.annotation.Nonnull
     public SetVerifiedPublisherRequestBuilder setVerifiedPublisher() {
         return new SetVerifiedPublisherRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the synchronization property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the synchronization property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public SynchronizationRequestBuilder synchronization() {
         return new SynchronizationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.application entity. */
+    /**
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.application entity.
+     */
     @javax.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unsetVerifiedPublisher method. */
+    /**
+     * Provides operations to call the unsetVerifiedPublisher method.
+     */
     @javax.annotation.Nonnull
     public UnsetVerifiedPublisherRequestBuilder unsetVerifiedPublisher() {
         return new UnsetVerifiedPublisherRequestBuilder(pathParameters, requestAdapter);
@@ -383,11 +425,15 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of an application object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -396,7 +442,9 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

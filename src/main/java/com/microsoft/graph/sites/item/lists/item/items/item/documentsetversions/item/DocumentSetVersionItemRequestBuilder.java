@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
  */
 public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the fields property of the microsoft.graph.listItemVersion entity. */
+    /**
+     * Provides operations to manage the fields property of the microsoft.graph.listItemVersion entity.
+     */
     @javax.annotation.Nonnull
     public FieldsRequestBuilder fields() {
         return new FieldsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the restore method. */
+    /**
+     * Provides operations to call the restore method.
+     */
     @javax.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
@@ -267,11 +271,15 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a documentSetVersion object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -280,7 +288,9 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

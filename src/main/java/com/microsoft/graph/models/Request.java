@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Request extends Entity implements Parsable {
-    /** The identifier of the approval of the request. */
+    /**
+     * The identifier of the approval of the request.
+     */
     private String approvalId;
-    /** The request completion date time. */
+    /**
+     * The request completion date time.
+     */
     private OffsetDateTime completedDateTime;
-    /** The principal that created the request. */
+    /**
+     * The principal that created the request.
+     */
     private IdentitySet createdBy;
-    /** The request creation date time. */
+    /**
+     * The request creation date time.
+     */
     private OffsetDateTime createdDateTime;
-    /** Free text field to define any custom data for the request. Not used. */
+    /**
+     * Free text field to define any custom data for the request. Not used.
+     */
     private String customData;
-    /** The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable. */
+    /**
+     * The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
+     */
     private String status;
     /**
      * Instantiates a new request and sets the default values.

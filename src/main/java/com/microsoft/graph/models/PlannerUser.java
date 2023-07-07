@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerUser extends Entity implements Parsable {
-    /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
+    /**
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     */
     private java.util.List<PlannerPlan> plans;
-    /** Read-only. Nullable. Returns the plannerPlans shared with the user. */
+    /**
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
+     */
     private java.util.List<PlannerTask> tasks;
     /**
      * Instantiates a new plannerUser and sets the default values.

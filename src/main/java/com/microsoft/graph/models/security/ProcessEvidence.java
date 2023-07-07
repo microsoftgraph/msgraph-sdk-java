@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProcessEvidence extends AlertEvidence implements Parsable {
-    /** The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue. */
+    /**
+     * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
+     */
     private DetectionStatus detectionStatus;
-    /** Image file details. */
+    /**
+     * Image file details.
+     */
     private FileDetails imageFile;
-    /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
+    /**
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
+     */
     private String mdeDeviceId;
-    /** Date and time when the parent of the process was created. */
+    /**
+     * Date and time when the parent of the process was created.
+     */
     private OffsetDateTime parentProcessCreationDateTime;
-    /** Process ID (PID) of the parent process that spawned the process. */
+    /**
+     * Process ID (PID) of the parent process that spawned the process.
+     */
     private Long parentProcessId;
-    /** Parent process image file details. */
+    /**
+     * Parent process image file details.
+     */
     private FileDetails parentProcessImageFile;
-    /** Command line used to create the new process. */
+    /**
+     * Command line used to create the new process.
+     */
     private String processCommandLine;
-    /** Date and time the process was created. */
+    /**
+     * Date and time the process was created.
+     */
     private OffsetDateTime processCreationDateTime;
-    /** Process ID (PID) of the newly created process. */
+    /**
+     * Process ID (PID) of the newly created process.
+     */
     private Long processId;
-    /** User details of the user that ran the process. */
+    /**
+     * User details of the user that ran the process.
+     */
     private UserAccount userAccount;
     /**
      * Instantiates a new ProcessEvidence and sets the default values.

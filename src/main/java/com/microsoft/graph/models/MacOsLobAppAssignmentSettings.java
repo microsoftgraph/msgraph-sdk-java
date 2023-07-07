@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. */
+    /**
+     * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune.
+     */
     private Boolean uninstallOnDeviceRemoval;
     /**
      * Instantiates a new MacOsLobAppAssignmentSettings and sets the default values.

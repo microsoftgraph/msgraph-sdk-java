@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrinterStatus implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** A human-readable description of the printer's current processing state. Read-only. */
+    /**
+     * A human-readable description of the printer's current processing state. Read-only.
+     */
     private String description;
-    /** The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only. */
+    /**
+     * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
+     */
     private java.util.List<PrinterProcessingStateDetail> details;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The state property */
+    /**
+     * The state property
+     */
     private PrinterProcessingState state;
     /**
      * Instantiates a new PrinterStatus and sets the default values.

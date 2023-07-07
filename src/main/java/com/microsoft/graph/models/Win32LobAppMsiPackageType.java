@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Indicates the package type of an MSI Win32LobApp. */
+/**
+ * Indicates the package type of an MSI Win32LobApp.
+ */
 public enum Win32LobAppMsiPackageType implements ValuedEnum {
     /** Indicates a per-machine app package. */
     PerMachine("perMachine"),

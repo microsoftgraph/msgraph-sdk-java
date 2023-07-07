@@ -9,22 +9,36 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class AppRoleAssignment extends DirectoryObject implements Parsable {
-    /** The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. */
+    /**
+     * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+     */
     private UUID appRoleId;
-    /** The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith). */
+    /**
+     * The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
+     */
     private String principalDisplayName;
-    /** The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create. */
+    /**
+     * The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
+     */
     private UUID principalId;
-    /** The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only. */
+    /**
+     * The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
+     */
     private String principalType;
-    /** The display name of the resource app's service principal to which the assignment is made. */
+    /**
+     * The display name of the resource app's service principal to which the assignment is made.
+     */
     private String resourceDisplayName;
-    /** The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only). */
+    /**
+     * The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
+     */
     private UUID resourceId;
     /**
-     * Instantiates a new appRoleAssignment and sets the default values.
+     * Instantiates a new AppRoleAssignment and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +49,7 @@ public class AppRoleAssignment extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appRoleAssignment
+     * @return a AppRoleAssignment
      */
     @javax.annotation.Nonnull
     public static AppRoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

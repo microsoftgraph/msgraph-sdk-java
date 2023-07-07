@@ -9,17 +9,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property. */
+    /**
+     * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
+     */
     private String category;
-    /** The date and time at which the error occurred. */
+    /**
+     * The date and time at which the error occurred.
+     */
     private OffsetDateTime occurredDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress */
+    /**
+     * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
+     */
     private String propertyCausingError;
-    /** Value of the property causing the error. */
+    /**
+     * Value of the property causing the error.
+     */
     private String value;
     /**
      * Instantiates a new onPremisesProvisioningError and sets the default values.

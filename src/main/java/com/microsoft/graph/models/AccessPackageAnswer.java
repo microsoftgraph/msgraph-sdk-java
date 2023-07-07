@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The answeredQuestion property */
+    /**
+     * The answeredQuestion property
+     */
     private AccessPackageQuestion answeredQuestion;
-    /** The localized display value shown to the requestor and approvers. */
+    /**
+     * The localized display value shown to the requestor and approvers.
+     */
     private String displayValue;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new accessPackageAnswer and sets the default values.

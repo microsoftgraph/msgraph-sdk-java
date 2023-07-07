@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AdministrativeUnit extends DirectoryObject implements Parsable {
-    /** An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search. */
+    /**
+     * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
+     */
     private String description;
-    /** Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
+    /**
+     * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     */
     private String displayName;
-    /** The collection of open extensions defined for this administrative unit. Nullable. */
+    /**
+     * The collection of open extensions defined for this administrative unit. Nullable.
+     */
     private java.util.List<Extension> extensions;
-    /** Users and groups that are members of this administrative unit. Supports $expand. */
+    /**
+     * Users and groups that are members of this administrative unit. Supports $expand.
+     */
     private java.util.List<DirectoryObject> members;
-    /** Scoped-role members of this administrative unit. */
+    /**
+     * Scoped-role members of this administrative unit.
+     */
     private java.util.List<ScopedRoleMembership> scopedRoleMembers;
-    /** Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit. */
+    /**
+     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     */
     private String visibility;
     /**
      * Instantiates a new AdministrativeUnit and sets the default values.

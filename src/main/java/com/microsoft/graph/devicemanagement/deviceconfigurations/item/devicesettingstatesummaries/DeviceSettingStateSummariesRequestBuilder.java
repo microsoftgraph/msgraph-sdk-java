@@ -23,7 +23,9 @@ import java.util.Objects;
  * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity.
  */
 public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to count the resources in the collection. */
+    /**
+     * Provides operations to count the resources in the collection.
+     */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -61,8 +63,9 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/deviceSettingStateSummaries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * List properties and relationships of the settingStateDeviceSummary objects.
      * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummaryCollectionResponse> get() {
@@ -79,9 +82,10 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * List properties and relationships of the settingStateDeviceSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummaryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,9 +102,10 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
+     * Create a new settingStateDeviceSummary object.
      * @param body The request body
      * @return a CompletableFuture of settingStateDeviceSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> post(@javax.annotation.Nonnull final SettingStateDeviceSummary body) {
@@ -117,10 +122,11 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
+     * Create a new settingStateDeviceSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of settingStateDeviceSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> post(@javax.annotation.Nonnull final SettingStateDeviceSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +144,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * List properties and relationships of the settingStateDeviceSummary objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -146,7 +152,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * List properties and relationships of the settingStateDeviceSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +173,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
+     * Create a new settingStateDeviceSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -176,7 +182,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceSettingStateSummaries for deviceManagement
+     * Create a new settingStateDeviceSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -199,38 +205,54 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * List properties and relationships of the settingStateDeviceSummary objects.
      */
     public class GetQueryParameters {
-        /** Include count of items */
+        /**
+         * Include count of items
+         */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
         public Boolean count;
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Filter items by property values */
+        /**
+         * Filter items by property values
+         */
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
-        /** Order items by property values */
+        /**
+         * Order items by property values
+         */
         @QueryParameter(name = "%24orderby")
         @javax.annotation.Nullable
         public String[] orderby;
-        /** Search items by search phrases */
+        /**
+         * Search items by search phrases
+         */
         @QueryParameter(name = "%24search")
         @javax.annotation.Nullable
         public String search;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
-        /** Skip the first n items */
+        /**
+         * Skip the first n items
+         */
         @QueryParameter(name = "%24skip")
         @javax.annotation.Nullable
         public Integer skip;
-        /** Show only the first n items */
+        /**
+         * Show only the first n items
+         */
         @QueryParameter(name = "%24top")
         @javax.annotation.Nullable
         public Integer top;
@@ -239,7 +261,9 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

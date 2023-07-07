@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
  */
 public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the resource property of the microsoft.graph.usedInsight entity. */
+    /**
+     * Provides operations to manage the resource property of the microsoft.graph.usedInsight entity.
+     */
     @javax.annotation.Nonnull
     public ResourceRequestBuilder resource() {
         return new ResourceRequestBuilder(pathParameters, requestAdapter);
@@ -257,11 +259,15 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +276,9 @@ public class UsedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

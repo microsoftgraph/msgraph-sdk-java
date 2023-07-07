@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SoftwareOathAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<SoftwareOathAuthenticationMethod> value;
     /**
      * Instantiates a new SoftwareOathAuthenticationMethodCollectionResponse and sets the default values.

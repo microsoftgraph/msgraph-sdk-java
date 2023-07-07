@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessTemplate extends Entity implements Parsable {
-    /** The user-friendly name of the template. */
+    /**
+     * The user-friendly name of the template.
+     */
     private String description;
-    /** The details property */
+    /**
+     * The details property
+     */
     private ConditionalAccessPolicyDetail details;
-    /** The user-friendly name of the template. */
+    /**
+     * The user-friendly name of the template.
+     */
     private String name;
-    /** The scenarios property */
+    /**
+     * The scenarios property
+     */
     private TemplateScenarios scenarios;
     /**
      * Instantiates a new conditionalAccessTemplate and sets the default values.

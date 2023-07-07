@@ -9,30 +9,52 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Number of trainings assigned to a user in an attack simulation and training campaign. */
+    /**
+     * Number of trainings assigned to a user in an attack simulation and training campaign.
+     */
     private Integer assignedTrainingsCount;
-    /** Number of trainings completed by a user in an attack simulation and training campaign. */
+    /**
+     * Number of trainings completed by a user in an attack simulation and training campaign.
+     */
     private Integer completedTrainingsCount;
-    /** Date and time of the compromising online action by a user in an attack simulation and training campaign. */
+    /**
+     * Date and time of the compromising online action by a user in an attack simulation and training campaign.
+     */
     private OffsetDateTime compromisedDateTime;
-    /** Number of trainings in progress by a user in an attack simulation and training campaign. */
+    /**
+     * Number of trainings in progress by a user in an attack simulation and training campaign.
+     */
     private Integer inProgressTrainingsCount;
-    /** Indicates whether a user was compromised in an attack simulation and training campaign. */
+    /**
+     * Indicates whether a user was compromised in an attack simulation and training campaign.
+     */
     private Boolean isCompromised;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign. */
+    /**
+     * Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
+     */
     private OffsetDateTime reportedPhishDateTime;
-    /** List of simulation events of a user in the attack simulation and training campaign. */
+    /**
+     * List of simulation events of a user in the attack simulation and training campaign.
+     */
     private java.util.List<UserSimulationEventInfo> simulationEvents;
-    /** User in an attack simulation and training campaign. */
+    /**
+     * User in an attack simulation and training campaign.
+     */
     private AttackSimulationUser simulationUser;
-    /** List of training events of a user in the attack simulation and training campaign. */
+    /**
+     * List of training events of a user in the attack simulation and training campaign.
+     */
     private java.util.List<UserTrainingEventInfo> trainingEvents;
     /**
-     * Instantiates a new userSimulationDetails and sets the default values.
+     * Instantiates a new UserSimulationDetails and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -42,7 +64,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSimulationDetails
+     * @return a UserSimulationDetails
      */
     @javax.annotation.Nonnull
     public static UserSimulationDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

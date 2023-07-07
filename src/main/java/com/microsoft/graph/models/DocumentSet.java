@@ -8,23 +8,41 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DocumentSet implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Content types allowed in document set. */
+    /**
+     * Content types allowed in document set.
+     */
     private java.util.List<ContentTypeInfo> allowedContentTypes;
-    /** Default contents of document set. */
+    /**
+     * Default contents of document set.
+     */
     private java.util.List<DocumentSetContent> defaultContents;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Specifies whether to push welcome page changes to inherited content types. */
+    /**
+     * Specifies whether to push welcome page changes to inherited content types.
+     */
     private Boolean propagateWelcomePageChanges;
-    /** The sharedColumns property */
+    /**
+     * The sharedColumns property
+     */
     private java.util.List<ColumnDefinition> sharedColumns;
-    /** Indicates whether to add the name of the document set to each file name. */
+    /**
+     * Indicates whether to add the name of the document set to each file name.
+     */
     private Boolean shouldPrefixNameToFile;
-    /** The welcomePageColumns property */
+    /**
+     * The welcomePageColumns property
+     */
     private java.util.List<ColumnDefinition> welcomePageColumns;
-    /** Welcome page absolute URL. */
+    /**
+     * Welcome page absolute URL.
+     */
     private String welcomePageUrl;
     /**
      * Instantiates a new documentSet and sets the default values.

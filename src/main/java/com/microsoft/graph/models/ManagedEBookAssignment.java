@@ -10,9 +10,13 @@ import java.util.Objects;
  * Contains properties used to assign a eBook to a group.
  */
 public class ManagedEBookAssignment extends Entity implements Parsable {
-    /** Possible values for the install intent chosen by the admin. */
+    /**
+     * Possible values for the install intent chosen by the admin.
+     */
     private InstallIntent installIntent;
-    /** The assignment target for eBook. */
+    /**
+     * The assignment target for eBook.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new managedEBookAssignment and sets the default values.

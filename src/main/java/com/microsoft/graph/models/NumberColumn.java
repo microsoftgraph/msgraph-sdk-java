@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NumberColumn implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** How many decimal places to display. See below for information about the possible values. */
+    /**
+     * How many decimal places to display. See below for information about the possible values.
+     */
     private String decimalPlaces;
-    /** How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number. */
+    /**
+     * How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
+     */
     private String displayAs;
-    /** The maximum permitted value. */
+    /**
+     * The maximum permitted value.
+     */
     private Double maximum;
-    /** The minimum permitted value. */
+    /**
+     * The minimum permitted value.
+     */
     private Double minimum;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new numberColumn and sets the default values.

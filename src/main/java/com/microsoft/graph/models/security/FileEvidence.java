@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileEvidence extends AlertEvidence implements Parsable {
-    /** The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue. */
+    /**
+     * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
+     */
     private DetectionStatus detectionStatus;
-    /** The file details. */
+    /**
+     * The file details.
+     */
     private FileDetails fileDetails;
-    /** A unique identifier assigned to a device by Microsoft Defender for Endpoint. */
+    /**
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
+     */
     private String mdeDeviceId;
     /**
      * Instantiates a new FileEvidence and sets the default values.

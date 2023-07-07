@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
-    /** The action property */
+    /**
+     * The action property
+     */
     private DelegatedAdminRelationshipRequestAction action;
-    /** The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only. */
+    /**
+     * The date and time in ISO 8601 format and in UTC time when the relationship request was created. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only. */
+    /**
+     * The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue. */
+    /**
+     * The status of the request. Read-only. The possible values are: created, pending, succeeded, failed, unknownFutureValue.
+     */
     private DelegatedAdminRelationshipRequestStatus status;
     /**
      * Instantiates a new delegatedAdminRelationshipRequest and sets the default values.

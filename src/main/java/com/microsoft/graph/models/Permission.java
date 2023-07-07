@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Permission extends Entity implements Parsable {
-    /** A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional. */
+    /**
+     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     */
     private OffsetDateTime expirationDateTime;
-    /** The grantedTo property */
+    /**
+     * The grantedTo property
+     */
     private IdentitySet grantedTo;
-    /** The grantedToIdentities property */
+    /**
+     * The grantedToIdentities property
+     */
     private java.util.List<IdentitySet> grantedToIdentities;
-    /** For link type permissions, the details of the users to whom permission was granted. Read-only. */
+    /**
+     * For link type permissions, the details of the users to whom permission was granted. Read-only.
+     */
     private java.util.List<SharePointIdentitySet> grantedToIdentitiesV2;
-    /** For user type permissions, the details of the users and applications for this permission. Read-only. */
+    /**
+     * For user type permissions, the details of the users and applications for this permission. Read-only.
+     */
     private SharePointIdentitySet grantedToV2;
-    /** Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.. */
+    /**
+     * Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
+     */
     private Boolean hasPassword;
-    /** Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only. */
+    /**
+     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     */
     private ItemReference inheritedFrom;
-    /** Details of any associated sharing invitation for this permission. Read-only. */
+    /**
+     * Details of any associated sharing invitation for this permission. Read-only.
+     */
     private SharingInvitation invitation;
-    /** Provides the link details of the current permission, if it is a link type permissions. Read-only. */
+    /**
+     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     */
     private SharingLink link;
-    /** The type of permission, for example, read. See below for the full list of roles. Read-only. */
+    /**
+     * The type of permission, for example, read. See below for the full list of roles. Read-only.
+     */
     private java.util.List<String> roles;
-    /** A unique token that can be used to access this shared item via the **shares** API. Read-only. */
+    /**
+     * A unique token that can be used to access this shared item via the **shares** API. Read-only.
+     */
     private String shareId;
     /**
      * Instantiates a new permission and sets the default values.

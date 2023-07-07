@@ -24,22 +24,30 @@ import java.util.Objects;
  * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
  */
 public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the assignedToTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
+    /**
+     * Provides operations to manage the assignedToTaskBoardFormat property of the microsoft.graph.plannerTask entity.
+     */
     @javax.annotation.Nonnull
     public AssignedToTaskBoardFormatRequestBuilder assignedToTaskBoardFormat() {
         return new AssignedToTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the bucketTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
+    /**
+     * Provides operations to manage the bucketTaskBoardFormat property of the microsoft.graph.plannerTask entity.
+     */
     @javax.annotation.Nonnull
     public BucketTaskBoardFormatRequestBuilder bucketTaskBoardFormat() {
         return new BucketTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the details property of the microsoft.graph.plannerTask entity. */
+    /**
+     * Provides operations to manage the details property of the microsoft.graph.plannerTask entity.
+     */
     @javax.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the progressTaskBoardFormat property of the microsoft.graph.plannerTask entity. */
+    /**
+     * Provides operations to manage the progressTaskBoardFormat property of the microsoft.graph.plannerTask entity.
+     */
     @javax.annotation.Nonnull
     public ProgressTaskBoardFormatRequestBuilder progressTaskBoardFormat() {
         return new ProgressTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
@@ -275,11 +283,15 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
      * Read-only. Nullable. The collection of tasks in the bucket.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -288,7 +300,9 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

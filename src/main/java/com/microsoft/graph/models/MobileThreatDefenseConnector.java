@@ -11,35 +11,65 @@ import java.util.Objects;
  * Entity which represents a connection to Mobile Threat Defense partner.
  */
 public class MobileThreatDefenseConnector extends Entity implements Parsable {
-    /** When TRUE, indicates the Mobile Threat Defense partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE. */
+    /**
+     * When TRUE, indicates the Mobile Threat Defense partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
+     */
     private Boolean allowPartnerToCollectIOSApplicationMetadata;
-    /** When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE. */
+    /**
+     * When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
+     */
     private Boolean allowPartnerToCollectIOSPersonalApplicationMetadata;
-    /** For Android, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant */
+    /**
+     * For Android, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
+     */
     private Boolean androidDeviceBlockedOnMissingPartnerData;
-    /** For Android, set whether data from the Mobile Threat Defense partner should be used during compliance evaluations */
+    /**
+     * For Android, set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
+     */
     private Boolean androidEnabled;
-    /** When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE. */
+    /**
+     * When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     */
     private Boolean androidMobileApplicationManagementEnabled;
-    /** For IOS, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant */
+    /**
+     * For IOS, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant
+     */
     private Boolean iosDeviceBlockedOnMissingPartnerData;
-    /** For IOS, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations */
+    /**
+     * For IOS, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations
+     */
     private Boolean iosEnabled;
-    /** When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE. */
+    /**
+     * When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     */
     private Boolean iosMobileApplicationManagementEnabled;
-    /** DateTime of last Heartbeat recieved from the Mobile Threat Defense partner */
+    /**
+     * DateTime of last Heartbeat recieved from the Mobile Threat Defense partner
+     */
     private OffsetDateTime lastHeartbeatDateTime;
-    /** When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE. */
+    /**
+     * When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
+     */
     private Boolean microsoftDefenderForEndpointAttachEnabled;
-    /** Partner state of this tenant. */
+    /**
+     * Partner state of this tenant.
+     */
     private MobileThreatPartnerTenantState partnerState;
-    /** Get or Set days the per tenant tolerance to unresponsiveness for this partner integration */
+    /**
+     * Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
+     */
     private Integer partnerUnresponsivenessThresholdInDays;
-    /** Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Mobile Threat Defense partner */
+    /**
+     * Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Mobile Threat Defense partner
+     */
     private Boolean partnerUnsupportedOsVersionBlocked;
-    /** When TRUE, inidicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the Mobile Threat Defense partner for Windows. Default value is FALSE. */
+    /**
+     * When TRUE, inidicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the Mobile Threat Defense partner for Windows. Default value is FALSE.
+     */
     private Boolean windowsDeviceBlockedOnMissingPartnerData;
-    /** When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during compliance evaluations for Windows. Default value is FALSE. */
+    /**
+     * When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during compliance evaluations for Windows. Default value is FALSE.
+     */
     private Boolean windowsEnabled;
     /**
      * Instantiates a new mobileThreatDefenseConnector and sets the default values.

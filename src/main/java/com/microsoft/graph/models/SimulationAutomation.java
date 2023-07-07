@@ -8,25 +8,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SimulationAutomation extends Entity implements Parsable {
-    /** Identity of the user who created the attack simulation automation. */
+    /**
+     * Identity of the user who created the attack simulation automation.
+     */
     private EmailIdentity createdBy;
-    /** Date and time when the attack simulation automation was created. */
+    /**
+     * Date and time when the attack simulation automation was created.
+     */
     private OffsetDateTime createdDateTime;
-    /** Description of the attack simulation automation. */
+    /**
+     * Description of the attack simulation automation.
+     */
     private String description;
-    /** Display name of the attack simulation automation. Supports $filter and $orderby. */
+    /**
+     * Display name of the attack simulation automation. Supports $filter and $orderby.
+     */
     private String displayName;
-    /** Identity of the user who most recently modified the attack simulation automation. */
+    /**
+     * Identity of the user who most recently modified the attack simulation automation.
+     */
     private EmailIdentity lastModifiedBy;
-    /** Date and time when the attack simulation automation was most recently modified. */
+    /**
+     * Date and time when the attack simulation automation was most recently modified.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** Date and time of the latest run of the attack simulation automation. */
+    /**
+     * Date and time of the latest run of the attack simulation automation.
+     */
     private OffsetDateTime lastRunDateTime;
-    /** Date and time of the upcoming run of the attack simulation automation. */
+    /**
+     * Date and time of the upcoming run of the attack simulation automation.
+     */
     private OffsetDateTime nextRunDateTime;
-    /** A collection of simulation automation runs. */
+    /**
+     * A collection of simulation automation runs.
+     */
     private java.util.List<SimulationAutomationRun> runs;
-    /** Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue. */
+    /**
+     * Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
+     */
     private SimulationAutomationStatus status;
     /**
      * Instantiates a new simulationAutomation and sets the default values.

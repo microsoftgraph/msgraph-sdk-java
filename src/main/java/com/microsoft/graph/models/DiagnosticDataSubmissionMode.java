@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Allow the device to send diagnostic and usage telemetry data, such as Watson. */
+/**
+ * Allow the device to send diagnostic and usage telemetry data, such as Watson.
+ */
 public enum DiagnosticDataSubmissionMode implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),

@@ -8,15 +8,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The query specifying who will be the reviewer. */
+    /**
+     * The query specifying who will be the reviewer.
+     */
     private String query;
-    /** In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions. */
+    /**
+     * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
+     */
     private String queryRoot;
-    /** The type of query. Examples include MicrosoftGraph and ARM. */
+    /**
+     * The type of query. Examples include MicrosoftGraph and ARM.
+     */
     private String queryType;
     /**
      * Instantiates a new accessReviewReviewerScope and sets the default values.

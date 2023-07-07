@@ -12,17 +12,29 @@ import java.util.Objects;
  * Device action result
  */
 public class DeviceActionResult implements AdditionalDataHolder, Parsable {
-    /** Action name */
+    /**
+     * Action name
+     */
     private String actionName;
-    /** State of the action on the device */
+    /**
+     * State of the action on the device
+     */
     private ActionState actionState;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Time the action state was last updated */
+    /**
+     * Time the action state was last updated
+     */
     private OffsetDateTime lastUpdatedDateTime;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Time the action was initiated */
+    /**
+     * Time the action was initiated
+     */
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new deviceActionResult and sets the default values.

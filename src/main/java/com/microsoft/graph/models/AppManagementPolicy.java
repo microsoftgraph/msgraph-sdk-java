@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppManagementPolicy extends PolicyBase implements Parsable {
-    /** Collection of applications and service principals to which the policy is applied. */
+    /**
+     * Collection of applications and service principals to which the policy is applied.
+     */
     private java.util.List<DirectoryObject> appliesTo;
-    /** Denotes whether the policy is enabled. */
+    /**
+     * Denotes whether the policy is enabled.
+     */
     private Boolean isEnabled;
-    /** Restrictions that apply to an application or service principal object. */
+    /**
+     * Restrictions that apply to an application or service principal object.
+     */
     private AppManagementConfiguration restrictions;
     /**
      * Instantiates a new AppManagementPolicy and sets the default values.

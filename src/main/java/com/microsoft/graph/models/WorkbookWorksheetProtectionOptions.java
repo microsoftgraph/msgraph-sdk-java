@@ -8,31 +8,57 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Represents the worksheet protection option of allowing using auto filter feature. */
+    /**
+     * Represents the worksheet protection option of allowing using auto filter feature.
+     */
     private Boolean allowAutoFilter;
-    /** Represents the worksheet protection option of allowing deleting columns. */
+    /**
+     * Represents the worksheet protection option of allowing deleting columns.
+     */
     private Boolean allowDeleteColumns;
-    /** Represents the worksheet protection option of allowing deleting rows. */
+    /**
+     * Represents the worksheet protection option of allowing deleting rows.
+     */
     private Boolean allowDeleteRows;
-    /** Represents the worksheet protection option of allowing formatting cells. */
+    /**
+     * Represents the worksheet protection option of allowing formatting cells.
+     */
     private Boolean allowFormatCells;
-    /** Represents the worksheet protection option of allowing formatting columns. */
+    /**
+     * Represents the worksheet protection option of allowing formatting columns.
+     */
     private Boolean allowFormatColumns;
-    /** Represents the worksheet protection option of allowing formatting rows. */
+    /**
+     * Represents the worksheet protection option of allowing formatting rows.
+     */
     private Boolean allowFormatRows;
-    /** Represents the worksheet protection option of allowing inserting columns. */
+    /**
+     * Represents the worksheet protection option of allowing inserting columns.
+     */
     private Boolean allowInsertColumns;
-    /** Represents the worksheet protection option of allowing inserting hyperlinks. */
+    /**
+     * Represents the worksheet protection option of allowing inserting hyperlinks.
+     */
     private Boolean allowInsertHyperlinks;
-    /** Represents the worksheet protection option of allowing inserting rows. */
+    /**
+     * Represents the worksheet protection option of allowing inserting rows.
+     */
     private Boolean allowInsertRows;
-    /** Represents the worksheet protection option of allowing using pivot table feature. */
+    /**
+     * Represents the worksheet protection option of allowing using pivot table feature.
+     */
     private Boolean allowPivotTables;
-    /** Represents the worksheet protection option of allowing using sort feature. */
+    /**
+     * Represents the worksheet protection option of allowing using sort feature.
+     */
     private Boolean allowSort;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.

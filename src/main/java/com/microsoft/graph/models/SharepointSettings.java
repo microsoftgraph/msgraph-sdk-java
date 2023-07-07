@@ -8,63 +8,121 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class SharepointSettings extends Entity implements Parsable {
-    /** Collection of trusted domain GUIDs for the OneDrive sync app. */
+    /**
+     * Collection of trusted domain GUIDs for the OneDrive sync app.
+     */
     private java.util.List<UUID> allowedDomainGuidsForSyncApp;
-    /** Collection of managed paths available for site creation. Read-only. */
+    /**
+     * Collection of managed paths available for site creation. Read-only.
+     */
     private java.util.List<String> availableManagedPathsForSiteCreation;
-    /** The number of days for preserving a deleted user's OneDrive. */
+    /**
+     * The number of days for preserving a deleted user's OneDrive.
+     */
     private Integer deletedUserPersonalSiteRetentionPeriodInDays;
-    /** Collection of file extensions not uploaded by the OneDrive sync app. */
+    /**
+     * Collection of file extensions not uploaded by the OneDrive sync app.
+     */
     private java.util.List<String> excludedFileExtensionsForSyncApp;
-    /** Specifies the idle session sign-out policies for the tenant. */
+    /**
+     * Specifies the idle session sign-out policies for the tenant.
+     */
     private IdleSessionSignOut idleSessionSignOut;
-    /** Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced. */
+    /**
+     * Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
+     */
     private ImageTaggingChoice imageTaggingOption;
-    /** Indicates whether comments are allowed on modern site pages in SharePoint. */
+    /**
+     * Indicates whether comments are allowed on modern site pages in SharePoint.
+     */
     private Boolean isCommentingOnSitePagesEnabled;
-    /** Indicates whether push notifications are enabled for OneDrive events. */
+    /**
+     * Indicates whether push notifications are enabled for OneDrive events.
+     */
     private Boolean isFileActivityNotificationEnabled;
-    /** Indicates whether legacy authentication protocols are enabled for the tenant. */
+    /**
+     * Indicates whether legacy authentication protocols are enabled for the tenant.
+     */
     private Boolean isLegacyAuthProtocolsEnabled;
-    /** Indicates whether if Fluid Framework is allowed on SharePoint sites. */
+    /**
+     * Indicates whether if Fluid Framework is allowed on SharePoint sites.
+     */
     private Boolean isLoopEnabled;
-    /** Indicates whether files can be synced using the OneDrive sync app for Mac. */
+    /**
+     * Indicates whether files can be synced using the OneDrive sync app for Mac.
+     */
     private Boolean isMacSyncAppEnabled;
-    /** Indicates whether guests must sign in using the same account to which sharing invitations are sent. */
+    /**
+     * Indicates whether guests must sign in using the same account to which sharing invitations are sent.
+     */
     private Boolean isRequireAcceptingUserToMatchInvitedUserEnabled;
-    /** Indicates whether guests are allowed to reshare files, folders, and sites they don't own. */
+    /**
+     * Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
+     */
     private Boolean isResharingByExternalUsersEnabled;
-    /** Indicates whether mobile push notifications are enabled for SharePoint. */
+    /**
+     * Indicates whether mobile push notifications are enabled for SharePoint.
+     */
     private Boolean isSharePointMobileNotificationEnabled;
-    /** Indicates whether the newsfeed is allowed on the modern site pages in SharePoint. */
+    /**
+     * Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
+     */
     private Boolean isSharePointNewsfeedEnabled;
-    /** Indicates whether users are allowed to create sites. */
+    /**
+     * Indicates whether users are allowed to create sites.
+     */
     private Boolean isSiteCreationEnabled;
-    /** Indicates whether the UI commands for creating sites are shown. */
+    /**
+     * Indicates whether the UI commands for creating sites are shown.
+     */
     private Boolean isSiteCreationUIEnabled;
-    /** Indicates whether creating new modern pages is allowed on SharePoint sites. */
+    /**
+     * Indicates whether creating new modern pages is allowed on SharePoint sites.
+     */
     private Boolean isSitePagesCreationEnabled;
-    /** Indicates whether site storage space is automatically managed or if specific storage limits are set per site. */
+    /**
+     * Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
+     */
     private Boolean isSitesStorageLimitAutomatic;
-    /** Indicates whether the sync button in OneDrive is hidden. */
+    /**
+     * Indicates whether the sync button in OneDrive is hidden.
+     */
     private Boolean isSyncButtonHiddenOnPersonalSite;
-    /** Indicates whether users are allowed to sync files only on PCs joined to specific domains. */
+    /**
+     * Indicates whether users are allowed to sync files only on PCs joined to specific domains.
+     */
     private Boolean isUnmanagedSyncAppForTenantRestricted;
-    /** The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB). */
+    /**
+     * The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
+     */
     private Long personalSiteDefaultStorageLimitInMB;
-    /** Collection of email domains that are allowed for sharing outside the organization. */
+    /**
+     * Collection of email domains that are allowed for sharing outside the organization.
+     */
     private java.util.List<String> sharingAllowedDomainList;
-    /** Collection of email domains that are blocked for sharing outside the organization. */
+    /**
+     * Collection of email domains that are blocked for sharing outside the organization.
+     */
     private java.util.List<String> sharingBlockedDomainList;
-    /** Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly. */
+    /**
+     * Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
+     */
     private SharingCapabilities sharingCapability;
-    /** Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList. */
+    /**
+     * Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
+     */
     private SharingDomainRestrictionMode sharingDomainRestrictionMode;
-    /** The value of the team site managed path. This is the path under which new team sites will be created. */
+    /**
+     * The value of the team site managed path. This is the path under which new team sites will be created.
+     */
     private String siteCreationDefaultManagedPath;
-    /** The default storage quota for a new site upon creation. Measured in megabytes (MB). */
+    /**
+     * The default storage quota for a new site upon creation. Measured in megabytes (MB).
+     */
     private Integer siteCreationDefaultStorageLimitInMB;
-    /** The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property. */
+    /**
+     * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
+     */
     private String tenantDefaultTimezone;
     /**
      * Instantiates a new sharepointSettings and sets the default values.

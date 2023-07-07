@@ -8,13 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Relation extends Entity implements Parsable {
-    /** The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set]. */
+    /**
+     * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
+     */
     private Term fromTerm;
-    /** The type of relation. Possible values are: pin, reuse. */
+    /**
+     * The type of relation. Possible values are: pin, reuse.
+     */
     private RelationType relationship;
-    /** The [set] in which the relation is relevant. */
+    /**
+     * The [set] in which the relation is relevant.
+     */
     private Set set;
-    /** The to [term] of the relation. The term to which the relationship is defined. */
+    /**
+     * The to [term] of the relation. The term to which the relationship is defined.
+     */
     private Term toTerm;
     /**
      * Instantiates a new relation and sets the default values.

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable {
-    /** ShiftId for the recipient user with whom the request is to swap. */
+    /**
+     * ShiftId for the recipient user with whom the request is to swap.
+     */
     private String recipientShiftId;
     /**
      * Instantiates a new SwapShiftsChangeRequest and sets the default values.

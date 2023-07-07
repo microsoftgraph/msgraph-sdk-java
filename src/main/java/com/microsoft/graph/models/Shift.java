@@ -7,13 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Shift extends ChangeTrackedEntity implements Parsable {
-    /** The draft version of this shift that is viewable by managers. Required. */
+    /**
+     * The draft version of this shift that is viewable by managers. Required.
+     */
     private ShiftItem draftShift;
-    /** ID of the scheduling group the shift is part of. Required. */
+    /**
+     * ID of the scheduling group the shift is part of. Required.
+     */
     private String schedulingGroupId;
-    /** The shared version of this shift that is viewable by both employees and managers. Required. */
+    /**
+     * The shared version of this shift that is viewable by both employees and managers. Required.
+     */
     private ShiftItem sharedShift;
-    /** ID of the user assigned to the shift. Required. */
+    /**
+     * ID of the user assigned to the shift. Required.
+     */
     private String userId;
     /**
      * Instantiates a new Shift and sets the default values.

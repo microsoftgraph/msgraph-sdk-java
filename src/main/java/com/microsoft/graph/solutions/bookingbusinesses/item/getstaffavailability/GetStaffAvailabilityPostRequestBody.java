@@ -9,13 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The endDateTime property */
+    /**
+     * The endDateTime property
+     */
     private DateTimeTimeZone endDateTime;
-    /** The staffIds property */
+    /**
+     * The staffIds property
+     */
     private java.util.List<String> staffIds;
-    /** The startDateTime property */
+    /**
+     * The startDateTime property
+     */
     private DateTimeTimeZone startDateTime;
     /**
      * Instantiates a new getStaffAvailabilityPostRequestBody and sets the default values.

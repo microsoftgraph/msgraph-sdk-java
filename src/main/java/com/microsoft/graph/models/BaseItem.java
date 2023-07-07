@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class BaseItem extends Entity implements Parsable {
-    /** Identity of the user, device, or application which created the item. Read-only. */
+    /**
+     * Identity of the user, device, or application which created the item. Read-only.
+     */
     private IdentitySet createdBy;
-    /** Identity of the user who created the item. Read-only. */
+    /**
+     * Identity of the user who created the item. Read-only.
+     */
     private User createdByUser;
-    /** Date and time of item creation. Read-only. */
+    /**
+     * Date and time of item creation. Read-only.
+     */
     private OffsetDateTime createdDateTime;
-    /** Provides a user-visible description of the item. Optional. */
+    /**
+     * Provides a user-visible description of the item. Optional.
+     */
     private String description;
-    /** ETag for the item. Read-only. */
+    /**
+     * ETag for the item. Read-only.
+     */
     private String eTag;
-    /** Identity of the user, device, and application which last modified the item. Read-only. */
+    /**
+     * Identity of the user, device, and application which last modified the item. Read-only.
+     */
     private IdentitySet lastModifiedBy;
-    /** Identity of the user who last modified the item. Read-only. */
+    /**
+     * Identity of the user who last modified the item. Read-only.
+     */
     private User lastModifiedByUser;
-    /** Date and time the item was last modified. Read-only. */
+    /**
+     * Date and time the item was last modified. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The name of the item. Read-write. */
+    /**
+     * The name of the item. Read-write.
+     */
     private String name;
-    /** Parent information, if the item has a parent. Read-write. */
+    /**
+     * Parent information, if the item has a parent. Read-write.
+     */
     private ItemReference parentReference;
-    /** URL that displays the resource in the browser. Read-only. */
+    /**
+     * URL that displays the resource in the browser. Read-only.
+     */
     private String webUrl;
     /**
      * Instantiates a new baseItem and sets the default values.

@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity.
  */
 public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity. */
+    /**
+     * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
+     */
     @javax.annotation.Nonnull
     public ManagedDevicesRequestBuilder managedDevices() {
         return new ManagedDevicesRequestBuilder(pathParameters, requestAdapter);
@@ -47,8 +49,9 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/detectedApps/{detectedApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property detectedApps for deviceManagement
+     * Deletes a detectedApp.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,9 +68,10 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property detectedApps for deviceManagement
+     * Deletes a detectedApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,8 +88,9 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of detected apps associated with a device.
+     * Read properties and relationships of the detectedApp object.
      * @return a CompletableFuture of detectedApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> get() {
@@ -102,9 +107,10 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of detected apps associated with a device.
+     * Read properties and relationships of the detectedApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of detectedApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,9 +127,10 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property detectedApps in deviceManagement
+     * Update the properties of a detectedApp object.
      * @param body The request body
      * @return a CompletableFuture of detectedApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> patch(@javax.annotation.Nonnull final DetectedApp body) {
@@ -140,10 +147,11 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property detectedApps in deviceManagement
+     * Update the properties of a detectedApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of detectedApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> patch(@javax.annotation.Nonnull final DetectedApp body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +169,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property detectedApps for deviceManagement
+     * Deletes a detectedApp.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +177,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property detectedApps for deviceManagement
+     * Deletes a detectedApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +196,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of detected apps associated with a device.
+     * Read properties and relationships of the detectedApp object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +204,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of detected apps associated with a device.
+     * Read properties and relationships of the detectedApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +225,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property detectedApps in deviceManagement
+     * Update the properties of a detectedApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +234,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property detectedApps in deviceManagement
+     * Update the properties of a detectedApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,14 +262,18 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of detected apps associated with a device.
+     * Read properties and relationships of the detectedApp object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -270,7 +282,9 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

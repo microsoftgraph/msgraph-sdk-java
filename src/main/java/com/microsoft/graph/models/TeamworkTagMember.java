@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkTagMember extends Entity implements Parsable {
-    /** The member's display name. */
+    /**
+     * The member's display name.
+     */
     private String displayName;
-    /** The ID of the tenant that the tag member is a part of. */
+    /**
+     * The ID of the tenant that the tag member is a part of.
+     */
     private String tenantId;
-    /** The user ID of the member. */
+    /**
+     * The user ID of the member.
+     */
     private String userId;
     /**
      * Instantiates a new teamworkTagMember and sets the default values.

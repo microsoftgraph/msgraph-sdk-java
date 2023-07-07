@@ -8,11 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnifiedRole implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource. */
+    /**
+     * The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
+     */
     private String roleDefinitionId;
     /**
      * Instantiates a new UnifiedRole and sets the default values.

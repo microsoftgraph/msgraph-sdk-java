@@ -10,17 +10,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CaseEscaped extends Entity implements Parsable {
-    /** The createdDateTime property */
+    /**
+     * The createdDateTime property
+     */
     private OffsetDateTime createdDateTime;
-    /** The description property */
+    /**
+     * The description property
+     */
     private String description;
-    /** The displayName property */
+    /**
+     * The displayName property
+     */
     private String displayName;
-    /** The lastModifiedBy property */
+    /**
+     * The lastModifiedBy property
+     */
     private IdentitySet lastModifiedBy;
-    /** The lastModifiedDateTime property */
+    /**
+     * The lastModifiedDateTime property
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The status property */
+    /**
+     * The status property
+     */
     private CaseStatus status;
     /**
      * Instantiates a new caseEscaped and sets the default values.

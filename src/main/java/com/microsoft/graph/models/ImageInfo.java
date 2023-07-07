@@ -8,17 +8,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImageInfo implements AdditionalDataHolder, Parsable {
-    /** Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image */
+    /**
+     * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
+     */
     private Boolean addImageQuery;
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** Optional; alt-text accessible content for the image */
+    /**
+     * Optional; alt-text accessible content for the image
+     */
     private String alternateText;
-    /** The alternativeText property */
+    /**
+     * The alternativeText property
+     */
     private String alternativeText;
-    /** Optional; URI that points to an icon which represents the application used to generate the activity */
+    /**
+     * Optional; URI that points to an icon which represents the application used to generate the activity
+     */
     private String iconUrl;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
     /**
      * Instantiates a new imageInfo and sets the default values.

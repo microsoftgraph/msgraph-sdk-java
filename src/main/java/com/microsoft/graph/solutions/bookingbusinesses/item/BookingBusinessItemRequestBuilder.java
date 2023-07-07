@@ -29,47 +29,65 @@ import java.util.Objects;
  * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
  */
 public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity. */
+    /**
+     * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
+     */
     @javax.annotation.Nonnull
     public AppointmentsRequestBuilder appointments() {
         return new AppointmentsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity. */
+    /**
+     * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
+     */
     @javax.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity. */
+    /**
+     * Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity.
+     */
     @javax.annotation.Nonnull
     public CustomersRequestBuilder customers() {
         return new CustomersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity. */
+    /**
+     * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
+     */
     @javax.annotation.Nonnull
     public CustomQuestionsRequestBuilder customQuestions() {
         return new CustomQuestionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the getStaffAvailability method. */
+    /**
+     * Provides operations to call the getStaffAvailability method.
+     */
     @javax.annotation.Nonnull
     public GetStaffAvailabilityRequestBuilder getStaffAvailability() {
         return new GetStaffAvailabilityRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the publish method. */
+    /**
+     * Provides operations to call the publish method.
+     */
     @javax.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity. */
+    /**
+     * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
+     */
     @javax.annotation.Nonnull
     public ServicesRequestBuilder services() {
         return new ServicesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity. */
+    /**
+     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
+     */
     @javax.annotation.Nonnull
     public StaffMembersRequestBuilder staffMembers() {
         return new StaffMembersRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the unpublish method. */
+    /**
+     * Provides operations to call the unpublish method.
+     */
     @javax.annotation.Nonnull
     public UnpublishRequestBuilder unpublish() {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
@@ -311,11 +329,15 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of a bookingBusiness object.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -324,7 +346,9 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

@@ -21,7 +21,9 @@ import java.util.Objects;
  * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
  */
 public class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the incidentReport method. */
+    /**
+     * Provides operations to call the incidentReport method.
+     */
     @javax.annotation.Nonnull
     public IncidentReportRequestBuilder incidentReport() {
         return new IncidentReportRequestBuilder(pathParameters, requestAdapter);
@@ -259,11 +261,15 @@ public class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a serviceHealthIssue object. This operation retrieves a specified service health issue for tenant. The operation returns an error if the issue does not exist for the tenant.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -272,7 +278,9 @@ public class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

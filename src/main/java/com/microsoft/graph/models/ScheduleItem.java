@@ -8,21 +8,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ScheduleItem implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The date, time, and time zone that the corresponding event ends. */
+    /**
+     * The date, time, and time zone that the corresponding event ends.
+     */
     private DateTimeTimeZone end;
-    /** The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional. */
+    /**
+     * The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
+     */
     private Boolean isPrivate;
-    /** The location where the corresponding event is held or attended from. Optional. */
+    /**
+     * The location where the corresponding event is held or attended from. Optional.
+     */
     private String location;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The date, time, and time zone that the corresponding event starts. */
+    /**
+     * The date, time, and time zone that the corresponding event starts.
+     */
     private DateTimeTimeZone start;
-    /** The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown. */
+    /**
+     * The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     */
     private FreeBusyStatus status;
-    /** The corresponding event's subject line. Optional. */
+    /**
+     * The corresponding event's subject line. Optional.
+     */
     private String subject;
     /**
      * Instantiates a new ScheduleItem and sets the default values.

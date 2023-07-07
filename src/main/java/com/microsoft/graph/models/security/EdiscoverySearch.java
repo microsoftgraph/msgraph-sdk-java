@@ -7,17 +7,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdiscoverySearch extends Search implements Parsable {
-    /** Adds an additional source to the eDiscovery search. */
+    /**
+     * Adds an additional source to the eDiscovery search.
+     */
     private java.util.List<DataSource> additionalSources;
-    /** Adds the results of the eDiscovery search to the specified reviewSet. */
+    /**
+     * Adds the results of the eDiscovery search to the specified reviewSet.
+     */
     private EdiscoveryAddToReviewSetOperation addToReviewSetOperation;
-    /** Custodian sources that are included in the eDiscovery search. */
+    /**
+     * Custodian sources that are included in the eDiscovery search.
+     */
     private java.util.List<DataSource> custodianSources;
-    /** When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources. */
+    /**
+     * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     */
     private DataSourceScopes dataSourceScopes;
-    /** The last estimate operation associated with the eDiscovery search. */
+    /**
+     * The last estimate operation associated with the eDiscovery search.
+     */
     private EdiscoveryEstimateOperation lastEstimateStatisticsOperation;
-    /** noncustodialDataSource sources that are included in the eDiscovery search */
+    /**
+     * noncustodialDataSource sources that are included in the eDiscovery search
+     */
     private java.util.List<EdiscoveryNoncustodialDataSource> noncustodialSources;
     /**
      * Instantiates a new EdiscoverySearch and sets the default values.

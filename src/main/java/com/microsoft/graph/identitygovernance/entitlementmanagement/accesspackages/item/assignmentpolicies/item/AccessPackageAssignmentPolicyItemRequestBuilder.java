@@ -23,17 +23,23 @@ import java.util.Objects;
  * Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity.
  */
 public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignmentPolicy entity. */
+    /**
+     * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     */
     @javax.annotation.Nonnull
     public AccessPackageRequestBuilder accessPackage() {
         return new AccessPackageRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the catalog property of the microsoft.graph.accessPackageAssignmentPolicy entity. */
+    /**
+     * Provides operations to manage the catalog property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     */
     @javax.annotation.Nonnull
     public CatalogRequestBuilder catalog() {
         return new CatalogRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity. */
+    /**
+     * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     */
     @javax.annotation.Nonnull
     public QuestionsRequestBuilder questions() {
         return new QuestionsRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +275,15 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Get assignmentPolicies from identityGovernance
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +292,9 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

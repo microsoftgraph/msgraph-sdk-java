@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnPremisesDirectorySynchronization extends Entity implements Parsable {
-    /** Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant. */
+    /**
+     * Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
+     */
     private OnPremisesDirectorySynchronizationConfiguration configuration;
-    /** The features property */
+    /**
+     * The features property
+     */
     private OnPremisesDirectorySynchronizationFeature features;
     /**
      * Instantiates a new onPremisesDirectorySynchronization and sets the default values.

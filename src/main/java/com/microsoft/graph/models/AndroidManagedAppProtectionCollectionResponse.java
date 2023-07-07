@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidManagedAppProtectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
-    /** The value property */
+    /**
+     * The value property
+     */
     private java.util.List<AndroidManagedAppProtection> value;
     /**
      * Instantiates a new AndroidManagedAppProtectionCollectionResponse and sets the default values.

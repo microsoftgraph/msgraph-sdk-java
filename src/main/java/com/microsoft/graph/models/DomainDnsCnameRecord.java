@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable {
-    /** The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host. */
+    /**
+     * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
+     */
     private String canonicalName;
     /**
      * Instantiates a new DomainDnsCnameRecord and sets the default values.

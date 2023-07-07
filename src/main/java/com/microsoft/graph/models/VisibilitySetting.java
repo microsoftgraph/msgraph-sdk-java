@@ -3,7 +3,9 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Generic visibility state. */
+/**
+ * Generic visibility state.
+ */
 public enum VisibilitySetting implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),

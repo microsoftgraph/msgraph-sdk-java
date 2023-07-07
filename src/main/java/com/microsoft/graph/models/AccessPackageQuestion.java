@@ -7,15 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessPackageQuestion extends Entity implements Parsable {
-    /** Specifies whether the requestor is allowed to edit answers to questions for an assignment by posting an update to accessPackageAssignmentRequest. */
+    /**
+     * Specifies whether the requestor is allowed to edit answers to questions for an assignment by posting an update to accessPackageAssignmentRequest.
+     */
     private Boolean isAnswerEditable;
-    /** Whether the requestor is required to supply an answer or not. */
+    /**
+     * Whether the requestor is required to supply an answer or not.
+     */
     private Boolean isRequired;
-    /** The text of the question represented in a format for a specific locale. */
+    /**
+     * The text of the question represented in a format for a specific locale.
+     */
     private java.util.List<AccessPackageLocalizedText> localizations;
-    /** Relative position of this question when displaying a list of questions to the requestor. */
+    /**
+     * Relative position of this question when displaying a list of questions to the requestor.
+     */
     private Integer sequence;
-    /** The text of the question to show to the requestor. */
+    /**
+     * The text of the question to show to the requestor.
+     */
     private String text;
     /**
      * Instantiates a new accessPackageQuestion and sets the default values.

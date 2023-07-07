@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CrossTenantAccessPolicy extends PolicyBase implements Parsable {
-    /** Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn. */
+    /**
+     * Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
+     */
     private java.util.List<String> allowedCloudEndpoints;
-    /** Defines the default configuration for how your organization interacts with external Azure Active Directory organizations. */
+    /**
+     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     */
     private CrossTenantAccessPolicyConfigurationDefault defaultEscaped;
-    /** Defines partner-specific configurations for external Azure Active Directory organizations. */
+    /**
+     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     */
     private java.util.List<CrossTenantAccessPolicyConfigurationPartner> partners;
     /**
      * Instantiates a new CrossTenantAccessPolicy and sets the default values.

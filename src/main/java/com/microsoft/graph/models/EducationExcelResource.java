@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationExcelResource extends EducationResource implements Parsable {
-    /** Pointer to the Excel file object. */
+    /**
+     * Pointer to the Excel file object.
+     */
     private String fileUrl;
     /**
      * Instantiates a new EducationExcelResource and sets the default values.

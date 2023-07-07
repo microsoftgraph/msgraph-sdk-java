@@ -8,21 +8,37 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 public class IosVppEBook extends ManagedEBook implements Parsable {
-    /** The Apple ID associated with Vpp token. */
+    /**
+     * The Apple ID associated with Vpp token.
+     */
     private String appleId;
-    /** Genres. */
+    /**
+     * Genres.
+     */
     private java.util.List<String> genres;
-    /** Language. */
+    /**
+     * Language.
+     */
     private String language;
-    /** Seller. */
+    /**
+     * Seller.
+     */
     private String seller;
-    /** Total license count. */
+    /**
+     * Total license count.
+     */
     private Integer totalLicenseCount;
-    /** Used license count. */
+    /**
+     * Used license count.
+     */
     private Integer usedLicenseCount;
-    /** The Vpp token's organization name. */
+    /**
+     * The Vpp token's organization name.
+     */
     private String vppOrganizationName;
-    /** The Vpp token ID. */
+    /**
+     * The Vpp token ID.
+     */
     private UUID vppTokenId;
     /**
      * Instantiates a new IosVppEBook and sets the default values.

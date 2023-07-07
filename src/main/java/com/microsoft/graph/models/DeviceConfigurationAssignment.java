@@ -10,7 +10,9 @@ import java.util.Objects;
  * The device configuration assignment entity assigns an AAD group to a specific device configuration.
  */
 public class DeviceConfigurationAssignment extends Entity implements Parsable {
-    /** The assignment target for the device configuration. */
+    /**
+     * The assignment target for the device configuration.
+     */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new deviceConfigurationAssignment and sets the default values.

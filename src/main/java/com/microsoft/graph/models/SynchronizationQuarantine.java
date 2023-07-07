@@ -9,21 +9,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The currentBegan property */
+    /**
+     * The currentBegan property
+     */
     private OffsetDateTime currentBegan;
-    /** The error property */
+    /**
+     * The error property
+     */
     private SynchronizationError error;
-    /** The nextAttempt property */
+    /**
+     * The nextAttempt property
+     */
     private OffsetDateTime nextAttempt;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** The reason property */
+    /**
+     * The reason property
+     */
     private QuarantineReason reason;
-    /** The seriesBegan property */
+    /**
+     * The seriesBegan property
+     */
     private OffsetDateTime seriesBegan;
-    /** The seriesCount property */
+    /**
+     * The seriesCount property
+     */
     private Long seriesCount;
     /**
      * Instantiates a new synchronizationQuarantine and sets the default values.

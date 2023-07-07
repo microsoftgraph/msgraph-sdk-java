@@ -11,23 +11,41 @@ import java.util.Objects;
  * Contains MSI app properties for a Win32 App.
  */
 public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The OdataType property */
+    /**
+     * The OdataType property
+     */
     private String odataType;
-    /** Indicates the package type of an MSI Win32LobApp. */
+    /**
+     * Indicates the package type of an MSI Win32LobApp.
+     */
     private Win32LobAppMsiPackageType packageType;
-    /** The MSI product code. */
+    /**
+     * The MSI product code.
+     */
     private String productCode;
-    /** The MSI product name. */
+    /**
+     * The MSI product name.
+     */
     private String productName;
-    /** The MSI product version. */
+    /**
+     * The MSI product version.
+     */
     private String productVersion;
-    /** The MSI publisher. */
+    /**
+     * The MSI publisher.
+     */
     private String publisher;
-    /** Whether the MSI app requires the machine to reboot to complete installation. */
+    /**
+     * Whether the MSI app requires the machine to reboot to complete installation.
+     */
     private Boolean requiresReboot;
-    /** The MSI upgrade code. */
+    /**
+     * The MSI upgrade code.
+     */
     private String upgradeCode;
     /**
      * Instantiates a new win32LobAppMsiInformation and sets the default values.

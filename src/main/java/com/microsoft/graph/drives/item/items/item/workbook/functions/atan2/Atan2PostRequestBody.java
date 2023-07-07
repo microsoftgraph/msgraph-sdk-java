@@ -9,11 +9,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Atan2PostRequestBody implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    /**
+     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     */
     private Map<String, Object> additionalData;
-    /** The xNum property */
+    /**
+     * The xNum property
+     */
     private Json xNum;
-    /** The yNum property */
+    /**
+     * The yNum property
+     */
     private Json yNum;
     /**
      * Instantiates a new atan2PostRequestBody and sets the default values.

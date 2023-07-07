@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
-    /** Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
+    /**
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
+     */
     private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
-    /** Indicates if the policy is deployed to any inclusion groups or not. */
+    /**
+     * Indicates if the policy is deployed to any inclusion groups or not.
+     */
     private Boolean isAssigned;
     /**
      * Instantiates a new TargetedManagedAppProtection and sets the default values.

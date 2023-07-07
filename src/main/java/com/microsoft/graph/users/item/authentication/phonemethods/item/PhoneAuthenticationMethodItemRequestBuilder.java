@@ -22,12 +22,16 @@ import java.util.Objects;
  * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
  */
 public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
-    /** Provides operations to call the disableSmsSignIn method. */
+    /**
+     * Provides operations to call the disableSmsSignIn method.
+     */
     @javax.annotation.Nonnull
     public DisableSmsSignInRequestBuilder disableSmsSignIn() {
         return new DisableSmsSignInRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Provides operations to call the enableSmsSignIn method. */
+    /**
+     * Provides operations to call the enableSmsSignIn method.
+     */
     @javax.annotation.Nonnull
     public EnableSmsSignInRequestBuilder enableSmsSignIn() {
         return new EnableSmsSignInRequestBuilder(pathParameters, requestAdapter);
@@ -269,11 +273,15 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Retrieve a single phoneAuthenticationMethod object for a user. This method is available only for standard Azure AD and B2B users, but not B2C users.
      */
     public class GetQueryParameters {
-        /** Expand related entities */
+        /**
+         * Expand related entities
+         */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
         public String[] expand;
-        /** Select properties to be returned */
+        /**
+         * Select properties to be returned
+         */
         @QueryParameter(name = "%24select")
         @javax.annotation.Nullable
         public String[] select;
@@ -282,7 +290,9 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     public class GetRequestConfiguration extends BaseRequestConfiguration {
-        /** Request query parameters */
+        /**
+         * Request query parameters
+         */
         @javax.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }

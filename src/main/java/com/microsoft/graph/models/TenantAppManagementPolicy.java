@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
-    /** Restrictions that apply as default to all application objects in the tenant. */
+    /**
+     * Restrictions that apply as default to all application objects in the tenant.
+     */
     private AppManagementConfiguration applicationRestrictions;
-    /** Denotes whether the policy is enabled. Default value is false. */
+    /**
+     * Denotes whether the policy is enabled. Default value is false.
+     */
     private Boolean isEnabled;
-    /** Restrictions that apply as default to all service principal objects in the tenant. */
+    /**
+     * Restrictions that apply as default to all service principal objects in the tenant.
+     */
     private AppManagementConfiguration servicePrincipalRestrictions;
     /**
      * Instantiates a new TenantAppManagementPolicy and sets the default values.

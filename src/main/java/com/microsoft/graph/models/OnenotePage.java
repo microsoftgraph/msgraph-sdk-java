@@ -8,27 +8,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable {
-    /** The page's HTML content. */
+    /**
+     * The page's HTML content.
+     */
     private byte[] content;
-    /** The URL for the page's HTML content.  Read-only. */
+    /**
+     * The URL for the page's HTML content.  Read-only.
+     */
     private String contentUrl;
-    /** The unique identifier of the application that created the page. Read-only. */
+    /**
+     * The unique identifier of the application that created the page. Read-only.
+     */
     private String createdByAppId;
-    /** The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    /**
+     * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     */
     private OffsetDateTime lastModifiedDateTime;
-    /** The indentation level of the page. Read-only. */
+    /**
+     * The indentation level of the page. Read-only.
+     */
     private Integer level;
-    /** Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only. */
+    /**
+     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
+     */
     private PageLinks links;
-    /** The order of the page within its parent section. Read-only. */
+    /**
+     * The order of the page within its parent section. Read-only.
+     */
     private Integer order;
-    /** The notebook that contains the page.  Read-only. */
+    /**
+     * The notebook that contains the page.  Read-only.
+     */
     private Notebook parentNotebook;
-    /** The section that contains the page. Read-only. */
+    /**
+     * The section that contains the page. Read-only.
+     */
     private OnenoteSection parentSection;
-    /** The title of the page. */
+    /**
+     * The title of the page.
+     */
     private String title;
-    /** The userTags property */
+    /**
+     * The userTags property
+     */
     private java.util.List<String> userTags;
     /**
      * Instantiates a new onenotePage and sets the default values.

@@ -7,9 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedApp extends MobileApp implements Parsable {
-    /** A managed (MAM) application's availability. */
+    /**
+     * A managed (MAM) application's availability.
+     */
     private ManagedAppAvailability appAvailability;
-    /** The Application's version. */
+    /**
+     * The Application's version.
+     */
     private String version;
     /**
      * Instantiates a new ManagedApp and sets the default values.
