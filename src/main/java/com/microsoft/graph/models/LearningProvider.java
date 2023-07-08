@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.LearningContentCollectionPage;
+import com.microsoft.graph.requests.LearningCourseActivityCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -99,6 +100,15 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.LearningContentCollectionPage learningContents;
 
+    /**
+     * The Learning Course Activities.
+     * 
+     */
+    @SerializedName(value = "learningCourseActivities", alternate = {"LearningCourseActivities"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.LearningCourseActivityCollectionPage learningCourseActivities;
+
 
     /**
      * Sets the raw JSON object
@@ -111,6 +121,10 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
 
         if (json.has("learningContents")) {
             learningContents = serializer.deserializeObject(json.get("learningContents"), com.microsoft.graph.requests.LearningContentCollectionPage.class);
+        }
+
+        if (json.has("learningCourseActivities")) {
+            learningCourseActivities = serializer.deserializeObject(json.get("learningCourseActivities"), com.microsoft.graph.requests.LearningCourseActivityCollectionPage.class);
         }
     }
 }

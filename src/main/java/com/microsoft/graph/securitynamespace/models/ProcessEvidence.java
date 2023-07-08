@@ -57,7 +57,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Parent Process Creation Date Time.
-     * Date and time when the parent of the process was created.
+     * Date and time when the parent of the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "parentProcessCreationDateTime", alternate = {"ParentProcessCreationDateTime"})
     @Expose
@@ -93,7 +93,7 @@ public class ProcessEvidence extends AlertEvidence implements IJsonBackedObject 
 
     /**
      * The Process Creation Date Time.
-     * Date and time the process was created.
+     * Date and time when the process was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "processCreationDateTime", alternate = {"ProcessCreationDateTime"})
     @Expose

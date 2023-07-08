@@ -6,8 +6,9 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.TeamsAppInstallationUpgradeRequest;
 import com.microsoft.graph.models.TeamsAppInstallation;
-
+import com.microsoft.graph.models.TeamsAppPermissionSet;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.TeamsAppInstallationUpgradeParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,6 +30,19 @@ public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequest
      */
     public TeamsAppInstallationUpgradeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
+    }
+    private TeamsAppInstallationUpgradeParameterSet body;
+    /**
+     * The request builder for this TeamsAppInstallationUpgrade
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public TeamsAppInstallationUpgradeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TeamsAppInstallationUpgradeParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
     }
 
     /**
@@ -54,6 +68,7 @@ public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequest
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

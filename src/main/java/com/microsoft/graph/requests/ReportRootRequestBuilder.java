@@ -135,6 +135,16 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     }
 
 
+
+    /**
+     * Gets the request builder for AuthenticationMethodsRoot
+     *
+     * @return the AuthenticationMethodsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthenticationMethodsRootRequestBuilder authenticationMethods() {
+        return new com.microsoft.graph.requests.AuthenticationMethodsRootRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethods"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the PrintUsageByPrinter collection
      *

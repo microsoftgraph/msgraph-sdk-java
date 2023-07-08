@@ -11,13 +11,19 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementSettings;
 import com.microsoft.graph.models.IntuneBrand;
+import com.microsoft.graph.models.DeviceProtectionOverview;
 import com.microsoft.graph.models.DeviceManagementSubscriptionState;
+import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
+import com.microsoft.graph.models.WindowsMalwareOverview;
 import com.microsoft.graph.models.DeviceCompliancePolicyDeviceStateSummary;
 import com.microsoft.graph.models.DeviceConfigurationDeviceStateSummary;
 import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
 import com.microsoft.graph.models.OnPremisesConditionalAccessSettings;
 import com.microsoft.graph.models.ApplePushNotificationCertificate;
 import com.microsoft.graph.models.ManagedDeviceOverview;
+import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
+import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
 import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
@@ -34,6 +40,26 @@ import com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionP
 import com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionPage;
 import com.microsoft.graph.requests.DetectedAppCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
+import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage;
+import com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage;
 import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage;
@@ -89,6 +115,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public IntuneBrand intuneBrand;
 
     /**
+     * The Device Protection Overview.
+     * Device protection overview.
+     */
+    @SerializedName(value = "deviceProtectionOverview", alternate = {"DeviceProtectionOverview"})
+    @Expose
+	@Nullable
+    public DeviceProtectionOverview deviceProtectionOverview;
+
+    /**
      * The Subscription State.
      * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
      */
@@ -96,6 +131,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceManagementSubscriptionState subscriptionState;
+
+    /**
+     * The User Experience Analytics Settings.
+     * User experience analytics device settings
+     */
+    @SerializedName(value = "userExperienceAnalyticsSettings", alternate = {"UserExperienceAnalyticsSettings"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsSettings userExperienceAnalyticsSettings;
+
+    /**
+     * The Windows Malware Overview.
+     * Malware overview for windows devices.
+     */
+    @SerializedName(value = "windowsMalwareOverview", alternate = {"WindowsMalwareOverview"})
+    @Expose
+	@Nullable
+    public WindowsMalwareOverview windowsMalwareOverview;
 
     /**
      * The Terms And Conditions.
@@ -278,6 +331,222 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.ManagedDeviceCollectionPage managedDevices;
 
     /**
+     * The Mobile App Troubleshooting Events.
+     * The collection property of MobileAppTroubleshootingEvent.
+     */
+    @SerializedName(value = "mobileAppTroubleshootingEvents", alternate = {"MobileAppTroubleshootingEvents"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage mobileAppTroubleshootingEvents;
+
+    /**
+     * The User Experience Analytics App Health Application Performance.
+     * User experience analytics appHealth Application Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformance", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformance"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage userExperienceAnalyticsAppHealthApplicationPerformance;
+
+    /**
+     * The User Experience Analytics App Health Application Performance By App Version Details.
+     * User experience analytics appHealth Application Performance by App Version details
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
+
+    /**
+     * The User Experience Analytics App Health Application Performance By App Version Device Id.
+     * User experience analytics appHealth Application Performance by App Version Device Id
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
+
+    /**
+     * The User Experience Analytics App Health Application Performance By OSVersion.
+     * User experience analytics appHealth Application Performance by OS Version
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
+
+    /**
+     * The User Experience Analytics App Health Device Model Performance.
+     * User experience analytics appHealth Model Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthDeviceModelPerformance", alternate = {"UserExperienceAnalyticsAppHealthDeviceModelPerformance"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage userExperienceAnalyticsAppHealthDeviceModelPerformance;
+
+    /**
+     * The User Experience Analytics App Health Device Performance.
+     * User experience analytics appHealth Device Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthDevicePerformance", alternate = {"UserExperienceAnalyticsAppHealthDevicePerformance"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage userExperienceAnalyticsAppHealthDevicePerformance;
+
+    /**
+     * The User Experience Analytics App Health Device Performance Details.
+     * User experience analytics device performance details
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthDevicePerformanceDetails", alternate = {"UserExperienceAnalyticsAppHealthDevicePerformanceDetails"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage userExperienceAnalyticsAppHealthDevicePerformanceDetails;
+
+    /**
+     * The User Experience Analytics App Health OSVersion Performance.
+     * User experience analytics appHealth OS version Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthOSVersionPerformance", alternate = {"UserExperienceAnalyticsAppHealthOSVersionPerformance"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage userExperienceAnalyticsAppHealthOSVersionPerformance;
+
+    /**
+     * The User Experience Analytics App Health Overview.
+     * User experience analytics appHealth overview
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthOverview", alternate = {"UserExperienceAnalyticsAppHealthOverview"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsCategory userExperienceAnalyticsAppHealthOverview;
+
+    /**
+     * The User Experience Analytics Baselines.
+     * User experience analytics baselines
+     */
+    @SerializedName(value = "userExperienceAnalyticsBaselines", alternate = {"UserExperienceAnalyticsBaselines"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPage userExperienceAnalyticsBaselines;
+
+    /**
+     * The User Experience Analytics Categories.
+     * User experience analytics categories
+     */
+    @SerializedName(value = "userExperienceAnalyticsCategories", alternate = {"UserExperienceAnalyticsCategories"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage userExperienceAnalyticsCategories;
+
+    /**
+     * The User Experience Analytics Device Performance.
+     * User experience analytics device performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsDevicePerformance", alternate = {"UserExperienceAnalyticsDevicePerformance"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage userExperienceAnalyticsDevicePerformance;
+
+    /**
+     * The User Experience Analytics Device Scores.
+     * User experience analytics device scores
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceScores", alternate = {"UserExperienceAnalyticsDeviceScores"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage userExperienceAnalyticsDeviceScores;
+
+    /**
+     * The User Experience Analytics Device Startup History.
+     * User experience analytics device Startup History
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceStartupHistory", alternate = {"UserExperienceAnalyticsDeviceStartupHistory"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage userExperienceAnalyticsDeviceStartupHistory;
+
+    /**
+     * The User Experience Analytics Device Startup Processes.
+     * User experience analytics device Startup Processes
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceStartupProcesses", alternate = {"UserExperienceAnalyticsDeviceStartupProcesses"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage userExperienceAnalyticsDeviceStartupProcesses;
+
+    /**
+     * The User Experience Analytics Metric History.
+     * User experience analytics metric history
+     */
+    @SerializedName(value = "userExperienceAnalyticsMetricHistory", alternate = {"UserExperienceAnalyticsMetricHistory"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsMetricHistory;
+
+    /**
+     * The User Experience Analytics Model Scores.
+     * User experience analytics model scores
+     */
+    @SerializedName(value = "userExperienceAnalyticsModelScores", alternate = {"UserExperienceAnalyticsModelScores"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage userExperienceAnalyticsModelScores;
+
+    /**
+     * The User Experience Analytics Overview.
+     * User experience analytics overview
+     */
+    @SerializedName(value = "userExperienceAnalyticsOverview", alternate = {"UserExperienceAnalyticsOverview"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsOverview userExperienceAnalyticsOverview;
+
+    /**
+     * The User Experience Analytics Score History.
+     * User experience analytics device Startup Score History
+     */
+    @SerializedName(value = "userExperienceAnalyticsScoreHistory", alternate = {"UserExperienceAnalyticsScoreHistory"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage userExperienceAnalyticsScoreHistory;
+
+    /**
+     * The User Experience Analytics Work From Anywhere Hardware Readiness Metric.
+     * User experience analytics work from anywhere hardware readiness metrics.
+     */
+    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", alternate = {"UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
+
+    /**
+     * The User Experience Analytics Work From Anywhere Metrics.
+     * User experience analytics work from anywhere metrics.
+     */
+    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereMetrics", alternate = {"UserExperienceAnalyticsWorkFromAnywhereMetrics"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage userExperienceAnalyticsWorkFromAnywhereMetrics;
+
+    /**
+     * The User Experience Analytics Work From Anywhere Model Performance.
+     * The user experience analytics work from anywhere model performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereModelPerformance", alternate = {"UserExperienceAnalyticsWorkFromAnywhereModelPerformance"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage userExperienceAnalyticsWorkFromAnywhereModelPerformance;
+
+    /**
+     * The Windows Malware Information.
+     * The list of affected malware in the tenant.
+     */
+    @SerializedName(value = "windowsMalwareInformation", alternate = {"WindowsMalwareInformation"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage windowsMalwareInformation;
+
+    /**
      * The Imported Windows Autopilot Device Identities.
      * Collection of imported Windows autopilot devices.
      */
@@ -449,6 +718,90 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("managedDevices")) {
             managedDevices = serializer.deserializeObject(json.get("managedDevices"), com.microsoft.graph.requests.ManagedDeviceCollectionPage.class);
+        }
+
+        if (json.has("mobileAppTroubleshootingEvents")) {
+            mobileAppTroubleshootingEvents = serializer.deserializeObject(json.get("mobileAppTroubleshootingEvents"), com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformance")) {
+            userExperienceAnalyticsAppHealthApplicationPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails")) {
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId")) {
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion")) {
+            userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthDeviceModelPerformance")) {
+            userExperienceAnalyticsAppHealthDeviceModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDeviceModelPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthDevicePerformance")) {
+            userExperienceAnalyticsAppHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthDevicePerformanceDetails")) {
+            userExperienceAnalyticsAppHealthDevicePerformanceDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthDevicePerformanceDetails"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthOSVersionPerformance")) {
+            userExperienceAnalyticsAppHealthOSVersionPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthOSVersionPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsBaselines")) {
+            userExperienceAnalyticsBaselines = serializer.deserializeObject(json.get("userExperienceAnalyticsBaselines"), com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsCategories")) {
+            userExperienceAnalyticsCategories = serializer.deserializeObject(json.get("userExperienceAnalyticsCategories"), com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsDevicePerformance")) {
+            userExperienceAnalyticsDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicePerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsDeviceScores")) {
+            userExperienceAnalyticsDeviceScores = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScores"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsDeviceStartupHistory")) {
+            userExperienceAnalyticsDeviceStartupHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsDeviceStartupProcesses")) {
+            userExperienceAnalyticsDeviceStartupProcesses = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcesses"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsMetricHistory")) {
+            userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsModelScores")) {
+            userExperienceAnalyticsModelScores = serializer.deserializeObject(json.get("userExperienceAnalyticsModelScores"), com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsScoreHistory")) {
+            userExperienceAnalyticsScoreHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsScoreHistory"), com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsWorkFromAnywhereMetrics")) {
+            userExperienceAnalyticsWorkFromAnywhereMetrics = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereMetrics"), com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsWorkFromAnywhereModelPerformance")) {
+            userExperienceAnalyticsWorkFromAnywhereModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereModelPerformance"), com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionPage.class);
+        }
+
+        if (json.has("windowsMalwareInformation")) {
+            windowsMalwareInformation = serializer.deserializeObject(json.get("windowsMalwareInformation"), com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage.class);
         }
 
         if (json.has("importedWindowsAutopilotDeviceIdentities")) {

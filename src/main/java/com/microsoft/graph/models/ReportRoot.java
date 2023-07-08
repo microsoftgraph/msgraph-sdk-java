@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AuthenticationMethodsRoot;
 import com.microsoft.graph.models.SecurityReportsRoot;
 
 
@@ -38,6 +39,15 @@ public class ReportRoot implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Authentication Methods.
+     * 
+     */
+    @SerializedName(value = "authenticationMethods", alternate = {"AuthenticationMethods"})
+    @Expose
+	@Nullable
+    public AuthenticationMethodsRoot authenticationMethods;
 
     /**
      * The Daily Print Usage By Printer.

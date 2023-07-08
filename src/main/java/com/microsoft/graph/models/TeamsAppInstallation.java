@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.TeamsAppPermissionSet;
 import com.microsoft.graph.models.TeamsApp;
 import com.microsoft.graph.models.TeamsAppDefinition;
 import com.microsoft.graph.models.Entity;
@@ -26,6 +27,15 @@ import javax.annotation.Nonnull;
  */
 public class TeamsAppInstallation extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Consented Permission Set.
+     * 
+     */
+    @SerializedName(value = "consentedPermissionSet", alternate = {"ConsentedPermissionSet"})
+    @Expose
+	@Nullable
+    public TeamsAppPermissionSet consentedPermissionSet;
 
     /**
      * The Teams App.

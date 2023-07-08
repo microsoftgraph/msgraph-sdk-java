@@ -56,6 +56,10 @@ public enum DetectedAppPlatformType
     */
     ANDROID_DEDICATED_AND_FULLY_MANAGED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DetectedAppPlatformType values that were not expected from the service
     */
     UNEXPECTED_VALUE

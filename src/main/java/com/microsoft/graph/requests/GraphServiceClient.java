@@ -1022,11 +1022,31 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the IdentityGovernance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IdentityGovernanceRequestBuilder identityGovernance() {
+        return new com.microsoft.graph.requests.IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the AuditLogRoot
      */
     @Nonnull
     public com.microsoft.graph.requests.AuditLogRootRequestBuilder auditLogs() {
         return new com.microsoft.graph.requests.AuditLogRootRequestBuilder(getServiceRoot() + "/auditLogs", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the ReportRoot
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ReportRootRequestBuilder reports() {
+        return new com.microsoft.graph.requests.ReportRootRequestBuilder(getServiceRoot() + "/reports", this, null);
     }
 
     /**
@@ -1172,16 +1192,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the IdentityGovernance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.IdentityGovernanceRequestBuilder identityGovernance() {
-        return new com.microsoft.graph.requests.IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the IdentityProtectionRoot
      */
     @Nonnull
@@ -1207,16 +1217,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.DeviceManagementRequestBuilder deviceManagement() {
         return new com.microsoft.graph.requests.DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the ReportRoot
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ReportRootRequestBuilder reports() {
-        return new com.microsoft.graph.requests.ReportRootRequestBuilder(getServiceRoot() + "/reports", this, null);
     }
 
     /**

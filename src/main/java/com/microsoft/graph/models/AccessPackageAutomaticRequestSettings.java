@@ -39,7 +39,7 @@ public class AccessPackageAutomaticRequestSettings implements IJsonBackedObject 
 
     /**
      * The Grace Period Before Access Removal.
-     * 
+     * The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
      */
     @SerializedName(value = "gracePeriodBeforeAccessRemoval", alternate = {"GracePeriodBeforeAccessRemoval"})
     @Expose
@@ -48,7 +48,7 @@ public class AccessPackageAutomaticRequestSettings implements IJsonBackedObject 
 
     /**
      * The Remove Access When Target Leaves Allowed Targets.
-     * 
+     * Indicates whether automatic assignment must be removed for targets who move out of the allowed target scope.
      */
     @SerializedName(value = "removeAccessWhenTargetLeavesAllowedTargets", alternate = {"RemoveAccessWhenTargetLeavesAllowedTargets"})
     @Expose

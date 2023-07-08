@@ -39,7 +39,7 @@ public class ContentTypeInfo implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The id of the content type.
+     * The ID of the content type.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

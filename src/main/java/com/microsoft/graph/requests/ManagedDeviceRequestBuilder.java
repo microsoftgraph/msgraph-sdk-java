@@ -113,6 +113,26 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
         return new com.microsoft.graph.requests.DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the DeviceLogCollectionResponse collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests() {
+        return new com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceLogCollectionResponse item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLogCollectionResponseRequestBuilder logCollectionRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceLogCollectionResponseRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the User collection
      *
      * @return the collection request builder
@@ -131,6 +151,16 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public com.microsoft.graph.requests.UserWithReferenceRequestBuilder users(@Nonnull final String id) {
         return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for WindowsProtectionState
+     *
+     * @return the WindowsProtectionStateRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsProtectionStateRequestBuilder windowsProtectionState() {
+        return new com.microsoft.graph.requests.WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionState"), getClient(), null);
     }
 
     /**

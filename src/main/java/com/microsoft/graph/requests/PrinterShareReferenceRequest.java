@@ -70,7 +70,7 @@ public class PrinterShareReferenceRequest extends BaseReferenceRequest<PrinterSh
     @Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> putAsync(@Nonnull final PrinterShare srcPrinterShare) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/print/shares/" + srcPrinterShare.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/recentPrinterShares/" + srcPrinterShare.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class PrinterShareReferenceRequest extends BaseReferenceRequest<PrinterSh
     @Nullable
     public PrinterShare put(@Nonnull final PrinterShare srcPrinterShare) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/print/shares/" + srcPrinterShare.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/recentPrinterShares/" + srcPrinterShare.id));
         return send(HttpMethod.PUT, payload);
     }
 }

@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagement;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevicesSummary;
 import com.microsoft.graph.models.RolePermission;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -400,6 +401,456 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.ManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the MobileAppTroubleshootingEvent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionRequestBuilder mobileAppTroubleshootingEvents() {
+        return new com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppTroubleshootingEvents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MobileAppTroubleshootingEvent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MobileAppTroubleshootingEventRequestBuilder mobileAppTroubleshootingEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MobileAppTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppTroubleshootingEvents") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthApplicationPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthApplicationPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformance") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthDeviceModelPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthDeviceModelPerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthDeviceModelPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthDeviceModelPerformance") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthDevicePerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthDevicePerformance() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthDevicePerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthDevicePerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder userExperienceAnalyticsAppHealthDevicePerformance(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthDevicePerformance") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthDevicePerformanceDetails collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthDevicePerformanceDetails"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthDevicePerformanceDetails item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthDevicePerformanceDetails") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthOSVersionPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthOSVersionPerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthOSVersionPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthOSVersionPerformance") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the UserExperienceAnalyticsCategoryRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryRequestBuilder userExperienceAnalyticsAppHealthOverview() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthOverview"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsBaseline collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionRequestBuilder userExperienceAnalyticsBaselines() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBaselines"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsBaseline item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsBaselineRequestBuilder userExperienceAnalyticsBaselines(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsBaselineRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBaselines") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsCategory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionRequestBuilder userExperienceAnalyticsCategories() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsCategories"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsCategoryRequestBuilder userExperienceAnalyticsCategories(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsCategories") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsDevicePerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder userExperienceAnalyticsDevicePerformance() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicePerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsDevicePerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceRequestBuilder userExperienceAnalyticsDevicePerformance(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicePerformance") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsDeviceScores collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionRequestBuilder userExperienceAnalyticsDeviceScores() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceScores"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsDeviceScores item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresRequestBuilder userExperienceAnalyticsDeviceScores(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceScores") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsDeviceStartupHistory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionRequestBuilder userExperienceAnalyticsDeviceStartupHistory() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceStartupHistory"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsDeviceStartupHistory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder userExperienceAnalyticsDeviceStartupHistory(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceStartupHistory") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsDeviceStartupProcess collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionRequestBuilder userExperienceAnalyticsDeviceStartupProcesses() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceStartupProcesses"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsDeviceStartupProcess item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessRequestBuilder userExperienceAnalyticsDeviceStartupProcesses(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceStartupProcesses") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsMetricHistory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsMetricHistory() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetricHistory"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsMetricHistory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetricHistory") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsModelScores collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionRequestBuilder userExperienceAnalyticsModelScores() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsModelScores"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsModelScores item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresRequestBuilder userExperienceAnalyticsModelScores(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsModelScores") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsOverview
+     *
+     * @return the UserExperienceAnalyticsOverviewRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder userExperienceAnalyticsOverview() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsOverview"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsScoreHistory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionRequestBuilder userExperienceAnalyticsScoreHistory() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsScoreHistory"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsScoreHistory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryRequestBuilder userExperienceAnalyticsScoreHistory(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsScoreHistory") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     *
+     * @return the UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereMetric collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereMetric item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereMetrics") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereModelPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereModelPerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereModelPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereModelPerformance") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsMalwareInformation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsMalwareInformationCollectionRequestBuilder windowsMalwareInformation() {
+        return new com.microsoft.graph.requests.WindowsMalwareInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsMalwareInformation"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsMalwareInformation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsMalwareInformationRequestBuilder windowsMalwareInformation(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsMalwareInformationRequestBuilder(getRequestUrlWithAdditionalSegment("windowsMalwareInformation") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ImportedWindowsAutopilotDeviceIdentity collection
      *
      * @return the collection request builder
@@ -638,6 +1089,15 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder verifyWindowsEnrollmentAutoDiscovery(@Nonnull final DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet parameters) {
         return new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verifyWindowsEnrollmentAutoDiscovery"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public DeviceManagementUserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder userExperienceAnalyticsSummarizeWorkFromAnywhereDevices() {
+        return new DeviceManagementUserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.userExperienceAnalyticsSummarizeWorkFromAnywhereDevices"), getClient(), null);
     }
 
     /**

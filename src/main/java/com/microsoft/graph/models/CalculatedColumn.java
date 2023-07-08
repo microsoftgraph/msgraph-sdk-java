@@ -39,7 +39,7 @@ public class CalculatedColumn implements IJsonBackedObject {
 
     /**
      * The Format.
-     * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+     * For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
@@ -57,7 +57,7 @@ public class CalculatedColumn implements IJsonBackedObject {
 
     /**
      * The Output Type.
-     * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+     * The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
      */
     @SerializedName(value = "outputType", alternate = {"OutputType"})
     @Expose

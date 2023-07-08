@@ -26,6 +26,24 @@ public class PrintUsage extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Black And White Page Count.
+     * 
+     */
+    @SerializedName(value = "blackAndWhitePageCount", alternate = {"BlackAndWhitePageCount"})
+    @Expose
+	@Nullable
+    public Long blackAndWhitePageCount;
+
+    /**
+     * The Color Page Count.
+     * 
+     */
+    @SerializedName(value = "colorPageCount", alternate = {"ColorPageCount"})
+    @Expose
+	@Nullable
+    public Long colorPageCount;
+
+    /**
      * The Completed Black And White Job Count.
      * 
      */
@@ -44,6 +62,24 @@ public class PrintUsage extends Entity implements IJsonBackedObject {
     public Long completedColorJobCount;
 
     /**
+     * The Completed Job Count.
+     * 
+     */
+    @SerializedName(value = "completedJobCount", alternate = {"CompletedJobCount"})
+    @Expose
+	@Nullable
+    public Long completedJobCount;
+
+    /**
+     * The Double Sided Sheet Count.
+     * 
+     */
+    @SerializedName(value = "doubleSidedSheetCount", alternate = {"DoubleSidedSheetCount"})
+    @Expose
+	@Nullable
+    public Long doubleSidedSheetCount;
+
+    /**
      * The Incomplete Job Count.
      * 
      */
@@ -51,6 +87,33 @@ public class PrintUsage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Long incompleteJobCount;
+
+    /**
+     * The Media Sheet Count.
+     * 
+     */
+    @SerializedName(value = "mediaSheetCount", alternate = {"MediaSheetCount"})
+    @Expose
+	@Nullable
+    public Long mediaSheetCount;
+
+    /**
+     * The Page Count.
+     * 
+     */
+    @SerializedName(value = "pageCount", alternate = {"PageCount"})
+    @Expose
+	@Nullable
+    public Long pageCount;
+
+    /**
+     * The Single Sided Sheet Count.
+     * 
+     */
+    @SerializedName(value = "singleSidedSheetCount", alternate = {"SingleSidedSheetCount"})
+    @Expose
+	@Nullable
+    public Long singleSidedSheetCount;
 
     /**
      * The Usage Date.

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.requests.LearningCourseActivityCollectionPage;
 import com.microsoft.graph.requests.LearningProviderCollectionPage;
 
 
@@ -40,6 +41,15 @@ public class EmployeeExperience implements IJsonBackedObject {
     }
 
     /**
+     * The Learning Course Activities.
+     * 
+     */
+    @SerializedName(value = "learningCourseActivities", alternate = {"LearningCourseActivities"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.LearningCourseActivityCollectionPage learningCourseActivities;
+
+    /**
      * The Learning Providers.
      * A collection of learning providers.
      */
@@ -57,6 +67,10 @@ public class EmployeeExperience implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("learningCourseActivities")) {
+            learningCourseActivities = serializer.deserializeObject(json.get("learningCourseActivities"), com.microsoft.graph.requests.LearningCourseActivityCollectionPage.class);
+        }
 
         if (json.has("learningProviders")) {
             learningProviders = serializer.deserializeObject(json.get("learningProviders"), com.microsoft.graph.requests.LearningProviderCollectionPage.class);

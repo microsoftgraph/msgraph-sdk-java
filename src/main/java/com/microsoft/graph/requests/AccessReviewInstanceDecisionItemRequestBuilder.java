@@ -57,4 +57,24 @@ public class AccessReviewInstanceDecisionItemRequestBuilder extends BaseRequestB
     }
 
 
+    /**
+     *  Gets a request builder for the GovernanceInsight collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.GovernanceInsightCollectionRequestBuilder insights() {
+        return new com.microsoft.graph.requests.GovernanceInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("insights"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the GovernanceInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.GovernanceInsightRequestBuilder insights(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.GovernanceInsightRequestBuilder(getRequestUrlWithAdditionalSegment("insights") + "/" + id, getClient(), null);
+    }
 }
