@@ -39,7 +39,6 @@ public class CustomBatchRequestBuilder extends BatchRequestBuilder {
         Map<String, ParsableFactory<? extends Parsable>> batchErrorMappings = errorMappings == null ? getDefaultErrorMappings() : errorMappings;
         return super.post(requestContent, batchErrorMappings);
     }
-
     /**
      * Sends out the BatchRequestContentCollection using the POST method.
      * @param requestContentCollection the BatchRequestContentCollection to post.
@@ -52,6 +51,7 @@ public class CustomBatchRequestBuilder extends BatchRequestBuilder {
         Map<String, ParsableFactory<? extends Parsable>> batchErrorMappings = errorMappings == null ? getDefaultErrorMappings() : errorMappings;
         return super.post(requestContentCollection, batchErrorMappings);
     }
+
     private Map<String, ParsableFactory<? extends Parsable>> getDefaultErrorMappings() {
         Map<String, ParsableFactory<? extends Parsable>> errorMappings = new HashMap<>();
         errorMappings.put("4XX", ODataError::createFromDiscriminatorValue);
