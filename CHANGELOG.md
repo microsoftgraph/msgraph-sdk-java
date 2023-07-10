@@ -11,6 +11,66 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.63.0] - 2023-07-07
+
+### Added 
+
+- AccessReviewRecommendationInsightSetting model.
+- AppLog derived types and requests.
+- AssignmentType model.
+- AuthenticationMethod derived types and requests.
+- AzureAdPopTokenAuthentication model.
+- CourseStatus model.
+- CustomExtension model, derived types, and requests.
+- DeletedItemContainer model and requests.
+- DeviceLog derived types and requests.
+- DeviceManagement derived types and requests. 
+- DeviceProtectionOverview model.
+- DriveItemSensitivity derived types and requests.
+- EmailSettings model.
+- EmployeeExperienceUser model and requests.
+- FeatureType model.
+- GovernanceInsight model and requests. 
+- GroupPeerOutlierRecommendationInsightSettings model.
+- IncludedUser models.
+- Learning derived types and requests.
+- LogicAppTriggerEndpointConfiguration model.
+- MacOSMicrosoftDefenderApp model and requests.
+- MalwareStateForWindowsDevice model and requests.
+- MembershipOutlierInsight model and requests.
+- MobileAppTroubleshootingEvent model and requests. 
+- TeamsApp derived types and requests.
+- UserRegistration derived types and requests.
+- UserExperienceAnalytics derived types and requests.
+- The IdentityGovernance namespace was added, this includes models and requests.
+- The Security namespace was updated, this includes models and requests. 
+
+## [5.62.0] - 2023-06-23
+
+### Changed 
+
+- Generated v1.0 models and request builders using Typewriter.
+
+## [5.61.0] - 2023-06-16
+
+### Changed 
+
+- Generated v1.0 models and request builders using Typewriter.
+
+## [5.60.0] - 2023-06-09
+
+### Added 
+
+- LayoutTemplateType model. 
+- LoginPageLayoutConfiguration model. 
+- LoginPageTextVisibilitySettings model. 
+- OrganizationalBrandingProperties derived requests.
+- The following models have been added to the security namespace. 
+- AmazonResourceEvidence
+- AzureResourceEvidence
+- GoogleCloudLocationType
+- GoogleCloudResourceEvidence
+
 ## [5.59.0] - 2023-05-26
 
 ### Added 
