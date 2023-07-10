@@ -87,10 +87,13 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
     public RequestAdapter getRequestAdapter() {
         return this.requestAdapter;
     }
-
+    /**
+     * Gets the BatchRequestBuilder for the GraphServiceClient.
+     * @return the BatchRequestBuilder for the GraphServiceClient.
+     */
     @NotNull
     @Override
     public BatchRequestBuilder getBatchRequestBuilder() {
-        return null;
+        return new CustomBatchRequestBuilder(this.requestAdapter);
     }
 }
