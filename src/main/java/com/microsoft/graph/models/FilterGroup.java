@@ -41,7 +41,7 @@ public class FilterGroup implements IJsonBackedObject {
 
     /**
      * The Clauses.
-     * 
+     * Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
      */
     @SerializedName(value = "clauses", alternate = {"Clauses"})
     @Expose
@@ -50,7 +50,7 @@ public class FilterGroup implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Human-readable name of the filter group.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

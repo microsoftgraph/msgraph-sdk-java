@@ -196,6 +196,86 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
     public com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder connectedOrganizations(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the AccessPackageResourceEnvironment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionRequestBuilder resourceEnvironments() {
+        return new com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceEnvironments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResourceEnvironment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceEnvironmentRequestBuilder resourceEnvironments(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceEnvironmentRequestBuilder(getRequestUrlWithAdditionalSegment("resourceEnvironments") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageResourceRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRequestCollectionRequestBuilder resourceRequests() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRequests"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResourceRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRequestRequestBuilder resourceRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRequests") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageResourceRoleScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder resourceRoleScopes() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRoleScopes"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResourceRoleScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder resourceRoleScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRoleScopes") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder resources() {
+        return new com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRequestBuilder resources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for EntitlementManagementSettings

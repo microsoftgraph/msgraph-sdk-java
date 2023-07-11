@@ -50,7 +50,7 @@ public class SynchronizationLinkedObjects implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * All group members that you would like to provision.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

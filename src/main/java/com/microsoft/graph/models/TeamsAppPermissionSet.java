@@ -41,7 +41,7 @@ public class TeamsAppPermissionSet implements IJsonBackedObject {
 
     /**
      * The Resource Specific Permissions.
-     * 
+     * A collection of resource-specific permissions.
      */
     @SerializedName(value = "resourceSpecificPermissions", alternate = {"ResourceSpecificPermissions"})
     @Expose

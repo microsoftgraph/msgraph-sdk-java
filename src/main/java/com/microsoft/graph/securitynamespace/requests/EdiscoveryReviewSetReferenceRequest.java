@@ -11,6 +11,8 @@ import com.microsoft.graph.security.models.EdiscoveryReviewSet;
 import com.microsoft.graph.security.models.EdiscoverySearch;
 import com.microsoft.graph.security.models.AdditionalDataOptions;
 import java.util.EnumSet;
+import com.microsoft.graph.security.models.ExportOptions;
+import com.microsoft.graph.security.models.ExportFileStructure;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

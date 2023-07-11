@@ -40,7 +40,7 @@ public class SynchronizationMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -49,7 +49,7 @@ public class SynchronizationMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value of the metadata property.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

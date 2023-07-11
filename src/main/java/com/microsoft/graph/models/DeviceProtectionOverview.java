@@ -39,7 +39,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Clean Device Count.
-     * Clean device count.
+     * Indicates number of devices reporting as clean
      */
     @SerializedName(value = "cleanDeviceCount", alternate = {"CleanDeviceCount"})
     @Expose
@@ -48,7 +48,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Critical Failures Device Count.
-     * Critical failures device count.
+     * Indicates number of devices with critical failures
      */
     @SerializedName(value = "criticalFailuresDeviceCount", alternate = {"CriticalFailuresDeviceCount"})
     @Expose
@@ -57,7 +57,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Inactive Threat Agent Device Count.
-     * Device with inactive threat agent count
+     * Indicates number of devices with inactive threat agent
      */
     @SerializedName(value = "inactiveThreatAgentDeviceCount", alternate = {"InactiveThreatAgentDeviceCount"})
     @Expose
@@ -66,7 +66,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Pending Full Scan Device Count.
-     * Pending full scan device count.
+     * Indicates number of devices pending full scan
      */
     @SerializedName(value = "pendingFullScanDeviceCount", alternate = {"PendingFullScanDeviceCount"})
     @Expose
@@ -75,7 +75,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Pending Manual Steps Device Count.
-     * Pending manual steps device count.
+     * Indicates number of devices with pending manual steps
      */
     @SerializedName(value = "pendingManualStepsDeviceCount", alternate = {"PendingManualStepsDeviceCount"})
     @Expose
@@ -84,7 +84,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Pending Offline Scan Device Count.
-     * Pending offline scan device count.
+     * Indicates number of pending offline scan devices
      */
     @SerializedName(value = "pendingOfflineScanDeviceCount", alternate = {"PendingOfflineScanDeviceCount"})
     @Expose
@@ -93,7 +93,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Pending Quick Scan Device Count.
-     * Pending quick scan device count. Valid values -2147483648 to 2147483647
+     * Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "pendingQuickScanDeviceCount", alternate = {"PendingQuickScanDeviceCount"})
     @Expose
@@ -102,7 +102,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Pending Restart Device Count.
-     * Pending restart device count.
+     * Indicates number of devices pending restart
      */
     @SerializedName(value = "pendingRestartDeviceCount", alternate = {"PendingRestartDeviceCount"})
     @Expose
@@ -111,7 +111,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Pending Signature Update Device Count.
-     * Device with old signature count.
+     * Indicates number of devices with an old signature
      */
     @SerializedName(value = "pendingSignatureUpdateDeviceCount", alternate = {"PendingSignatureUpdateDeviceCount"})
     @Expose
@@ -129,7 +129,7 @@ public class DeviceProtectionOverview implements IJsonBackedObject {
 
     /**
      * The Unknown State Threat Agent Device Count.
-     * Device with threat agent state as unknown count.
+     * Indicates number of devices with threat agent state as unknown
      */
     @SerializedName(value = "unknownStateThreatAgentDeviceCount", alternate = {"UnknownStateThreatAgentDeviceCount"})
     @Expose

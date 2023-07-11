@@ -40,7 +40,7 @@ public class TeamsAppResourceSpecificPermission implements IJsonBackedObject {
 
     /**
      * The Permission Type.
-     * 
+     * The type of resource-specific permission.
      */
     @SerializedName(value = "permissionType", alternate = {"PermissionType"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamsAppResourceSpecificPermission implements IJsonBackedObject {
 
     /**
      * The Permission Value.
-     * 
+     * The name of the resource-specific permission.
      */
     @SerializedName(value = "permissionValue", alternate = {"PermissionValue"})
     @Expose

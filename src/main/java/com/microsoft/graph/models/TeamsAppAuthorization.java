@@ -40,7 +40,7 @@ public class TeamsAppAuthorization implements IJsonBackedObject {
 
     /**
      * The Required Permission Set.
-     * 
+     * Set of permissions required by the teamsApp.
      */
     @SerializedName(value = "requiredPermissionSet", alternate = {"RequiredPermissionSet"})
     @Expose

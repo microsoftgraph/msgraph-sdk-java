@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage;
 import com.microsoft.graph.requests.GroupCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -115,6 +116,15 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.GroupCollectionPage incompatibleGroups;
 
+    /**
+     * The Resource Role Scopes.
+     * 
+     */
+    @SerializedName(value = "resourceRoleScopes", alternate = {"ResourceRoleScopes"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage resourceRoleScopes;
+
 
     /**
      * Sets the raw JSON object
@@ -139,6 +149,10 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
         if (json.has("incompatibleGroups")) {
             incompatibleGroups = serializer.deserializeObject(json.get("incompatibleGroups"), com.microsoft.graph.requests.GroupCollectionPage.class);
+        }
+
+        if (json.has("resourceRoleScopes")) {
+            resourceRoleScopes = serializer.deserializeObject(json.get("resourceRoleScopes"), com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage.class);
         }
     }
 }

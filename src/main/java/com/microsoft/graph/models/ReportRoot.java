@@ -42,7 +42,7 @@ public class ReportRoot implements IJsonBackedObject {
 
     /**
      * The Authentication Methods.
-     * 
+     * Container for navigation properties for Azure AD authentication methods resources.
      */
     @SerializedName(value = "authenticationMethods", alternate = {"AuthenticationMethods"})
     @Expose
@@ -51,7 +51,7 @@ public class ReportRoot implements IJsonBackedObject {
 
     /**
      * The Daily Print Usage By Printer.
-     * 
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      */
     @SerializedName(value = "dailyPrintUsageByPrinter", alternate = {"DailyPrintUsageByPrinter"})
     @Expose
@@ -60,7 +60,7 @@ public class ReportRoot implements IJsonBackedObject {
 
     /**
      * The Daily Print Usage By User.
-     * 
+     * Retrieve a list of daily print usage summaries, grouped by user.
      */
     @SerializedName(value = "dailyPrintUsageByUser", alternate = {"DailyPrintUsageByUser"})
     @Expose
@@ -69,7 +69,7 @@ public class ReportRoot implements IJsonBackedObject {
 
     /**
      * The Monthly Print Usage By Printer.
-     * 
+     * Retrieve a list of monthly print usage summaries, grouped by printer.
      */
     @SerializedName(value = "monthlyPrintUsageByPrinter", alternate = {"MonthlyPrintUsageByPrinter"})
     @Expose
@@ -78,7 +78,7 @@ public class ReportRoot implements IJsonBackedObject {
 
     /**
      * The Monthly Print Usage By User.
-     * 
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      */
     @SerializedName(value = "monthlyPrintUsageByUser", alternate = {"MonthlyPrintUsageByUser"})
     @Expose
@@ -87,7 +87,7 @@ public class ReportRoot implements IJsonBackedObject {
 
     /**
      * The Security.
-     * 
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      */
     @SerializedName(value = "security", alternate = {"Security"})
     @Expose

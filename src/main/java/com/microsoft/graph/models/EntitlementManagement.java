@@ -18,6 +18,10 @@ import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage
 import com.microsoft.graph.requests.AccessPackageAssignmentCollectionPage;
 import com.microsoft.graph.requests.AccessPackageCatalogCollectionPage;
 import com.microsoft.graph.requests.ConnectedOrganizationCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceRequestCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -98,6 +102,42 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.ConnectedOrganizationCollectionPage connectedOrganizations;
 
     /**
+     * The Resource Environments.
+     * 
+     */
+    @SerializedName(value = "resourceEnvironments", alternate = {"ResourceEnvironments"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionPage resourceEnvironments;
+
+    /**
+     * The Resource Requests.
+     * 
+     */
+    @SerializedName(value = "resourceRequests", alternate = {"ResourceRequests"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceRequestCollectionPage resourceRequests;
+
+    /**
+     * The Resource Role Scopes.
+     * 
+     */
+    @SerializedName(value = "resourceRoleScopes", alternate = {"ResourceRoleScopes"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage resourceRoleScopes;
+
+    /**
+     * The Resources.
+     * 
+     */
+    @SerializedName(value = "resources", alternate = {"Resources"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionPage resources;
+
+    /**
      * The Settings.
      * The settings that control the behavior of Azure AD entitlement management.
      */
@@ -142,6 +182,22 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("connectedOrganizations")) {
             connectedOrganizations = serializer.deserializeObject(json.get("connectedOrganizations"), com.microsoft.graph.requests.ConnectedOrganizationCollectionPage.class);
+        }
+
+        if (json.has("resourceEnvironments")) {
+            resourceEnvironments = serializer.deserializeObject(json.get("resourceEnvironments"), com.microsoft.graph.requests.AccessPackageResourceEnvironmentCollectionPage.class);
+        }
+
+        if (json.has("resourceRequests")) {
+            resourceRequests = serializer.deserializeObject(json.get("resourceRequests"), com.microsoft.graph.requests.AccessPackageResourceRequestCollectionPage.class);
+        }
+
+        if (json.has("resourceRoleScopes")) {
+            resourceRoleScopes = serializer.deserializeObject(json.get("resourceRoleScopes"), com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionPage.class);
+        }
+
+        if (json.has("resources")) {
+            resources = serializer.deserializeObject(json.get("resources"), com.microsoft.graph.requests.AccessPackageResourceCollectionPage.class);
         }
     }
 }

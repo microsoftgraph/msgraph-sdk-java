@@ -45,7 +45,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Code.
-     * 
+     * High-level status code of the synchronization job. Possible values are: NotConfigured, NotRun, Active, Paused, Quarantine.
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -54,7 +54,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Count Successive Complete Failures.
-     * 
+     * Number of consecutive times this job failed.
      */
     @SerializedName(value = "countSuccessiveCompleteFailures", alternate = {"CountSuccessiveCompleteFailures"})
     @Expose
@@ -63,7 +63,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Escrows Pruned.
-     * 
+     * true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      */
     @SerializedName(value = "escrowsPruned", alternate = {"EscrowsPruned"})
     @Expose
@@ -72,7 +72,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Last Execution.
-     * 
+     * Details of the last execution of the job.
      */
     @SerializedName(value = "lastExecution", alternate = {"LastExecution"})
     @Expose
@@ -81,7 +81,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Last Successful Execution.
-     * 
+     * Details of the last execution of this job, which didn't have any errors.
      */
     @SerializedName(value = "lastSuccessfulExecution", alternate = {"LastSuccessfulExecution"})
     @Expose
@@ -90,7 +90,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Last Successful Execution With Exports.
-     * 
+     * Details of the last execution of the job, which exported objects into the target directory.
      */
     @SerializedName(value = "lastSuccessfulExecutionWithExports", alternate = {"LastSuccessfulExecutionWithExports"})
     @Expose
@@ -99,7 +99,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Progress.
-     * 
+     * Details of the progress of a job toward completion.
      */
     @SerializedName(value = "progress", alternate = {"Progress"})
     @Expose
@@ -108,7 +108,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Quarantine.
-     * 
+     * If job is in quarantine, quarantine details.
      */
     @SerializedName(value = "quarantine", alternate = {"Quarantine"})
     @Expose
@@ -117,7 +117,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Steady State First Achieved Time.
-     * 
+     * The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "steadyStateFirstAchievedTime", alternate = {"SteadyStateFirstAchievedTime"})
     @Expose
@@ -126,7 +126,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Steady State Last Achieved Time.
-     * 
+     * The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "steadyStateLastAchievedTime", alternate = {"SteadyStateLastAchievedTime"})
     @Expose
@@ -135,7 +135,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Synchronized Entry Count By Type.
-     * 
+     * Count of synchronized objects, listed by object type.
      */
     @SerializedName(value = "synchronizedEntryCountByType", alternate = {"SynchronizedEntryCountByType"})
     @Expose
@@ -144,7 +144,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Troubleshooting Url.
-     * 
+     * In the event of an error, the URL with the troubleshooting steps for the issue.
      */
     @SerializedName(value = "troubleshootingUrl", alternate = {"TroubleshootingUrl"})
     @Expose
