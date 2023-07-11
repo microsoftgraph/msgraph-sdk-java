@@ -77,6 +77,26 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
         return new com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("catalog"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the CustomExtensionStageSetting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomExtensionStageSettingCollectionRequestBuilder customExtensionStageSettings() {
+        return new com.microsoft.graph.requests.CustomExtensionStageSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customExtensionStageSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomExtensionStageSetting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomExtensionStageSettingRequestBuilder customExtensionStageSettings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomExtensionStageSettingRequestBuilder(getRequestUrlWithAdditionalSegment("customExtensionStageSettings") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AccessPackageQuestion collection
      *
      * @return the collection request builder

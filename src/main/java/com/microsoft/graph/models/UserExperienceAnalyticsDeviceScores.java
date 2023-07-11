@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Health Status.
-     * The health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only.
+     * The health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

@@ -30,7 +30,7 @@ public class TeamsAppInstallation extends Entity implements IJsonBackedObject {
 
     /**
      * The Consented Permission Set.
-     * 
+     * The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
      */
     @SerializedName(value = "consentedPermissionSet", alternate = {"ConsentedPermissionSet"})
     @Expose

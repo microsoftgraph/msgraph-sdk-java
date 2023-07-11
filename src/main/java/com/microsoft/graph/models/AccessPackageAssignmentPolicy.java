@@ -19,6 +19,7 @@ import com.microsoft.graph.models.SubjectSet;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.CustomExtensionStageSettingCollectionPage;
 import com.microsoft.graph.requests.AccessPackageQuestionCollectionPage;
 
 
@@ -154,6 +155,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     public AccessPackageCatalog catalog;
 
     /**
+     * The Custom Extension Stage Settings.
+     * 
+     */
+    @SerializedName(value = "customExtensionStageSettings", alternate = {"CustomExtensionStageSettings"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CustomExtensionStageSettingCollectionPage customExtensionStageSettings;
+
+    /**
      * The Questions.
      * Questions that are posed to the  requestor.
      */
@@ -171,6 +181,10 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("customExtensionStageSettings")) {
+            customExtensionStageSettings = serializer.deserializeObject(json.get("customExtensionStageSettings"), com.microsoft.graph.requests.CustomExtensionStageSettingCollectionPage.class);
+        }
 
         if (json.has("questions")) {
             questions = serializer.deserializeObject(json.get("questions"), com.microsoft.graph.requests.AccessPackageQuestionCollectionPage.class);

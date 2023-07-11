@@ -42,7 +42,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
 
     /**
      * The Expression.
-     * 
+     * Equivalent expression representation of this attributeMappingSource object.
      */
     @SerializedName(value = "expression", alternate = {"Expression"})
     @Expose
@@ -51,7 +51,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -60,7 +60,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
 
     /**
      * The Parameters.
-     * 
+     * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
      */
     @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
@@ -69,7 +69,7 @@ public class AttributeMappingSource implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of this attribute mapping source. Possible values are: Attribute, Constant, Function. Default is Attribute.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

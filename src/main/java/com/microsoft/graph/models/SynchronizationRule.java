@@ -53,7 +53,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Editable.
-     * 
+     * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      */
     @SerializedName(value = "editable", alternate = {"Editable"})
     @Expose
@@ -71,7 +71,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -80,7 +80,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * 
+     * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -89,7 +89,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Human-readable name of the synchronization rule. Not nullable.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -98,7 +98,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Object Mappings.
-     * 
+     * Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
      */
     @SerializedName(value = "objectMappings", alternate = {"ObjectMappings"})
     @Expose
@@ -107,7 +107,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * 
+     * Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -116,7 +116,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Source Directory Name.
-     * 
+     * Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
      */
     @SerializedName(value = "sourceDirectoryName", alternate = {"SourceDirectoryName"})
     @Expose
@@ -125,7 +125,7 @@ public class SynchronizationRule implements IJsonBackedObject {
 
     /**
      * The Target Directory Name.
-     * 
+     * Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
      */
     @SerializedName(value = "targetDirectoryName", alternate = {"TargetDirectoryName"})
     @Expose

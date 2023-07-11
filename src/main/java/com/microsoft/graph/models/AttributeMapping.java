@@ -42,7 +42,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Default Value.
-     * 
+     * Default value to be used in case the source property was evaluated to null. Optional.
      */
     @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
@@ -51,7 +51,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Export Missing References.
-     * 
+     * For internal use only.
      */
     @SerializedName(value = "exportMissingReferences", alternate = {"ExportMissingReferences"})
     @Expose
@@ -60,7 +60,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Flow Behavior.
-     * 
+     * Defines when this attribute should be exported to the target directory. Possible values are: FlowWhenChanged and FlowAlways. Default is FlowWhenChanged.
      */
     @SerializedName(value = "flowBehavior", alternate = {"FlowBehavior"})
     @Expose
@@ -69,7 +69,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Flow Type.
-     * 
+     * Defines when this attribute should be updated in the target directory. Possible values are: Always (default) ObjectAddOnly - only when new object is created  MultiValueAddOnly - only when the change is adding new values to a multi-valued attribute  ValueAddOnly - If there is a current value, only flows 'Add' operations; will not flow 'Remove' operations   AttributeAddOnly - Only propagates changes if no current value exists at all
      */
     @SerializedName(value = "flowType", alternate = {"FlowType"})
     @Expose
@@ -78,7 +78,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Matching Priority.
-     * 
+     * If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      */
     @SerializedName(value = "matchingPriority", alternate = {"MatchingPriority"})
     @Expose
@@ -87,7 +87,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * Defines how a value should be extracted (or transformed) from the source object.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -96,7 +96,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Target Attribute Name.
-     * 
+     * Name of the attribute on the target object.
      */
     @SerializedName(value = "targetAttributeName", alternate = {"TargetAttributeName"})
     @Expose

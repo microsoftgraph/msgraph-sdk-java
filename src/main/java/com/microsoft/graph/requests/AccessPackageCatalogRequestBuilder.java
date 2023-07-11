@@ -76,4 +76,84 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
     public com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder accessPackages(@Nonnull final String id) {
         return new com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the CustomCalloutExtension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomCalloutExtensionCollectionRequestBuilder customWorkflowExtensions() {
+        return new com.microsoft.graph.requests.CustomCalloutExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customWorkflowExtensions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomCalloutExtension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomCalloutExtensionRequestBuilder customWorkflowExtensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomCalloutExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("customWorkflowExtensions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageResourceRole collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRoleCollectionRequestBuilder resourceRoles() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRoles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResourceRole item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder resourceRoles(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRoles") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder resources() {
+        return new com.microsoft.graph.requests.AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRequestBuilder resources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageResourceScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceScopeCollectionRequestBuilder resourceScopes() {
+        return new com.microsoft.graph.requests.AccessPackageResourceScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceScopes"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResourceScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder resourceScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("resourceScopes") + "/" + id, getClient(), null);
+    }
 }

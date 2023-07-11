@@ -39,7 +39,7 @@ public class StringKeyLongValuePair implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -48,7 +48,7 @@ public class StringKeyLongValuePair implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Total number of synchronized objects.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessPackageAnswer;
+import com.microsoft.graph.models.CustomExtensionCalloutInstance;
 import com.microsoft.graph.models.AccessPackageRequestType;
 import com.microsoft.graph.models.EntitlementManagementSchedule;
 import com.microsoft.graph.models.AccessPackageRequestState;
@@ -59,6 +60,15 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
     @Expose
 	@Nullable
     public java.time.OffsetDateTime createdDateTime;
+
+    /**
+     * The Custom Extension Callout Instances.
+     * 
+     */
+    @SerializedName(value = "customExtensionCalloutInstances", alternate = {"CustomExtensionCalloutInstances"})
+    @Expose
+	@Nullable
+    public java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
 
     /**
      * The Request Type.

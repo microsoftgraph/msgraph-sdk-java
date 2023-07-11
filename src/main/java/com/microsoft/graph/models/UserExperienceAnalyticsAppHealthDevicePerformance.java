@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only.
+     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

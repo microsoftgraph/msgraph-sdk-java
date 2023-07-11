@@ -465,7 +465,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Synchronization.
-     * 
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      */
     @SerializedName(value = "synchronization", alternate = {"Synchronization"})
     @Expose

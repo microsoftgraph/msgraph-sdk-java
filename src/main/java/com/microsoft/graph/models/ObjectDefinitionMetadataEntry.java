@@ -40,7 +40,7 @@ public class ObjectDefinitionMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -49,7 +49,7 @@ public class ObjectDefinitionMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value of the metadata property.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

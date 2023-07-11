@@ -43,7 +43,7 @@ public class UserRegistrationMethodSummary implements IJsonBackedObject {
 
     /**
      * The Total User Count.
-     * 
+     * Total number of users in the tenant.
      */
     @SerializedName(value = "totalUserCount", alternate = {"TotalUserCount"})
     @Expose
@@ -52,7 +52,7 @@ public class UserRegistrationMethodSummary implements IJsonBackedObject {
 
     /**
      * The User Registration Method Counts.
-     * 
+     * Number of users registered for each authentication method.
      */
     @SerializedName(value = "userRegistrationMethodCounts", alternate = {"UserRegistrationMethodCounts"})
     @Expose
@@ -61,7 +61,7 @@ public class UserRegistrationMethodSummary implements IJsonBackedObject {
 
     /**
      * The User Roles.
-     * 
+     * The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      */
     @SerializedName(value = "userRoles", alternate = {"UserRoles"})
     @Expose
@@ -70,7 +70,7 @@ public class UserRegistrationMethodSummary implements IJsonBackedObject {
 
     /**
      * The User Types.
-     * 
+     * User type. Possible values are: all, member, guest, unknownFutureValue.
      */
     @SerializedName(value = "userTypes", alternate = {"UserTypes"})
     @Expose

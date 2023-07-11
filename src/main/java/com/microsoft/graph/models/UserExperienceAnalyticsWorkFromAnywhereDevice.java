@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics work from anywhere device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only.
+     * The health state of the user experience analytics work from anywhere device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -308,7 +308,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Upgrade Eligibility.
-     * The windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. Unknown by default. Supports: $select, $OrderBy. Read-only.
+     * The windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: upgraded, unknown, notCapable, capable, unknownFutureValue.
      */
     @SerializedName(value = "upgradeEligibility", alternate = {"UpgradeEligibility"})
     @Expose

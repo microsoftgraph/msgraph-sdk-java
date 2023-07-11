@@ -331,6 +331,26 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
         return new com.microsoft.graph.requests.AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.administrativeUnit", getClient(), null);
     }
     /**
+     *  Gets a request builder for the DirectoryRole collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryRoleCollectionRequestBuilder memberOfAsDirectoryRole() {
+        return new com.microsoft.graph.requests.DirectoryRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.directoryRole", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DirectoryRole item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryRoleRequestBuilder memberOfAsDirectoryRole(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryRoleRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.directoryRole", getClient(), null);
+    }
+    /**
      *  Gets a request builder for the OAuth2PermissionGrant collection
      *
      * @return the collection request builder
@@ -669,6 +689,26 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
     @Nonnull
     public com.microsoft.graph.requests.AdministrativeUnitRequestBuilder transitiveMemberOfAsAdministrativeUnit(@Nonnull final String id) {
         return new com.microsoft.graph.requests.AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.administrativeUnit", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DirectoryRole collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryRoleCollectionRequestBuilder transitiveMemberOfAsDirectoryRole() {
+        return new com.microsoft.graph.requests.DirectoryRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.directoryRole", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DirectoryRole item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DirectoryRoleRequestBuilder transitiveMemberOfAsDirectoryRole(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryRoleRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.directoryRole", getClient(), null);
     }
 
     /**
