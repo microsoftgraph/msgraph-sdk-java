@@ -1,4 +1,4 @@
-package com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.importEscaped;
+package com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.importescaped;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -39,10 +39,9 @@ public class ImportRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/importedWindowsAutopilotDeviceIdentities/import", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action import
      * @param body The request body
      * @return a CompletableFuture of importResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-import?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportResponse> post(@javax.annotation.Nonnull final ImportPostRequestBody body) {
@@ -59,11 +58,10 @@ public class ImportRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Not yet documented
+     * Invoke action import
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of importResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-import?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportResponse> post(@javax.annotation.Nonnull final ImportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class ImportRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Not yet documented
+     * Invoke action import
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class ImportRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action import
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

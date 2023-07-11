@@ -44,7 +44,7 @@ import com.microsoft.graph.drives.item.items.item.workbook.functions.bitrshift.B
 import com.microsoft.graph.drives.item.items.item.workbook.functions.bitxor.BitxorRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.ceiling_math.CeilingMathRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.ceiling_precise.CeilingPreciseRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.functions.charEscaped.CharRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.functions.charescaped.CharRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.chisq_dist_rt.ChiSqDistRTRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.chisq_dist.ChiSqDistRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.chisq_inv_rt.ChiSqInvRTRequestBuilder;
@@ -130,7 +130,7 @@ import com.microsoft.graph.drives.item.items.item.workbook.functions.f_inv_rt.FI
 import com.microsoft.graph.drives.item.items.item.workbook.functions.f_inv.FInvRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.fact.FactRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.factdouble.FactDoubleRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.functions.falseEscaped.FalseRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.functions.falseescaped.FalseRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.find.FindRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.findb.FindBRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.fisher.FisherRequestBuilder;
@@ -157,7 +157,7 @@ import com.microsoft.graph.drives.item.items.item.workbook.functions.hlookup.Hlo
 import com.microsoft.graph.drives.item.items.item.workbook.functions.hour.HourRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.hyperlink.HyperlinkRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.hypgeom_dist.HypGeomDistRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.functions.ifEscaped.IfRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.functions.ifescaped.IfRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.imabs.ImAbsRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.imaginary.ImaginaryRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.imargument.ImArgumentRequestBuilder;
@@ -183,7 +183,7 @@ import com.microsoft.graph.drives.item.items.item.workbook.functions.imsqrt.ImSq
 import com.microsoft.graph.drives.item.items.item.workbook.functions.imsub.ImSubRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.imsum.ImSumRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.imtan.ImTanRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.functions.intEscaped.IntRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.functions.intescaped.IntRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.intrate.IntRateRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.ipmt.IpmtRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.irr.IrrRequestBuilder;
@@ -338,7 +338,7 @@ import com.microsoft.graph.drives.item.items.item.workbook.functions.timevalue.T
 import com.microsoft.graph.drives.item.items.item.workbook.functions.today.TodayRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.trim.TrimRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.trimmean.TrimMeanRequestBuilder;
-import com.microsoft.graph.drives.item.items.item.workbook.functions.trueEscaped.TrueRequestBuilder;
+import com.microsoft.graph.drives.item.items.item.workbook.functions.trueescaped.TrueRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.trunc.TruncRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.type.TypeRequestBuilder;
 import com.microsoft.graph.drives.item.items.item.workbook.functions.unichar.UnicharRequestBuilder;

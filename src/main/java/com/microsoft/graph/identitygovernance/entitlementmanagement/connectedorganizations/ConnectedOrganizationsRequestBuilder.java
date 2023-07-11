@@ -64,7 +64,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of connectedOrganization objects.
-     * @return a CompletableFuture of ConnectedOrganizationCollectionResponse
+     * @return a CompletableFuture of connectedOrganizationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of connectedOrganization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConnectedOrganizationCollectionResponse
+     * @return a CompletableFuture of connectedOrganizationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

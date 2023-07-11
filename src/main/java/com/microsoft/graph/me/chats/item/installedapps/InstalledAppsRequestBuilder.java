@@ -64,7 +64,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all app installations within a chat.
-     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
+     * @return a CompletableFuture of teamsAppInstallationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all app installations within a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppInstallationCollectionResponse
+     * @return a CompletableFuture of teamsAppInstallationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/chat-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

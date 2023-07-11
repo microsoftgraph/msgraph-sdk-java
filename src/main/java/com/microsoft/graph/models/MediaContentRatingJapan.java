@@ -64,7 +64,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Japan
-     * @return a RatingJapanMoviesType
+     * @return a ratingJapanMoviesType
      */
     @javax.annotation.Nullable
     public RatingJapanMoviesType getMovieRating() {
@@ -80,7 +80,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tvRating property value. TV content rating labels in Japan
-     * @return a RatingJapanTelevisionType
+     * @return a ratingJapanTelevisionType
      */
     @javax.annotation.Nullable
     public RatingJapanTelevisionType getTvRating() {

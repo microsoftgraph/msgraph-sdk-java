@@ -12,7 +12,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      */
     private Float maxPoints;
     /**
-     * Instantiates a new EducationAssignmentPointsGradeType and sets the default values.
+     * Instantiates a new educationAssignmentPointsGradeType and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationAssignmentPointsGradeType
+     * @return a educationAssignmentPointsGradeType
      */
     @javax.annotation.Nonnull
     public static EducationAssignmentPointsGradeType createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

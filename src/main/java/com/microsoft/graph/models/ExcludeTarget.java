@@ -80,7 +80,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the targetType property value. The targetType property
-     * @return a AuthenticationMethodTargetType
+     * @return a authenticationMethodTargetType
      */
     @javax.annotation.Nullable
     public AuthenticationMethodTargetType getTargetType() {

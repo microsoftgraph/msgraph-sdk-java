@@ -71,7 +71,7 @@ public class UserFlowIdentityProvidersRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get userFlowIdentityProviders from identity
-     * @return a CompletableFuture of IdentityProviderBaseCollectionResponse
+     * @return a CompletableFuture of identityProviderBaseCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBaseCollectionResponse> get() {
@@ -90,7 +90,7 @@ public class UserFlowIdentityProvidersRequestBuilder extends BaseRequestBuilder 
     /**
      * Get userFlowIdentityProviders from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityProviderBaseCollectionResponse
+     * @return a CompletableFuture of identityProviderBaseCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

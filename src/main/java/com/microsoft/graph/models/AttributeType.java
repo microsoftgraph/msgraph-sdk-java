@@ -8,7 +8,7 @@ public enum AttributeType implements ValuedEnum {
     Integer("Integer"),
     Reference("Reference"),
     Binary("Binary"),
-    BooleanEscaped("Boolean"),
+    Boolean("Boolean"),
     DateTime("DateTime");
     public final String value;
     AttributeType(final String value) {
@@ -24,7 +24,7 @@ public enum AttributeType implements ValuedEnum {
             case "Integer": return Integer;
             case "Reference": return Reference;
             case "Binary": return Binary;
-            case "Boolean": return BooleanEscaped;
+            case "Boolean": return Boolean;
             case "DateTime": return DateTime;
             default: return null;
         }

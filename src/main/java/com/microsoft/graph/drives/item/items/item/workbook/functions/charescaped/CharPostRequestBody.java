@@ -1,4 +1,4 @@
-package com.microsoft.graph.drives.item.items.item.workbook.functions.charEscaped;
+package com.microsoft.graph.drives.item.items.item.workbook.functions.charescaped;
 
 import com.microsoft.graph.models.Json;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;

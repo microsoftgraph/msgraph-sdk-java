@@ -63,7 +63,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
-     * @return a CompletableFuture of BaseItemCollectionResponse
+     * @return a CompletableFuture of baseItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseItemCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Used to address any item contained in this site. This collection can't be enumerated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BaseItemCollectionResponse
+     * @return a CompletableFuture of baseItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

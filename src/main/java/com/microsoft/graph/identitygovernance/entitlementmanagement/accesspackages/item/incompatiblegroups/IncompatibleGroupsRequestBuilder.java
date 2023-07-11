@@ -71,7 +71,7 @@ public class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
-     * @return a CompletableFuture of GroupCollectionResponse
+     * @return a CompletableFuture of groupCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupCollectionResponse
+     * @return a CompletableFuture of groupCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

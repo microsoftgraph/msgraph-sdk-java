@@ -17,11 +17,11 @@ public class SynchronizationJobApplicationParameters implements AdditionalDataHo
      */
     private String odataType;
     /**
-     * The ruleId property
+     * The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
      */
     private String ruleId;
     /**
-     * The subjects property
+     * The identifiers of one or more objects to which a synchronizationJob is to be applied.
      */
     private java.util.List<SynchronizationJobSubject> subjects;
     /**
@@ -71,7 +71,7 @@ public class SynchronizationJobApplicationParameters implements AdditionalDataHo
         return this.odataType;
     }
     /**
-     * Gets the ruleId property value. The ruleId property
+     * Gets the ruleId property value. The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class SynchronizationJobApplicationParameters implements AdditionalDataHo
         return this.ruleId;
     }
     /**
-     * Gets the subjects property value. The subjects property
+     * Gets the subjects property value. The identifiers of one or more objects to which a synchronizationJob is to be applied.
      * @return a synchronizationJobSubject
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class SynchronizationJobApplicationParameters implements AdditionalDataHo
         this.odataType = value;
     }
     /**
-     * Sets the ruleId property value. The ruleId property
+     * Sets the ruleId property value. The identifier of the synchronizationRule to be applied. This rule ID is defined in the schema for a given synchronization job or template.
      * @param value Value to set for the ruleId property.
      * @return a void
      */
@@ -127,7 +127,7 @@ public class SynchronizationJobApplicationParameters implements AdditionalDataHo
         this.ruleId = value;
     }
     /**
-     * Sets the subjects property value. The subjects property
+     * Sets the subjects property value. The identifiers of one or more objects to which a synchronizationJob is to be applied.
      * @param value Value to set for the subjects property.
      * @return a void
      */

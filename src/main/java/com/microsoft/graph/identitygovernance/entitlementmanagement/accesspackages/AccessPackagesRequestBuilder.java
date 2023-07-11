@@ -75,7 +75,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
-     * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @return a CompletableFuture of accessPackageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @return a CompletableFuture of accessPackageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

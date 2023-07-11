@@ -3,7 +3,7 @@ package com.microsoft.graph.education.users.item.assignments.item.submissions.it
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.outcomes.OutcomesRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.reassign.ReassignRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.resources.ResourcesRequestBuilder;
-import com.microsoft.graph.education.users.item.assignments.item.submissions.item.returnEscaped.ReturnRequestBuilder;
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.returnescaped.ReturnRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.setupresourcesfolder.SetUpResourcesFolderRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.submit.SubmitRequestBuilder;
 import com.microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.SubmittedResourcesRequestBuilder;

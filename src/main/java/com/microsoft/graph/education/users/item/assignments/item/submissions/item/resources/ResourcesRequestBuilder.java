@@ -64,7 +64,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the resources associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. The educationSubmissionResource object is a wrapper around the actual resource object the student is working on. The wrapper also includes a pointer to the resources on the assignment if this was copied from the assignment during the assign process. These resources are the working copy of the assignment. The **submittedResources** are the resources that have officially been submitted to be graded.
-     * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
+     * @return a CompletableFuture of educationSubmissionResourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationsubmission-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the resources associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. The educationSubmissionResource object is a wrapper around the actual resource object the student is working on. The wrapper also includes a pointer to the resources on the assignment if this was copied from the assignment during the assign process. These resources are the working copy of the assignment. The **submittedResources** are the resources that have officially been submitted to be graded.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
+     * @return a CompletableFuture of educationSubmissionResourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationsubmission-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

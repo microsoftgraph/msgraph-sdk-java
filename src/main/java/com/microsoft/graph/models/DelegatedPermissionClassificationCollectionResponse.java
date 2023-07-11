@@ -12,7 +12,7 @@ public class DelegatedPermissionClassificationCollectionResponse extends BaseCol
      */
     private java.util.List<DelegatedPermissionClassification> value;
     /**
-     * Instantiates a new DelegatedPermissionClassificationCollectionResponse and sets the default values.
+     * Instantiates a new delegatedPermissionClassificationCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DelegatedPermissionClassificationCollectionResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedPermissionClassificationCollectionResponse
+     * @return a delegatedPermissionClassificationCollectionResponse
      */
     @javax.annotation.Nonnull
     public static DelegatedPermissionClassificationCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

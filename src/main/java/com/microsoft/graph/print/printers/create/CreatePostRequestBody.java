@@ -69,7 +69,7 @@ public class CreatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the certificateSigningRequest property value. The certificateSigningRequest property
-     * @return a PrintCertificateSigningRequest
+     * @return a printCertificateSigningRequest
      */
     @javax.annotation.Nullable
     public PrintCertificateSigningRequest getCertificateSigningRequest() {

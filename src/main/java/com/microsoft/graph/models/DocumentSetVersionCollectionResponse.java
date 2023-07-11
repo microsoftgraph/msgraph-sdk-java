@@ -12,7 +12,7 @@ public class DocumentSetVersionCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<DocumentSetVersion> value;
     /**
-     * Instantiates a new DocumentSetVersionCollectionResponse and sets the default values.
+     * Instantiates a new documentSetVersionCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DocumentSetVersionCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DocumentSetVersionCollectionResponse
+     * @return a documentSetVersionCollectionResponse
      */
     @javax.annotation.Nonnull
     public static DocumentSetVersionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Policy used to configure detailed management settings for a specified set of apps for all users not targeted by a TargetedManagedAppProtection Policy
+ */
 public class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable {
     /**
      * Represents the level to which app data is encrypted for managed apps
@@ -56,7 +59,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     private Boolean screenCaptureBlocked;
     /**
-     * Instantiates a new DefaultManagedAppProtection and sets the default values.
+     * Instantiates a new defaultManagedAppProtection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -67,7 +70,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DefaultManagedAppProtection
+     * @return a defaultManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static DefaultManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +79,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a ManagedAppDataEncryptionType
+     * @return a managedAppDataEncryptionType
      */
     @javax.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
@@ -92,7 +95,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     }
     /**
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-     * @return a KeyValuePair
+     * @return a keyValuePair
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {

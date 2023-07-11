@@ -10,6 +10,7 @@ import com.microsoft.graph.users.item.manageddevices.item.devicecompliancepolicy
 import com.microsoft.graph.users.item.manageddevices.item.deviceconfigurationstates.DeviceConfigurationStatesRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.disablelostmode.DisableLostModeRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.locatedevice.LocateDeviceRequestBuilder;
+import com.microsoft.graph.users.item.manageddevices.item.logcollectionrequests.LogCollectionRequestsRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.logoutsharedappledeviceactiveuser.LogoutSharedAppleDeviceActiveUserRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.rebootnow.RebootNowRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
@@ -23,6 +24,7 @@ import com.microsoft.graph.users.item.manageddevices.item.updatewindowsdeviceacc
 import com.microsoft.graph.users.item.manageddevices.item.users.UsersRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.windowsdefenderupdatesignatures.WindowsDefenderUpdateSignaturesRequestBuilder;
+import com.microsoft.graph.users.item.manageddevices.item.windowsprotectionstate.WindowsProtectionStateRequestBuilder;
 import com.microsoft.graph.users.item.manageddevices.item.wipe.WipeRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -97,6 +99,13 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public LocateDeviceRequestBuilder locateDevice() {
         return new LocateDeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity.
+     */
+    @javax.annotation.Nonnull
+    public LogCollectionRequestsRequestBuilder logCollectionRequests() {
+        return new LogCollectionRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the logoutSharedAppleDeviceActiveUser method.
@@ -188,6 +197,13 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures() {
         return new WindowsDefenderUpdateSignaturesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windowsProtectionState property of the microsoft.graph.managedDevice entity.
+     */
+    @javax.annotation.Nonnull
+    public WindowsProtectionStateRequestBuilder windowsProtectionState() {
+        return new WindowsProtectionStateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the wipe method.

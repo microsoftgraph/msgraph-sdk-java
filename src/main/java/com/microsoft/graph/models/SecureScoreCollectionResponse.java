@@ -12,7 +12,7 @@ public class SecureScoreCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<SecureScore> value;
     /**
-     * Instantiates a new SecureScoreCollectionResponse and sets the default values.
+     * Instantiates a new secureScoreCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class SecureScoreCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecureScoreCollectionResponse
+     * @return a secureScoreCollectionResponse
      */
     @javax.annotation.Nonnull
     public static SecureScoreCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

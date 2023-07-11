@@ -64,7 +64,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Questions that are posed to the  requestor.
-     * @return a CompletableFuture of AccessPackageQuestionCollectionResponse
+     * @return a CompletableFuture of accessPackageQuestionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestionCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Questions that are posed to the  requestor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageQuestionCollectionResponse
+     * @return a CompletableFuture of accessPackageQuestionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageQuestionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

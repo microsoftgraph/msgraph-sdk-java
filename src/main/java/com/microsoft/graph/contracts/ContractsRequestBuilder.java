@@ -96,7 +96,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of contract objects associated to a partner tenant.
-     * @return a CompletableFuture of ContractCollectionResponse
+     * @return a CompletableFuture of contractCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/contract-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ContractsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of contract objects associated to a partner tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContractCollectionResponse
+     * @return a CompletableFuture of contractCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/contract-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

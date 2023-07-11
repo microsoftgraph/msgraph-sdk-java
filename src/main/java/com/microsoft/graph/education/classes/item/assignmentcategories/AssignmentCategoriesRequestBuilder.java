@@ -72,7 +72,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
-     * @return a CompletableFuture of EducationCategoryCollectionResponse
+     * @return a CompletableFuture of educationCategoryCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationCategoryCollectionResponse
+     * @return a CompletableFuture of educationCategoryCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -68,7 +68,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the prompts property value. The prompts property
-     * @return a Prompt
+     * @return a prompt
      */
     @javax.annotation.Nullable
     public java.util.List<Prompt> getPrompts() {

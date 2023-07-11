@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Reset passcode action result
+ */
 public class ResetPasscodeActionResult extends DeviceActionResult implements Parsable {
     /**
      * Newly generated passcode for the device
      */
     private String passcode;
     /**
-     * Instantiates a new ResetPasscodeActionResult and sets the default values.
+     * Instantiates a new resetPasscodeActionResult and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +25,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ResetPasscodeActionResult
+     * @return a resetPasscodeActionResult
      */
     @javax.annotation.Nonnull
     public static ResetPasscodeActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

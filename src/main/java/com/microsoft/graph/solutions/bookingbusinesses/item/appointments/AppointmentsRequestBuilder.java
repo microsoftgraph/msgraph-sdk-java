@@ -64,7 +64,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of bookingAppointment objects for the specified bookingBusiness.
-     * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @return a CompletableFuture of bookingAppointmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @return a CompletableFuture of bookingAppointmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

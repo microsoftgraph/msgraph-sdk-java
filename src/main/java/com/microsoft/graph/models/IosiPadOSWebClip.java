@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for iOS web apps.
+ */
 public class IosiPadOSWebClip extends MobileApp implements Parsable {
     /**
      * Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
@@ -16,7 +19,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      */
     private Boolean useManagedBrowser;
     /**
-     * Instantiates a new IosiPadOSWebClip and sets the default values.
+     * Instantiates a new iosiPadOSWebClip and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +30,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosiPadOSWebClip
+     * @return a iosiPadOSWebClip
      */
     @javax.annotation.Nonnull
     public static IosiPadOSWebClip createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

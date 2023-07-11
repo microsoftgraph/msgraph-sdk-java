@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public enum AlertStatus implements ValuedEnum {
     Unknown("unknown"),
-    NewEscaped("new"),
+    New("new"),
     InProgress("inProgress"),
     Resolved("resolved"),
     UnknownFutureValue("unknownFutureValue");
@@ -20,7 +20,7 @@ public enum AlertStatus implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;
-            case "new": return NewEscaped;
+            case "new": return New;
             case "inProgress": return InProgress;
             case "resolved": return Resolved;
             case "unknownFutureValue": return UnknownFutureValue;

@@ -13,11 +13,11 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The attributeMappings property
+     * Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      */
     private java.util.List<AttributeMapping> attributeMappings;
     /**
-     * The enabled property
+     * When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      */
     private Boolean enabled;
     /**
@@ -25,11 +25,11 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     private ObjectFlowTypes flowTypes;
     /**
-     * The metadata property
+     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      */
     private java.util.List<ObjectMappingMetadataEntry> metadata;
     /**
-     * The name property
+     * Human-friendly name of the object mapping.
      */
     private String name;
     /**
@@ -37,15 +37,15 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The scope property
+     * Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      */
     private Filter scope;
     /**
-     * The sourceObjectName property
+     * Name of the object in the source directory. Must match the object name from the source directory definition.
      */
     private String sourceObjectName;
     /**
-     * The targetObjectName property
+     * Name of the object in target directory. Must match the object name from the target directory definition.
      */
     private String targetObjectName;
     /**
@@ -75,7 +75,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the attributeMappings property value. The attributeMappings property
+     * Gets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      * @return a attributeMapping
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         return this.attributeMappings;
     }
     /**
-     * Gets the enabled property value. The enabled property
+     * Gets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -110,14 +110,14 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowTypes property value. The flowTypes property
-     * @return a ObjectFlowTypes
+     * @return a objectFlowTypes
      */
     @javax.annotation.Nullable
     public ObjectFlowTypes getFlowTypes() {
         return this.flowTypes;
     }
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @return a objectMappingMetadataEntry
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         return this.metadata;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Human-friendly name of the object mapping.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the scope property value. The scope property
+     * Gets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      * @return a filter
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         return this.scope;
     }
     /**
-     * Gets the sourceObjectName property value. The sourceObjectName property
+     * Gets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         return this.sourceObjectName;
     }
     /**
-     * Gets the targetObjectName property value. The targetObjectName property
+     * Gets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -193,7 +193,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the attributeMappings property value. The attributeMappings property
+     * Sets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      * @param value Value to set for the attributeMappings property.
      * @return a void
      */
@@ -202,7 +202,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this.attributeMappings = value;
     }
     /**
-     * Sets the enabled property value. The enabled property
+     * Sets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      * @param value Value to set for the enabled property.
      * @return a void
      */
@@ -220,7 +220,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this.flowTypes = value;
     }
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param value Value to set for the metadata property.
      * @return a void
      */
@@ -229,7 +229,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this.metadata = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Human-friendly name of the object mapping.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -247,7 +247,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the scope property value. The scope property
+     * Sets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      * @param value Value to set for the scope property.
      * @return a void
      */
@@ -256,7 +256,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this.scope = value;
     }
     /**
-     * Sets the sourceObjectName property value. The sourceObjectName property
+     * Sets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
      * @param value Value to set for the sourceObjectName property.
      * @return a void
      */
@@ -265,7 +265,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
         this.sourceObjectName = value;
     }
     /**
-     * Sets the targetObjectName property value. The targetObjectName property
+     * Sets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
      * @param value Value to set for the targetObjectName property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class ChatMessageFromIdentitySet extends IdentitySet implements Parsable {
     /**
-     * Instantiates a new ChatMessageFromIdentitySet and sets the default values.
+     * Instantiates a new chatMessageFromIdentitySet and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -19,7 +19,7 @@ public class ChatMessageFromIdentitySet extends IdentitySet implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChatMessageFromIdentitySet
+     * @return a chatMessageFromIdentitySet
      */
     @javax.annotation.Nonnull
     public static ChatMessageFromIdentitySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -13,7 +13,7 @@ public class WorkflowVersionCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<WorkflowVersion> value;
     /**
-     * Instantiates a new WorkflowVersionCollectionResponse and sets the default values.
+     * Instantiates a new workflowVersionCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class WorkflowVersionCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkflowVersionCollectionResponse
+     * @return a workflowVersionCollectionResponse
      */
     @javax.annotation.Nonnull
     public static WorkflowVersionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

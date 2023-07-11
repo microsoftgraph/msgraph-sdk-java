@@ -63,7 +63,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
-     * @return a CompletableFuture of BitlockerRecoveryKeyCollectionResponse
+     * @return a CompletableFuture of bitlockerRecoveryKeyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BitlockerRecoveryKeyCollectionResponse
+     * @return a CompletableFuture of bitlockerRecoveryKeyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

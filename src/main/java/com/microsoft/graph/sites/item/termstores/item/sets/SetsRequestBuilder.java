@@ -64,7 +64,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a set object.
-     * @return a CompletableFuture of SetCollectionResponse
+     * @return a CompletableFuture of setCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SetCollectionResponse
+     * @return a CompletableFuture of setCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

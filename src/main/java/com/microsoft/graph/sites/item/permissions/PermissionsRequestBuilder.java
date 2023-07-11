@@ -64,7 +64,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the permission resources from the permissions navigation property on a site.
-     * @return a CompletableFuture of PermissionCollectionResponse
+     * @return a CompletableFuture of permissionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the permission resources from the permissions navigation property on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PermissionCollectionResponse
+     * @return a CompletableFuture of permissionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

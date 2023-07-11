@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an Android device
+ */
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /**
      * List of apps to which the policy is deployed.
@@ -48,7 +51,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     private Boolean screenCaptureBlocked;
     /**
-     * Instantiates a new AndroidManagedAppProtection and sets the default values.
+     * Instantiates a new androidManagedAppProtection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -59,7 +62,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidManagedAppProtection
+     * @return a androidManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static AndroidManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

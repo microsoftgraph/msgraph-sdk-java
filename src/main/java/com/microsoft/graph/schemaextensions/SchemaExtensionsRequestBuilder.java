@@ -64,7 +64,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of schemaExtension objects in your tenant. The schema extensions can be `InDevelopment`, `Available`, or `Deprecated` and includes schema extensions:+ Created by any apps you own in the current tenant.+ Owned by other apps that are marked as `Available`.+ Created by other developers from other tenants and marked as `Available`. This is different from other APIs that only return tenant-specific data. Extension data created based on schema extension definitions is tenant-specific and can only be accessed by apps explicitly granted permission. 
-     * @return a CompletableFuture of SchemaExtensionCollectionResponse
+     * @return a CompletableFuture of schemaExtensionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/schemaextension-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of schemaExtension objects in your tenant. The schema extensions can be `InDevelopment`, `Available`, or `Deprecated` and includes schema extensions:+ Created by any apps you own in the current tenant.+ Owned by other apps that are marked as `Available`.+ Created by other developers from other tenants and marked as `Available`. This is different from other APIs that only return tenant-specific data. Extension data created based on schema extension definitions is tenant-specific and can only be accessed by apps explicitly granted permission. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SchemaExtensionCollectionResponse
+     * @return a CompletableFuture of schemaExtensionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/schemaextension-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

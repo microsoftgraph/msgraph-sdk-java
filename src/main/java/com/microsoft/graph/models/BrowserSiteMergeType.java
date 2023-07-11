@@ -7,7 +7,7 @@ public enum BrowserSiteMergeType implements ValuedEnum {
     /** No merge type */
     NoMerge("noMerge"),
     /** Default merge type */
-    DefaultEscaped("default"),
+    Default("default"),
     /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -21,7 +21,7 @@ public enum BrowserSiteMergeType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "noMerge": return NoMerge;
-            case "default": return DefaultEscaped;
+            case "default": return Default;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

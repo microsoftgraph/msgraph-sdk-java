@@ -12,7 +12,7 @@ public class AndroidManagedAppProtectionCollectionResponse extends BaseCollectio
      */
     private java.util.List<AndroidManagedAppProtection> value;
     /**
-     * Instantiates a new AndroidManagedAppProtectionCollectionResponse and sets the default values.
+     * Instantiates a new androidManagedAppProtectionCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AndroidManagedAppProtectionCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidManagedAppProtectionCollectionResponse
+     * @return a androidManagedAppProtectionCollectionResponse
      */
     @javax.annotation.Nonnull
     public static AndroidManagedAppProtectionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

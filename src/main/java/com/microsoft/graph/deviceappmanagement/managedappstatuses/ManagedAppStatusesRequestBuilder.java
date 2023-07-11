@@ -63,9 +63,8 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppStatuses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the managedAppStatusRaw objects.
-     * @return a CompletableFuture of ManagedAppStatusCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappstatusraw-list?view=graph-rest-1.0">Find more info here</a>
+     * The managed app statuses.
+     * @return a CompletableFuture of managedAppStatusCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatusCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the managedAppStatusRaw objects.
+     * The managed app statuses.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppStatusCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappstatusraw-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of managedAppStatusCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatusCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +140,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the managedAppStatusRaw objects.
+     * The managed app statuses.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +148,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the managedAppStatusRaw objects.
+     * The managed app statuses.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +201,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the managedAppStatusRaw objects.
+     * The managed app statuses.
      */
     public class GetQueryParameters {
         /**

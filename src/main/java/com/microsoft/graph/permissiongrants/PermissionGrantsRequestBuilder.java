@@ -88,7 +88,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from permissionGrants
-     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
+     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get() {
@@ -107,7 +107,7 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from permissionGrants
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ResourceSpecificPermissionGrantCollectionResponse
+     * @return a CompletableFuture of resourceSpecificPermissionGrantCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrantCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

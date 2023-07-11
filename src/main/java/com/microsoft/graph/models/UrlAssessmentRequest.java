@@ -12,7 +12,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
      */
     private String url;
     /**
-     * Instantiates a new UrlAssessmentRequest and sets the default values.
+     * Instantiates a new urlAssessmentRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UrlAssessmentRequest
+     * @return a urlAssessmentRequest
      */
     @javax.annotation.Nonnull
     public static UrlAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

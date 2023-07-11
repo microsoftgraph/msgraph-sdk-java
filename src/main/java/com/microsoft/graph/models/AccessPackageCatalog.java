@@ -21,6 +21,10 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
+     * The customWorkflowExtensions property
+     */
+    private java.util.List<CustomCalloutExtension> customWorkflowExtensions;
+    /**
      * The description of the access package catalog.
      */
     private String description;
@@ -36,6 +40,18 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime modifiedDateTime;
+    /**
+     * The resourceRoles property
+     */
+    private java.util.List<AccessPackageResourceRole> resourceRoles;
+    /**
+     * The resources property
+     */
+    private java.util.List<AccessPackageResource> resources;
+    /**
+     * The resourceScopes property
+     */
+    private java.util.List<AccessPackageResourceScope> resourceScopes;
     /**
      * Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
      */
@@ -83,6 +99,14 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
+     * Gets the customWorkflowExtensions property value. The customWorkflowExtensions property
+     * @return a customCalloutExtension
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CustomCalloutExtension> getCustomWorkflowExtensions() {
+        return this.customWorkflowExtensions;
+    }
+    /**
      * Gets the description property value. The description of the access package catalog.
      * @return a string
      */
@@ -108,10 +132,14 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         deserializerMap.put("accessPackages", (n) -> { this.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("catalogType", (n) -> { this.setCatalogType(n.getEnumValue(AccessPackageCatalogType.class)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customWorkflowExtensions", (n) -> { this.setCustomWorkflowExtensions(n.getCollectionOfObjectValues(CustomCalloutExtension::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isExternallyVisible", (n) -> { this.setIsExternallyVisible(n.getBooleanValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("resourceRoles", (n) -> { this.setResourceRoles(n.getCollectionOfObjectValues(AccessPackageResourceRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceScopes", (n) -> { this.setResourceScopes(n.getCollectionOfObjectValues(AccessPackageResourceScope::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageCatalogState.class)); });
         return deserializerMap;
     }
@@ -130,6 +158,30 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
+    }
+    /**
+     * Gets the resourceRoles property value. The resourceRoles property
+     * @return a accessPackageResourceRole
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResourceRole> getResourceRoles() {
+        return this.resourceRoles;
+    }
+    /**
+     * Gets the resources property value. The resources property
+     * @return a accessPackageResource
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResource> getResources() {
+        return this.resources;
+    }
+    /**
+     * Gets the resourceScopes property value. The resourceScopes property
+     * @return a accessPackageResourceScope
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResourceScope> getResourceScopes() {
+        return this.resourceScopes;
     }
     /**
      * Gets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
@@ -151,10 +203,14 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("accessPackages", this.getAccessPackages());
         writer.writeEnumValue("catalogType", this.getCatalogType());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeCollectionOfObjectValues("customWorkflowExtensions", this.getCustomWorkflowExtensions());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isExternallyVisible", this.getIsExternallyVisible());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
+        writer.writeCollectionOfObjectValues("resourceRoles", this.getResourceRoles());
+        writer.writeCollectionOfObjectValues("resources", this.getResources());
+        writer.writeCollectionOfObjectValues("resourceScopes", this.getResourceScopes());
         writer.writeEnumValue("state", this.getState());
     }
     /**
@@ -183,6 +239,15 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
+    }
+    /**
+     * Sets the customWorkflowExtensions property value. The customWorkflowExtensions property
+     * @param value Value to set for the customWorkflowExtensions property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomWorkflowExtensions(@javax.annotation.Nullable final java.util.List<CustomCalloutExtension> value) {
+        this.customWorkflowExtensions = value;
     }
     /**
      * Sets the description property value. The description of the access package catalog.
@@ -219,6 +284,33 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
+    }
+    /**
+     * Sets the resourceRoles property value. The resourceRoles property
+     * @param value Value to set for the resourceRoles property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResourceRoles(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRole> value) {
+        this.resourceRoles = value;
+    }
+    /**
+     * Sets the resources property value. The resources property
+     * @param value Value to set for the resources property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResources(@javax.annotation.Nullable final java.util.List<AccessPackageResource> value) {
+        this.resources = value;
+    }
+    /**
+     * Sets the resourceScopes property value. The resourceScopes property
+     * @param value Value to set for the resourceScopes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResourceScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
+        this.resourceScopes = value;
     }
     /**
      * Sets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.

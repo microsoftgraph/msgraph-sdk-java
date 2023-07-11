@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties, inherited properties and actions for iOS mobile app configurations.
+ */
 public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
     /**
      * mdm app configuration Base64 binary.
@@ -16,7 +19,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      */
     private java.util.List<AppConfigurationSettingItem> settings;
     /**
-     * Instantiates a new IosMobileAppConfiguration and sets the default values.
+     * Instantiates a new iosMobileAppConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +30,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosMobileAppConfiguration
+     * @return a iosMobileAppConfiguration
      */
     @javax.annotation.Nonnull
     public static IosMobileAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

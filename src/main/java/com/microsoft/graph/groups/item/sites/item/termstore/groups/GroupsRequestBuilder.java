@@ -64,7 +64,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of group objects in a term store.
-     * @return a CompletableFuture of GroupCollectionResponse
+     * @return a CompletableFuture of groupCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termstore-list-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of group objects in a term store.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupCollectionResponse
+     * @return a CompletableFuture of groupCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termstore-list-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

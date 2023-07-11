@@ -75,7 +75,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
     }
     /**
      * Get the instances of role eligibilities.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstanceCollectionResponse
+     * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestB
     /**
      * Get the instances of role eligibilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleInstanceCollectionResponse
+     * @return a CompletableFuture of unifiedRoleEligibilityScheduleInstanceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

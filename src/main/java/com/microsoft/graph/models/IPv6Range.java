@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * IPv6 Range definition.
+ */
 public class IPv6Range extends IpRange implements Parsable {
     /**
      * Lower address.
@@ -16,7 +19,7 @@ public class IPv6Range extends IpRange implements Parsable {
      */
     private String upperAddress;
     /**
-     * Instantiates a new IPv6Range and sets the default values.
+     * Instantiates a new iPv6Range and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +30,7 @@ public class IPv6Range extends IpRange implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IPv6Range
+     * @return a iPv6Range
      */
     @javax.annotation.Nonnull
     public static IPv6Range createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

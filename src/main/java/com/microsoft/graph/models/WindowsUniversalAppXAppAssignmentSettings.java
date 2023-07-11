@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties used when assigning a Windows Universal AppX mobile app to a group.
+ */
 public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
      * If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
      */
     private Boolean useDeviceContext;
     /**
-     * Instantiates a new WindowsUniversalAppXAppAssignmentSettings and sets the default values.
+     * Instantiates a new windowsUniversalAppXAppAssignmentSettings and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUniversalAppXAppAssignmentSettings
+     * @return a windowsUniversalAppXAppAssignmentSettings
      */
     @javax.annotation.Nonnull
     public static WindowsUniversalAppXAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

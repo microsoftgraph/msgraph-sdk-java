@@ -4,13 +4,13 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum DiskType implements ValuedEnum {
-    /** Enum member for unknown or default diskType */
+    /** Enum member for unknown or default diskType. */
     Unknown("unknown"),
-    /** Enum member for HDD devices */
+    /** Enum member for HDD devices. */
     Hdd("hdd"),
-    /** Enum member for SSD devices */
+    /** Enum member for SSD devices. */
     Ssd("ssd"),
-    /** Evolvable enum member */
+    /** Evolvable enumeration sentinel value.Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DiskType(final String value) {

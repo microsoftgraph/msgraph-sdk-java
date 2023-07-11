@@ -64,7 +64,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of long-running operations on the list.
-     * @return a CompletableFuture of RichLongRunningOperationCollectionResponse
+     * @return a CompletableFuture of richLongRunningOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of long-running operations on the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RichLongRunningOperationCollectionResponse
+     * @return a CompletableFuture of richLongRunningOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

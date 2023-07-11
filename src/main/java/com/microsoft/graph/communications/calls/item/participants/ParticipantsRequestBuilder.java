@@ -72,7 +72,7 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of participant objects in the call.
-     * @return a CompletableFuture of ParticipantCollectionResponse
+     * @return a CompletableFuture of participantCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/call-list-participants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ParticipantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of participant objects in the call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ParticipantCollectionResponse
+     * @return a CompletableFuture of participantCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/call-list-participants?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

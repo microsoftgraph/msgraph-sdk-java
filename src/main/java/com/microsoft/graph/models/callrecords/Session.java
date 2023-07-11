@@ -118,7 +118,7 @@ public class Session extends Entity implements Parsable {
     }
     /**
      * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return a Modality
+     * @return a modality
      */
     @javax.annotation.Nullable
     public java.util.List<Modality> getModalities() {

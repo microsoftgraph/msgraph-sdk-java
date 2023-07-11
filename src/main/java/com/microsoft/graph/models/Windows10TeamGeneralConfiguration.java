@@ -7,6 +7,9 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows10TeamGeneralConfiguration resource.
+ */
 public class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to Block Azure Operational Insights.
@@ -89,7 +92,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     private WelcomeScreenMeetingInformation welcomeScreenMeetingInformation;
     /**
-     * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.
+     * Instantiates a new windows10TeamGeneralConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -100,7 +103,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10TeamGeneralConfiguration
+     * @return a windows10TeamGeneralConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10TeamGeneralConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -202,7 +205,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the miracastChannel property value. Possible values for Miracast channel.
-     * @return a MiracastChannel
+     * @return a miracastChannel
      */
     @javax.annotation.Nullable
     public MiracastChannel getMiracastChannel() {
@@ -290,7 +293,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
-     * @return a WelcomeScreenMeetingInformation
+     * @return a welcomeScreenMeetingInformation
      */
     @javax.annotation.Nullable
     public WelcomeScreenMeetingInformation getWelcomeScreenMeetingInformation() {

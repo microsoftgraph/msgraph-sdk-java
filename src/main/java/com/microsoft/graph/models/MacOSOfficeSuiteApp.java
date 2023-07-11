@@ -6,9 +6,12 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for the MacOS Office Suite App.
+ */
 public class MacOSOfficeSuiteApp extends MobileApp implements Parsable {
     /**
-     * Instantiates a new MacOSOfficeSuiteApp and sets the default values.
+     * Instantiates a new macOSOfficeSuiteApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -19,7 +22,7 @@ public class MacOSOfficeSuiteApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSOfficeSuiteApp
+     * @return a macOSOfficeSuiteApp
      */
     @javax.annotation.Nonnull
     public static MacOSOfficeSuiteApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

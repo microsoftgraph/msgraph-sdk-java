@@ -13,11 +13,11 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The clauses property
+     * Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
      */
     private java.util.List<FilterClause> clauses;
     /**
-     * The name property
+     * Human-readable name of the filter group.
      */
     private String name;
     /**
@@ -51,7 +51,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the clauses property value. The clauses property
+     * Gets the clauses property value. Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
      * @return a filterClause
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Human-readable name of the filter group.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the clauses property value. The clauses property
+     * Sets the clauses property value. Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
      * @param value Value to set for the clauses property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class FilterGroup implements AdditionalDataHolder, Parsable {
         this.clauses = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Human-readable name of the filter group.
      * @param value Value to set for the name property.
      * @return a void
      */

@@ -64,7 +64,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Calculated insight that includes a list of documents trending around the user.
-     * @return a CompletableFuture of TrendingCollectionResponse
+     * @return a CompletableFuture of trendingCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Calculated insight that includes a list of documents trending around the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TrendingCollectionResponse
+     * @return a CompletableFuture of trendingCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

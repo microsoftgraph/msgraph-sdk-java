@@ -64,7 +64,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The async operations that ran or are running on this team.
-     * @return a CompletableFuture of TeamsAsyncOperationCollectionResponse
+     * @return a CompletableFuture of teamsAsyncOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The async operations that ran or are running on this team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAsyncOperationCollectionResponse
+     * @return a CompletableFuture of teamsAsyncOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

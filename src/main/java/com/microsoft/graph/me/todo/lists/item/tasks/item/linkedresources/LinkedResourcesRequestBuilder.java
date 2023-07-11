@@ -64,7 +64,7 @@ public class LinkedResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get information of one or more items in a partner application, based on which a specified task was created. The information is represented in a linkedResource object for each item. It includes an external ID for the item in the partner application, and if applicable, a deep link to that item in the application.
-     * @return a CompletableFuture of LinkedResourceCollectionResponse
+     * @return a CompletableFuture of linkedResourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-linkedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class LinkedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get information of one or more items in a partner application, based on which a specified task was created. The information is represented in a linkedResource object for each item. It includes an external ID for the item in the partner application, and if applicable, a deep link to that item in the application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LinkedResourceCollectionResponse
+     * @return a CompletableFuture of linkedResourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-linkedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

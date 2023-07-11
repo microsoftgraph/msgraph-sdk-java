@@ -82,7 +82,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get communications
-     * @return a CompletableFuture of CloudCommunications
+     * @return a CompletableFuture of cloudCommunications
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> get() {
@@ -101,7 +101,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CloudCommunications
+     * @return a CompletableFuture of cloudCommunications
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update communications
      * @param body The request body
-     * @return a CompletableFuture of CloudCommunications
+     * @return a CompletableFuture of cloudCommunications
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> patch(@javax.annotation.Nonnull final CloudCommunications body) {
@@ -140,7 +140,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
      * Update communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CloudCommunications
+     * @return a CompletableFuture of cloudCommunications
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudCommunications> patch(@javax.annotation.Nonnull final CloudCommunications body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

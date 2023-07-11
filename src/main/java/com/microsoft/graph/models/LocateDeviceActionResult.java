@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Locate device action result
+ */
 public class LocateDeviceActionResult extends DeviceActionResult implements Parsable {
     /**
      * device location
      */
     private DeviceGeoLocation deviceLocation;
     /**
-     * Instantiates a new LocateDeviceActionResult and sets the default values.
+     * Instantiates a new locateDeviceActionResult and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +25,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LocateDeviceActionResult
+     * @return a locateDeviceActionResult
      */
     @javax.annotation.Nonnull
     public static LocateDeviceActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

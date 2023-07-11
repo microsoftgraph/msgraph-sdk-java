@@ -119,7 +119,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the redirectUriSettings property value. The redirectUriSettings property
-     * @return a RedirectUriSettings
+     * @return a redirectUriSettings
      */
     @javax.annotation.Nullable
     public java.util.List<RedirectUriSettings> getRedirectUriSettings() {

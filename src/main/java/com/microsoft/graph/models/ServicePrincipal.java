@@ -181,7 +181,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     private String signInAudience;
     /**
-     * The synchronization property
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      */
     private Synchronization synchronization;
     /**
@@ -209,7 +209,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     private VerifiedPublisher verifiedPublisher;
     /**
-     * Instantiates a new ServicePrincipal and sets the default values.
+     * Instantiates a new servicePrincipal and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipal
+     * @return a servicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -237,7 +237,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the addIns property value. Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
-     * @return a AddIn
+     * @return a addIn
      */
     @javax.annotation.Nullable
     public java.util.List<AddIn> getAddIns() {
@@ -325,7 +325,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoles property value. The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
-     * @return a AppRole
+     * @return a appRole
      */
     @javax.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
@@ -480,7 +480,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a KeyCredential
+     * @return a keyCredential
      */
     @javax.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
@@ -536,7 +536,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the oauth2PermissionScopes property value. The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
-     * @return a PermissionScope
+     * @return a permissionScope
      */
     @javax.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {
@@ -560,7 +560,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     * @return a PasswordCredential
+     * @return a passwordCredential
      */
     @javax.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
@@ -592,7 +592,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the resourceSpecificApplicationPermissions property value. The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
-     * @return a ResourceSpecificPermission
+     * @return a resourceSpecificPermission
      */
     @javax.annotation.Nullable
     public java.util.List<ResourceSpecificPermission> getResourceSpecificApplicationPermissions() {
@@ -631,7 +631,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.signInAudience;
     }
     /**
-     * Gets the synchronization property value. The synchronization property
+     * Gets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @return a synchronization
      */
     @javax.annotation.Nullable
@@ -1134,7 +1134,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.signInAudience = value;
     }
     /**
-     * Sets the synchronization property value. The synchronization property
+     * Sets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @param value Value to set for the synchronization property.
      * @return a void
      */

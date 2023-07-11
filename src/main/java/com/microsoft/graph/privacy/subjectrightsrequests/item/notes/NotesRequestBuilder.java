@@ -64,7 +64,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of authored notes assoicated with a subject rights request. 
-     * @return a CompletableFuture of AuthoredNoteCollectionResponse
+     * @return a CompletableFuture of authoredNoteCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class NotesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of authored notes assoicated with a subject rights request. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthoredNoteCollectionResponse
+     * @return a CompletableFuture of authoredNoteCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

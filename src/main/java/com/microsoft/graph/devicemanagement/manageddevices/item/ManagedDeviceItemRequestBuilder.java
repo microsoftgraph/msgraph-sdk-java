@@ -8,6 +8,7 @@ import com.microsoft.graph.devicemanagement.manageddevices.item.devicecompliance
 import com.microsoft.graph.devicemanagement.manageddevices.item.deviceconfigurationstates.DeviceConfigurationStatesRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.disablelostmode.DisableLostModeRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.locatedevice.LocateDeviceRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.logcollectionrequests.LogCollectionRequestsRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.logoutsharedappledeviceactiveuser.LogoutSharedAppleDeviceActiveUserRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.rebootnow.RebootNowRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
@@ -21,6 +22,7 @@ import com.microsoft.graph.devicemanagement.manageddevices.item.updatewindowsdev
 import com.microsoft.graph.devicemanagement.manageddevices.item.users.UsersRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.windowsdefenderupdatesignatures.WindowsDefenderUpdateSignaturesRequestBuilder;
+import com.microsoft.graph.devicemanagement.manageddevices.item.windowsprotectionstate.WindowsProtectionStateRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.item.wipe.WipeRequestBuilder;
 import com.microsoft.graph.models.ManagedDevice;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -97,6 +99,13 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public LocateDeviceRequestBuilder locateDevice() {
         return new LocateDeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity.
+     */
+    @javax.annotation.Nonnull
+    public LogCollectionRequestsRequestBuilder logCollectionRequests() {
+        return new LogCollectionRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the logoutSharedAppleDeviceActiveUser method.
@@ -190,6 +199,13 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new WindowsDefenderUpdateSignaturesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the windowsProtectionState property of the microsoft.graph.managedDevice entity.
+     */
+    @javax.annotation.Nonnull
+    public WindowsProtectionStateRequestBuilder windowsProtectionState() {
+        return new WindowsProtectionStateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the wipe method.
      */
     @javax.annotation.Nonnull
@@ -217,9 +233,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a managedDevice.
+     * Delete navigation property managedDevices for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -236,10 +251,9 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a managedDevice.
+     * Delete navigation property managedDevices for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -256,9 +270,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedDevice object.
+     * The list of managed devices.
      * @return a CompletableFuture of managedDevice
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get() {
@@ -275,10 +288,9 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedDevice object.
+     * The list of managed devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDevice
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -295,10 +307,9 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a managedDevice object.
+     * Update the navigation property managedDevices in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of managedDevice
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@javax.annotation.Nonnull final ManagedDevice body) {
@@ -315,11 +326,10 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a managedDevice object.
+     * Update the navigation property managedDevices in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDevice
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@javax.annotation.Nonnull final ManagedDevice body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -337,7 +347,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a managedDevice.
+     * Delete navigation property managedDevices for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -345,7 +355,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a managedDevice.
+     * Delete navigation property managedDevices for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -364,7 +374,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedDevice object.
+     * The list of managed devices.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -372,7 +382,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedDevice object.
+     * The list of managed devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -393,7 +403,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a managedDevice object.
+     * Update the navigation property managedDevices in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -402,7 +412,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a managedDevice object.
+     * Update the navigation property managedDevices in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -430,7 +440,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedDevice object.
+     * The list of managed devices.
      */
     public class GetQueryParameters {
         /**

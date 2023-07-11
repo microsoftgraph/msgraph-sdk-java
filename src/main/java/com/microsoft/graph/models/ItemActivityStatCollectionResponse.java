@@ -12,7 +12,7 @@ public class ItemActivityStatCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<ItemActivityStat> value;
     /**
-     * Instantiates a new ItemActivityStatCollectionResponse and sets the default values.
+     * Instantiates a new itemActivityStatCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ItemActivityStatCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemActivityStatCollectionResponse
+     * @return a itemActivityStatCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ItemActivityStatCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

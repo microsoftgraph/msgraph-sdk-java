@@ -28,7 +28,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
      */
     private String proxy;
     /**
-     * Instantiates a new ProxiedDomain and sets the default values.
+     * Instantiates a new proxiedDomain and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -38,7 +38,7 @@ public class ProxiedDomain implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ProxiedDomain
+     * @return a proxiedDomain
      */
     @javax.annotation.Nonnull
     public static ProxiedDomain createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

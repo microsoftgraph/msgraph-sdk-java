@@ -64,7 +64,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
-     * @return a CompletableFuture of EducationSubmissionCollectionResponse
+     * @return a CompletableFuture of educationSubmissionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SubmissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the submissions associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can get all the submissions while a student can only get submissions that they are associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationSubmissionCollectionResponse
+     * @return a CompletableFuture of educationSubmissionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-list-submissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

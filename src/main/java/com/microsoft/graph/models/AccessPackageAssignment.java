@@ -17,6 +17,10 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     private AccessPackageAssignmentPolicy assignmentPolicy;
     /**
+     * The customExtensionCalloutInstances property
+     */
+    private java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
+    /**
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime expiredDateTime;
@@ -71,6 +75,14 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         return this.assignmentPolicy;
     }
     /**
+     * Gets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @return a customExtensionCalloutInstance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
+        return this.customExtensionCalloutInstances;
+    }
+    /**
      * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
@@ -87,6 +99,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("assignmentPolicy", (n) -> { this.setAssignmentPolicy(n.getObjectValue(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("customExtensionCalloutInstances", (n) -> { this.setCustomExtensionCalloutInstances(n.getCollectionOfObjectValues(CustomExtensionCalloutInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("expiredDateTime", (n) -> { this.setExpiredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AccessPackageAssignmentState.class)); });
@@ -137,6 +150,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("accessPackage", this.getAccessPackage());
         writer.writeObjectValue("assignmentPolicy", this.getAssignmentPolicy());
+        writer.writeCollectionOfObjectValues("customExtensionCalloutInstances", this.getCustomExtensionCalloutInstances());
         writer.writeOffsetDateTimeValue("expiredDateTime", this.getExpiredDateTime());
         writer.writeObjectValue("schedule", this.getSchedule());
         writer.writeEnumValue("state", this.getState());
@@ -160,6 +174,15 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAssignmentPolicy(@javax.annotation.Nullable final AccessPackageAssignmentPolicy value) {
         this.assignmentPolicy = value;
+    }
+    /**
+     * Sets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @param value Value to set for the customExtensionCalloutInstances property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomExtensionCalloutInstances(@javax.annotation.Nullable final java.util.List<CustomExtensionCalloutInstance> value) {
+        this.customExtensionCalloutInstances = value;
     }
     /**
      * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.

@@ -12,7 +12,7 @@ public class PermissionGrantPolicyCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<PermissionGrantPolicy> value;
     /**
-     * Instantiates a new PermissionGrantPolicyCollectionResponse and sets the default values.
+     * Instantiates a new permissionGrantPolicyCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class PermissionGrantPolicyCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionGrantPolicyCollectionResponse
+     * @return a permissionGrantPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public static PermissionGrantPolicyCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

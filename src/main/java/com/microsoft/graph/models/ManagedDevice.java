@@ -12,7 +12,7 @@ import java.util.Objects;
  */
 public class ManagedDevice extends Entity implements Parsable {
     /**
-     * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     private String activationLockBypassCode;
     /**
@@ -48,7 +48,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private DeviceCategory deviceCategory;
     /**
-     * Device category display name. This property is read-only.
+     * Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      */
     private String deviceCategoryDisplayName;
     /**
@@ -92,7 +92,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private String emailAddress;
     /**
-     * Enrollment time of the device. This property is read-only.
+     * Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      */
     private OffsetDateTime enrolledDateTime;
     /**
@@ -116,7 +116,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private Long freeStorageSpaceInBytes;
     /**
-     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     private String iccid;
     /**
@@ -132,13 +132,17 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private Boolean isSupervised;
     /**
-     * whether the device is jail broken or rooted. This property is read-only.
+     * Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      */
     private String jailBroken;
     /**
-     * The date and time that the device last completed a successful sync with Intune. This property is read-only.
+     * The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      */
     private OffsetDateTime lastSyncDateTime;
+    /**
+     * List of log collection requests
+     */
+    private java.util.List<DeviceLogCollectionResponse> logCollectionRequests;
     /**
      * Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      */
@@ -168,7 +172,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private String model;
     /**
-     * Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
+     * Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      */
     private String notes;
     /**
@@ -188,7 +192,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private String phoneNumber;
     /**
-     * Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
+     * Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      */
     private Long physicalMemoryInBytes;
     /**
@@ -196,7 +200,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private String remoteAssistanceSessionErrorDetails;
     /**
-     * Url that allows a Remote Assistance session to be established with the device. This property is read-only.
+     * Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      */
     private String remoteAssistanceSessionUrl;
     /**
@@ -216,7 +220,7 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private Long totalStorageSpaceInBytes;
     /**
-     * Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     private String udid;
     /**
@@ -240,6 +244,10 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     private String wiFiMacAddress;
     /**
+     * The device protection status. This property is read-only.
+     */
+    private WindowsProtectionState windowsProtectionState;
+    /**
      * Instantiates a new managedDevice and sets the default values.
      * @return a void
      */
@@ -258,7 +266,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return new ManagedDevice();
     }
     /**
-     * Gets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Gets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -299,7 +307,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the complianceState property value. Compliance state.
-     * @return a ComplianceState
+     * @return a complianceState
      */
     @javax.annotation.Nullable
     public ComplianceState getComplianceState() {
@@ -330,7 +338,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.deviceCategory;
     }
     /**
-     * Gets the deviceCategoryDisplayName property value. Device category display name. This property is read-only.
+     * Gets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -355,7 +363,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
-     * @return a DeviceEnrollmentType
+     * @return a deviceEnrollmentType
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentType getDeviceEnrollmentType() {
@@ -379,7 +387,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceRegistrationState property value. Device registration status.
-     * @return a DeviceRegistrationState
+     * @return a deviceRegistrationState
      */
     @javax.annotation.Nullable
     public DeviceRegistrationState getDeviceRegistrationState() {
@@ -418,7 +426,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.emailAddress;
     }
     /**
-     * Gets the enrolledDateTime property value. Enrollment time of the device. This property is read-only.
+     * Gets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -435,7 +443,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeAccessState property value. Device Exchange Access State.
-     * @return a DeviceManagementExchangeAccessState
+     * @return a deviceManagementExchangeAccessState
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeAccessState getExchangeAccessState() {
@@ -443,7 +451,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
-     * @return a DeviceManagementExchangeAccessStateReason
+     * @return a deviceManagementExchangeAccessStateReason
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeAccessStateReason getExchangeAccessStateReason() {
@@ -496,6 +504,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("isSupervised", (n) -> { this.setIsSupervised(n.getBooleanValue()); });
         deserializerMap.put("jailBroken", (n) -> { this.setJailBroken(n.getStringValue()); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("logCollectionRequests", (n) -> { this.setLogCollectionRequests(n.getCollectionOfObjectValues(DeviceLogCollectionResponse::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceName", (n) -> { this.setManagedDeviceName(n.getStringValue()); });
         deserializerMap.put("managedDeviceOwnerType", (n) -> { this.setManagedDeviceOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
         deserializerMap.put("managementAgent", (n) -> { this.setManagementAgent(n.getEnumValue(ManagementAgentType.class)); });
@@ -521,6 +530,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("users", (n) -> { this.setUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
         deserializerMap.put("wiFiMacAddress", (n) -> { this.setWiFiMacAddress(n.getStringValue()); });
+        deserializerMap.put("windowsProtectionState", (n) -> { this.setWindowsProtectionState(n.getObjectValue(WindowsProtectionState::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -532,7 +542,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.freeStorageSpaceInBytes;
     }
     /**
-     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -564,7 +574,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.isSupervised;
     }
     /**
-     * Gets the jailBroken property value. whether the device is jail broken or rooted. This property is read-only.
+     * Gets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -572,12 +582,20 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.jailBroken;
     }
     /**
-     * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. This property is read-only.
+     * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
+    }
+    /**
+     * Gets the logCollectionRequests property value. List of log collection requests
+     * @return a deviceLogCollectionResponse
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DeviceLogCollectionResponse> getLogCollectionRequests() {
+        return this.logCollectionRequests;
     }
     /**
      * Gets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
@@ -589,7 +607,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceOwnerType property value. Owner type of device.
-     * @return a ManagedDeviceOwnerType
+     * @return a managedDeviceOwnerType
      */
     @javax.annotation.Nullable
     public ManagedDeviceOwnerType getManagedDeviceOwnerType() {
@@ -597,7 +615,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementAgent property value. The managementAgent property
-     * @return a ManagementAgentType
+     * @return a managementAgentType
      */
     @javax.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
@@ -636,7 +654,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.model;
     }
     /**
-     * Gets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
+     * Gets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -661,7 +679,7 @@ public class ManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the partnerReportedThreatState property value. Available health states for the Device Health API
-     * @return a ManagedDevicePartnerReportedHealthState
+     * @return a managedDevicePartnerReportedHealthState
      */
     @javax.annotation.Nullable
     public ManagedDevicePartnerReportedHealthState getPartnerReportedThreatState() {
@@ -676,7 +694,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.phoneNumber;
     }
     /**
-     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
+     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -692,7 +710,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.remoteAssistanceSessionErrorDetails;
     }
     /**
-     * Gets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. This property is read-only.
+     * Gets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -732,7 +750,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.totalStorageSpaceInBytes;
     }
     /**
-     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -780,6 +798,14 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.wiFiMacAddress;
     }
     /**
+     * Gets the windowsProtectionState property value. The device protection status. This property is read-only.
+     * @return a windowsProtectionState
+     */
+    @javax.annotation.Nullable
+    public WindowsProtectionState getWindowsProtectionState() {
+        return this.windowsProtectionState;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -796,15 +822,17 @@ public class ManagedDevice extends Entity implements Parsable {
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
         writer.writeEnumValue("exchangeAccessStateReason", this.getExchangeAccessStateReason());
+        writer.writeCollectionOfObjectValues("logCollectionRequests", this.getLogCollectionRequests());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeEnumValue("managedDeviceOwnerType", this.getManagedDeviceOwnerType());
         writer.writeEnumValue("managementAgent", this.getManagementAgent());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeEnumValue("partnerReportedThreatState", this.getPartnerReportedThreatState());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
+        writer.writeObjectValue("windowsProtectionState", this.getWindowsProtectionState());
     }
     /**
-     * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the activationLockBypassCode property.
      * @return a void
      */
@@ -885,7 +913,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.deviceCategory = value;
     }
     /**
-     * Sets the deviceCategoryDisplayName property value. Device category display name. This property is read-only.
+     * Sets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param value Value to set for the deviceCategoryDisplayName property.
      * @return a void
      */
@@ -984,7 +1012,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.emailAddress = value;
     }
     /**
-     * Sets the enrolledDateTime property value. Enrollment time of the device. This property is read-only.
+     * Sets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param value Value to set for the enrolledDateTime property.
      * @return a void
      */
@@ -1038,7 +1066,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.freeStorageSpaceInBytes = value;
     }
     /**
-     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the iccid property.
      * @return a void
      */
@@ -1074,7 +1102,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.isSupervised = value;
     }
     /**
-     * Sets the jailBroken property value. whether the device is jail broken or rooted. This property is read-only.
+     * Sets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param value Value to set for the jailBroken property.
      * @return a void
      */
@@ -1083,13 +1111,22 @@ public class ManagedDevice extends Entity implements Parsable {
         this.jailBroken = value;
     }
     /**
-     * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. This property is read-only.
+     * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
     @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
+    }
+    /**
+     * Sets the logCollectionRequests property value. List of log collection requests
+     * @param value Value to set for the logCollectionRequests property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLogCollectionRequests(@javax.annotation.Nullable final java.util.List<DeviceLogCollectionResponse> value) {
+        this.logCollectionRequests = value;
     }
     /**
      * Sets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
@@ -1155,7 +1192,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.model = value;
     }
     /**
-     * Sets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
+     * Sets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      * @param value Value to set for the notes property.
      * @return a void
      */
@@ -1200,7 +1237,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.phoneNumber = value;
     }
     /**
-     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
+     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      * @param value Value to set for the physicalMemoryInBytes property.
      * @return a void
      */
@@ -1218,7 +1255,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.remoteAssistanceSessionErrorDetails = value;
     }
     /**
-     * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. This property is read-only.
+     * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @param value Value to set for the remoteAssistanceSessionUrl property.
      * @return a void
      */
@@ -1263,7 +1300,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.totalStorageSpaceInBytes = value;
     }
     /**
-     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the udid property.
      * @return a void
      */
@@ -1315,5 +1352,14 @@ public class ManagedDevice extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setWiFiMacAddress(@javax.annotation.Nullable final String value) {
         this.wiFiMacAddress = value;
+    }
+    /**
+     * Sets the windowsProtectionState property value. The device protection status. This property is read-only.
+     * @param value Value to set for the windowsProtectionState property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWindowsProtectionState(@javax.annotation.Nullable final WindowsProtectionState value) {
+        this.windowsProtectionState = value;
     }
 }

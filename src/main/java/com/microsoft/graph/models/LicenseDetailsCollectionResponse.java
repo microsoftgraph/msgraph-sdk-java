@@ -12,7 +12,7 @@ public class LicenseDetailsCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<LicenseDetails> value;
     /**
-     * Instantiates a new LicenseDetailsCollectionResponse and sets the default values.
+     * Instantiates a new licenseDetailsCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class LicenseDetailsCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LicenseDetailsCollectionResponse
+     * @return a licenseDetailsCollectionResponse
      */
     @javax.annotation.Nonnull
     public static LicenseDetailsCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

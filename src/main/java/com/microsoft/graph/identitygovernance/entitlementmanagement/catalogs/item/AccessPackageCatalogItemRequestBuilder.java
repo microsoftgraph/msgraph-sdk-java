@@ -1,6 +1,10 @@
 package com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item;
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.accesspackages.AccessPackagesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.customworkflowextensions.CustomWorkflowExtensionsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.resourceroles.ResourceRolesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.resources.ResourcesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.item.resourcescopes.ResourceScopesRequestBuilder;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -27,6 +31,34 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public AccessPackagesRequestBuilder accessPackages() {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the customWorkflowExtensions property of the microsoft.graph.accessPackageCatalog entity.
+     */
+    @javax.annotation.Nonnull
+    public CustomWorkflowExtensionsRequestBuilder customWorkflowExtensions() {
+        return new CustomWorkflowExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceRoles property of the microsoft.graph.accessPackageCatalog entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourceRolesRequestBuilder resourceRoles() {
+        return new ResourceRolesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.accessPackageCatalog entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourcesRequestBuilder resources() {
+        return new ResourcesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceScopes property of the microsoft.graph.accessPackageCatalog entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourceScopesRequestBuilder resourceScopes() {
+        return new ResourceScopesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackageCatalogItemRequestBuilder and sets the default values.

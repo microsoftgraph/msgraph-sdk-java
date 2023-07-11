@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * A folder containing pages of apps and web clips on the Home Screen.
+ */
 public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /**
      * Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
      */
     private java.util.List<IosHomeScreenFolderPage> pages;
     /**
-     * Instantiates a new IosHomeScreenFolder and sets the default values.
+     * Instantiates a new iosHomeScreenFolder and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosHomeScreenFolder
+     * @return a iosHomeScreenFolder
      */
     @javax.annotation.Nonnull
     public static IosHomeScreenFolder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +45,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
     }
     /**
      * Gets the pages property value. Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
-     * @return a IosHomeScreenFolderPage
+     * @return a iosHomeScreenFolderPage
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenFolderPage> getPages() {

@@ -63,7 +63,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The unique identifier of the Azure AD identity that last modified the workflow object.
-     * @return a CompletableFuture of UserProcessingResultCollectionResponse
+     * @return a CompletableFuture of userProcessingResultCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserProcessingResultCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class ExecutionScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * The unique identifier of the Azure AD identity that last modified the workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserProcessingResultCollectionResponse
+     * @return a CompletableFuture of userProcessingResultCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserProcessingResultCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

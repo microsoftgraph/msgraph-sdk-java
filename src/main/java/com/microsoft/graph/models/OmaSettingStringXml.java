@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * OMA Settings StringXML definition.
+ */
 public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
      * File name associated with the Value property (.xml).
@@ -16,7 +19,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
      */
     private byte[] value;
     /**
-     * Instantiates a new OmaSettingStringXml and sets the default values.
+     * Instantiates a new omaSettingStringXml and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +30,7 @@ public class OmaSettingStringXml extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OmaSettingStringXml
+     * @return a omaSettingStringXml
      */
     @javax.annotation.Nonnull
     public static OmaSettingStringXml createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

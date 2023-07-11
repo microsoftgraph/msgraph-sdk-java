@@ -64,7 +64,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of open extensions defined for the group. Read-only. Nullable.
-     * @return a CompletableFuture of ExtensionCollectionResponse
+     * @return a CompletableFuture of extensionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of open extensions defined for the group. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExtensionCollectionResponse
+     * @return a CompletableFuture of extensionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

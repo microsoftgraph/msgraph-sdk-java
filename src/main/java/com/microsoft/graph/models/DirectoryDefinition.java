@@ -13,23 +13,23 @@ public class DirectoryDefinition extends Entity implements Parsable {
      */
     private DirectoryDefinitionDiscoverabilities discoverabilities;
     /**
-     * The discoveryDateTime property
+     * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime discoveryDateTime;
     /**
-     * The name property
+     * Name of the directory. Must be unique within the synchronization schema. Not nullable.
      */
     private String name;
     /**
-     * The objects property
+     * Collection of objects supported by the directory.
      */
     private java.util.List<ObjectDefinition> objects;
     /**
-     * The readOnly property
+     * Whether this object is read-only.
      */
     private Boolean readOnly;
     /**
-     * The version property
+     * Read only value that indicates version discovered. null if discovery has not yet occurred.
      */
     private String version;
     /**
@@ -52,14 +52,14 @@ public class DirectoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the discoverabilities property value. The discoverabilities property
-     * @return a DirectoryDefinitionDiscoverabilities
+     * @return a directoryDefinitionDiscoverabilities
      */
     @javax.annotation.Nullable
     public DirectoryDefinitionDiscoverabilities getDiscoverabilities() {
         return this.discoverabilities;
     }
     /**
-     * Gets the discoveryDateTime property value. The discoveryDateTime property
+     * Gets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         return this.name;
     }
     /**
-     * Gets the objects property value. The objects property
+     * Gets the objects property value. Collection of objects supported by the directory.
      * @return a objectDefinition
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         return this.objects;
     }
     /**
-     * Gets the readOnly property value. The readOnly property
+     * Gets the readOnly property value. Whether this object is read-only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         return this.readOnly;
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. Read only value that indicates version discovered. null if discovery has not yet occurred.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -139,7 +139,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         this.discoverabilities = value;
     }
     /**
-     * Sets the discoveryDateTime property value. The discoveryDateTime property
+     * Sets the discoveryDateTime property value. Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the discoveryDateTime property.
      * @return a void
      */
@@ -148,7 +148,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         this.discoveryDateTime = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         this.name = value;
     }
     /**
-     * Sets the objects property value. The objects property
+     * Sets the objects property value. Collection of objects supported by the directory.
      * @param value Value to set for the objects property.
      * @return a void
      */
@@ -166,7 +166,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         this.objects = value;
     }
     /**
-     * Sets the readOnly property value. The readOnly property
+     * Sets the readOnly property value. Whether this object is read-only.
      * @param value Value to set for the readOnly property.
      * @return a void
      */
@@ -175,7 +175,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
         this.readOnly = value;
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. Read only value that indicates version discovered. null if discovery has not yet occurred.
      * @param value Value to set for the version property.
      * @return a void
      */

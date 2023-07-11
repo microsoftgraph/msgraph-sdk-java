@@ -74,7 +74,7 @@ public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identityProtection
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a CompletableFuture of identityProtectionRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> get() {
@@ -93,7 +93,7 @@ public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identityProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a CompletableFuture of identityProtectionRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,7 +112,7 @@ public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Update identityProtection
      * @param body The request body
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a CompletableFuture of identityProtectionRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> patch(@javax.annotation.Nonnull final IdentityProtectionRoot body) {
@@ -132,7 +132,7 @@ public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
      * Update identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityProtectionRoot
+     * @return a CompletableFuture of identityProtectionRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProtectionRoot> patch(@javax.annotation.Nonnull final IdentityProtectionRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

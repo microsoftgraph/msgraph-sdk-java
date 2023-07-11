@@ -86,7 +86,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Get templates from servicePrincipals
+     * Pre-configured synchronization settings for a particular application.
      * @return a CompletableFuture of synchronizationTemplate
      */
     @javax.annotation.Nonnull
@@ -104,7 +104,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Get templates from servicePrincipals
+     * Pre-configured synchronization settings for a particular application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationTemplate
      */
@@ -123,9 +123,10 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the navigation property templates in servicePrincipals
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @return a CompletableFuture of synchronizationTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> patch(@javax.annotation.Nonnull final SynchronizationTemplate body) {
@@ -142,10 +143,11 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the navigation property templates in servicePrincipals
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> patch(@javax.annotation.Nonnull final SynchronizationTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -190,7 +192,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get templates from servicePrincipals
+     * Pre-configured synchronization settings for a particular application.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +200,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get templates from servicePrincipals
+     * Pre-configured synchronization settings for a particular application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -219,7 +221,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property templates in servicePrincipals
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -228,7 +230,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property templates in servicePrincipals
+     * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -256,7 +258,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get templates from servicePrincipals
+     * Pre-configured synchronization settings for a particular application.
      */
     public class GetQueryParameters {
         /**

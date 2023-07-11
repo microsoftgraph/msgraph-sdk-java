@@ -72,7 +72,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a CompletableFuture of IdentityProviderBaseCollectionResponse
+     * @return a CompletableFuture of identityProviderBaseCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBaseCollectionResponse> get() {
@@ -91,7 +91,7 @@ public class FederationConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityProviderBaseCollectionResponse
+     * @return a CompletableFuture of identityProviderBaseCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityProviderBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

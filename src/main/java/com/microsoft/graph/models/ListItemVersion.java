@@ -12,7 +12,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
      */
     private FieldValueSet fields;
     /**
-     * Instantiates a new ListItemVersion and sets the default values.
+     * Instantiates a new listItemVersion and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class ListItemVersion extends BaseItemVersion implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ListItemVersion
+     * @return a listItemVersion
      */
     @javax.annotation.Nonnull
     public static ListItemVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

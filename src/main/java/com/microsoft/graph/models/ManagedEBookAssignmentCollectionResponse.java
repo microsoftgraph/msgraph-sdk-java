@@ -12,7 +12,7 @@ public class ManagedEBookAssignmentCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<ManagedEBookAssignment> value;
     /**
-     * Instantiates a new ManagedEBookAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new managedEBookAssignmentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ManagedEBookAssignmentCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedEBookAssignmentCollectionResponse
+     * @return a managedEBookAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ManagedEBookAssignmentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

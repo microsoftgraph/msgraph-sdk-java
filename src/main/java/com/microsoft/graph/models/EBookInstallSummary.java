@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties for the installation summary of a book for a device.
+ */
 public class EBookInstallSummary extends Entity implements Parsable {
     /**
      * Number of Devices that have failed to install this book.

@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum LayoutTemplateType implements ValuedEnum {
-    DefaultEscaped("default"),
+    Default("default"),
     VerticalSplit("verticalSplit"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -17,7 +17,7 @@ public enum LayoutTemplateType implements ValuedEnum {
     public static LayoutTemplateType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return DefaultEscaped;
+            case "default": return Default;
             case "verticalSplit": return VerticalSplit;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

@@ -64,7 +64,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
-     * @return a CompletableFuture of MeetingAttendanceReportCollectionResponse
+     * @return a CompletableFuture of meetingAttendanceReportCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/meetingattendancereport-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AttendanceReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of meetingAttendanceReport objects for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MeetingAttendanceReportCollectionResponse
+     * @return a CompletableFuture of meetingAttendanceReportCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/meetingattendancereport-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

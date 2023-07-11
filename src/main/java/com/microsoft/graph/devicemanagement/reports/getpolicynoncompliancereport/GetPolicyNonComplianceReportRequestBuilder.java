@@ -40,10 +40,9 @@ public class GetPolicyNonComplianceReportRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/getPolicyNonComplianceReport", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action getPolicyNonComplianceReport
      * @param body The request body
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getpolicynoncompliancereport?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetPolicyNonComplianceReportPostRequestBody body) {
@@ -60,11 +59,10 @@ public class GetPolicyNonComplianceReportRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Not yet documented
+     * Invoke action getPolicyNonComplianceReport
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getpolicynoncompliancereport?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetPolicyNonComplianceReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class GetPolicyNonComplianceReportRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Not yet documented
+     * Invoke action getPolicyNonComplianceReport
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class GetPolicyNonComplianceReportRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action getPolicyNonComplianceReport
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

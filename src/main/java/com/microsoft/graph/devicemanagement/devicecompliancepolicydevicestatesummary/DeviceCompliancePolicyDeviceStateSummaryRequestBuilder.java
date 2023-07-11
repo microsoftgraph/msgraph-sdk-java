@@ -78,9 +78,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         }
     }
     /**
-     * Read properties and relationships of the deviceCompliancePolicyDeviceStateSummary object.
+     * The device compliance state summary for this account.
      * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicydevicestatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> get() {
@@ -97,10 +96,9 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         }
     }
     /**
-     * Read properties and relationships of the deviceCompliancePolicyDeviceStateSummary object.
+     * The device compliance state summary for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicydevicestatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         }
     }
     /**
-     * Update the properties of a deviceCompliancePolicyDeviceStateSummary object.
+     * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicydevicestatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> patch(@javax.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body) {
@@ -137,11 +134,10 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         }
     }
     /**
-     * Update the properties of a deviceCompliancePolicyDeviceStateSummary object.
+     * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicydevicestatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> patch(@javax.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceCompliancePolicyDeviceStateSummary object.
+     * The device compliance state summary for this account.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceCompliancePolicyDeviceStateSummary object.
+     * The device compliance state summary for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceCompliancePolicyDeviceStateSummary object.
+     * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceCompliancePolicyDeviceStateSummary object.
+     * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceCompliancePolicyDeviceStateSummary object.
+     * The device compliance state summary for this account.
      */
     public class GetQueryParameters {
         /**

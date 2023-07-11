@@ -12,7 +12,7 @@ public class DriveItemVersionCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<DriveItemVersion> value;
     /**
-     * Instantiates a new DriveItemVersionCollectionResponse and sets the default values.
+     * Instantiates a new driveItemVersionCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DriveItemVersionCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DriveItemVersionCollectionResponse
+     * @return a driveItemVersionCollectionResponse
      */
     @javax.annotation.Nonnull
     public static DriveItemVersionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

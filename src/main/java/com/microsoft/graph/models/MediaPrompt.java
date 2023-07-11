@@ -12,7 +12,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      */
     private MediaInfo mediaInfo;
     /**
-     * Instantiates a new MediaPrompt and sets the default values.
+     * Instantiates a new mediaPrompt and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MediaPrompt
+     * @return a mediaPrompt
      */
     @javax.annotation.Nonnull
     public static MediaPrompt createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MediaPrompt extends Prompt implements Parsable {
     }
     /**
      * Gets the mediaInfo property value. The mediaInfo property
-     * @return a MediaInfo
+     * @return a mediaInfo
      */
     @javax.annotation.Nullable
     public MediaInfo getMediaInfo() {

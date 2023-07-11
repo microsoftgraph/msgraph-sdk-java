@@ -20,6 +20,10 @@ public class LearningProvider extends Entity implements Parsable {
      */
     private java.util.List<LearningContent> learningContents;
     /**
+     * The learningCourseActivities property
+     */
+    private java.util.List<LearningCourseActivity> learningCourseActivities;
+    /**
      * Authentication URL to access the courses for the provider. Optional.
      */
     private String loginWebUrl;
@@ -75,6 +79,7 @@ public class LearningProvider extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isCourseActivitySyncEnabled", (n) -> { this.setIsCourseActivitySyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("learningContents", (n) -> { this.setLearningContents(n.getCollectionOfObjectValues(LearningContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("learningCourseActivities", (n) -> { this.setLearningCourseActivities(n.getCollectionOfObjectValues(LearningCourseActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("loginWebUrl", (n) -> { this.setLoginWebUrl(n.getStringValue()); });
         deserializerMap.put("longLogoWebUrlForDarkTheme", (n) -> { this.setLongLogoWebUrlForDarkTheme(n.getStringValue()); });
         deserializerMap.put("longLogoWebUrlForLightTheme", (n) -> { this.setLongLogoWebUrlForLightTheme(n.getStringValue()); });
@@ -97,6 +102,14 @@ public class LearningProvider extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<LearningContent> getLearningContents() {
         return this.learningContents;
+    }
+    /**
+     * Gets the learningCourseActivities property value. The learningCourseActivities property
+     * @return a learningCourseActivity
+     */
+    @javax.annotation.Nullable
+    public java.util.List<LearningCourseActivity> getLearningCourseActivities() {
+        return this.learningCourseActivities;
     }
     /**
      * Gets the loginWebUrl property value. Authentication URL to access the courses for the provider. Optional.
@@ -150,6 +163,7 @@ public class LearningProvider extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isCourseActivitySyncEnabled", this.getIsCourseActivitySyncEnabled());
         writer.writeCollectionOfObjectValues("learningContents", this.getLearningContents());
+        writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
         writer.writeStringValue("loginWebUrl", this.getLoginWebUrl());
         writer.writeStringValue("longLogoWebUrlForDarkTheme", this.getLongLogoWebUrlForDarkTheme());
         writer.writeStringValue("longLogoWebUrlForLightTheme", this.getLongLogoWebUrlForLightTheme());
@@ -182,6 +196,15 @@ public class LearningProvider extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setLearningContents(@javax.annotation.Nullable final java.util.List<LearningContent> value) {
         this.learningContents = value;
+    }
+    /**
+     * Sets the learningCourseActivities property value. The learningCourseActivities property
+     * @param value Value to set for the learningCourseActivities property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLearningCourseActivities(@javax.annotation.Nullable final java.util.List<LearningCourseActivity> value) {
+        this.learningCourseActivities = value;
     }
     /**
      * Sets the loginWebUrl property value. Authentication URL to access the courses for the provider. Optional.

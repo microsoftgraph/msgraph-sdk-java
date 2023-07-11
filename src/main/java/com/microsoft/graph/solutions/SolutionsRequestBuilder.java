@@ -58,7 +58,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get solutions
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a CompletableFuture of solutionsRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SolutionsRoot> get() {
@@ -77,7 +77,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a CompletableFuture of solutionsRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SolutionsRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -96,7 +96,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update solutions
      * @param body The request body
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a CompletableFuture of solutionsRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SolutionsRoot> patch(@javax.annotation.Nonnull final SolutionsRoot body) {
@@ -116,7 +116,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Update solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SolutionsRoot
+     * @return a CompletableFuture of solutionsRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SolutionsRoot> patch(@javax.annotation.Nonnull final SolutionsRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

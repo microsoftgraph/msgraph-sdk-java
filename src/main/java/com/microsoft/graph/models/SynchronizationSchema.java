@@ -8,15 +8,15 @@ import java.util.Map;
 import java.util.Objects;
 public class SynchronizationSchema extends Entity implements Parsable {
     /**
-     * The directories property
+     * Contains the collection of directories and all of their objects.
      */
     private java.util.List<DirectoryDefinition> directories;
     /**
-     * The synchronizationRules property
+     * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      */
     private java.util.List<SynchronizationRule> synchronizationRules;
     /**
-     * The version property
+     * The version of the schema, updated automatically with every schema change.
      */
     private String version;
     /**
@@ -38,7 +38,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
         return new SynchronizationSchema();
     }
     /**
-     * Gets the directories property value. The directories property
+     * Gets the directories property value. Contains the collection of directories and all of their objects.
      * @return a directoryDefinition
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the synchronizationRules property value. The synchronizationRules property
+     * Gets the synchronizationRules property value. A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      * @return a synchronizationRule
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
         return this.synchronizationRules;
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the schema, updated automatically with every schema change.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the directories property value. The directories property
+     * Sets the directories property value. Contains the collection of directories and all of their objects.
      * @param value Value to set for the directories property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
         this.directories = value;
     }
     /**
-     * Sets the synchronizationRules property value. The synchronizationRules property
+     * Sets the synchronizationRules property value. A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      * @param value Value to set for the synchronizationRules property.
      * @return a void
      */
@@ -105,7 +105,7 @@ public class SynchronizationSchema extends Entity implements Parsable {
         this.synchronizationRules = value;
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the schema, updated automatically with every schema change.
      * @param value Value to set for the version property.
      * @return a void
      */

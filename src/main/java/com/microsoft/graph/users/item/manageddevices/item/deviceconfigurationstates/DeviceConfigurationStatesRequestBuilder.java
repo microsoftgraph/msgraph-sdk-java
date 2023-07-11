@@ -64,7 +64,7 @@ public class DeviceConfigurationStatesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Device configuration states for this device.
-     * @return a CompletableFuture of DeviceConfigurationStateCollectionResponse
+     * @return a CompletableFuture of deviceConfigurationStateCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationStateCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class DeviceConfigurationStatesRequestBuilder extends BaseRequestBuilder 
     /**
      * Device configuration states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceConfigurationStateCollectionResponse
+     * @return a CompletableFuture of deviceConfigurationStateCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationStateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

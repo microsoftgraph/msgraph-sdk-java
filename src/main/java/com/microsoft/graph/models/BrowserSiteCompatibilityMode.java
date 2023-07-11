@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public enum BrowserSiteCompatibilityMode implements ValuedEnum {
     /** Loads the site using default compatibility mode. */
-    DefaultEscaped("default"),
+    Default("default"),
     /** Loads the site in internetExplorer8 Enterprise Mode */
     InternetExplorer8Enterprise("internetExplorer8Enterprise"),
     /** Loads the site in internetExplorer7 Enterprise Mode */
@@ -34,7 +34,7 @@ public enum BrowserSiteCompatibilityMode implements ValuedEnum {
     public static BrowserSiteCompatibilityMode forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return DefaultEscaped;
+            case "default": return Default;
             case "internetExplorer8Enterprise": return InternetExplorer8Enterprise;
             case "internetExplorer7Enterprise": return InternetExplorer7Enterprise;
             case "internetExplorer11": return InternetExplorer11;

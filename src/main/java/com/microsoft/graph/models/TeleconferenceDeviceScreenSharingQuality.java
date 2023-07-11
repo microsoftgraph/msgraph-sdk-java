@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class TeleconferenceDeviceScreenSharingQuality extends TeleconferenceDeviceVideoQuality implements Parsable {
     /**
-     * Instantiates a new TeleconferenceDeviceScreenSharingQuality and sets the default values.
+     * Instantiates a new teleconferenceDeviceScreenSharingQuality and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -18,7 +18,7 @@ public class TeleconferenceDeviceScreenSharingQuality extends TeleconferenceDevi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeleconferenceDeviceScreenSharingQuality
+     * @return a teleconferenceDeviceScreenSharingQuality
      */
     @javax.annotation.Nonnull
     public static TeleconferenceDeviceScreenSharingQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

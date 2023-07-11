@@ -64,7 +64,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of endpoints exposed by a print service.
-     * @return a CompletableFuture of PrintServiceEndpointCollectionResponse
+     * @return a CompletableFuture of printServiceEndpointCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of endpoints exposed by a print service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintServiceEndpointCollectionResponse
+     * @return a CompletableFuture of printServiceEndpointCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/printservice-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

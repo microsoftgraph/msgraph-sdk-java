@@ -13,11 +13,11 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The expression property
+     * Equivalent expression representation of this attributeMappingSource object.
      */
     private String expression;
     /**
-     * The name property
+     * Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
      */
     private String name;
     /**
@@ -25,7 +25,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The parameters property
+     * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
      */
     private java.util.List<StringKeyAttributeMappingSourceValuePair> parameters;
     /**
@@ -59,7 +59,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the expression property value. The expression property
+     * Gets the expression property value. Equivalent expression representation of this attributeMappingSource object.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
      * @return a stringKeyAttributeMappingSourceValuePair
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a AttributeMappingSourceType
+     * @return a attributeMappingSourceType
      */
     @javax.annotation.Nullable
     public AttributeMappingSourceType getType() {
@@ -137,7 +137,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the expression property value. The expression property
+     * Sets the expression property value. Equivalent expression representation of this attributeMappingSource object.
      * @param value Value to set for the expression property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         this.expression = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -164,7 +164,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
      * @param value Value to set for the parameters property.
      * @return a void
      */

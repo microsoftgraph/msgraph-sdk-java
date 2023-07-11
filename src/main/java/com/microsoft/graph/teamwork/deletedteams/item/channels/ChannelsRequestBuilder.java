@@ -72,7 +72,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The channels that are either shared with this deleted team or created in this deleted team.
-     * @return a CompletableFuture of ChannelCollectionResponse
+     * @return a CompletableFuture of channelCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get() {
@@ -91,7 +91,7 @@ public class ChannelsRequestBuilder extends BaseRequestBuilder {
     /**
      * The channels that are either shared with this deleted team or created in this deleted team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ChannelCollectionResponse
+     * @return a CompletableFuture of channelCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChannelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

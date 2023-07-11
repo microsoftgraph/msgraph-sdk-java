@@ -67,7 +67,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     }
     /**
      * Gets the roleMemberInfo property value. The roleMemberInfo property
-     * @return a Identity
+     * @return a identity
      */
     @javax.annotation.Nullable
     public Identity getRoleMemberInfo() {

@@ -12,7 +12,7 @@ public class SharedWithChannelTeamInfoCollectionResponse extends BaseCollectionP
      */
     private java.util.List<SharedWithChannelTeamInfo> value;
     /**
-     * Instantiates a new SharedWithChannelTeamInfoCollectionResponse and sets the default values.
+     * Instantiates a new sharedWithChannelTeamInfoCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class SharedWithChannelTeamInfoCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharedWithChannelTeamInfoCollectionResponse
+     * @return a sharedWithChannelTeamInfoCollectionResponse
      */
     @javax.annotation.Nonnull
     public static SharedWithChannelTeamInfoCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

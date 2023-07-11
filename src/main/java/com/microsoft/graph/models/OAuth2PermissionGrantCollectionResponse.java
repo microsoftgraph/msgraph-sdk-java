@@ -12,7 +12,7 @@ public class OAuth2PermissionGrantCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<OAuth2PermissionGrant> value;
     /**
-     * Instantiates a new OAuth2PermissionGrantCollectionResponse and sets the default values.
+     * Instantiates a new oAuth2PermissionGrantCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class OAuth2PermissionGrantCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OAuth2PermissionGrantCollectionResponse
+     * @return a oAuth2PermissionGrantCollectionResponse
      */
     @javax.annotation.Nonnull
     public static OAuth2PermissionGrantCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

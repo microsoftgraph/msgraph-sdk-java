@@ -12,7 +12,7 @@ public class PrintServiceCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<PrintService> value;
     /**
-     * Instantiates a new PrintServiceCollectionResponse and sets the default values.
+     * Instantiates a new printServiceCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class PrintServiceCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintServiceCollectionResponse
+     * @return a printServiceCollectionResponse
      */
     @javax.annotation.Nonnull
     public static PrintServiceCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,6 +7,9 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for Managed iOS Line Of Business apps.
+ */
 public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     /**
      * Contains properties of the possible iOS device types the mobile app can run on.
@@ -33,7 +36,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     private String versionNumber;
     /**
-     * Instantiates a new ManagedIOSLobApp and sets the default values.
+     * Instantiates a new managedIOSLobApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -44,7 +47,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedIOSLobApp
+     * @return a managedIOSLobApp
      */
     @javax.annotation.Nonnull
     public static ManagedIOSLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +56,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
-     * @return a IosDeviceType
+     * @return a iosDeviceType
      */
     @javax.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {

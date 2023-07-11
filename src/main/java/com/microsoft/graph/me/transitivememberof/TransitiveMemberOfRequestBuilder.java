@@ -2,6 +2,7 @@ package com.microsoft.graph.me.transitivememberof;
 
 import com.microsoft.graph.me.transitivememberof.count.CountRequestBuilder;
 import com.microsoft.graph.me.transitivememberof.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.graphdirectoryrole.GraphDirectoryRoleRequestBuilder;
 import com.microsoft.graph.me.transitivememberof.graphgroup.GraphGroupRequestBuilder;
 import com.microsoft.graph.me.transitivememberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
@@ -37,6 +38,13 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphAdministrativeUnitRequestBuilder graphAdministrativeUnit() {
         return new GraphAdministrativeUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to directoryRole.
+     */
+    @javax.annotation.Nonnull
+    public GraphDirectoryRoleRequestBuilder graphDirectoryRole() {
+        return new GraphDirectoryRoleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Casts the previous resource to group.
@@ -79,7 +87,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -99,7 +107,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

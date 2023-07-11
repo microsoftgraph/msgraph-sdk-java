@@ -13,7 +13,7 @@ public class EdiscoveryReviewSetQueryCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<EdiscoveryReviewSetQuery> value;
     /**
-     * Instantiates a new EdiscoveryReviewSetQueryCollectionResponse and sets the default values.
+     * Instantiates a new ediscoveryReviewSetQueryCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class EdiscoveryReviewSetQueryCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryReviewSetQueryCollectionResponse
+     * @return a ediscoveryReviewSetQueryCollectionResponse
      */
     @javax.annotation.Nonnull
     public static EdiscoveryReviewSetQueryCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -129,7 +129,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the history property value. The history of modifications applied to the cookie.
-     * @return a BrowserSharedCookieHistory
+     * @return a browserSharedCookieHistory
      */
     @javax.annotation.Nullable
     public java.util.List<BrowserSharedCookieHistory> getHistory() {
@@ -177,7 +177,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the sourceEnvironment property value. The sourceEnvironment property
-     * @return a BrowserSharedCookieSourceEnvironment
+     * @return a browserSharedCookieSourceEnvironment
      */
     @javax.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
@@ -185,7 +185,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a BrowserSharedCookieStatus
+     * @return a browserSharedCookieStatus
      */
     @javax.annotation.Nullable
     public BrowserSharedCookieStatus getStatus() {

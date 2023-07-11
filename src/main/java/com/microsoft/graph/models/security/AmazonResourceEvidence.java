@@ -24,7 +24,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      */
     private String resourceType;
     /**
-     * Instantiates a new AmazonResourceEvidence and sets the default values.
+     * Instantiates a new amazonResourceEvidence and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -34,7 +34,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AmazonResourceEvidence
+     * @return a amazonResourceEvidence
      */
     @javax.annotation.Nonnull
     public static AmazonResourceEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

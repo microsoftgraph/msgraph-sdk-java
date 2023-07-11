@@ -24,7 +24,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
      */
     private RequestSchedule scheduleInfo;
     /**
-     * Instantiates a new UnifiedRoleAssignmentSchedule and sets the default values.
+     * Instantiates a new unifiedRoleAssignmentSchedule and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -34,7 +34,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleAssignmentSchedule
+     * @return a unifiedRoleAssignmentSchedule
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleAssignmentSchedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

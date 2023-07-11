@@ -50,7 +50,7 @@ public class GraphAppRoleAssignmentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.appRoleAssignment in the microsoft.graph.directoryObject collection
-     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GraphAppRoleAssignmentRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.appRoleAssignment in the microsoft.graph.directoryObject collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

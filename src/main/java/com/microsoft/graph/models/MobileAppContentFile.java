@@ -149,7 +149,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the uploadState property value. Contains properties for upload request states.
-     * @return a MobileAppContentFileUploadState
+     * @return a mobileAppContentFileUploadState
      */
     @javax.annotation.Nullable
     public MobileAppContentFileUploadState getUploadState() {

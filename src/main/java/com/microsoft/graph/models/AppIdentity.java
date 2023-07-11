@@ -33,7 +33,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
      */
     private String servicePrincipalName;
     /**
-     * Instantiates a new AppIdentity and sets the default values.
+     * Instantiates a new appIdentity and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class AppIdentity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppIdentity
+     * @return a appIdentity
      */
     @javax.annotation.Nonnull
     public static AppIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

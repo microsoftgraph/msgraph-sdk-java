@@ -12,7 +12,7 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      */
     private String description;
     /**
-     * Instantiates a new DomainDnsUnavailableRecord and sets the default values.
+     * Instantiates a new domainDnsUnavailableRecord and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DomainDnsUnavailableRecord
+     * @return a domainDnsUnavailableRecord
      */
     @javax.annotation.Nonnull
     public static DomainDnsUnavailableRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -55,7 +55,7 @@ public class BookingWorkHours implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the day property value. The day property
-     * @return a DayOfWeek
+     * @return a dayOfWeek
      */
     @javax.annotation.Nullable
     public DayOfWeek getDay() {

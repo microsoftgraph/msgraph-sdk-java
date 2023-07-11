@@ -80,7 +80,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recordingStatus property value. The recordingStatus property
-     * @return a RecordingStatus
+     * @return a recordingStatus
      */
     @javax.annotation.Nullable
     public RecordingStatus getRecordingStatus() {

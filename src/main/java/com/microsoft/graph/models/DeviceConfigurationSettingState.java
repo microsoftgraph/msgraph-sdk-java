@@ -181,7 +181,7 @@ public class DeviceConfigurationSettingState implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the state property value. The state property
-     * @return a ComplianceStatus
+     * @return a complianceStatus
      */
     @javax.annotation.Nullable
     public ComplianceStatus getState() {

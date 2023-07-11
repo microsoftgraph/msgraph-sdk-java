@@ -64,7 +64,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
-     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
+     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     /**
      * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
+     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

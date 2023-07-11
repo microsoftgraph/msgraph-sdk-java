@@ -12,7 +12,7 @@ public class DelegatedAdminAccessAssignmentCollectionResponse extends BaseCollec
      */
     private java.util.List<DelegatedAdminAccessAssignment> value;
     /**
-     * Instantiates a new DelegatedAdminAccessAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new delegatedAdminAccessAssignmentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DelegatedAdminAccessAssignmentCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminAccessAssignmentCollectionResponse
+     * @return a delegatedAdminAccessAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static DelegatedAdminAccessAssignmentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

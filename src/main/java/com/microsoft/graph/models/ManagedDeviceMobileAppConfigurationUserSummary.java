@@ -7,6 +7,9 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties, inherited properties and actions for an MDM mobile app configuration user status summary.
+ */
 public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity implements Parsable {
     /**
      * Version of the policy for that overview

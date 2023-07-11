@@ -13,7 +13,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The definition property
+     * Definition of the test object.
      */
     private ObjectDefinition definition;
     /**
@@ -21,7 +21,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The properties property
+     * Property values of the test object.
      */
     private java.util.List<StringKeyObjectValuePair> properties;
     /**
@@ -51,7 +51,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the definition property value. The definition property
+     * Gets the definition property value. Definition of the test object.
      * @return a objectDefinition
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. Property values of the test object.
      * @return a stringKeyObjectValuePair
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the definition property value. The definition property
+     * Sets the definition property value. Definition of the test object.
      * @param value Value to set for the definition property.
      * @return a void
      */
@@ -127,7 +127,7 @@ public class ExpressionInputObject implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. Property values of the test object.
      * @param value Value to set for the properties property.
      * @return a void
      */

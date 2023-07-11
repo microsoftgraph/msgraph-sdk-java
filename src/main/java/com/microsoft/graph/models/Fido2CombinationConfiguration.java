@@ -12,7 +12,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      */
     private java.util.List<String> allowedAAGUIDs;
     /**
-     * Instantiates a new Fido2CombinationConfiguration and sets the default values.
+     * Instantiates a new fido2CombinationConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Fido2CombinationConfiguration
+     * @return a fido2CombinationConfiguration
      */
     @javax.annotation.Nonnull
     public static Fido2CombinationConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

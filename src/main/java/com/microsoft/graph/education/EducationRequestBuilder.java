@@ -74,7 +74,7 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get education
-     * @return a CompletableFuture of EducationRoot
+     * @return a CompletableFuture of educationRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRoot> get() {
@@ -93,7 +93,7 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationRoot
+     * @return a CompletableFuture of educationRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -112,7 +112,7 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update education
      * @param body The request body
-     * @return a CompletableFuture of EducationRoot
+     * @return a CompletableFuture of educationRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRoot> patch(@javax.annotation.Nonnull final EducationRoot body) {
@@ -132,7 +132,7 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
      * Update education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationRoot
+     * @return a CompletableFuture of educationRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRoot> patch(@javax.annotation.Nonnull final EducationRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

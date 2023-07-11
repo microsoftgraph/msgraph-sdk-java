@@ -81,7 +81,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the user synchronization policy of a partner-specific configuration.
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -101,7 +101,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the user synchronization policy of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -119,10 +119,10 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@javax.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
@@ -139,11 +139,11 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@javax.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -217,7 +217,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -50,7 +50,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get external
-     * @return a CompletableFuture of External
+     * @return a CompletableFuture of external
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> get() {
@@ -69,7 +69,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Get external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of External
+     * @return a CompletableFuture of external
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
     /**
      * Update external
      * @param body The request body
-     * @return a CompletableFuture of External
+     * @return a CompletableFuture of external
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> patch(@javax.annotation.Nonnull final External body) {
@@ -108,7 +108,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder {
      * Update external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of External
+     * @return a CompletableFuture of external
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<External> patch(@javax.annotation.Nonnull final External body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

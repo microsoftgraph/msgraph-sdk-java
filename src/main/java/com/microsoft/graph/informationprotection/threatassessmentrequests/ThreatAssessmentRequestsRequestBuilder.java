@@ -64,7 +64,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
-     * @return a CompletableFuture of ThreatAssessmentRequestCollectionResponse
+     * @return a CompletableFuture of threatAssessmentRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ThreatAssessmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of threatAssessmentRequest objects. A threat assessment request can be one of the following types:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatAssessmentRequestCollectionResponse
+     * @return a CompletableFuture of threatAssessmentRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/informationprotection-list-threatassessmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

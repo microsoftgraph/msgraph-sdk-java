@@ -12,7 +12,7 @@ public class TeamworkTagCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<TeamworkTag> value;
     /**
-     * Instantiates a new TeamworkTagCollectionResponse and sets the default values.
+     * Instantiates a new teamworkTagCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class TeamworkTagCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkTagCollectionResponse
+     * @return a teamworkTagCollectionResponse
      */
     @javax.annotation.Nonnull
     public static TeamworkTagCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

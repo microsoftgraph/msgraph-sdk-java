@@ -64,7 +64,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of onenoteSection objects.
-     * @return a CompletableFuture of OnenoteSectionCollectionResponse
+     * @return a CompletableFuture of onenoteSectionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of onenoteSection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenoteSectionCollectionResponse
+     * @return a CompletableFuture of onenoteSectionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

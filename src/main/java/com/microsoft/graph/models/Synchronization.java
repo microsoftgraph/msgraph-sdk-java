@@ -8,15 +8,15 @@ import java.util.Map;
 import java.util.Objects;
 public class Synchronization extends Entity implements Parsable {
     /**
-     * The jobs property
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      */
     private java.util.List<SynchronizationJob> jobs;
     /**
-     * The secrets property
+     * Represents a collection of credentials to access provisioned cloud applications.
      */
     private java.util.List<SynchronizationSecretKeyStringValuePair> secrets;
     /**
-     * The templates property
+     * Pre-configured synchronization settings for a particular application.
      */
     private java.util.List<SynchronizationTemplate> templates;
     /**
@@ -50,7 +50,7 @@ public class Synchronization extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the jobs property value. The jobs property
+     * Gets the jobs property value. Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @return a synchronizationJob
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class Synchronization extends Entity implements Parsable {
         return this.jobs;
     }
     /**
-     * Gets the secrets property value. The secrets property
+     * Gets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
      * @return a synchronizationSecretKeyStringValuePair
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class Synchronization extends Entity implements Parsable {
         return this.secrets;
     }
     /**
-     * Gets the templates property value. The templates property
+     * Gets the templates property value. Pre-configured synchronization settings for a particular application.
      * @return a synchronizationTemplate
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class Synchronization extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("templates", this.getTemplates());
     }
     /**
-     * Sets the jobs property value. The jobs property
+     * Sets the jobs property value. Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param value Value to set for the jobs property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class Synchronization extends Entity implements Parsable {
         this.jobs = value;
     }
     /**
-     * Sets the secrets property value. The secrets property
+     * Sets the secrets property value. Represents a collection of credentials to access provisioned cloud applications.
      * @param value Value to set for the secrets property.
      * @return a void
      */
@@ -105,7 +105,7 @@ public class Synchronization extends Entity implements Parsable {
         this.secrets = value;
     }
     /**
-     * Sets the templates property value. The templates property
+     * Sets the templates property value. Pre-configured synchronization settings for a particular application.
      * @param value Value to set for the templates property.
      * @return a void
      */

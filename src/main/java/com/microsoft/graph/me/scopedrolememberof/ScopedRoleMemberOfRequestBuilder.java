@@ -64,7 +64,7 @@ public class ScopedRoleMemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get scopedRoleMemberOf from me
-     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
+     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ScopedRoleMemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * Get scopedRoleMemberOf from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ScopedRoleMembershipCollectionResponse
+     * @return a CompletableFuture of scopedRoleMembershipCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembershipCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

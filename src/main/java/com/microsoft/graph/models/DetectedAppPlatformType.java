@@ -28,7 +28,9 @@ public enum DetectedAppPlatformType implements ValuedEnum {
     /** Indicates that the platform of the detected application is Android work profile. */
     AndroidWorkProfile("androidWorkProfile"),
     /** Indicates that the platform of the detected application is Android dedicated and fully managed. */
-    AndroidDedicatedAndFullyManaged("androidDedicatedAndFullyManaged");
+    AndroidDedicatedAndFullyManaged("androidDedicatedAndFullyManaged"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DetectedAppPlatformType(final String value) {
         this.value = value;
@@ -50,6 +52,7 @@ public enum DetectedAppPlatformType implements ValuedEnum {
             case "androidDeviceAdministrator": return AndroidDeviceAdministrator;
             case "androidWorkProfile": return AndroidWorkProfile;
             case "androidDedicatedAndFullyManaged": return AndroidDedicatedAndFullyManaged;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

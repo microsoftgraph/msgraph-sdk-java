@@ -158,7 +158,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a PropertyType
+     * @return a propertyType
      */
     @javax.annotation.Nullable
     public PropertyType getType() {

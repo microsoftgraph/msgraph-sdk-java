@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This class contains compliance settings for Windows 10.
+ */
 public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
      * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
@@ -84,7 +87,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     private Boolean storageRequireEncryption;
     /**
-     * Instantiates a new Windows10CompliancePolicy and sets the default values.
+     * Instantiates a new windows10CompliancePolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -95,7 +98,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10CompliancePolicy
+     * @return a windows10CompliancePolicy
      */
     @javax.annotation.Nonnull
     public static Windows10CompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -252,7 +255,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {

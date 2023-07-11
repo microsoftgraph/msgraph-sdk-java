@@ -102,9 +102,8 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * The managed app registrations.
      * @return a CompletableFuture of managedAppRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get() {
@@ -121,10 +120,9 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * The managed app registrations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -208,7 +206,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * The managed app registrations.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -216,7 +214,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * The managed app registrations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -274,7 +272,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedAppRegistration object.
+     * The managed app registrations.
      */
     public class GetQueryParameters {
         /**

@@ -64,7 +64,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the app roles a group has been granted for an application. Supports $expand.
-     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the app roles a group has been granted for an application. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

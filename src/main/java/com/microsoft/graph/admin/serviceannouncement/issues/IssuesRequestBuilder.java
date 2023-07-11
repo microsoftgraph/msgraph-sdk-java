@@ -64,7 +64,7 @@ public class IssuesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve serviceHealthIssue resources from the **issues** navigation property. This operation retrieves information about all service health issues that exist for the tenant.
-     * @return a CompletableFuture of ServiceHealthIssueCollectionResponse
+     * @return a CompletableFuture of serviceHealthIssueCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceannouncement-list-issues?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class IssuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve serviceHealthIssue resources from the **issues** navigation property. This operation retrieves information about all service health issues that exist for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ServiceHealthIssueCollectionResponse
+     * @return a CompletableFuture of serviceHealthIssueCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceannouncement-list-issues?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

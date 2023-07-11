@@ -119,7 +119,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a EnrollmentState
+     * @return a enrollmentState
      */
     @javax.annotation.Nullable
     public EnrollmentState getEnrollmentState() {

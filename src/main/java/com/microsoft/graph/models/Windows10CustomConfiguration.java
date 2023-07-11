@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows10CustomConfiguration resource.
+ */
 public class Windows10CustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * OMA settings. This collection can contain a maximum of 1000 elements.
      */
     private java.util.List<OmaSetting> omaSettings;
     /**
-     * Instantiates a new Windows10CustomConfiguration and sets the default values.
+     * Instantiates a new windows10CustomConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10CustomConfiguration
+     * @return a windows10CustomConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10CustomConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

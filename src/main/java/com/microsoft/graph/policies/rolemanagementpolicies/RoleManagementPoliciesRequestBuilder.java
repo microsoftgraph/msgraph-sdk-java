@@ -64,7 +64,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get role management policies and their details.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyCollectionResponse
+     * @return a CompletableFuture of unifiedRoleManagementPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/policyroot-list-rolemanagementpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get role management policies and their details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyCollectionResponse
+     * @return a CompletableFuture of unifiedRoleManagementPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/policyroot-list-rolemanagementpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

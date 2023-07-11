@@ -29,7 +29,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new AssignedTrainingInfo and sets the default values.
+     * Instantiates a new assignedTrainingInfo and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +39,7 @@ public class AssignedTrainingInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignedTrainingInfo
+     * @return a assignedTrainingInfo
      */
     @javax.annotation.Nonnull
     public static AssignedTrainingInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

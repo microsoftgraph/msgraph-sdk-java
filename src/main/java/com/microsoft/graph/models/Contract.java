@@ -25,7 +25,7 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     private String displayName;
     /**
-     * Instantiates a new Contract and sets the default values.
+     * Instantiates a new contract and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -36,7 +36,7 @@ public class Contract extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Contract
+     * @return a contract
      */
     @javax.annotation.Nonnull
     public static Contract createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

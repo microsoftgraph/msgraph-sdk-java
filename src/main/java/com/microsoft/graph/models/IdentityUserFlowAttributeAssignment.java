@@ -106,7 +106,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     }
     /**
      * Gets the userInputType property value. The userInputType property
-     * @return a IdentityUserFlowAttributeInputType
+     * @return a identityUserFlowAttributeInputType
      */
     @javax.annotation.Nullable
     public IdentityUserFlowAttributeInputType getUserInputType() {

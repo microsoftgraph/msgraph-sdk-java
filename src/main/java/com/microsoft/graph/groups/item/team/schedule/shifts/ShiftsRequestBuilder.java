@@ -64,7 +64,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of shift instances in a schedule.
-     * @return a CompletableFuture of ShiftCollectionResponse
+     * @return a CompletableFuture of shiftCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of shift instances in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ShiftCollectionResponse
+     * @return a CompletableFuture of shiftCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

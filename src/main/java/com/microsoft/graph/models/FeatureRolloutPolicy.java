@@ -75,7 +75,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a StagedFeatureName
+     * @return a stagedFeatureName
      */
     @javax.annotation.Nullable
     public StagedFeatureName getFeature() {

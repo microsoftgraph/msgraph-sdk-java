@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Device Enrollment Configuration that restricts the types of devices a user can enroll
+ */
 public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
      * Android restrictions based on platform, platform operating system version, and device ownership
@@ -28,7 +31,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     private DeviceEnrollmentPlatformRestriction windowsRestriction;
     /**
-     * Instantiates a new DeviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
+     * Instantiates a new deviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +42,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceEnrollmentPlatformRestrictionsConfiguration
+     * @return a deviceEnrollmentPlatformRestrictionsConfiguration
      */
     @javax.annotation.Nonnull
     public static DeviceEnrollmentPlatformRestrictionsConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

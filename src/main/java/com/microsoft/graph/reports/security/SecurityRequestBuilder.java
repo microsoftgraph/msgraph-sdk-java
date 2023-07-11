@@ -102,7 +102,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get security from reports
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      * @return a CompletableFuture of securityReportsRoot
      */
     @javax.annotation.Nonnull
@@ -120,7 +120,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get security from reports
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of securityReportsRoot
      */
@@ -206,7 +206,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get security from reports
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +214,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get security from reports
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +272,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get security from reports
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      */
     public class GetQueryParameters {
         /**

@@ -151,7 +151,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the scopes property value. Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required.
-     * @return a AccessReviewScope
+     * @return a accessReviewScope
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewScope> getScopes() {

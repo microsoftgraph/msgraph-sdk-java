@@ -114,7 +114,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a DriveRecipient
+     * @return a driveRecipient
      */
     @javax.annotation.Nullable
     public java.util.List<DriveRecipient> getRecipients() {

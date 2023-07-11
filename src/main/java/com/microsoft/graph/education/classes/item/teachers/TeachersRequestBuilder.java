@@ -71,7 +71,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
-     * @return a CompletableFuture of EducationUserCollectionResponse
+     * @return a CompletableFuture of educationUserCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class TeachersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list teachers for a class. Delegated tokens must be members of the class to get the teacher list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationUserCollectionResponse
+     * @return a CompletableFuture of educationUserCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-teachers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -64,7 +64,7 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of phone authentication method objects for a user. This will return up to three objects, as a user can have up to three phones usable for authentication. This method is available only for standard Azure AD and B2B users, but not B2C users.
-     * @return a CompletableFuture of PhoneAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of phoneAuthenticationMethodCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-phonemethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PhoneMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of phone authentication method objects for a user. This will return up to three objects, as a user can have up to three phones usable for authentication. This method is available only for standard Azure AD and B2B users, but not B2C users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PhoneAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of phoneAuthenticationMethodCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-phonemethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

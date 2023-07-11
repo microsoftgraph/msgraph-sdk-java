@@ -86,7 +86,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      * @return a CompletableFuture of directoryDefinition
      */
     @javax.annotation.Nonnull
@@ -104,7 +104,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryDefinition
      */
@@ -190,7 +190,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +198,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -256,7 +256,7 @@ public class DirectoryDefinitionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      */
     public class GetQueryParameters {
         /**

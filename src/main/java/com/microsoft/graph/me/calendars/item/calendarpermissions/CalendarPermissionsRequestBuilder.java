@@ -64,7 +64,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
-     * @return a CompletableFuture of CalendarPermissionCollectionResponse
+     * @return a CompletableFuture of calendarPermissionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CalendarPermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CalendarPermissionCollectionResponse
+     * @return a CompletableFuture of calendarPermissionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

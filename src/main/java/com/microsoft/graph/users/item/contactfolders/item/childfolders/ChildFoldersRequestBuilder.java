@@ -72,7 +72,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a collection of child folders under the specified contact folder.
-     * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @return a CompletableFuture of contactFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of child folders under the specified contact folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @return a CompletableFuture of contactFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+/**
+ * A class containing the properties for iOS Vpp eBook.
+ */
 public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * The Apple ID associated with Vpp token.
@@ -41,7 +44,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
      */
     private UUID vppTokenId;
     /**
-     * Instantiates a new IosVppEBook and sets the default values.
+     * Instantiates a new iosVppEBook and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -52,7 +55,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosVppEBook
+     * @return a iosVppEBook
      */
     @javax.annotation.Nonnull
     public static IosVppEBook createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

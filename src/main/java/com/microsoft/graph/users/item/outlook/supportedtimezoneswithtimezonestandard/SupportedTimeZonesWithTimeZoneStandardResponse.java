@@ -43,7 +43,7 @@ public class SupportedTimeZonesWithTimeZoneStandardResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a TimeZoneInformation
+     * @return a timeZoneInformation
      */
     @javax.annotation.Nullable
     public java.util.List<TimeZoneInformation> getValue() {

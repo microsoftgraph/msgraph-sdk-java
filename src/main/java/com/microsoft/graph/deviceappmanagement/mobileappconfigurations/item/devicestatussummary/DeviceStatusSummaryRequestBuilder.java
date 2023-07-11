@@ -78,9 +78,8 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceSummary object.
+     * App configuration device status summary.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> get() {
@@ -97,10 +96,9 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceSummary object.
+     * App configuration device status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationDeviceSummary object.
+     * Update the navigation property deviceStatusSummary in deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary body) {
@@ -137,11 +134,10 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationDeviceSummary object.
+     * Update the navigation property deviceStatusSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceSummary object.
+     * App configuration device status summary.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceSummary object.
+     * App configuration device status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationDeviceSummary object.
+     * Update the navigation property deviceStatusSummary in deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationDeviceSummary object.
+     * Update the navigation property deviceStatusSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceSummary object.
+     * App configuration device status summary.
      */
     public class GetQueryParameters {
         /**

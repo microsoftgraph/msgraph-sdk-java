@@ -64,7 +64,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      */
     private java.util.List<EducationUser> users;
     /**
-     * Instantiates a new EducationSchool and sets the default values.
+     * Instantiates a new educationSchool and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationSchool
+     * @return a educationSchool
      */
     @javax.annotation.Nonnull
     public static EducationSchool createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

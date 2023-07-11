@@ -63,7 +63,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns the tags that are a child of a tag.
-     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
+     * @return a CompletableFuture of ediscoveryReviewTagCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the tags that are a child of a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoveryReviewTagCollectionResponse
+     * @return a CompletableFuture of ediscoveryReviewTagCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewTagCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

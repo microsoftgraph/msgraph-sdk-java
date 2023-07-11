@@ -63,7 +63,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the sites that have been followed by the signed in user.
-     * @return a CompletableFuture of SiteCollectionResponse
+     * @return a CompletableFuture of siteCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class FollowedSitesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the sites that have been followed by the signed in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SiteCollectionResponse
+     * @return a CompletableFuture of siteCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -12,7 +12,7 @@ public class ResourceOperationCollectionResponse extends BaseCollectionPaginatio
      */
     private java.util.List<ResourceOperation> value;
     /**
-     * Instantiates a new ResourceOperationCollectionResponse and sets the default values.
+     * Instantiates a new resourceOperationCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ResourceOperationCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ResourceOperationCollectionResponse
+     * @return a resourceOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ResourceOperationCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

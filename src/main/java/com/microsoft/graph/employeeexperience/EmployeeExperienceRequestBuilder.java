@@ -1,5 +1,6 @@
 package com.microsoft.graph.employeeexperience;
 
+import com.microsoft.graph.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
 import com.microsoft.graph.models.EmployeeExperience;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -21,6 +22,13 @@ import java.util.Objects;
  * Provides operations to manage the employeeExperience singleton.
  */
 public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
+     */
+    @javax.annotation.Nonnull
+    public LearningCourseActivitiesRequestBuilder learningCourseActivities() {
+        return new LearningCourseActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the learningProviders property of the microsoft.graph.employeeExperience entity.
      */
@@ -50,7 +58,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get employeeExperience
-     * @return a CompletableFuture of EmployeeExperience
+     * @return a CompletableFuture of employeeExperience
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> get() {
@@ -69,7 +77,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get employeeExperience
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EmployeeExperience
+     * @return a CompletableFuture of employeeExperience
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +96,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update employeeExperience
      * @param body The request body
-     * @return a CompletableFuture of EmployeeExperience
+     * @return a CompletableFuture of employeeExperience
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> patch(@javax.annotation.Nonnull final EmployeeExperience body) {
@@ -108,7 +116,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Update employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EmployeeExperience
+     * @return a CompletableFuture of employeeExperience
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmployeeExperience> patch(@javax.annotation.Nonnull final EmployeeExperience body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

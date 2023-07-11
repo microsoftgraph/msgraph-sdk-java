@@ -16,7 +16,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      */
     private String tabId;
     /**
-     * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new tabUpdatedEventMessageDetail and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TabUpdatedEventMessageDetail
+     * @return a tabUpdatedEventMessageDetail
      */
     @javax.annotation.Nonnull
     public static TabUpdatedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

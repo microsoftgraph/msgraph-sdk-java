@@ -143,7 +143,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncStatus property value. Possible sync statuses associated with an Apple Volume Purchase Program token.
-     * @return a VppTokenSyncStatus
+     * @return a vppTokenSyncStatus
      */
     @javax.annotation.Nullable
     public VppTokenSyncStatus getLastSyncStatus() {
@@ -159,7 +159,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Possible states associated with an Apple Volume Purchase Program token.
-     * @return a VppTokenState
+     * @return a vppTokenState
      */
     @javax.annotation.Nullable
     public VppTokenState getState() {
@@ -175,7 +175,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
-     * @return a VppTokenAccountType
+     * @return a vppTokenAccountType
      */
     @javax.annotation.Nullable
     public VppTokenAccountType getVppTokenAccountType() {

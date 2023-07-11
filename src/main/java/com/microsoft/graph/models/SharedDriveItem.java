@@ -40,7 +40,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
      */
     private Site site;
     /**
-     * Instantiates a new SharedDriveItem and sets the default values.
+     * Instantiates a new sharedDriveItem and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharedDriveItem
+     * @return a sharedDriveItem
      */
     @javax.annotation.Nonnull
     public static SharedDriveItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
