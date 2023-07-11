@@ -2,6 +2,7 @@ package com.microsoft.serviceClient;
 
 import com.azure.core.credential.TokenCredential;
 import com.microsoft.graph.requests.BaseGraphRequestAdapter;
+import com.microsoft.graph.requests.BatchRequestBuilder;
 import com.microsoft.graph.requests.GraphClientOption;
 import com.microsoft.graph.requests.IBaseClient;
 import com.microsoft.info.Constants;
@@ -11,6 +12,7 @@ import com.microsoft.kiota.authentication.AuthenticationProvider;
 import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
 
 import okhttp3.OkHttpClient;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -84,5 +86,14 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
     @Override
     public RequestAdapter getRequestAdapter() {
         return this.requestAdapter;
+    }
+    /**
+     * Gets the BatchRequestBuilder for the GraphServiceClient.
+     * @return the BatchRequestBuilder for the GraphServiceClient.
+     */
+    @Nonnull
+    @Override
+    public BatchRequestBuilder getBatchRequestBuilder() {
+        return new CustomBatchRequestBuilder(this.requestAdapter);
     }
 }
