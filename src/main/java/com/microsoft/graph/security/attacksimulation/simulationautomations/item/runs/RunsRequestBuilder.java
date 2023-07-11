@@ -64,7 +64,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the attack simulation automation runs for a tenant.
-     * @return a CompletableFuture of SimulationAutomationRunCollectionResponse
+     * @return a CompletableFuture of simulationAutomationRunCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the attack simulation automation runs for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SimulationAutomationRunCollectionResponse
+     * @return a CompletableFuture of simulationAutomationRunCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/simulationautomation-list-runs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

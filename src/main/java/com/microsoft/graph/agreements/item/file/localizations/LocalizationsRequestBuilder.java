@@ -64,7 +64,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The localized version of the terms of use agreement files attached to the agreement.
-     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
+     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The localized version of the terms of use agreement files attached to the agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementFileLocalizationCollectionResponse
+     * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

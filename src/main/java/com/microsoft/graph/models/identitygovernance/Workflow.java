@@ -45,7 +45,7 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     private java.util.List<WorkflowVersion> versions;
     /**
-     * Instantiates a new Workflow and sets the default values.
+     * Instantiates a new workflow and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class Workflow extends WorkflowBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Workflow
+     * @return a workflow
      */
     @javax.annotation.Nonnull
     public static Workflow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

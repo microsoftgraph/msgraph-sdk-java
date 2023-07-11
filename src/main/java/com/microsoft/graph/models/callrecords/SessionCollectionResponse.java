@@ -13,7 +13,7 @@ public class SessionCollectionResponse extends BaseCollectionPaginationCountResp
      */
     private java.util.List<Session> value;
     /**
-     * Instantiates a new SessionCollectionResponse and sets the default values.
+     * Instantiates a new sessionCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class SessionCollectionResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SessionCollectionResponse
+     * @return a sessionCollectionResponse
      */
     @javax.annotation.Nonnull
     public static SessionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

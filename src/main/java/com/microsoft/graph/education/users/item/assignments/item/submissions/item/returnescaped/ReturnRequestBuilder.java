@@ -1,4 +1,4 @@
-package com.microsoft.graph.education.users.item.assignments.item.submissions.item.returnEscaped;
+package com.microsoft.graph.education.users.item.assignments.item.submissions.item.returnescaped;
 
 import com.microsoft.graph.models.EducationSubmission;
 import com.microsoft.graph.models.odataerrors.ODataError;

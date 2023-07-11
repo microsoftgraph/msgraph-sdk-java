@@ -81,7 +81,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the user synchronization policy of a partner-specific configuration.
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -101,7 +101,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the user synchronization policy of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -121,7 +121,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -142,7 +142,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantIdentitySyncPolicyPartner
+     * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

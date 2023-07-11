@@ -64,7 +64,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of section groups from the specified notebook.
-     * @return a CompletableFuture of SectionGroupCollectionResponse
+     * @return a CompletableFuture of sectionGroupCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SectionGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of section groups from the specified notebook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SectionGroupCollectionResponse
+     * @return a CompletableFuture of sectionGroupCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

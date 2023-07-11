@@ -45,7 +45,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Gets the attachmentItem property value. The AttachmentItem property
-     * @return a AttachmentItem
+     * @return a attachmentItem
      */
     @javax.annotation.Nullable
     public AttachmentItem getAttachmentItem() {

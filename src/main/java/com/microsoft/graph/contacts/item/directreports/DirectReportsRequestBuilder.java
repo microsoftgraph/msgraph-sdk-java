@@ -79,7 +79,7 @@ public class DirectReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-directreports?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -99,7 +99,7 @@ public class DirectReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-directreports?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

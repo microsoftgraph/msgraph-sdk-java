@@ -64,7 +64,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of identityUserFlowAttribute objects.
-     * @return a CompletableFuture of IdentityUserFlowAttributeCollectionResponse
+     * @return a CompletableFuture of identityUserFlowAttributeCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityUserFlowAttributeCollectionResponse
+     * @return a CompletableFuture of identityUserFlowAttributeCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

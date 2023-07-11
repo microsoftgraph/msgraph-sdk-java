@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum TemplateScenarios implements ValuedEnum {
-    NewEscaped("new"),
+    New("new"),
     SecureFoundation("secureFoundation"),
     ZeroTrust("zeroTrust"),
     RemoteWork("remoteWork"),
@@ -21,7 +21,7 @@ public enum TemplateScenarios implements ValuedEnum {
     public static TemplateScenarios forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "new": return NewEscaped;
+            case "new": return New;
             case "secureFoundation": return SecureFoundation;
             case "zeroTrust": return ZeroTrust;
             case "remoteWork": return RemoteWork;

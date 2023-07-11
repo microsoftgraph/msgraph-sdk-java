@@ -9,6 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 public class TeamsAppDefinition extends Entity implements Parsable {
     /**
+     * Authorization requirements specified in the Teams app manifest.
+     */
+    private TeamsAppAuthorization authorization;
+    /**
      * The details of the bot specified in the Teams app manifest.
      */
     private TeamworkBot bot;
@@ -63,6 +67,14 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return new TeamsAppDefinition();
     }
     /**
+     * Gets the authorization property value. Authorization requirements specified in the Teams app manifest.
+     * @return a teamsAppAuthorization
+     */
+    @javax.annotation.Nullable
+    public TeamsAppAuthorization getAuthorization() {
+        return this.authorization;
+    }
+    /**
      * Gets the bot property value. The details of the bot specified in the Teams app manifest.
      * @return a teamworkBot
      */
@@ -101,6 +113,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authorization", (n) -> { this.setAuthorization(n.getObjectValue(TeamsAppAuthorization::createFromDiscriminatorValue)); });
         deserializerMap.put("bot", (n) -> { this.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -161,6 +174,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("authorization", this.getAuthorization());
         writer.writeObjectValue("bot", this.getBot());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeStringValue("description", this.getDescription());
@@ -170,6 +184,15 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         writer.writeStringValue("shortDescription", this.getShortDescription());
         writer.writeStringValue("teamsAppId", this.getTeamsAppId());
         writer.writeStringValue("version", this.getVersion());
+    }
+    /**
+     * Sets the authorization property value. Authorization requirements specified in the Teams app manifest.
+     * @param value Value to set for the authorization property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthorization(@javax.annotation.Nullable final TeamsAppAuthorization value) {
+        this.authorization = value;
     }
     /**
      * Sets the bot property value. The details of the bot specified in the Teams app manifest.

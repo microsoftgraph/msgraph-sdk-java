@@ -64,7 +64,7 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a CompletableFuture of driveItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class BundlesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a CompletableFuture of driveItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

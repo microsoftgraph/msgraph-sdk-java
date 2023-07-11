@@ -110,7 +110,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get schema from servicePrincipals
+     * Default synchronization schema for the jobs based on this template.
      * @return a CompletableFuture of synchronizationSchema
      */
     @javax.annotation.Nonnull
@@ -128,7 +128,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get schema from servicePrincipals
+     * Default synchronization schema for the jobs based on this template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationSchema
      */
@@ -214,7 +214,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get schema from servicePrincipals
+     * Default synchronization schema for the jobs based on this template.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -222,7 +222,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get schema from servicePrincipals
+     * Default synchronization schema for the jobs based on this template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -280,7 +280,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get schema from servicePrincipals
+     * Default synchronization schema for the jobs based on this template.
      */
     public class GetQueryParameters {
         /**

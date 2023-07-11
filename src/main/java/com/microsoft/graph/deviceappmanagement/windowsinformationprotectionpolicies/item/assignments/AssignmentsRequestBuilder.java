@@ -64,7 +64,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Navigation property to list of security groups targeted for policy.
-     * @return a CompletableFuture of TargetedManagedAppPolicyAssignmentCollectionResponse
+     * @return a CompletableFuture of targetedManagedAppPolicyAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignmentCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Navigation property to list of security groups targeted for policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TargetedManagedAppPolicyAssignmentCollectionResponse
+     * @return a CompletableFuture of targetedManagedAppPolicyAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

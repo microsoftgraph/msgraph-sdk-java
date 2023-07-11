@@ -16,7 +16,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      */
     private ScopeOperatorMultiValuedComparisonType multivaluedComparisonType;
     /**
-     * The supportedAttributeTypes property
+     * Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      */
     private java.util.List<AttributeType> supportedAttributeTypes;
     /**
@@ -39,7 +39,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     }
     /**
      * Gets the arity property value. The arity property
-     * @return a ScopeOperatorType
+     * @return a scopeOperatorType
      */
     @javax.annotation.Nullable
     public ScopeOperatorType getArity() {
@@ -59,15 +59,15 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     }
     /**
      * Gets the multivaluedComparisonType property value. The multivaluedComparisonType property
-     * @return a ScopeOperatorMultiValuedComparisonType
+     * @return a scopeOperatorMultiValuedComparisonType
      */
     @javax.annotation.Nullable
     public ScopeOperatorMultiValuedComparisonType getMultivaluedComparisonType() {
         return this.multivaluedComparisonType;
     }
     /**
-     * Gets the supportedAttributeTypes property value. The supportedAttributeTypes property
-     * @return a AttributeType
+     * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
+     * @return a attributeType
      */
     @javax.annotation.Nullable
     public java.util.List<AttributeType> getSupportedAttributeTypes() {
@@ -105,7 +105,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
         this.multivaluedComparisonType = value;
     }
     /**
-     * Sets the supportedAttributeTypes property value. The supportedAttributeTypes property
+     * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      * @param value Value to set for the supportedAttributeTypes property.
      * @return a void
      */

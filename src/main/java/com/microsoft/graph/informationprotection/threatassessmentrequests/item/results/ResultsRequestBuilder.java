@@ -64,7 +64,7 @@ public class ResultsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     * @return a CompletableFuture of ThreatAssessmentResultCollectionResponse
+     * @return a CompletableFuture of threatAssessmentResultCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentResultCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ResultsRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ThreatAssessmentResultCollectionResponse
+     * @return a CompletableFuture of threatAssessmentResultCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ThreatAssessmentResultCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

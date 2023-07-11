@@ -64,7 +64,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of **plannertask** objects.
-     * @return a CompletableFuture of PlannerTaskCollectionResponse
+     * @return a CompletableFuture of plannerTaskCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of **plannertask** objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PlannerTaskCollectionResponse
+     * @return a CompletableFuture of plannerTaskCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

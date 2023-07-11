@@ -29,7 +29,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
      */
     private ConditionalAccessSessionControls sessionControls;
     /**
-     * Instantiates a new ConditionalAccessPolicyDetail and sets the default values.
+     * Instantiates a new conditionalAccessPolicyDetail and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +39,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessPolicyDetail
+     * @return a conditionalAccessPolicyDetail
      */
     @javax.annotation.Nonnull
     public static ConditionalAccessPolicyDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the conditions property value. The conditions property
-     * @return a ConditionalAccessConditionSet
+     * @return a conditionalAccessConditionSet
      */
     @javax.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {

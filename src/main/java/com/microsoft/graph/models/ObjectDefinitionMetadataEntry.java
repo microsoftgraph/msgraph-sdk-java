@@ -13,7 +13,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
      */
     private Map<String, Object> additionalData;
     /**
-     * The key property
+     * Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      */
     private ObjectDefinitionMetadata key;
     /**
@@ -21,7 +21,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
      */
     private String odataType;
     /**
-     * The value property
+     * Value of the metadata property.
      */
     private String value;
     /**
@@ -63,7 +63,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @return a objectDefinitionMetadata
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
         return this.odataType;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value of the metadata property.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
         this.additionalData = value;
     }
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -127,7 +127,7 @@ public class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, Pars
         this.odataType = value;
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value of the metadata property.
      * @param value Value to set for the value property.
      * @return a void
      */

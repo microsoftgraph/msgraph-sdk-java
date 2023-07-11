@@ -64,7 +64,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The details for each version of the app.
-     * @return a CompletableFuture of TeamsAppDefinitionCollectionResponse
+     * @return a CompletableFuture of teamsAppDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppDefinitionCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class AppDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The details for each version of the app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppDefinitionCollectionResponse
+     * @return a CompletableFuture of teamsAppDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

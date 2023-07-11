@@ -2,6 +2,7 @@ package com.microsoft.graph.reports;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.ReportRoot;
+import com.microsoft.graph.reports.authenticationmethods.AuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
 import com.microsoft.graph.reports.dailyprintusagebyuser.DailyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
@@ -129,6 +130,13 @@ import java.util.Objects;
  */
 public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the authenticationMethods property of the microsoft.graph.reportRoot entity.
+     */
+    @javax.annotation.Nonnull
+    public AuthenticationMethodsRequestBuilder authenticationMethods() {
+        return new AuthenticationMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      */
     @javax.annotation.Nonnull
@@ -233,9 +241,8 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Read properties and relationships of the reportRoot object.
-     * @return a CompletableFuture of ReportRoot
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
+     * Get reports
+     * @return a CompletableFuture of reportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get() {
@@ -252,10 +259,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the reportRoot object.
+     * Get reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ReportRoot
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of reportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -1230,10 +1236,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
-     * Update the properties of a reportRoot object.
+     * Update reports
      * @param body The request body
-     * @return a CompletableFuture of ReportRoot
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of reportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body) {
@@ -1250,11 +1255,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a reportRoot object.
+     * Update reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ReportRoot
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of reportRoot
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -1272,7 +1276,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the reportRoot object.
+     * Get reports
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -1280,7 +1284,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the reportRoot object.
+     * Get reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -1301,7 +1305,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a reportRoot object.
+     * Update reports
      * @param body The request body
      * @return a RequestInformation
      */
@@ -1310,7 +1314,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a reportRoot object.
+     * Update reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -1333,7 +1337,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the reportRoot object.
+     * Get reports
      */
     public class GetQueryParameters {
         /**

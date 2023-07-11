@@ -64,7 +64,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
-     * @return a CompletableFuture of ChecklistItemCollectionResponse
+     * @return a CompletableFuture of checklistItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ChecklistItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ChecklistItemCollectionResponse
+     * @return a CompletableFuture of checklistItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

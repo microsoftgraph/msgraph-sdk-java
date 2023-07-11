@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the secureAssessment resource.
+ */
 public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to allow the app from printing during the test.
@@ -28,7 +31,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     private String launchUri;
     /**
-     * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
+     * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +42,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10SecureAssessmentConfiguration
+     * @return a windows10SecureAssessmentConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10SecureAssessmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -64,7 +64,7 @@ public class ItemActivityStatsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get itemActivityStats from groups
-     * @return a CompletableFuture of ItemActivityStatCollectionResponse
+     * @return a CompletableFuture of itemActivityStatCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStatCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ItemActivityStatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get itemActivityStats from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemActivityStatCollectionResponse
+     * @return a CompletableFuture of itemActivityStatCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStatCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

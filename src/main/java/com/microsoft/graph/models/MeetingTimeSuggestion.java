@@ -45,7 +45,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
      */
     private String suggestionReason;
     /**
-     * Instantiates a new MeetingTimeSuggestion and sets the default values.
+     * Instantiates a new meetingTimeSuggestion and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -55,7 +55,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MeetingTimeSuggestion
+     * @return a meetingTimeSuggestion
      */
     @javax.annotation.Nonnull
     public static MeetingTimeSuggestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

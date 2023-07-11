@@ -77,7 +77,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a PolicyPlatformType
+     * @return a policyPlatformType
      */
     @javax.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
@@ -101,7 +101,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a ComplianceStatus
+     * @return a complianceStatus
      */
     @javax.annotation.Nullable
     public ComplianceStatus getState() {

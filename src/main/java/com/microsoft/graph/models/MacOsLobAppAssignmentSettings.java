@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Abstract class to contain properties used to assign a mobile app to a group.
+ */
 public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
      * When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune.
      */
     private Boolean uninstallOnDeviceRemoval;
     /**
-     * Instantiates a new MacOsLobAppAssignmentSettings and sets the default values.
+     * Instantiates a new macOsLobAppAssignmentSettings and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOsLobAppAssignmentSettings
+     * @return a macOsLobAppAssignmentSettings
      */
     @javax.annotation.Nonnull
     public static MacOsLobAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

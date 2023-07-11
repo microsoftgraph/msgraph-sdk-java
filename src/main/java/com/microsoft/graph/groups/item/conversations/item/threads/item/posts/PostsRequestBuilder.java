@@ -63,7 +63,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a post in a specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. Since the **post** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **post** instance.
-     * @return a CompletableFuture of PostCollectionResponse
+     * @return a CompletableFuture of postCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/post-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class PostsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a post in a specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. Since the **post** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **post** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PostCollectionResponse
+     * @return a CompletableFuture of postCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/post-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

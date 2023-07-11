@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * OMA Settings definition.
+ */
 public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
      * File name associated with the Value property (.cer
@@ -16,7 +19,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      */
     private String value;
     /**
-     * Instantiates a new OmaSettingBase64 and sets the default values.
+     * Instantiates a new omaSettingBase64 and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +30,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OmaSettingBase64
+     * @return a omaSettingBase64
      */
     @javax.annotation.Nonnull
     public static OmaSettingBase64 createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

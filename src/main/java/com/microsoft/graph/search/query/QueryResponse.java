@@ -43,7 +43,7 @@ public class QueryResponse extends BaseCollectionPaginationCountResponse impleme
     }
     /**
      * Gets the value property value. The value property
-     * @return a SearchResponse
+     * @return a searchResponse
      */
     @javax.annotation.Nullable
     public java.util.List<SearchResponse> getValue() {

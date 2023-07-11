@@ -75,7 +75,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     }
     /**
      * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequestCollectionResponse
+     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     /**
      * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequestCollectionResponse
+     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

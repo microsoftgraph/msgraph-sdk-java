@@ -64,7 +64,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the members of a standard tag in a team and their properties.
-     * @return a CompletableFuture of TeamworkTagMemberCollectionResponse
+     * @return a CompletableFuture of teamworkTagMemberCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the members of a standard tag in a team and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamworkTagMemberCollectionResponse
+     * @return a CompletableFuture of teamworkTagMemberCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

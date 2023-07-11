@@ -64,7 +64,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of claimsMappingPolicy objects.
-     * @return a CompletableFuture of ClaimsMappingPolicyCollectionResponse
+     * @return a CompletableFuture of claimsMappingPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of claimsMappingPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ClaimsMappingPolicyCollectionResponse
+     * @return a CompletableFuture of claimsMappingPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/claimsmappingpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -64,7 +64,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
-     * @return a CompletableFuture of SharedWithChannelTeamInfoCollectionResponse
+     * @return a CompletableFuture of sharedWithChannelTeamInfoCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SharedWithTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a **membershipType** value of `shared`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SharedWithChannelTeamInfoCollectionResponse
+     * @return a CompletableFuture of sharedWithChannelTeamInfoCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

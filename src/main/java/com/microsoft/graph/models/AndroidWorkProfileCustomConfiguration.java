@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Android Work Profile custom configuration
+ */
 public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * OMA settings. This collection can contain a maximum of 500 elements.
      */
     private java.util.List<OmaSetting> omaSettings;
     /**
-     * Instantiates a new AndroidWorkProfileCustomConfiguration and sets the default values.
+     * Instantiates a new androidWorkProfileCustomConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidWorkProfileCustomConfiguration
+     * @return a androidWorkProfileCustomConfiguration
      */
     @javax.annotation.Nonnull
     public static AndroidWorkProfileCustomConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

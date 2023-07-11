@@ -64,7 +64,7 @@ public class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of appRoleAssignment that users, groups, or client service principals have been granted for the given resource service principal. For example, if the resource service principal is the service principal for the Microsoft Graph API, this will return all service principals that have been granted any app-only permissions to Microsoft Graph. If the resource service principal is an application that has app roles granted to users and groups, this will return all the users and groups assigned app roles for this application.
-     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of appRoleAssignment that users, groups, or client service principals have been granted for the given resource service principal. For example, if the resource service principal is the service principal for the Microsoft Graph API, this will return all service principals that have been granted any app-only permissions to Microsoft Graph. If the resource service principal is an application that has app roles granted to users and groups, this will return all the users and groups assigned app roles for this application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of appRoleAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-approleassignedto?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

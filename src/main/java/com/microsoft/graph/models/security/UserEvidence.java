@@ -12,7 +12,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      */
     private UserAccount userAccount;
     /**
-     * Instantiates a new UserEvidence and sets the default values.
+     * Instantiates a new userEvidence and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserEvidence
+     * @return a userEvidence
      */
     @javax.annotation.Nonnull
     public static UserEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

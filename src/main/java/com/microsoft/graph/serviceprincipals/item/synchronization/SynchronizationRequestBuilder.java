@@ -110,7 +110,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get synchronization from servicePrincipals
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @return a CompletableFuture of synchronization
      */
     @javax.annotation.Nonnull
@@ -128,7 +128,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get synchronization from servicePrincipals
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronization
      */
@@ -214,7 +214,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get synchronization from servicePrincipals
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -222,7 +222,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get synchronization from servicePrincipals
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -280,7 +280,7 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get synchronization from servicePrincipals
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      */
     public class GetQueryParameters {
         /**

@@ -63,7 +63,7 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a CompletableFuture of driveItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/drive-list-following?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class FollowingRequestBuilder extends BaseRequestBuilder {
     /**
      * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a CompletableFuture of driveItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/drive-list-following?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

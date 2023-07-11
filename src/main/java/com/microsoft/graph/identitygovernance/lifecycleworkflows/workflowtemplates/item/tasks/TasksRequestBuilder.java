@@ -63,7 +63,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
-     * @return a CompletableFuture of TaskCollectionResponse
+     * @return a CompletableFuture of taskCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaskCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the configured tasks to execute and their execution sequence within a workflow. This relationship is expanded by default.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TaskCollectionResponse
+     * @return a CompletableFuture of taskCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

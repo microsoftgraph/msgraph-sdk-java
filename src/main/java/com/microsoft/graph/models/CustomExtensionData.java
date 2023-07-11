@@ -1,6 +1,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.identitygovernance.CustomTaskExtensionCallbackData;
+import com.microsoft.graph.models.identitygovernance.CustomTaskExtensionCalloutData;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -37,7 +38,9 @@ public class CustomExtensionData implements AdditionalDataHolder, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.accessPackageAssignmentRequestCallbackData": return new AccessPackageAssignmentRequestCallbackData();
                 case "#microsoft.graph.identityGovernance.customTaskExtensionCallbackData": return new CustomTaskExtensionCallbackData();
+                case "#microsoft.graph.identityGovernance.customTaskExtensionCalloutData": return new CustomTaskExtensionCalloutData();
             }
         }
         return new CustomExtensionData();

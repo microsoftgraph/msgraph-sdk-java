@@ -158,7 +158,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private SpaApplication spa;
     /**
-     * The synchronization property
+     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      */
     private Synchronization synchronization;
     /**
@@ -186,7 +186,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private WebApplication web;
     /**
-     * Instantiates a new Application and sets the default values.
+     * Instantiates a new application and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -197,7 +197,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Application
+     * @return a application
      */
     @javax.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -206,7 +206,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the addIns property value. Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on.
-     * @return a AddIn
+     * @return a addIn
      */
     @javax.annotation.Nullable
     public java.util.List<AddIn> getAddIns() {
@@ -246,7 +246,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
-     * @return a AppRole
+     * @return a appRole
      */
     @javax.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
@@ -427,7 +427,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a KeyCredential
+     * @return a keyCredential
      */
     @javax.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
@@ -483,7 +483,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     * @return a PasswordCredential
+     * @return a passwordCredential
      */
     @javax.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
@@ -515,7 +515,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a RequiredResourceAccess
+     * @return a requiredResourceAccess
      */
     @javax.annotation.Nullable
     public java.util.List<RequiredResourceAccess> getRequiredResourceAccess() {
@@ -554,7 +554,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.spa;
     }
     /**
-     * Gets the synchronization property value. The synchronization property
+     * Gets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @return a synchronization
      */
     @javax.annotation.Nullable
@@ -997,7 +997,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.spa = value;
     }
     /**
-     * Sets the synchronization property value. The synchronization property
+     * Sets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
      * @param value Value to set for the synchronization property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AttributeMappingFunctionSchema extends Entity implements Parsable {
     /**
-     * The parameters property
+     * Collection of function parameters.
      */
     private java.util.List<AttributeMappingParameterSchema> parameters;
     /**
@@ -40,7 +40,7 @@ public class AttributeMappingFunctionSchema extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. Collection of function parameters.
      * @return a attributeMappingParameterSchema
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class AttributeMappingFunctionSchema extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("parameters", this.getParameters());
     }
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. Collection of function parameters.
      * @param value Value to set for the parameters property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessAllExternalTenants extends ConditionalAccessExternalTenants implements Parsable {
     /**
-     * Instantiates a new ConditionalAccessAllExternalTenants and sets the default values.
+     * Instantiates a new conditionalAccessAllExternalTenants and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -19,7 +19,7 @@ public class ConditionalAccessAllExternalTenants extends ConditionalAccessExtern
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessAllExternalTenants
+     * @return a conditionalAccessAllExternalTenants
      */
     @javax.annotation.Nonnull
     public static ConditionalAccessAllExternalTenants createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

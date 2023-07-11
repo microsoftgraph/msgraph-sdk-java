@@ -96,7 +96,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Azure portal, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Azure AD, use List directoryRoleTemplates.
-     * @return a CompletableFuture of DirectoryRoleCollectionResponse
+     * @return a CompletableFuture of directoryRoleCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/directoryrole-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DirectoryRolesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the directory roles that are activated in the tenant. This operation only returns roles that have been activated. A role becomes activated when an admin activates the role using the Activate directoryRole API. Not all built-in roles are initially activated.  When assigning a role using the Azure portal, the role activation step is implicitly done on the admin's behalf. To get the full list of roles that are available in Azure AD, use List directoryRoleTemplates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryRoleCollectionResponse
+     * @return a CompletableFuture of directoryRoleCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/directoryrole-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

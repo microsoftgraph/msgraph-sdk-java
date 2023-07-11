@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Device action result
+ */
 public class RemoteLockActionResult extends DeviceActionResult implements Parsable {
     /**
      * Pin to unlock the client
      */
     private String unlockPin;
     /**
-     * Instantiates a new RemoteLockActionResult and sets the default values.
+     * Instantiates a new remoteLockActionResult and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +25,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteLockActionResult
+     * @return a remoteLockActionResult
      */
     @javax.annotation.Nonnull
     public static RemoteLockActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -65,7 +65,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the arguments property value. Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks. Required.
-     * @return a KeyValuePair
+     * @return a keyValuePair
      */
     @javax.annotation.Nullable
     public java.util.List<KeyValuePair> getArguments() {
@@ -73,7 +73,7 @@ public class Task extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a LifecycleTaskCategory
+     * @return a lifecycleTaskCategory
      */
     @javax.annotation.Nullable
     public LifecycleTaskCategory getCategory() {

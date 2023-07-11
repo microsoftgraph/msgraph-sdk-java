@@ -42,7 +42,6 @@ public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRe
      * Issues a wipe operation on an app registration with specified device tag.
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-wipemanagedappregistrationsbydevicetag?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final WipeManagedAppRegistrationsByDeviceTagPostRequestBody body) {
@@ -63,7 +62,6 @@ public class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRe
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-wipemanagedappregistrationsbydevicetag?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final WipeManagedAppRegistrationsByDeviceTagPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class OnDemandExecutionOnly extends WorkflowExecutionConditions implements Parsable {
     /**
-     * Instantiates a new OnDemandExecutionOnly and sets the default values.
+     * Instantiates a new onDemandExecutionOnly and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -19,7 +19,7 @@ public class OnDemandExecutionOnly extends WorkflowExecutionConditions implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnDemandExecutionOnly
+     * @return a onDemandExecutionOnly
      */
     @javax.annotation.Nonnull
     public static OnDemandExecutionOnly createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -83,7 +83,7 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. Indicates the type of return code.
-     * @return a Win32LobAppReturnCodeType
+     * @return a win32LobAppReturnCodeType
      */
     @javax.annotation.Nullable
     public Win32LobAppReturnCodeType getType() {

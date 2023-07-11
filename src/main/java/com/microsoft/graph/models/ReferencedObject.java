@@ -17,11 +17,11 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The referencedObjectName property
+     * Name of the referenced object. Must match one of the objects in the directory definition.
      */
     private String referencedObjectName;
     /**
-     * The referencedProperty property
+     * Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
      */
     private String referencedProperty;
     /**
@@ -71,7 +71,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the referencedObjectName property value. The referencedObjectName property
+     * Gets the referencedObjectName property value. Name of the referenced object. Must match one of the objects in the directory definition.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
         return this.referencedObjectName;
     }
     /**
-     * Gets the referencedProperty property value. The referencedProperty property
+     * Gets the referencedProperty property value. Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the referencedObjectName property value. The referencedObjectName property
+     * Sets the referencedObjectName property value. Name of the referenced object. Must match one of the objects in the directory definition.
      * @param value Value to set for the referencedObjectName property.
      * @return a void
      */
@@ -127,7 +127,7 @@ public class ReferencedObject implements AdditionalDataHolder, Parsable {
         this.referencedObjectName = value;
     }
     /**
-     * Sets the referencedProperty property value. The referencedProperty property
+     * Sets the referencedProperty property value. Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
      * @param value Value to set for the referencedProperty property.
      * @return a void
      */

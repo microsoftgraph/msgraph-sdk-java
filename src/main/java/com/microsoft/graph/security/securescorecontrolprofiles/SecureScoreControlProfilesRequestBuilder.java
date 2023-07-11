@@ -64,7 +64,7 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Retrieve the properties and relationships of a secureScoreControlProfiles object.
-     * @return a CompletableFuture of SecureScoreControlProfileCollectionResponse
+     * @return a CompletableFuture of secureScoreControlProfileCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-list-securescorecontrolprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve the properties and relationships of a secureScoreControlProfiles object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SecureScoreControlProfileCollectionResponse
+     * @return a CompletableFuture of secureScoreControlProfileCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-list-securescorecontrolprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

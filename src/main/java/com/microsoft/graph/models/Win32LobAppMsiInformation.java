@@ -100,7 +100,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the packageType property value. Indicates the package type of an MSI Win32LobApp.
-     * @return a Win32LobAppMsiPackageType
+     * @return a win32LobAppMsiPackageType
      */
     @javax.annotation.Nullable
     public Win32LobAppMsiPackageType getPackageType() {

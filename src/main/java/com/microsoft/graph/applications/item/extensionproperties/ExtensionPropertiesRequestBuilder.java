@@ -64,7 +64,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
-     * @return a CompletableFuture of ExtensionPropertyCollectionResponse
+     * @return a CompletableFuture of extensionPropertyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExtensionPropertyCollectionResponse
+     * @return a CompletableFuture of extensionPropertyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

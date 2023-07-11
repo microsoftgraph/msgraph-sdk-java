@@ -63,9 +63,8 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/scheduledActionsForRule{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
-     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * @return a CompletableFuture of deviceComplianceScheduledActionForRuleCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRuleCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of deviceComplianceScheduledActionForRuleCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRuleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new deviceComplianceScheduledActionForRule object.
+     * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceComplianceScheduledActionForRule
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> post(@javax.annotation.Nonnull final DeviceComplianceScheduledActionForRule body) {
@@ -122,11 +119,10 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new deviceComplianceScheduledActionForRule object.
+     * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceComplianceScheduledActionForRule
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancescheduledactionforrule-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> post(@javax.annotation.Nonnull final DeviceComplianceScheduledActionForRule body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new deviceComplianceScheduledActionForRule object.
+     * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceComplianceScheduledActionForRule object.
+     * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the deviceComplianceScheduledActionForRule objects.
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      */
     public class GetQueryParameters {
         /**

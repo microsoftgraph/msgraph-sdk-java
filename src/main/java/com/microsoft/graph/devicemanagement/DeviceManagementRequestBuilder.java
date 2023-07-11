@@ -19,6 +19,7 @@ import com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidenti
 import com.microsoft.graph.devicemanagement.iosupdatestatuses.IosUpdateStatusesRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddeviceoverview.ManagedDeviceOverviewRequestBuilder;
 import com.microsoft.graph.devicemanagement.manageddevices.ManagedDevicesRequestBuilder;
+import com.microsoft.graph.devicemanagement.mobileapptroubleshootingevents.MobileAppTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.devicemanagement.mobilethreatdefenseconnectors.MobileThreatDefenseConnectorsRequestBuilder;
 import com.microsoft.graph.devicemanagement.notificationmessagetemplates.NotificationMessageTemplatesRequestBuilder;
 import com.microsoft.graph.devicemanagement.remoteassistancepartners.RemoteAssistancePartnersRequestBuilder;
@@ -30,10 +31,34 @@ import com.microsoft.graph.devicemanagement.softwareupdatestatussummary.Software
 import com.microsoft.graph.devicemanagement.telecomexpensemanagementpartners.TelecomExpenseManagementPartnersRequestBuilder;
 import com.microsoft.graph.devicemanagement.termsandconditions.TermsAndConditionsRequestBuilder;
 import com.microsoft.graph.devicemanagement.troubleshootingevents.TroubleshootingEventsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformance.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondetails.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondeviceid.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyosversion.UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthdevicemodelperformance.UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthdeviceperformance.UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthdeviceperformancedetails.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthosversionperformance.UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsapphealthoverview.UserExperienceAnalyticsAppHealthOverviewRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsbaselines.UserExperienceAnalyticsBaselinesRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticscategories.UserExperienceAnalyticsCategoriesRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdeviceperformance.UserExperienceAnalyticsDevicePerformanceRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicescores.UserExperienceAnalyticsDeviceScoresRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicestartuphistory.UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsdevicestartupprocesses.UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsmetrichistory.UserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsmodelscores.UserExperienceAnalyticsModelScoresRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsoverview.UserExperienceAnalyticsOverviewRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsscorehistory.UserExperienceAnalyticsScoreHistoryRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticssummarizeworkfromanywheredevices.UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywherehardwarereadinessmetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder;
+import com.microsoft.graph.devicemanagement.userexperienceanalyticsworkfromanywheremodelperformance.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder;
 import com.microsoft.graph.devicemanagement.verifywindowsenrollmentautodiscoverywithdomainname.VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.WindowsAutopilotDeviceIdentitiesRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsinformationprotectionapplearningsummaries.WindowsInformationProtectionAppLearningSummariesRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsinformationprotectionnetworklearningsummaries.WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
+import com.microsoft.graph.devicemanagement.windowsmalwareinformation.WindowsMalwareInformationRequestBuilder;
 import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -181,6 +206,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new ManagedDevicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the mobileAppTroubleshootingEvents property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public MobileAppTroubleshootingEventsRequestBuilder mobileAppTroubleshootingEvents() {
+        return new MobileAppTroubleshootingEventsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the mobileThreatDefenseConnectors property of the microsoft.graph.deviceManagement entity.
      */
     @javax.annotation.Nonnull
@@ -258,6 +290,167 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new TroubleshootingEventsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformance property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthDeviceModelPerformance property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance() {
+        return new UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformance property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder userExperienceAnalyticsAppHealthDevicePerformance() {
+        return new UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformanceDetails property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails() {
+        return new UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthOSVersionPerformance property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance() {
+        return new UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthOverview property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsAppHealthOverviewRequestBuilder userExperienceAnalyticsAppHealthOverview() {
+        return new UserExperienceAnalyticsAppHealthOverviewRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsBaselines property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsBaselinesRequestBuilder userExperienceAnalyticsBaselines() {
+        return new UserExperienceAnalyticsBaselinesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsCategories property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsCategoriesRequestBuilder userExperienceAnalyticsCategories() {
+        return new UserExperienceAnalyticsCategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsDevicePerformance property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsDevicePerformanceRequestBuilder userExperienceAnalyticsDevicePerformance() {
+        return new UserExperienceAnalyticsDevicePerformanceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsDeviceScores property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsDeviceScoresRequestBuilder userExperienceAnalyticsDeviceScores() {
+        return new UserExperienceAnalyticsDeviceScoresRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsDeviceStartupHistory property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder userExperienceAnalyticsDeviceStartupHistory() {
+        return new UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsDeviceStartupProcesses property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder userExperienceAnalyticsDeviceStartupProcesses() {
+        return new UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsMetricHistory property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory() {
+        return new UserExperienceAnalyticsMetricHistoryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsModelScores property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsModelScoresRequestBuilder userExperienceAnalyticsModelScores() {
+        return new UserExperienceAnalyticsModelScoresRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsOverview property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsOverviewRequestBuilder userExperienceAnalyticsOverview() {
+        return new UserExperienceAnalyticsOverviewRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsScoreHistory property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsScoreHistoryRequestBuilder userExperienceAnalyticsScoreHistory() {
+        return new UserExperienceAnalyticsScoreHistoryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the userExperienceAnalyticsSummarizeWorkFromAnywhereDevices method.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder userExperienceAnalyticsSummarizeWorkFromAnywhereDevices() {
+        return new UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
+        return new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereMetrics property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics() {
+        return new UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereModelPerformance property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance() {
+        return new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
      */
     @javax.annotation.Nonnull
@@ -277,6 +470,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public WindowsInformationProtectionNetworkLearningSummariesRequestBuilder windowsInformationProtectionNetworkLearningSummaries() {
         return new WindowsInformationProtectionNetworkLearningSummariesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windowsMalwareInformation property of the microsoft.graph.deviceManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public WindowsMalwareInformationRequestBuilder windowsMalwareInformation() {
+        return new WindowsMalwareInformationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
@@ -301,7 +501,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagement object.
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-gpanalyticsservice-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get() {
@@ -321,7 +521,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the deviceManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-gpanalyticsservice-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -351,7 +551,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagement object.
      * @param body The request body
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-gpanalyticsservice-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@javax.annotation.Nonnull final DeviceManagement body) {
@@ -372,7 +572,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-gpanalyticsservice-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@javax.annotation.Nonnull final DeviceManagement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

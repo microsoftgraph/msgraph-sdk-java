@@ -56,7 +56,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing.
-     * @return a CompletableFuture of SubscribedSkuCollectionResponse
+     * @return a CompletableFuture of subscribedSkuCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -76,7 +76,7 @@ public class SubscribedSkusRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of commercial subscriptions that an organization has acquired. For the mapping of license names as displayed on the Azure portal or the Microsoft 365 admin center against their Microsoft Graph **skuId** and **skuPartNumber** properties, see Product names and service plan identifiers for licensing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubscribedSkuCollectionResponse
+     * @return a CompletableFuture of subscribedSkuCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/subscribedsku-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

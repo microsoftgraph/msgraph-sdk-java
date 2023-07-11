@@ -346,7 +346,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the serviceSource property value. The serviceSource property
-     * @return a ServiceSource
+     * @return a serviceSource
      */
     @javax.annotation.Nullable
     public ServiceSource getServiceSource() {
@@ -354,7 +354,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a AlertSeverity
+     * @return a alertSeverity
      */
     @javax.annotation.Nullable
     public AlertSeverity getSeverity() {
@@ -362,7 +362,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a AlertStatus
+     * @return a alertStatus
      */
     @javax.annotation.Nullable
     public AlertStatus getStatus() {

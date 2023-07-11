@@ -71,7 +71,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the tokenLifetimePolicy objects that are assigned to an application.
-     * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
+     * @return a CompletableFuture of tokenLifetimePolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the tokenLifetimePolicy objects that are assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TokenLifetimePolicyCollectionResponse
+     * @return a CompletableFuture of tokenLifetimePolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

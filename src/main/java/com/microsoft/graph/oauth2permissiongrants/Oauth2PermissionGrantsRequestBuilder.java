@@ -72,7 +72,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
-     * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
+     * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OAuth2PermissionGrantCollectionResponse
+     * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

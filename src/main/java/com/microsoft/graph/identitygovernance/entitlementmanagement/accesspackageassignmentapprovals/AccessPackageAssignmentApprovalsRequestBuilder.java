@@ -75,7 +75,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     }
     /**
      * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
-     * @return a CompletableFuture of ApprovalCollectionResponse
+     * @return a CompletableFuture of approvalCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get() {
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
     /**
      * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ApprovalCollectionResponse
+     * @return a CompletableFuture of approvalCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

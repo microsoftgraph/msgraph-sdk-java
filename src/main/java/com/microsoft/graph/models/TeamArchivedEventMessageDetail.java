@@ -16,7 +16,7 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
      */
     private String teamId;
     /**
-     * Instantiates a new TeamArchivedEventMessageDetail and sets the default values.
+     * Instantiates a new teamArchivedEventMessageDetail and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class TeamArchivedEventMessageDetail extends EventMessageDetail implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamArchivedEventMessageDetail
+     * @return a teamArchivedEventMessageDetail
      */
     @javax.annotation.Nonnull
     public static TeamArchivedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

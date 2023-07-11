@@ -13,7 +13,7 @@ public class ConnectionOperationCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<ConnectionOperation> value;
     /**
-     * Instantiates a new ConnectionOperationCollectionResponse and sets the default values.
+     * Instantiates a new connectionOperationCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class ConnectionOperationCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConnectionOperationCollectionResponse
+     * @return a connectionOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ConnectionOperationCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

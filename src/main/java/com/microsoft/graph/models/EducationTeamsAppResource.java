@@ -24,7 +24,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      */
     private String webUrl;
     /**
-     * Instantiates a new EducationTeamsAppResource and sets the default values.
+     * Instantiates a new educationTeamsAppResource and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationTeamsAppResource
+     * @return a educationTeamsAppResource
      */
     @javax.annotation.Nonnull
     public static EducationTeamsAppResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

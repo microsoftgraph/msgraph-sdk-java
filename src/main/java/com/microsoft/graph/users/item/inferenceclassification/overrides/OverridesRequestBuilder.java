@@ -64,7 +64,7 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the overrides that a user has set up to always classify messages from certain senders in specific ways. Each override corresponds to an SMTP address of a sender. Initially, a user does not have any overrides.
-     * @return a CompletableFuture of InferenceClassificationOverrideCollectionResponse
+     * @return a CompletableFuture of inferenceClassificationOverrideCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/inferenceclassification-list-overrides?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class OverridesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the overrides that a user has set up to always classify messages from certain senders in specific ways. Each override corresponds to an SMTP address of a sender. Initially, a user does not have any overrides.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InferenceClassificationOverrideCollectionResponse
+     * @return a CompletableFuture of inferenceClassificationOverrideCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/inferenceclassification-list-overrides?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

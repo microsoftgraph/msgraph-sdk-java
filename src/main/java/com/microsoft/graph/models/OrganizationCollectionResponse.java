@@ -12,7 +12,7 @@ public class OrganizationCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<Organization> value;
     /**
-     * Instantiates a new OrganizationCollectionResponse and sets the default values.
+     * Instantiates a new organizationCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class OrganizationCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OrganizationCollectionResponse
+     * @return a organizationCollectionResponse
      */
     @javax.annotation.Nonnull
     public static OrganizationCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

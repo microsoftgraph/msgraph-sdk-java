@@ -64,7 +64,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
-     * @return a CompletableFuture of OnPremisesDirectorySynchronizationCollectionResponse
+     * @return a CompletableFuture of onPremisesDirectorySynchronizationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronizationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnPremisesDirectorySynchronizationCollectionResponse
+     * @return a CompletableFuture of onPremisesDirectorySynchronizationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

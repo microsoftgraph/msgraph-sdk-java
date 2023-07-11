@@ -73,7 +73,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the sourceIdType property value. The SourceIdType property
-     * @return a ExchangeIdFormat
+     * @return a exchangeIdFormat
      */
     @javax.annotation.Nullable
     public ExchangeIdFormat getSourceIdType() {
@@ -81,7 +81,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Gets the targetIdType property value. The TargetIdType property
-     * @return a ExchangeIdFormat
+     * @return a exchangeIdFormat
      */
     @javax.annotation.Nullable
     public ExchangeIdFormat getTargetIdType() {

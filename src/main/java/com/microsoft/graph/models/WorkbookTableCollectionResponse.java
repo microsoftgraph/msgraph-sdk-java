@@ -12,7 +12,7 @@ public class WorkbookTableCollectionResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<WorkbookTable> value;
     /**
-     * Instantiates a new WorkbookTableCollectionResponse and sets the default values.
+     * Instantiates a new workbookTableCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class WorkbookTableCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookTableCollectionResponse
+     * @return a workbookTableCollectionResponse
      */
     @javax.annotation.Nonnull
     public static WorkbookTableCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

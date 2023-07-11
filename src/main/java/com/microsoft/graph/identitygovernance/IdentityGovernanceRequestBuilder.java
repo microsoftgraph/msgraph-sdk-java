@@ -82,7 +82,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identityGovernance
-     * @return a CompletableFuture of IdentityGovernance
+     * @return a CompletableFuture of identityGovernance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> get() {
@@ -101,7 +101,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityGovernance
+     * @return a CompletableFuture of identityGovernance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of IdentityGovernance
+     * @return a CompletableFuture of identityGovernance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@javax.annotation.Nonnull final IdentityGovernance body) {
@@ -140,7 +140,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Update identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityGovernance
+     * @return a CompletableFuture of identityGovernance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@javax.annotation.Nonnull final IdentityGovernance body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

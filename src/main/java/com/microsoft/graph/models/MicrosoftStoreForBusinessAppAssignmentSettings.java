@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Abstract class to contain properties used to assign a mobile app to a group.
+ */
 public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
      * Whether or not to use device execution context for Microsoft Store for Business mobile app.
      */
     private Boolean useDeviceContext;
     /**
-     * Instantiates a new MicrosoftStoreForBusinessAppAssignmentSettings and sets the default values.
+     * Instantiates a new microsoftStoreForBusinessAppAssignmentSettings and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftStoreForBusinessAppAssignmentSettings
+     * @return a microsoftStoreForBusinessAppAssignmentSettings
      */
     @javax.annotation.Nonnull
     public static MicrosoftStoreForBusinessAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

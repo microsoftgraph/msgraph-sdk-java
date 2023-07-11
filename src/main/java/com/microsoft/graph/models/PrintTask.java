@@ -72,7 +72,7 @@ public class PrintTask extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a PrintTaskStatus
+     * @return a printTaskStatus
      */
     @javax.annotation.Nullable
     public PrintTaskStatus getStatus() {

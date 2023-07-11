@@ -80,7 +80,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the stage property value. The stage property
-     * @return a FailureStage
+     * @return a failureStage
      */
     @javax.annotation.Nullable
     public FailureStage getStage() {

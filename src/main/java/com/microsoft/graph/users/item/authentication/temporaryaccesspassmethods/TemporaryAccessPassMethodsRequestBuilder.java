@@ -64,7 +64,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
-     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of temporaryAccessPassAuthenticationMethodCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TemporaryAccessPassMethodsRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve a list of a user's temporaryAccessPassAuthenticationMethod objects and their properties. This API will only return a single object in the collection as a user can have only one Temporary Access Pass method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TemporaryAccessPassAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of temporaryAccessPassAuthenticationMethodCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-temporaryaccesspassmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

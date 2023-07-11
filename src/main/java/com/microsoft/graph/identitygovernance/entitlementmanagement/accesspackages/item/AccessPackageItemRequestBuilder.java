@@ -6,6 +6,7 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackag
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.getapplicablepolicyrequirements.GetApplicablePolicyRequirementsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatibleaccesspackages.IncompatibleAccessPackagesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.incompatiblegroups.IncompatibleGroupsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.accesspackages.item.resourcerolescopes.ResourceRoleScopesRequestBuilder;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -67,6 +68,13 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public IncompatibleGroupsRequestBuilder incompatibleGroups() {
         return new IncompatibleGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceRoleScopes property of the microsoft.graph.accessPackage entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourceRoleScopesRequestBuilder resourceRoleScopes() {
+        return new ResourceRoleScopesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackageItemRequestBuilder and sets the default values.

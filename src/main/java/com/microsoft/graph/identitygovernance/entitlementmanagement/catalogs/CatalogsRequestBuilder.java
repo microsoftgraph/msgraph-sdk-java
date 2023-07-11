@@ -64,7 +64,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of accessPackageCatalog objects.
-     * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
+     * @return a CompletableFuture of accessPackageCatalogCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CatalogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of accessPackageCatalog objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
+     * @return a CompletableFuture of accessPackageCatalogCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

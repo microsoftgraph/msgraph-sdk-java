@@ -64,7 +64,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of jobs that are queued for printing by the printer/printerShare.
-     * @return a CompletableFuture of PrintJobCollectionResponse
+     * @return a CompletableFuture of printJobCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJobCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of jobs that are queued for printing by the printer/printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PrintJobCollectionResponse
+     * @return a CompletableFuture of printJobCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJobCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

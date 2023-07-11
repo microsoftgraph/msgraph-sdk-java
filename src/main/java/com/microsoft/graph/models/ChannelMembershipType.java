@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public enum ChannelMembershipType implements ValuedEnum {
     Standard("standard"),
-    PrivateEscaped("private"),
+    Private("private"),
     UnknownFutureValue("unknownFutureValue"),
     Shared("shared");
     public final String value;
@@ -19,7 +19,7 @@ public enum ChannelMembershipType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "standard": return Standard;
-            case "private": return PrivateEscaped;
+            case "private": return Private;
             case "unknownFutureValue": return UnknownFutureValue;
             case "shared": return Shared;
             default: return null;

@@ -20,7 +20,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      */
     private IdentitySet meetingOrganizer;
     /**
-     * Instantiates a new CallTranscriptEventMessageDetail and sets the default values.
+     * Instantiates a new callTranscriptEventMessageDetail and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CallTranscriptEventMessageDetail
+     * @return a callTranscriptEventMessageDetail
      */
     @javax.annotation.Nonnull
     public static CallTranscriptEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

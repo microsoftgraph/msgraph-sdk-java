@@ -21,7 +21,7 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
      */
     private String odataType;
     /**
-     * The value property
+     * The value of the secret.
      */
     private String value;
     /**
@@ -64,7 +64,7 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
     }
     /**
      * Gets the key property value. The key property
-     * @return a SynchronizationSecret
+     * @return a synchronizationSecret
      */
     @javax.annotation.Nullable
     public SynchronizationSecret getKey() {
@@ -79,7 +79,7 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
         return this.odataType;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The value of the secret.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class SynchronizationSecretKeyStringValuePair implements AdditionalDataHo
         this.odataType = value;
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The value of the secret.
      * @param value Value to set for the value property.
      * @return a void
      */

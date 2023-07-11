@@ -1,4 +1,4 @@
-package com.microsoft.graph.policies.crosstenantaccesspolicy.defaultEscaped.resettosystemdefault;
+package com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped.resettosystemdefault;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;

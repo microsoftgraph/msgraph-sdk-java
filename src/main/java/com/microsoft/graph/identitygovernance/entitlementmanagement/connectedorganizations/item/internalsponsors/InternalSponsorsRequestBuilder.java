@@ -104,7 +104,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -124,7 +124,7 @@ public class InternalSponsorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

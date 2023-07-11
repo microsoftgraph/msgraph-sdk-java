@@ -16,7 +16,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
      */
     private IdentitySet initiator;
     /**
-     * Instantiates a new ChannelUnsetAsFavoriteByDefaultEventMessageDetail and sets the default values.
+     * Instantiates a new channelUnsetAsFavoriteByDefaultEventMessageDetail and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMess
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChannelUnsetAsFavoriteByDefaultEventMessageDetail
+     * @return a channelUnsetAsFavoriteByDefaultEventMessageDetail
      */
     @javax.annotation.Nonnull
     public static ChannelUnsetAsFavoriteByDefaultEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

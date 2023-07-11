@@ -72,7 +72,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
-     * @return a CompletableFuture of ChatMessageCollectionResponse
+     * @return a CompletableFuture of chatMessageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ChatMessageCollectionResponse
+     * @return a CompletableFuture of chatMessageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-replies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

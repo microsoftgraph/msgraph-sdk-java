@@ -39,9 +39,10 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/query", rawUrl);
     }
     /**
-     * Invoke action query
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @return a CompletableFuture of queryResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryPostRequestBody body) {
@@ -58,10 +59,11 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action query
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of queryResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action query
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action query
+     * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -13,15 +13,15 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The attributes property
+     * Defines attributes of the object.
      */
     private java.util.List<AttributeDefinition> attributes;
     /**
-     * The metadata property
+     * Metadata for the given object.
      */
     private java.util.List<ObjectDefinitionMetadataEntry> metadata;
     /**
-     * The name property
+     * Name of the object. Must be unique within a directory definition. Not nullable.
      */
     private String name;
     /**
@@ -29,7 +29,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The supportedApis property
+     * The API that the provisioning service queries to retrieve data for synchronization.
      */
     private java.util.List<String> supportedApis;
     /**
@@ -59,7 +59,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the attributes property value. The attributes property
+     * Gets the attributes property value. Defines attributes of the object.
      * @return a attributeDefinition
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Metadata for the given object.
      * @return a objectDefinitionMetadataEntry
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         return this.metadata;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the object. Must be unique within a directory definition. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the supportedApis property value. The supportedApis property
+     * Gets the supportedApis property value. The API that the provisioning service queries to retrieve data for synchronization.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the attributes property value. The attributes property
+     * Sets the attributes property value. Defines attributes of the object.
      * @param value Value to set for the attributes property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         this.attributes = value;
     }
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Metadata for the given object.
      * @param value Value to set for the metadata property.
      * @return a void
      */
@@ -155,7 +155,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         this.metadata = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the object. Must be unique within a directory definition. Not nullable.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -173,7 +173,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the supportedApis property value. The supportedApis property
+     * Sets the supportedApis property value. The API that the provisioning service queries to retrieve data for synchronization.
      * @param value Value to set for the supportedApis property.
      * @return a void
      */

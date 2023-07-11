@@ -79,7 +79,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The groups that a group is a member of, either directly and through nested membership. Nullable.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -99,7 +99,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

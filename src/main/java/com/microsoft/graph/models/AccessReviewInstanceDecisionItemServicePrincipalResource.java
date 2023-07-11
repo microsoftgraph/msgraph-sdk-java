@@ -12,7 +12,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
      */
     private String appId;
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
+     * Instantiates a new accessReviewInstanceDecisionItemServicePrincipalResource and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstanceDecisionItemServicePrincipalResource
+     * @return a accessReviewInstanceDecisionItemServicePrincipalResource
      */
     @javax.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemServicePrincipalResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

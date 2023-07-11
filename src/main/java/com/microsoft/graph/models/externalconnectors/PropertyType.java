@@ -6,9 +6,9 @@ import java.util.Objects;
 public enum PropertyType implements ValuedEnum {
     String("string"),
     Int64("int64"),
-    DoubleEscaped("double"),
+    Double("double"),
     DateTime("dateTime"),
-    BooleanEscaped("boolean"),
+    Boolean("boolean"),
     StringCollection("stringCollection"),
     Int64Collection("int64Collection"),
     DoubleCollection("doubleCollection"),
@@ -26,9 +26,9 @@ public enum PropertyType implements ValuedEnum {
         switch(searchValue) {
             case "string": return String;
             case "int64": return Int64;
-            case "double": return DoubleEscaped;
+            case "double": return Double;
             case "dateTime": return DateTime;
-            case "boolean": return BooleanEscaped;
+            case "boolean": return Boolean;
             case "stringCollection": return StringCollection;
             case "int64Collection": return Int64Collection;
             case "doubleCollection": return DoubleCollection;

@@ -12,7 +12,7 @@ public class ShiftCollectionResponse extends BaseCollectionPaginationCountRespon
      */
     private java.util.List<Shift> value;
     /**
-     * Instantiates a new ShiftCollectionResponse and sets the default values.
+     * Instantiates a new shiftCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ShiftCollectionResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ShiftCollectionResponse
+     * @return a shiftCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ShiftCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -63,7 +63,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List application and service principal objects that are assigned an appManagementPolicy policy object.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/appManagementPolicy-list-appliesTo?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/appManagementPolicy-list-appliesTo?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

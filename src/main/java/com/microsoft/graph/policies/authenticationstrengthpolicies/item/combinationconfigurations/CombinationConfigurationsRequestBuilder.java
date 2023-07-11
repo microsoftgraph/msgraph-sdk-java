@@ -64,7 +64,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
-     * @return a CompletableFuture of AuthenticationCombinationConfigurationCollectionResponse
+     * @return a CompletableFuture of authenticationCombinationConfigurationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-list-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
     /**
      * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationCombinationConfigurationCollectionResponse
+     * @return a CompletableFuture of authenticationCombinationConfigurationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-list-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

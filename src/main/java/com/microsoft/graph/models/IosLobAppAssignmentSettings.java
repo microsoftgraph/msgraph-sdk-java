@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Abstract class to contain properties used to assign a mobile app to a group.
+ */
 public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
      * When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
@@ -20,7 +23,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     private String vpnConfigurationId;
     /**
-     * Instantiates a new IosLobAppAssignmentSettings and sets the default values.
+     * Instantiates a new iosLobAppAssignmentSettings and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +34,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosLobAppAssignmentSettings
+     * @return a iosLobAppAssignmentSettings
      */
     @javax.annotation.Nonnull
     public static IosLobAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

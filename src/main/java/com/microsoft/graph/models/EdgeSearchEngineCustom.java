@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
+ */
 public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable {
     /**
      * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
      */
     private String edgeSearchEngineOpenSearchXmlUrl;
     /**
-     * Instantiates a new EdgeSearchEngineCustom and sets the default values.
+     * Instantiates a new edgeSearchEngineCustom and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdgeSearchEngineCustom
+     * @return a edgeSearchEngineCustom
      */
     @javax.annotation.Nonnull
     public static EdgeSearchEngineCustom createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

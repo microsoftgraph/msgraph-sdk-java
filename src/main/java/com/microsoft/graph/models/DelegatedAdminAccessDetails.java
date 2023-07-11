@@ -21,7 +21,7 @@ public class DelegatedAdminAccessDetails implements AdditionalDataHolder, Parsab
      */
     private java.util.List<UnifiedRole> unifiedRoles;
     /**
-     * Instantiates a new DelegatedAdminAccessDetails and sets the default values.
+     * Instantiates a new delegatedAdminAccessDetails and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class DelegatedAdminAccessDetails implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DelegatedAdminAccessDetails
+     * @return a delegatedAdminAccessDetails
      */
     @javax.annotation.Nonnull
     public static DelegatedAdminAccessDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class DelegatedAdminAccessDetails implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the unifiedRoles property value. The directory roles that the Microsoft partner is assigned in the customer tenant.
-     * @return a UnifiedRole
+     * @return a unifiedRole
      */
     @javax.annotation.Nullable
     public java.util.List<UnifiedRole> getUnifiedRoles() {

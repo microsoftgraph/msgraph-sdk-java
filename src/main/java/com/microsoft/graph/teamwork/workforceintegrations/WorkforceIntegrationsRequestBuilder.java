@@ -64,7 +64,7 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of workforceIntegration objects.
-     * @return a CompletableFuture of WorkforceIntegrationCollectionResponse
+     * @return a CompletableFuture of workforceIntegrationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of workforceIntegration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkforceIntegrationCollectionResponse
+     * @return a CompletableFuture of workforceIntegrationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

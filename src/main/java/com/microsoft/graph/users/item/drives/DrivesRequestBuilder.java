@@ -63,7 +63,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of Drive resources available for a target User, Group, or Site.
-     * @return a CompletableFuture of DriveCollectionResponse
+     * @return a CompletableFuture of driveCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveCollectionResponse
+     * @return a CompletableFuture of driveCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

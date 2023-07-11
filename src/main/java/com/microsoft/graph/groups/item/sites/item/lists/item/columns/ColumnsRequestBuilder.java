@@ -64,7 +64,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [list][list].
-     * @return a CompletableFuture of ColumnDefinitionCollectionResponse
+     * @return a CompletableFuture of columnDefinitionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/list-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [list][list].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ColumnDefinitionCollectionResponse
+     * @return a CompletableFuture of columnDefinitionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/list-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

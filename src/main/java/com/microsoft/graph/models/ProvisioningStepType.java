@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum ProvisioningStepType implements ValuedEnum {
-    ImportEscaped("import"),
+    Import("import"),
     Scoping("scoping"),
     Matching("matching"),
     Processing("processing"),
@@ -21,7 +21,7 @@ public enum ProvisioningStepType implements ValuedEnum {
     public static ProvisioningStepType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "import": return ImportEscaped;
+            case "import": return Import;
             case "scoping": return Scoping;
             case "matching": return Matching;
             case "processing": return Processing;

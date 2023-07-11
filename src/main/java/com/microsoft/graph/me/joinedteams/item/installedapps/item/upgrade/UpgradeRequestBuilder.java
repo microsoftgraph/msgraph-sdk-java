@@ -40,13 +40,14 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Upgrade an app installation within a chat.
+     * @param body The request body
      * @return a CompletableFuture of void
      * @see <a href="https://docs.microsoft.com/graph/api/chat-teamsappinstallation-upgrade?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post() {
+    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final UpgradePostRequestBody body) {
         try {
-            final RequestInformation requestInfo = toPostRequestInformation(null);
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -59,14 +60,16 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Upgrade an app installation within a chat.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      * @see <a href="https://docs.microsoft.com/graph/api/chat-teamsappinstallation-upgrade?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final UpgradePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -79,23 +82,27 @@ public class UpgradeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Upgrade an app installation within a chat.
+     * @param body The request body
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation() throws URISyntaxException {
-        return toPostRequestInformation(null);
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final UpgradePostRequestBody body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
     }
     /**
      * Upgrade an app installation within a chat.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final UpgradePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

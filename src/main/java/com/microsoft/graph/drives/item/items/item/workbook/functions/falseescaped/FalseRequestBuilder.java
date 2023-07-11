@@ -1,4 +1,4 @@
-package com.microsoft.graph.drives.item.items.item.workbook.functions.falseEscaped;
+package com.microsoft.graph.drives.item.items.item.workbook.functions.falseescaped;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookFunctionResult;

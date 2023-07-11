@@ -40,8 +40,9 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}/schema/directories/{directoryDefinition%2Did}/discover", rawUrl);
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @return a CompletableFuture of directoryDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> post() {
@@ -58,9 +59,10 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-directorydefinition-discover?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinition> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class DiscoverRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action discover
+     * Discover the latest schema definition for provisioning to an application. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

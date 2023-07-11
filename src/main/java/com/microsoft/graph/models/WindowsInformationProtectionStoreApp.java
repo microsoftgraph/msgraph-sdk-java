@@ -6,9 +6,12 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * App for Windows information protection
+ */
 public class WindowsInformationProtectionStoreApp extends WindowsInformationProtectionApp implements Parsable {
     /**
-     * Instantiates a new WindowsInformationProtectionStoreApp and sets the default values.
+     * Instantiates a new windowsInformationProtectionStoreApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -19,7 +22,7 @@ public class WindowsInformationProtectionStoreApp extends WindowsInformationProt
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionStoreApp
+     * @return a windowsInformationProtectionStoreApp
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionStoreApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

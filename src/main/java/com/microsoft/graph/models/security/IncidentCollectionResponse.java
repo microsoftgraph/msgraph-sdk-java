@@ -13,7 +13,7 @@ public class IncidentCollectionResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<Incident> value;
     /**
-     * Instantiates a new IncidentCollectionResponse and sets the default values.
+     * Instantiates a new incidentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class IncidentCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IncidentCollectionResponse
+     * @return a incidentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static IncidentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

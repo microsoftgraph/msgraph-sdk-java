@@ -122,7 +122,7 @@ public class TaskReport extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a LifecycleWorkflowProcessingStatus
+     * @return a lifecycleWorkflowProcessingStatus
      */
     @javax.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {

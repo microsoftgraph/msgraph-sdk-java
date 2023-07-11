@@ -64,7 +64,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from filterOperators
-     * @return a CompletableFuture of FilterOperatorSchemaCollectionResponse
+     * @return a CompletableFuture of filterOperatorSchemaCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilterOperatorSchemaCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class FilterOperatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from filterOperators
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of FilterOperatorSchemaCollectionResponse
+     * @return a CompletableFuture of filterOperatorSchemaCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilterOperatorSchemaCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

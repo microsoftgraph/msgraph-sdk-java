@@ -106,7 +106,7 @@ public class TodoTaskList extends Entity implements Parsable {
     }
     /**
      * Gets the wellknownListName property value. The wellknownListName property
-     * @return a WellknownListName
+     * @return a wellknownListName
      */
     @javax.annotation.Nullable
     public WellknownListName getWellknownListName() {

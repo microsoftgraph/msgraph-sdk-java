@@ -25,7 +25,7 @@ public class InvestigationSecurityState implements AdditionalDataHolder, Parsabl
      */
     private String status;
     /**
-     * Instantiates a new InvestigationSecurityState and sets the default values.
+     * Instantiates a new investigationSecurityState and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class InvestigationSecurityState implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InvestigationSecurityState
+     * @return a investigationSecurityState
      */
     @javax.annotation.Nonnull
     public static InvestigationSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -12,7 +12,7 @@ public class LongRunningOperationCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<LongRunningOperation> value;
     /**
-     * Instantiates a new LongRunningOperationCollectionResponse and sets the default values.
+     * Instantiates a new longRunningOperationCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class LongRunningOperationCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LongRunningOperationCollectionResponse
+     * @return a longRunningOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public static LongRunningOperationCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

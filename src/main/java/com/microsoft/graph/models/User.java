@@ -141,6 +141,10 @@ public class User extends DirectoryObject implements Parsable {
      */
     private java.util.List<Drive> drives;
     /**
+     * The employeeExperience property
+     */
+    private EmployeeExperienceUser employeeExperience;
+    /**
      * The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      */
     private OffsetDateTime employeeHireDate;
@@ -493,7 +497,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     private String userType;
     /**
-     * Instantiates a new User and sets the default values.
+     * Instantiates a new user and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -504,7 +508,7 @@ public class User extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a User
+     * @return a user
      */
     @javax.annotation.Nonnull
     public static User createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -561,7 +565,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
-     * @return a AssignedLicense
+     * @return a assignedLicense
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
@@ -569,7 +573,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and not).
-     * @return a AssignedPlan
+     * @return a assignedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
@@ -776,6 +780,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.drives;
     }
     /**
+     * Gets the employeeExperience property value. The employeeExperience property
+     * @return a employeeExperienceUser
+     */
+    @javax.annotation.Nullable
+    public EmployeeExperienceUser getEmployeeExperience() {
+        return this.employeeExperience;
+    }
+    /**
      * Gets the employeeHireDate property value. The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      * @return a OffsetDateTime
      */
@@ -895,6 +907,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("employeeExperience", (n) -> { this.setEmployeeExperience(n.getObjectValue(EmployeeExperienceUser::createFromDiscriminatorValue)); });
         deserializerMap.put("employeeHireDate", (n) -> { this.setEmployeeHireDate(n.getOffsetDateTimeValue()); });
         deserializerMap.put("employeeId", (n) -> { this.setEmployeeId(n.getStringValue()); });
         deserializerMap.put("employeeLeaveDateTime", (n) -> { this.setEmployeeLeaveDateTime(n.getOffsetDateTimeValue()); });
@@ -1443,7 +1456,7 @@ public class User extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le).
-     * @return a ProvisionedPlan
+     * @return a provisionedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
@@ -1651,6 +1664,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
+        writer.writeObjectValue("employeeExperience", this.getEmployeeExperience());
         writer.writeOffsetDateTimeValue("employeeHireDate", this.getEmployeeHireDate());
         writer.writeStringValue("employeeId", this.getEmployeeId());
         writer.writeOffsetDateTimeValue("employeeLeaveDateTime", this.getEmployeeLeaveDateTime());
@@ -2036,6 +2050,15 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setDrives(@javax.annotation.Nullable final java.util.List<Drive> value) {
         this.drives = value;
+    }
+    /**
+     * Sets the employeeExperience property value. The employeeExperience property
+     * @param value Value to set for the employeeExperience property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEmployeeExperience(@javax.annotation.Nullable final EmployeeExperienceUser value) {
+        this.employeeExperience = value;
     }
     /**
      * Sets the employeeHireDate property value. The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).

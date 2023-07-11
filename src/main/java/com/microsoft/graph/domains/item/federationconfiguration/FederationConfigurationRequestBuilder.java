@@ -64,7 +64,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an internalDomainFederation object.
-     * @return a CompletableFuture of InternalDomainFederationCollectionResponse
+     * @return a CompletableFuture of internalDomainFederationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class FederationConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an internalDomainFederation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InternalDomainFederationCollectionResponse
+     * @return a CompletableFuture of internalDomainFederationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InternalDomainFederationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

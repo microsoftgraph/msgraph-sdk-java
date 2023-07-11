@@ -5,6 +5,7 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentre
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.item.cancel.CancelRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.item.reprocess.ReprocessRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.item.requestor.RequestorRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentrequests.item.resume.ResumeRequestBuilder;
 import com.microsoft.graph.models.AccessPackageAssignmentRequest;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -59,6 +60,13 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     @javax.annotation.Nonnull
     public RequestorRequestBuilder requestor() {
         return new RequestorRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the resume method.
+     */
+    @javax.annotation.Nonnull
+    public ResumeRequestBuilder resume() {
+        return new ResumeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new AccessPackageAssignmentRequestItemRequestBuilder and sets the default values.

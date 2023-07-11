@@ -64,7 +64,7 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
-     * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
+     * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class InheritsPermissionsFromRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleDefinitionCollectionResponse
+     * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

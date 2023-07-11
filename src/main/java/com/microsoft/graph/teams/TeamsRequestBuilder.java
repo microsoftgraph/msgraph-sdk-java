@@ -71,8 +71,9 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of the specified team.
-     * @return a CompletableFuture of TeamCollectionResponse
+     * List all teams in an organization.
+     * @return a CompletableFuture of teamCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamCollectionResponse> get() {
@@ -89,9 +90,10 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of the specified team.
+     * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamCollectionResponse
+     * @return a CompletableFuture of teamCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -150,7 +152,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of the specified team.
+     * List all teams in an organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -158,7 +160,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of the specified team.
+     * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +213,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of the specified team.
+     * List all teams in an organization.
      */
     public class GetQueryParameters {
         /**

@@ -64,7 +64,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content
-     * @return a CompletableFuture of ChatMessageHostedContentCollectionResponse
+     * @return a CompletableFuture of chatMessageHostedContentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-hostedcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HostedContentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ChatMessageHostedContentCollectionResponse
+     * @return a CompletableFuture of chatMessageHostedContentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-list-hostedcontents?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

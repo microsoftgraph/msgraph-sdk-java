@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum EndpointType implements ValuedEnum {
-    DefaultEscaped("default"),
+    Default("default"),
     Voicemail("voicemail"),
     SkypeForBusiness("skypeForBusiness"),
     SkypeForBusinessVoipPhone("skypeForBusinessVoipPhone"),
@@ -19,7 +19,7 @@ public enum EndpointType implements ValuedEnum {
     public static EndpointType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return DefaultEscaped;
+            case "default": return Default;
             case "voicemail": return Voicemail;
             case "skypeForBusiness": return SkypeForBusiness;
             case "skypeForBusinessVoipPhone": return SkypeForBusinessVoipPhone;

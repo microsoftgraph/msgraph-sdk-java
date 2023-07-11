@@ -16,7 +16,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
      */
     private EdiscoverySearch search;
     /**
-     * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
+     * Instantiates a new ediscoveryAddToReviewSetOperation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +26,7 @@ public class EdiscoveryAddToReviewSetOperation extends CaseOperation implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryAddToReviewSetOperation
+     * @return a ediscoveryAddToReviewSetOperation
      */
     @javax.annotation.Nonnull
     public static EdiscoveryAddToReviewSetOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

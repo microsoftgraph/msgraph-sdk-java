@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.graph.models.security.Alert;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.Incident;
+import com.microsoft.graph.models.security.ThreatIntelligence;
 import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
 import com.microsoft.kiota.serialization.Parsable;
@@ -41,6 +42,10 @@ public class Security extends Entity implements Parsable {
      */
     private java.util.List<SecureScore> secureScores;
     /**
+     * The threatIntelligence property
+     */
+    private ThreatIntelligence threatIntelligence;
+    /**
      * The triggers property
      */
     private TriggersRoot triggers;
@@ -49,7 +54,7 @@ public class Security extends Entity implements Parsable {
      */
     private TriggerTypesRoot triggerTypes;
     /**
-     * Instantiates a new Security and sets the default values.
+     * Instantiates a new security and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -59,7 +64,7 @@ public class Security extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Security
+     * @return a security
      */
     @javax.annotation.Nonnull
     public static Security createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -112,6 +117,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("threatIntelligence", (n) -> { this.setThreatIntelligence(n.getObjectValue(ThreatIntelligence::createFromDiscriminatorValue)); });
         deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("triggerTypes", (n) -> { this.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -139,6 +145,14 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<SecureScore> getSecureScores() {
         return this.secureScores;
+    }
+    /**
+     * Gets the threatIntelligence property value. The threatIntelligence property
+     * @return a threatIntelligence
+     */
+    @javax.annotation.Nullable
+    public ThreatIntelligence getThreatIntelligence() {
+        return this.threatIntelligence;
     }
     /**
      * Gets the triggers property value. The triggers property
@@ -172,6 +186,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
+        writer.writeObjectValue("threatIntelligence", this.getThreatIntelligence());
         writer.writeObjectValue("triggers", this.getTriggers());
         writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
     }
@@ -237,6 +252,15 @@ public class Security extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setSecureScores(@javax.annotation.Nullable final java.util.List<SecureScore> value) {
         this.secureScores = value;
+    }
+    /**
+     * Sets the threatIntelligence property value. The threatIntelligence property
+     * @param value Value to set for the threatIntelligence property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setThreatIntelligence(@javax.annotation.Nullable final ThreatIntelligence value) {
+        this.threatIntelligence = value;
     }
     /**
      * Sets the triggers property value. The triggers property

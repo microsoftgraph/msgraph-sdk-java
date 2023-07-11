@@ -63,8 +63,8 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/templates/{synchronizationTemplate%2Did}/schema/directories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get directories from servicePrincipals
-     * @return a CompletableFuture of DirectoryDefinitionCollectionResponse
+     * Contains the collection of directories and all of their objects.
+     * @return a CompletableFuture of directoryDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinitionCollectionResponse> get() {
@@ -81,9 +81,9 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryDefinitionCollectionResponse
+     * @return a CompletableFuture of directoryDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +140,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class DirectoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get directories from servicePrincipals
+     * Contains the collection of directories and all of their objects.
      */
     public class GetQueryParameters {
         /**

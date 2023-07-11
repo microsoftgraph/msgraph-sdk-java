@@ -54,7 +54,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<UserTrainingEventInfo> trainingEvents;
     /**
-     * Instantiates a new UserSimulationDetails and sets the default values.
+     * Instantiates a new userSimulationDetails and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserSimulationDetails
+     * @return a userSimulationDetails
      */
     @javax.annotation.Nonnull
     public static UserSimulationDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

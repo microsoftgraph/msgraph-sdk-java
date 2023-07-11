@@ -63,9 +63,8 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the enrollmentConfigurationAssignment objects.
-     * @return a CompletableFuture of EnrollmentConfigurationAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of group assignments for the device configuration profile
+     * @return a CompletableFuture of enrollmentConfigurationAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignmentCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the enrollmentConfigurationAssignment objects.
+     * The list of group assignments for the device configuration profile
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EnrollmentConfigurationAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of enrollmentConfigurationAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new enrollmentConfigurationAssignment object.
+     * Create new navigation property to assignments for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of enrollmentConfigurationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> post(@javax.annotation.Nonnull final EnrollmentConfigurationAssignment body) {
@@ -122,11 +119,10 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new enrollmentConfigurationAssignment object.
+     * Create new navigation property to assignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of enrollmentConfigurationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> post(@javax.annotation.Nonnull final EnrollmentConfigurationAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the enrollmentConfigurationAssignment objects.
+     * The list of group assignments for the device configuration profile
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the enrollmentConfigurationAssignment objects.
+     * The list of group assignments for the device configuration profile
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new enrollmentConfigurationAssignment object.
+     * Create new navigation property to assignments for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new enrollmentConfigurationAssignment object.
+     * Create new navigation property to assignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the enrollmentConfigurationAssignment objects.
+     * The list of group assignments for the device configuration profile
      */
     public class GetQueryParameters {
         /**

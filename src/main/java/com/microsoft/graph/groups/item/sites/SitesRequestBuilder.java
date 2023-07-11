@@ -87,7 +87,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a CompletableFuture of SiteCollectionResponse
+     * @return a CompletableFuture of siteCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get() {
@@ -106,7 +106,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SiteCollectionResponse
+     * @return a CompletableFuture of siteCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SiteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -13,19 +13,23 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The dailyPrintUsageByPrinter property
+     * Container for navigation properties for Azure AD authentication methods resources.
+     */
+    private AuthenticationMethodsRoot authenticationMethods;
+    /**
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      */
     private java.util.List<PrintUsageByPrinter> dailyPrintUsageByPrinter;
     /**
-     * The dailyPrintUsageByUser property
+     * Retrieve a list of daily print usage summaries, grouped by user.
      */
     private java.util.List<PrintUsageByUser> dailyPrintUsageByUser;
     /**
-     * The monthlyPrintUsageByPrinter property
+     * Retrieve a list of monthly print usage summaries, grouped by printer.
      */
     private java.util.List<PrintUsageByPrinter> monthlyPrintUsageByPrinter;
     /**
-     * The monthlyPrintUsageByUser property
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      */
     private java.util.List<PrintUsageByUser> monthlyPrintUsageByUser;
     /**
@@ -33,11 +37,11 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The security property
+     * Represents an abstract type that contains resources for attack simulation and training reports.
      */
     private SecurityReportsRoot security;
     /**
-     * Instantiates a new ReportRoot and sets the default values.
+     * Instantiates a new reportRoot and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -47,7 +51,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ReportRoot
+     * @return a reportRoot
      */
     @javax.annotation.Nonnull
     public static ReportRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +67,15 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
+     * Gets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
+     * @return a authenticationMethodsRoot
+     */
+    @javax.annotation.Nullable
+    public AuthenticationMethodsRoot getAuthenticationMethods() {
+        return this.authenticationMethods;
+    }
+    /**
+     * Gets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
      * @return a printUsageByPrinter
      */
     @javax.annotation.Nullable
@@ -71,7 +83,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         return this.dailyPrintUsageByPrinter;
     }
     /**
-     * Gets the dailyPrintUsageByUser property value. The dailyPrintUsageByUser property
+     * Gets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
      * @return a printUsageByUser
      */
     @javax.annotation.Nullable
@@ -84,7 +96,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("authenticationMethods", (n) -> { this.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByPrinter", (n) -> { this.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByUser", (n) -> { this.setDailyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByPrinter", (n) -> { this.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
@@ -94,7 +107,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the monthlyPrintUsageByPrinter property value. The monthlyPrintUsageByPrinter property
+     * Gets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
      * @return a printUsageByPrinter
      */
     @javax.annotation.Nullable
@@ -102,7 +115,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         return this.monthlyPrintUsageByPrinter;
     }
     /**
-     * Gets the monthlyPrintUsageByUser property value. The monthlyPrintUsageByUser property
+     * Gets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
      * @return a printUsageByUser
      */
     @javax.annotation.Nullable
@@ -118,7 +131,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the security property value. The security property
+     * Gets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @return a securityReportsRoot
      */
     @javax.annotation.Nullable
@@ -133,6 +146,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("authenticationMethods", this.getAuthenticationMethods());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByPrinter", this.getDailyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByUser", this.getDailyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByPrinter", this.getMonthlyPrintUsageByPrinter());
@@ -151,7 +165,16 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
+     * Sets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
+     * @param value Value to set for the authenticationMethods property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationMethods(@javax.annotation.Nullable final AuthenticationMethodsRoot value) {
+        this.authenticationMethods = value;
+    }
+    /**
+     * Sets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
      * @param value Value to set for the dailyPrintUsageByPrinter property.
      * @return a void
      */
@@ -160,7 +183,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         this.dailyPrintUsageByPrinter = value;
     }
     /**
-     * Sets the dailyPrintUsageByUser property value. The dailyPrintUsageByUser property
+     * Sets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
      * @param value Value to set for the dailyPrintUsageByUser property.
      * @return a void
      */
@@ -169,7 +192,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         this.dailyPrintUsageByUser = value;
     }
     /**
-     * Sets the monthlyPrintUsageByPrinter property value. The monthlyPrintUsageByPrinter property
+     * Sets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
      * @param value Value to set for the monthlyPrintUsageByPrinter property.
      * @return a void
      */
@@ -178,7 +201,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         this.monthlyPrintUsageByPrinter = value;
     }
     /**
-     * Sets the monthlyPrintUsageByUser property value. The monthlyPrintUsageByUser property
+     * Sets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
      * @param value Value to set for the monthlyPrintUsageByUser property.
      * @return a void
      */
@@ -196,7 +219,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the security property value. The security property
+     * Sets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @param value Value to set for the security property.
      * @return a void
      */

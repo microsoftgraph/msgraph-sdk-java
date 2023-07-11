@@ -16,11 +16,11 @@ public enum Win32LobAppPowerShellScriptRuleOperationType implements ValuedEnum {
     /** Output data type is integer. */
     Integer("integer"),
     /** Output data type is float. */
-    FloatEscaped("float"),
+    Float("float"),
     /** Output data type is version. */
     Version("version"),
     /** Output data type is boolean. */
-    BooleanEscaped("boolean");
+    Boolean("boolean");
     public final String value;
     Win32LobAppPowerShellScriptRuleOperationType(final String value) {
         this.value = value;
@@ -35,9 +35,9 @@ public enum Win32LobAppPowerShellScriptRuleOperationType implements ValuedEnum {
             case "string": return String;
             case "dateTime": return DateTime;
             case "integer": return Integer;
-            case "float": return FloatEscaped;
+            case "float": return Float;
             case "version": return Version;
-            case "boolean": return BooleanEscaped;
+            case "boolean": return Boolean;
             default: return null;
         }
     }

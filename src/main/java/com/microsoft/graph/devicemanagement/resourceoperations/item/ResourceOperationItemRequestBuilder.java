@@ -41,9 +41,8 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/resourceOperations/{resourceOperation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a resourceOperation.
+     * Delete navigation property resourceOperations for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -60,10 +59,9 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a resourceOperation.
+     * Delete navigation property resourceOperations for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -80,9 +78,8 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the resourceOperation object.
+     * The Resource Operations.
      * @return a CompletableFuture of resourceOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> get() {
@@ -99,10 +96,9 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the resourceOperation object.
+     * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +115,9 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a resourceOperation object.
+     * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of resourceOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> patch(@javax.annotation.Nonnull final ResourceOperation body) {
@@ -139,11 +134,10 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a resourceOperation object.
+     * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> patch(@javax.annotation.Nonnull final ResourceOperation body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +155,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a resourceOperation.
+     * Delete navigation property resourceOperations for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +163,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a resourceOperation.
+     * Delete navigation property resourceOperations for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +182,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the resourceOperation object.
+     * The Resource Operations.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +190,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the resourceOperation object.
+     * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +211,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a resourceOperation object.
+     * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +220,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a resourceOperation object.
+     * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +248,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the resourceOperation object.
+     * The Resource Operations.
      */
     public class GetQueryParameters {
         /**

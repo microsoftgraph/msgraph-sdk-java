@@ -12,7 +12,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<DirectoryRole> value;
     /**
-     * Instantiates a new DirectoryRoleCollectionResponse and sets the default values.
+     * Instantiates a new directoryRoleCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DirectoryRoleCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DirectoryRoleCollectionResponse
+     * @return a directoryRoleCollectionResponse
      */
     @javax.annotation.Nonnull
     public static DirectoryRoleCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

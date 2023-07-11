@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
+ */
 public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable {
     /**
      * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
@@ -32,7 +35,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      */
     private String path;
     /**
-     * Instantiates a new Win32LobAppFileSystemRule and sets the default values.
+     * Instantiates a new win32LobAppFileSystemRule and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -43,7 +46,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppFileSystemRule
+     * @return a win32LobAppFileSystemRule
      */
     @javax.annotation.Nonnull
     public static Win32LobAppFileSystemRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -91,7 +94,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the operationType property value. Contains all supported file system detection type.
-     * @return a Win32LobAppFileSystemOperationType
+     * @return a win32LobAppFileSystemOperationType
      */
     @javax.annotation.Nullable
     public Win32LobAppFileSystemOperationType getOperationType() {
@@ -99,7 +102,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a Win32LobAppRuleOperator
+     * @return a win32LobAppRuleOperator
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getOperator() {

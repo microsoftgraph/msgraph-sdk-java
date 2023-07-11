@@ -32,7 +32,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
      */
     private String oldValue;
     /**
-     * Instantiates a new AuditProperty and sets the default values.
+     * Instantiates a new auditProperty and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -42,7 +42,7 @@ public class AuditProperty implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditProperty
+     * @return a auditProperty
      */
     @javax.annotation.Nonnull
     public static AuditProperty createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

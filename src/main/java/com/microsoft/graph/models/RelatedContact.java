@@ -119,7 +119,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the relationship property value. The relationship property
-     * @return a ContactRelationship
+     * @return a contactRelationship
      */
     @javax.annotation.Nullable
     public ContactRelationship getRelationship() {

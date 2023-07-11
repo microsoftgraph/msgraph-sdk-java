@@ -64,7 +64,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
     }
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
+     * @return a CompletableFuture of federatedIdentityCredentialCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuild
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of FederatedIdentityCredentialCollectionResponse
+     * @return a CompletableFuture of federatedIdentityCredentialCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredentialCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

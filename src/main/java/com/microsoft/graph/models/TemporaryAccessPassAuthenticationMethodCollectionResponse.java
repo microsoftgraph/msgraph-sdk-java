@@ -12,7 +12,7 @@ public class TemporaryAccessPassAuthenticationMethodCollectionResponse extends B
      */
     private java.util.List<TemporaryAccessPassAuthenticationMethod> value;
     /**
-     * Instantiates a new TemporaryAccessPassAuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new temporaryAccessPassAuthenticationMethodCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class TemporaryAccessPassAuthenticationMethodCollectionResponse extends B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TemporaryAccessPassAuthenticationMethodCollectionResponse
+     * @return a temporaryAccessPassAuthenticationMethodCollectionResponse
      */
     @javax.annotation.Nonnull
     public static TemporaryAccessPassAuthenticationMethodCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -64,7 +64,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the siteSource objects associated with an ediscoveryCustodian.
-     * @return a CompletableFuture of SiteSourceCollectionResponse
+     * @return a CompletableFuture of siteSourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the siteSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SiteSourceCollectionResponse
+     * @return a CompletableFuture of siteSourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

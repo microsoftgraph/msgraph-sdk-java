@@ -64,7 +64,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the versions of a document set item in a list.
-     * @return a CompletableFuture of DocumentSetVersionCollectionResponse
+     * @return a CompletableFuture of documentSetVersionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the versions of a document set item in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DocumentSetVersionCollectionResponse
+     * @return a CompletableFuture of documentSetVersionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

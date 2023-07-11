@@ -89,7 +89,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     }
     /**
      * Read the properties and relationships of a partner-specific configuration.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     /**
      * Read the properties and relationships of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -129,7 +129,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     /**
      * Update the properties of a partner-specific configuration.
      * @param body The request body
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -150,7 +150,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      * Update the properties of a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

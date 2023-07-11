@@ -63,9 +63,8 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/mobileThreatDefenseConnectors{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the mobileThreatDefenseConnector objects.
-     * @return a CompletableFuture of MobileThreatDefenseConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of Mobile threat Defense connectors configured by the tenant.
+     * @return a CompletableFuture of mobileThreatDefenseConnectorCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnectorCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * List properties and relationships of the mobileThreatDefenseConnector objects.
+     * The list of Mobile threat Defense connectors configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileThreatDefenseConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of mobileThreatDefenseConnectorCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnectorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Create a new mobileThreatDefenseConnector object.
+     * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of mobileThreatDefenseConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> post(@javax.annotation.Nonnull final MobileThreatDefenseConnector body) {
@@ -122,11 +119,10 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Create a new mobileThreatDefenseConnector object.
+     * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileThreatDefenseConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> post(@javax.annotation.Nonnull final MobileThreatDefenseConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * List properties and relationships of the mobileThreatDefenseConnector objects.
+     * The list of Mobile threat Defense connectors configured by the tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the mobileThreatDefenseConnector objects.
+     * The list of Mobile threat Defense connectors configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Create a new mobileThreatDefenseConnector object.
+     * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new mobileThreatDefenseConnector object.
+     * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * List properties and relationships of the mobileThreatDefenseConnector objects.
+     * The list of Mobile threat Defense connectors configured by the tenant.
      */
     public class GetQueryParameters {
         /**

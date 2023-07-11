@@ -12,7 +12,7 @@ public class DeviceConfigurationStateCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<DeviceConfigurationState> value;
     /**
-     * Instantiates a new DeviceConfigurationStateCollectionResponse and sets the default values.
+     * Instantiates a new deviceConfigurationStateCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DeviceConfigurationStateCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceConfigurationStateCollectionResponse
+     * @return a deviceConfigurationStateCollectionResponse
      */
     @javax.annotation.Nonnull
     public static DeviceConfigurationStateCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -72,7 +72,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
-     * @return a CompletableFuture of AttachmentBaseCollectionResponse
+     * @return a CompletableFuture of attachmentBaseCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AttachmentBaseCollectionResponse
+     * @return a CompletableFuture of attachmentBaseCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

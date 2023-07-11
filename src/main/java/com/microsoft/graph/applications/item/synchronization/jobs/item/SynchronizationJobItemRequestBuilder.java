@@ -89,8 +89,9 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/synchronization/jobs/{synchronizationJob%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property jobs for applications
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -107,9 +108,10 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property jobs for applications
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -126,8 +128,9 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get jobs from applications
+     * Retrieve the existing synchronization job and its properties.
      * @return a CompletableFuture of synchronizationJob
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> get() {
@@ -144,9 +147,10 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get jobs from applications
+     * Retrieve the existing synchronization job and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationJob
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -203,7 +207,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property jobs for applications
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -211,7 +215,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property jobs for applications
+     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -230,7 +234,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get jobs from applications
+     * Retrieve the existing synchronization job and its properties.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -238,7 +242,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get jobs from applications
+     * Retrieve the existing synchronization job and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -296,7 +300,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get jobs from applications
+     * Retrieve the existing synchronization job and its properties.
      */
     public class GetQueryParameters {
         /**

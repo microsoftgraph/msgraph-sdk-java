@@ -24,7 +24,7 @@ public class TeamCreatedEventMessageDetail extends EventMessageDetail implements
      */
     private String teamId;
     /**
-     * Instantiates a new TeamCreatedEventMessageDetail and sets the default values.
+     * Instantiates a new teamCreatedEventMessageDetail and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class TeamCreatedEventMessageDetail extends EventMessageDetail implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamCreatedEventMessageDetail
+     * @return a teamCreatedEventMessageDetail
      */
     @javax.annotation.Nonnull
     public static TeamCreatedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

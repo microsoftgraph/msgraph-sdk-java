@@ -64,7 +64,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a user's presence information.
-     * @return a CompletableFuture of PresenceCollectionResponse
+     * @return a CompletableFuture of presenceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PresenceCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class PresencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a user's presence information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PresenceCollectionResponse
+     * @return a CompletableFuture of presenceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PresenceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

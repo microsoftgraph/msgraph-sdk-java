@@ -25,7 +25,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
      */
     private SecurityResourceType resourceType;
     /**
-     * Instantiates a new SecurityResource and sets the default values.
+     * Instantiates a new securityResource and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class SecurityResource implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityResource
+     * @return a securityResource
      */
     @javax.annotation.Nonnull
     public static SecurityResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

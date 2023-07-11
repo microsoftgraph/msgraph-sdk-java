@@ -64,7 +64,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
-     * @return a CompletableFuture of PermissionGrantConditionSetCollectionResponse
+     * @return a CompletableFuture of permissionGrantConditionSetCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class IncludesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PermissionGrantConditionSetCollectionResponse
+     * @return a CompletableFuture of permissionGrantConditionSetCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list-includes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

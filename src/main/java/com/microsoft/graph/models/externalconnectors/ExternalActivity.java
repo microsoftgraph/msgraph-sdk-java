@@ -76,7 +76,7 @@ public class ExternalActivity extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a ExternalActivityType
+     * @return a externalActivityType
      */
     @javax.annotation.Nullable
     public ExternalActivityType getType() {

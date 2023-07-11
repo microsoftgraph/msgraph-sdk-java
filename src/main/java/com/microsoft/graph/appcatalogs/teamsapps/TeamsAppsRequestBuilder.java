@@ -64,7 +64,7 @@ public class TeamsAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List apps from the Microsoft Teams app catalog.This includes apps from the Microsoft Teams store, as well as apps from your organization's app catalog (the tenant app catalog). To get apps from your organization's app catalog only, specify `organization` as the **distributionMethod** in the request.
-     * @return a CompletableFuture of TeamsAppCollectionResponse
+     * @return a CompletableFuture of teamsAppCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/appcatalogs-list-teamsapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TeamsAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * List apps from the Microsoft Teams app catalog.This includes apps from the Microsoft Teams store, as well as apps from your organization's app catalog (the tenant app catalog). To get apps from your organization's app catalog only, specify `organization` as the **distributionMethod** in the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsAppCollectionResponse
+     * @return a CompletableFuture of teamsAppCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/appcatalogs-list-teamsapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

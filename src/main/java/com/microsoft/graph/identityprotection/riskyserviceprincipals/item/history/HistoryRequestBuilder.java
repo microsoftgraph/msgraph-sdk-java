@@ -64,7 +64,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the risk history of a riskyServicePrincipal object.
-     * @return a CompletableFuture of RiskyServicePrincipalHistoryItemCollectionResponse
+     * @return a CompletableFuture of riskyServicePrincipalHistoryItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HistoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the risk history of a riskyServicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RiskyServicePrincipalHistoryItemCollectionResponse
+     * @return a CompletableFuture of riskyServicePrincipalHistoryItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

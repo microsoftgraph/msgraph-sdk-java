@@ -40,9 +40,10 @@ public class ParseExpressionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}/schema/parseExpression", rawUrl);
     }
     /**
-     * Invoke action parseExpression
+     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory.
      * @param body The request body
      * @return a CompletableFuture of parseExpressionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationschema-parseexpression?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ParseExpressionResponse> post(@javax.annotation.Nonnull final ParseExpressionPostRequestBody body) {
@@ -59,10 +60,11 @@ public class ParseExpressionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action parseExpression
+     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of parseExpressionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationschema-parseexpression?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ParseExpressionResponse> post(@javax.annotation.Nonnull final ParseExpressionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class ParseExpressionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action parseExpression
+     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class ParseExpressionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action parseExpression
+     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Azure Active Directory.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

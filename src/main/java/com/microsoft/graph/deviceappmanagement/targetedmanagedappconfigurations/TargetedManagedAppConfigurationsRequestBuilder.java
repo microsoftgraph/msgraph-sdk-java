@@ -63,9 +63,8 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the targetedManagedAppConfiguration objects.
-     * @return a CompletableFuture of TargetedManagedAppConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * Targeted managed app configurations.
+     * @return a CompletableFuture of targetedManagedAppConfigurationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfigurationCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * List properties and relationships of the targetedManagedAppConfiguration objects.
+     * Targeted managed app configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TargetedManagedAppConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of targetedManagedAppConfigurationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Create a new targetedManagedAppConfiguration object.
+     * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of targetedManagedAppConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> post(@javax.annotation.Nonnull final TargetedManagedAppConfiguration body) {
@@ -122,11 +119,10 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Create a new targetedManagedAppConfiguration object.
+     * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of targetedManagedAppConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> post(@javax.annotation.Nonnull final TargetedManagedAppConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * List properties and relationships of the targetedManagedAppConfiguration objects.
+     * Targeted managed app configurations.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the targetedManagedAppConfiguration objects.
+     * Targeted managed app configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Create a new targetedManagedAppConfiguration object.
+     * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new targetedManagedAppConfiguration object.
+     * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * List properties and relationships of the targetedManagedAppConfiguration objects.
+     * Targeted managed app configurations.
      */
     public class GetQueryParameters {
         /**

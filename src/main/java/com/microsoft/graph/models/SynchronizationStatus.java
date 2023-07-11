@@ -18,23 +18,23 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     private SynchronizationStatusCode code;
     /**
-     * The countSuccessiveCompleteFailures property
+     * Number of consecutive times this job failed.
      */
     private Long countSuccessiveCompleteFailures;
     /**
-     * The escrowsPruned property
+     * true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      */
     private Boolean escrowsPruned;
     /**
-     * The lastExecution property
+     * Details of the last execution of the job.
      */
     private SynchronizationTaskExecution lastExecution;
     /**
-     * The lastSuccessfulExecution property
+     * Details of the last execution of this job, which didn't have any errors.
      */
     private SynchronizationTaskExecution lastSuccessfulExecution;
     /**
-     * The lastSuccessfulExecutionWithExports property
+     * Details of the last execution of the job, which exported objects into the target directory.
      */
     private SynchronizationTaskExecution lastSuccessfulExecutionWithExports;
     /**
@@ -42,27 +42,27 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The progress property
+     * Details of the progress of a job toward completion.
      */
     private java.util.List<SynchronizationProgress> progress;
     /**
-     * The quarantine property
+     * If job is in quarantine, quarantine details.
      */
     private SynchronizationQuarantine quarantine;
     /**
-     * The steadyStateFirstAchievedTime property
+     * The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime steadyStateFirstAchievedTime;
     /**
-     * The steadyStateLastAchievedTime property
+     * The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime steadyStateLastAchievedTime;
     /**
-     * The synchronizedEntryCountByType property
+     * Count of synchronized objects, listed by object type.
      */
     private java.util.List<StringKeyLongValuePair> synchronizedEntryCountByType;
     /**
-     * The troubleshootingUrl property
+     * In the event of an error, the URL with the troubleshooting steps for the issue.
      */
     private String troubleshootingUrl;
     /**
@@ -93,14 +93,14 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a SynchronizationStatusCode
+     * @return a synchronizationStatusCode
      */
     @javax.annotation.Nullable
     public SynchronizationStatusCode getCode() {
         return this.code;
     }
     /**
-     * Gets the countSuccessiveCompleteFailures property value. The countSuccessiveCompleteFailures property
+     * Gets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.countSuccessiveCompleteFailures;
     }
     /**
-     * Gets the escrowsPruned property value. The escrowsPruned property
+     * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastExecution property value. The lastExecution property
+     * Gets the lastExecution property value. Details of the last execution of the job.
      * @return a synchronizationTaskExecution
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.lastExecution;
     }
     /**
-     * Gets the lastSuccessfulExecution property value. The lastSuccessfulExecution property
+     * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @return a synchronizationTaskExecution
      */
     @javax.annotation.Nullable
@@ -154,7 +154,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.lastSuccessfulExecution;
     }
     /**
-     * Gets the lastSuccessfulExecutionWithExports property value. The lastSuccessfulExecutionWithExports property
+     * Gets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @return a synchronizationTaskExecution
      */
     @javax.annotation.Nullable
@@ -170,7 +170,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the progress property value. The progress property
+     * Gets the progress property value. Details of the progress of a job toward completion.
      * @return a synchronizationProgress
      */
     @javax.annotation.Nullable
@@ -178,7 +178,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.progress;
     }
     /**
-     * Gets the quarantine property value. The quarantine property
+     * Gets the quarantine property value. If job is in quarantine, quarantine details.
      * @return a synchronizationQuarantine
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.quarantine;
     }
     /**
-     * Gets the steadyStateFirstAchievedTime property value. The steadyStateFirstAchievedTime property
+     * Gets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -194,7 +194,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.steadyStateFirstAchievedTime;
     }
     /**
-     * Gets the steadyStateLastAchievedTime property value. The steadyStateLastAchievedTime property
+     * Gets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -202,7 +202,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.steadyStateLastAchievedTime;
     }
     /**
-     * Gets the synchronizedEntryCountByType property value. The synchronizedEntryCountByType property
+     * Gets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @return a stringKeyLongValuePair
      */
     @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         return this.synchronizedEntryCountByType;
     }
     /**
-     * Gets the troubleshootingUrl property value. The troubleshootingUrl property
+     * Gets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -259,7 +259,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.code = value;
     }
     /**
-     * Sets the countSuccessiveCompleteFailures property value. The countSuccessiveCompleteFailures property
+     * Sets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @param value Value to set for the countSuccessiveCompleteFailures property.
      * @return a void
      */
@@ -268,7 +268,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.countSuccessiveCompleteFailures = value;
     }
     /**
-     * Sets the escrowsPruned property value. The escrowsPruned property
+     * Sets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @param value Value to set for the escrowsPruned property.
      * @return a void
      */
@@ -277,7 +277,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.escrowsPruned = value;
     }
     /**
-     * Sets the lastExecution property value. The lastExecution property
+     * Sets the lastExecution property value. Details of the last execution of the job.
      * @param value Value to set for the lastExecution property.
      * @return a void
      */
@@ -286,7 +286,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.lastExecution = value;
     }
     /**
-     * Sets the lastSuccessfulExecution property value. The lastSuccessfulExecution property
+     * Sets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @param value Value to set for the lastSuccessfulExecution property.
      * @return a void
      */
@@ -295,7 +295,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.lastSuccessfulExecution = value;
     }
     /**
-     * Sets the lastSuccessfulExecutionWithExports property value. The lastSuccessfulExecutionWithExports property
+     * Sets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @param value Value to set for the lastSuccessfulExecutionWithExports property.
      * @return a void
      */
@@ -313,7 +313,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the progress property value. The progress property
+     * Sets the progress property value. Details of the progress of a job toward completion.
      * @param value Value to set for the progress property.
      * @return a void
      */
@@ -322,7 +322,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.progress = value;
     }
     /**
-     * Sets the quarantine property value. The quarantine property
+     * Sets the quarantine property value. If job is in quarantine, quarantine details.
      * @param value Value to set for the quarantine property.
      * @return a void
      */
@@ -331,7 +331,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.quarantine = value;
     }
     /**
-     * Sets the steadyStateFirstAchievedTime property value. The steadyStateFirstAchievedTime property
+     * Sets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateFirstAchievedTime property.
      * @return a void
      */
@@ -340,7 +340,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.steadyStateFirstAchievedTime = value;
     }
     /**
-     * Sets the steadyStateLastAchievedTime property value. The steadyStateLastAchievedTime property
+     * Sets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateLastAchievedTime property.
      * @return a void
      */
@@ -349,7 +349,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.steadyStateLastAchievedTime = value;
     }
     /**
-     * Sets the synchronizedEntryCountByType property value. The synchronizedEntryCountByType property
+     * Sets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @param value Value to set for the synchronizedEntryCountByType property.
      * @return a void
      */
@@ -358,7 +358,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
         this.synchronizedEntryCountByType = value;
     }
     /**
-     * Sets the troubleshootingUrl property value. The troubleshootingUrl property
+     * Sets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @param value Value to set for the troubleshootingUrl property.
      * @return a void
      */

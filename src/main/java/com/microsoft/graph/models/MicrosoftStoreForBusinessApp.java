@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Microsoft Store for Business Apps. This class does not support Create, Delete, or Update.
+ */
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
     /**
      * The licenseType property
@@ -28,7 +31,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      */
     private Integer usedLicenseCount;
     /**
-     * Instantiates a new MicrosoftStoreForBusinessApp and sets the default values.
+     * Instantiates a new microsoftStoreForBusinessApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +42,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftStoreForBusinessApp
+     * @return a microsoftStoreForBusinessApp
      */
     @javax.annotation.Nonnull
     public static MicrosoftStoreForBusinessApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +65,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the licenseType property value. The licenseType property
-     * @return a MicrosoftStoreForBusinessLicenseType
+     * @return a microsoftStoreForBusinessLicenseType
      */
     @javax.annotation.Nullable
     public MicrosoftStoreForBusinessLicenseType getLicenseType() {

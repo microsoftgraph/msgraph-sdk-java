@@ -72,7 +72,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of worksheet objects.
-     * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
+     * @return a CompletableFuture of workbookWorksheetCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class WorksheetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of worksheet objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookWorksheetCollectionResponse
+     * @return a CompletableFuture of workbookWorksheetCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

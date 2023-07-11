@@ -48,7 +48,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessType property value. The accessType property
-     * @return a AccessType
+     * @return a accessType
      */
     @javax.annotation.Nullable
     public AccessType getAccessType() {
@@ -85,7 +85,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a AclType
+     * @return a aclType
      */
     @javax.annotation.Nullable
     public AclType getType() {

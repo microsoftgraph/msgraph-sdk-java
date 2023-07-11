@@ -63,9 +63,8 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/detectedApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the detectedApp objects.
-     * @return a CompletableFuture of DetectedAppCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of detected apps associated with a device.
+     * @return a CompletableFuture of detectedAppCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedAppCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DetectedAppCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of detectedAppCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedAppCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of detectedApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> post(@javax.annotation.Nonnull final DetectedApp body) {
@@ -122,11 +119,10 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of detectedApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-detectedapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> post(@javax.annotation.Nonnull final DetectedApp body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class DetectedAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      */
     public class GetQueryParameters {
         /**

@@ -149,7 +149,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a AlternativeSecurityId
+     * @return a alternativeSecurityId
      */
     @javax.annotation.Nullable
     public java.util.List<AlternativeSecurityId> getAlternativeSecurityIds() {

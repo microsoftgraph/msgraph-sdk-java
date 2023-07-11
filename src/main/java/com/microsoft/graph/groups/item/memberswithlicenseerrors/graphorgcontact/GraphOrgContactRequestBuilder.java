@@ -50,7 +50,7 @@ public class GraphOrgContactRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.orgContact in the microsoft.graph.directoryObject collection
-     * @return a CompletableFuture of OrgContactCollectionResponse
+     * @return a CompletableFuture of orgContactCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContactCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GraphOrgContactRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.orgContact in the microsoft.graph.directoryObject collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OrgContactCollectionResponse
+     * @return a CompletableFuture of orgContactCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContactCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

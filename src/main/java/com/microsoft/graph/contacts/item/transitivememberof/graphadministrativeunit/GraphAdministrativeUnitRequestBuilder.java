@@ -50,7 +50,7 @@ public class GraphAdministrativeUnitRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.administrativeUnit in the microsoft.graph.directoryObject collection
-     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
+     * @return a CompletableFuture of administrativeUnitCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnitCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GraphAdministrativeUnitRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.administrativeUnit in the microsoft.graph.directoryObject collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
+     * @return a CompletableFuture of administrativeUnitCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnitCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -63,7 +63,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * noncustodialDataSource sources that are included in the eDiscovery search
-     * @return a CompletableFuture of EdiscoveryNoncustodialDataSourceCollectionResponse
+     * @return a CompletableFuture of ediscoveryNoncustodialDataSourceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSourceCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class NoncustodialSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * noncustodialDataSource sources that are included in the eDiscovery search
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoveryNoncustodialDataSourceCollectionResponse
+     * @return a CompletableFuture of ediscoveryNoncustodialDataSourceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryNoncustodialDataSourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -12,7 +12,7 @@ public class EventCollectionResponse extends BaseCollectionPaginationCountRespon
      */
     private java.util.List<Event> value;
     /**
-     * Instantiates a new EventCollectionResponse and sets the default values.
+     * Instantiates a new eventCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class EventCollectionResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EventCollectionResponse
+     * @return a eventCollectionResponse
      */
     @javax.annotation.Nonnull
     public static EventCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

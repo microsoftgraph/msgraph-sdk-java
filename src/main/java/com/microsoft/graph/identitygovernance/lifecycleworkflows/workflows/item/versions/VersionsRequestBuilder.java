@@ -63,7 +63,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the workflowVersion objects and their properties.
-     * @return a CompletableFuture of WorkflowVersionCollectionResponse
+     * @return a CompletableFuture of workflowVersionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the workflowVersion objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkflowVersionCollectionResponse
+     * @return a CompletableFuture of workflowVersionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

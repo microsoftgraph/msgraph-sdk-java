@@ -64,7 +64,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
-     * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @return a CompletableFuture of bookingAppointmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingAppointmentCollectionResponse
+     * @return a CompletableFuture of bookingAppointmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

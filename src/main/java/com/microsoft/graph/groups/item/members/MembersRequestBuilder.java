@@ -119,7 +119,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -139,7 +139,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * The members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

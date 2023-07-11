@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Policy for Windows information protection without MDM
+ */
 public class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable {
     /**
      * Offline interval before app data is wiped (days)
@@ -56,7 +59,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     private Boolean windowsHelloForBusinessBlocked;
     /**
-     * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
+     * Instantiates a new windowsInformationProtectionPolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -67,7 +70,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionPolicy
+     * @return a windowsInformationProtectionPolicy
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -145,7 +148,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinLowercaseLetters property value. Pin Character Requirements
-     * @return a WindowsInformationProtectionPinCharacterRequirements
+     * @return a windowsInformationProtectionPinCharacterRequirements
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinLowercaseLetters() {
@@ -161,7 +164,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinSpecialCharacters property value. Pin Character Requirements
-     * @return a WindowsInformationProtectionPinCharacterRequirements
+     * @return a windowsInformationProtectionPinCharacterRequirements
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinSpecialCharacters() {
@@ -169,7 +172,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     }
     /**
      * Gets the pinUppercaseLetters property value. Pin Character Requirements
-     * @return a WindowsInformationProtectionPinCharacterRequirements
+     * @return a windowsInformationProtectionPinCharacterRequirements
      */
     @javax.annotation.Nullable
     public WindowsInformationProtectionPinCharacterRequirements getPinUppercaseLetters() {

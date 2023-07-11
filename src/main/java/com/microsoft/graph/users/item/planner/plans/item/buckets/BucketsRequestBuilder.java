@@ -64,7 +64,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
-     * @return a CompletableFuture of PlannerBucketCollectionResponse
+     * @return a CompletableFuture of plannerBucketCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of plannerBucket objects contained by a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PlannerBucketCollectionResponse
+     * @return a CompletableFuture of plannerBucketCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/plannerplan-list-buckets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

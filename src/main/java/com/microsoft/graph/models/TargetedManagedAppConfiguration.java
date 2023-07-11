@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Configuration used to deliver a set of custom settings as-is to all users in the targeted security group
+ */
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable {
     /**
      * List of apps to which the policy is deployed.
@@ -28,7 +31,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     private Boolean isAssigned;
     /**
-     * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
+     * Instantiates a new targetedManagedAppConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +42,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TargetedManagedAppConfiguration
+     * @return a targetedManagedAppConfiguration
      */
     @javax.annotation.Nonnull
     public static TargetedManagedAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

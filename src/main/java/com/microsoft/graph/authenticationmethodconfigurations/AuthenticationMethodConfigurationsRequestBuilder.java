@@ -64,7 +64,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     }
     /**
      * Get entities from authenticationMethodConfigurations
-     * @return a CompletableFuture of AuthenticationMethodConfigurationCollectionResponse
+     * @return a CompletableFuture of authenticationMethodConfigurationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfigurationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder extends BaseReques
     /**
      * Get entities from authenticationMethodConfigurations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationMethodConfigurationCollectionResponse
+     * @return a CompletableFuture of authenticationMethodConfigurationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

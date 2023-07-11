@@ -10,6 +10,7 @@ import com.microsoft.graph.security.incidents.IncidentsRequestBuilder;
 import com.microsoft.graph.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.security.securescores.SecureScoresRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.ThreatIntelligenceRequestBuilder;
 import com.microsoft.graph.security.triggers.TriggersRequestBuilder;
 import com.microsoft.graph.security.triggertypes.TriggerTypesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -85,6 +86,13 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SecureScoresRequestBuilder secureScores() {
         return new SecureScoresRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the threatIntelligence property of the microsoft.graph.security entity.
+     */
+    @javax.annotation.Nonnull
+    public ThreatIntelligenceRequestBuilder threatIntelligence() {
+        return new ThreatIntelligenceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the triggers property of the microsoft.graph.security entity.

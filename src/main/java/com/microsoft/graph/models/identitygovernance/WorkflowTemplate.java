@@ -48,7 +48,7 @@ public class WorkflowTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a LifecycleWorkflowCategory
+     * @return a lifecycleWorkflowCategory
      */
     @javax.annotation.Nullable
     public LifecycleWorkflowCategory getCategory() {

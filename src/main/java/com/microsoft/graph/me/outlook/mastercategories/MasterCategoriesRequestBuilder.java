@@ -64,7 +64,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the categories that have been defined for the user.
-     * @return a CompletableFuture of OutlookCategoryCollectionResponse
+     * @return a CompletableFuture of outlookCategoryCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the categories that have been defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OutlookCategoryCollectionResponse
+     * @return a CompletableFuture of outlookCategoryCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

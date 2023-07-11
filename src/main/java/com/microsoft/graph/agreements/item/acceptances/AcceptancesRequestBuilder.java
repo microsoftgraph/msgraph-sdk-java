@@ -64,7 +64,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the details about the acceptance records for a specific agreement.
-     * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
+     * @return a CompletableFuture of agreementAcceptanceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the details about the acceptance records for a specific agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
+     * @return a CompletableFuture of agreementAcceptanceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

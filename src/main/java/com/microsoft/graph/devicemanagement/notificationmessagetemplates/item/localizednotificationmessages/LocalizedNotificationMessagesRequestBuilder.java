@@ -63,9 +63,8 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}/localizedNotificationMessages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
-     * @return a CompletableFuture of LocalizedNotificationMessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of localized messages for this Notification Message Template.
+     * @return a CompletableFuture of localizedNotificationMessageCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessageCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of LocalizedNotificationMessageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of localizedNotificationMessageCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of localizedNotificationMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> post(@javax.annotation.Nonnull final LocalizedNotificationMessage body) {
@@ -122,11 +119,10 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of localizedNotificationMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-localizednotificationmessage-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> post(@javax.annotation.Nonnull final LocalizedNotificationMessage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      */
     public class GetQueryParameters {
         /**

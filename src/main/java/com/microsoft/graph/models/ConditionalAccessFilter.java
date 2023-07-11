@@ -64,7 +64,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mode property value. The mode property
-     * @return a FilterMode
+     * @return a filterMode
      */
     @javax.annotation.Nullable
     public FilterMode getMode() {

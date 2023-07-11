@@ -79,7 +79,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/device-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -99,7 +99,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/device-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -17,7 +17,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
      */
     private WorkflowExecutionTrigger trigger;
     /**
-     * Instantiates a new TriggerAndScopeBasedConditions and sets the default values.
+     * Instantiates a new triggerAndScopeBasedConditions and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -28,7 +28,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TriggerAndScopeBasedConditions
+     * @return a triggerAndScopeBasedConditions
      */
     @javax.annotation.Nonnull
     public static TriggerAndScopeBasedConditions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

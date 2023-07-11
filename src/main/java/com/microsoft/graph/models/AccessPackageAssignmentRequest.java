@@ -29,6 +29,10 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
+     * The customExtensionCalloutInstances property
+     */
+    private java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
+    /**
      * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      */
     private AccessPackageSubject requestor;
@@ -107,6 +111,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
+     * Gets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @return a customExtensionCalloutInstance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
+        return this.customExtensionCalloutInstances;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
@@ -118,6 +130,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         deserializerMap.put("assignment", (n) -> { this.setAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customExtensionCalloutInstances", (n) -> { this.setCustomExtensionCalloutInstances(n.getCollectionOfObjectValues(CustomExtensionCalloutInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
         deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(AccessPackageRequestType.class)); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(EntitlementManagementSchedule::createFromDiscriminatorValue)); });
@@ -179,6 +192,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         writer.writeObjectValue("assignment", this.getAssignment());
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeCollectionOfObjectValues("customExtensionCalloutInstances", this.getCustomExtensionCalloutInstances());
         writer.writeObjectValue("requestor", this.getRequestor());
         writer.writeEnumValue("requestType", this.getRequestType());
         writer.writeObjectValue("schedule", this.getSchedule());
@@ -229,6 +243,15 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
+    }
+    /**
+     * Sets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * @param value Value to set for the customExtensionCalloutInstances property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomExtensionCalloutInstances(@javax.annotation.Nullable final java.util.List<CustomExtensionCalloutInstance> value) {
+        this.customExtensionCalloutInstances = value;
     }
     /**
      * Sets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.

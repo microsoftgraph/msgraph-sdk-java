@@ -64,7 +64,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Another way to input protected apps through xml files
-     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a CompletableFuture of windowsInformationProtectionAppLockerFileCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFileCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Another way to input protected apps through xml files
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsInformationProtectionAppLockerFileCollectionResponse
+     * @return a CompletableFuture of windowsInformationProtectionAppLockerFileCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFileCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

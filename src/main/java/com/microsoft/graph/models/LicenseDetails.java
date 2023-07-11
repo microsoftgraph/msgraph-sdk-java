@@ -52,7 +52,7 @@ public class LicenseDetails extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
-     * @return a ServicePlanInfo
+     * @return a servicePlanInfo
      */
     @javax.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServicePlans() {

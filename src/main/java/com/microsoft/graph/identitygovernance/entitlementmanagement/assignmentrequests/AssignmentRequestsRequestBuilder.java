@@ -75,7 +75,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
-     * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagement-list-assignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
