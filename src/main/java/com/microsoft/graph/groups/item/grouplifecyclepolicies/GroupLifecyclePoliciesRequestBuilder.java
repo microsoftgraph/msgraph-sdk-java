@@ -64,7 +64,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
-     * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
+     * @return a CompletableFuture of groupLifecyclePolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
+     * @return a CompletableFuture of groupLifecyclePolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

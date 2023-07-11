@@ -63,7 +63,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get attachmentSessions from users
-     * @return a CompletableFuture of AttachmentSessionCollectionResponse
+     * @return a CompletableFuture of attachmentSessionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentSessionCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class AttachmentSessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get attachmentSessions from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AttachmentSessionCollectionResponse
+     * @return a CompletableFuture of attachmentSessionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttachmentSessionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

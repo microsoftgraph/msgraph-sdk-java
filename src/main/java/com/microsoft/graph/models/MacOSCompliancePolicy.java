@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This class contains compliance settings for Mac OS.
+ */
 public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
      * Require that devices have enabled device threat protection.
@@ -76,7 +79,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     private Boolean systemIntegrityProtectionEnabled;
     /**
-     * Instantiates a new MacOSCompliancePolicy and sets the default values.
+     * Instantiates a new macOSCompliancePolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -87,7 +90,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSCompliancePolicy
+     * @return a macOSCompliancePolicy
      */
     @javax.annotation.Nonnull
     public static MacOSCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -104,7 +107,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a DeviceThreatProtectionLevel
+     * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -234,7 +237,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {

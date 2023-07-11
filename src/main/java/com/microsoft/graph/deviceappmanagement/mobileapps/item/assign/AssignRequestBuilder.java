@@ -39,10 +39,9 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/assign", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileapp-assign?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final AssignPostRequestBody body) {
@@ -59,11 +58,10 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileapp-assign?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final AssignPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +79,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +88,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Not yet documented
+     * Invoke action assign
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

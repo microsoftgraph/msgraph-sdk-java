@@ -12,7 +12,7 @@ public class ComplianceManagementPartnerCollectionResponse extends BaseCollectio
      */
     private java.util.List<ComplianceManagementPartner> value;
     /**
-     * Instantiates a new ComplianceManagementPartnerCollectionResponse and sets the default values.
+     * Instantiates a new complianceManagementPartnerCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ComplianceManagementPartnerCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComplianceManagementPartnerCollectionResponse
+     * @return a complianceManagementPartnerCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ComplianceManagementPartnerCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

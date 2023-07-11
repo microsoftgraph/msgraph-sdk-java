@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for the macOS LOB App.
+ */
 public class MacOSLobApp extends MobileLobApp implements Parsable {
     /**
      * The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file.
@@ -44,7 +47,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      */
     private String versionNumber;
     /**
-     * Instantiates a new MacOSLobApp and sets the default values.
+     * Instantiates a new macOSLobApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -55,7 +58,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSLobApp
+     * @return a macOSLobApp
      */
     @javax.annotation.Nonnull
     public static MacOSLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

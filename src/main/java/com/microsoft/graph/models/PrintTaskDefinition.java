@@ -39,7 +39,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a AppIdentity
+     * @return a appIdentity
      */
     @javax.annotation.Nullable
     public AppIdentity getCreatedBy() {

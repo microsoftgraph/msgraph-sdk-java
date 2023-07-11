@@ -64,7 +64,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of additional sources associated with an eDiscovery search.
-     * @return a CompletableFuture of DataSourceCollectionResponse
+     * @return a CompletableFuture of dataSourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DataSourceCollectionResponse
+     * @return a CompletableFuture of dataSourceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

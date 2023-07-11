@@ -4,9 +4,9 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum ValueType implements ValuedEnum {
-    EnumEscaped("enum"),
+    Enum("enum"),
     String("string"),
-    IntEscaped("int"),
+    Int("int"),
     Bool("bool"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -19,9 +19,9 @@ public enum ValueType implements ValuedEnum {
     public static ValueType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "enum": return EnumEscaped;
+            case "enum": return Enum;
             case "string": return String;
-            case "int": return IntEscaped;
+            case "int": return Int;
             case "bool": return Bool;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

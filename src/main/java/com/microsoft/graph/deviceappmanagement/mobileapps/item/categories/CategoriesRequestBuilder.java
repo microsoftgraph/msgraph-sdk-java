@@ -63,7 +63,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of categories for this app.
-     * @return a CompletableFuture of MobileAppCategoryCollectionResponse
+     * @return a CompletableFuture of mobileAppCategoryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of categories for this app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppCategoryCollectionResponse
+     * @return a CompletableFuture of mobileAppCategoryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

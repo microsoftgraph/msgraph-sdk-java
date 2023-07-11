@@ -12,7 +12,7 @@ public class HomeRealmDiscoveryPolicyCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<HomeRealmDiscoveryPolicy> value;
     /**
-     * Instantiates a new HomeRealmDiscoveryPolicyCollectionResponse and sets the default values.
+     * Instantiates a new homeRealmDiscoveryPolicyCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class HomeRealmDiscoveryPolicyCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HomeRealmDiscoveryPolicyCollectionResponse
+     * @return a homeRealmDiscoveryPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public static HomeRealmDiscoveryPolicyCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

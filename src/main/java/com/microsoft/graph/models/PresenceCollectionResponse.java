@@ -12,7 +12,7 @@ public class PresenceCollectionResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<Presence> value;
     /**
-     * Instantiates a new PresenceCollectionResponse and sets the default values.
+     * Instantiates a new presenceCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class PresenceCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PresenceCollectionResponse
+     * @return a presenceCollectionResponse
      */
     @javax.annotation.Nonnull
     public static PresenceCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

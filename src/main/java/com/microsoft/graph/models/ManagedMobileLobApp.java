@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * An abstract base class containing properties for all managed mobile line of business apps.
+ */
 public class ManagedMobileLobApp extends ManagedApp implements Parsable {
     /**
      * The internal committed content version.
@@ -24,7 +27,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
      */
     private Long size;
     /**
-     * Instantiates a new ManagedMobileLobApp and sets the default values.
+     * Instantiates a new managedMobileLobApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +38,7 @@ public class ManagedMobileLobApp extends ManagedApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedMobileLobApp
+     * @return a managedMobileLobApp
      */
     @javax.annotation.Nonnull
     public static ManagedMobileLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

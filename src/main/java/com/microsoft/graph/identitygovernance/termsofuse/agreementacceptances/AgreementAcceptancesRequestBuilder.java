@@ -64,7 +64,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the current status of a user's response to a company's customizable terms of use agreement.
-     * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
+     * @return a CompletableFuture of agreementAcceptanceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the current status of a user's response to a company's customizable terms of use agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementAcceptanceCollectionResponse
+     * @return a CompletableFuture of agreementAcceptanceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementAcceptanceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

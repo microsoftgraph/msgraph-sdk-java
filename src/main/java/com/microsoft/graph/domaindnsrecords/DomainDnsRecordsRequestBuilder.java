@@ -64,7 +64,7 @@ public class DomainDnsRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from domainDnsRecords
-     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
+     * @return a CompletableFuture of domainDnsRecordCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecordCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class DomainDnsRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from domainDnsRecords
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DomainDnsRecordCollectionResponse
+     * @return a CompletableFuture of domainDnsRecordCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainDnsRecordCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

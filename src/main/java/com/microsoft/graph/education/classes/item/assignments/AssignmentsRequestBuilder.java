@@ -72,7 +72,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of assignment objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
-     * @return a CompletableFuture of EducationAssignmentCollectionResponse
+     * @return a CompletableFuture of educationAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of assignment objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationAssignmentCollectionResponse
+     * @return a CompletableFuture of educationAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

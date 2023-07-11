@@ -39,9 +39,8 @@ public class SyncDeviceRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/syncDevice", rawUrl);
     }
     /**
-     * Not yet documented
+     * Invoke action syncDevice
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-syncdevice?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +57,9 @@ public class SyncDeviceRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Not yet documented
+     * Invoke action syncDevice
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-manageddevice-syncdevice?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +76,7 @@ public class SyncDeviceRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Not yet documented
+     * Invoke action syncDevice
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +84,7 @@ public class SyncDeviceRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Not yet documented
+     * Invoke action syncDevice
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

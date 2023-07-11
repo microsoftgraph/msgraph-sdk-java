@@ -28,7 +28,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      */
     private java.util.List<IdentityProviderBase> userFlowIdentityProviders;
     /**
-     * Instantiates a new B2xIdentityUserFlow and sets the default values.
+     * Instantiates a new b2xIdentityUserFlow and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -38,7 +38,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a B2xIdentityUserFlow
+     * @return a b2xIdentityUserFlow
      */
     @javax.annotation.Nonnull
     public static B2xIdentityUserFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

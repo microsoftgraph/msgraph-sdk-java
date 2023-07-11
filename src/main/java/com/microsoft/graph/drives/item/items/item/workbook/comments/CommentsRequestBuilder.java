@@ -64,7 +64,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents a collection of comments in a workbook.
-     * @return a CompletableFuture of WorkbookCommentCollectionResponse
+     * @return a CompletableFuture of workbookCommentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents a collection of comments in a workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookCommentCollectionResponse
+     * @return a CompletableFuture of workbookCommentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

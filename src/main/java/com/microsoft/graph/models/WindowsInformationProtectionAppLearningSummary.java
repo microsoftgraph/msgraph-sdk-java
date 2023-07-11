@@ -50,7 +50,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
     }
     /**
      * Gets the applicationType property value. Possible types of Application
-     * @return a ApplicationType
+     * @return a applicationType
      */
     @javax.annotation.Nullable
     public ApplicationType getApplicationType() {

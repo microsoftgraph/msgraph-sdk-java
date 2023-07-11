@@ -49,7 +49,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     private DateTimeTimeZone reminderFireTime;
     /**
-     * Instantiates a new Reminder and sets the default values.
+     * Instantiates a new reminder and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Reminder
+     * @return a reminder
      */
     @javax.annotation.Nonnull
     public static Reminder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

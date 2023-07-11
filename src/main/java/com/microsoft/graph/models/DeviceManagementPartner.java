@@ -117,7 +117,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the partnerAppType property value. Partner App Type.
-     * @return a DeviceManagementPartnerAppType
+     * @return a deviceManagementPartnerAppType
      */
     @javax.annotation.Nullable
     public DeviceManagementPartnerAppType getPartnerAppType() {
@@ -125,7 +125,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a DeviceManagementPartnerTenantState
+     * @return a deviceManagementPartnerTenantState
      */
     @javax.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {

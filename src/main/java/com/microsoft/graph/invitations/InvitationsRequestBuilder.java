@@ -64,7 +64,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from invitations
-     * @return a CompletableFuture of InvitationCollectionResponse
+     * @return a CompletableFuture of invitationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InvitationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class InvitationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from invitations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InvitationCollectionResponse
+     * @return a CompletableFuture of invitationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InvitationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

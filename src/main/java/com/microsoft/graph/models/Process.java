@@ -66,7 +66,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      */
     private Integer processId;
     /**
-     * Instantiates a new Process and sets the default values.
+     * Instantiates a new process and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class Process implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Process
+     * @return a process
      */
     @javax.annotation.Nonnull
     public static Process createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

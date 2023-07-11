@@ -50,7 +50,7 @@ public class GraphRoomRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.room in the microsoft.graph.place collection
-     * @return a CompletableFuture of RoomCollectionResponse
+     * @return a CompletableFuture of roomCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoomCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GraphRoomRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.room in the microsoft.graph.place collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoomCollectionResponse
+     * @return a CompletableFuture of roomCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoomCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

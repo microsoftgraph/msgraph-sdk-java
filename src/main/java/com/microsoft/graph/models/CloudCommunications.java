@@ -34,7 +34,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<Presence> presences;
     /**
-     * Instantiates a new CloudCommunications and sets the default values.
+     * Instantiates a new cloudCommunications and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -44,7 +44,7 @@ public class CloudCommunications implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudCommunications
+     * @return a cloudCommunications
      */
     @javax.annotation.Nonnull
     public static CloudCommunications createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

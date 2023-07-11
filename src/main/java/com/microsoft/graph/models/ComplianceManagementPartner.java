@@ -149,7 +149,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     }
     /**
      * Gets the partnerState property value. Partner state of this tenant.
-     * @return a DeviceManagementPartnerTenantState
+     * @return a deviceManagementPartnerTenantState
      */
     @javax.annotation.Nullable
     public DeviceManagementPartnerTenantState getPartnerState() {

@@ -63,7 +63,7 @@ public class BaseTypesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of content types that are ancestors of this content type.
-     * @return a CompletableFuture of ContentTypeCollectionResponse
+     * @return a CompletableFuture of contentTypeCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentTypeCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class BaseTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of content types that are ancestors of this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContentTypeCollectionResponse
+     * @return a CompletableFuture of contentTypeCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentTypeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -64,7 +64,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of tenant-level or group-specific group settings objects.
-     * @return a CompletableFuture of GroupSettingCollectionResponse
+     * @return a CompletableFuture of groupSettingCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tenant-level or group-specific group settings objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of GroupSettingCollectionResponse
+     * @return a CompletableFuture of groupSettingCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

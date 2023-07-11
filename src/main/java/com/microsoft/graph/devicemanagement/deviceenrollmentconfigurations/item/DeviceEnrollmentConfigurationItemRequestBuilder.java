@@ -65,9 +65,8 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -84,10 +83,9 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -104,9 +102,8 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * The list of device enrollment configurations
      * @return a CompletableFuture of deviceEnrollmentConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> get() {
@@ -123,10 +120,9 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * The list of device enrollment configurations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceEnrollmentConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -143,10 +139,9 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceEnrollmentConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@javax.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
@@ -163,11 +158,10 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceEnrollmentConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@javax.annotation.Nonnull final DeviceEnrollmentConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -185,7 +179,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -193,7 +187,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -212,7 +206,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * The list of device enrollment configurations
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +214,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * The list of device enrollment configurations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -241,7 +235,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -250,7 +244,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -278,7 +272,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * The list of device enrollment configurations
      */
     public class GetQueryParameters {
         /**

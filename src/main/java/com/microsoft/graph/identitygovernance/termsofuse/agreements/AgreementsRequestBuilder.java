@@ -64,7 +64,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of agreement objects.
-     * @return a CompletableFuture of AgreementCollectionResponse
+     * @return a CompletableFuture of agreementCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of agreement objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementCollectionResponse
+     * @return a CompletableFuture of agreementCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

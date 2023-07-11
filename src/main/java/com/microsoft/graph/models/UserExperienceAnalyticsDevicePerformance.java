@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The user experience analytics device performance entity contains device boot performance details.
+ */
 public class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable {
     /**
      * Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
@@ -88,7 +91,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      */
     private Double startupPerformanceScore;
     /**
-     * Instantiates a new UserExperienceAnalyticsDevicePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDevicePerformance and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -98,7 +101,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDevicePerformance
+     * @return a userExperienceAnalyticsDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -171,7 +174,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the diskType property value. The diskType property
-     * @return a DiskType
+     * @return a diskType
      */
     @javax.annotation.Nullable
     public DiskType getDiskType() {
@@ -224,7 +227,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a UserExperienceAnalyticsHealthState
+     * @return a userExperienceAnalyticsHealthState
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {

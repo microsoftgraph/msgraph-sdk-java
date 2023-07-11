@@ -64,7 +64,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from connections
-     * @return a CompletableFuture of ExternalConnectionCollectionResponse
+     * @return a CompletableFuture of externalConnectionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnectionCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalConnectionCollectionResponse
+     * @return a CompletableFuture of externalConnectionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

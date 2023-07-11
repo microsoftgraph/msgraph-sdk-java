@@ -55,7 +55,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     * @return a NotificationTemplateBrandingOptions
+     * @return a notificationTemplateBrandingOptions
      */
     @javax.annotation.Nullable
     public NotificationTemplateBrandingOptions getBrandingOptions() {

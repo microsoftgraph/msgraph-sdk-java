@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Windows Hello for Business settings lets users access their devices using a gesture, such as biometric authentication, or a PIN. Configure settings for enrolled Windows 10, Windows 10 Mobile and later.
+ */
 public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
      * Possible values of a property
@@ -56,7 +59,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      */
     private Boolean unlockWithBiometricsEnabled;
     /**
-     * Instantiates a new DeviceEnrollmentWindowsHelloForBusinessConfiguration and sets the default values.
+     * Instantiates a new deviceEnrollmentWindowsHelloForBusinessConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -67,7 +70,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceEnrollmentWindowsHelloForBusinessConfiguration
+     * @return a deviceEnrollmentWindowsHelloForBusinessConfiguration
      */
     @javax.annotation.Nonnull
     public static DeviceEnrollmentWindowsHelloForBusinessConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +79,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     }
     /**
      * Gets the enhancedBiometricsState property value. Possible values of a property
-     * @return a Enablement
+     * @return a enablement
      */
     @javax.annotation.Nullable
     public Enablement getEnhancedBiometricsState() {
@@ -113,7 +116,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     }
     /**
      * Gets the pinLowercaseCharactersUsage property value. Windows Hello for Business pin usage options
-     * @return a WindowsHelloForBusinessPinUsage
+     * @return a windowsHelloForBusinessPinUsage
      */
     @javax.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinLowercaseCharactersUsage() {
@@ -145,7 +148,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     }
     /**
      * Gets the pinSpecialCharactersUsage property value. Windows Hello for Business pin usage options
-     * @return a WindowsHelloForBusinessPinUsage
+     * @return a windowsHelloForBusinessPinUsage
      */
     @javax.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinSpecialCharactersUsage() {
@@ -153,7 +156,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     }
     /**
      * Gets the pinUppercaseCharactersUsage property value. Windows Hello for Business pin usage options
-     * @return a WindowsHelloForBusinessPinUsage
+     * @return a windowsHelloForBusinessPinUsage
      */
     @javax.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinUppercaseCharactersUsage() {
@@ -177,7 +180,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     }
     /**
      * Gets the state property value. Possible values of a property
-     * @return a Enablement
+     * @return a enablement
      */
     @javax.annotation.Nullable
     public Enablement getState() {

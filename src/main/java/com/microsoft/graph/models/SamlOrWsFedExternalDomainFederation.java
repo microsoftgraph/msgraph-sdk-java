@@ -12,7 +12,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      */
     private java.util.List<ExternalDomainName> domains;
     /**
-     * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.
+     * Instantiates a new samlOrWsFedExternalDomainFederation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SamlOrWsFedExternalDomainFederation
+     * @return a samlOrWsFedExternalDomainFederation
      */
     @javax.annotation.Nonnull
     public static SamlOrWsFedExternalDomainFederation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

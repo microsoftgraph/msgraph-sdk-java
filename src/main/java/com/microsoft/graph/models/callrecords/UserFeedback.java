@@ -77,7 +77,7 @@ public class UserFeedback implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the rating property value. The rating property
-     * @return a UserFeedbackRating
+     * @return a userFeedbackRating
      */
     @javax.annotation.Nullable
     public UserFeedbackRating getRating() {

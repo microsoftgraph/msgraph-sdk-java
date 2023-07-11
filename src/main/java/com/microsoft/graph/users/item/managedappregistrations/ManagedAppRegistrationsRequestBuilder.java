@@ -63,7 +63,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Zero or more managed app registrations that belong to the user.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
+     * @return a CompletableFuture of managedAppRegistrationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Zero or more managed app registrations that belong to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
+     * @return a CompletableFuture of managedAppRegistrationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

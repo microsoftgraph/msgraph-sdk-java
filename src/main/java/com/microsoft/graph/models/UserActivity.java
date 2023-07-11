@@ -211,7 +211,7 @@ public class UserActivity extends Entity implements Parsable {
     }
     /**
      * Gets the visualElements property value. The visualElements property
-     * @return a VisualInfo
+     * @return a visualInfo
      */
     @javax.annotation.Nullable
     public VisualInfo getVisualElements() {

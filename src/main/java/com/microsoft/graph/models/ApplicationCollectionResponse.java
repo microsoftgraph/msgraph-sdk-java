@@ -12,7 +12,7 @@ public class ApplicationCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<Application> value;
     /**
-     * Instantiates a new ApplicationCollectionResponse and sets the default values.
+     * Instantiates a new applicationCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ApplicationCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ApplicationCollectionResponse
+     * @return a applicationCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ApplicationCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

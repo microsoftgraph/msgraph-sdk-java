@@ -83,7 +83,7 @@ public class WindowsInformationProtectionIPRangeCollection implements Additional
     }
     /**
      * Gets the ranges property value. Collection of ip ranges
-     * @return a IpRange
+     * @return a ipRange
      */
     @javax.annotation.Nullable
     public java.util.List<IpRange> getRanges() {

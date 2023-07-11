@@ -155,7 +155,7 @@ public class BookingService extends Entity implements Parsable {
     }
     /**
      * Gets the defaultPriceType property value. Represents the type of pricing of a booking service.
-     * @return a BookingPriceType
+     * @return a bookingPriceType
      */
     @javax.annotation.Nullable
     public BookingPriceType getDefaultPriceType() {

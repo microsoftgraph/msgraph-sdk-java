@@ -72,7 +72,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
-     * @return a ConditionalAccessGrantControl
+     * @return a conditionalAccessGrantControl
      */
     @javax.annotation.Nullable
     public java.util.List<ConditionalAccessGrantControl> getBuiltInControls() {

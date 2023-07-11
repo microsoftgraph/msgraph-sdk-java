@@ -41,9 +41,8 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/deviceStatuses/{deviceConfigurationDeviceStatus%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a deviceConfigurationDeviceStatus.
+     * Delete navigation property deviceStatuses for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -60,10 +59,9 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Deletes a deviceConfigurationDeviceStatus.
+     * Delete navigation property deviceStatuses for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -80,9 +78,8 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStatus object.
+     * Device configuration installation status by device.
      * @return a CompletableFuture of deviceConfigurationDeviceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> get() {
@@ -99,10 +96,9 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStatus object.
+     * Device configuration installation status by device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfigurationDeviceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +115,9 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStatus object.
+     * Update the navigation property deviceStatuses in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceConfigurationDeviceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> patch(@javax.annotation.Nonnull final DeviceConfigurationDeviceStatus body) {
@@ -139,11 +134,10 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStatus object.
+     * Update the navigation property deviceStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfigurationDeviceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> patch(@javax.annotation.Nonnull final DeviceConfigurationDeviceStatus body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +155,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         }
     }
     /**
-     * Deletes a deviceConfigurationDeviceStatus.
+     * Delete navigation property deviceStatuses for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +163,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceConfigurationDeviceStatus.
+     * Delete navigation property deviceStatuses for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +182,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStatus object.
+     * Device configuration installation status by device.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +190,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStatus object.
+     * Device configuration installation status by device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +211,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStatus object.
+     * Update the navigation property deviceStatuses in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +220,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStatus object.
+     * Update the navigation property deviceStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +248,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStatus object.
+     * Device configuration installation status by device.
      */
     public class GetQueryParameters {
         /**

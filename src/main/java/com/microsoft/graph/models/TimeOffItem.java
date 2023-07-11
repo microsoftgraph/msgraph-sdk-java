@@ -12,7 +12,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
      */
     private String timeOffReasonId;
     /**
-     * Instantiates a new TimeOffItem and sets the default values.
+     * Instantiates a new timeOffItem and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class TimeOffItem extends ScheduleEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeOffItem
+     * @return a timeOffItem
      */
     @javax.annotation.Nonnull
     public static TimeOffItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

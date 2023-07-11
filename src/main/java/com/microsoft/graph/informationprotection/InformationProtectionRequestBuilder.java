@@ -58,7 +58,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get informationProtection
-     * @return a CompletableFuture of InformationProtection
+     * @return a CompletableFuture of informationProtection
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> get() {
@@ -77,7 +77,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Get informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InformationProtection
+     * @return a CompletableFuture of informationProtection
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -96,7 +96,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Update informationProtection
      * @param body The request body
-     * @return a CompletableFuture of InformationProtection
+     * @return a CompletableFuture of informationProtection
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> patch(@javax.annotation.Nonnull final InformationProtection body) {
@@ -116,7 +116,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Update informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InformationProtection
+     * @return a CompletableFuture of informationProtection
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtection> patch(@javax.annotation.Nonnull final InformationProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

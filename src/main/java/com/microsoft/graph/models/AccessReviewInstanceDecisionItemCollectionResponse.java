@@ -12,7 +12,7 @@ public class AccessReviewInstanceDecisionItemCollectionResponse extends BaseColl
      */
     private java.util.List<AccessReviewInstanceDecisionItem> value;
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemCollectionResponse and sets the default values.
+     * Instantiates a new accessReviewInstanceDecisionItemCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AccessReviewInstanceDecisionItemCollectionResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstanceDecisionItemCollectionResponse
+     * @return a accessReviewInstanceDecisionItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

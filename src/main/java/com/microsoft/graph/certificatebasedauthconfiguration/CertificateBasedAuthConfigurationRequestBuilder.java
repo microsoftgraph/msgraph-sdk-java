@@ -64,7 +64,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     }
     /**
      * Get entities from certificateBasedAuthConfiguration
-     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
+     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     /**
      * Get entities from certificateBasedAuthConfiguration
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CertificateBasedAuthConfigurationCollectionResponse
+     * @return a CompletableFuture of certificateBasedAuthConfigurationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

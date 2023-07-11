@@ -12,7 +12,7 @@ public class NamedLocationCollectionResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<NamedLocation> value;
     /**
-     * Instantiates a new NamedLocationCollectionResponse and sets the default values.
+     * Instantiates a new namedLocationCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class NamedLocationCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NamedLocationCollectionResponse
+     * @return a namedLocationCollectionResponse
      */
     @javax.annotation.Nonnull
     public static NamedLocationCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

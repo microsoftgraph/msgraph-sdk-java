@@ -50,7 +50,7 @@ public class GraphServicePrincipalRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.servicePrincipal in the microsoft.graph.directoryObject collection
-     * @return a CompletableFuture of ServicePrincipalCollectionResponse
+     * @return a CompletableFuture of servicePrincipalCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GraphServicePrincipalRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.servicePrincipal in the microsoft.graph.directoryObject collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ServicePrincipalCollectionResponse
+     * @return a CompletableFuture of servicePrincipalCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

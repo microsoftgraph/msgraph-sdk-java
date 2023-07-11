@@ -66,7 +66,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get admin
-     * @return a CompletableFuture of Admin
+     * @return a CompletableFuture of admin
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> get() {
@@ -85,7 +85,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     /**
      * Get admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Admin
+     * @return a CompletableFuture of admin
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     /**
      * Update admin
      * @param body The request body
-     * @return a CompletableFuture of Admin
+     * @return a CompletableFuture of admin
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> patch(@javax.annotation.Nonnull final Admin body) {
@@ -124,7 +124,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
      * Update admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Admin
+     * @return a CompletableFuture of admin
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Admin> patch(@javax.annotation.Nonnull final Admin body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

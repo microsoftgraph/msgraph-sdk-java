@@ -56,7 +56,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from agreements
-     * @return a CompletableFuture of AgreementCollectionResponse
+     * @return a CompletableFuture of agreementCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get() {
@@ -75,7 +75,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from agreements
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AgreementCollectionResponse
+     * @return a CompletableFuture of agreementCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

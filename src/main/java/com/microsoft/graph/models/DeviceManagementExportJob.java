@@ -106,7 +106,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Possible values for the file format of a report
-     * @return a DeviceManagementReportFileFormat
+     * @return a deviceManagementReportFileFormat
      */
     @javax.annotation.Nullable
     public DeviceManagementReportFileFormat getFormat() {
@@ -114,7 +114,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the localizationType property value. Configures how the requested export job is localized
-     * @return a DeviceManagementExportJobLocalizationType
+     * @return a deviceManagementExportJobLocalizationType
      */
     @javax.annotation.Nullable
     public DeviceManagementExportJobLocalizationType getLocalizationType() {
@@ -154,7 +154,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Possible statuses associated with a generated report
-     * @return a DeviceManagementReportStatus
+     * @return a deviceManagementReportStatus
      */
     @javax.annotation.Nullable
     public DeviceManagementReportStatus getStatus() {

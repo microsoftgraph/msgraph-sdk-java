@@ -101,7 +101,7 @@ public class AnswerPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mediaConfig property value. The mediaConfig property
-     * @return a MediaConfig
+     * @return a mediaConfig
      */
     @javax.annotation.Nullable
     public MediaConfig getMediaConfig() {

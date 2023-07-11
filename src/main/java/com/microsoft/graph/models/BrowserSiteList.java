@@ -162,7 +162,7 @@ public class BrowserSiteList extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a BrowserSiteListStatus
+     * @return a browserSiteListStatus
      */
     @javax.annotation.Nullable
     public BrowserSiteListStatus getStatus() {

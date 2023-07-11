@@ -64,7 +64,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of all partner configurations within a cross-tenant access policy. You can also use the `$expand` parameter to list the user synchronization policy for all partner configurations.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartnerCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of all partner configurations within a cross-tenant access policy. You can also use the `$expand` parameter to list the user synchronization policy for all partner configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartnerCollectionResponse
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartnerCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -104,7 +104,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new partner configuration in a cross-tenant access policy.
      * @param body The request body
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-post-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -125,7 +125,7 @@ public class PartnersRequestBuilder extends BaseRequestBuilder {
      * Create a new partner configuration in a cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CrossTenantAccessPolicyConfigurationPartner
+     * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
      * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-post-partners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

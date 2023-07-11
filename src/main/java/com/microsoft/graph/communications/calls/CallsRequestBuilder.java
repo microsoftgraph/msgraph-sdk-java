@@ -72,7 +72,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a call object.
-     * @return a CompletableFuture of CallCollectionResponse
+     * @return a CompletableFuture of callCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallCollectionResponse> get() {
@@ -91,7 +91,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CallCollectionResponse
+     * @return a CompletableFuture of callCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

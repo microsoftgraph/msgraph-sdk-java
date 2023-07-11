@@ -16,7 +16,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     private EducationFeedbackResourceOutcomeStatus resourceStatus;
     /**
-     * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
+     * Instantiates a new educationFeedbackResourceOutcome and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationFeedbackResourceOutcome
+     * @return a educationFeedbackResourceOutcome
      */
     @javax.annotation.Nonnull
     public static EducationFeedbackResourceOutcome createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

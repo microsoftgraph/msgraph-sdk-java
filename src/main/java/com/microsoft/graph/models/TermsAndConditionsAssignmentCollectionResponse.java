@@ -12,7 +12,7 @@ public class TermsAndConditionsAssignmentCollectionResponse extends BaseCollecti
      */
     private java.util.List<TermsAndConditionsAssignment> value;
     /**
-     * Instantiates a new TermsAndConditionsAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new termsAndConditionsAssignmentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class TermsAndConditionsAssignmentCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermsAndConditionsAssignmentCollectionResponse
+     * @return a termsAndConditionsAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static TermsAndConditionsAssignmentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

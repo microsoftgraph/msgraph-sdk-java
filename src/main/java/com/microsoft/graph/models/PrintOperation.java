@@ -62,7 +62,7 @@ public class PrintOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a PrintOperationStatus
+     * @return a printOperationStatus
      */
     @javax.annotation.Nullable
     public PrintOperationStatus getStatus() {

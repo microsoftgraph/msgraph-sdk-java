@@ -51,7 +51,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     }
     /**
      * Gets the dataType property value. The dataType property
-     * @return a IdentityUserFlowAttributeDataType
+     * @return a identityUserFlowAttributeDataType
      */
     @javax.annotation.Nullable
     public IdentityUserFlowAttributeDataType getDataType() {
@@ -88,7 +88,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     }
     /**
      * Gets the userFlowAttributeType property value. The userFlowAttributeType property
-     * @return a IdentityUserFlowAttributeType
+     * @return a identityUserFlowAttributeType
      */
     @javax.annotation.Nullable
     public IdentityUserFlowAttributeType getUserFlowAttributeType() {

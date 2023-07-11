@@ -8,23 +8,23 @@ import java.util.Map;
 import java.util.Objects;
 public class SynchronizationJob extends Entity implements Parsable {
     /**
-     * The schedule property
+     * Schedule used to run the job. Read-only.
      */
     private SynchronizationSchedule schedule;
     /**
-     * The schema property
+     * The synchronization schema configured for the job.
      */
     private SynchronizationSchema schema;
     /**
-     * The status property
+     * Status of the job, which includes when the job was last run, current job state, and errors.
      */
     private SynchronizationStatus status;
     /**
-     * The synchronizationJobSettings property
+     * Settings associated with the job. Some settings are inherited from the template.
      */
     private java.util.List<KeyValuePair> synchronizationJobSettings;
     /**
-     * The templateId property
+     * Identifier of the synchronization template this job is based on.
      */
     private String templateId;
     /**
@@ -60,7 +60,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the schedule property value. The schedule property
+     * Gets the schedule property value. Schedule used to run the job. Read-only.
      * @return a synchronizationSchedule
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         return this.schedule;
     }
     /**
-     * Gets the schema property value. The schema property
+     * Gets the schema property value. The synchronization schema configured for the job.
      * @return a synchronizationSchema
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         return this.schema;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
      * @return a synchronizationStatus
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         return this.status;
     }
     /**
-     * Gets the synchronizationJobSettings property value. The synchronizationJobSettings property
+     * Gets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
      * @return a keyValuePair
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         return this.synchronizationJobSettings;
     }
     /**
-     * Gets the templateId property value. The templateId property
+     * Gets the templateId property value. Identifier of the synchronization template this job is based on.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         writer.writeStringValue("templateId", this.getTemplateId());
     }
     /**
-     * Sets the schedule property value. The schedule property
+     * Sets the schedule property value. Schedule used to run the job. Read-only.
      * @param value Value to set for the schedule property.
      * @return a void
      */
@@ -124,7 +124,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         this.schedule = value;
     }
     /**
-     * Sets the schema property value. The schema property
+     * Sets the schema property value. The synchronization schema configured for the job.
      * @param value Value to set for the schema property.
      * @return a void
      */
@@ -133,7 +133,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         this.schema = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the job, which includes when the job was last run, current job state, and errors.
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         this.status = value;
     }
     /**
-     * Sets the synchronizationJobSettings property value. The synchronizationJobSettings property
+     * Sets the synchronizationJobSettings property value. Settings associated with the job. Some settings are inherited from the template.
      * @param value Value to set for the synchronizationJobSettings property.
      * @return a void
      */
@@ -151,7 +151,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         this.synchronizationJobSettings = value;
     }
     /**
-     * Sets the templateId property value. The templateId property
+     * Sets the templateId property value. Identifier of the synchronization template this job is based on.
      * @param value Value to set for the templateId property.
      * @return a void
      */

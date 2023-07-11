@@ -75,7 +75,7 @@ public class IosHomeScreenPage implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the icons property value. A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
-     * @return a IosHomeScreenItem
+     * @return a iosHomeScreenItem
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getIcons() {

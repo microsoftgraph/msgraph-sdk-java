@@ -98,7 +98,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a LifecycleWorkflowCategory
+     * @return a lifecycleWorkflowCategory
      */
     @javax.annotation.Nullable
     public LifecycleWorkflowCategory getCategory() {

@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for Android Line Of Business apps.
+ */
 public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * The value for the minimum applicable operating system.
@@ -24,7 +27,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     private String versionName;
     /**
-     * Instantiates a new AndroidLobApp and sets the default values.
+     * Instantiates a new androidLobApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +38,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidLobApp
+     * @return a androidLobApp
      */
     @javax.annotation.Nonnull
     public static AndroidLobApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

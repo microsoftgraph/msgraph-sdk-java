@@ -90,7 +90,7 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get print
-     * @return a CompletableFuture of Print
+     * @return a CompletableFuture of print
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Print> get() {
@@ -109,7 +109,7 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
     /**
      * Get print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Print
+     * @return a CompletableFuture of print
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Print> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
     /**
      * Update print
      * @param body The request body
-     * @return a CompletableFuture of Print
+     * @return a CompletableFuture of print
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Print> patch(@javax.annotation.Nonnull final Print body) {
@@ -148,7 +148,7 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
      * Update print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Print
+     * @return a CompletableFuture of print
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Print> patch(@javax.annotation.Nonnull final Print body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

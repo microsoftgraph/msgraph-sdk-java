@@ -16,7 +16,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
      */
     private String participantId;
     /**
-     * Instantiates a new ParticipantLeftNotification and sets the default values.
+     * Instantiates a new participantLeftNotification and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +26,7 @@ public class ParticipantLeftNotification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ParticipantLeftNotification
+     * @return a participantLeftNotification
      */
     @javax.annotation.Nonnull
     public static ParticipantLeftNotification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

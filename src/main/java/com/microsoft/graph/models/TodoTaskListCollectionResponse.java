@@ -12,7 +12,7 @@ public class TodoTaskListCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<TodoTaskList> value;
     /**
-     * Instantiates a new TodoTaskListCollectionResponse and sets the default values.
+     * Instantiates a new todoTaskListCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class TodoTaskListCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TodoTaskListCollectionResponse
+     * @return a todoTaskListCollectionResponse
      */
     @javax.annotation.Nonnull
     public static TodoTaskListCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

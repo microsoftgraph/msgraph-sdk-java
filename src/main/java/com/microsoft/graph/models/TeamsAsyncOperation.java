@@ -109,7 +109,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a TeamsAsyncOperationType
+     * @return a teamsAsyncOperationType
      */
     @javax.annotation.Nullable
     public TeamsAsyncOperationType getOperationType() {
@@ -117,7 +117,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a TeamsAsyncOperationStatus
+     * @return a teamsAsyncOperationStatus
      */
     @javax.annotation.Nullable
     public TeamsAsyncOperationStatus getStatus() {

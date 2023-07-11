@@ -36,11 +36,27 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     private java.util.List<ConnectedOrganization> connectedOrganizations;
     /**
+     * The resourceEnvironments property
+     */
+    private java.util.List<AccessPackageResourceEnvironment> resourceEnvironments;
+    /**
+     * The resourceRequests property
+     */
+    private java.util.List<AccessPackageResourceRequest> resourceRequests;
+    /**
+     * The resourceRoleScopes property
+     */
+    private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
+    /**
+     * The resources property
+     */
+    private java.util.List<AccessPackageResource> resources;
+    /**
      * The settings that control the behavior of Azure AD entitlement management.
      */
     private EntitlementManagementSettings settings;
     /**
-     * Instantiates a new EntitlementManagement and sets the default values.
+     * Instantiates a new entitlementManagement and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -50,7 +66,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EntitlementManagement
+     * @return a entitlementManagement
      */
     @javax.annotation.Nonnull
     public static EntitlementManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -127,8 +143,44 @@ public class EntitlementManagement extends Entity implements Parsable {
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("catalogs", (n) -> { this.setCatalogs(n.getCollectionOfObjectValues(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("connectedOrganizations", (n) -> { this.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceEnvironments", (n) -> { this.setResourceEnvironments(n.getCollectionOfObjectValues(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceRequests", (n) -> { this.setResourceRequests(n.getCollectionOfObjectValues(AccessPackageResourceRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceRoleScopes", (n) -> { this.setResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the resourceEnvironments property value. The resourceEnvironments property
+     * @return a accessPackageResourceEnvironment
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResourceEnvironment> getResourceEnvironments() {
+        return this.resourceEnvironments;
+    }
+    /**
+     * Gets the resourceRequests property value. The resourceRequests property
+     * @return a accessPackageResourceRequest
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResourceRequest> getResourceRequests() {
+        return this.resourceRequests;
+    }
+    /**
+     * Gets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @return a accessPackageResourceRoleScope
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResourceRoleScope> getResourceRoleScopes() {
+        return this.resourceRoleScopes;
+    }
+    /**
+     * Gets the resources property value. The resources property
+     * @return a accessPackageResource
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResource> getResources() {
+        return this.resources;
     }
     /**
      * Gets the settings property value. The settings that control the behavior of Azure AD entitlement management.
@@ -154,6 +206,10 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeCollectionOfObjectValues("catalogs", this.getCatalogs());
         writer.writeCollectionOfObjectValues("connectedOrganizations", this.getConnectedOrganizations());
+        writer.writeCollectionOfObjectValues("resourceEnvironments", this.getResourceEnvironments());
+        writer.writeCollectionOfObjectValues("resourceRequests", this.getResourceRequests());
+        writer.writeCollectionOfObjectValues("resourceRoleScopes", this.getResourceRoleScopes());
+        writer.writeCollectionOfObjectValues("resources", this.getResources());
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
@@ -218,6 +274,42 @@ public class EntitlementManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setConnectedOrganizations(@javax.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
         this.connectedOrganizations = value;
+    }
+    /**
+     * Sets the resourceEnvironments property value. The resourceEnvironments property
+     * @param value Value to set for the resourceEnvironments property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResourceEnvironments(@javax.annotation.Nullable final java.util.List<AccessPackageResourceEnvironment> value) {
+        this.resourceEnvironments = value;
+    }
+    /**
+     * Sets the resourceRequests property value. The resourceRequests property
+     * @param value Value to set for the resourceRequests property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResourceRequests(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRequest> value) {
+        this.resourceRequests = value;
+    }
+    /**
+     * Sets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @param value Value to set for the resourceRoleScopes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResourceRoleScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
+        this.resourceRoleScopes = value;
+    }
+    /**
+     * Sets the resources property value. The resources property
+     * @param value Value to set for the resources property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResources(@javax.annotation.Nullable final java.util.List<AccessPackageResource> value) {
+        this.resources = value;
     }
     /**
      * Sets the settings property value. The settings that control the behavior of Azure AD entitlement management.

@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This class contains compliance settings for Android Work Profile.
+ */
 public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
      * Require that devices have enabled device threat protection.
@@ -92,7 +95,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      */
     private Boolean storageRequireEncryption;
     /**
-     * Instantiates a new AndroidWorkProfileCompliancePolicy and sets the default values.
+     * Instantiates a new androidWorkProfileCompliancePolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -103,7 +106,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidWorkProfileCompliancePolicy
+     * @return a androidWorkProfileCompliancePolicy
      */
     @javax.annotation.Nonnull
     public static AndroidWorkProfileCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -120,7 +123,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a DeviceThreatProtectionLevel
+     * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -222,7 +225,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a AndroidRequiredPasswordType
+     * @return a androidRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {

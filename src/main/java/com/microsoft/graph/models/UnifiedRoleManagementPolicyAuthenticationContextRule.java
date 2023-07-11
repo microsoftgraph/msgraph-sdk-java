@@ -16,7 +16,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
      */
     private Boolean isEnabled;
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
+     * Instantiates a new unifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class UnifiedRoleManagementPolicyAuthenticationContextRule extends Unifie
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicyAuthenticationContextRule
+     * @return a unifiedRoleManagementPolicyAuthenticationContextRule
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleManagementPolicyAuthenticationContextRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

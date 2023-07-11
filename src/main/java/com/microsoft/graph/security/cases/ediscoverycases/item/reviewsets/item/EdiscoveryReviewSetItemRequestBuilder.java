@@ -3,6 +3,7 @@ package com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.EdiscoveryReviewSet;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.microsoftgraphsecurityaddtoreviewset.MicrosoftGraphSecurityAddToReviewSetRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.microsoftgraphsecurityexport.MicrosoftGraphSecurityExportRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.reviewsets.item.queries.QueriesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -28,6 +29,13 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public MicrosoftGraphSecurityAddToReviewSetRequestBuilder microsoftGraphSecurityAddToReviewSet() {
         return new MicrosoftGraphSecurityAddToReviewSetRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the export method.
+     */
+    @javax.annotation.Nonnull
+    public MicrosoftGraphSecurityExportRequestBuilder microsoftGraphSecurityExport() {
+        return new MicrosoftGraphSecurityExportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.

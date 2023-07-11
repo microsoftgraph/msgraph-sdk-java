@@ -64,7 +64,7 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceActions from roleManagement
-     * @return a CompletableFuture of UnifiedRbacResourceActionCollectionResponse
+     * @return a CompletableFuture of unifiedRbacResourceActionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceActionCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get resourceActions from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRbacResourceActionCollectionResponse
+     * @return a CompletableFuture of unifiedRbacResourceActionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceActionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

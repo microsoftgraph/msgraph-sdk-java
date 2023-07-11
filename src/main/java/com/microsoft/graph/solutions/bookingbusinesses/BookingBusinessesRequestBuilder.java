@@ -64,7 +64,7 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation.
-     * @return a CompletableFuture of BookingBusinessCollectionResponse
+     * @return a CompletableFuture of bookingBusinessCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class BookingBusinessesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of bookingBusiness objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a GET operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingBusinessCollectionResponse
+     * @return a CompletableFuture of bookingBusinessCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

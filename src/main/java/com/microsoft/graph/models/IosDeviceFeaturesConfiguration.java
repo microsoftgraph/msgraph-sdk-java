@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * iOS Device Features Configuration Profile.
+ */
 public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /**
      * Asset tag information for the device, displayed on the login window and lock screen.
@@ -28,7 +31,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     private java.util.List<IosNotificationSettings> notificationSettings;
     /**
-     * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
+     * Instantiates a new iosDeviceFeaturesConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +42,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosDeviceFeaturesConfiguration
+     * @return a iosDeviceFeaturesConfiguration
      */
     @javax.annotation.Nonnull
     public static IosDeviceFeaturesConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

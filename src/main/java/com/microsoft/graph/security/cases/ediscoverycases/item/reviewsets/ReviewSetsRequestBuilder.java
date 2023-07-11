@@ -64,7 +64,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
-     * @return a CompletableFuture of EdiscoveryReviewSetCollectionResponse
+     * @return a CompletableFuture of ediscoveryReviewSetCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-reviewsets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ReviewSetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EdiscoveryReviewSetCollectionResponse
+     * @return a CompletableFuture of ediscoveryReviewSetCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycase-list-reviewsets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

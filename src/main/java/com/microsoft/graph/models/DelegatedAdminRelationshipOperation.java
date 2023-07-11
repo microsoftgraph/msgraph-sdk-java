@@ -86,7 +86,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a DelegatedAdminRelationshipOperationType
+     * @return a delegatedAdminRelationshipOperationType
      */
     @javax.annotation.Nullable
     public DelegatedAdminRelationshipOperationType getOperationType() {
@@ -94,7 +94,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a LongRunningOperationStatus
+     * @return a longRunningOperationStatus
      */
     @javax.annotation.Nullable
     public LongRunningOperationStatus getStatus() {

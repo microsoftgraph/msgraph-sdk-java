@@ -64,7 +64,7 @@ public class IssuesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of issues that happened on the service, with detailed information for each issue.
-     * @return a CompletableFuture of ServiceHealthIssueCollectionResponse
+     * @return a CompletableFuture of serviceHealthIssueCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealthIssueCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class IssuesRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of issues that happened on the service, with detailed information for each issue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ServiceHealthIssueCollectionResponse
+     * @return a CompletableFuture of serviceHealthIssueCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceHealthIssueCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

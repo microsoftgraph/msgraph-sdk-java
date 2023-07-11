@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for Android store apps.
+ */
 public class AndroidStoreApp extends MobileApp implements Parsable {
     /**
      * The Android app store URL.
@@ -20,7 +23,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
      */
     private String packageId;
     /**
-     * Instantiates a new AndroidStoreApp and sets the default values.
+     * Instantiates a new androidStoreApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +34,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidStoreApp
+     * @return a androidStoreApp
      */
     @javax.annotation.Nonnull
     public static AndroidStoreApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

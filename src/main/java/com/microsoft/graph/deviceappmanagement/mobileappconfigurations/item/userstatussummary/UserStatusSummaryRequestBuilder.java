@@ -78,9 +78,8 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> get() {
@@ -97,10 +96,9 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserSummary body) {
@@ -137,11 +134,10 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserSummary> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
+     * Update the navigation property userStatusSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class UserStatusSummaryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
+     * App configuration user status summary.
      */
     public class GetQueryParameters {
         /**

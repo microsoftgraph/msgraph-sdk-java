@@ -63,7 +63,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
-     * @return a CompletableFuture of ApplicationTemplateCollectionResponse
+     * @return a CompletableFuture of applicationTemplateCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/applicationtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of applicationTemplate objects from the Azure AD application gallery.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ApplicationTemplateCollectionResponse
+     * @return a CompletableFuture of applicationTemplateCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/applicationtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

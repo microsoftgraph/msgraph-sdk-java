@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the androidGeneralDeviceConfiguration resource.
+ */
 public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to block clipboard sharing to copy and paste between applications.
@@ -200,7 +203,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      */
     private Boolean wiFiBlocked;
     /**
-     * Instantiates a new AndroidGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new androidGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -211,7 +214,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidGeneralDeviceConfiguration
+     * @return a androidGeneralDeviceConfiguration
      */
     @javax.annotation.Nonnull
     public static AndroidGeneralDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -316,7 +319,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a appListType
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -525,7 +528,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a AndroidRequiredPasswordType
+     * @return a androidRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
@@ -645,7 +648,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
-     * @return a WebBrowserCookieSettings
+     * @return a webBrowserCookieSettings
      */
     @javax.annotation.Nullable
     public WebBrowserCookieSettings getWebBrowserCookieSettings() {

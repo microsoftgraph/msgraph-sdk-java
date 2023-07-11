@@ -72,7 +72,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get activities for a given user. Unlike the **recent** OData function, activities without histories will be returned. The permission UserActivity.ReadWrite.CreatedByApp will apply extra filtering to the response, so that only activities created by your application are returned. This server-side filtering might result in empty pages if the user is particularly active and other applications have created more recent activities. To get your application's activities, use the **nextLink** property to paginate.
-     * @return a CompletableFuture of UserActivityCollectionResponse
+     * @return a CompletableFuture of userActivityCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/projectrome-get-activities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get activities for a given user. Unlike the **recent** OData function, activities without histories will be returned. The permission UserActivity.ReadWrite.CreatedByApp will apply extra filtering to the response, so that only activities created by your application are returned. This server-side filtering might result in empty pages if the user is particularly active and other applications have created more recent activities. To get your application's activities, use the **nextLink** property to paginate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserActivityCollectionResponse
+     * @return a CompletableFuture of userActivityCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/projectrome-get-activities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

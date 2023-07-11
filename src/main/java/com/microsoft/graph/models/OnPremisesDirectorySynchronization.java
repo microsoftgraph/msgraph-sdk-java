@@ -43,7 +43,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements Parsab
     }
     /**
      * Gets the features property value. The features property
-     * @return a OnPremisesDirectorySynchronizationFeature
+     * @return a onPremisesDirectorySynchronizationFeature
      */
     @javax.annotation.Nullable
     public OnPremisesDirectorySynchronizationFeature getFeatures() {

@@ -13,7 +13,7 @@ public class StringKeyObjectValuePair implements AdditionalDataHolder, Parsable 
      */
     private Map<String, Object> additionalData;
     /**
-     * The key property
+     * Key.
      */
     private String key;
     /**
@@ -58,7 +58,7 @@ public class StringKeyObjectValuePair implements AdditionalDataHolder, Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Key.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class StringKeyObjectValuePair implements AdditionalDataHolder, Parsable 
         this.additionalData = value;
     }
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Key.
      * @param value Value to set for the key property.
      * @return a void
      */

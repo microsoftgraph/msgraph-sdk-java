@@ -12,7 +12,7 @@ public class RequestorManager extends SubjectSet implements Parsable {
      */
     private Integer managerLevel;
     /**
-     * Instantiates a new RequestorManager and sets the default values.
+     * Instantiates a new requestorManager and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class RequestorManager extends SubjectSet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RequestorManager
+     * @return a requestorManager
      */
     @javax.annotation.Nonnull
     public static RequestorManager createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

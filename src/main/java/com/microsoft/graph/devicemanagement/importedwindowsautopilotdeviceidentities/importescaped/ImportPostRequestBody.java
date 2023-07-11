@@ -1,4 +1,4 @@
-package com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.importEscaped;
+package com.microsoft.graph.devicemanagement.importedwindowsautopilotdeviceidentities.importescaped;
 
 import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;

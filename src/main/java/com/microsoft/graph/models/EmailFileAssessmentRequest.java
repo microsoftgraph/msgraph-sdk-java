@@ -20,7 +20,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      */
     private String recipientEmail;
     /**
-     * Instantiates a new EmailFileAssessmentRequest and sets the default values.
+     * Instantiates a new emailFileAssessmentRequest and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailFileAssessmentRequest
+     * @return a emailFileAssessmentRequest
      */
     @javax.annotation.Nonnull
     public static EmailFileAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

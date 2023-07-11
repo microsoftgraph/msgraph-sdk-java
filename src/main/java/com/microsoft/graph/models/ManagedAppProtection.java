@@ -7,6 +7,9 @@ import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Policy used to configure detailed management settings for a specified set of apps
+ */
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Data storage locations where a user may store managed data.
@@ -117,7 +120,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     private Boolean simplePinBlocked;
     /**
-     * Instantiates a new ManagedAppProtection and sets the default values.
+     * Instantiates a new managedAppProtection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -128,7 +131,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppProtection
+     * @return a managedAppProtection
      */
     @javax.annotation.Nonnull
     public static ManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -147,7 +150,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
-     * @return a ManagedAppDataStorageLocation
+     * @return a managedAppDataStorageLocation
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedAppDataStorageLocation> getAllowedDataStorageLocations() {
@@ -155,7 +158,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
-     * @return a ManagedAppDataTransferLevel
+     * @return a managedAppDataTransferLevel
      */
     @javax.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedInboundDataTransferSources() {
@@ -163,7 +166,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
-     * @return a ManagedAppClipboardSharingLevel
+     * @return a managedAppClipboardSharingLevel
      */
     @javax.annotation.Nullable
     public ManagedAppClipboardSharingLevel getAllowedOutboundClipboardSharingLevel() {
@@ -171,7 +174,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
-     * @return a ManagedAppDataTransferLevel
+     * @return a managedAppDataTransferLevel
      */
     @javax.annotation.Nullable
     public ManagedAppDataTransferLevel getAllowedOutboundDataTransferDestinations() {
@@ -255,7 +258,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the managedBrowser property value. Type of managed browser
-     * @return a ManagedBrowserType
+     * @return a managedBrowserType
      */
     @javax.annotation.Nullable
     public ManagedBrowserType getManagedBrowser() {
@@ -359,7 +362,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
-     * @return a ManagedAppPinCharacterSet
+     * @return a managedAppPinCharacterSet
      */
     @javax.annotation.Nullable
     public ManagedAppPinCharacterSet getPinCharacterSet() {

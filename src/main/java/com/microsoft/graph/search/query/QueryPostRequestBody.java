@@ -55,7 +55,7 @@ public class QueryPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the requests property value. The requests property
-     * @return a SearchRequest
+     * @return a searchRequest
      */
     @javax.annotation.Nullable
     public java.util.List<SearchRequest> getRequests() {

@@ -50,7 +50,7 @@ public class GraphDeviceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.device in the microsoft.graph.directoryObject collection
-     * @return a CompletableFuture of DeviceCollectionResponse
+     * @return a CompletableFuture of deviceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GraphDeviceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.device in the microsoft.graph.directoryObject collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCollectionResponse
+     * @return a CompletableFuture of deviceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

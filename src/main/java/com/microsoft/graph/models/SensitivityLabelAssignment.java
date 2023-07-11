@@ -29,7 +29,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
      */
     private String tenantId;
     /**
-     * Instantiates a new SensitivityLabelAssignment and sets the default values.
+     * Instantiates a new sensitivityLabelAssignment and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +39,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SensitivityLabelAssignment
+     * @return a sensitivityLabelAssignment
      */
     @javax.annotation.Nonnull
     public static SensitivityLabelAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class SensitivityLabelAssignment implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a SensitivityLabelAssignmentMethod
+     * @return a sensitivityLabelAssignmentMethod
      */
     @javax.annotation.Nullable
     public SensitivityLabelAssignmentMethod getAssignmentMethod() {

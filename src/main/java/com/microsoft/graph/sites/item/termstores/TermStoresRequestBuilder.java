@@ -64,7 +64,7 @@ public class TermStoresRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of termStores under this site.
-     * @return a CompletableFuture of StoreCollectionResponse
+     * @return a CompletableFuture of storeCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StoreCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class TermStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of termStores under this site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of StoreCollectionResponse
+     * @return a CompletableFuture of storeCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StoreCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

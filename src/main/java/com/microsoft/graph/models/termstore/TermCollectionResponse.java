@@ -13,7 +13,7 @@ public class TermCollectionResponse extends BaseCollectionPaginationCountRespons
      */
     private java.util.List<Term> value;
     /**
-     * Instantiates a new TermCollectionResponse and sets the default values.
+     * Instantiates a new termCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class TermCollectionResponse extends BaseCollectionPaginationCountRespons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermCollectionResponse
+     * @return a termCollectionResponse
      */
     @javax.annotation.Nonnull
     public static TermCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

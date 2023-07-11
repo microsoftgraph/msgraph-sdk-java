@@ -107,7 +107,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     }
     /**
      * Gets the status property value. The status property
-     * @return a ComplianceStatus
+     * @return a complianceStatus
      */
     @javax.annotation.Nullable
     public ComplianceStatus getStatus() {

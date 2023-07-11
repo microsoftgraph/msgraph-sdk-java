@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum LocationType implements ValuedEnum {
-    DefaultEscaped("default"),
+    Default("default"),
     ConferenceRoom("conferenceRoom"),
     HomeAddress("homeAddress"),
     BusinessAddress("businessAddress"),
@@ -24,7 +24,7 @@ public enum LocationType implements ValuedEnum {
     public static LocationType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return DefaultEscaped;
+            case "default": return Default;
             case "conferenceRoom": return ConferenceRoom;
             case "homeAddress": return HomeAddress;
             case "businessAddress": return BusinessAddress;

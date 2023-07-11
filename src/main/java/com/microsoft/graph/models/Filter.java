@@ -13,15 +13,15 @@ public class Filter implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The categoryFilterGroups property
+     * *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      */
     private java.util.List<FilterGroup> categoryFilterGroups;
     /**
-     * The groups property
+     * Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      */
     private java.util.List<FilterGroup> groups;
     /**
-     * The inputFilterGroups property
+     * *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      */
     private java.util.List<FilterGroup> inputFilterGroups;
     /**
@@ -55,7 +55,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the categoryFilterGroups property value. The categoryFilterGroups property
+     * Gets the categoryFilterGroups property value. *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      * @return a filterGroup
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the groups property value. The groups property
+     * Gets the groups property value. Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      * @return a filterGroup
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         return this.groups;
     }
     /**
-     * Gets the inputFilterGroups property value. The inputFilterGroups property
+     * Gets the inputFilterGroups property value. *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      * @return a filterGroup
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the categoryFilterGroups property value. The categoryFilterGroups property
+     * Sets the categoryFilterGroups property value. *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      * @param value Value to set for the categoryFilterGroups property.
      * @return a void
      */
@@ -132,7 +132,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         this.categoryFilterGroups = value;
     }
     /**
-     * Sets the groups property value. The groups property
+     * Sets the groups property value. Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      * @param value Value to set for the groups property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class Filter implements AdditionalDataHolder, Parsable {
         this.groups = value;
     }
     /**
-     * Sets the inputFilterGroups property value. The inputFilterGroups property
+     * Sets the inputFilterGroups property value. *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      * @param value Value to set for the inputFilterGroups property.
      * @return a void
      */

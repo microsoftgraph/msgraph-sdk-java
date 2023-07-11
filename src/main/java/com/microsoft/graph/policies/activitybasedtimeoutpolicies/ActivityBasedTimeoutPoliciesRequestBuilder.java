@@ -64,7 +64,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
-     * @return a CompletableFuture of ActivityBasedTimeoutPolicyCollectionResponse
+     * @return a CompletableFuture of activityBasedTimeoutPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuild
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ActivityBasedTimeoutPolicyCollectionResponse
+     * @return a CompletableFuture of activityBasedTimeoutPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -113,7 +113,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return a Modality
+     * @return a modality
      */
     @javax.annotation.Nullable
     public java.util.List<Modality> getModalities() {
@@ -153,7 +153,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a CallType
+     * @return a callType
      */
     @javax.annotation.Nullable
     public CallType getType() {

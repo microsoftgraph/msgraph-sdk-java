@@ -78,9 +78,8 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read properties and relationships of the onPremisesConditionalAccessSettings object.
+     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @return a CompletableFuture of onPremisesConditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> get() {
@@ -97,10 +96,9 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Read properties and relationships of the onPremisesConditionalAccessSettings object.
+     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesConditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the properties of a onPremisesConditionalAccessSettings object.
+     * Update the navigation property conditionalAccessSettings in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of onPremisesConditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> patch(@javax.annotation.Nonnull final OnPremisesConditionalAccessSettings body) {
@@ -137,11 +134,10 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Update the properties of a onPremisesConditionalAccessSettings object.
+     * Update the navigation property conditionalAccessSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesConditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> patch(@javax.annotation.Nonnull final OnPremisesConditionalAccessSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the onPremisesConditionalAccessSettings object.
+     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the onPremisesConditionalAccessSettings object.
+     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the properties of a onPremisesConditionalAccessSettings object.
+     * Update the navigation property conditionalAccessSettings in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a onPremisesConditionalAccessSettings object.
+     * Update the navigation property conditionalAccessSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the onPremisesConditionalAccessSettings object.
+     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      */
     public class GetQueryParameters {
         /**

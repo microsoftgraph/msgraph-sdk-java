@@ -64,7 +64,7 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
+     * @return a CompletableFuture of unifiedRoleManagementPolicyRuleCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRuleCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class EffectiveRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
+     * @return a CompletableFuture of unifiedRoleManagementPolicyRuleCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRuleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

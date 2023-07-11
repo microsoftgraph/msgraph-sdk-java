@@ -63,9 +63,8 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceCategory objects.
-     * @return a CompletableFuture of DeviceCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of device categories with the tenant.
+     * @return a CompletableFuture of deviceCategoryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategoryCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the deviceCategory objects.
+     * The list of device categories with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of deviceCategoryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new deviceCategory object.
+     * Create new navigation property to deviceCategories for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> post(@javax.annotation.Nonnull final DeviceCategory body) {
@@ -122,11 +119,10 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new deviceCategory object.
+     * Create new navigation property to deviceCategories for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> post(@javax.annotation.Nonnull final DeviceCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the deviceCategory objects.
+     * The list of device categories with the tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceCategory objects.
+     * The list of device categories with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new deviceCategory object.
+     * Create new navigation property to deviceCategories for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceCategory object.
+     * Create new navigation property to deviceCategories for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class DeviceCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the deviceCategory objects.
+     * The list of device categories with the tenant.
      */
     public class GetQueryParameters {
         /**

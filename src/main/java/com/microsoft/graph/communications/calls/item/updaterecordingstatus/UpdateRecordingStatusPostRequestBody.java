@@ -68,7 +68,7 @@ public class UpdateRecordingStatusPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Gets the status property value. The status property
-     * @return a RecordingStatus
+     * @return a recordingStatus
      */
     @javax.annotation.Nullable
     public RecordingStatus getStatus() {

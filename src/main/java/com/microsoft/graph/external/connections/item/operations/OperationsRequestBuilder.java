@@ -64,7 +64,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a connectionOperation object.
-     * @return a CompletableFuture of ConnectionOperationCollectionResponse
+     * @return a CompletableFuture of connectionOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a connectionOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConnectionOperationCollectionResponse
+     * @return a CompletableFuture of connectionOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -72,7 +72,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a list of educationAssignment assigned to a educationUser for all classes. Only teachers, students, and applications with application permissions can perform this operation. This method allows a caller to find all the **assignments** belonging to a student or a teacher in a single call rather than having to request **assignments** from each **class**. The **assignment** list contains what is needed to get the detailed information for the **assignment** from within the **class** namespace. Use the methods defined for the **assignment** for all other operations.
-     * @return a CompletableFuture of EducationAssignmentCollectionResponse
+     * @return a CompletableFuture of educationAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a list of educationAssignment assigned to a educationUser for all classes. Only teachers, students, and applications with application permissions can perform this operation. This method allows a caller to find all the **assignments** belonging to a student or a teacher in a single call rather than having to request **assignments** from each **class**. The **assignment** list contains what is needed to get the detailed information for the **assignment** from within the **class** namespace. Use the methods defined for the **assignment** for all other operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationAssignmentCollectionResponse
+     * @return a CompletableFuture of educationAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public enum IdentityUserFlowAttributeDataType implements ValuedEnum {
     String("string"),
-    BooleanEscaped("boolean"),
+    Boolean("boolean"),
     Int64("int64"),
     StringCollection("stringCollection"),
     DateTime("dateTime"),
@@ -21,7 +21,7 @@ public enum IdentityUserFlowAttributeDataType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "string": return String;
-            case "boolean": return BooleanEscaped;
+            case "boolean": return Boolean;
             case "int64": return Int64;
             case "stringCollection": return StringCollection;
             case "dateTime": return DateTime;

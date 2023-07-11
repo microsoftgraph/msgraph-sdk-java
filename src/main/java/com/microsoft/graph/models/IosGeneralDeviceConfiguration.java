@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the iosGeneralDeviceConfiguration resource.
+ */
 public class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to allow account modification when the device is in supervised mode.
@@ -532,7 +535,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      */
     private Boolean wiFiConnectOnlyToConfiguredNetworks;
     /**
-     * Instantiates a new IosGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new iosGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -543,7 +546,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosGeneralDeviceConfiguration
+     * @return a iosGeneralDeviceConfiguration
      */
     @javax.annotation.Nonnull
     public static IosGeneralDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -672,7 +675,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the appsVisibilityListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a appListType
      */
     @javax.annotation.Nullable
     public AppListType getAppsVisibilityListType() {
@@ -760,7 +763,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a appListType
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -1388,7 +1391,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the mediaContentRatingApps property value. Apps rating as in media content
-     * @return a RatingAppsType
+     * @return a ratingAppsType
      */
     @javax.annotation.Nullable
     public RatingAppsType getMediaContentRatingApps() {
@@ -1580,7 +1583,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
@@ -1636,7 +1639,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the safariCookieSettings property value. Web Browser Cookie Settings.
-     * @return a WebBrowserCookieSettings
+     * @return a webBrowserCookieSettings
      */
     @javax.annotation.Nullable
     public WebBrowserCookieSettings getSafariCookieSettings() {

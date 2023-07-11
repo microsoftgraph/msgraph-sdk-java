@@ -3,6 +3,7 @@ package com.microsoft.graph.places.item;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Place;
 import com.microsoft.graph.places.item.graphroom.GraphRoomRequestBuilder;
+import com.microsoft.graph.places.item.graphroomlist.GraphRoomListRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,6 +27,13 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphRoomRequestBuilder graphRoom() {
         return new GraphRoomRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to roomList.
+     */
+    @javax.annotation.Nonnull
+    public GraphRoomListRequestBuilder graphRoomList() {
+        return new GraphRoomListRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new PlaceItemRequestBuilder and sets the default values.

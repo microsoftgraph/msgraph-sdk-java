@@ -55,7 +55,7 @@ public class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the newReminderTime property value. The NewReminderTime property
-     * @return a DateTimeTimeZone
+     * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getNewReminderTime() {

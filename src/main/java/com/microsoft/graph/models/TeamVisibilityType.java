@@ -4,8 +4,8 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum TeamVisibilityType implements ValuedEnum {
-    PrivateEscaped("private"),
-    PublicEscaped("public"),
+    Private("private"),
+    Public("public"),
     HiddenMembership("hiddenMembership"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -18,8 +18,8 @@ public enum TeamVisibilityType implements ValuedEnum {
     public static TeamVisibilityType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "private": return PrivateEscaped;
-            case "public": return PublicEscaped;
+            case "private": return Private;
+            case "public": return Public;
             case "hiddenMembership": return HiddenMembership;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

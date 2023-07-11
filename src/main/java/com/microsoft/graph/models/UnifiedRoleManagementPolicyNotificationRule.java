@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      */
     private String recipientType;
     /**
-     * Instantiates a new UnifiedRoleManagementPolicyNotificationRule and sets the default values.
+     * Instantiates a new unifiedRoleManagementPolicyNotificationRule and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -39,7 +39,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicyNotificationRule
+     * @return a unifiedRoleManagementPolicyNotificationRule
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleManagementPolicyNotificationRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

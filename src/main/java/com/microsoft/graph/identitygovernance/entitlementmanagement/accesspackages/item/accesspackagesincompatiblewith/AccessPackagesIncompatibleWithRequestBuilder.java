@@ -63,7 +63,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     }
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
-     * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @return a CompletableFuture of accessPackageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -83,7 +83,7 @@ public class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBui
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageCollectionResponse
+     * @return a CompletableFuture of accessPackageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

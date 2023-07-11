@@ -72,7 +72,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the conversationMember collection of a team.
-     * @return a CompletableFuture of ConversationMemberCollectionResponse
+     * @return a CompletableFuture of conversationMemberCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/team-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the conversationMember collection of a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConversationMemberCollectionResponse
+     * @return a CompletableFuture of conversationMemberCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/team-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

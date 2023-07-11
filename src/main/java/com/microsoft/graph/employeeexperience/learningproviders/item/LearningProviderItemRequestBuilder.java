@@ -1,6 +1,7 @@
 package com.microsoft.graph.employeeexperience.learningproviders.item;
 
 import com.microsoft.graph.employeeexperience.learningproviders.item.learningcontents.LearningContentsRequestBuilder;
+import com.microsoft.graph.employeeexperience.learningproviders.item.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.models.LearningProvider;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -27,6 +28,13 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public LearningContentsRequestBuilder learningContents() {
         return new LearningContentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.learningProvider entity.
+     */
+    @javax.annotation.Nonnull
+    public LearningCourseActivitiesRequestBuilder learningCourseActivities() {
+        return new LearningCourseActivitiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new LearningProviderItemRequestBuilder and sets the default values.

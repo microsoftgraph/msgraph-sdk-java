@@ -81,9 +81,8 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a iosStoreApp.
+     * Delete navigation property mobileApps for deviceAppManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-iosstoreapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -100,10 +99,9 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a iosStoreApp.
+     * Delete navigation property mobileApps for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-iosstoreapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -120,9 +118,8 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the windowsWebApp object.
+     * The mobile apps.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-windowswebapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get() {
@@ -139,10 +136,9 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the windowsWebApp object.
+     * The mobile apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-windowswebapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,10 +155,9 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a windowsMicrosoftEdgeApp object.
+     * Update the navigation property mobileApps in deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@javax.annotation.Nonnull final MobileApp body) {
@@ -179,11 +174,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a windowsMicrosoftEdgeApp object.
+     * Update the navigation property mobileApps in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@javax.annotation.Nonnull final MobileApp body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -201,7 +195,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a iosStoreApp.
+     * Delete navigation property mobileApps for deviceAppManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -209,7 +203,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a iosStoreApp.
+     * Delete navigation property mobileApps for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -228,7 +222,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the windowsWebApp object.
+     * The mobile apps.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -236,7 +230,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the windowsWebApp object.
+     * The mobile apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -257,7 +251,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a windowsMicrosoftEdgeApp object.
+     * Update the navigation property mobileApps in deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -266,7 +260,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a windowsMicrosoftEdgeApp object.
+     * Update the navigation property mobileApps in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -294,7 +288,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the windowsWebApp object.
+     * The mobile apps.
      */
     public class GetQueryParameters {
         /**

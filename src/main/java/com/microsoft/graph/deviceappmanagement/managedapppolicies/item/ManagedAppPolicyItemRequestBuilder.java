@@ -86,9 +86,8 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedAppProtection object.
+     * Managed app policies.
      * @return a CompletableFuture of managedAppPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> get() {
@@ -105,10 +104,9 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the managedAppProtection object.
+     * Managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -192,7 +190,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the managedAppProtection object.
+     * Managed app policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -200,7 +198,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the managedAppProtection object.
+     * Managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -258,7 +256,7 @@ public class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the managedAppProtection object.
+     * Managed app policies.
      */
     public class GetQueryParameters {
         /**

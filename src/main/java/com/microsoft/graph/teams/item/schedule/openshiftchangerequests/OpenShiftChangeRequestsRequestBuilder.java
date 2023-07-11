@@ -64,7 +64,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
-     * @return a CompletableFuture of OpenShiftChangeRequestCollectionResponse
+     * @return a CompletableFuture of openShiftChangeRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class OpenShiftChangeRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of openShiftChangeRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OpenShiftChangeRequestCollectionResponse
+     * @return a CompletableFuture of openShiftChangeRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

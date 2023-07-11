@@ -29,7 +29,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
      */
     private String phoneAppVersion;
     /**
-     * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new microsoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -40,7 +40,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftAuthenticatorAuthenticationMethod
+     * @return a microsoftAuthenticatorAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static MicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

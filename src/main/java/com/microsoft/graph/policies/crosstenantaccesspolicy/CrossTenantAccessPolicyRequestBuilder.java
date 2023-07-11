@@ -2,7 +2,7 @@ package com.microsoft.graph.policies.crosstenantaccesspolicy;
 
 import com.microsoft.graph.models.CrossTenantAccessPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultEscaped.DefaultRequestBuilder;
+import com.microsoft.graph.policies.crosstenantaccesspolicy.defaultescaped.DefaultRequestBuilder;
 import com.microsoft.graph.policies.crosstenantaccesspolicy.partners.PartnersRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;

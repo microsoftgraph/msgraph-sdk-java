@@ -12,7 +12,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionResponse extends Bas
      */
     private java.util.List<MdmWindowsInformationProtectionPolicy> value;
     /**
-     * Instantiates a new MdmWindowsInformationProtectionPolicyCollectionResponse and sets the default values.
+     * Instantiates a new mdmWindowsInformationProtectionPolicyCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionResponse extends Bas
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MdmWindowsInformationProtectionPolicyCollectionResponse
+     * @return a mdmWindowsInformationProtectionPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public static MdmWindowsInformationProtectionPolicyCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

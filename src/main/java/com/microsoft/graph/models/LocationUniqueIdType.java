@@ -7,7 +7,7 @@ public enum LocationUniqueIdType implements ValuedEnum {
     Unknown("unknown"),
     LocationStore("locationStore"),
     Directory("directory"),
-    PrivateEscaped("private"),
+    Private("private"),
     Bing("bing");
     public final String value;
     LocationUniqueIdType(final String value) {
@@ -22,7 +22,7 @@ public enum LocationUniqueIdType implements ValuedEnum {
             case "unknown": return Unknown;
             case "locationStore": return LocationStore;
             case "directory": return Directory;
-            case "private": return PrivateEscaped;
+            case "private": return Private;
             case "bing": return Bing;
             default: return null;
         }

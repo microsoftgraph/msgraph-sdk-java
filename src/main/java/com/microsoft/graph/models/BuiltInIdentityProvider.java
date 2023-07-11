@@ -12,7 +12,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      */
     private String identityProviderType;
     /**
-     * Instantiates a new BuiltInIdentityProvider and sets the default values.
+     * Instantiates a new builtInIdentityProvider and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BuiltInIdentityProvider
+     * @return a builtInIdentityProvider
      */
     @javax.annotation.Nonnull
     public static BuiltInIdentityProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -63,7 +63,7 @@ public class ColumnPositionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Column order information in a content type.
-     * @return a CompletableFuture of ColumnDefinitionCollectionResponse
+     * @return a CompletableFuture of columnDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinitionCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class ColumnPositionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Column order information in a content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ColumnDefinitionCollectionResponse
+     * @return a CompletableFuture of columnDefinitionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

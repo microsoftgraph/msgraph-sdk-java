@@ -63,9 +63,8 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotDeviceIdentities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
-     * @return a CompletableFuture of WindowsAutopilotDeviceIdentityCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
+     * The Windows autopilot device identities contained collection.
+     * @return a CompletableFuture of windowsAutopilotDeviceIdentityCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentityCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
+     * The Windows autopilot device identities contained collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsAutopilotDeviceIdentityCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of windowsAutopilotDeviceIdentityCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentityCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Create a new windowsAutopilotDeviceIdentity object.
+     * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of windowsAutopilotDeviceIdentity
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> post(@javax.annotation.Nonnull final WindowsAutopilotDeviceIdentity body) {
@@ -122,11 +119,10 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Create a new windowsAutopilotDeviceIdentity object.
+     * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsAutopilotDeviceIdentity
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> post(@javax.annotation.Nonnull final WindowsAutopilotDeviceIdentity body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
+     * The Windows autopilot device identities contained collection.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
+     * The Windows autopilot device identities contained collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Create a new windowsAutopilotDeviceIdentity object.
+     * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new windowsAutopilotDeviceIdentity object.
+     * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
+     * The Windows autopilot device identities contained collection.
      */
     public class GetQueryParameters {
         /**

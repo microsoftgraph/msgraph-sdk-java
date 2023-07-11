@@ -13,7 +13,7 @@ public class TaskCollectionResponse extends BaseCollectionPaginationCountRespons
      */
     private java.util.List<Task> value;
     /**
-     * Instantiates a new TaskCollectionResponse and sets the default values.
+     * Instantiates a new taskCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class TaskCollectionResponse extends BaseCollectionPaginationCountRespons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TaskCollectionResponse
+     * @return a taskCollectionResponse
      */
     @javax.annotation.Nonnull
     public static TaskCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

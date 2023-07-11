@@ -64,7 +64,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of plannerPlan objects.
-     * @return a CompletableFuture of PlannerPlanCollectionResponse
+     * @return a CompletableFuture of plannerPlanCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of plannerPlan objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PlannerPlanCollectionResponse
+     * @return a CompletableFuture of plannerPlanCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

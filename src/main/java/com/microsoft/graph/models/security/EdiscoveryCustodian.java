@@ -33,7 +33,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      */
     private java.util.List<UserSource> userSources;
     /**
-     * Instantiates a new EdiscoveryCustodian and sets the default values.
+     * Instantiates a new ediscoveryCustodian and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -44,7 +44,7 @@ public class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryCustodian
+     * @return a ediscoveryCustodian
      */
     @javax.annotation.Nonnull
     public static EdiscoveryCustodian createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

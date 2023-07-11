@@ -48,6 +48,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.accessPackageAssignmentRequestWorkflowExtension": return new AccessPackageAssignmentRequestWorkflowExtension();
+                case "#microsoft.graph.accessPackageAssignmentWorkflowExtension": return new AccessPackageAssignmentWorkflowExtension();
                 case "#microsoft.graph.identityGovernance.customTaskExtension": return new CustomTaskExtension();
             }
         }

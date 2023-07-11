@@ -13,7 +13,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The key property
+     * The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      */
     private String key;
     /**
@@ -21,7 +21,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The value property
+     * Total number of synchronized objects.
      */
     private Long value;
     /**
@@ -63,7 +63,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Total number of synchronized objects.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. The mapping of the user type from the source system to the target system. For example:User to User - For Azure AD to Azure AD synchronization worker to user - For Workday to Azure AD synchronization.
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -127,7 +127,7 @@ public class StringKeyLongValuePair implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Total number of synchronized objects.
      * @param value Value to set for the value property.
      * @return a void
      */

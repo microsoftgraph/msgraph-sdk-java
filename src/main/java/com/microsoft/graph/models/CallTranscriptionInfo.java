@@ -81,7 +81,7 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a CallTranscriptionState
+     * @return a callTranscriptionState
      */
     @javax.annotation.Nullable
     public CallTranscriptionState getState() {

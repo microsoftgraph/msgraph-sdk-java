@@ -29,6 +29,10 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     private String decision;
     /**
+     * Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+     */
+    private java.util.List<GovernanceInsight> insights;
+    /**
      * Justification left by the reviewer when they made the decision.
      */
     private String justification;
@@ -130,6 +134,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         deserializerMap.put("appliedDateTime", (n) -> { this.setAppliedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("applyResult", (n) -> { this.setApplyResult(n.getStringValue()); });
         deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
+        deserializerMap.put("insights", (n) -> { this.setInsights(n.getCollectionOfObjectValues(GovernanceInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
         deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("principalLink", (n) -> { this.setPrincipalLink(n.getStringValue()); });
@@ -139,6 +144,14 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         deserializerMap.put("reviewedBy", (n) -> { this.setReviewedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("reviewedDateTime", (n) -> { this.setReviewedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the insights property value. Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+     * @return a governanceInsight
+     */
+    @javax.annotation.Nullable
+    public java.util.List<GovernanceInsight> getInsights() {
+        return this.insights;
     }
     /**
      * Gets the justification property value. Justification left by the reviewer when they made the decision.
@@ -218,6 +231,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         writer.writeOffsetDateTimeValue("appliedDateTime", this.getAppliedDateTime());
         writer.writeStringValue("applyResult", this.getApplyResult());
         writer.writeStringValue("decision", this.getDecision());
+        writer.writeCollectionOfObjectValues("insights", this.getInsights());
         writer.writeStringValue("justification", this.getJustification());
         writer.writeObjectValue("principal", this.getPrincipal());
         writer.writeStringValue("principalLink", this.getPrincipalLink());
@@ -271,6 +285,15 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @javax.annotation.Nonnull
     public void setDecision(@javax.annotation.Nullable final String value) {
         this.decision = value;
+    }
+    /**
+     * Sets the insights property value. Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
+     * @param value Value to set for the insights property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setInsights(@javax.annotation.Nullable final java.util.List<GovernanceInsight> value) {
+        this.insights = value;
     }
     /**
      * Sets the justification property value. Justification left by the reviewer when they made the decision.

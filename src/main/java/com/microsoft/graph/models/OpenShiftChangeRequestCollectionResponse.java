@@ -12,7 +12,7 @@ public class OpenShiftChangeRequestCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<OpenShiftChangeRequest> value;
     /**
-     * Instantiates a new OpenShiftChangeRequestCollectionResponse and sets the default values.
+     * Instantiates a new openShiftChangeRequestCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class OpenShiftChangeRequestCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OpenShiftChangeRequestCollectionResponse
+     * @return a openShiftChangeRequestCollectionResponse
      */
     @javax.annotation.Nonnull
     public static OpenShiftChangeRequestCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

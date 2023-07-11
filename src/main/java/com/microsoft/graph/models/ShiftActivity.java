@@ -133,7 +133,7 @@ public class ShiftActivity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the theme property value. The theme property
-     * @return a ScheduleEntityTheme
+     * @return a scheduleEntityTheme
      */
     @javax.annotation.Nullable
     public ScheduleEntityTheme getTheme() {

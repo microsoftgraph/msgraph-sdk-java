@@ -20,7 +20,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
      */
     private Boolean includeUnknownCountriesAndRegions;
     /**
-     * Instantiates a new CountryNamedLocation and sets the default values.
+     * Instantiates a new countryNamedLocation and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -30,7 +30,7 @@ public class CountryNamedLocation extends NamedLocation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CountryNamedLocation
+     * @return a countryNamedLocation
      */
     @javax.annotation.Nonnull
     public static CountryNamedLocation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

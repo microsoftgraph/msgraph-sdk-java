@@ -12,7 +12,7 @@ public enum ColumnTypes implements ValuedEnum {
     Currency("currency"),
     DateTime("dateTime"),
     Lookup("lookup"),
-    BooleanEscaped("boolean"),
+    Boolean("boolean"),
     User("user"),
     Url("url"),
     Calculated("calculated"),
@@ -41,7 +41,7 @@ public enum ColumnTypes implements ValuedEnum {
             case "currency": return Currency;
             case "dateTime": return DateTime;
             case "lookup": return Lookup;
-            case "boolean": return BooleanEscaped;
+            case "boolean": return Boolean;
             case "user": return User;
             case "url": return Url;
             case "calculated": return Calculated;

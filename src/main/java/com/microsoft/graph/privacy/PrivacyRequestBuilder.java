@@ -50,7 +50,7 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get privacy
-     * @return a CompletableFuture of Privacy
+     * @return a CompletableFuture of privacy
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Privacy> get() {
@@ -69,7 +69,7 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder {
     /**
      * Get privacy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Privacy
+     * @return a CompletableFuture of privacy
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Privacy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder {
     /**
      * Update privacy
      * @param body The request body
-     * @return a CompletableFuture of Privacy
+     * @return a CompletableFuture of privacy
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Privacy> patch(@javax.annotation.Nonnull final Privacy body) {
@@ -108,7 +108,7 @@ public class PrivacyRequestBuilder extends BaseRequestBuilder {
      * Update privacy
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Privacy
+     * @return a CompletableFuture of privacy
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Privacy> patch(@javax.annotation.Nonnull final Privacy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

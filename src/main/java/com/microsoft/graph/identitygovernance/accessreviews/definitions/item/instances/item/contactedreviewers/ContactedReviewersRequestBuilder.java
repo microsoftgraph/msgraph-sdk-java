@@ -64,7 +64,7 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the reviewers for an access review instance, irrespective of whether or not they have received a notification. The reviewers are represented by an accessReviewReviewer object. A list of zero or more objects are returned, including all of their nested properties.
-     * @return a CompletableFuture of AccessReviewReviewerCollectionResponse
+     * @return a CompletableFuture of accessReviewReviewerCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstance-list-contactedreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ContactedReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the reviewers for an access review instance, irrespective of whether or not they have received a notification. The reviewers are represented by an accessReviewReviewer object. A list of zero or more objects are returned, including all of their nested properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessReviewReviewerCollectionResponse
+     * @return a CompletableFuture of accessReviewReviewerCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstance-list-contactedreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

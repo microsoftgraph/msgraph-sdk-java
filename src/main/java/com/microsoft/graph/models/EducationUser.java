@@ -188,7 +188,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the assignedLicenses property value. The licenses that are assigned to the user. Not nullable.
-     * @return a AssignedLicense
+     * @return a assignedLicense
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
@@ -196,7 +196,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.
-     * @return a AssignedPlan
+     * @return a assignedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
@@ -403,7 +403,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the primaryRole property value. The primaryRole property
-     * @return a EducationUserRole
+     * @return a educationUserRole
      */
     @javax.annotation.Nullable
     public EducationUserRole getPrimaryRole() {
@@ -411,7 +411,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable.
-     * @return a ProvisionedPlan
+     * @return a provisionedPlan
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {

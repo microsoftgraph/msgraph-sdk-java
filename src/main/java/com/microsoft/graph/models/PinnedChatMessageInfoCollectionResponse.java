@@ -12,7 +12,7 @@ public class PinnedChatMessageInfoCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<PinnedChatMessageInfo> value;
     /**
-     * Instantiates a new PinnedChatMessageInfoCollectionResponse and sets the default values.
+     * Instantiates a new pinnedChatMessageInfoCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class PinnedChatMessageInfoCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PinnedChatMessageInfoCollectionResponse
+     * @return a pinnedChatMessageInfoCollectionResponse
      */
     @javax.annotation.Nonnull
     public static PinnedChatMessageInfoCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

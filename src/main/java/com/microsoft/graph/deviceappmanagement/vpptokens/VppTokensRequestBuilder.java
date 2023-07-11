@@ -63,9 +63,8 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/vppTokens{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the vppToken objects.
-     * @return a CompletableFuture of VppTokenCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-list?view=graph-rest-1.0">Find more info here</a>
+     * List of Vpp tokens for this organization.
+     * @return a CompletableFuture of vppTokenCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppTokenCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the vppToken objects.
+     * List of Vpp tokens for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of VppTokenCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of vppTokenCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppTokenCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new vppToken object.
+     * Create new navigation property to vppTokens for deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of vppToken
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> post(@javax.annotation.Nonnull final VppToken body) {
@@ -122,11 +119,10 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new vppToken object.
+     * Create new navigation property to vppTokens for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of vppToken
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> post(@javax.annotation.Nonnull final VppToken body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the vppToken objects.
+     * List of Vpp tokens for this organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the vppToken objects.
+     * List of Vpp tokens for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new vppToken object.
+     * Create new navigation property to vppTokens for deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new vppToken object.
+     * Create new navigation property to vppTokens for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the vppToken objects.
+     * List of Vpp tokens for this organization.
      */
     public class GetQueryParameters {
         /**

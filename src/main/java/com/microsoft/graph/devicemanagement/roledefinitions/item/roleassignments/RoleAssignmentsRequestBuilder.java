@@ -63,9 +63,8 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}/roleAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the roleAssignment objects.
-     * @return a CompletableFuture of RoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-list?view=graph-rest-1.0">Find more info here</a>
+     * List of Role assignments for this role definition.
+     * @return a CompletableFuture of roleAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignmentCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the roleAssignment objects.
+     * List of Role assignments for this role definition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of roleAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new roleAssignment object.
+     * Create new navigation property to roleAssignments for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of roleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> post(@javax.annotation.Nonnull final RoleAssignment body) {
@@ -122,11 +119,10 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new roleAssignment object.
+     * Create new navigation property to roleAssignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> post(@javax.annotation.Nonnull final RoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the roleAssignment objects.
+     * List of Role assignments for this role definition.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the roleAssignment objects.
+     * List of Role assignments for this role definition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new roleAssignment object.
+     * Create new navigation property to roleAssignments for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new roleAssignment object.
+     * Create new navigation property to roleAssignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the roleAssignment objects.
+     * List of Role assignments for this role definition.
      */
     public class GetQueryParameters {
         /**

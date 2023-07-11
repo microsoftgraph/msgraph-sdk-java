@@ -60,7 +60,7 @@ public class VmMetadata implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the cloudProvider property value. The cloudProvider property
-     * @return a VmCloudProvider
+     * @return a vmCloudProvider
      */
     @javax.annotation.Nullable
     public VmCloudProvider getCloudProvider() {

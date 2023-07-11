@@ -87,7 +87,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a IdentitySet
+     * @return a identitySet
      */
     @javax.annotation.Nullable
     public IdentitySet getIdentity() {

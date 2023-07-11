@@ -56,7 +56,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of webhook subscriptions, based on the app ID, the user, and the user's role with a tenant. The content of the response depends on the context in which the app is calling; for details, see the scenarios in the Permissions section.
-     * @return a CompletableFuture of SubscriptionCollectionResponse
+     * @return a CompletableFuture of subscriptionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/subscription-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -76,7 +76,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of webhook subscriptions, based on the app ID, the user, and the user's role with a tenant. The content of the response depends on the context in which the app is calling; for details, see the scenarios in the Permissions section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubscriptionCollectionResponse
+     * @return a CompletableFuture of subscriptionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/subscription-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

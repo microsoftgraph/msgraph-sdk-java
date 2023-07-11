@@ -104,9 +104,9 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all localized files related to an agreement.
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get() {
@@ -123,10 +123,10 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all localized files related to an agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -212,7 +212,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all localized files related to an agreement.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -220,7 +220,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all localized files related to an agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -278,7 +278,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an agreement object.
+     * Retrieve all localized files related to an agreement.
      */
     public class GetQueryParameters {
         /**

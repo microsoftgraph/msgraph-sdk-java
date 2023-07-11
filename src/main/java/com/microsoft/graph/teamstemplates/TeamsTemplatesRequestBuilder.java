@@ -64,7 +64,7 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from teamsTemplates
-     * @return a CompletableFuture of TeamsTemplateCollectionResponse
+     * @return a CompletableFuture of teamsTemplateCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplateCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class TeamsTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from teamsTemplates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TeamsTemplateCollectionResponse
+     * @return a CompletableFuture of teamsTemplateCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

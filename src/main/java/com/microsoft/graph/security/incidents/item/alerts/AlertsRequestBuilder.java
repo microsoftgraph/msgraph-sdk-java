@@ -63,7 +63,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of related alerts. Supports $expand.
-     * @return a CompletableFuture of AlertCollectionResponse
+     * @return a CompletableFuture of alertCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of related alerts. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AlertCollectionResponse
+     * @return a CompletableFuture of alertCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

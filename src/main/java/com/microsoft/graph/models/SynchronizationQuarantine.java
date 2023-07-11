@@ -14,15 +14,15 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      */
     private Map<String, Object> additionalData;
     /**
-     * The currentBegan property
+     * Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime currentBegan;
     /**
-     * The error property
+     * Describes the error(s) that occurred when putting the synchronization job into quarantine.
      */
     private SynchronizationError error;
     /**
-     * The nextAttempt property
+     * Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime nextAttempt;
     /**
@@ -34,11 +34,11 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      */
     private QuarantineReason reason;
     /**
-     * The seriesBegan property
+     * Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime seriesBegan;
     /**
-     * The seriesCount property
+     * Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
      */
     private Long seriesCount;
     /**
@@ -68,7 +68,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         return this.additionalData;
     }
     /**
-     * Gets the currentBegan property value. The currentBegan property
+     * Gets the currentBegan property value. Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         return this.currentBegan;
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Describes the error(s) that occurred when putting the synchronization job into quarantine.
      * @return a synchronizationError
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the nextAttempt property value. The nextAttempt property
+     * Gets the nextAttempt property value. Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -117,14 +117,14 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a QuarantineReason
+     * @return a quarantineReason
      */
     @javax.annotation.Nullable
     public QuarantineReason getReason() {
         return this.reason;
     }
     /**
-     * Gets the seriesBegan property value. The seriesBegan property
+     * Gets the seriesBegan property value. Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         return this.seriesBegan;
     }
     /**
-     * Gets the seriesCount property value. The seriesCount property
+     * Gets the seriesCount property value. Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -166,7 +166,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         this.additionalData = value;
     }
     /**
-     * Sets the currentBegan property value. The currentBegan property
+     * Sets the currentBegan property value. Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the currentBegan property.
      * @return a void
      */
@@ -175,7 +175,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         this.currentBegan = value;
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Describes the error(s) that occurred when putting the synchronization job into quarantine.
      * @param value Value to set for the error property.
      * @return a void
      */
@@ -184,7 +184,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         this.error = value;
     }
     /**
-     * Sets the nextAttempt property value. The nextAttempt property
+     * Sets the nextAttempt property value. Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the nextAttempt property.
      * @return a void
      */
@@ -211,7 +211,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         this.reason = value;
     }
     /**
-     * Sets the seriesBegan property value. The seriesBegan property
+     * Sets the seriesBegan property value. Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the seriesBegan property.
      * @return a void
      */
@@ -220,7 +220,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
         this.seriesBegan = value;
     }
     /**
-     * Sets the seriesCount property value. The seriesCount property
+     * Sets the seriesCount property value. Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
      * @param value Value to set for the seriesCount property.
      * @return a void
      */

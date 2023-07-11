@@ -12,7 +12,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
      */
     private String emailAddress;
     /**
-     * Instantiates a new EmailAuthenticationMethod and sets the default values.
+     * Instantiates a new emailAuthenticationMethod and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailAuthenticationMethod
+     * @return a emailAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static EmailAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

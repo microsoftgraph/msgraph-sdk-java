@@ -1,6 +1,7 @@
 package com.microsoft.graph.me.transitivememberof.item;
 
 import com.microsoft.graph.me.transitivememberof.item.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
+import com.microsoft.graph.me.transitivememberof.item.graphdirectoryrole.GraphDirectoryRoleRequestBuilder;
 import com.microsoft.graph.me.transitivememberof.item.graphgroup.GraphGroupRequestBuilder;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -28,6 +29,13 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphAdministrativeUnitRequestBuilder graphAdministrativeUnit() {
         return new GraphAdministrativeUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to directoryRole.
+     */
+    @javax.annotation.Nonnull
+    public GraphDirectoryRoleRequestBuilder graphDirectoryRole() {
+        return new GraphDirectoryRoleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Casts the previous resource to group.

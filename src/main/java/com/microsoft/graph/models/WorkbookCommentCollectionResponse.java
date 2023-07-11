@@ -12,7 +12,7 @@ public class WorkbookCommentCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<WorkbookComment> value;
     /**
-     * Instantiates a new WorkbookCommentCollectionResponse and sets the default values.
+     * Instantiates a new workbookCommentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class WorkbookCommentCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookCommentCollectionResponse
+     * @return a workbookCommentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static WorkbookCommentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

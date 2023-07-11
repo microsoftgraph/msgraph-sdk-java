@@ -64,7 +64,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an externalItem object.
-     * @return a CompletableFuture of ExternalItemCollectionResponse
+     * @return a CompletableFuture of externalItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItemCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an externalItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ExternalItemCollectionResponse
+     * @return a CompletableFuture of externalItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

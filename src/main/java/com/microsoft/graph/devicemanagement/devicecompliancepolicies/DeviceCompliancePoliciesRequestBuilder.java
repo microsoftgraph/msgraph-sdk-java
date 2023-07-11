@@ -63,9 +63,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the androidCompliancePolicy objects.
-     * @return a CompletableFuture of DeviceCompliancePolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * The device compliance policies.
+     * @return a CompletableFuture of deviceCompliancePolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the androidCompliancePolicy objects.
+     * The device compliance policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceCompliancePolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of deviceCompliancePolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new windows10CompliancePolicy object.
+     * Create new navigation property to deviceCompliancePolicies for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@javax.annotation.Nonnull final DeviceCompliancePolicy body) {
@@ -122,11 +119,10 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new windows10CompliancePolicy object.
+     * Create new navigation property to deviceCompliancePolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@javax.annotation.Nonnull final DeviceCompliancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the androidCompliancePolicy objects.
+     * The device compliance policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the androidCompliancePolicy objects.
+     * The device compliance policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new windows10CompliancePolicy object.
+     * Create new navigation property to deviceCompliancePolicies for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new windows10CompliancePolicy object.
+     * Create new navigation property to deviceCompliancePolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the androidCompliancePolicy objects.
+     * The device compliance policies.
      */
     public class GetQueryParameters {
         /**

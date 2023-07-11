@@ -64,7 +64,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include `system` in your `$select` statement.
-     * @return a CompletableFuture of ListCollectionResponse
+     * @return a CompletableFuture of listCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include `system` in your `$select` statement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ListCollectionResponse
+     * @return a CompletableFuture of listCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/list-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

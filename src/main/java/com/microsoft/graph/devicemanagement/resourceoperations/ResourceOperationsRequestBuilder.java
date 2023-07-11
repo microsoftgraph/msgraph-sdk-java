@@ -63,9 +63,8 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/resourceOperations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
-     * @return a CompletableFuture of ResourceOperationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
+     * The Resource Operations.
+     * @return a CompletableFuture of resourceOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperationCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ResourceOperationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of resourceOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of resourceOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> post(@javax.annotation.Nonnull final ResourceOperation body) {
@@ -122,11 +119,10 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of resourceOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> post(@javax.annotation.Nonnull final ResourceOperation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new resourceOperation object.
+     * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the resourceOperation objects.
+     * The Resource Operations.
      */
     public class GetQueryParameters {
         /**

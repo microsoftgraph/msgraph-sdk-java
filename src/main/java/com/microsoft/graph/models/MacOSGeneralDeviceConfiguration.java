@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the macOSGeneralDeviceConfiguration resource.
+ */
 public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Possible values of the compliance app list.
@@ -56,7 +59,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      */
     private RequiredPasswordType passwordRequiredType;
     /**
-     * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new macOSGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -67,7 +70,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSGeneralDeviceConfiguration
+     * @return a macOSGeneralDeviceConfiguration
      */
     @javax.annotation.Nonnull
     public static MacOSGeneralDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +79,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a appListType
      */
     @javax.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -185,7 +188,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {

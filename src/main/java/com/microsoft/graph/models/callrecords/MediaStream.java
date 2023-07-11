@@ -422,7 +422,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the streamDirection property value. The streamDirection property
-     * @return a MediaStreamDirection
+     * @return a mediaStreamDirection
      */
     @javax.annotation.Nullable
     public MediaStreamDirection getStreamDirection() {

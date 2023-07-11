@@ -84,7 +84,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the chatType property value. The chatType property
-     * @return a ChatType
+     * @return a chatType
      */
     @javax.annotation.Nullable
     public ChatType getChatType() {

@@ -64,7 +64,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of domain objects.
-     * @return a CompletableFuture of DomainCollectionResponse
+     * @return a CompletableFuture of domainCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of domain objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DomainCollectionResponse
+     * @return a CompletableFuture of domainCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/domain-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

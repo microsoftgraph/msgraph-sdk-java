@@ -71,7 +71,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieves the educationUser members of an educationClass.
-     * @return a CompletableFuture of EducationUserCollectionResponse
+     * @return a CompletableFuture of educationUserCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieves the educationUser members of an educationClass.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationUserCollectionResponse
+     * @return a CompletableFuture of educationUserCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
