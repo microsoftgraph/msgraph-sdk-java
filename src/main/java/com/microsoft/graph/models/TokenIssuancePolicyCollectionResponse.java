@@ -12,7 +12,7 @@ public class TokenIssuancePolicyCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<TokenIssuancePolicy> value;
     /**
-     * Instantiates a new TokenIssuancePolicyCollectionResponse and sets the default values.
+     * Instantiates a new tokenIssuancePolicyCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class TokenIssuancePolicyCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TokenIssuancePolicyCollectionResponse
+     * @return a tokenIssuancePolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public static TokenIssuancePolicyCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

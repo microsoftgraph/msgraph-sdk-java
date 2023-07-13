@@ -72,7 +72,7 @@ public class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder
     }
     /**
      * Gets the recurrence property value. The recurrence property
-     * @return a PatternedRecurrence
+     * @return a patternedRecurrence
      */
     @javax.annotation.Nullable
     public PatternedRecurrence getRecurrence() {

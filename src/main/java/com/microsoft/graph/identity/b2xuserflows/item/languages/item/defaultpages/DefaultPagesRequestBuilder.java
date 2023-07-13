@@ -64,7 +64,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
-     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
+     * @return a CompletableFuture of userFlowLanguagePageCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePageCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class DefaultPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserFlowLanguagePageCollectionResponse
+     * @return a CompletableFuture of userFlowLanguagePageCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguagePageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

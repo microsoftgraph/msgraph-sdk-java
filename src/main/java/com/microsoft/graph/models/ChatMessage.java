@@ -132,7 +132,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. The body property
-     * @return a ItemBody
+     * @return a itemBody
      */
     @javax.annotation.Nullable
     public ItemBody getBody() {
@@ -237,7 +237,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a ChatMessageImportance
+     * @return a chatMessageImportance
      */
     @javax.annotation.Nullable
     public ChatMessageImportance getImportance() {
@@ -285,7 +285,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the messageType property value. The messageType property
-     * @return a ChatMessageType
+     * @return a chatMessageType
      */
     @javax.annotation.Nullable
     public ChatMessageType getMessageType() {

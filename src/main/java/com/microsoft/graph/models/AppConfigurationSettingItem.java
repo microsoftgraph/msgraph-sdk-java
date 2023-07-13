@@ -67,7 +67,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the appConfigKeyType property value. App configuration key types.
-     * @return a MdmAppConfigKeyType
+     * @return a mdmAppConfigKeyType
      */
     @javax.annotation.Nullable
     public MdmAppConfigKeyType getAppConfigKeyType() {

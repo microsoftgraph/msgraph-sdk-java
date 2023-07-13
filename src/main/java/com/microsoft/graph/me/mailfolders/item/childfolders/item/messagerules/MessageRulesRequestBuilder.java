@@ -64,7 +64,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the messageRule objects defined for the user's inbox.
-     * @return a CompletableFuture of MessageRuleCollectionResponse
+     * @return a CompletableFuture of messageRuleCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MessageRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the messageRule objects defined for the user's inbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MessageRuleCollectionResponse
+     * @return a CompletableFuture of messageRuleCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -12,7 +12,7 @@ public class RiskyServicePrincipalCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<RiskyServicePrincipal> value;
     /**
-     * Instantiates a new RiskyServicePrincipalCollectionResponse and sets the default values.
+     * Instantiates a new riskyServicePrincipalCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class RiskyServicePrincipalCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyServicePrincipalCollectionResponse
+     * @return a riskyServicePrincipalCollectionResponse
      */
     @javax.annotation.Nonnull
     public static RiskyServicePrincipalCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

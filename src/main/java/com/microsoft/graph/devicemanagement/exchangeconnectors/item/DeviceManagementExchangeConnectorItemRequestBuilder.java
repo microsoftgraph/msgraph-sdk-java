@@ -49,9 +49,8 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/deviceManagement/exchangeConnectors/{deviceManagementExchangeConnector%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a deviceManagementExchangeConnector.
+     * Delete navigation property exchangeConnectors for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -68,10 +67,9 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Deletes a deviceManagementExchangeConnector.
+     * Delete navigation property exchangeConnectors for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -88,9 +86,8 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Read properties and relationships of the deviceManagementExchangeConnector object.
+     * The list of Exchange Connectors configured by the tenant.
      * @return a CompletableFuture of deviceManagementExchangeConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> get() {
@@ -107,10 +104,9 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Read properties and relationships of the deviceManagementExchangeConnector object.
+     * The list of Exchange Connectors configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementExchangeConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,10 +123,9 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the properties of a deviceManagementExchangeConnector object.
+     * Update the navigation property exchangeConnectors in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceManagementExchangeConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@javax.annotation.Nonnull final DeviceManagementExchangeConnector body) {
@@ -147,11 +142,10 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the properties of a deviceManagementExchangeConnector object.
+     * Update the navigation property exchangeConnectors in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementExchangeConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@javax.annotation.Nonnull final DeviceManagementExchangeConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -169,7 +163,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Deletes a deviceManagementExchangeConnector.
+     * Delete navigation property exchangeConnectors for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -177,7 +171,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceManagementExchangeConnector.
+     * Delete navigation property exchangeConnectors for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -196,7 +190,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceManagementExchangeConnector object.
+     * The list of Exchange Connectors configured by the tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -204,7 +198,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceManagementExchangeConnector object.
+     * The list of Exchange Connectors configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -225,7 +219,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceManagementExchangeConnector object.
+     * Update the navigation property exchangeConnectors in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -234,7 +228,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceManagementExchangeConnector object.
+     * Update the navigation property exchangeConnectors in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -262,7 +256,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceManagementExchangeConnector object.
+     * The list of Exchange Connectors configured by the tenant.
      */
     public class GetQueryParameters {
         /**

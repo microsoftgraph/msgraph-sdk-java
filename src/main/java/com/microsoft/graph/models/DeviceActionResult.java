@@ -75,7 +75,7 @@ public class DeviceActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actionState property value. State of the action on the device
-     * @return a ActionState
+     * @return a actionState
      */
     @javax.annotation.Nullable
     public ActionState getActionState() {

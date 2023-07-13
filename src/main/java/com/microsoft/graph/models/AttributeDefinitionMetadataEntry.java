@@ -13,7 +13,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
      */
     private Map<String, Object> additionalData;
     /**
-     * The key property
+     * Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      */
     private AttributeDefinitionMetadata key;
     /**
@@ -21,7 +21,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
      */
     private String odataType;
     /**
-     * The value property
+     * Value of the metadata property.
      */
     private String value;
     /**
@@ -63,7 +63,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      * @return a attributeDefinitionMetadata
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
         return this.odataType;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value of the metadata property.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
         this.additionalData = value;
     }
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -127,7 +127,7 @@ public class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, P
         this.odataType = value;
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value of the metadata property.
      * @param value Value to set for the value property.
      * @return a void
      */

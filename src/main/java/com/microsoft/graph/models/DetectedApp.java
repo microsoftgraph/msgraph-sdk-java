@@ -98,7 +98,7 @@ public class DetectedApp extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
-     * @return a DetectedAppPlatformType
+     * @return a detectedAppPlatformType
      */
     @javax.annotation.Nullable
     public DetectedAppPlatformType getPlatform() {

@@ -64,7 +64,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a CompletableFuture of driveItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/driveitem-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DriveItemCollectionResponse
+     * @return a CompletableFuture of driveItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/driveitem-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

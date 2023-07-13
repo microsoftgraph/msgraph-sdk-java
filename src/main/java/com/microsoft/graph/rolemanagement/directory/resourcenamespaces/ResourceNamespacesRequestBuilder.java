@@ -64,7 +64,7 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceNamespaces from roleManagement
-     * @return a CompletableFuture of UnifiedRbacResourceNamespaceCollectionResponse
+     * @return a CompletableFuture of unifiedRbacResourceNamespaceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespaceCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ResourceNamespacesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get resourceNamespaces from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRbacResourceNamespaceCollectionResponse
+     * @return a CompletableFuture of unifiedRbacResourceNamespaceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespaceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

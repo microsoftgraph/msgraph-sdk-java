@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+/**
+ * Singleton entity that acts as a container for all device management functionality.
+ */
 public class DeviceManagement extends Entity implements Parsable {
     /**
      * Apple push notification certificate.
@@ -61,6 +64,10 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     private java.util.List<DeviceManagementPartner> deviceManagementPartners;
     /**
+     * Device protection overview.
+     */
+    private DeviceProtectionOverview deviceProtectionOverview;
+    /**
      * The list of Exchange Connectors configured by the tenant.
      */
     private java.util.List<DeviceManagementExchangeConnector> exchangeConnectors;
@@ -88,6 +95,10 @@ public class DeviceManagement extends Entity implements Parsable {
      * The list of managed devices.
      */
     private java.util.List<ManagedDevice> managedDevices;
+    /**
+     * The collection property of MobileAppTroubleshootingEvent.
+     */
+    private java.util.List<MobileAppTroubleshootingEvent> mobileAppTroubleshootingEvents;
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
      */
@@ -141,6 +152,98 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     private java.util.List<DeviceManagementTroubleshootingEvent> troubleshootingEvents;
     /**
+     * User experience analytics appHealth Application Performance
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> userExperienceAnalyticsAppHealthApplicationPerformance;
+    /**
+     * User experience analytics appHealth Application Performance by App Version details
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
+    /**
+     * User experience analytics appHealth Application Performance by App Version Device Id
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
+    /**
+     * User experience analytics appHealth Application Performance by OS Version
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
+    /**
+     * User experience analytics appHealth Model Performance
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> userExperienceAnalyticsAppHealthDeviceModelPerformance;
+    /**
+     * User experience analytics appHealth Device Performance
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> userExperienceAnalyticsAppHealthDevicePerformance;
+    /**
+     * User experience analytics device performance details
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> userExperienceAnalyticsAppHealthDevicePerformanceDetails;
+    /**
+     * User experience analytics appHealth OS version Performance
+     */
+    private java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> userExperienceAnalyticsAppHealthOSVersionPerformance;
+    /**
+     * User experience analytics appHealth overview
+     */
+    private UserExperienceAnalyticsCategory userExperienceAnalyticsAppHealthOverview;
+    /**
+     * User experience analytics baselines
+     */
+    private java.util.List<UserExperienceAnalyticsBaseline> userExperienceAnalyticsBaselines;
+    /**
+     * User experience analytics categories
+     */
+    private java.util.List<UserExperienceAnalyticsCategory> userExperienceAnalyticsCategories;
+    /**
+     * User experience analytics device performance
+     */
+    private java.util.List<UserExperienceAnalyticsDevicePerformance> userExperienceAnalyticsDevicePerformance;
+    /**
+     * User experience analytics device scores
+     */
+    private java.util.List<UserExperienceAnalyticsDeviceScores> userExperienceAnalyticsDeviceScores;
+    /**
+     * User experience analytics device Startup History
+     */
+    private java.util.List<UserExperienceAnalyticsDeviceStartupHistory> userExperienceAnalyticsDeviceStartupHistory;
+    /**
+     * User experience analytics device Startup Processes
+     */
+    private java.util.List<UserExperienceAnalyticsDeviceStartupProcess> userExperienceAnalyticsDeviceStartupProcesses;
+    /**
+     * User experience analytics metric history
+     */
+    private java.util.List<UserExperienceAnalyticsMetricHistory> userExperienceAnalyticsMetricHistory;
+    /**
+     * User experience analytics model scores
+     */
+    private java.util.List<UserExperienceAnalyticsModelScores> userExperienceAnalyticsModelScores;
+    /**
+     * User experience analytics overview
+     */
+    private UserExperienceAnalyticsOverview userExperienceAnalyticsOverview;
+    /**
+     * User experience analytics device Startup Score History
+     */
+    private java.util.List<UserExperienceAnalyticsScoreHistory> userExperienceAnalyticsScoreHistory;
+    /**
+     * User experience analytics device settings
+     */
+    private UserExperienceAnalyticsSettings userExperienceAnalyticsSettings;
+    /**
+     * User experience analytics work from anywhere hardware readiness metrics.
+     */
+    private UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
+    /**
+     * User experience analytics work from anywhere metrics.
+     */
+    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> userExperienceAnalyticsWorkFromAnywhereMetrics;
+    /**
+     * The user experience analytics work from anywhere model performance
+     */
+    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> userExperienceAnalyticsWorkFromAnywhereModelPerformance;
+    /**
      * The Windows autopilot device identities contained collection.
      */
     private java.util.List<WindowsAutopilotDeviceIdentity> windowsAutopilotDeviceIdentities;
@@ -153,7 +256,15 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     private java.util.List<WindowsInformationProtectionNetworkLearningSummary> windowsInformationProtectionNetworkLearningSummaries;
     /**
-     * Instantiates a new DeviceManagement and sets the default values.
+     * The list of affected malware in the tenant.
+     */
+    private java.util.List<WindowsMalwareInformation> windowsMalwareInformation;
+    /**
+     * Malware overview for windows devices.
+     */
+    private WindowsMalwareOverview windowsMalwareOverview;
+    /**
+     * Instantiates a new deviceManagement and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -163,7 +274,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagement
+     * @return a deviceManagement
      */
     @javax.annotation.Nonnull
     public static DeviceManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -275,6 +386,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.deviceManagementPartners;
     }
     /**
+     * Gets the deviceProtectionOverview property value. Device protection overview.
+     * @return a deviceProtectionOverview
+     */
+    @javax.annotation.Nullable
+    public DeviceProtectionOverview getDeviceProtectionOverview() {
+        return this.deviceProtectionOverview;
+    }
+    /**
      * Gets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
      * @return a deviceManagementExchangeConnector
      */
@@ -302,6 +421,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("deviceConfigurations", (n) -> { this.setDeviceConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceEnrollmentConfigurations", (n) -> { this.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceManagementPartners", (n) -> { this.setDeviceManagementPartners(n.getCollectionOfObjectValues(DeviceManagementPartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceProtectionOverview", (n) -> { this.setDeviceProtectionOverview(n.getObjectValue(DeviceProtectionOverview::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeConnectors", (n) -> { this.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("importedWindowsAutopilotDeviceIdentities", (n) -> { this.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("intuneAccountId", (n) -> { this.setIntuneAccountId(n.getUUIDValue()); });
@@ -309,6 +429,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("iosUpdateStatuses", (n) -> { this.setIosUpdateStatuses(n.getCollectionOfObjectValues(IosUpdateDeviceStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceOverview", (n) -> { this.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppTroubleshootingEvents", (n) -> { this.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileThreatDefenseConnectors", (n) -> { this.setMobileThreatDefenseConnectors(n.getCollectionOfObjectValues(MobileThreatDefenseConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("notificationMessageTemplates", (n) -> { this.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("remoteAssistancePartners", (n) -> { this.setRemoteAssistancePartners(n.getCollectionOfObjectValues(RemoteAssistancePartner::createFromDiscriminatorValue)); });
@@ -322,9 +443,34 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("telecomExpenseManagementPartners", (n) -> { this.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("termsAndConditions", (n) -> { this.setTermsAndConditions(n.getCollectionOfObjectValues(TermsAndConditions::createFromDiscriminatorValue)); });
         deserializerMap.put("troubleshootingEvents", (n) -> { this.setTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthDeviceModelPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthDeviceModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthDevicePerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthDevicePerformanceDetails", (n) -> { this.setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformanceDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthOSVersionPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthOSVersionPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthOverview", (n) -> { this.setUserExperienceAnalyticsAppHealthOverview(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBaselines", (n) -> { this.setUserExperienceAnalyticsBaselines(n.getCollectionOfObjectValues(UserExperienceAnalyticsBaseline::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsCategories", (n) -> { this.setUserExperienceAnalyticsCategories(n.getCollectionOfObjectValues(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDevicePerformance", (n) -> { this.setUserExperienceAnalyticsDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceScores", (n) -> { this.setUserExperienceAnalyticsDeviceScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceStartupHistory", (n) -> { this.setUserExperienceAnalyticsDeviceStartupHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceStartupProcesses", (n) -> { this.setUserExperienceAnalyticsDeviceStartupProcesses(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupProcess::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsMetricHistory", (n) -> { this.setUserExperienceAnalyticsMetricHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsModelScores", (n) -> { this.setUserExperienceAnalyticsModelScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsModelScores::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsOverview", (n) -> { this.setUserExperienceAnalyticsOverview(n.getObjectValue(UserExperienceAnalyticsOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsScoreHistory", (n) -> { this.setUserExperienceAnalyticsScoreHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsScoreHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsSettings", (n) -> { this.setUserExperienceAnalyticsSettings(n.getObjectValue(UserExperienceAnalyticsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereMetrics", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereMetrics(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereMetric::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereModelPerformance", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsAutopilotDeviceIdentities", (n) -> { this.setWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsInformationProtectionAppLearningSummaries", (n) -> { this.setWindowsInformationProtectionAppLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsInformationProtectionNetworkLearningSummaries", (n) -> { this.setWindowsInformationProtectionNetworkLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsMalwareInformation", (n) -> { this.setWindowsMalwareInformation(n.getCollectionOfObjectValues(WindowsMalwareInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsMalwareOverview", (n) -> { this.setWindowsMalwareOverview(n.getObjectValue(WindowsMalwareOverview::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -374,6 +520,14 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
         return this.managedDevices;
+    }
+    /**
+     * Gets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
+     * @return a mobileAppTroubleshootingEvent
+     */
+    @javax.annotation.Nullable
+    public java.util.List<MobileAppTroubleshootingEvent> getMobileAppTroubleshootingEvents() {
+        return this.mobileAppTroubleshootingEvents;
     }
     /**
      * Gets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
@@ -449,7 +603,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptionState property value. Tenant mobile device management subscription state.
-     * @return a DeviceManagementSubscriptionState
+     * @return a deviceManagementSubscriptionState
      */
     @javax.annotation.Nullable
     public DeviceManagementSubscriptionState getSubscriptionState() {
@@ -480,6 +634,190 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.troubleshootingEvents;
     }
     /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
+     * @return a userExperienceAnalyticsAppHealthApplicationPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> getUserExperienceAnalyticsAppHealthApplicationPerformance() {
+        return this.userExperienceAnalyticsAppHealthApplicationPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
+        return this.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
+        return this.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
+        return this.userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
+     * @return a userExperienceAnalyticsAppHealthDeviceModelPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> getUserExperienceAnalyticsAppHealthDeviceModelPerformance() {
+        return this.userExperienceAnalyticsAppHealthDeviceModelPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
+     * @return a userExperienceAnalyticsAppHealthDevicePerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> getUserExperienceAnalyticsAppHealthDevicePerformance() {
+        return this.userExperienceAnalyticsAppHealthDevicePerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
+     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> getUserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
+        return this.userExperienceAnalyticsAppHealthDevicePerformanceDetails;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
+     * @return a userExperienceAnalyticsAppHealthOSVersionPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> getUserExperienceAnalyticsAppHealthOSVersionPerformance() {
+        return this.userExperienceAnalyticsAppHealthOSVersionPerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
+     * @return a userExperienceAnalyticsCategory
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsCategory getUserExperienceAnalyticsAppHealthOverview() {
+        return this.userExperienceAnalyticsAppHealthOverview;
+    }
+    /**
+     * Gets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
+     * @return a userExperienceAnalyticsBaseline
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsBaseline> getUserExperienceAnalyticsBaselines() {
+        return this.userExperienceAnalyticsBaselines;
+    }
+    /**
+     * Gets the userExperienceAnalyticsCategories property value. User experience analytics categories
+     * @return a userExperienceAnalyticsCategory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsCategory> getUserExperienceAnalyticsCategories() {
+        return this.userExperienceAnalyticsCategories;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
+     * @return a userExperienceAnalyticsDevicePerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDevicePerformance> getUserExperienceAnalyticsDevicePerformance() {
+        return this.userExperienceAnalyticsDevicePerformance;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
+     * @return a userExperienceAnalyticsDeviceScores
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceScores> getUserExperienceAnalyticsDeviceScores() {
+        return this.userExperienceAnalyticsDeviceScores;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
+     * @return a userExperienceAnalyticsDeviceStartupHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceStartupHistory> getUserExperienceAnalyticsDeviceStartupHistory() {
+        return this.userExperienceAnalyticsDeviceStartupHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
+     * @return a userExperienceAnalyticsDeviceStartupProcess
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsDeviceStartupProcess> getUserExperienceAnalyticsDeviceStartupProcesses() {
+        return this.userExperienceAnalyticsDeviceStartupProcesses;
+    }
+    /**
+     * Gets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
+     * @return a userExperienceAnalyticsMetricHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsMetricHistory> getUserExperienceAnalyticsMetricHistory() {
+        return this.userExperienceAnalyticsMetricHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
+     * @return a userExperienceAnalyticsModelScores
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsModelScores> getUserExperienceAnalyticsModelScores() {
+        return this.userExperienceAnalyticsModelScores;
+    }
+    /**
+     * Gets the userExperienceAnalyticsOverview property value. User experience analytics overview
+     * @return a userExperienceAnalyticsOverview
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsOverview getUserExperienceAnalyticsOverview() {
+        return this.userExperienceAnalyticsOverview;
+    }
+    /**
+     * Gets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
+     * @return a userExperienceAnalyticsScoreHistory
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsScoreHistory> getUserExperienceAnalyticsScoreHistory() {
+        return this.userExperienceAnalyticsScoreHistory;
+    }
+    /**
+     * Gets the userExperienceAnalyticsSettings property value. User experience analytics device settings
+     * @return a userExperienceAnalyticsSettings
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsSettings getUserExperienceAnalyticsSettings() {
+        return this.userExperienceAnalyticsSettings;
+    }
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
+     * @return a userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
+        return this.userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
+    }
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
+     * @return a userExperienceAnalyticsWorkFromAnywhereMetric
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> getUserExperienceAnalyticsWorkFromAnywhereMetrics() {
+        return this.userExperienceAnalyticsWorkFromAnywhereMetrics;
+    }
+    /**
+     * Gets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
+     * @return a userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> getUserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
+        return this.userExperienceAnalyticsWorkFromAnywhereModelPerformance;
+    }
+    /**
      * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
      * @return a windowsAutopilotDeviceIdentity
      */
@@ -504,6 +842,22 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.windowsInformationProtectionNetworkLearningSummaries;
     }
     /**
+     * Gets the windowsMalwareInformation property value. The list of affected malware in the tenant.
+     * @return a windowsMalwareInformation
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsMalwareInformation> getWindowsMalwareInformation() {
+        return this.windowsMalwareInformation;
+    }
+    /**
+     * Gets the windowsMalwareOverview property value. Malware overview for windows devices.
+     * @return a windowsMalwareOverview
+     */
+    @javax.annotation.Nullable
+    public WindowsMalwareOverview getWindowsMalwareOverview() {
+        return this.windowsMalwareOverview;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -525,6 +879,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceConfigurations", this.getDeviceConfigurations());
         writer.writeCollectionOfObjectValues("deviceEnrollmentConfigurations", this.getDeviceEnrollmentConfigurations());
         writer.writeCollectionOfObjectValues("deviceManagementPartners", this.getDeviceManagementPartners());
+        writer.writeObjectValue("deviceProtectionOverview", this.getDeviceProtectionOverview());
         writer.writeCollectionOfObjectValues("exchangeConnectors", this.getExchangeConnectors());
         writer.writeCollectionOfObjectValues("importedWindowsAutopilotDeviceIdentities", this.getImportedWindowsAutopilotDeviceIdentities());
         writer.writeUUIDValue("intuneAccountId", this.getIntuneAccountId());
@@ -532,6 +887,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("iosUpdateStatuses", this.getIosUpdateStatuses());
         writer.writeObjectValue("managedDeviceOverview", this.getManagedDeviceOverview());
         writer.writeCollectionOfObjectValues("managedDevices", this.getManagedDevices());
+        writer.writeCollectionOfObjectValues("mobileAppTroubleshootingEvents", this.getMobileAppTroubleshootingEvents());
         writer.writeCollectionOfObjectValues("mobileThreatDefenseConnectors", this.getMobileThreatDefenseConnectors());
         writer.writeCollectionOfObjectValues("notificationMessageTemplates", this.getNotificationMessageTemplates());
         writer.writeCollectionOfObjectValues("remoteAssistancePartners", this.getRemoteAssistancePartners());
@@ -545,9 +901,34 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("telecomExpenseManagementPartners", this.getTelecomExpenseManagementPartners());
         writer.writeCollectionOfObjectValues("termsAndConditions", this.getTermsAndConditions());
         writer.writeCollectionOfObjectValues("troubleshootingEvents", this.getTroubleshootingEvents());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformance", this.getUserExperienceAnalyticsAppHealthApplicationPerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthDeviceModelPerformance", this.getUserExperienceAnalyticsAppHealthDeviceModelPerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthDevicePerformance", this.getUserExperienceAnalyticsAppHealthDevicePerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthDevicePerformanceDetails", this.getUserExperienceAnalyticsAppHealthDevicePerformanceDetails());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthOSVersionPerformance", this.getUserExperienceAnalyticsAppHealthOSVersionPerformance());
+        writer.writeObjectValue("userExperienceAnalyticsAppHealthOverview", this.getUserExperienceAnalyticsAppHealthOverview());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsBaselines", this.getUserExperienceAnalyticsBaselines());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsCategories", this.getUserExperienceAnalyticsCategories());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDevicePerformance", this.getUserExperienceAnalyticsDevicePerformance());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceScores", this.getUserExperienceAnalyticsDeviceScores());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceStartupHistory", this.getUserExperienceAnalyticsDeviceStartupHistory());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsDeviceStartupProcesses", this.getUserExperienceAnalyticsDeviceStartupProcesses());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsMetricHistory", this.getUserExperienceAnalyticsMetricHistory());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsModelScores", this.getUserExperienceAnalyticsModelScores());
+        writer.writeObjectValue("userExperienceAnalyticsOverview", this.getUserExperienceAnalyticsOverview());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsScoreHistory", this.getUserExperienceAnalyticsScoreHistory());
+        writer.writeObjectValue("userExperienceAnalyticsSettings", this.getUserExperienceAnalyticsSettings());
+        writer.writeObjectValue("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", this.getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsWorkFromAnywhereMetrics", this.getUserExperienceAnalyticsWorkFromAnywhereMetrics());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsWorkFromAnywhereModelPerformance", this.getUserExperienceAnalyticsWorkFromAnywhereModelPerformance());
         writer.writeCollectionOfObjectValues("windowsAutopilotDeviceIdentities", this.getWindowsAutopilotDeviceIdentities());
         writer.writeCollectionOfObjectValues("windowsInformationProtectionAppLearningSummaries", this.getWindowsInformationProtectionAppLearningSummaries());
         writer.writeCollectionOfObjectValues("windowsInformationProtectionNetworkLearningSummaries", this.getWindowsInformationProtectionNetworkLearningSummaries());
+        writer.writeCollectionOfObjectValues("windowsMalwareInformation", this.getWindowsMalwareInformation());
+        writer.writeObjectValue("windowsMalwareOverview", this.getWindowsMalwareOverview());
     }
     /**
      * Sets the applePushNotificationCertificate property value. Apple push notification certificate.
@@ -667,6 +1048,15 @@ public class DeviceManagement extends Entity implements Parsable {
         this.deviceManagementPartners = value;
     }
     /**
+     * Sets the deviceProtectionOverview property value. Device protection overview.
+     * @param value Value to set for the deviceProtectionOverview property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDeviceProtectionOverview(@javax.annotation.Nullable final DeviceProtectionOverview value) {
+        this.deviceProtectionOverview = value;
+    }
+    /**
      * Sets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
      * @param value Value to set for the exchangeConnectors property.
      * @return a void
@@ -728,6 +1118,15 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this.managedDevices = value;
+    }
+    /**
+     * Sets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
+     * @param value Value to set for the mobileAppTroubleshootingEvents property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMobileAppTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<MobileAppTroubleshootingEvent> value) {
+        this.mobileAppTroubleshootingEvents = value;
     }
     /**
      * Sets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
@@ -847,6 +1246,213 @@ public class DeviceManagement extends Entity implements Parsable {
         this.troubleshootingEvents = value;
     }
     /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformance property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> value) {
+        this.userExperienceAnalyticsAppHealthApplicationPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> value) {
+        this.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> value) {
+        this.userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
+     * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> value) {
+        this.userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthDeviceModelPerformance property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthDeviceModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> value) {
+        this.userExperienceAnalyticsAppHealthDeviceModelPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformance property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> value) {
+        this.userExperienceAnalyticsAppHealthDevicePerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
+     * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformanceDetails property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> value) {
+        this.userExperienceAnalyticsAppHealthDevicePerformanceDetails = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
+     * @param value Value to set for the userExperienceAnalyticsAppHealthOSVersionPerformance property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthOSVersionPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> value) {
+        this.userExperienceAnalyticsAppHealthOSVersionPerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
+     * @param value Value to set for the userExperienceAnalyticsAppHealthOverview property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAppHealthOverview(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
+        this.userExperienceAnalyticsAppHealthOverview = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
+     * @param value Value to set for the userExperienceAnalyticsBaselines property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsBaselines(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBaseline> value) {
+        this.userExperienceAnalyticsBaselines = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsCategories property value. User experience analytics categories
+     * @param value Value to set for the userExperienceAnalyticsCategories property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsCategories(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsCategory> value) {
+        this.userExperienceAnalyticsCategories = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
+     * @param value Value to set for the userExperienceAnalyticsDevicePerformance property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDevicePerformance> value) {
+        this.userExperienceAnalyticsDevicePerformance = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
+     * @param value Value to set for the userExperienceAnalyticsDeviceScores property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsDeviceScores(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceScores> value) {
+        this.userExperienceAnalyticsDeviceScores = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
+     * @param value Value to set for the userExperienceAnalyticsDeviceStartupHistory property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsDeviceStartupHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupHistory> value) {
+        this.userExperienceAnalyticsDeviceStartupHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
+     * @param value Value to set for the userExperienceAnalyticsDeviceStartupProcesses property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsDeviceStartupProcesses(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupProcess> value) {
+        this.userExperienceAnalyticsDeviceStartupProcesses = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
+     * @param value Value to set for the userExperienceAnalyticsMetricHistory property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsMetricHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetricHistory> value) {
+        this.userExperienceAnalyticsMetricHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
+     * @param value Value to set for the userExperienceAnalyticsModelScores property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsModelScores(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsModelScores> value) {
+        this.userExperienceAnalyticsModelScores = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsOverview property value. User experience analytics overview
+     * @param value Value to set for the userExperienceAnalyticsOverview property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsOverview(@javax.annotation.Nullable final UserExperienceAnalyticsOverview value) {
+        this.userExperienceAnalyticsOverview = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
+     * @param value Value to set for the userExperienceAnalyticsScoreHistory property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsScoreHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsScoreHistory> value) {
+        this.userExperienceAnalyticsScoreHistory = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsSettings property value. User experience analytics device settings
+     * @param value Value to set for the userExperienceAnalyticsSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsSettings(@javax.annotation.Nullable final UserExperienceAnalyticsSettings value) {
+        this.userExperienceAnalyticsSettings = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
+     * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(@javax.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric value) {
+        this.userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
+     * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereMetrics property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsWorkFromAnywhereMetrics(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> value) {
+        this.userExperienceAnalyticsWorkFromAnywhereMetrics = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
+     * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereModelPerformance property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> value) {
+        this.userExperienceAnalyticsWorkFromAnywhereModelPerformance = value;
+    }
+    /**
      * Sets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
      * @param value Value to set for the windowsAutopilotDeviceIdentities property.
      * @return a void
@@ -872,5 +1478,23 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setWindowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionNetworkLearningSummary> value) {
         this.windowsInformationProtectionNetworkLearningSummaries = value;
+    }
+    /**
+     * Sets the windowsMalwareInformation property value. The list of affected malware in the tenant.
+     * @param value Value to set for the windowsMalwareInformation property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWindowsMalwareInformation(@javax.annotation.Nullable final java.util.List<WindowsMalwareInformation> value) {
+        this.windowsMalwareInformation = value;
+    }
+    /**
+     * Sets the windowsMalwareOverview property value. Malware overview for windows devices.
+     * @param value Value to set for the windowsMalwareOverview property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWindowsMalwareOverview(@javax.annotation.Nullable final WindowsMalwareOverview value) {
+        this.windowsMalwareOverview = value;
     }
 }

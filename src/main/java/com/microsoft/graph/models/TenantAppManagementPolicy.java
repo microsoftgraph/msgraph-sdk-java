@@ -20,7 +20,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      */
     private AppManagementConfiguration servicePrincipalRestrictions;
     /**
-     * Instantiates a new TenantAppManagementPolicy and sets the default values.
+     * Instantiates a new tenantAppManagementPolicy and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantAppManagementPolicy
+     * @return a tenantAppManagementPolicy
      */
     @javax.annotation.Nonnull
     public static TenantAppManagementPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

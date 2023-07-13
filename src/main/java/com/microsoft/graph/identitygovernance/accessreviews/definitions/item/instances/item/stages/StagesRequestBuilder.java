@@ -75,7 +75,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the stages in a multi-stage access review instance.
-     * @return a CompletableFuture of AccessReviewStageCollectionResponse
+     * @return a CompletableFuture of accessReviewStageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the stages in a multi-stage access review instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessReviewStageCollectionResponse
+     * @return a CompletableFuture of accessReviewStageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -7,6 +7,10 @@ import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentre
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.catalogs.CatalogsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.resourceenvironments.ResourceEnvironmentsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerequests.ResourceRequestsRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.resourcerolescopes.ResourceRoleScopesRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.resources.ResourcesRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
 import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -76,6 +80,34 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder connectedOrganizations() {
         return new ConnectedOrganizationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceEnvironments property of the microsoft.graph.entitlementManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourceEnvironmentsRequestBuilder resourceEnvironments() {
+        return new ResourceEnvironmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceRequests property of the microsoft.graph.entitlementManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourceRequestsRequestBuilder resourceRequests() {
+        return new ResourceRequestsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceRoleScopes property of the microsoft.graph.entitlementManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourceRoleScopesRequestBuilder resourceRoleScopes() {
+        return new ResourceRoleScopesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.entitlementManagement entity.
+     */
+    @javax.annotation.Nonnull
+    public ResourcesRequestBuilder resources() {
+        return new ResourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity.

@@ -64,7 +64,7 @@ public class PasswordMethodsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of the passwords registered to a user, represented by a passwordAuthenticationMethod object. This will return exactly one object, as a user can have exactly one password. For security, the password itself will never be returned in the object and the **password** property is always `null`.
-     * @return a CompletableFuture of PasswordAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of passwordAuthenticationMethodCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-passwordmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PasswordMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of the passwords registered to a user, represented by a passwordAuthenticationMethod object. This will return exactly one object, as a user can have exactly one password. For security, the password itself will never be returned in the object and the **password** property is always `null`.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of PasswordAuthenticationMethodCollectionResponse
+     * @return a CompletableFuture of passwordAuthenticationMethodCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-passwordmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -12,7 +12,7 @@ public class WindowsAutopilotDeviceIdentityCollectionResponse extends BaseCollec
      */
     private java.util.List<WindowsAutopilotDeviceIdentity> value;
     /**
-     * Instantiates a new WindowsAutopilotDeviceIdentityCollectionResponse and sets the default values.
+     * Instantiates a new windowsAutopilotDeviceIdentityCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class WindowsAutopilotDeviceIdentityCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAutopilotDeviceIdentityCollectionResponse
+     * @return a windowsAutopilotDeviceIdentityCollectionResponse
      */
     @javax.annotation.Nonnull
     public static WindowsAutopilotDeviceIdentityCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

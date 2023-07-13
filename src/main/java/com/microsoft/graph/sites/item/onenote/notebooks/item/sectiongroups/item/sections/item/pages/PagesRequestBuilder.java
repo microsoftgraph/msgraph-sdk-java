@@ -64,7 +64,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of page objects from the specified section.
-     * @return a CompletableFuture of OnenotePageCollectionResponse
+     * @return a CompletableFuture of onenotePageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of page objects from the specified section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenotePageCollectionResponse
+     * @return a CompletableFuture of onenotePageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

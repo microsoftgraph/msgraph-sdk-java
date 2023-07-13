@@ -78,9 +78,8 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         }
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
+     * The device configuration device state summary for this account.
      * @return a CompletableFuture of deviceConfigurationDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStateSummary> get() {
@@ -97,10 +96,9 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         }
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
+     * The device configuration device state summary for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfigurationDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStateSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +115,9 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         }
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStateSummary object.
+     * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceConfigurationDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStateSummary> patch(@javax.annotation.Nonnull final DeviceConfigurationDeviceStateSummary body) {
@@ -137,11 +134,10 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         }
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStateSummary object.
+     * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfigurationDeviceStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStateSummary> patch(@javax.annotation.Nonnull final DeviceConfigurationDeviceStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -186,7 +182,7 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
+     * The device configuration device state summary for this account.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -194,7 +190,7 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
+     * The device configuration device state summary for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +211,7 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStateSummary object.
+     * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +220,7 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceConfigurationDeviceStateSummary object.
+     * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -252,7 +248,7 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
+     * The device configuration device state summary for this account.
      */
     public class GetQueryParameters {
         /**

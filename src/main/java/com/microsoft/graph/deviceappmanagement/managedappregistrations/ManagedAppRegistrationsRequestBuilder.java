@@ -71,9 +71,8 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppRegistrations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the androidManagedAppRegistration objects.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
+     * The managed app registrations.
+     * @return a CompletableFuture of managedAppRegistrationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get() {
@@ -90,10 +89,9 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the androidManagedAppRegistration objects.
+     * The managed app registrations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of managedAppRegistrationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,10 +108,9 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new androidManagedAppRegistration object.
+     * Create new navigation property to managedAppRegistrations for deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of managedAppRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> post(@javax.annotation.Nonnull final ManagedAppRegistration body) {
@@ -130,11 +127,10 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new androidManagedAppRegistration object.
+     * Create new navigation property to managedAppRegistrations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppRegistration
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappregistration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> post(@javax.annotation.Nonnull final ManagedAppRegistration body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -152,7 +148,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the androidManagedAppRegistration objects.
+     * The managed app registrations.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -160,7 +156,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the androidManagedAppRegistration objects.
+     * The managed app registrations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -181,7 +177,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new androidManagedAppRegistration object.
+     * Create new navigation property to managedAppRegistrations for deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -190,7 +186,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new androidManagedAppRegistration object.
+     * Create new navigation property to managedAppRegistrations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -213,7 +209,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the androidManagedAppRegistration objects.
+     * The managed app registrations.
      */
     public class GetQueryParameters {
         /**

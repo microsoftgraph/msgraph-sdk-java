@@ -41,9 +41,8 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/exportJobs/{deviceManagementExportJob%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a deviceManagementExportJob.
+     * Delete navigation property exportJobs for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -60,10 +59,9 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Deletes a deviceManagementExportJob.
+     * Delete navigation property exportJobs for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -80,9 +78,8 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Read properties and relationships of the deviceManagementExportJob object.
+     * Entity representing a job to export a report
      * @return a CompletableFuture of deviceManagementExportJob
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> get() {
@@ -99,10 +96,9 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Read properties and relationships of the deviceManagementExportJob object.
+     * Entity representing a job to export a report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementExportJob
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +115,9 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the properties of a deviceManagementExportJob object.
+     * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceManagementExportJob
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> patch(@javax.annotation.Nonnull final DeviceManagementExportJob body) {
@@ -139,11 +134,10 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the properties of a deviceManagementExportJob object.
+     * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementExportJob
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> patch(@javax.annotation.Nonnull final DeviceManagementExportJob body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +155,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Deletes a deviceManagementExportJob.
+     * Delete navigation property exportJobs for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +163,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a deviceManagementExportJob.
+     * Delete navigation property exportJobs for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +182,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the deviceManagementExportJob object.
+     * Entity representing a job to export a report
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +190,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the deviceManagementExportJob object.
+     * Entity representing a job to export a report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +211,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the properties of a deviceManagementExportJob object.
+     * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +220,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a deviceManagementExportJob object.
+     * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +248,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the deviceManagementExportJob object.
+     * Entity representing a job to export a report
      */
     public class GetQueryParameters {
         /**

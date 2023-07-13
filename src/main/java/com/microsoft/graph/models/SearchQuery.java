@@ -25,7 +25,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
      */
     private String queryTemplate;
     /**
-     * Instantiates a new SearchQuery and sets the default values.
+     * Instantiates a new searchQuery and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SearchQuery
+     * @return a searchQuery
      */
     @javax.annotation.Nonnull
     public static SearchQuery createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

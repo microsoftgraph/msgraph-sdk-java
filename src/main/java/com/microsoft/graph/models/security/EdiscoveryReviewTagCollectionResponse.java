@@ -13,7 +13,7 @@ public class EdiscoveryReviewTagCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<EdiscoveryReviewTag> value;
     /**
-     * Instantiates a new EdiscoveryReviewTagCollectionResponse and sets the default values.
+     * Instantiates a new ediscoveryReviewTagCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class EdiscoveryReviewTagCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryReviewTagCollectionResponse
+     * @return a ediscoveryReviewTagCollectionResponse
      */
     @javax.annotation.Nonnull
     public static EdiscoveryReviewTagCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

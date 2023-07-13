@@ -79,7 +79,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -99,7 +99,7 @@ public class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-list-transitivememberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

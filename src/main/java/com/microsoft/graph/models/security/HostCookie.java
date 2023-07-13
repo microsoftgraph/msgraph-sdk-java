@@ -1,0 +1,164 @@
+package com.microsoft.graph.models.security;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class HostCookie extends Artifact implements Parsable {
+    /**
+     * The URI for which the cookie is valid.
+     */
+    private String domain;
+    /**
+     * The first date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime firstSeenDateTime;
+    /**
+     * The host property
+     */
+    private Host host;
+    /**
+     * The most recent date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     */
+    private OffsetDateTime lastSeenDateTime;
+    /**
+     * The name of the cookie, for example, JSESSIONID or SEARCH_NAMESITE.
+     */
+    private String name;
+    /**
+     * Instantiates a new hostCookie and sets the default values.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public HostCookie() {
+        super();
+        this.setOdataType("#microsoft.graph.security.hostCookie");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a hostCookie
+     */
+    @javax.annotation.Nonnull
+    public static HostCookie createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new HostCookie();
+    }
+    /**
+     * Gets the domain property value. The URI for which the cookie is valid.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDomain() {
+        return this.domain;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("domain", (n) -> { this.setDomain(n.getStringValue()); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("host", (n) -> { this.setHost(n.getObjectValue(Host::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the firstSeenDateTime property value. The first date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getFirstSeenDateTime() {
+        return this.firstSeenDateTime;
+    }
+    /**
+     * Gets the host property value. The host property
+     * @return a host
+     */
+    @javax.annotation.Nullable
+    public Host getHost() {
+        return this.host;
+    }
+    /**
+     * Gets the lastSeenDateTime property value. The most recent date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     * @return a OffsetDateTime
+     */
+    @javax.annotation.Nullable
+    public OffsetDateTime getLastSeenDateTime() {
+        return this.lastSeenDateTime;
+    }
+    /**
+     * Gets the name property value. The name of the cookie, for example, JSESSIONID or SEARCH_NAMESITE.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getName() {
+        return this.name;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeStringValue("domain", this.getDomain());
+        writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
+        writer.writeObjectValue("host", this.getHost());
+        writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
+        writer.writeStringValue("name", this.getName());
+    }
+    /**
+     * Sets the domain property value. The URI for which the cookie is valid.
+     * @param value Value to set for the domain property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDomain(@javax.annotation.Nullable final String value) {
+        this.domain = value;
+    }
+    /**
+     * Sets the firstSeenDateTime property value. The first date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the firstSeenDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.firstSeenDateTime = value;
+    }
+    /**
+     * Sets the host property value. The host property
+     * @param value Value to set for the host property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHost(@javax.annotation.Nullable final Host value) {
+        this.host = value;
+    }
+    /**
+     * Sets the lastSeenDateTime property value. The most recent date and time when this hostCookie was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the lastSeenDateTime property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+        this.lastSeenDateTime = value;
+    }
+    /**
+     * Sets the name property value. The name of the cookie, for example, JSESSIONID or SEARCH_NAMESITE.
+     * @param value Value to set for the name property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setName(@javax.annotation.Nullable final String value) {
+        this.name = value;
+    }
+}

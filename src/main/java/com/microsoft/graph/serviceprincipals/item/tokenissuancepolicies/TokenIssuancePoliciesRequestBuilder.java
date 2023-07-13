@@ -63,7 +63,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The tokenIssuancePolicies assigned to this service principal.
-     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @return a CompletableFuture of tokenIssuancePolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * The tokenIssuancePolicies assigned to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TokenIssuancePolicyCollectionResponse
+     * @return a CompletableFuture of tokenIssuancePolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

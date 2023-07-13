@@ -87,7 +87,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-ownedobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -107,7 +107,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-ownedobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

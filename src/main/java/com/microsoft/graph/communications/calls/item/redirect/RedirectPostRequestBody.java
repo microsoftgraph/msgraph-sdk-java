@@ -73,7 +73,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the targets property value. The targets property
-     * @return a InvitationParticipantInfo
+     * @return a invitationParticipantInfo
      */
     @javax.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {

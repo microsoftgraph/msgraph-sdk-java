@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * A complex type to store the product code and version rule data for a Win32 LOB app. This rule is not supported as a requirement rule.
+ */
 public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable {
     /**
      * The product code of the app.
@@ -20,7 +23,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      */
     private Win32LobAppRuleOperator productVersionOperator;
     /**
-     * Instantiates a new Win32LobAppProductCodeRule and sets the default values.
+     * Instantiates a new win32LobAppProductCodeRule and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +34,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppProductCodeRule
+     * @return a win32LobAppProductCodeRule
      */
     @javax.annotation.Nonnull
     public static Win32LobAppProductCodeRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +71,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     }
     /**
      * Gets the productVersionOperator property value. Contains properties for detection operator.
-     * @return a Win32LobAppRuleOperator
+     * @return a win32LobAppRuleOperator
      */
     @javax.annotation.Nullable
     public Win32LobAppRuleOperator getProductVersionOperator() {

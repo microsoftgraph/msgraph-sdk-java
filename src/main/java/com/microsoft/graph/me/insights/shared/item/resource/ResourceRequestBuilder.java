@@ -42,7 +42,7 @@ public class ResourceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
-     * @return a CompletableFuture of Entity
+     * @return a CompletableFuture of entity
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Entity> get() {
@@ -61,7 +61,7 @@ public class ResourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Entity
+     * @return a CompletableFuture of entity
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Entity> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

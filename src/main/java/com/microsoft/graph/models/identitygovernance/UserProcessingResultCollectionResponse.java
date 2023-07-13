@@ -13,7 +13,7 @@ public class UserProcessingResultCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<UserProcessingResult> value;
     /**
-     * Instantiates a new UserProcessingResultCollectionResponse and sets the default values.
+     * Instantiates a new userProcessingResultCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class UserProcessingResultCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserProcessingResultCollectionResponse
+     * @return a userProcessingResultCollectionResponse
      */
     @javax.annotation.Nonnull
     public static UserProcessingResultCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

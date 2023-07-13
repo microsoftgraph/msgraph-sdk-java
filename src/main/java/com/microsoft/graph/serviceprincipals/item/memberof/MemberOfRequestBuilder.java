@@ -4,6 +4,7 @@ import com.microsoft.graph.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.serviceprincipals.item.memberof.count.CountRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.memberof.graphadministrativeunit.GraphAdministrativeUnitRequestBuilder;
+import com.microsoft.graph.serviceprincipals.item.memberof.graphdirectoryrole.GraphDirectoryRoleRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.memberof.graphgroup.GraphGroupRequestBuilder;
 import com.microsoft.graph.serviceprincipals.item.memberof.item.DirectoryObjectItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -37,6 +38,13 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public GraphAdministrativeUnitRequestBuilder graphAdministrativeUnit() {
         return new GraphAdministrativeUnitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to directoryRole.
+     */
+    @javax.annotation.Nonnull
+    public GraphDirectoryRoleRequestBuilder graphDirectoryRole() {
+        return new GraphDirectoryRoleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Casts the previous resource to group.
@@ -79,7 +87,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -99,7 +107,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
     /**
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DirectoryObjectCollectionResponse
+     * @return a CompletableFuture of directoryObjectCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

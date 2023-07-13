@@ -17,15 +17,15 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The operatorName property
+     * Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      */
     private String operatorName;
     /**
-     * The sourceOperandName property
+     * Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      */
     private String sourceOperandName;
     /**
-     * The targetOperand property
+     * Values that the source operand will be tested against.
      */
     private FilterOperand targetOperand;
     /**
@@ -76,7 +76,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the operatorName property value. The operatorName property
+     * Gets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         return this.operatorName;
     }
     /**
-     * Gets the sourceOperandName property value. The sourceOperandName property
+     * Gets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         return this.sourceOperandName;
     }
     /**
-     * Gets the targetOperand property value. The targetOperand property
+     * Gets the targetOperand property value. Values that the source operand will be tested against.
      * @return a filterOperand
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the operatorName property value. The operatorName property
+     * Sets the operatorName property value. Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      * @param value Value to set for the operatorName property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         this.operatorName = value;
     }
     /**
-     * Sets the sourceOperandName property value. The sourceOperandName property
+     * Sets the sourceOperandName property value. Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      * @param value Value to set for the sourceOperandName property.
      * @return a void
      */
@@ -150,7 +150,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
         this.sourceOperandName = value;
     }
     /**
-     * Sets the targetOperand property value. The targetOperand property
+     * Sets the targetOperand property value. Values that the source operand will be tested against.
      * @param value Value to set for the targetOperand property.
      * @return a void
      */

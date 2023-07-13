@@ -63,7 +63,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get homeRealmDiscoveryPolicies from applications
-     * @return a CompletableFuture of HomeRealmDiscoveryPolicyCollectionResponse
+     * @return a CompletableFuture of homeRealmDiscoveryPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicyCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Get homeRealmDiscoveryPolicies from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of HomeRealmDiscoveryPolicyCollectionResponse
+     * @return a CompletableFuture of homeRealmDiscoveryPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -67,7 +67,7 @@ public class WorkbookOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a WorkbookOperationStatus
+     * @return a workbookOperationStatus
      */
     @javax.annotation.Nullable
     public WorkbookOperationStatus getStatus() {

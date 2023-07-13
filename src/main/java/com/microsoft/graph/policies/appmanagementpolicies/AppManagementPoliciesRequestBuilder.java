@@ -64,7 +64,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of appManagementPolicy objects.
-     * @return a CompletableFuture of AppManagementPolicyCollectionResponse
+     * @return a CompletableFuture of appManagementPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of appManagementPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AppManagementPolicyCollectionResponse
+     * @return a CompletableFuture of appManagementPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

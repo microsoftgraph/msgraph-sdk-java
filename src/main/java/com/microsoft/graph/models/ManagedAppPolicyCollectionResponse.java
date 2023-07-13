@@ -12,7 +12,7 @@ public class ManagedAppPolicyCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<ManagedAppPolicy> value;
     /**
-     * Instantiates a new ManagedAppPolicyCollectionResponse and sets the default values.
+     * Instantiates a new managedAppPolicyCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ManagedAppPolicyCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAppPolicyCollectionResponse
+     * @return a managedAppPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ManagedAppPolicyCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

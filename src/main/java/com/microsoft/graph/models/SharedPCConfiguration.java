@@ -7,6 +7,9 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the sharedPCConfiguration resource.
+ */
 public class SharedPCConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
@@ -57,7 +60,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     private LocalTime maintenanceStartTime;
     /**
-     * Instantiates a new SharedPCConfiguration and sets the default values.
+     * Instantiates a new sharedPCConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -68,7 +71,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SharedPCConfiguration
+     * @return a sharedPCConfiguration
      */
     @javax.annotation.Nonnull
     public static SharedPCConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +88,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
-     * @return a SharedPCAllowedAccountType
+     * @return a sharedPCAllowedAccountType
      */
     @javax.annotation.Nullable
     public SharedPCAllowedAccountType getAllowedAccounts() {

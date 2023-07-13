@@ -64,7 +64,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Compliance Setting State Device Summary
-     * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
+     * @return a CompletableFuture of settingStateDeviceSummaryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummaryCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * Compliance Setting State Device Summary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SettingStateDeviceSummaryCollectionResponse
+     * @return a CompletableFuture of settingStateDeviceSummaryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummaryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

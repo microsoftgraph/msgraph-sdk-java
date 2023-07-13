@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows81GeneralConfiguration resource.
+ */
 public class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
@@ -140,7 +143,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     private String workFoldersUrl;
     /**
-     * Instantiates a new Windows81GeneralConfiguration and sets the default values.
+     * Instantiates a new windows81GeneralConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -151,7 +154,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows81GeneralConfiguration
+     * @return a windows81GeneralConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows81GeneralConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -248,7 +251,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
-     * @return a InternetSiteSecurityLevel
+     * @return a internetSiteSecurityLevel
      */
     @javax.annotation.Nullable
     public InternetSiteSecurityLevel getBrowserInternetSecurityLevel() {
@@ -256,7 +259,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
-     * @return a SiteSecurityLevel
+     * @return a siteSecurityLevel
      */
     @javax.annotation.Nullable
     public SiteSecurityLevel getBrowserIntranetSecurityLevel() {
@@ -304,7 +307,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
-     * @return a SiteSecurityLevel
+     * @return a siteSecurityLevel
      */
     @javax.annotation.Nullable
     public SiteSecurityLevel getBrowserTrustedSitesSecurityLevel() {
@@ -418,7 +421,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -450,7 +453,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
-     * @return a WindowsUserAccountControlSettings
+     * @return a windowsUserAccountControlSettings
      */
     @javax.annotation.Nullable
     public WindowsUserAccountControlSettings getUserAccountControlSettings() {

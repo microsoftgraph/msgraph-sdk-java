@@ -64,7 +64,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the different relation of a [term] or [set] from the relations navigation property.
-     * @return a CompletableFuture of RelationCollectionResponse
+     * @return a CompletableFuture of relationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RelationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RelationCollectionResponse
+     * @return a CompletableFuture of relationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

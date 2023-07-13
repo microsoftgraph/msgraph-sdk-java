@@ -64,7 +64,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of secureScore objects.
-     * @return a CompletableFuture of SecureScoreCollectionResponse
+     * @return a CompletableFuture of secureScoreCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SecureScoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of secureScore objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SecureScoreCollectionResponse
+     * @return a CompletableFuture of secureScoreCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

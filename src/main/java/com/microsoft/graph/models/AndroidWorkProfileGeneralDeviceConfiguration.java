@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Android Work Profile general device configuration.
+ */
 public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to block fingerprint unlock.
@@ -144,7 +147,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     private Boolean workProfileRequirePassword;
     /**
-     * Instantiates a new AndroidWorkProfileGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new androidWorkProfileGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -155,7 +158,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidWorkProfileGeneralDeviceConfiguration
+     * @return a androidWorkProfileGeneralDeviceConfiguration
      */
     @javax.annotation.Nonnull
     public static AndroidWorkProfileGeneralDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -255,7 +258,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordRequiredType property value. Android Work Profile required password type.
-     * @return a AndroidWorkProfileRequiredPasswordType
+     * @return a androidWorkProfileRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getPasswordRequiredType() {
@@ -343,7 +346,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
-     * @return a AndroidWorkProfileCrossProfileDataSharingType
+     * @return a androidWorkProfileCrossProfileDataSharingType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileCrossProfileDataSharingType getWorkProfileDataSharingType() {
@@ -351,7 +354,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
-     * @return a AndroidWorkProfileDefaultAppPermissionPolicyType
+     * @return a androidWorkProfileDefaultAppPermissionPolicyType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileDefaultAppPermissionPolicyType getWorkProfileDefaultAppPermissionPolicy() {
@@ -455,7 +458,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
-     * @return a AndroidWorkProfileRequiredPasswordType
+     * @return a androidWorkProfileRequiredPasswordType
      */
     @javax.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getWorkProfilePasswordRequiredType() {

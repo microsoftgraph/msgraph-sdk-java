@@ -80,7 +80,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
-     * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
+     * @return a CompletableFuture of identityUserFlowAttributeAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the identityUserFlowAttributeAssignment resources from the userAttributeAssignments navigation property in a b2xIdentityUserFlow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityUserFlowAttributeAssignmentCollectionResponse
+     * @return a CompletableFuture of identityUserFlowAttributeAssignmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-userattributeassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

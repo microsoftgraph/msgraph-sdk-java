@@ -50,11 +50,11 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     private String odataType;
     /**
-     * The recommendationInsightSettings property
+     * Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property.
      */
     private java.util.List<AccessReviewRecommendationInsightSetting> recommendationInsightSettings;
     /**
-     * The recommendationLookBackDuration property
+     * Optional field. Indicates the period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationLookBackDuration setting will be used instead of the value of this property.
      */
     private Period recommendationLookBackDuration;
     /**
@@ -191,7 +191,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         return this.odataType;
     }
     /**
-     * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * Gets the recommendationInsightSettings property value. Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property.
      * @return a accessReviewRecommendationInsightSetting
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         return this.recommendationInsightSettings;
     }
     /**
-     * Gets the recommendationLookBackDuration property value. The recommendationLookBackDuration property
+     * Gets the recommendationLookBackDuration property value. Optional field. Indicates the period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationLookBackDuration setting will be used instead of the value of this property.
      * @return a Period
      */
     @javax.annotation.Nullable
@@ -345,7 +345,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         this.odataType = value;
     }
     /**
-     * Sets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * Sets the recommendationInsightSettings property value. Optional. Describes the types of insights that aid reviewers to make access review decisions. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationInsightSettings setting will be used instead of the value of this property.
      * @param value Value to set for the recommendationInsightSettings property.
      * @return a void
      */
@@ -354,7 +354,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         this.recommendationInsightSettings = value;
     }
     /**
-     * Sets the recommendationLookBackDuration property value. The recommendationLookBackDuration property
+     * Sets the recommendationLookBackDuration property value. Optional field. Indicates the period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationLookBackDuration setting will be used instead of the value of this property.
      * @param value Value to set for the recommendationLookBackDuration property.
      * @return a void
      */

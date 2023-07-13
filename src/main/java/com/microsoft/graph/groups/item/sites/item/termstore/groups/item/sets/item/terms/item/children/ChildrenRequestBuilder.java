@@ -64,7 +64,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Children of current term.
-     * @return a CompletableFuture of TermCollectionResponse
+     * @return a CompletableFuture of termCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Children of current term.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermCollectionResponse
+     * @return a CompletableFuture of termCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

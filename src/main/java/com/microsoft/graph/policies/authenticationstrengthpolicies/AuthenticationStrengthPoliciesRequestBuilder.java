@@ -64,7 +64,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     }
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
-     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
+     * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
+     * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

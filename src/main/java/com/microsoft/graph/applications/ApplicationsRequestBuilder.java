@@ -96,7 +96,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of applications in this organization.
-     * @return a CompletableFuture of ApplicationCollectionResponse
+     * @return a CompletableFuture of applicationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ApplicationCollectionResponse
+     * @return a CompletableFuture of applicationCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

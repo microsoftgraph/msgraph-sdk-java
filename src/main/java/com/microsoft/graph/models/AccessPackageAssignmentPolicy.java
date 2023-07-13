@@ -29,6 +29,10 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
+     * The customExtensionStageSettings property
+     */
+    private java.util.List<CustomExtensionStageSetting> customExtensionStageSettings;
+    /**
      * The description of the policy.
      */
     private String description;
@@ -123,6 +127,14 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
+     * Gets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * @return a customExtensionStageSetting
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CustomExtensionStageSetting> getCustomExtensionStageSettings() {
+        return this.customExtensionStageSettings;
+    }
+    /**
      * Gets the description property value. The description of the policy.
      * @return a string
      */
@@ -158,6 +170,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         deserializerMap.put("automaticRequestSettings", (n) -> { this.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customExtensionStageSettings", (n) -> { this.setCustomExtensionStageSettings(n.getCollectionOfObjectValues(CustomExtensionStageSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("expiration", (n) -> { this.setExpiration(n.getObjectValue(ExpirationPattern::createFromDiscriminatorValue)); });
@@ -231,6 +244,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         writer.writeObjectValue("automaticRequestSettings", this.getAutomaticRequestSettings());
         writer.writeObjectValue("catalog", this.getCatalog());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeCollectionOfObjectValues("customExtensionStageSettings", this.getCustomExtensionStageSettings());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("expiration", this.getExpiration());
@@ -285,6 +299,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
+    }
+    /**
+     * Sets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * @param value Value to set for the customExtensionStageSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomExtensionStageSettings(@javax.annotation.Nullable final java.util.List<CustomExtensionStageSetting> value) {
+        this.customExtensionStageSettings = value;
     }
     /**
      * Sets the description property value. The description of the policy.

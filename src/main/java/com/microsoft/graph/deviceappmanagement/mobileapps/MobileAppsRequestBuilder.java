@@ -79,9 +79,8 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the iosVppApp objects.
-     * @return a CompletableFuture of MobileAppCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-iosvppapp-list?view=graph-rest-1.0">Find more info here</a>
+     * The mobile apps.
+     * @return a CompletableFuture of mobileAppCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get() {
@@ -98,10 +97,9 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the iosVppApp objects.
+     * The mobile apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of MobileAppCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-iosvppapp-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of mobileAppCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,10 +116,9 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new macOSMicrosoftEdgeApp object.
+     * Create new navigation property to mobileApps for deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-macosmicrosoftedgeapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@javax.annotation.Nonnull final MobileApp body) {
@@ -138,11 +135,10 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new macOSMicrosoftEdgeApp object.
+     * Create new navigation property to mobileApps for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-macosmicrosoftedgeapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@javax.annotation.Nonnull final MobileApp body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -160,7 +156,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the iosVppApp objects.
+     * The mobile apps.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -168,7 +164,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the iosVppApp objects.
+     * The mobile apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,7 +185,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new macOSMicrosoftEdgeApp object.
+     * Create new navigation property to mobileApps for deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -198,7 +194,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new macOSMicrosoftEdgeApp object.
+     * Create new navigation property to mobileApps for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -221,7 +217,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the iosVppApp objects.
+     * The mobile apps.
      */
     public class GetQueryParameters {
         /**

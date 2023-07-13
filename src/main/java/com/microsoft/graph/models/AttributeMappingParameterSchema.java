@@ -13,11 +13,11 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     private Map<String, Object> additionalData;
     /**
-     * The allowMultipleOccurrences property
+     * The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      */
     private Boolean allowMultipleOccurrences;
     /**
-     * The name property
+     * Parameter name.
      */
     private String name;
     /**
@@ -25,7 +25,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
      */
     private String odataType;
     /**
-     * The required property
+     * true if the parameter is required; otherwise false.
      */
     private Boolean required;
     /**
@@ -59,7 +59,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         return this.additionalData;
     }
     /**
-     * Gets the allowMultipleOccurrences property value. The allowMultipleOccurrences property
+     * Gets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Parameter name.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         return this.odataType;
     }
     /**
-     * Gets the required property value. The required property
+     * Gets the required property value. true if the parameter is required; otherwise false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the type property value. The type property
-     * @return a AttributeType
+     * @return a attributeType
      */
     @javax.annotation.Nullable
     public AttributeType getType() {
@@ -137,7 +137,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         this.additionalData = value;
     }
     /**
-     * Sets the allowMultipleOccurrences property value. The allowMultipleOccurrences property
+     * Sets the allowMultipleOccurrences property value. The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      * @param value Value to set for the allowMultipleOccurrences property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         this.allowMultipleOccurrences = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Parameter name.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -164,7 +164,7 @@ public class AttributeMappingParameterSchema implements AdditionalDataHolder, Pa
         this.odataType = value;
     }
     /**
-     * Sets the required property value. The required property
+     * Sets the required property value. true if the parameter is required; otherwise false.
      * @param value Value to set for the required property.
      * @return a void
      */

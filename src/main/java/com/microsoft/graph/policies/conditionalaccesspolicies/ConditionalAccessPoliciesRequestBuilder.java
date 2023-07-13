@@ -64,7 +64,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The custom rules that define an access scenario.
-     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
+     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * The custom rules that define an access scenario.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ConditionalAccessPolicyCollectionResponse
+     * @return a CompletableFuture of conditionalAccessPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

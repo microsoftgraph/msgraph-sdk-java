@@ -12,7 +12,7 @@ public class AttachmentBaseCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<AttachmentBase> value;
     /**
-     * Instantiates a new AttachmentBaseCollectionResponse and sets the default values.
+     * Instantiates a new attachmentBaseCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AttachmentBaseCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AttachmentBaseCollectionResponse
+     * @return a attachmentBaseCollectionResponse
      */
     @javax.annotation.Nonnull
     public static AttachmentBaseCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

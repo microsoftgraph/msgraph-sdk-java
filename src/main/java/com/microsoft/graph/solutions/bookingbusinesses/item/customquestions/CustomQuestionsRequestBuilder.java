@@ -64,7 +64,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the bookingCustomQuestion resources associated with a bookingBusiness.
-     * @return a CompletableFuture of BookingCustomQuestionCollectionResponse
+     * @return a CompletableFuture of bookingCustomQuestionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the bookingCustomQuestion resources associated with a bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BookingCustomQuestionCollectionResponse
+     * @return a CompletableFuture of bookingCustomQuestionCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

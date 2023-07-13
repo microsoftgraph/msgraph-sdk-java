@@ -64,7 +64,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the first level children of a [set] or [term] resource using the children navigation property.
-     * @return a CompletableFuture of TermCollectionResponse
+     * @return a CompletableFuture of termCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the first level children of a [set] or [term] resource using the children navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TermCollectionResponse
+     * @return a CompletableFuture of termCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

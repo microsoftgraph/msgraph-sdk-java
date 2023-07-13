@@ -75,7 +75,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
     }
     /**
      * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.
-     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleRequestCollectionResponse
+     * @return a CompletableFuture of unifiedRoleAssignmentScheduleRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
     /**
      * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UnifiedRoleAssignmentScheduleRequestCollectionResponse
+     * @return a CompletableFuture of unifiedRoleAssignmentScheduleRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

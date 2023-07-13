@@ -64,7 +64,7 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the serviceHealth resources from the **healthOverviews** navigation property. This operation provides the health report of all subscribed services for a tenant.
-     * @return a CompletableFuture of ServiceHealthCollectionResponse
+     * @return a CompletableFuture of serviceHealthCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class HealthOverviewsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the serviceHealth resources from the **healthOverviews** navigation property. This operation provides the health report of all subscribed services for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ServiceHealthCollectionResponse
+     * @return a CompletableFuture of serviceHealthCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -50,7 +50,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property secrets value.
      * @param body The request body
-     * @return a CompletableFuture of SynchronizationSecretKeyStringValuePair
+     * @return a CompletableFuture of synchronizationSecretKeyStringValuePair
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@javax.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body) {
@@ -70,7 +70,7 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * Update property secrets value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SynchronizationSecretKeyStringValuePair
+     * @return a CompletableFuture of synchronizationSecretKeyStringValuePair
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<java.util.List<SynchronizationSecretKeyStringValuePair>> put(@javax.annotation.Nonnull final java.util.List<SynchronizationSecretKeyStringValuePair> body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {

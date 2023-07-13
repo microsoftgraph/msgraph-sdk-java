@@ -58,7 +58,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get roleManagement
-     * @return a CompletableFuture of RoleManagement
+     * @return a CompletableFuture of roleManagement
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> get() {
@@ -77,7 +77,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleManagement
+     * @return a CompletableFuture of roleManagement
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -96,7 +96,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update roleManagement
      * @param body The request body
-     * @return a CompletableFuture of RoleManagement
+     * @return a CompletableFuture of roleManagement
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> patch(@javax.annotation.Nonnull final RoleManagement body) {
@@ -116,7 +116,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * Update roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of RoleManagement
+     * @return a CompletableFuture of roleManagement
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagement> patch(@javax.annotation.Nonnull final RoleManagement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

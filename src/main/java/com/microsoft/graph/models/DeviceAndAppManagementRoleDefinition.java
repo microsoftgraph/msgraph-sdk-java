@@ -6,9 +6,12 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The Role Definition resource. The role definition is the foundation of role based access in Intune. The role combines an Intune resource such as a Mobile App and associated role permissions such as Create or Read for the resource. There are two types of roles, built-in and custom. Built-in roles cannot be modified. Both built-in roles and custom roles must have assignments to be enforced. Create custom roles if you want to define a role that allows any of the available resources and role permissions to be combined into a single role.
+ */
 public class DeviceAndAppManagementRoleDefinition extends RoleDefinition implements Parsable {
     /**
-     * Instantiates a new DeviceAndAppManagementRoleDefinition and sets the default values.
+     * Instantiates a new deviceAndAppManagementRoleDefinition and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -19,7 +22,7 @@ public class DeviceAndAppManagementRoleDefinition extends RoleDefinition impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAndAppManagementRoleDefinition
+     * @return a deviceAndAppManagementRoleDefinition
      */
     @javax.annotation.Nonnull
     public static DeviceAndAppManagementRoleDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

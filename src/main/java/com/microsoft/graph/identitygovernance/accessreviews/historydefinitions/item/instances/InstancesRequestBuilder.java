@@ -64,7 +64,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the instances of an access review history definition created in the last 30 days.
-     * @return a CompletableFuture of AccessReviewHistoryInstanceCollectionResponse
+     * @return a CompletableFuture of accessReviewHistoryInstanceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accessreviewhistorydefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the instances of an access review history definition created in the last 30 days.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessReviewHistoryInstanceCollectionResponse
+     * @return a CompletableFuture of accessReviewHistoryInstanceCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/accessreviewhistorydefinition-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

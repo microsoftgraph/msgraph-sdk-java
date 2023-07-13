@@ -13,11 +13,11 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The code property
+     * The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
      */
     private String code;
     /**
-     * The message property
+     * The error message. For example, Policy permitting auto-redemption of invitations not configured.
      */
     private String message;
     /**
@@ -25,7 +25,7 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The tenantActionable property
+     * The action to take to resolve the error. For example, false.
      */
     private Boolean tenantActionable;
     /**
@@ -55,7 +55,7 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the code property value. The code property
+     * Gets the code property value. The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. The error message. For example, Policy permitting auto-redemption of invitations not configured.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the tenantActionable property value. The tenantActionable property
+     * Gets the tenantActionable property value. The action to take to resolve the error. For example, false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the code property value. The code property
+     * Sets the code property value. The error code. For example, AzureDirectoryB2BManagementPolicyCheckFailure.
      * @param value Value to set for the code property.
      * @return a void
      */
@@ -132,7 +132,7 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         this.code = value;
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. The error message. For example, Policy permitting auto-redemption of invitations not configured.
      * @param value Value to set for the message property.
      * @return a void
      */
@@ -150,7 +150,7 @@ public class SynchronizationError implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the tenantActionable property value. The tenantActionable property
+     * Sets the tenantActionable property value. The action to take to resolve the error. For example, false.
      * @param value Value to set for the tenantActionable property.
      * @return a void
      */

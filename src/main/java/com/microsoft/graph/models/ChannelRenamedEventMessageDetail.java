@@ -20,7 +20,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
      */
     private IdentitySet initiator;
     /**
-     * Instantiates a new ChannelRenamedEventMessageDetail and sets the default values.
+     * Instantiates a new channelRenamedEventMessageDetail and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class ChannelRenamedEventMessageDetail extends EventMessageDetail impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChannelRenamedEventMessageDetail
+     * @return a channelRenamedEventMessageDetail
      */
     @javax.annotation.Nonnull
     public static ChannelRenamedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

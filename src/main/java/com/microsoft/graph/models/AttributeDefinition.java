@@ -13,7 +13,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The anchor property
+     * true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      */
     private Boolean anchor;
     /**
@@ -21,7 +21,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<StringKeyStringValuePair> apiExpressions;
     /**
-     * The caseExact property
+     * true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      */
     private Boolean caseExact;
     /**
@@ -29,15 +29,15 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     private String defaultValue;
     /**
-     * The flowNullValues property
+     * 'true' to allow null values for attributes.
      */
     private Boolean flowNullValues;
     /**
-     * The metadata property
+     * Metadata for the given object.
      */
     private java.util.List<AttributeDefinitionMetadataEntry> metadata;
     /**
-     * The multivalued property
+     * true if an attribute can have multiple values. Default is false.
      */
     private Boolean multivalued;
     /**
@@ -45,7 +45,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     private Mutability mutability;
     /**
-     * The name property
+     * Name of the attribute. Must be unique within the object definition. Not nullable.
      */
     private String name;
     /**
@@ -53,11 +53,11 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The referencedObjects property
+     * For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      */
     private java.util.List<ReferencedObject> referencedObjects;
     /**
-     * The required property
+     * true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      */
     private Boolean required;
     /**
@@ -91,7 +91,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the anchor property value. The anchor property
+     * Gets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this.apiExpressions;
     }
     /**
-     * Gets the caseExact property value. The caseExact property
+     * Gets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the flowNullValues property value. The flowNullValues property
+     * Gets the flowNullValues property value. 'true' to allow null values for attributes.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this.flowNullValues;
     }
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Metadata for the given object.
      * @return a attributeDefinitionMetadataEntry
      */
     @javax.annotation.Nullable
@@ -161,7 +161,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this.metadata;
     }
     /**
-     * Gets the multivalued property value. The multivalued property
+     * Gets the multivalued property value. true if an attribute can have multiple values. Default is false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -170,14 +170,14 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mutability property value. The mutability property
-     * @return a Mutability
+     * @return a mutability
      */
     @javax.annotation.Nullable
     public Mutability getMutability() {
         return this.mutability;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -193,7 +193,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the referencedObjects property value. The referencedObjects property
+     * Gets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @return a referencedObject
      */
     @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         return this.referencedObjects;
     }
     /**
-     * Gets the required property value. The required property
+     * Gets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a AttributeType
+     * @return a attributeType
      */
     @javax.annotation.Nullable
     public AttributeType getType() {
@@ -249,7 +249,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the anchor property value. The anchor property
+     * Sets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      * @param value Value to set for the anchor property.
      * @return a void
      */
@@ -267,7 +267,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.apiExpressions = value;
     }
     /**
-     * Sets the caseExact property value. The caseExact property
+     * Sets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      * @param value Value to set for the caseExact property.
      * @return a void
      */
@@ -285,7 +285,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.defaultValue = value;
     }
     /**
-     * Sets the flowNullValues property value. The flowNullValues property
+     * Sets the flowNullValues property value. 'true' to allow null values for attributes.
      * @param value Value to set for the flowNullValues property.
      * @return a void
      */
@@ -294,7 +294,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.flowNullValues = value;
     }
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Metadata for the given object.
      * @param value Value to set for the metadata property.
      * @return a void
      */
@@ -303,7 +303,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.metadata = value;
     }
     /**
-     * Sets the multivalued property value. The multivalued property
+     * Sets the multivalued property value. true if an attribute can have multiple values. Default is false.
      * @param value Value to set for the multivalued property.
      * @return a void
      */
@@ -321,7 +321,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.mutability = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -339,7 +339,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the referencedObjects property value. The referencedObjects property
+     * Sets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @param value Value to set for the referencedObjects property.
      * @return a void
      */
@@ -348,7 +348,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
         this.referencedObjects = value;
     }
     /**
-     * Sets the required property value. The required property
+     * Sets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      * @param value Value to set for the required property.
      * @return a void
      */

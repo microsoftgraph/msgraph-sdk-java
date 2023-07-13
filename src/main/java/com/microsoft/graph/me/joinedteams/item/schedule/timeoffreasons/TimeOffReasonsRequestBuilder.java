@@ -64,7 +64,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of timeOffReasons in a schedule.
-     * @return a CompletableFuture of TimeOffReasonCollectionResponse
+     * @return a CompletableFuture of timeOffReasonCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TimeOffReasonsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of timeOffReasons in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of TimeOffReasonCollectionResponse
+     * @return a CompletableFuture of timeOffReasonCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timeoffreasons?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

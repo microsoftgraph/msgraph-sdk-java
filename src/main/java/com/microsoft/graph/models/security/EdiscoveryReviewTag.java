@@ -20,7 +20,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      */
     private EdiscoveryReviewTag parent;
     /**
-     * Instantiates a new EdiscoveryReviewTag and sets the default values.
+     * Instantiates a new ediscoveryReviewTag and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryReviewTag
+     * @return a ediscoveryReviewTag
      */
     @javax.annotation.Nonnull
     public static EdiscoveryReviewTag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

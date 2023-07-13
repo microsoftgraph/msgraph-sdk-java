@@ -16,7 +16,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     private Boolean locked;
     /**
-     * Instantiates a new WorkbookFormatProtection and sets the default values.
+     * Instantiates a new workbookFormatProtection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -26,7 +26,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookFormatProtection
+     * @return a workbookFormatProtection
      */
     @javax.annotation.Nonnull
     public static WorkbookFormatProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

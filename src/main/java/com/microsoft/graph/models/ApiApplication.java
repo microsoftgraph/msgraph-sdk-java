@@ -96,7 +96,7 @@ public class ApiApplication implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the oauth2PermissionScopes property value. The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
-     * @return a PermissionScope
+     * @return a permissionScope
      */
     @javax.annotation.Nullable
     public java.util.List<PermissionScope> getOauth2PermissionScopes() {

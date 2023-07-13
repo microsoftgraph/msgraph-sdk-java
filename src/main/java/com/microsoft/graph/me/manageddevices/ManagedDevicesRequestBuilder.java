@@ -64,7 +64,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The managed devices associated with the user.
-     * @return a CompletableFuture of ManagedDeviceCollectionResponse
+     * @return a CompletableFuture of managedDeviceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * The managed devices associated with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedDeviceCollectionResponse
+     * @return a CompletableFuture of managedDeviceCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -1,5 +1,6 @@
 package com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item;
 
+import com.microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.decisions.item.insights.InsightsRequestBuilder;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,13 @@ import java.util.Objects;
  * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
  */
 public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the insights property of the microsoft.graph.accessReviewInstanceDecisionItem entity.
+     */
+    @javax.annotation.Nonnull
+    public InsightsRequestBuilder insights() {
+        return new InsightsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AccessReviewInstanceDecisionItemItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

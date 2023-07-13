@@ -12,7 +12,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      */
     private AccessReviewInstanceDecisionItemResource scope;
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
+     * Instantiates a new accessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstanceDecisionItemAzureRoleResource
+     * @return a accessReviewInstanceDecisionItemAzureRoleResource
      */
     @javax.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemAzureRoleResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

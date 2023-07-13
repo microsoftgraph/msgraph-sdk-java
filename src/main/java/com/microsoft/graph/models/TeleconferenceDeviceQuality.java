@@ -58,7 +58,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     private UUID participantId;
     /**
-     * Instantiates a new TeleconferenceDeviceQuality and sets the default values.
+     * Instantiates a new teleconferenceDeviceQuality and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeleconferenceDeviceQuality
+     * @return a teleconferenceDeviceQuality
      */
     @javax.annotation.Nonnull
     public static TeleconferenceDeviceQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -169,7 +169,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
-     * @return a TeleconferenceDeviceMediaQuality
+     * @return a teleconferenceDeviceMediaQuality
      */
     @javax.annotation.Nullable
     public java.util.List<TeleconferenceDeviceMediaQuality> getMediaQualityList() {

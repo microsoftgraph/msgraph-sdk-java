@@ -64,7 +64,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
-     * @return a CompletableFuture of OfferShiftRequestCollectionResponse
+     * @return a CompletableFuture of offerShiftRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OfferShiftRequestCollectionResponse
+     * @return a CompletableFuture of offerShiftRequestCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

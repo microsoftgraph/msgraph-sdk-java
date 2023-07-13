@@ -2,6 +2,7 @@ package com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentp
 
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.accesspackage.AccessPackageRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.catalog.CatalogRequestBuilder;
+import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.customextensionstagesettings.CustomExtensionStageSettingsRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.assignmentpolicies.item.questions.QuestionsRequestBuilder;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -36,6 +37,13 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     @javax.annotation.Nonnull
     public CatalogRequestBuilder catalog() {
         return new CatalogRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the customExtensionStageSettings property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     */
+    @javax.annotation.Nonnull
+    public CustomExtensionStageSettingsRequestBuilder customExtensionStageSettings() {
+        return new CustomExtensionStageSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.

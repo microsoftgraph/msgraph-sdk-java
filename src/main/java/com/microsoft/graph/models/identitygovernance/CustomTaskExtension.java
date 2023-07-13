@@ -32,7 +32,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new CustomTaskExtension and sets the default values.
+     * Instantiates a new customTaskExtension and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomTaskExtension
+     * @return a customTaskExtension
      */
     @javax.annotation.Nonnull
     public static CustomTaskExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

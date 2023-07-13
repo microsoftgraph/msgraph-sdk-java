@@ -64,7 +64,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the browserSiteList objects and their properties.
-     * @return a CompletableFuture of BrowserSiteListCollectionResponse
+     * @return a CompletableFuture of browserSiteListCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the browserSiteList objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of BrowserSiteListCollectionResponse
+     * @return a CompletableFuture of browserSiteListCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

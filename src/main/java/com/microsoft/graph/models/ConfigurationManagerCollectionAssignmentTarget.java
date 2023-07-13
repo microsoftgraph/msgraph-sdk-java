@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents an assignment to a Configuration Manager Collection.
+ */
 public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /**
      * The collection Id that is the target of the assignment.
      */
     private String collectionId;
     /**
-     * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.
+     * Instantiates a new configurationManagerCollectionAssignmentTarget and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndApp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConfigurationManagerCollectionAssignmentTarget
+     * @return a configurationManagerCollectionAssignmentTarget
      */
     @javax.annotation.Nonnull
     public static ConfigurationManagerCollectionAssignmentTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

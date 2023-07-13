@@ -13,7 +13,7 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
      */
     private PublicError error;
     /**
-     * Instantiates a new ExternalActivityResult and sets the default values.
+     * Instantiates a new externalActivityResult and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class ExternalActivityResult extends ExternalActivity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalActivityResult
+     * @return a externalActivityResult
      */
     @javax.annotation.Nonnull
     public static ExternalActivityResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

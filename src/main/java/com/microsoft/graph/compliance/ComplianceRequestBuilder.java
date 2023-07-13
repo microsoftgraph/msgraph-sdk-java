@@ -42,7 +42,7 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get compliance
-     * @return a CompletableFuture of Compliance
+     * @return a CompletableFuture of compliance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Compliance> get() {
@@ -61,7 +61,7 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Compliance
+     * @return a CompletableFuture of compliance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Compliance> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +80,7 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update compliance
      * @param body The request body
-     * @return a CompletableFuture of Compliance
+     * @return a CompletableFuture of compliance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Compliance> patch(@javax.annotation.Nonnull final Compliance body) {
@@ -100,7 +100,7 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder {
      * Update compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of Compliance
+     * @return a CompletableFuture of compliance
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Compliance> patch(@javax.annotation.Nonnull final Compliance body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -17,7 +17,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
      */
     private SynchronizationJobSubject manager;
     /**
-     * The members property
+     * All group members that you would like to provision.
      */
     private java.util.List<SynchronizationJobSubject> members;
     /**
@@ -76,7 +76,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
         return this.manager;
     }
     /**
-     * Gets the members property value. The members property
+     * Gets the members property value. All group members that you would like to provision.
      * @return a synchronizationJobSubject
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class SynchronizationLinkedObjects implements AdditionalDataHolder, Parsa
         this.manager = value;
     }
     /**
-     * Sets the members property value. The members property
+     * Sets the members property value. All group members that you would like to provision.
      * @param value Value to set for the members property.
      * @return a void
      */

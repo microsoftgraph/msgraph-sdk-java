@@ -12,7 +12,7 @@ public class AgreementFileVersionCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<AgreementFileVersion> value;
     /**
-     * Instantiates a new AgreementFileVersionCollectionResponse and sets the default values.
+     * Instantiates a new agreementFileVersionCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AgreementFileVersionCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AgreementFileVersionCollectionResponse
+     * @return a agreementFileVersionCollectionResponse
      */
     @javax.annotation.Nonnull
     public static AgreementFileVersionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Summary data for managed devices
+ */
 public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
      * Distribution of Exchange Access State in Intune

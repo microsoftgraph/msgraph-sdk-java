@@ -12,7 +12,7 @@ public class ExtensionCollectionResponse extends BaseCollectionPaginationCountRe
      */
     private java.util.List<Extension> value;
     /**
-     * Instantiates a new ExtensionCollectionResponse and sets the default values.
+     * Instantiates a new extensionCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ExtensionCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExtensionCollectionResponse
+     * @return a extensionCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ExtensionCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

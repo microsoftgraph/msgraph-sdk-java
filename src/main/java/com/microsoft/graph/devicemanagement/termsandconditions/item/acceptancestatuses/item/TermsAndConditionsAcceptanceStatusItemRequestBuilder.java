@@ -49,9 +49,8 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/acceptanceStatuses/{termsAndConditionsAcceptanceStatus%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a termsAndConditionsAcceptanceStatus.
+     * Delete navigation property acceptanceStatuses for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -68,10 +67,9 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Deletes a termsAndConditionsAcceptanceStatus.
+     * Delete navigation property acceptanceStatuses for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -88,9 +86,8 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+     * The list of acceptance statuses for this T&C policy.
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> get() {
@@ -107,10 +104,9 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+     * The list of acceptance statuses for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,10 +123,9 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Update the properties of a termsAndConditionsAcceptanceStatus object.
+     * Update the navigation property acceptanceStatuses in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> patch(@javax.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body) {
@@ -147,11 +142,10 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Update the properties of a termsAndConditionsAcceptanceStatus object.
+     * Update the navigation property acceptanceStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> patch(@javax.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -169,7 +163,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         }
     }
     /**
-     * Deletes a termsAndConditionsAcceptanceStatus.
+     * Delete navigation property acceptanceStatuses for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -177,7 +171,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a termsAndConditionsAcceptanceStatus.
+     * Delete navigation property acceptanceStatuses for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -196,7 +190,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+     * The list of acceptance statuses for this T&C policy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -204,7 +198,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+     * The list of acceptance statuses for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -225,7 +219,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Update the properties of a termsAndConditionsAcceptanceStatus object.
+     * Update the navigation property acceptanceStatuses in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -234,7 +228,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a termsAndConditionsAcceptanceStatus object.
+     * Update the navigation property acceptanceStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -262,7 +256,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+     * The list of acceptance statuses for this T&C policy.
      */
     public class GetQueryParameters {
         /**

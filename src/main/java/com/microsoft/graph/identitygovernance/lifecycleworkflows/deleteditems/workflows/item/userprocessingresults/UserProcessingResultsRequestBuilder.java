@@ -65,7 +65,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the **userProcessingResult** resources for a workflow.
-     * @return a CompletableFuture of UserProcessingResultCollectionResponse
+     * @return a CompletableFuture of userProcessingResultCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class UserProcessingResultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the **userProcessingResult** resources for a workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserProcessingResultCollectionResponse
+     * @return a CompletableFuture of userProcessingResultCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-list-userprocessingresults?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -40,9 +40,10 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}/provisionOnDemand", rawUrl);
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
-     * @return a CompletableFuture of StringKeyStringValuePair
+     * @return a CompletableFuture of stringKeyStringValuePair
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final ProvisionOnDemandPostRequestBody body) {
@@ -59,10 +60,11 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of StringKeyStringValuePair
+     * @return a CompletableFuture of stringKeyStringValuePair
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StringKeyStringValuePair> post(@javax.annotation.Nonnull final ProvisionOnDemandPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action provisionOnDemand
+     * Select a user and provision the account on-demand. The rate limit for this API is 5 requests per 10 seconds. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

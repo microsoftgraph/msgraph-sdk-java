@@ -64,7 +64,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of educationRubric objects.
-     * @return a CompletableFuture of EducationRubricCollectionResponse
+     * @return a CompletableFuture of educationRubricCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of educationRubric objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EducationRubricCollectionResponse
+     * @return a CompletableFuture of educationRubricCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

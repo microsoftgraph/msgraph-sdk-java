@@ -17,7 +17,7 @@ public class FilterOperand implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The values property
+     * Collection of values.
      */
     private java.util.List<String> values;
     /**
@@ -66,7 +66,7 @@ public class FilterOperand implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. Collection of values.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class FilterOperand implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. Collection of values.
      * @param value Value to set for the values property.
      * @return a void
      */

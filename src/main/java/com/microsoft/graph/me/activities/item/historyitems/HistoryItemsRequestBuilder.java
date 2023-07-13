@@ -64,7 +64,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
-     * @return a CompletableFuture of ActivityHistoryItemCollectionResponse
+     * @return a CompletableFuture of activityHistoryItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItemCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ActivityHistoryItemCollectionResponse
+     * @return a CompletableFuture of activityHistoryItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityHistoryItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

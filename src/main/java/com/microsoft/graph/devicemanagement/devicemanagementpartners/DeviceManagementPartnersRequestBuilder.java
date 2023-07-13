@@ -63,9 +63,8 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceManagementPartners{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
-     * @return a CompletableFuture of DeviceManagementPartnerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of Device Management Partners configured by the tenant.
+     * @return a CompletableFuture of deviceManagementPartnerCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartnerCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementPartnerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of deviceManagementPartnerCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartnerCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceManagementPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartner> post(@javax.annotation.Nonnull final DeviceManagementPartner body) {
@@ -122,11 +119,10 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartner> post(@javax.annotation.Nonnull final DeviceManagementPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      */
     public class GetQueryParameters {
         /**

@@ -24,7 +24,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
      */
     private ProductFamily productFamily;
     /**
-     * Instantiates a new ClientUserAgent and sets the default values.
+     * Instantiates a new clientUserAgent and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ClientUserAgent
+     * @return a clientUserAgent
      */
     @javax.annotation.Nonnull
     public static ClientUserAgent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +73,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a ClientPlatform
+     * @return a clientPlatform
      */
     @javax.annotation.Nullable
     public ClientPlatform getPlatform() {
@@ -81,7 +81,7 @@ public class ClientUserAgent extends UserAgent implements Parsable {
     }
     /**
      * Gets the productFamily property value. The productFamily property
-     * @return a ProductFamily
+     * @return a productFamily
      */
     @javax.annotation.Nullable
     public ProductFamily getProductFamily() {

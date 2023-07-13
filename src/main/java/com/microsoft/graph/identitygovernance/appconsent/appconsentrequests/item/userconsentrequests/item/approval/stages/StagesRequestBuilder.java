@@ -64,7 +64,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request.
-     * @return a CompletableFuture of ApprovalStageCollectionResponse
+     * @return a CompletableFuture of approvalStageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class StagesRequestBuilder extends BaseRequestBuilder {
     /**
      * In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ApprovalStageCollectionResponse
+     * @return a CompletableFuture of approvalStageCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

@@ -12,7 +12,7 @@ public class AccessReviewReviewerCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<AccessReviewReviewer> value;
     /**
-     * Instantiates a new AccessReviewReviewerCollectionResponse and sets the default values.
+     * Instantiates a new accessReviewReviewerCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AccessReviewReviewerCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewReviewerCollectionResponse
+     * @return a accessReviewReviewerCollectionResponse
      */
     @javax.annotation.Nonnull
     public static AccessReviewReviewerCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

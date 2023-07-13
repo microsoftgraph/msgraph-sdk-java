@@ -64,7 +64,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the status of an operation that adds the large gallery view to a call.
-     * @return a CompletableFuture of CommsOperationCollectionResponse
+     * @return a CompletableFuture of commsOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperationCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CommsOperationCollectionResponse
+     * @return a CompletableFuture of commsOperationCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

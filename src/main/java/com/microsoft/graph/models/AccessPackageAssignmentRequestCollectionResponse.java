@@ -12,7 +12,7 @@ public class AccessPackageAssignmentRequestCollectionResponse extends BaseCollec
      */
     private java.util.List<AccessPackageAssignmentRequest> value;
     /**
-     * Instantiates a new AccessPackageAssignmentRequestCollectionResponse and sets the default values.
+     * Instantiates a new accessPackageAssignmentRequestCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AccessPackageAssignmentRequestCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentRequestCollectionResponse
+     * @return a accessPackageAssignmentRequestCollectionResponse
      */
     @javax.annotation.Nonnull
     public static AccessPackageAssignmentRequestCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -83,7 +83,7 @@ public class WindowsInformationProtectionProxiedDomainCollection implements Addi
     }
     /**
      * Gets the proxiedDomains property value. Collection of proxied domains
-     * @return a ProxiedDomain
+     * @return a proxiedDomain
      */
     @javax.annotation.Nullable
     public java.util.List<ProxiedDomain> getProxiedDomains() {

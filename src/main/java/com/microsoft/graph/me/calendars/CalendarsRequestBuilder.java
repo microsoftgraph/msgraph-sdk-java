@@ -64,7 +64,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the user's calendars (`/calendars` navigation property), get the calendars from the default calendar group or from a specific calendar group. 
-     * @return a CompletableFuture of CalendarCollectionResponse
+     * @return a CompletableFuture of calendarCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-calendars?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the user's calendars (`/calendars` navigation property), get the calendars from the default calendar group or from a specific calendar group. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of CalendarCollectionResponse
+     * @return a CompletableFuture of calendarCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-calendars?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

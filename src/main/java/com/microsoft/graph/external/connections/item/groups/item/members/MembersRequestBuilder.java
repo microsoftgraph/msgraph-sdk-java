@@ -64,7 +64,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
-     * @return a CompletableFuture of IdentityCollectionResponse
+     * @return a CompletableFuture of identityCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of IdentityCollectionResponse
+     * @return a CompletableFuture of identityCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

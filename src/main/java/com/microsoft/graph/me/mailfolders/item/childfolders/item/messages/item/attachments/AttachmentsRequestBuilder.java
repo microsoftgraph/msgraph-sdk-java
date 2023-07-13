@@ -72,7 +72,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of attachment objects.
-     * @return a CompletableFuture of AttachmentCollectionResponse
+     * @return a CompletableFuture of attachmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of attachment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AttachmentCollectionResponse
+     * @return a CompletableFuture of attachmentCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

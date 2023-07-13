@@ -20,7 +20,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      */
     private String userId;
     /**
-     * Instantiates a new TimeOff and sets the default values.
+     * Instantiates a new timeOff and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeOff
+     * @return a timeOff
      */
     @javax.annotation.Nonnull
     public static TimeOff createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

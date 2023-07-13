@@ -132,7 +132,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. The initiatedBy property
-     * @return a AuditActivityInitiator
+     * @return a auditActivityInitiator
      */
     @javax.annotation.Nullable
     public AuditActivityInitiator getInitiatedBy() {

@@ -63,8 +63,9 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/templates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get templates from servicePrincipals
-     * @return a CompletableFuture of SynchronizationTemplateCollectionResponse
+     * List the synchronization templates associated with a given application or service principal.
+     * @return a CompletableFuture of synchronizationTemplateCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplateCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get templates from servicePrincipals
+     * List the synchronization templates associated with a given application or service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SynchronizationTemplateCollectionResponse
+     * @return a CompletableFuture of synchronizationTemplateCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-list-templates?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplateCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get templates from servicePrincipals
+     * List the synchronization templates associated with a given application or service principal.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +150,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get templates from servicePrincipals
+     * List the synchronization templates associated with a given application or service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +203,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get templates from servicePrincipals
+     * List the synchronization templates associated with a given application or service principal.
      */
     public class GetQueryParameters {
         /**

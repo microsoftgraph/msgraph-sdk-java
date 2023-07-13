@@ -12,7 +12,7 @@ public class DeviceConfigurationAssignmentCollectionResponse extends BaseCollect
      */
     private java.util.List<DeviceConfigurationAssignment> value;
     /**
-     * Instantiates a new DeviceConfigurationAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new deviceConfigurationAssignmentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class DeviceConfigurationAssignmentCollectionResponse extends BaseCollect
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceConfigurationAssignmentCollectionResponse
+     * @return a deviceConfigurationAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static DeviceConfigurationAssignmentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

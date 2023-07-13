@@ -6,7 +6,7 @@ import java.util.Objects;
 public enum Sensitivity implements ValuedEnum {
     Normal("normal"),
     Personal("personal"),
-    PrivateEscaped("private"),
+    Private("private"),
     Confidential("confidential");
     public final String value;
     Sensitivity(final String value) {
@@ -20,7 +20,7 @@ public enum Sensitivity implements ValuedEnum {
         switch(searchValue) {
             case "normal": return Normal;
             case "personal": return Personal;
-            case "private": return PrivateEscaped;
+            case "private": return Private;
             case "confidential": return Confidential;
             default: return null;
         }

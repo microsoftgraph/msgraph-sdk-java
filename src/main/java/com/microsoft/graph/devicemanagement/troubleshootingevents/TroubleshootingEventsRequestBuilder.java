@@ -64,7 +64,7 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of troubleshooting events for the tenant.
-     * @return a CompletableFuture of DeviceManagementTroubleshootingEventCollectionResponse
+     * @return a CompletableFuture of deviceManagementTroubleshootingEventCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEventCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class TroubleshootingEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of troubleshooting events for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceManagementTroubleshootingEventCollectionResponse
+     * @return a CompletableFuture of deviceManagementTroubleshootingEventCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -57,9 +57,8 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceAppManagement/defaultManagedAppProtections/{defaultManagedAppProtection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a defaultManagedAppProtection.
+     * Delete navigation property defaultManagedAppProtections for deviceAppManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -76,10 +75,9 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Deletes a defaultManagedAppProtection.
+     * Delete navigation property defaultManagedAppProtections for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -96,9 +94,8 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Read properties and relationships of the defaultManagedAppProtection object.
+     * Default managed app policies.
      * @return a CompletableFuture of defaultManagedAppProtection
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> get() {
@@ -115,10 +112,9 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Read properties and relationships of the defaultManagedAppProtection object.
+     * Default managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of defaultManagedAppProtection
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,10 +131,9 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the properties of a defaultManagedAppProtection object.
+     * Update the navigation property defaultManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of defaultManagedAppProtection
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> patch(@javax.annotation.Nonnull final DefaultManagedAppProtection body) {
@@ -155,11 +150,10 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the properties of a defaultManagedAppProtection object.
+     * Update the navigation property defaultManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of defaultManagedAppProtection
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> patch(@javax.annotation.Nonnull final DefaultManagedAppProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -177,7 +171,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Deletes a defaultManagedAppProtection.
+     * Delete navigation property defaultManagedAppProtections for deviceAppManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -185,7 +179,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a defaultManagedAppProtection.
+     * Delete navigation property defaultManagedAppProtections for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -204,7 +198,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the defaultManagedAppProtection object.
+     * Default managed app policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -212,7 +206,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the defaultManagedAppProtection object.
+     * Default managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -233,7 +227,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of a defaultManagedAppProtection object.
+     * Update the navigation property defaultManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -242,7 +236,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a defaultManagedAppProtection object.
+     * Update the navigation property defaultManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -270,7 +264,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the defaultManagedAppProtection object.
+     * Default managed app policies.
      */
     public class GetQueryParameters {
         /**

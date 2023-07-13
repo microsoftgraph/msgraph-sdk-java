@@ -14,7 +14,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The completedUnits property
+     * The numerator of a progress ratio; the number of units of changes already processed.
      */
     private Long completedUnits;
     /**
@@ -22,15 +22,15 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The progressObservationDateTime property
+     * The time of a progress observation as an offset in minutes from UTC.
      */
     private OffsetDateTime progressObservationDateTime;
     /**
-     * The totalUnits property
+     * The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      */
     private Long totalUnits;
     /**
-     * The units property
+     * An optional description of the units.
      */
     private String units;
     /**
@@ -60,7 +60,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the completedUnits property value. The completedUnits property
+     * Gets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the progressObservationDateTime property value. The progressObservationDateTime property
+     * Gets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         return this.progressObservationDateTime;
     }
     /**
-     * Gets the totalUnits property value. The totalUnits property
+     * Gets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         return this.totalUnits;
     }
     /**
-     * Gets the units property value. The units property
+     * Gets the units property value. An optional description of the units.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -138,7 +138,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the completedUnits property value. The completedUnits property
+     * Sets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
      * @param value Value to set for the completedUnits property.
      * @return a void
      */
@@ -156,7 +156,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the progressObservationDateTime property value. The progressObservationDateTime property
+     * Sets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
      * @param value Value to set for the progressObservationDateTime property.
      * @return a void
      */
@@ -165,7 +165,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         this.progressObservationDateTime = value;
     }
     /**
-     * Sets the totalUnits property value. The totalUnits property
+     * Sets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      * @param value Value to set for the totalUnits property.
      * @return a void
      */
@@ -174,7 +174,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
         this.totalUnits = value;
     }
     /**
-     * Sets the units property value. The units property
+     * Sets the units property value. An optional description of the units.
      * @param value Value to set for the units property.
      * @return a void
      */

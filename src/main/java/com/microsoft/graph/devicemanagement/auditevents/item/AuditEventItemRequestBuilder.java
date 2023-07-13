@@ -41,9 +41,8 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/auditEvents/{auditEvent%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a auditEvent.
+     * Delete navigation property auditEvents for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -60,10 +59,9 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a auditEvent.
+     * Delete navigation property auditEvents for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -80,9 +78,8 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the auditEvent object.
+     * The Audit Events
      * @return a CompletableFuture of auditEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> get() {
@@ -99,10 +96,9 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read properties and relationships of the auditEvent object.
+     * The Audit Events
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of auditEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +115,9 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a auditEvent object.
+     * Update the navigation property auditEvents in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of auditEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> patch(@javax.annotation.Nonnull final AuditEvent body) {
@@ -139,11 +134,10 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a auditEvent object.
+     * Update the navigation property auditEvents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of auditEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-auditing-auditevent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> patch(@javax.annotation.Nonnull final AuditEvent body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +155,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Deletes a auditEvent.
+     * Delete navigation property auditEvents for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +163,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a auditEvent.
+     * Delete navigation property auditEvents for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +182,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the auditEvent object.
+     * The Audit Events
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +190,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the auditEvent object.
+     * The Audit Events
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +211,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a auditEvent object.
+     * Update the navigation property auditEvents in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +220,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a auditEvent object.
+     * Update the navigation property auditEvents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +248,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the auditEvent object.
+     * The Audit Events
      */
     public class GetQueryParameters {
         /**

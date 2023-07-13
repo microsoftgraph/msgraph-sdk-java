@@ -13,15 +13,15 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The error property
+     * Error details, if expression evaluation resulted in an error.
      */
     private PublicError error;
     /**
-     * The evaluationResult property
+     * A collection of values produced by the evaluation of the expression.
      */
     private java.util.List<String> evaluationResult;
     /**
-     * The evaluationSucceeded property
+     * true if the evaluation was successful.
      */
     private Boolean evaluationSucceeded;
     /**
@@ -29,11 +29,11 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The parsedExpression property
+     * An attributeMappingSource object representing the parsed expression.
      */
     private AttributeMappingSource parsedExpression;
     /**
-     * The parsingSucceeded property
+     * true if the expression was parsed successfully.
      */
     private Boolean parsingSucceeded;
     /**
@@ -63,7 +63,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Error details, if expression evaluation resulted in an error.
      * @return a publicError
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         return this.error;
     }
     /**
-     * Gets the evaluationResult property value. The evaluationResult property
+     * Gets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         return this.evaluationResult;
     }
     /**
-     * Gets the evaluationSucceeded property value. The evaluationSucceeded property
+     * Gets the evaluationSucceeded property value. true if the evaluation was successful.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the parsedExpression property value. The parsedExpression property
+     * Gets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
      * @return a attributeMappingSource
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         return this.parsedExpression;
     }
     /**
-     * Gets the parsingSucceeded property value. The parsingSucceeded property
+     * Gets the parsingSucceeded property value. true if the expression was parsed successfully.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Error details, if expression evaluation resulted in an error.
      * @param value Value to set for the error property.
      * @return a void
      */
@@ -160,7 +160,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         this.error = value;
     }
     /**
-     * Sets the evaluationResult property value. The evaluationResult property
+     * Sets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         this.evaluationResult = value;
     }
     /**
-     * Sets the evaluationSucceeded property value. The evaluationSucceeded property
+     * Sets the evaluationSucceeded property value. true if the evaluation was successful.
      * @param value Value to set for the evaluationSucceeded property.
      * @return a void
      */
@@ -187,7 +187,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the parsedExpression property value. The parsedExpression property
+     * Sets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
      * @param value Value to set for the parsedExpression property.
      * @return a void
      */
@@ -196,7 +196,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
         this.parsedExpression = value;
     }
     /**
-     * Sets the parsingSucceeded property value. The parsingSucceeded property
+     * Sets the parsingSucceeded property value. true if the expression was parsed successfully.
      * @param value Value to set for the parsingSucceeded property.
      * @return a void
      */

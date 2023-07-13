@@ -20,7 +20,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
      */
     private StandardTimeZoneOffset standardOffset;
     /**
-     * Instantiates a new CustomTimeZone and sets the default values.
+     * Instantiates a new customTimeZone and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class CustomTimeZone extends TimeZoneBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomTimeZone
+     * @return a customTimeZone
      */
     @javax.annotation.Nonnull
     public static CustomTimeZone createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -55,7 +55,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the syncType property value. The type of Exchange Connector sync requested.
-     * @return a DeviceManagementExchangeConnectorSyncType
+     * @return a deviceManagementExchangeConnectorSyncType
      */
     @javax.annotation.Nullable
     public DeviceManagementExchangeConnectorSyncType getSyncType() {

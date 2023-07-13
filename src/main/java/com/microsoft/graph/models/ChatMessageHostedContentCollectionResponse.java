@@ -12,7 +12,7 @@ public class ChatMessageHostedContentCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<ChatMessageHostedContent> value;
     /**
-     * Instantiates a new ChatMessageHostedContentCollectionResponse and sets the default values.
+     * Instantiates a new chatMessageHostedContentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ChatMessageHostedContentCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChatMessageHostedContentCollectionResponse
+     * @return a chatMessageHostedContentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ChatMessageHostedContentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

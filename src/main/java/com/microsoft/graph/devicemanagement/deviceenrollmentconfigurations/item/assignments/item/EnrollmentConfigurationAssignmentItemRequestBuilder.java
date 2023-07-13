@@ -41,9 +41,8 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}/assignments/{enrollmentConfigurationAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a enrollmentConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -60,10 +59,9 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Deletes a enrollmentConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -80,9 +78,8 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Read properties and relationships of the enrollmentConfigurationAssignment object.
+     * The list of group assignments for the device configuration profile
      * @return a CompletableFuture of enrollmentConfigurationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> get() {
@@ -99,10 +96,9 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Read properties and relationships of the enrollmentConfigurationAssignment object.
+     * The list of group assignments for the device configuration profile
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of enrollmentConfigurationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +115,9 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the properties of a enrollmentConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of enrollmentConfigurationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> patch(@javax.annotation.Nonnull final EnrollmentConfigurationAssignment body) {
@@ -139,11 +134,10 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the properties of a enrollmentConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of enrollmentConfigurationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> patch(@javax.annotation.Nonnull final EnrollmentConfigurationAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +155,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Deletes a enrollmentConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +163,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a enrollmentConfigurationAssignment.
+     * Delete navigation property assignments for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +182,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Read properties and relationships of the enrollmentConfigurationAssignment object.
+     * The list of group assignments for the device configuration profile
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +190,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Read properties and relationships of the enrollmentConfigurationAssignment object.
+     * The list of group assignments for the device configuration profile
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +211,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the properties of a enrollmentConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +220,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a enrollmentConfigurationAssignment object.
+     * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +248,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read properties and relationships of the enrollmentConfigurationAssignment object.
+     * The list of group assignments for the device configuration profile
      */
     public class GetQueryParameters {
         /**

@@ -49,6 +49,10 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private OffsetDateTime modifiedDateTime;
     /**
+     * The resourceRoleScopes property
+     */
+    private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
+    /**
      * Instantiates a new accessPackage and sets the default values.
      * @return a void
      */
@@ -131,6 +135,7 @@ public class AccessPackage extends Entity implements Parsable {
         deserializerMap.put("incompatibleGroups", (n) -> { this.setIncompatibleGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("isHidden", (n) -> { this.setIsHidden(n.getBooleanValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("resourceRoleScopes", (n) -> { this.setResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -166,6 +171,14 @@ public class AccessPackage extends Entity implements Parsable {
         return this.modifiedDateTime;
     }
     /**
+     * Gets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @return a accessPackageResourceRoleScope
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessPackageResourceRoleScope> getResourceRoleScopes() {
+        return this.resourceRoleScopes;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -184,6 +197,7 @@ public class AccessPackage extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("incompatibleGroups", this.getIncompatibleGroups());
         writer.writeBooleanValue("isHidden", this.getIsHidden());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
+        writer.writeCollectionOfObjectValues("resourceRoleScopes", this.getResourceRoleScopes());
     }
     /**
      * Sets the accessPackagesIncompatibleWith property value. The access packages that are incompatible with this package. Read-only.
@@ -274,5 +288,14 @@ public class AccessPackage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
+    }
+    /**
+     * Sets the resourceRoleScopes property value. The resourceRoleScopes property
+     * @param value Value to set for the resourceRoleScopes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setResourceRoleScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
+        this.resourceRoleScopes = value;
     }
 }

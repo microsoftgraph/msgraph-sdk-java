@@ -12,7 +12,7 @@ public class Fido2AuthenticationMethodCollectionResponse extends BaseCollectionP
      */
     private java.util.List<Fido2AuthenticationMethod> value;
     /**
-     * Instantiates a new Fido2AuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new fido2AuthenticationMethodCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class Fido2AuthenticationMethodCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Fido2AuthenticationMethodCollectionResponse
+     * @return a fido2AuthenticationMethodCollectionResponse
      */
     @javax.annotation.Nonnull
     public static Fido2AuthenticationMethodCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

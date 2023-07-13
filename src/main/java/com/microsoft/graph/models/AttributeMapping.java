@@ -13,11 +13,11 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The defaultValue property
+     * Default value to be used in case the source property was evaluated to null. Optional.
      */
     private String defaultValue;
     /**
-     * The exportMissingReferences property
+     * For internal use only.
      */
     private Boolean exportMissingReferences;
     /**
@@ -29,7 +29,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     private AttributeFlowType flowType;
     /**
-     * The matchingPriority property
+     * If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      */
     private Integer matchingPriority;
     /**
@@ -37,11 +37,11 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The source property
+     * Defines how a value should be extracted (or transformed) from the source object.
      */
     private AttributeMappingSource source;
     /**
-     * The targetAttributeName property
+     * Name of the attribute on the target object.
      */
     private String targetAttributeName;
     /**
@@ -71,7 +71,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the defaultValue property value. The defaultValue property
+     * Gets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         return this.defaultValue;
     }
     /**
-     * Gets the exportMissingReferences property value. The exportMissingReferences property
+     * Gets the exportMissingReferences property value. For internal use only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowBehavior property value. The flowBehavior property
-     * @return a AttributeFlowBehavior
+     * @return a attributeFlowBehavior
      */
     @javax.annotation.Nullable
     public AttributeFlowBehavior getFlowBehavior() {
@@ -113,14 +113,14 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the flowType property value. The flowType property
-     * @return a AttributeFlowType
+     * @return a attributeFlowType
      */
     @javax.annotation.Nullable
     public AttributeFlowType getFlowType() {
         return this.flowType;
     }
     /**
-     * Gets the matchingPriority property value. The matchingPriority property
+     * Gets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. Defines how a value should be extracted (or transformed) from the source object.
      * @return a attributeMappingSource
      */
     @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         return this.source;
     }
     /**
-     * Gets the targetAttributeName property value. The targetAttributeName property
+     * Gets the targetAttributeName property value. Name of the attribute on the target object.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the defaultValue property value. The defaultValue property
+     * Sets the defaultValue property value. Default value to be used in case the source property was evaluated to null. Optional.
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
@@ -188,7 +188,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         this.defaultValue = value;
     }
     /**
-     * Sets the exportMissingReferences property value. The exportMissingReferences property
+     * Sets the exportMissingReferences property value. For internal use only.
      * @param value Value to set for the exportMissingReferences property.
      * @return a void
      */
@@ -215,7 +215,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         this.flowType = value;
     }
     /**
-     * Sets the matchingPriority property value. The matchingPriority property
+     * Sets the matchingPriority property value. If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.
      * @param value Value to set for the matchingPriority property.
      * @return a void
      */
@@ -233,7 +233,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. Defines how a value should be extracted (or transformed) from the source object.
      * @param value Value to set for the source property.
      * @return a void
      */
@@ -242,7 +242,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
         this.source = value;
     }
     /**
-     * Sets the targetAttributeName property value. The targetAttributeName property
+     * Sets the targetAttributeName property value. Name of the attribute on the target object.
      * @param value Value to set for the targetAttributeName property.
      * @return a void
      */

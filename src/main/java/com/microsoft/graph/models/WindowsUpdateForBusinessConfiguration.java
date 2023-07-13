@@ -8,6 +8,9 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Windows Update for business configuration, allows you to specify how and when Windows as a Service updates your Windows 10/11 devices with feature and quality updates. Supports ODATA clauses that DeviceConfiguration entity supports: $filter by types of DeviceConfiguration, $top, $select only DeviceConfiguration base properties, $orderby only DeviceConfiguration base properties, and $skip. The query parameter '$search' is not supported.
+ */
 public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * When TRUE, allows eligible Windows 10 devices to upgrade to Windows 11. When FALSE, implies the device stays on the existing operating system. Returned by default. Query parameters are not supported.
@@ -154,7 +157,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      */
     private Enablement userWindowsUpdateScanAccess;
     /**
-     * Instantiates a new WindowsUpdateForBusinessConfiguration and sets the default values.
+     * Instantiates a new windowsUpdateForBusinessConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -165,7 +168,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUpdateForBusinessConfiguration
+     * @return a windowsUpdateForBusinessConfiguration
      */
     @javax.annotation.Nonnull
     public static WindowsUpdateForBusinessConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -182,7 +185,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the automaticUpdateMode property value. Possible values for automatic update mode.
-     * @return a AutomaticUpdateMode
+     * @return a automaticUpdateMode
      */
     @javax.annotation.Nullable
     public AutomaticUpdateMode getAutomaticUpdateMode() {
@@ -190,7 +193,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the autoRestartNotificationDismissal property value. Auto restart required notification dismissal method
-     * @return a AutoRestartNotificationDismissalMethod
+     * @return a autoRestartNotificationDismissalMethod
      */
     @javax.annotation.Nullable
     public AutoRestartNotificationDismissalMethod getAutoRestartNotificationDismissal() {
@@ -198,7 +201,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
-     * @return a WindowsUpdateType
+     * @return a windowsUpdateType
      */
     @javax.annotation.Nullable
     public WindowsUpdateType getBusinessReadyUpdatesOnly() {
@@ -230,7 +233,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
-     * @return a WindowsDeliveryOptimizationMode
+     * @return a windowsDeliveryOptimizationMode
      */
     @javax.annotation.Nullable
     public WindowsDeliveryOptimizationMode getDeliveryOptimizationMode() {
@@ -395,7 +398,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the prereleaseFeatures property value. Possible values for pre-release features.
-     * @return a PrereleaseFeatures
+     * @return a prereleaseFeatures
      */
     @javax.annotation.Nullable
     public PrereleaseFeatures getPrereleaseFeatures() {
@@ -475,7 +478,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the updateNotificationLevel property value. Windows Update Notification Display Options
-     * @return a WindowsUpdateNotificationDisplayOption
+     * @return a windowsUpdateNotificationDisplayOption
      */
     @javax.annotation.Nullable
     public WindowsUpdateNotificationDisplayOption getUpdateNotificationLevel() {
@@ -491,7 +494,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the userPauseAccess property value. Possible values of a property
-     * @return a Enablement
+     * @return a enablement
      */
     @javax.annotation.Nullable
     public Enablement getUserPauseAccess() {
@@ -499,7 +502,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     }
     /**
      * Gets the userWindowsUpdateScanAccess property value. Possible values of a property
-     * @return a Enablement
+     * @return a enablement
      */
     @javax.annotation.Nullable
     public Enablement getUserWindowsUpdateScanAccess() {

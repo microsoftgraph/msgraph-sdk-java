@@ -17,7 +17,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     private ContainerFilter containerFilter;
     /**
-     * The editable property
+     * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      */
     private Boolean editable;
     /**
@@ -25,19 +25,19 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     private GroupFilter groupFilter;
     /**
-     * The id property
+     * Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
      */
     private String id;
     /**
-     * The metadata property
+     * Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
      */
     private java.util.List<StringKeyStringValuePair> metadata;
     /**
-     * The name property
+     * Human-readable name of the synchronization rule. Not nullable.
      */
     private String name;
     /**
-     * The objectMappings property
+     * Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
      */
     private java.util.List<ObjectMapping> objectMappings;
     /**
@@ -45,15 +45,15 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The priority property
+     * Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      */
     private Integer priority;
     /**
-     * The sourceDirectoryName property
+     * Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
      */
     private String sourceDirectoryName;
     /**
-     * The targetDirectoryName property
+     * Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
      */
     private String targetDirectoryName;
     /**
@@ -91,7 +91,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.containerFilter;
     }
     /**
-     * Gets the editable property value. The editable property
+     * Gets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.groupFilter;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.id;
     }
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
      * @return a stringKeyStringValuePair
      */
     @javax.annotation.Nullable
@@ -143,7 +143,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.metadata;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Human-readable name of the synchronization rule. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.name;
     }
     /**
-     * Gets the objectMappings property value. The objectMappings property
+     * Gets the objectMappings property value. Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
      * @return a objectMapping
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.priority;
     }
     /**
-     * Gets the sourceDirectoryName property value. The sourceDirectoryName property
+     * Gets the sourceDirectoryName property value. Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -183,7 +183,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         return this.sourceDirectoryName;
     }
     /**
-     * Gets the targetDirectoryName property value. The targetDirectoryName property
+     * Gets the targetDirectoryName property value. Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -230,7 +230,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.containerFilter = value;
     }
     /**
-     * Sets the editable property value. The editable property
+     * Sets the editable property value. true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      * @param value Value to set for the editable property.
      * @return a void
      */
@@ -248,7 +248,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.groupFilter = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
      * @param value Value to set for the id property.
      * @return a void
      */
@@ -257,7 +257,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.id = value;
     }
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.
      * @param value Value to set for the metadata property.
      * @return a void
      */
@@ -266,7 +266,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.metadata = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Human-readable name of the synchronization rule. Not nullable.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -275,7 +275,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.name = value;
     }
     /**
-     * Sets the objectMappings property value. The objectMappings property
+     * Sets the objectMappings property value. Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
      * @param value Value to set for the objectMappings property.
      * @return a void
      */
@@ -293,7 +293,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
      * @param value Value to set for the priority property.
      * @return a void
      */
@@ -302,7 +302,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.priority = value;
     }
     /**
-     * Sets the sourceDirectoryName property value. The sourceDirectoryName property
+     * Sets the sourceDirectoryName property value. Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
      * @param value Value to set for the sourceDirectoryName property.
      * @return a void
      */
@@ -311,7 +311,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
         this.sourceDirectoryName = value;
     }
     /**
-     * Sets the targetDirectoryName property value. The targetDirectoryName property
+     * Sets the targetDirectoryName property value. Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
      * @param value Value to set for the targetDirectoryName property.
      * @return a void
      */

@@ -63,9 +63,8 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceAppManagement/androidManagedAppProtections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the androidManagedAppProtection objects.
-     * @return a CompletableFuture of AndroidManagedAppProtectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
+     * Android managed app policies.
+     * @return a CompletableFuture of androidManagedAppProtectionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtectionCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * List properties and relationships of the androidManagedAppProtection objects.
+     * Android managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AndroidManagedAppProtectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of androidManagedAppProtectionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create a new androidManagedAppProtection object.
+     * Create new navigation property to androidManagedAppProtections for deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of androidManagedAppProtection
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> post(@javax.annotation.Nonnull final AndroidManagedAppProtection body) {
@@ -122,11 +119,10 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create a new androidManagedAppProtection object.
+     * Create new navigation property to androidManagedAppProtections for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of androidManagedAppProtection
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> post(@javax.annotation.Nonnull final AndroidManagedAppProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * List properties and relationships of the androidManagedAppProtection objects.
+     * Android managed app policies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the androidManagedAppProtection objects.
+     * Android managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new androidManagedAppProtection object.
+     * Create new navigation property to androidManagedAppProtections for deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new androidManagedAppProtection object.
+     * Create new navigation property to androidManagedAppProtections for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * List properties and relationships of the androidManagedAppProtection objects.
+     * Android managed app policies.
      */
     public class GetQueryParameters {
         /**

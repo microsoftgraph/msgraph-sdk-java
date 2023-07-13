@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 public enum EdgeSearchEngineType implements ValuedEnum {
     /** Uses factory settings of Edge to assign the default search engine as per the user market */
-    DefaultEscaped("default"),
+    Default("default"),
     /** Sets Bing as the default search engine */
     Bing("bing");
     public final String value;
@@ -21,7 +21,7 @@ public enum EdgeSearchEngineType implements ValuedEnum {
     public static EdgeSearchEngineType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return DefaultEscaped;
+            case "default": return Default;
             case "bing": return Bing;
             default: return null;
         }

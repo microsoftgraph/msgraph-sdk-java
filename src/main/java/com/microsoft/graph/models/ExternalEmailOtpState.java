@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 public enum ExternalEmailOtpState implements ValuedEnum {
-    DefaultEscaped("default"),
+    Default("default"),
     Enabled("enabled"),
     Disabled("disabled"),
     UnknownFutureValue("unknownFutureValue");
@@ -18,7 +18,7 @@ public enum ExternalEmailOtpState implements ValuedEnum {
     public static ExternalEmailOtpState forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return DefaultEscaped;
+            case "default": return Default;
             case "enabled": return Enabled;
             case "disabled": return Disabled;
             case "unknownFutureValue": return UnknownFutureValue;

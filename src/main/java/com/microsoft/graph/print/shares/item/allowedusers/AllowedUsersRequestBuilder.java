@@ -71,7 +71,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
-     * @return a CompletableFuture of UserCollectionResponse
+     * @return a CompletableFuture of userCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class AllowedUsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserCollectionResponse
+     * @return a CompletableFuture of userCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

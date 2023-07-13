@@ -64,7 +64,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of subscriptions on the list.
-     * @return a CompletableFuture of SubscriptionCollectionResponse
+     * @return a CompletableFuture of subscriptionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscriptionCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of subscriptions on the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SubscriptionCollectionResponse
+     * @return a CompletableFuture of subscriptionCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubscriptionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

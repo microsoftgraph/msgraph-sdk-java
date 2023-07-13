@@ -140,7 +140,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a LifecycleWorkflowProcessingStatus
+     * @return a lifecycleWorkflowProcessingStatus
      */
     @javax.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
@@ -212,7 +212,7 @@ public class Run extends Entity implements Parsable {
     }
     /**
      * Gets the workflowExecutionType property value. The workflowExecutionType property
-     * @return a WorkflowExecutionType
+     * @return a workflowExecutionType
      */
     @javax.annotation.Nullable
     public WorkflowExecutionType getWorkflowExecutionType() {

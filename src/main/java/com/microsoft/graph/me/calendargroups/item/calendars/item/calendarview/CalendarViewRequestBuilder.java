@@ -71,7 +71,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
-     * @return a CompletableFuture of EventCollectionResponse
+     * @return a CompletableFuture of eventCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -91,7 +91,7 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarView)` or some other calendar of the user's.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of EventCollectionResponse
+     * @return a CompletableFuture of eventCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-calendarview?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

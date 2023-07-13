@@ -64,7 +64,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get assignmentPolicies from identityGovernance
-     * @return a CompletableFuture of AccessPackageAssignmentPolicyCollectionResponse
+     * @return a CompletableFuture of accessPackageAssignmentPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicyCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class AssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get assignmentPolicies from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AccessPackageAssignmentPolicyCollectionResponse
+     * @return a CompletableFuture of accessPackageAssignmentPolicyCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

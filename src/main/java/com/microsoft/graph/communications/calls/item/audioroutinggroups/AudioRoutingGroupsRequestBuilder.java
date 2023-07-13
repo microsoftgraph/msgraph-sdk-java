@@ -64,7 +64,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get audioRoutingGroups from communications
-     * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
+     * @return a CompletableFuture of audioRoutingGroupCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroupCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class AudioRoutingGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get audioRoutingGroups from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
+     * @return a CompletableFuture of audioRoutingGroupCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

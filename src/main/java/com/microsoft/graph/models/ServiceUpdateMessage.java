@@ -53,7 +53,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      */
     private ServiceUpdateMessageViewpoint viewPoint;
     /**
-     * Instantiates a new ServiceUpdateMessage and sets the default values.
+     * Instantiates a new serviceUpdateMessage and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceUpdateMessage
+     * @return a serviceUpdateMessage
      */
     @javax.annotation.Nonnull
     public static ServiceUpdateMessage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -97,7 +97,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the body property value. The body property
-     * @return a ItemBody
+     * @return a itemBody
      */
     @javax.annotation.Nullable
     public ItemBody getBody() {
@@ -105,7 +105,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the category property value. The category property
-     * @return a ServiceUpdateCategory
+     * @return a serviceUpdateCategory
      */
     @javax.annotation.Nullable
     public ServiceUpdateCategory getCategory() {
@@ -157,7 +157,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a ServiceUpdateSeverity
+     * @return a serviceUpdateSeverity
      */
     @javax.annotation.Nullable
     public ServiceUpdateSeverity getSeverity() {

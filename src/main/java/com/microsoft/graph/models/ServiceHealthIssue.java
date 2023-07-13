@@ -44,7 +44,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
      */
     private ServiceHealthStatus status;
     /**
-     * Instantiates a new ServiceHealthIssue and sets the default values.
+     * Instantiates a new serviceHealthIssue and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -55,7 +55,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceHealthIssue
+     * @return a serviceHealthIssue
      */
     @javax.annotation.Nonnull
     public static ServiceHealthIssue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the classification property value. The classification property
-     * @return a ServiceHealthClassificationType
+     * @return a serviceHealthClassificationType
      */
     @javax.annotation.Nullable
     public ServiceHealthClassificationType getClassification() {
@@ -122,7 +122,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the origin property value. The origin property
-     * @return a ServiceHealthOrigin
+     * @return a serviceHealthOrigin
      */
     @javax.annotation.Nullable
     public ServiceHealthOrigin getOrigin() {
@@ -130,7 +130,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the posts property value. Collection of historical posts for the service issue.
-     * @return a ServiceHealthIssuePost
+     * @return a serviceHealthIssuePost
      */
     @javax.annotation.Nullable
     public java.util.List<ServiceHealthIssuePost> getPosts() {
@@ -146,7 +146,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a ServiceHealthStatus
+     * @return a serviceHealthStatus
      */
     @javax.annotation.Nullable
     public ServiceHealthStatus getStatus() {

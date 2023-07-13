@@ -63,9 +63,8 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsInformationProtectionAppLearningSummaries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.
-     * @return a CompletableFuture of WindowsInformationProtectionAppLearningSummaryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-list?view=graph-rest-1.0">Find more info here</a>
+     * The windows information protection app learning summaries.
+     * @return a CompletableFuture of windowsInformationProtectionAppLearningSummaryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummaryCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         }
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.
+     * The windows information protection app learning summaries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WindowsInformationProtectionAppLearningSummaryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of windowsInformationProtectionAppLearningSummaryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummaryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         }
     }
     /**
-     * Create a new windowsInformationProtectionAppLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> post(@javax.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body) {
@@ -122,11 +119,10 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         }
     }
     /**
-     * Create a new windowsInformationProtectionAppLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsInformationProtectionAppLearningSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> post(@javax.annotation.Nonnull final WindowsInformationProtectionAppLearningSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         }
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.
+     * The windows information protection app learning summaries.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.
+     * The windows information protection app learning summaries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         return requestInfo;
     }
     /**
-     * Create a new windowsInformationProtectionAppLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new windowsInformationProtectionAppLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class WindowsInformationProtectionAppLearningSummariesRequestBuilder exte
         return requestInfo;
     }
     /**
-     * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.
+     * The windows information protection app learning summaries.
      */
     public class GetQueryParameters {
         /**

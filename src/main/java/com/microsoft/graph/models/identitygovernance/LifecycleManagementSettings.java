@@ -37,7 +37,7 @@ public class LifecycleManagementSettings extends Entity implements Parsable {
     }
     /**
      * Gets the emailSettings property value. The emailSettings property
-     * @return a EmailSettings
+     * @return a emailSettings
      */
     @javax.annotation.Nullable
     public EmailSettings getEmailSettings() {

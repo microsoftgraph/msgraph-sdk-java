@@ -12,7 +12,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
      */
     private String skypeId;
     /**
-     * Instantiates a new SkypeUserConversationMember and sets the default values.
+     * Instantiates a new skypeUserConversationMember and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class SkypeUserConversationMember extends ConversationMember implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SkypeUserConversationMember
+     * @return a skypeUserConversationMember
      */
     @javax.annotation.Nonnull
     public static SkypeUserConversationMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

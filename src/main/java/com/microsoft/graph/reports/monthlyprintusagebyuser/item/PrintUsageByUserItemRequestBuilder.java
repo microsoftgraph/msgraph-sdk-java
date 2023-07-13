@@ -78,7 +78,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get monthlyPrintUsageByUser from reports
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @return a CompletableFuture of printUsageByUser
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get monthlyPrintUsageByUser from reports
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printUsageByUser
      */
@@ -182,7 +182,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get monthlyPrintUsageByUser from reports
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +190,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get monthlyPrintUsageByUser from reports
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +248,7 @@ public class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get monthlyPrintUsageByUser from reports
+     * Retrieve a list of monthly print usage summaries, grouped by user.
      */
     public class GetQueryParameters {
         /**

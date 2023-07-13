@@ -12,7 +12,7 @@ public class ChatCollectionResponse extends BaseCollectionPaginationCountRespons
      */
     private java.util.List<Chat> value;
     /**
-     * Instantiates a new ChatCollectionResponse and sets the default values.
+     * Instantiates a new chatCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ChatCollectionResponse extends BaseCollectionPaginationCountRespons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChatCollectionResponse
+     * @return a chatCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ChatCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

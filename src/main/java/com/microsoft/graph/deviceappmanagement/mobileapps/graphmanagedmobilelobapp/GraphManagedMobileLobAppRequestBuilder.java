@@ -50,7 +50,7 @@ public class GraphManagedMobileLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.managedMobileLobApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of ManagedMobileLobAppCollectionResponse
+     * @return a CompletableFuture of managedMobileLobAppCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileLobAppCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GraphManagedMobileLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.managedMobileLobApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ManagedMobileLobAppCollectionResponse
+     * @return a CompletableFuture of managedMobileLobAppCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileLobAppCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

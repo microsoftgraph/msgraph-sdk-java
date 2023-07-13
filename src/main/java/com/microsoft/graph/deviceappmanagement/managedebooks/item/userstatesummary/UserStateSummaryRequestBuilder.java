@@ -63,9 +63,8 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/userStateSummary{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the userInstallStateSummary objects.
-     * @return a CompletableFuture of UserInstallStateSummaryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of installation states for this eBook.
+     * @return a CompletableFuture of userInstallStateSummaryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummaryCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the userInstallStateSummary objects.
+     * The list of installation states for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of UserInstallStateSummaryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of userInstallStateSummaryCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummaryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new userInstallStateSummary object.
+     * Create new navigation property to userStateSummary for deviceAppManagement
      * @param body The request body
      * @return a CompletableFuture of userInstallStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> post(@javax.annotation.Nonnull final UserInstallStateSummary body) {
@@ -122,11 +119,10 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new userInstallStateSummary object.
+     * Create new navigation property to userStateSummary for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userInstallStateSummary
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-userinstallstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> post(@javax.annotation.Nonnull final UserInstallStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List properties and relationships of the userInstallStateSummary objects.
+     * The list of installation states for this eBook.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the userInstallStateSummary objects.
+     * The list of installation states for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userInstallStateSummary object.
+     * Create new navigation property to userStateSummary for deviceAppManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userInstallStateSummary object.
+     * Create new navigation property to userStateSummary for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List properties and relationships of the userInstallStateSummary objects.
+     * The list of installation states for this eBook.
      */
     public class GetQueryParameters {
         /**

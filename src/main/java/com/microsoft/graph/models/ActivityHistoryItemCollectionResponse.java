@@ -12,7 +12,7 @@ public class ActivityHistoryItemCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<ActivityHistoryItem> value;
     /**
-     * Instantiates a new ActivityHistoryItemCollectionResponse and sets the default values.
+     * Instantiates a new activityHistoryItemCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class ActivityHistoryItemCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ActivityHistoryItemCollectionResponse
+     * @return a activityHistoryItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public static ActivityHistoryItemCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

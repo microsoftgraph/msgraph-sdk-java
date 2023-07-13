@@ -20,7 +20,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
      */
     private java.util.List<SettingTemplateValue> values;
     /**
-     * Instantiates a new GroupSettingTemplate and sets the default values.
+     * Instantiates a new groupSettingTemplate and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -31,7 +31,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupSettingTemplate
+     * @return a groupSettingTemplate
      */
     @javax.annotation.Nonnull
     public static GroupSettingTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
-     * @return a SettingTemplateValue
+     * @return a settingTemplateValue
      */
     @javax.annotation.Nullable
     public java.util.List<SettingTemplateValue> getValues() {

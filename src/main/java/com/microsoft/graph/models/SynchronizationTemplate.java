@@ -9,31 +9,31 @@ import java.util.Objects;
 import java.util.UUID;
 public class SynchronizationTemplate extends Entity implements Parsable {
     /**
-     * The applicationId property
+     * Identifier of the application this template belongs to.
      */
     private UUID applicationId;
     /**
-     * The default property
+     * true if this template is recommended to be the default for the application.
      */
     private Boolean defaultEscaped;
     /**
-     * The description property
+     * Description of the template.
      */
     private String description;
     /**
-     * The discoverable property
+     * true if this template should appear in the collection of templates available for the application instance (service principal).
      */
     private Boolean discoverable;
     /**
-     * The factoryTag property
+     * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      */
     private String factoryTag;
     /**
-     * The metadata property
+     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      */
     private java.util.List<SynchronizationMetadataEntry> metadata;
     /**
-     * The schema property
+     * Default synchronization schema for the jobs based on this template.
      */
     private SynchronizationSchema schema;
     /**
@@ -55,7 +55,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return new SynchronizationTemplate();
     }
     /**
-     * Gets the applicationId property value. The applicationId property
+     * Gets the applicationId property value. Identifier of the application this template belongs to.
      * @return a UUID
      */
     @javax.annotation.Nullable
@@ -63,7 +63,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return this.applicationId;
     }
     /**
-     * Gets the default property value. The default property
+     * Gets the default property value. true if this template is recommended to be the default for the application.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return this.defaultEscaped;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the template.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the discoverable property value. The discoverable property
+     * Gets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return this.discoverable;
     }
     /**
-     * Gets the factoryTag property value. The factoryTag property
+     * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the metadata property value. The metadata property
+     * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @return a synchronizationMetadataEntry
      */
     @javax.annotation.Nullable
@@ -119,7 +119,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return this.metadata;
     }
     /**
-     * Gets the schema property value. The schema property
+     * Gets the schema property value. Default synchronization schema for the jobs based on this template.
      * @return a synchronizationSchema
      */
     @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         writer.writeObjectValue("schema", this.getSchema());
     }
     /**
-     * Sets the applicationId property value. The applicationId property
+     * Sets the applicationId property value. Identifier of the application this template belongs to.
      * @param value Value to set for the applicationId property.
      * @return a void
      */
@@ -153,7 +153,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         this.applicationId = value;
     }
     /**
-     * Sets the default property value. The default property
+     * Sets the default property value. true if this template is recommended to be the default for the application.
      * @param value Value to set for the default property.
      * @return a void
      */
@@ -162,7 +162,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         this.defaultEscaped = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the template.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -171,7 +171,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the discoverable property value. The discoverable property
+     * Sets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @param value Value to set for the discoverable property.
      * @return a void
      */
@@ -180,7 +180,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         this.discoverable = value;
     }
     /**
-     * Sets the factoryTag property value. The factoryTag property
+     * Sets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @param value Value to set for the factoryTag property.
      * @return a void
      */
@@ -189,7 +189,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         this.factoryTag = value;
     }
     /**
-     * Sets the metadata property value. The metadata property
+     * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param value Value to set for the metadata property.
      * @return a void
      */
@@ -198,7 +198,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         this.metadata = value;
     }
     /**
-     * Sets the schema property value. The schema property
+     * Sets the schema property value. Default synchronization schema for the jobs based on this template.
      * @param value Value to set for the schema property.
      * @return a void
      */

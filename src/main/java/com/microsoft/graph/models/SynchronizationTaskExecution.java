@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsable {
     /**
-     * The activityIdentifier property
+     * Identifier of the job run.
      */
     private String activityIdentifier;
     /**
@@ -18,43 +18,43 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      */
     private Map<String, Object> additionalData;
     /**
-     * The countEntitled property
+     * Count of processed entries that were assigned for this application.
      */
     private Long countEntitled;
     /**
-     * The countEntitledForProvisioning property
+     * Count of processed entries that were assigned for provisioning.
      */
     private Long countEntitledForProvisioning;
     /**
-     * The countEscrowed property
+     * Count of entries that were escrowed (errors).
      */
     private Long countEscrowed;
     /**
-     * The countEscrowedRaw property
+     * Count of entries that were escrowed, including system-generated escrows.
      */
     private Long countEscrowedRaw;
     /**
-     * The countExported property
+     * Count of exported entries.
      */
     private Long countExported;
     /**
-     * The countExports property
+     * Count of entries that were expected to be exported.
      */
     private Long countExports;
     /**
-     * The countImported property
+     * Count of imported entries.
      */
     private Long countImported;
     /**
-     * The countImportedDeltas property
+     * Count of imported delta-changes.
      */
     private Long countImportedDeltas;
     /**
-     * The countImportedReferenceDeltas property
+     * Count of imported delta-changes pertaining to reference changes.
      */
     private Long countImportedReferenceDeltas;
     /**
-     * The error property
+     * If an error was encountered, contains a synchronizationError object with details.
      */
     private SynchronizationError error;
     /**
@@ -66,11 +66,11 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      */
     private SynchronizationTaskExecutionResult state;
     /**
-     * The timeBegan property
+     * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime timeBegan;
     /**
-     * The timeEnded property
+     * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime timeEnded;
     /**
@@ -92,7 +92,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return new SynchronizationTaskExecution();
     }
     /**
-     * Gets the activityIdentifier property value. The activityIdentifier property
+     * Gets the activityIdentifier property value. Identifier of the job run.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.additionalData;
     }
     /**
-     * Gets the countEntitled property value. The countEntitled property
+     * Gets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countEntitled;
     }
     /**
-     * Gets the countEntitledForProvisioning property value. The countEntitledForProvisioning property
+     * Gets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countEntitledForProvisioning;
     }
     /**
-     * Gets the countEscrowed property value. The countEscrowed property
+     * Gets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countEscrowed;
     }
     /**
-     * Gets the countEscrowedRaw property value. The countEscrowedRaw property
+     * Gets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -140,7 +140,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countEscrowedRaw;
     }
     /**
-     * Gets the countExported property value. The countExported property
+     * Gets the countExported property value. Count of exported entries.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countExported;
     }
     /**
-     * Gets the countExports property value. The countExports property
+     * Gets the countExports property value. Count of entries that were expected to be exported.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countExports;
     }
     /**
-     * Gets the countImported property value. The countImported property
+     * Gets the countImported property value. Count of imported entries.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -164,7 +164,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countImported;
     }
     /**
-     * Gets the countImportedDeltas property value. The countImportedDeltas property
+     * Gets the countImportedDeltas property value. Count of imported delta-changes.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countImportedDeltas;
     }
     /**
-     * Gets the countImportedReferenceDeltas property value. The countImportedReferenceDeltas property
+     * Gets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @return a int64
      */
     @javax.annotation.Nullable
@@ -180,7 +180,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.countImportedReferenceDeltas;
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @return a synchronizationError
      */
     @javax.annotation.Nullable
@@ -221,14 +221,14 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the state property value. The state property
-     * @return a SynchronizationTaskExecutionResult
+     * @return a synchronizationTaskExecutionResult
      */
     @javax.annotation.Nullable
     public SynchronizationTaskExecutionResult getState() {
         return this.state;
     }
     /**
-     * Gets the timeBegan property value. The timeBegan property
+     * Gets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -236,7 +236,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         return this.timeBegan;
     }
     /**
-     * Gets the timeEnded property value. The timeEnded property
+     * Gets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -269,7 +269,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the activityIdentifier property value. The activityIdentifier property
+     * Sets the activityIdentifier property value. Identifier of the job run.
      * @param value Value to set for the activityIdentifier property.
      * @return a void
      */
@@ -287,7 +287,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.additionalData = value;
     }
     /**
-     * Sets the countEntitled property value. The countEntitled property
+     * Sets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @param value Value to set for the countEntitled property.
      * @return a void
      */
@@ -296,7 +296,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countEntitled = value;
     }
     /**
-     * Sets the countEntitledForProvisioning property value. The countEntitledForProvisioning property
+     * Sets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @param value Value to set for the countEntitledForProvisioning property.
      * @return a void
      */
@@ -305,7 +305,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countEntitledForProvisioning = value;
     }
     /**
-     * Sets the countEscrowed property value. The countEscrowed property
+     * Sets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @param value Value to set for the countEscrowed property.
      * @return a void
      */
@@ -314,7 +314,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countEscrowed = value;
     }
     /**
-     * Sets the countEscrowedRaw property value. The countEscrowedRaw property
+     * Sets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @param value Value to set for the countEscrowedRaw property.
      * @return a void
      */
@@ -323,7 +323,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countEscrowedRaw = value;
     }
     /**
-     * Sets the countExported property value. The countExported property
+     * Sets the countExported property value. Count of exported entries.
      * @param value Value to set for the countExported property.
      * @return a void
      */
@@ -332,7 +332,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countExported = value;
     }
     /**
-     * Sets the countExports property value. The countExports property
+     * Sets the countExports property value. Count of entries that were expected to be exported.
      * @param value Value to set for the countExports property.
      * @return a void
      */
@@ -341,7 +341,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countExports = value;
     }
     /**
-     * Sets the countImported property value. The countImported property
+     * Sets the countImported property value. Count of imported entries.
      * @param value Value to set for the countImported property.
      * @return a void
      */
@@ -350,7 +350,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countImported = value;
     }
     /**
-     * Sets the countImportedDeltas property value. The countImportedDeltas property
+     * Sets the countImportedDeltas property value. Count of imported delta-changes.
      * @param value Value to set for the countImportedDeltas property.
      * @return a void
      */
@@ -359,7 +359,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countImportedDeltas = value;
     }
     /**
-     * Sets the countImportedReferenceDeltas property value. The countImportedReferenceDeltas property
+     * Sets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @param value Value to set for the countImportedReferenceDeltas property.
      * @return a void
      */
@@ -368,7 +368,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.countImportedReferenceDeltas = value;
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @param value Value to set for the error property.
      * @return a void
      */
@@ -395,7 +395,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.state = value;
     }
     /**
-     * Sets the timeBegan property value. The timeBegan property
+     * Sets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeBegan property.
      * @return a void
      */
@@ -404,7 +404,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
         this.timeBegan = value;
     }
     /**
-     * Sets the timeEnded property value. The timeEnded property
+     * Sets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeEnded property.
      * @return a void
      */

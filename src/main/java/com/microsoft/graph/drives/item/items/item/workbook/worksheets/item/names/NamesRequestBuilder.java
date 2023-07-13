@@ -80,7 +80,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of named item associated with the worksheet. 
-     * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
+     * @return a CompletableFuture of workbookNamedItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/worksheet-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of named item associated with the worksheet. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
+     * @return a CompletableFuture of workbookNamedItemCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/worksheet-list-names?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

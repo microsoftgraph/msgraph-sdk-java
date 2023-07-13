@@ -16,7 +16,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
      */
     private WorkflowTriggerTimeBasedAttribute timeBasedAttribute;
     /**
-     * Instantiates a new TimeBasedAttributeTrigger and sets the default values.
+     * Instantiates a new timeBasedAttributeTrigger and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -27,7 +27,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeBasedAttributeTrigger
+     * @return a timeBasedAttributeTrigger
      */
     @javax.annotation.Nonnull
     public static TimeBasedAttributeTrigger createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implemen
     }
     /**
      * Gets the timeBasedAttribute property value. The timeBasedAttribute property
-     * @return a WorkflowTriggerTimeBasedAttribute
+     * @return a workflowTriggerTimeBasedAttribute
      */
     @javax.annotation.Nullable
     public WorkflowTriggerTimeBasedAttribute getTimeBasedAttribute() {

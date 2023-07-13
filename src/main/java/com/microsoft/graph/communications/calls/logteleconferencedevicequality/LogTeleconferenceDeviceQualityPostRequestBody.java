@@ -55,7 +55,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
     }
     /**
      * Gets the quality property value. The quality property
-     * @return a TeleconferenceDeviceQuality
+     * @return a teleconferenceDeviceQuality
      */
     @javax.annotation.Nullable
     public TeleconferenceDeviceQuality getQuality() {

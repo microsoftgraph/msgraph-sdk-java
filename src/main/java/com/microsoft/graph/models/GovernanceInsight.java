@@ -9,11 +9,11 @@ import java.util.Map;
 import java.util.Objects;
 public class GovernanceInsight extends Entity implements Parsable {
     /**
-     * The insightCreatedDateTime property
+     * Indicates when the insight was created.
      */
     private OffsetDateTime insightCreatedDateTime;
     /**
-     * Instantiates a new GovernanceInsight and sets the default values.
+     * Instantiates a new governanceInsight and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +23,7 @@ public class GovernanceInsight extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceInsight
+     * @return a governanceInsight
      */
     @javax.annotation.Nonnull
     public static GovernanceInsight createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -32,6 +32,7 @@ public class GovernanceInsight extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.membershipOutlierInsight": return new MembershipOutlierInsight();
                 case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             }
         }
@@ -48,7 +49,7 @@ public class GovernanceInsight extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the insightCreatedDateTime property value. The insightCreatedDateTime property
+     * Gets the insightCreatedDateTime property value. Indicates when the insight was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -67,7 +68,7 @@ public class GovernanceInsight extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("insightCreatedDateTime", this.getInsightCreatedDateTime());
     }
     /**
-     * Sets the insightCreatedDateTime property value. The insightCreatedDateTime property
+     * Sets the insightCreatedDateTime property value. Indicates when the insight was created.
      * @param value Value to set for the insightCreatedDateTime property.
      * @return a void
      */

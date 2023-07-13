@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for an iOS store app that you can manage with an Intune app protection policy.
+ */
 public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     /**
      * Contains properties of the possible iOS device types the mobile app can run on.
@@ -24,7 +27,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
      */
     private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
-     * Instantiates a new ManagedIOSStoreApp and sets the default values.
+     * Instantiates a new managedIOSStoreApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +38,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedIOSStoreApp
+     * @return a managedIOSStoreApp
      */
     @javax.annotation.Nonnull
     public static ManagedIOSStoreApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +47,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
-     * @return a IosDeviceType
+     * @return a iosDeviceType
      */
     @javax.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
@@ -81,7 +84,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. Contains properties of the minimum operating system required for an iOS mobile app.
-     * @return a IosMinimumOperatingSystem
+     * @return a iosMinimumOperatingSystem
      */
     @javax.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {

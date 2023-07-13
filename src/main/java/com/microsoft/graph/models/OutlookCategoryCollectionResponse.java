@@ -12,7 +12,7 @@ public class OutlookCategoryCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<OutlookCategory> value;
     /**
-     * Instantiates a new OutlookCategoryCollectionResponse and sets the default values.
+     * Instantiates a new outlookCategoryCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class OutlookCategoryCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OutlookCategoryCollectionResponse
+     * @return a outlookCategoryCollectionResponse
      */
     @javax.annotation.Nonnull
     public static OutlookCategoryCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

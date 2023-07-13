@@ -64,7 +64,7 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of columns that are required by this content type.
-     * @return a CompletableFuture of ColumnLinkCollectionResponse
+     * @return a CompletableFuture of columnLinkCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLinkCollectionResponse> get() {
@@ -83,7 +83,7 @@ public class ColumnLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of columns that are required by this content type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ColumnLinkCollectionResponse
+     * @return a CompletableFuture of columnLinkCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnLinkCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

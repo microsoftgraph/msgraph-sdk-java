@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for Windows AppX Line Of Business apps.
+ */
 public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
@@ -36,7 +39,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
      */
     private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
-     * Instantiates a new WindowsAppX and sets the default values.
+     * Instantiates a new windowsAppX and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -47,7 +50,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAppX
+     * @return a windowsAppX
      */
     @javax.annotation.Nonnull
     public static WindowsAppX createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +59,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a WindowsArchitecture
+     * @return a windowsArchitecture
      */
     @javax.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {
@@ -120,7 +123,7 @@ public class WindowsAppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a WindowsMinimumOperatingSystem
+     * @return a windowsMinimumOperatingSystem
      */
     @javax.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {

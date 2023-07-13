@@ -72,7 +72,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the contact folder collection in the default Contacts folder of the signed-in user.
-     * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @return a CompletableFuture of contactFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the contact folder collection in the default Contacts folder of the signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ContactFolderCollectionResponse
+     * @return a CompletableFuture of contactFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull

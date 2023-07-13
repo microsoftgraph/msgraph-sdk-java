@@ -66,7 +66,7 @@ public class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the keyCredential property value. The keyCredential property
-     * @return a KeyCredential
+     * @return a keyCredential
      */
     @javax.annotation.Nullable
     public KeyCredential getKeyCredential() {

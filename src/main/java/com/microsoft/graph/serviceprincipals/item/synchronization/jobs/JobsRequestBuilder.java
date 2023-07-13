@@ -71,8 +71,9 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get jobs from servicePrincipals
-     * @return a CompletableFuture of SynchronizationJobCollectionResponse
+     * List existing jobs for a given application instance (service principal).
+     * @return a CompletableFuture of synchronizationJobCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJobCollectionResponse> get() {
@@ -89,9 +90,10 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get jobs from servicePrincipals
+     * List existing jobs for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of SynchronizationJobCollectionResponse
+     * @return a CompletableFuture of synchronizationJobCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJobCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -108,9 +110,10 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a CompletableFuture of synchronizationJob
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> post(@javax.annotation.Nonnull final SynchronizationJob body) {
@@ -127,10 +130,11 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationJob
+     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> post(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -148,7 +152,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get jobs from servicePrincipals
+     * List existing jobs for a given application instance (service principal).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -156,7 +160,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get jobs from servicePrincipals
+     * List existing jobs for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +181,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -186,7 +190,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to jobs for servicePrincipals
+     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +213,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get jobs from servicePrincipals
+     * List existing jobs for a given application instance (service principal).
      */
     public class GetQueryParameters {
         /**

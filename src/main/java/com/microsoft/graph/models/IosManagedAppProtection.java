@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an iOS device
+ */
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /**
      * Represents the level to which app data is encrypted for managed apps
@@ -36,7 +39,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     private String minimumRequiredSdkVersion;
     /**
-     * Instantiates a new IosManagedAppProtection and sets the default values.
+     * Instantiates a new iosManagedAppProtection and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -47,7 +50,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosManagedAppProtection
+     * @return a iosManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static IosManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +59,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a ManagedAppDataEncryptionType
+     * @return a managedAppDataEncryptionType
      */
     @javax.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {

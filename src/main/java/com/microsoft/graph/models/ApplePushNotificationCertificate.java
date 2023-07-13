@@ -7,6 +7,9 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Apple push notification certificate.
+ */
 public class ApplePushNotificationCertificate extends Entity implements Parsable {
     /**
      * Apple Id of the account used to create the MDM push certificate.

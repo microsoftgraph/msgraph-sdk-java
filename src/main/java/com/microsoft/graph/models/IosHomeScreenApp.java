@@ -6,13 +6,16 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents an icon for an app on the Home Screen
+ */
 public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
      * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
      */
     private String bundleID;
     /**
-     * Instantiates a new IosHomeScreenApp and sets the default values.
+     * Instantiates a new iosHomeScreenApp and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -23,7 +26,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosHomeScreenApp
+     * @return a iosHomeScreenApp
      */
     @javax.annotation.Nonnull
     public static IosHomeScreenApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

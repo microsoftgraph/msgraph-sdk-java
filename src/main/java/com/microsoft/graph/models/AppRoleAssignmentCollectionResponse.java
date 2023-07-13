@@ -12,7 +12,7 @@ public class AppRoleAssignmentCollectionResponse extends BaseCollectionPaginatio
      */
     private java.util.List<AppRoleAssignment> value;
     /**
-     * Instantiates a new AppRoleAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new appRoleAssignmentCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class AppRoleAssignmentCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppRoleAssignmentCollectionResponse
+     * @return a appRoleAssignmentCollectionResponse
      */
     @javax.annotation.Nonnull
     public static AppRoleAssignmentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

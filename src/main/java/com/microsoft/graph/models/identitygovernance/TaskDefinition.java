@@ -52,7 +52,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a LifecycleTaskCategory
+     * @return a lifecycleTaskCategory
      */
     @javax.annotation.Nullable
     public LifecycleTaskCategory getCategory() {
@@ -99,7 +99,7 @@ public class TaskDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the parameters property value. The parameters that must be supplied when creating a workflow task object.Supports $filter(any).
-     * @return a Parameter
+     * @return a parameter
      */
     @javax.annotation.Nullable
     public java.util.List<Parameter> getParameters() {

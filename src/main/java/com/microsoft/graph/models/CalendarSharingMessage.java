@@ -24,7 +24,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      */
     private String suggestedCalendarName;
     /**
-     * Instantiates a new CalendarSharingMessage and sets the default values.
+     * Instantiates a new calendarSharingMessage and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -35,7 +35,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CalendarSharingMessage
+     * @return a calendarSharingMessage
      */
     @javax.annotation.Nonnull
     public static CalendarSharingMessage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

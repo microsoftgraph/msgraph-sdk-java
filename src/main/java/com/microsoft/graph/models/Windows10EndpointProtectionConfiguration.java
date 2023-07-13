@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the Windows10EndpointProtectionConfiguration resource.
+ */
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
@@ -152,7 +155,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     private Boolean smartScreenEnableInShell;
     /**
-     * Instantiates a new Windows10EndpointProtectionConfiguration and sets the default values.
+     * Instantiates a new windows10EndpointProtectionConfiguration and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -163,7 +166,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10EndpointProtectionConfiguration
+     * @return a windows10EndpointProtectionConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10EndpointProtectionConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -212,7 +215,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
-     * @return a ApplicationGuardBlockClipboardSharingType
+     * @return a applicationGuardBlockClipboardSharingType
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockClipboardSharingType getApplicationGuardBlockClipboardSharing() {
@@ -220,7 +223,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
-     * @return a ApplicationGuardBlockFileTransferType
+     * @return a applicationGuardBlockFileTransferType
      */
     @javax.annotation.Nullable
     public ApplicationGuardBlockFileTransferType getApplicationGuardBlockFileTransfer() {
@@ -252,7 +255,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
-     * @return a AppLockerApplicationControlType
+     * @return a appLockerApplicationControlType
      */
     @javax.annotation.Nullable
     public AppLockerApplicationControlType getAppLockerApplicationControl() {
@@ -393,7 +396,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
-     * @return a FirewallCertificateRevocationListCheckMethodType
+     * @return a firewallCertificateRevocationListCheckMethodType
      */
     @javax.annotation.Nullable
     public FirewallCertificateRevocationListCheckMethodType getFirewallCertificateRevocationListCheckMethod() {
@@ -449,7 +452,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
-     * @return a FirewallPacketQueueingMethodType
+     * @return a firewallPacketQueueingMethodType
      */
     @javax.annotation.Nullable
     public FirewallPacketQueueingMethodType getFirewallPacketQueueingMethod() {
@@ -457,7 +460,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
-     * @return a FirewallPreSharedKeyEncodingMethodType
+     * @return a firewallPreSharedKeyEncodingMethodType
      */
     @javax.annotation.Nullable
     public FirewallPreSharedKeyEncodingMethodType getFirewallPreSharedKeyEncodingMethod() {

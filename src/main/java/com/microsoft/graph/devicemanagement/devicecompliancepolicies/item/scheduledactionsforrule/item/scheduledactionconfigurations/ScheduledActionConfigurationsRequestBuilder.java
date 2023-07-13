@@ -63,9 +63,8 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/scheduledActionsForRule/{deviceComplianceScheduledActionForRule%2Did}/scheduledActionConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
-     * @return a CompletableFuture of DeviceComplianceActionItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-list?view=graph-rest-1.0">Find more info here</a>
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
+     * @return a CompletableFuture of deviceComplianceActionItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItemCollectionResponse> get() {
@@ -82,10 +81,9 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of DeviceComplianceActionItemCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of deviceComplianceActionItemCollectionResponse
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItemCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +100,9 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @return a CompletableFuture of deviceComplianceActionItem
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItem> post(@javax.annotation.Nonnull final DeviceComplianceActionItem body) {
@@ -122,11 +119,10 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceComplianceActionItem
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceactionitem-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItem> post(@javax.annotation.Nonnull final DeviceComplianceActionItem body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +140,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +148,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +169,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +178,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deviceComplianceActionItem object.
+     * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +201,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * List properties and relationships of the deviceComplianceActionItem objects.
+     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      */
     public class GetQueryParameters {
         /**

@@ -12,7 +12,7 @@ public class CalendarCollectionResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<Calendar> value;
     /**
-     * Instantiates a new CalendarCollectionResponse and sets the default values.
+     * Instantiates a new calendarCollectionResponse and sets the default values.
      * @return a void
      */
     @javax.annotation.Nullable
@@ -22,7 +22,7 @@ public class CalendarCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CalendarCollectionResponse
+     * @return a calendarCollectionResponse
      */
     @javax.annotation.Nonnull
     public static CalendarCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
