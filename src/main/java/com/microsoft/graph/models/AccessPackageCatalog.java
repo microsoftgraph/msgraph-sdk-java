@@ -13,6 +13,10 @@ import com.microsoft.graph.models.AccessPackageCatalogType;
 import com.microsoft.graph.models.AccessPackageCatalogState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessPackageCollectionPage;
+import com.microsoft.graph.requests.CustomCalloutExtensionCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
+import com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -99,6 +103,42 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 	@Nullable
     public com.microsoft.graph.requests.AccessPackageCollectionPage accessPackages;
 
+    /**
+     * The Custom Workflow Extensions.
+     * 
+     */
+    @SerializedName(value = "customWorkflowExtensions", alternate = {"CustomWorkflowExtensions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CustomCalloutExtensionCollectionPage customWorkflowExtensions;
+
+    /**
+     * The Resource Roles.
+     * 
+     */
+    @SerializedName(value = "resourceRoles", alternate = {"ResourceRoles"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage resourceRoles;
+
+    /**
+     * The Resources.
+     * 
+     */
+    @SerializedName(value = "resources", alternate = {"Resources"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceCollectionPage resources;
+
+    /**
+     * The Resource Scopes.
+     * 
+     */
+    @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage resourceScopes;
+
 
     /**
      * Sets the raw JSON object
@@ -111,6 +151,22 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
         if (json.has("accessPackages")) {
             accessPackages = serializer.deserializeObject(json.get("accessPackages"), com.microsoft.graph.requests.AccessPackageCollectionPage.class);
+        }
+
+        if (json.has("customWorkflowExtensions")) {
+            customWorkflowExtensions = serializer.deserializeObject(json.get("customWorkflowExtensions"), com.microsoft.graph.requests.CustomCalloutExtensionCollectionPage.class);
+        }
+
+        if (json.has("resourceRoles")) {
+            resourceRoles = serializer.deserializeObject(json.get("resourceRoles"), com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage.class);
+        }
+
+        if (json.has("resources")) {
+            resources = serializer.deserializeObject(json.get("resources"), com.microsoft.graph.requests.AccessPackageResourceCollectionPage.class);
+        }
+
+        if (json.has("resourceScopes")) {
+            resourceScopes = serializer.deserializeObject(json.get("resourceScopes"), com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage.class);
         }
     }
 }

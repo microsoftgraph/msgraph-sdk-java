@@ -51,7 +51,7 @@ public class UserExperienceAnalyticsInsight implements IJsonBackedObject {
 
     /**
      * The Severity.
-     * The severity of the user experience analytics insight. Possible values are: none, informational, warning, error. None by default.
+     * The severity of the user experience analytics insight. Possible values are: none, informational, warning, error. None by default. Possible values are: none, informational, warning, error, unknownFutureValue.
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose

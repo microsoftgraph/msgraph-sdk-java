@@ -91,7 +91,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
     /**
      * The Status.
-     * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending.
+     * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending. Possible values are: pending, completed, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

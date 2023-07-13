@@ -40,7 +40,7 @@ public class FilterOperand implements IJsonBackedObject {
 
     /**
      * The Values.
-     * 
+     * Collection of values.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose

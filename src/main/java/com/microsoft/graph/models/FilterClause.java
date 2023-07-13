@@ -40,7 +40,7 @@ public class FilterClause implements IJsonBackedObject {
 
     /**
      * The Operator Name.
-     * 
+     * Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
      */
     @SerializedName(value = "operatorName", alternate = {"OperatorName"})
     @Expose
@@ -49,7 +49,7 @@ public class FilterClause implements IJsonBackedObject {
 
     /**
      * The Source Operand Name.
-     * 
+     * Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
      */
     @SerializedName(value = "sourceOperandName", alternate = {"SourceOperandName"})
     @Expose
@@ -58,7 +58,7 @@ public class FilterClause implements IJsonBackedObject {
 
     /**
      * The Target Operand.
-     * 
+     * Values that the source operand will be tested against.
      */
     @SerializedName(value = "targetOperand", alternate = {"TargetOperand"})
     @Expose

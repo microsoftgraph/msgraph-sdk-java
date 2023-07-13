@@ -148,6 +148,26 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder<AccessPackag
     public com.microsoft.graph.requests.GroupRequestBuilder incompatibleGroups(@Nonnull final String id) {
         return new com.microsoft.graph.requests.GroupRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleGroups") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the AccessPackageResourceRoleScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder resourceRoleScopes() {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRoleScopes"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageResourceRoleScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder resourceRoleScopes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("resourceRoleScopes") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

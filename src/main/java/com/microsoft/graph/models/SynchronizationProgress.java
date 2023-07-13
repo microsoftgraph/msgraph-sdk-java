@@ -39,7 +39,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
 
     /**
      * The Completed Units.
-     * 
+     * The numerator of a progress ratio; the number of units of changes already processed.
      */
     @SerializedName(value = "completedUnits", alternate = {"CompletedUnits"})
     @Expose
@@ -48,7 +48,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
 
     /**
      * The Progress Observation Date Time.
-     * 
+     * The time of a progress observation as an offset in minutes from UTC.
      */
     @SerializedName(value = "progressObservationDateTime", alternate = {"ProgressObservationDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
 
     /**
      * The Total Units.
-     * 
+     * The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      */
     @SerializedName(value = "totalUnits", alternate = {"TotalUnits"})
     @Expose
@@ -66,7 +66,7 @@ public class SynchronizationProgress implements IJsonBackedObject {
 
     /**
      * The Units.
-     * 
+     * An optional description of the units.
      */
     @SerializedName(value = "units", alternate = {"Units"})
     @Expose

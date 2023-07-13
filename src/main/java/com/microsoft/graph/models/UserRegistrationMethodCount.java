@@ -39,7 +39,7 @@ public class UserRegistrationMethodCount implements IJsonBackedObject {
 
     /**
      * The Authentication Method.
-     * 
+     * Name of the authentication method.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -48,7 +48,7 @@ public class UserRegistrationMethodCount implements IJsonBackedObject {
 
     /**
      * The User Count.
-     * 
+     * Number of users registered.
      */
     @SerializedName(value = "userCount", alternate = {"UserCount"})
     @Expose

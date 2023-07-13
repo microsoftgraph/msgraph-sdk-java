@@ -39,7 +39,7 @@ public class ReferencedObject implements IJsonBackedObject {
 
     /**
      * The Referenced Object Name.
-     * 
+     * Name of the referenced object. Must match one of the objects in the directory definition.
      */
     @SerializedName(value = "referencedObjectName", alternate = {"ReferencedObjectName"})
     @Expose
@@ -48,7 +48,7 @@ public class ReferencedObject implements IJsonBackedObject {
 
     /**
      * The Referenced Property.
-     * 
+     * Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
      */
     @SerializedName(value = "referencedProperty", alternate = {"ReferencedProperty"})
     @Expose

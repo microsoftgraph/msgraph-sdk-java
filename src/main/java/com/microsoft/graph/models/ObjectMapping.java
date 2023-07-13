@@ -44,7 +44,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Attribute Mappings.
-     * 
+     * Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      */
     @SerializedName(value = "attributeMappings", alternate = {"AttributeMappings"})
     @Expose
@@ -53,7 +53,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Enabled.
-     * 
+     * When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      */
     @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
@@ -62,7 +62,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Flow Types.
-     * 
+     * Which flow types are enabled for this object mapping. Add creates new objects in the target directory, Update modifies existing objects, and Delete deprovisions existing users. The default is Add, Update, Delete.
      */
     @SerializedName(value = "flowTypes", alternate = {"FlowTypes"})
     @Expose
@@ -71,7 +71,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * 
+     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -80,7 +80,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Human-friendly name of the object mapping.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -89,7 +89,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * 
+     * Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -98,7 +98,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Source Object Name.
-     * 
+     * Name of the object in the source directory. Must match the object name from the source directory definition.
      */
     @SerializedName(value = "sourceObjectName", alternate = {"SourceObjectName"})
     @Expose
@@ -107,7 +107,7 @@ public class ObjectMapping implements IJsonBackedObject {
 
     /**
      * The Target Object Name.
-     * 
+     * Name of the object in target directory. Must match the object name from the target directory definition.
      */
     @SerializedName(value = "targetObjectName", alternate = {"TargetObjectName"})
     @Expose

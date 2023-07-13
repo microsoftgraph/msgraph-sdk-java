@@ -42,7 +42,7 @@ public class ObjectDefinition implements IJsonBackedObject {
 
     /**
      * The Attributes.
-     * 
+     * Defines attributes of the object.
      */
     @SerializedName(value = "attributes", alternate = {"Attributes"})
     @Expose
@@ -51,7 +51,7 @@ public class ObjectDefinition implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * 
+     * Metadata for the given object.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -60,7 +60,7 @@ public class ObjectDefinition implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name of the object. Must be unique within a directory definition. Not nullable.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -69,7 +69,7 @@ public class ObjectDefinition implements IJsonBackedObject {
 
     /**
      * The Supported Apis.
-     * 
+     * The API that the provisioning service queries to retrieve data for synchronization.
      */
     @SerializedName(value = "supportedApis", alternate = {"SupportedApis"})
     @Expose

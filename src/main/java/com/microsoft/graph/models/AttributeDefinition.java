@@ -45,7 +45,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Anchor.
-     * 
+     * true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      */
     @SerializedName(value = "anchor", alternate = {"Anchor"})
     @Expose
@@ -63,7 +63,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Case Exact.
-     * 
+     * true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      */
     @SerializedName(value = "caseExact", alternate = {"CaseExact"})
     @Expose
@@ -81,7 +81,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Flow Null Values.
-     * 
+     * 'true' to allow null values for attributes.
      */
     @SerializedName(value = "flowNullValues", alternate = {"FlowNullValues"})
     @Expose
@@ -90,7 +90,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * 
+     * Metadata for the given object.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -99,7 +99,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Multivalued.
-     * 
+     * true if an attribute can have multiple values. Default is false.
      */
     @SerializedName(value = "multivalued", alternate = {"Multivalued"})
     @Expose
@@ -108,7 +108,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Mutability.
-     * 
+     * An attribute's mutability. Possible values are:  ReadWrite, ReadOnly, Immutable, WriteOnly. Default is ReadWrite.
      */
     @SerializedName(value = "mutability", alternate = {"Mutability"})
     @Expose
@@ -117,7 +117,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name of the attribute. Must be unique within the object definition. Not nullable.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -126,7 +126,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Referenced Objects.
-     * 
+     * For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      */
     @SerializedName(value = "referencedObjects", alternate = {"ReferencedObjects"})
     @Expose
@@ -135,7 +135,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Required.
-     * 
+     * true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      */
     @SerializedName(value = "required", alternate = {"Required"})
     @Expose
@@ -144,7 +144,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

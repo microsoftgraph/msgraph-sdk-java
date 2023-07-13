@@ -40,7 +40,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
 
     /**
      * The Expiration.
-     * 
+     * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "expiration", alternate = {"Expiration"})
     @Expose
@@ -49,7 +49,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
 
     /**
      * The Interval.
-     * 
+     * The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of 1 month.
      */
     @SerializedName(value = "interval", alternate = {"Interval"})
     @Expose
@@ -58,7 +58,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The possible values are: Active, Disabled, Paused.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

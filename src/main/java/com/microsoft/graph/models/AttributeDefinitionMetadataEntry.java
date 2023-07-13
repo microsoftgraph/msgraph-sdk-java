@@ -40,7 +40,7 @@ public class AttributeDefinitionMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -49,7 +49,7 @@ public class AttributeDefinitionMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value of the metadata property.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

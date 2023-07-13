@@ -40,7 +40,7 @@ public class ObjectMappingMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -49,7 +49,7 @@ public class ObjectMappingMetadataEntry implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value of the metadata property.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose
