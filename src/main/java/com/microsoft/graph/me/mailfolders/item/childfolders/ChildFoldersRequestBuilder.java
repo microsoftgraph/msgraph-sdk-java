@@ -110,10 +110,10 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body) {
@@ -130,11 +130,11 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/mailsearchfolder-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> post(@javax.annotation.Nonnull final MailFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -181,7 +181,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -190,7 +190,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new mailSearchFolder in the specified user's mailbox.
+     * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

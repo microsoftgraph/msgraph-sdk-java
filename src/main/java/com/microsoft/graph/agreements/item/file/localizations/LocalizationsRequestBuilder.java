@@ -63,8 +63,9 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/agreements/{agreement%2Did}/file/localizations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The localized version of the terms of use agreement files attached to the agreement.
+     * Get a list of the default and localized agreement files.
      * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The localized version of the terms of use agreement files attached to the agreement.
+     * Get a list of the default and localized agreement files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreementFileLocalizationCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementFileLocalizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The localized version of the terms of use agreement files attached to the agreement.
+     * Get a list of the default and localized agreement files.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +150,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The localized version of the terms of use agreement files attached to the agreement.
+     * Get a list of the default and localized agreement files.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +203,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The localized version of the terms of use agreement files attached to the agreement.
+     * Get a list of the default and localized agreement files.
      */
     public class GetQueryParameters {
         /**

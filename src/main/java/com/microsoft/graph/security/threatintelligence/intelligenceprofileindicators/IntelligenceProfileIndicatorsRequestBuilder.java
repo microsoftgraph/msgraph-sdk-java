@@ -63,7 +63,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/intelligenceProfileIndicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
      */
@@ -140,7 +140,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      */
     public class GetQueryParameters {
         /**
