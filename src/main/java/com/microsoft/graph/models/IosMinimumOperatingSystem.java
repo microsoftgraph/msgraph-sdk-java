@@ -188,7 +188,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -197,7 +197,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -206,7 +206,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v100 property.
+     * @param value Value to set for the v10_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -215,7 +215,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v110 property.
+     * @param value Value to set for the v11_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -224,7 +224,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v12_0 property value. When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v120 property.
+     * @param value Value to set for the v12_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -233,7 +233,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v13_0 property value. When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v130 property.
+     * @param value Value to set for the v13_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -242,7 +242,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v14_0 property value. When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v140 property.
+     * @param value Value to set for the v14_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -251,7 +251,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v150 property.
+     * @param value Value to set for the v15_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -260,7 +260,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v80 property.
+     * @param value Value to set for the v8_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -269,7 +269,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v90 property.
+     * @param value Value to set for the v9_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull

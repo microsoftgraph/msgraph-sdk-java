@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * The average inbound stream network jitter.
      */
-    private Period averageInboundJitter;
+    private PeriodAndDuration averageInboundJitter;
     /**
      * The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
@@ -24,11 +24,11 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * The average inbound stream network round trip delay.
      */
-    private Period averageInboundRoundTripDelay;
+    private PeriodAndDuration averageInboundRoundTripDelay;
     /**
      * The average outbound stream network jitter.
      */
-    private Period averageOutboundJitter;
+    private PeriodAndDuration averageOutboundJitter;
     /**
      * The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
@@ -36,7 +36,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * The average outbound stream network round trip delay.
      */
-    private Period averageOutboundRoundTripDelay;
+    private PeriodAndDuration averageOutboundRoundTripDelay;
     /**
      * The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
      */
@@ -56,7 +56,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * The maximum inbound stream network jitter.
      */
-    private Period maximumInboundJitter;
+    private PeriodAndDuration maximumInboundJitter;
     /**
      * The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
@@ -64,11 +64,11 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * The maximum inbound stream network round trip delay.
      */
-    private Period maximumInboundRoundTripDelay;
+    private PeriodAndDuration maximumInboundRoundTripDelay;
     /**
      * The maximum outbound stream network jitter.
      */
-    private Period maximumOutboundJitter;
+    private PeriodAndDuration maximumOutboundJitter;
     /**
      * The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
@@ -76,11 +76,11 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     /**
      * The maximum outbound stream network round trip delay.
      */
-    private Period maximumOutboundRoundTripDelay;
+    private PeriodAndDuration maximumOutboundRoundTripDelay;
     /**
      * The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
      */
-    private Period mediaDuration;
+    private PeriodAndDuration mediaDuration;
     /**
      * The network link speed in bytes
      */
@@ -138,10 +138,10 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the averageInboundJitter property value. The average inbound stream network jitter.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageInboundJitter() {
+    public PeriodAndDuration getAverageInboundJitter() {
         return this.averageInboundJitter;
     }
     /**
@@ -154,18 +154,18 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the averageInboundRoundTripDelay property value. The average inbound stream network round trip delay.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageInboundRoundTripDelay() {
+    public PeriodAndDuration getAverageInboundRoundTripDelay() {
         return this.averageInboundRoundTripDelay;
     }
     /**
      * Gets the averageOutboundJitter property value. The average outbound stream network jitter.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageOutboundJitter() {
+    public PeriodAndDuration getAverageOutboundJitter() {
         return this.averageOutboundJitter;
     }
     /**
@@ -178,10 +178,10 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the averageOutboundRoundTripDelay property value. The average outbound stream network round trip delay.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageOutboundRoundTripDelay() {
+    public PeriodAndDuration getAverageOutboundRoundTripDelay() {
         return this.averageOutboundRoundTripDelay;
     }
     /**
@@ -199,23 +199,23 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(22);
-        deserializerMap.put("averageInboundJitter", (n) -> { this.setAverageInboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageInboundJitter", (n) -> { this.setAverageInboundJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("averageInboundPacketLossRateInPercentage", (n) -> { this.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
-        deserializerMap.put("averageInboundRoundTripDelay", (n) -> { this.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
-        deserializerMap.put("averageOutboundJitter", (n) -> { this.setAverageOutboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageInboundRoundTripDelay", (n) -> { this.setAverageInboundRoundTripDelay(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("averageOutboundJitter", (n) -> { this.setAverageOutboundJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("averageOutboundPacketLossRateInPercentage", (n) -> { this.setAverageOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
-        deserializerMap.put("averageOutboundRoundTripDelay", (n) -> { this.setAverageOutboundRoundTripDelay(n.getPeriodValue()); });
+        deserializerMap.put("averageOutboundRoundTripDelay", (n) -> { this.setAverageOutboundRoundTripDelay(n.getPeriodAndDurationValue()); });
         deserializerMap.put("channelIndex", (n) -> { this.setChannelIndex(n.getIntegerValue()); });
         deserializerMap.put("inboundPackets", (n) -> { this.setInboundPackets(n.getLongValue()); });
         deserializerMap.put("localIPAddress", (n) -> { this.setLocalIPAddress(n.getStringValue()); });
         deserializerMap.put("localPort", (n) -> { this.setLocalPort(n.getIntegerValue()); });
-        deserializerMap.put("maximumInboundJitter", (n) -> { this.setMaximumInboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("maximumInboundJitter", (n) -> { this.setMaximumInboundJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("maximumInboundPacketLossRateInPercentage", (n) -> { this.setMaximumInboundPacketLossRateInPercentage(n.getDoubleValue()); });
-        deserializerMap.put("maximumInboundRoundTripDelay", (n) -> { this.setMaximumInboundRoundTripDelay(n.getPeriodValue()); });
-        deserializerMap.put("maximumOutboundJitter", (n) -> { this.setMaximumOutboundJitter(n.getPeriodValue()); });
+        deserializerMap.put("maximumInboundRoundTripDelay", (n) -> { this.setMaximumInboundRoundTripDelay(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("maximumOutboundJitter", (n) -> { this.setMaximumOutboundJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("maximumOutboundPacketLossRateInPercentage", (n) -> { this.setMaximumOutboundPacketLossRateInPercentage(n.getDoubleValue()); });
-        deserializerMap.put("maximumOutboundRoundTripDelay", (n) -> { this.setMaximumOutboundRoundTripDelay(n.getPeriodValue()); });
-        deserializerMap.put("mediaDuration", (n) -> { this.setMediaDuration(n.getPeriodValue()); });
+        deserializerMap.put("maximumOutboundRoundTripDelay", (n) -> { this.setMaximumOutboundRoundTripDelay(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("mediaDuration", (n) -> { this.setMediaDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("networkLinkSpeedInBytes", (n) -> { this.setNetworkLinkSpeedInBytes(n.getLongValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("outboundPackets", (n) -> { this.setOutboundPackets(n.getLongValue()); });
@@ -249,10 +249,10 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the maximumInboundJitter property value. The maximum inbound stream network jitter.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaximumInboundJitter() {
+    public PeriodAndDuration getMaximumInboundJitter() {
         return this.maximumInboundJitter;
     }
     /**
@@ -265,18 +265,18 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the maximumInboundRoundTripDelay property value. The maximum inbound stream network round trip delay.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaximumInboundRoundTripDelay() {
+    public PeriodAndDuration getMaximumInboundRoundTripDelay() {
         return this.maximumInboundRoundTripDelay;
     }
     /**
      * Gets the maximumOutboundJitter property value. The maximum outbound stream network jitter.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaximumOutboundJitter() {
+    public PeriodAndDuration getMaximumOutboundJitter() {
         return this.maximumOutboundJitter;
     }
     /**
@@ -289,18 +289,18 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Gets the maximumOutboundRoundTripDelay property value. The maximum outbound stream network round trip delay.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaximumOutboundRoundTripDelay() {
+    public PeriodAndDuration getMaximumOutboundRoundTripDelay() {
         return this.maximumOutboundRoundTripDelay;
     }
     /**
      * Gets the mediaDuration property value. The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMediaDuration() {
+    public PeriodAndDuration getMediaDuration() {
         return this.mediaDuration;
     }
     /**
@@ -351,23 +351,23 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writePeriodValue("averageInboundJitter", this.getAverageInboundJitter());
+        writer.writePeriodAndDurationValue("averageInboundJitter", this.getAverageInboundJitter());
         writer.writeDoubleValue("averageInboundPacketLossRateInPercentage", this.getAverageInboundPacketLossRateInPercentage());
-        writer.writePeriodValue("averageInboundRoundTripDelay", this.getAverageInboundRoundTripDelay());
-        writer.writePeriodValue("averageOutboundJitter", this.getAverageOutboundJitter());
+        writer.writePeriodAndDurationValue("averageInboundRoundTripDelay", this.getAverageInboundRoundTripDelay());
+        writer.writePeriodAndDurationValue("averageOutboundJitter", this.getAverageOutboundJitter());
         writer.writeDoubleValue("averageOutboundPacketLossRateInPercentage", this.getAverageOutboundPacketLossRateInPercentage());
-        writer.writePeriodValue("averageOutboundRoundTripDelay", this.getAverageOutboundRoundTripDelay());
+        writer.writePeriodAndDurationValue("averageOutboundRoundTripDelay", this.getAverageOutboundRoundTripDelay());
         writer.writeIntegerValue("channelIndex", this.getChannelIndex());
         writer.writeLongValue("inboundPackets", this.getInboundPackets());
         writer.writeStringValue("localIPAddress", this.getLocalIPAddress());
         writer.writeIntegerValue("localPort", this.getLocalPort());
-        writer.writePeriodValue("maximumInboundJitter", this.getMaximumInboundJitter());
+        writer.writePeriodAndDurationValue("maximumInboundJitter", this.getMaximumInboundJitter());
         writer.writeDoubleValue("maximumInboundPacketLossRateInPercentage", this.getMaximumInboundPacketLossRateInPercentage());
-        writer.writePeriodValue("maximumInboundRoundTripDelay", this.getMaximumInboundRoundTripDelay());
-        writer.writePeriodValue("maximumOutboundJitter", this.getMaximumOutboundJitter());
+        writer.writePeriodAndDurationValue("maximumInboundRoundTripDelay", this.getMaximumInboundRoundTripDelay());
+        writer.writePeriodAndDurationValue("maximumOutboundJitter", this.getMaximumOutboundJitter());
         writer.writeDoubleValue("maximumOutboundPacketLossRateInPercentage", this.getMaximumOutboundPacketLossRateInPercentage());
-        writer.writePeriodValue("maximumOutboundRoundTripDelay", this.getMaximumOutboundRoundTripDelay());
-        writer.writePeriodValue("mediaDuration", this.getMediaDuration());
+        writer.writePeriodAndDurationValue("maximumOutboundRoundTripDelay", this.getMaximumOutboundRoundTripDelay());
+        writer.writePeriodAndDurationValue("mediaDuration", this.getMediaDuration());
         writer.writeLongValue("networkLinkSpeedInBytes", this.getNetworkLinkSpeedInBytes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("outboundPackets", this.getOutboundPackets());
@@ -377,7 +377,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -390,7 +390,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageInboundJitter(@javax.annotation.Nullable final Period value) {
+    public void setAverageInboundJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageInboundJitter = value;
     }
     /**
@@ -408,7 +408,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageInboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
+    public void setAverageInboundRoundTripDelay(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageInboundRoundTripDelay = value;
     }
     /**
@@ -417,7 +417,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageOutboundJitter(@javax.annotation.Nullable final Period value) {
+    public void setAverageOutboundJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageOutboundJitter = value;
     }
     /**
@@ -435,7 +435,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageOutboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
+    public void setAverageOutboundRoundTripDelay(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageOutboundRoundTripDelay = value;
     }
     /**
@@ -480,7 +480,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaximumInboundJitter(@javax.annotation.Nullable final Period value) {
+    public void setMaximumInboundJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maximumInboundJitter = value;
     }
     /**
@@ -498,7 +498,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaximumInboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
+    public void setMaximumInboundRoundTripDelay(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maximumInboundRoundTripDelay = value;
     }
     /**
@@ -507,7 +507,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaximumOutboundJitter(@javax.annotation.Nullable final Period value) {
+    public void setMaximumOutboundJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maximumOutboundJitter = value;
     }
     /**
@@ -525,7 +525,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaximumOutboundRoundTripDelay(@javax.annotation.Nullable final Period value) {
+    public void setMaximumOutboundRoundTripDelay(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maximumOutboundRoundTripDelay = value;
     }
     /**
@@ -534,7 +534,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMediaDuration(@javax.annotation.Nullable final Period value) {
+    public void setMediaDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.mediaDuration = value;
     }
     /**
@@ -548,7 +548,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

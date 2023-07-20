@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +11,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     /**
      * Duration of the call.
      */
-    private Period callDuration;
+    private PeriodAndDuration callDuration;
     /**
      * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      */
@@ -49,10 +49,10 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     }
     /**
      * Gets the callDuration property value. Duration of the call.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getCallDuration() {
+    public PeriodAndDuration getCallDuration() {
         return this.callDuration;
     }
     /**
@@ -86,7 +86,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("callDuration", (n) -> { this.setCallDuration(n.getPeriodValue()); });
+        deserializerMap.put("callDuration", (n) -> { this.setCallDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callParticipants", (n) -> { this.setCallParticipants(n.getCollectionOfObjectValues(CallParticipantInfo::createFromDiscriminatorValue)); });
@@ -110,7 +110,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("callDuration", this.getCallDuration());
+        writer.writePeriodAndDurationValue("callDuration", this.getCallDuration());
         writer.writeEnumValue("callEventType", this.getCallEventType());
         writer.writeStringValue("callId", this.getCallId());
         writer.writeCollectionOfObjectValues("callParticipants", this.getCallParticipants());
@@ -122,7 +122,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setCallDuration(@javax.annotation.Nullable final Period value) {
+    public void setCallDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.callDuration = value;
     }
     /**

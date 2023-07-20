@@ -3,11 +3,11 @@ package com.microsoft.graph.users.item.findmeetingtimes;
 import com.microsoft.graph.models.AttendeeBase;
 import com.microsoft.graph.models.LocationConstraint;
 import com.microsoft.graph.models.TimeConstraint;
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * The meetingDuration property
      */
-    private Period meetingDuration;
+    private PeriodAndDuration meetingDuration;
     /**
      * The minimumAttendeePercentage property
      */
@@ -93,7 +93,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
         deserializerMap.put("isOrganizerOptional", (n) -> { this.setIsOrganizerOptional(n.getBooleanValue()); });
         deserializerMap.put("locationConstraint", (n) -> { this.setLocationConstraint(n.getObjectValue(LocationConstraint::createFromDiscriminatorValue)); });
         deserializerMap.put("maxCandidates", (n) -> { this.setMaxCandidates(n.getIntegerValue()); });
-        deserializerMap.put("meetingDuration", (n) -> { this.setMeetingDuration(n.getPeriodValue()); });
+        deserializerMap.put("meetingDuration", (n) -> { this.setMeetingDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("minimumAttendeePercentage", (n) -> { this.setMinimumAttendeePercentage(n.getDoubleValue()); });
         deserializerMap.put("returnSuggestionReasons", (n) -> { this.setReturnSuggestionReasons(n.getBooleanValue()); });
         deserializerMap.put("timeConstraint", (n) -> { this.setTimeConstraint(n.getObjectValue(TimeConstraint::createFromDiscriminatorValue)); });
@@ -125,10 +125,10 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the meetingDuration property value. The meetingDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMeetingDuration() {
+    public PeriodAndDuration getMeetingDuration() {
         return this.meetingDuration;
     }
     /**
@@ -167,7 +167,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
         writer.writeBooleanValue("isOrganizerOptional", this.getIsOrganizerOptional());
         writer.writeObjectValue("locationConstraint", this.getLocationConstraint());
         writer.writeIntegerValue("maxCandidates", this.getMaxCandidates());
-        writer.writePeriodValue("meetingDuration", this.getMeetingDuration());
+        writer.writePeriodAndDurationValue("meetingDuration", this.getMeetingDuration());
         writer.writeDoubleValue("minimumAttendeePercentage", this.getMinimumAttendeePercentage());
         writer.writeBooleanValue("returnSuggestionReasons", this.getReturnSuggestionReasons());
         writer.writeObjectValue("timeConstraint", this.getTimeConstraint());
@@ -175,7 +175,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -224,7 +224,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMeetingDuration(@javax.annotation.Nullable final Period value) {
+    public void setMeetingDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.meetingDuration = value;
     }
     /**

@@ -56,7 +56,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         return this.additionalData;
     }
     /**
-     * Gets the availabilityViewInterval property value. The AvailabilityViewInterval property
+     * Gets the AvailabilityViewInterval property value. The AvailabilityViewInterval property
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         return this.availabilityViewInterval;
     }
     /**
-     * Gets the endTime property value. The EndTime property
+     * Gets the EndTime property value. The EndTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -85,7 +85,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the schedules property value. The Schedules property
+     * Gets the Schedules property value. The Schedules property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         return this.schedules;
     }
     /**
-     * Gets the startTime property value. The StartTime property
+     * Gets the StartTime property value. The StartTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -124,7 +124,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         this.additionalData = value;
     }
     /**
-     * Sets the availabilityViewInterval property value. The AvailabilityViewInterval property
+     * Sets the AvailabilityViewInterval property value. The AvailabilityViewInterval property
      * @param value Value to set for the AvailabilityViewInterval property.
      * @return a void
      */
@@ -133,7 +133,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         this.availabilityViewInterval = value;
     }
     /**
-     * Sets the endTime property value. The EndTime property
+     * Sets the EndTime property value. The EndTime property
      * @param value Value to set for the EndTime property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         this.endTime = value;
     }
     /**
-     * Sets the schedules property value. The Schedules property
+     * Sets the Schedules property value. The Schedules property
      * @param value Value to set for the Schedules property.
      * @return a void
      */
@@ -151,7 +151,7 @@ public class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsabl
         this.schedules = value;
     }
     /**
-     * Sets the startTime property value. The StartTime property
+     * Sets the StartTime property value. The StartTime property
      * @param value Value to set for the StartTime property.
      * @return a void
      */

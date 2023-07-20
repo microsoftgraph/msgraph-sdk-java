@@ -64,7 +64,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
         return this.clientRequestId;
     }
     /**
-     * Gets the date property value. Date when the error occured.
+     * Gets the Date property value. Date when the error occured.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -125,7 +125,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the client-request-id property value. Client request Id as sent by the client application.
-     * @param value Value to set for the clientRequestId property.
+     * @param value Value to set for the client-request-id property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -133,7 +133,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
         this.clientRequestId = value;
     }
     /**
-     * Sets the date property value. Date when the error occured.
+     * Sets the Date property value. Date when the error occured.
      * @param value Value to set for the Date property.
      * @return a void
      */
@@ -143,7 +143,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -152,7 +152,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the request-id property value. Request Id as tracked internally by the service
-     * @param value Value to set for the requestId property.
+     * @param value Value to set for the request-id property.
      * @return a void
      */
     @javax.annotation.Nonnull

@@ -47,7 +47,7 @@ public class AcceptPostRequestBody implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the comment property value. The Comment property
+     * Gets the Comment property value. The Comment property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class AcceptPostRequestBody implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sendResponse property value. The SendResponse property
+     * Gets the SendResponse property value. The SendResponse property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AcceptPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AcceptPostRequestBody implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the comment property value. The Comment property
+     * Sets the Comment property value. The Comment property
      * @param value Value to set for the Comment property.
      * @return a void
      */
@@ -104,7 +104,7 @@ public class AcceptPostRequestBody implements AdditionalDataHolder, Parsable {
         this.comment = value;
     }
     /**
-     * Sets the sendResponse property value. The SendResponse property
+     * Sets the SendResponse property value. The SendResponse property
      * @param value Value to set for the SendResponse property.
      * @return a void
      */

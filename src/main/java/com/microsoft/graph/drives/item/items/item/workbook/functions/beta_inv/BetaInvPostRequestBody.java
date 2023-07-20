@@ -52,7 +52,7 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, Parsable {
         return new BetaInvPostRequestBody();
     }
     /**
-     * Gets the a property value. The A property
+     * Gets the A property value. The A property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, Parsable {
         return this.alpha;
     }
     /**
-     * Gets the b property value. The B property
+     * Gets the B property value. The B property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the a property value. The A property
+     * Sets the A property value. The A property
      * @param value Value to set for the A property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -156,7 +156,7 @@ public class BetaInvPostRequestBody implements AdditionalDataHolder, Parsable {
         this.alpha = value;
     }
     /**
-     * Sets the b property value. The B property
+     * Sets the B property value. The B property
      * @param value Value to set for the B property.
      * @return a void
      */

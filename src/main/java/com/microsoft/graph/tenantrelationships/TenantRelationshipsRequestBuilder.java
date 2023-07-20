@@ -4,6 +4,8 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.TenantRelationship;
 import com.microsoft.graph.tenantrelationships.delegatedadmincustomers.DelegatedAdminCustomersRequestBuilder;
 import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.DelegatedAdminRelationshipsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.findtenantinformationbydomainnamewithdomainname.FindTenantInformationByDomainNameWithDomainNameRequestBuilder;
+import com.microsoft.graph.tenantrelationships.findtenantinformationbytenantidwithtenantid.FindTenantInformationByTenantIdWithTenantIdRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -55,6 +57,26 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nullable
     public TenantRelationshipsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/tenantRelationships{?%24select,%24expand}", rawUrl);
+    }
+    /**
+     * Provides operations to call the findTenantInformationByDomainName method.
+     * @param domainName Usage: domainName='{domainName}'
+     * @return a findTenantInformationByDomainNameWithDomainNameRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public FindTenantInformationByDomainNameWithDomainNameRequestBuilder findTenantInformationByDomainNameWithDomainName(@javax.annotation.Nonnull final String domainName) {
+        Objects.requireNonNull(domainName);
+        return new FindTenantInformationByDomainNameWithDomainNameRequestBuilder(pathParameters, requestAdapter, domainName);
+    }
+    /**
+     * Provides operations to call the findTenantInformationByTenantId method.
+     * @param tenantId Usage: tenantId='{tenantId}'
+     * @return a findTenantInformationByTenantIdWithTenantIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public FindTenantInformationByTenantIdWithTenantIdRequestBuilder findTenantInformationByTenantIdWithTenantId(@javax.annotation.Nonnull final String tenantId) {
+        Objects.requireNonNull(tenantId);
+        return new FindTenantInformationByTenantIdWithTenantIdRequestBuilder(pathParameters, requestAdapter, tenantId);
     }
     /**
      * Get tenantRelationships

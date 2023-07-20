@@ -52,7 +52,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the comment property value. The Comment property
+     * Gets the Comment property value. The Comment property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the proposedNewTime property value. The ProposedNewTime property
+     * Gets the ProposedNewTime property value. The ProposedNewTime property
      * @return a timeSlot
      */
     @javax.annotation.Nullable
@@ -80,7 +80,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
         return this.proposedNewTime;
     }
     /**
-     * Gets the sendResponse property value. The SendResponse property
+     * Gets the SendResponse property value. The SendResponse property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -110,7 +110,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the comment property value. The Comment property
+     * Sets the Comment property value. The Comment property
      * @param value Value to set for the Comment property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
         this.comment = value;
     }
     /**
-     * Sets the proposedNewTime property value. The ProposedNewTime property
+     * Sets the ProposedNewTime property value. The ProposedNewTime property
      * @param value Value to set for the ProposedNewTime property.
      * @return a void
      */
@@ -128,7 +128,7 @@ public class DeclinePostRequestBody implements AdditionalDataHolder, Parsable {
         this.proposedNewTime = value;
     }
     /**
-     * Sets the sendResponse property value. The SendResponse property
+     * Sets the SendResponse property value. The SendResponse property
      * @param value Value to set for the SendResponse property.
      * @return a void
      */

@@ -504,7 +504,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Sets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
-     * @param value Value to set for the riskEventTypesV2 property.
+     * @param value Value to set for the riskEventTypes_v2 property.
      * @return a void
      */
     @javax.annotation.Nonnull

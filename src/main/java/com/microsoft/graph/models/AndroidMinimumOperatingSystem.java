@@ -300,7 +300,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -309,7 +309,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -318,7 +318,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v100 property.
+     * @param value Value to set for the v10_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -327,7 +327,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v110 property.
+     * @param value Value to set for the v11_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -336,7 +336,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v4_0 property value. When TRUE, only Version 4.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v40 property.
+     * @param value Value to set for the v4_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -345,7 +345,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v4_0_3 property value. When TRUE, only Version 4.0.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v403 property.
+     * @param value Value to set for the v4_0_3 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -354,7 +354,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v4_1 property value. When TRUE, only Version 4.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v41 property.
+     * @param value Value to set for the v4_1 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -363,7 +363,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v4_2 property value. When TRUE, only Version 4.2 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v42 property.
+     * @param value Value to set for the v4_2 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -372,7 +372,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v4_3 property value. When TRUE, only Version 4.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v43 property.
+     * @param value Value to set for the v4_3 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -381,7 +381,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v4_4 property value. When TRUE, only Version 4.4 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v44 property.
+     * @param value Value to set for the v4_4 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -390,7 +390,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v5_0 property value. When TRUE, only Version 5.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v50 property.
+     * @param value Value to set for the v5_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -399,7 +399,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v5_1 property value. When TRUE, only Version 5.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v51 property.
+     * @param value Value to set for the v5_1 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -408,7 +408,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v6_0 property value. When TRUE, only Version 6.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v60 property.
+     * @param value Value to set for the v6_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -417,7 +417,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v7_0 property value. When TRUE, only Version 7.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v70 property.
+     * @param value Value to set for the v7_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -426,7 +426,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v7_1 property value. When TRUE, only Version 7.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v71 property.
+     * @param value Value to set for the v7_1 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -435,7 +435,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v80 property.
+     * @param value Value to set for the v8_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -444,7 +444,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v8_1 property value. When TRUE, only Version 8.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v81 property.
+     * @param value Value to set for the v8_1 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -453,7 +453,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @param value Value to set for the v90 property.
+     * @param value Value to set for the v9_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull

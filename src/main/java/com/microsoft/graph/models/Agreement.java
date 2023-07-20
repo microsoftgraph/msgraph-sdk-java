@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -39,7 +39,7 @@ public class Agreement extends Entity implements Parsable {
     /**
      * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      */
-    private Period userReacceptRequiredFrequency;
+    private PeriodAndDuration userReacceptRequiredFrequency;
     /**
      * Instantiates a new agreement and sets the default values.
      * @return a void
@@ -88,7 +88,7 @@ public class Agreement extends Entity implements Parsable {
         deserializerMap.put("isPerDeviceAcceptanceRequired", (n) -> { this.setIsPerDeviceAcceptanceRequired(n.getBooleanValue()); });
         deserializerMap.put("isViewingBeforeAcceptanceRequired", (n) -> { this.setIsViewingBeforeAcceptanceRequired(n.getBooleanValue()); });
         deserializerMap.put("termsExpiration", (n) -> { this.setTermsExpiration(n.getObjectValue(TermsExpiration::createFromDiscriminatorValue)); });
-        deserializerMap.put("userReacceptRequiredFrequency", (n) -> { this.setUserReacceptRequiredFrequency(n.getPeriodValue()); });
+        deserializerMap.put("userReacceptRequiredFrequency", (n) -> { this.setUserReacceptRequiredFrequency(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -133,10 +133,10 @@ public class Agreement extends Entity implements Parsable {
     }
     /**
      * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getUserReacceptRequiredFrequency() {
+    public PeriodAndDuration getUserReacceptRequiredFrequency() {
         return this.userReacceptRequiredFrequency;
     }
     /**
@@ -155,7 +155,7 @@ public class Agreement extends Entity implements Parsable {
         writer.writeBooleanValue("isPerDeviceAcceptanceRequired", this.getIsPerDeviceAcceptanceRequired());
         writer.writeBooleanValue("isViewingBeforeAcceptanceRequired", this.getIsViewingBeforeAcceptanceRequired());
         writer.writeObjectValue("termsExpiration", this.getTermsExpiration());
-        writer.writePeriodValue("userReacceptRequiredFrequency", this.getUserReacceptRequiredFrequency());
+        writer.writePeriodAndDurationValue("userReacceptRequiredFrequency", this.getUserReacceptRequiredFrequency());
     }
     /**
      * Sets the acceptances property value. Read-only. Information about acceptances of this agreement.
@@ -226,7 +226,7 @@ public class Agreement extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setUserReacceptRequiredFrequency(@javax.annotation.Nullable final Period value) {
+    public void setUserReacceptRequiredFrequency(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.userReacceptRequiredFrequency = value;
     }
 }

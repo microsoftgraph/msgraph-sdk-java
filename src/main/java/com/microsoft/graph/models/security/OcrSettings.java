@@ -1,10 +1,10 @@
 package com.microsoft.graph.models.security;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     /**
      * The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time.
      */
-    private Period timeout;
+    private PeriodAndDuration timeout;
     /**
      * Instantiates a new ocrSettings and sets the default values.
      * @return a void
@@ -65,7 +65,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("maxImageSize", (n) -> { this.setMaxImageSize(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("timeout", (n) -> { this.setTimeout(n.getPeriodValue()); });
+        deserializerMap.put("timeout", (n) -> { this.setTimeout(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -94,10 +94,10 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timeout property value. The timeout duration for the OCR engine. A longer timeout might increase success of OCR, but might add to the total processing time.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getTimeout() {
+    public PeriodAndDuration getTimeout() {
         return this.timeout;
     }
     /**
@@ -111,12 +111,12 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeIntegerValue("maxImageSize", this.getMaxImageSize());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writePeriodValue("timeout", this.getTimeout());
+        writer.writePeriodAndDurationValue("timeout", this.getTimeout());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -143,7 +143,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -156,7 +156,7 @@ public class OcrSettings implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTimeout(@javax.annotation.Nullable final Period value) {
+    public void setTimeout(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.timeout = value;
     }
 }

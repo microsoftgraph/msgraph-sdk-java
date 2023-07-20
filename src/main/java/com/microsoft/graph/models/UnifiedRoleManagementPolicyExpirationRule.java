@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     /**
      * The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
      */
-    private Period maximumDuration;
+    private PeriodAndDuration maximumDuration;
     /**
      * Instantiates a new unifiedRoleManagementPolicyExpirationRule and sets the default values.
      * @return a void
@@ -43,7 +43,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isExpirationRequired", (n) -> { this.setIsExpirationRequired(n.getBooleanValue()); });
-        deserializerMap.put("maximumDuration", (n) -> { this.setMaximumDuration(n.getPeriodValue()); });
+        deserializerMap.put("maximumDuration", (n) -> { this.setMaximumDuration(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -56,10 +56,10 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     }
     /**
      * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaximumDuration() {
+    public PeriodAndDuration getMaximumDuration() {
         return this.maximumDuration;
     }
     /**
@@ -72,7 +72,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isExpirationRequired", this.getIsExpirationRequired());
-        writer.writePeriodValue("maximumDuration", this.getMaximumDuration());
+        writer.writePeriodAndDurationValue("maximumDuration", this.getMaximumDuration());
     }
     /**
      * Sets the isExpirationRequired property value. Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
@@ -89,7 +89,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaximumDuration(@javax.annotation.Nullable final Period value) {
+    public void setMaximumDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maximumDuration = value;
     }
 }

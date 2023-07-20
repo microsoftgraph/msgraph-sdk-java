@@ -1,11 +1,11 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.identitygovernance.CustomTaskExtensionCallbackConfiguration;
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     /**
      * The maximum duration in ISO 8601 format that Azure AD will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
      */
-    private Period timeoutDuration;
+    private PeriodAndDuration timeoutDuration;
     /**
      * Instantiates a new customExtensionCallbackConfiguration and sets the default values.
      * @return a void
@@ -63,7 +63,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("timeoutDuration", (n) -> { this.setTimeoutDuration(n.getPeriodValue()); });
+        deserializerMap.put("timeoutDuration", (n) -> { this.setTimeoutDuration(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
@@ -76,10 +76,10 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     }
     /**
      * Gets the timeoutDuration property value. The maximum duration in ISO 8601 format that Azure AD will wait for a resume action for the callout it sent to the logic app. The valid range for custom extensions in lifecycle workflows is five minutes to three hours. The valid range for custom extensions in entitlement management is between 5 minutes and 14 days. For example, PT3H refers to three hours, P3D refers to three days, PT10M refers to ten minutes.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getTimeoutDuration() {
+    public PeriodAndDuration getTimeoutDuration() {
         return this.timeoutDuration;
     }
     /**
@@ -91,12 +91,12 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writePeriodValue("timeoutDuration", this.getTimeoutDuration());
+        writer.writePeriodAndDurationValue("timeoutDuration", this.getTimeoutDuration());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -105,7 +105,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class CustomExtensionCallbackConfiguration implements AdditionalDataHolde
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setTimeoutDuration(@javax.annotation.Nullable final Period value) {
+    public void setTimeoutDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.timeoutDuration = value;
     }
 }

@@ -1,11 +1,11 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     /**
      * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
      */
-    private Period frequency;
+    private PeriodAndDuration frequency;
     /**
      * The OdataType property
      */
@@ -59,17 +59,17 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getPeriodValue()); });
+        deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }
     /**
      * Gets the frequency property value. Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getFrequency() {
+    public PeriodAndDuration getFrequency() {
         return this.frequency;
     }
     /**
@@ -96,14 +96,14 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writePeriodValue("frequency", this.getFrequency());
+        writer.writePeriodAndDurationValue("frequency", this.getFrequency());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -116,12 +116,12 @@ public class TermsExpiration implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setFrequency(@javax.annotation.Nullable final Period value) {
+    public void setFrequency(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.frequency = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

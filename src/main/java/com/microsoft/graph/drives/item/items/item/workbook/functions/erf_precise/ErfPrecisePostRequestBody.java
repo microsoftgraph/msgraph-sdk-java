@@ -54,7 +54,7 @@ public class ErfPrecisePostRequestBody implements AdditionalDataHolder, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the x property value. The X property
+     * Gets the X property value. The X property
      * @return a Json
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class ErfPrecisePostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -82,7 +82,7 @@ public class ErfPrecisePostRequestBody implements AdditionalDataHolder, Parsable
         this.additionalData = value;
     }
     /**
-     * Sets the x property value. The X property
+     * Sets the X property value. The X property
      * @param value Value to set for the X property.
      * @return a void
      */

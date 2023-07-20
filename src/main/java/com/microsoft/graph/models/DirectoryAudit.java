@@ -13,7 +13,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private OffsetDateTime activityDateTime;
     /**
-     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities.
      */
     private String activityDisplayName;
     /**
@@ -21,7 +21,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private java.util.List<KeyValue> additionalDetails;
     /**
-     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      */
     private String category;
     /**
@@ -79,7 +79,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.activityDateTime;
     }
     /**
-     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -95,7 +95,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.additionalDetails;
     }
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.activityDateTime = value;
     }
     /**
-     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities.
      * @param value Value to set for the activityDisplayName property.
      * @return a void
      */
@@ -227,7 +227,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.additionalDetails = value;
     }
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      * @param value Value to set for the category property.
      * @return a void
      */

@@ -87,7 +87,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the @odata.deltaLink property value. The OdataDeltaLink property
-     * @param value Value to set for the OdataDeltaLink property.
+     * @param value Value to set for the @odata.deltaLink property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -105,7 +105,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the @odata.nextLink property value. The OdataNextLink property
-     * @param value Value to set for the OdataNextLink property.
+     * @param value Value to set for the @odata.nextLink property.
      * @return a void
      */
     @javax.annotation.Nonnull

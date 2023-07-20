@@ -1,11 +1,11 @@
 package com.microsoft.graph.models.callrecords;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      */
-    private Period averageAudioNetworkJitter;
+    private PeriodAndDuration averageAudioNetworkJitter;
     /**
      * Average estimated bandwidth available between two endpoints in bits per second.
      */
@@ -33,11 +33,11 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Average duration of the received freezing time in the video stream.
      */
-    private Period averageFreezeDuration;
+    private PeriodAndDuration averageFreezeDuration;
     /**
      * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      */
-    private Period averageJitter;
+    private PeriodAndDuration averageJitter;
     /**
      * Average packet loss rate for stream.
      */
@@ -53,7 +53,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      */
-    private Period averageRoundTripTime;
+    private PeriodAndDuration averageRoundTripTime;
     /**
      * Average percentage of video frames lost as displayed to the user.
      */
@@ -85,11 +85,11 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      */
-    private Period maxAudioNetworkJitter;
+    private PeriodAndDuration maxAudioNetworkJitter;
     /**
      * Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      */
-    private Period maxJitter;
+    private PeriodAndDuration maxJitter;
     /**
      * Maximum packet loss rate for the stream.
      */
@@ -101,7 +101,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      */
-    private Period maxRoundTripTime;
+    private PeriodAndDuration maxRoundTripTime;
     /**
      * The OdataType property
      */
@@ -117,7 +117,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     /**
      * Average duration of the received freezing time in the video stream represented in root mean square.
      */
-    private Period rmsFreezeDuration;
+    private PeriodAndDuration rmsFreezeDuration;
     /**
      * UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
@@ -182,10 +182,10 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the averageAudioNetworkJitter property value. Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageAudioNetworkJitter() {
+    public PeriodAndDuration getAverageAudioNetworkJitter() {
         return this.averageAudioNetworkJitter;
     }
     /**
@@ -198,18 +198,18 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the averageFreezeDuration property value. Average duration of the received freezing time in the video stream.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageFreezeDuration() {
+    public PeriodAndDuration getAverageFreezeDuration() {
         return this.averageFreezeDuration;
     }
     /**
      * Gets the averageJitter property value. Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageJitter() {
+    public PeriodAndDuration getAverageJitter() {
         return this.averageJitter;
     }
     /**
@@ -238,10 +238,10 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the averageRoundTripTime property value. Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getAverageRoundTripTime() {
+    public PeriodAndDuration getAverageRoundTripTime() {
         return this.averageRoundTripTime;
     }
     /**
@@ -285,14 +285,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(31);
         deserializerMap.put("audioCodec", (n) -> { this.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
         deserializerMap.put("averageAudioDegradation", (n) -> { this.setAverageAudioDegradation(n.getFloatValue()); });
-        deserializerMap.put("averageAudioNetworkJitter", (n) -> { this.setAverageAudioNetworkJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageAudioNetworkJitter", (n) -> { this.setAverageAudioNetworkJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("averageBandwidthEstimate", (n) -> { this.setAverageBandwidthEstimate(n.getLongValue()); });
-        deserializerMap.put("averageFreezeDuration", (n) -> { this.setAverageFreezeDuration(n.getPeriodValue()); });
-        deserializerMap.put("averageJitter", (n) -> { this.setAverageJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageFreezeDuration", (n) -> { this.setAverageFreezeDuration(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("averageJitter", (n) -> { this.setAverageJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("averagePacketLossRate", (n) -> { this.setAveragePacketLossRate(n.getFloatValue()); });
         deserializerMap.put("averageRatioOfConcealedSamples", (n) -> { this.setAverageRatioOfConcealedSamples(n.getFloatValue()); });
         deserializerMap.put("averageReceivedFrameRate", (n) -> { this.setAverageReceivedFrameRate(n.getFloatValue()); });
-        deserializerMap.put("averageRoundTripTime", (n) -> { this.setAverageRoundTripTime(n.getPeriodValue()); });
+        deserializerMap.put("averageRoundTripTime", (n) -> { this.setAverageRoundTripTime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("averageVideoFrameLossPercentage", (n) -> { this.setAverageVideoFrameLossPercentage(n.getFloatValue()); });
         deserializerMap.put("averageVideoFrameRate", (n) -> { this.setAverageVideoFrameRate(n.getFloatValue()); });
         deserializerMap.put("averageVideoPacketLossRate", (n) -> { this.setAverageVideoPacketLossRate(n.getFloatValue()); });
@@ -300,15 +300,15 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         deserializerMap.put("isAudioForwardErrorCorrectionUsed", (n) -> { this.setIsAudioForwardErrorCorrectionUsed(n.getBooleanValue()); });
         deserializerMap.put("lowFrameRateRatio", (n) -> { this.setLowFrameRateRatio(n.getFloatValue()); });
         deserializerMap.put("lowVideoProcessingCapabilityRatio", (n) -> { this.setLowVideoProcessingCapabilityRatio(n.getFloatValue()); });
-        deserializerMap.put("maxAudioNetworkJitter", (n) -> { this.setMaxAudioNetworkJitter(n.getPeriodValue()); });
-        deserializerMap.put("maxJitter", (n) -> { this.setMaxJitter(n.getPeriodValue()); });
+        deserializerMap.put("maxAudioNetworkJitter", (n) -> { this.setMaxAudioNetworkJitter(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("maxJitter", (n) -> { this.setMaxJitter(n.getPeriodAndDurationValue()); });
         deserializerMap.put("maxPacketLossRate", (n) -> { this.setMaxPacketLossRate(n.getFloatValue()); });
         deserializerMap.put("maxRatioOfConcealedSamples", (n) -> { this.setMaxRatioOfConcealedSamples(n.getFloatValue()); });
-        deserializerMap.put("maxRoundTripTime", (n) -> { this.setMaxRoundTripTime(n.getPeriodValue()); });
+        deserializerMap.put("maxRoundTripTime", (n) -> { this.setMaxRoundTripTime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("packetUtilization", (n) -> { this.setPacketUtilization(n.getLongValue()); });
         deserializerMap.put("postForwardErrorCorrectionPacketLossRate", (n) -> { this.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
-        deserializerMap.put("rmsFreezeDuration", (n) -> { this.setRmsFreezeDuration(n.getPeriodValue()); });
+        deserializerMap.put("rmsFreezeDuration", (n) -> { this.setRmsFreezeDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("streamDirection", (n) -> { this.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
         deserializerMap.put("streamId", (n) -> { this.setStreamId(n.getStringValue()); });
@@ -342,18 +342,18 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the maxAudioNetworkJitter property value. Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaxAudioNetworkJitter() {
+    public PeriodAndDuration getMaxAudioNetworkJitter() {
         return this.maxAudioNetworkJitter;
     }
     /**
      * Gets the maxJitter property value. Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaxJitter() {
+    public PeriodAndDuration getMaxJitter() {
         return this.maxJitter;
     }
     /**
@@ -374,10 +374,10 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the maxRoundTripTime property value. Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaxRoundTripTime() {
+    public PeriodAndDuration getMaxRoundTripTime() {
         return this.maxRoundTripTime;
     }
     /**
@@ -406,10 +406,10 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the rmsFreezeDuration property value. Average duration of the received freezing time in the video stream represented in root mean square.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getRmsFreezeDuration() {
+    public PeriodAndDuration getRmsFreezeDuration() {
         return this.rmsFreezeDuration;
     }
     /**
@@ -462,14 +462,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("audioCodec", this.getAudioCodec());
         writer.writeFloatValue("averageAudioDegradation", this.getAverageAudioDegradation());
-        writer.writePeriodValue("averageAudioNetworkJitter", this.getAverageAudioNetworkJitter());
+        writer.writePeriodAndDurationValue("averageAudioNetworkJitter", this.getAverageAudioNetworkJitter());
         writer.writeLongValue("averageBandwidthEstimate", this.getAverageBandwidthEstimate());
-        writer.writePeriodValue("averageFreezeDuration", this.getAverageFreezeDuration());
-        writer.writePeriodValue("averageJitter", this.getAverageJitter());
+        writer.writePeriodAndDurationValue("averageFreezeDuration", this.getAverageFreezeDuration());
+        writer.writePeriodAndDurationValue("averageJitter", this.getAverageJitter());
         writer.writeFloatValue("averagePacketLossRate", this.getAveragePacketLossRate());
         writer.writeFloatValue("averageRatioOfConcealedSamples", this.getAverageRatioOfConcealedSamples());
         writer.writeFloatValue("averageReceivedFrameRate", this.getAverageReceivedFrameRate());
-        writer.writePeriodValue("averageRoundTripTime", this.getAverageRoundTripTime());
+        writer.writePeriodAndDurationValue("averageRoundTripTime", this.getAverageRoundTripTime());
         writer.writeFloatValue("averageVideoFrameLossPercentage", this.getAverageVideoFrameLossPercentage());
         writer.writeFloatValue("averageVideoFrameRate", this.getAverageVideoFrameRate());
         writer.writeFloatValue("averageVideoPacketLossRate", this.getAverageVideoPacketLossRate());
@@ -477,15 +477,15 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         writer.writeBooleanValue("isAudioForwardErrorCorrectionUsed", this.getIsAudioForwardErrorCorrectionUsed());
         writer.writeFloatValue("lowFrameRateRatio", this.getLowFrameRateRatio());
         writer.writeFloatValue("lowVideoProcessingCapabilityRatio", this.getLowVideoProcessingCapabilityRatio());
-        writer.writePeriodValue("maxAudioNetworkJitter", this.getMaxAudioNetworkJitter());
-        writer.writePeriodValue("maxJitter", this.getMaxJitter());
+        writer.writePeriodAndDurationValue("maxAudioNetworkJitter", this.getMaxAudioNetworkJitter());
+        writer.writePeriodAndDurationValue("maxJitter", this.getMaxJitter());
         writer.writeFloatValue("maxPacketLossRate", this.getMaxPacketLossRate());
         writer.writeFloatValue("maxRatioOfConcealedSamples", this.getMaxRatioOfConcealedSamples());
-        writer.writePeriodValue("maxRoundTripTime", this.getMaxRoundTripTime());
+        writer.writePeriodAndDurationValue("maxRoundTripTime", this.getMaxRoundTripTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("packetUtilization", this.getPacketUtilization());
         writer.writeFloatValue("postForwardErrorCorrectionPacketLossRate", this.getPostForwardErrorCorrectionPacketLossRate());
-        writer.writePeriodValue("rmsFreezeDuration", this.getRmsFreezeDuration());
+        writer.writePeriodAndDurationValue("rmsFreezeDuration", this.getRmsFreezeDuration());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("streamDirection", this.getStreamDirection());
         writer.writeStringValue("streamId", this.getStreamId());
@@ -495,7 +495,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -526,7 +526,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageAudioNetworkJitter(@javax.annotation.Nullable final Period value) {
+    public void setAverageAudioNetworkJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageAudioNetworkJitter = value;
     }
     /**
@@ -544,7 +544,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageFreezeDuration(@javax.annotation.Nullable final Period value) {
+    public void setAverageFreezeDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageFreezeDuration = value;
     }
     /**
@@ -553,7 +553,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageJitter(@javax.annotation.Nullable final Period value) {
+    public void setAverageJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageJitter = value;
     }
     /**
@@ -589,7 +589,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setAverageRoundTripTime(@javax.annotation.Nullable final Period value) {
+    public void setAverageRoundTripTime(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.averageRoundTripTime = value;
     }
     /**
@@ -661,7 +661,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaxAudioNetworkJitter(@javax.annotation.Nullable final Period value) {
+    public void setMaxAudioNetworkJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maxAudioNetworkJitter = value;
     }
     /**
@@ -670,7 +670,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaxJitter(@javax.annotation.Nullable final Period value) {
+    public void setMaxJitter(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maxJitter = value;
     }
     /**
@@ -697,12 +697,12 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaxRoundTripTime(@javax.annotation.Nullable final Period value) {
+    public void setMaxRoundTripTime(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maxRoundTripTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -733,7 +733,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setRmsFreezeDuration(@javax.annotation.Nullable final Period value) {
+    public void setRmsFreezeDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.rmsFreezeDuration = value;
     }
     /**

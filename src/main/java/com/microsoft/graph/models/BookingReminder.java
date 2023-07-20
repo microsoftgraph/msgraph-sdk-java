@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     /**
      * The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
      */
-    private Period offset;
+    private PeriodAndDuration offset;
     /**
      * The recipients property
      */
@@ -67,7 +67,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("offset", (n) -> { this.setOffset(n.getPeriodValue()); });
+        deserializerMap.put("offset", (n) -> { this.setOffset(n.getPeriodAndDurationValue()); });
         deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getEnumValue(BookingReminderRecipients.class)); });
         return deserializerMap;
     }
@@ -89,10 +89,10 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getOffset() {
+    public PeriodAndDuration getOffset() {
         return this.offset;
     }
     /**
@@ -113,13 +113,13 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writePeriodValue("offset", this.getOffset());
+        writer.writePeriodAndDurationValue("offset", this.getOffset());
         writer.writeEnumValue("recipients", this.getRecipients());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -137,7 +137,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -150,7 +150,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setOffset(@javax.annotation.Nullable final Period value) {
+    public void setOffset(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.offset = value;
     }
     /**

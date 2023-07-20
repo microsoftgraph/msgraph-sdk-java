@@ -118,7 +118,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -136,7 +136,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v10_0 property value. Windows version 10.0 or later.
-     * @param value Value to set for the v100 property.
+     * @param value Value to set for the v10_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -145,7 +145,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v8_0 property value. Windows version 8.0 or later.
-     * @param value Value to set for the v80 property.
+     * @param value Value to set for the v8_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -154,7 +154,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the v8_1 property value. Windows version 8.1 or later.
-     * @param value Value to set for the v81 property.
+     * @param value Value to set for the v8_1 property.
      * @return a void
      */
     @javax.annotation.Nonnull
