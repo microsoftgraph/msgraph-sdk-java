@@ -354,6 +354,15 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     */
+    @Nonnull
+    public DriveItemPermanentDeleteRequestBuilder permanentDelete() {
+        return new DriveItemPermanentDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permanentDelete"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull

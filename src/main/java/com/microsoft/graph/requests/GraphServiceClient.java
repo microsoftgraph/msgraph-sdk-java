@@ -1142,6 +1142,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the TenantRelationship
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TenantRelationshipRequestBuilder tenantRelationships() {
+        return new com.microsoft.graph.requests.TenantRelationshipRequestBuilder(getServiceRoot() + "/tenantRelationships", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Admin
      */
     @Nonnull
@@ -1237,16 +1247,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public com.microsoft.graph.requests.PlannerRequestBuilder planner() {
         return new com.microsoft.graph.requests.PlannerRequestBuilder(getServiceRoot() + "/planner", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the TenantRelationship
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.TenantRelationshipRequestBuilder tenantRelationships() {
-        return new com.microsoft.graph.requests.TenantRelationshipRequestBuilder(getServiceRoot() + "/tenantRelationships", this, null);
     }
 
     /**
