@@ -11,6 +11,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.65.0] - 2023-07-20
+
+### Added 
+
+- DriveItemPermanentDelete derived types and requests. 
+- TenantInformation model, derived types and requests.
+
+## [5.64.0] - 2023-07-13
+
+### Added 
+
+- AccessPackage derived types and related requests.
+- The following were added to the SecurityNamespace:
+- EdiscoveryExportOperation model and requests.
+- EdiscoveryReviewSetExport model and related requests.
+- EdiscoveryReviewSetQueryExport model and related requests.
+- ExportFileMetadata model.
+- ExportFileStructure model.
+- ExportOptions model. 
+
 ## [5.63.0] - 2023-07-07
 
 ### Added 
