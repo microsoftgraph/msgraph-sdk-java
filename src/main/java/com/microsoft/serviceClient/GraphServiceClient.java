@@ -1,10 +1,13 @@
 package com.microsoft.serviceClient;
 
 import com.azure.core.credential.TokenCredential;
+import com.microsoft.graph.CoreConstants;
 import com.microsoft.graph.requests.BaseGraphRequestAdapter;
 import com.microsoft.graph.requests.BatchRequestBuilder;
-import com.microsoft.graph.requests.GraphClientOption;
+import com.microsoft.graph.requests.options.GraphClientOption;
 import com.microsoft.graph.requests.IBaseClient;
+import com.microsoft.graph.users.UsersRequestBuilder;
+import com.microsoft.graph.users.item.UserItemRequestBuilder;
 import com.microsoft.info.Constants;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.authentication.AnonymousAuthenticationProvider;
