@@ -96,4 +96,12 @@ public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClie
     public BatchRequestBuilder getBatchRequestBuilder() {
         return new CustomBatchRequestBuilder(this.requestAdapter);
     }
+    /**
+     * Provides operations to manage the user singleton.
+     * @return the request builder for the user singleton.
+     */
+    @Nonnull
+    public UserItemRequestBuilder me() {
+        return new UsersRequestBuilder(pathParameters, requestAdapter).byUserId(CoreConstants.ReplacementConstants.USER_ID_TOKEN_TO_REPLACE);
+    }
 }
