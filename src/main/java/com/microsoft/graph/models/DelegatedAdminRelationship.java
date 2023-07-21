@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     /**
      * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
      */
-    private Period duration;
+    private PeriodAndDuration duration;
     /**
      * The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
      */
@@ -125,10 +125,10 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the duration property value. The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDuration() {
+    public PeriodAndDuration getDuration() {
         return this.duration;
     }
     /**
@@ -152,7 +152,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customer", (n) -> { this.setCustomer(n.getObjectValue(DelegatedAdminRelationshipCustomerParticipant::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(DelegatedAdminRelationshipOperation::createFromDiscriminatorValue)); });
@@ -207,7 +207,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("customer", this.getCustomer());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writePeriodValue("duration", this.getDuration());
+        writer.writePeriodAndDurationValue("duration", this.getDuration());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
@@ -274,7 +274,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final Period value) {
+    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
     /**

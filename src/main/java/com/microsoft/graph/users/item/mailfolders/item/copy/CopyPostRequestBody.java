@@ -43,7 +43,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the destinationId property value. The DestinationId property
+     * Gets the DestinationId property value. The DestinationId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the destinationId property value. The DestinationId property
+     * Sets the DestinationId property value. The DestinationId property
      * @param value Value to set for the DestinationId property.
      * @return a void
      */

@@ -1,10 +1,10 @@
 package com.microsoft.graph.communications.presences.item.setpresence;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * The expirationDuration property
      */
-    private Period expirationDuration;
+    private PeriodAndDuration expirationDuration;
     /**
      * The sessionId property
      */
@@ -73,10 +73,10 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the expirationDuration property value. The expirationDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getExpirationDuration() {
+    public PeriodAndDuration getExpirationDuration() {
         return this.expirationDuration;
     }
     /**
@@ -88,7 +88,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
         deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
-        deserializerMap.put("expirationDuration", (n) -> { this.setExpirationDuration(n.getPeriodValue()); });
+        deserializerMap.put("expirationDuration", (n) -> { this.setExpirationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -110,7 +110,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
         Objects.requireNonNull(writer);
         writer.writeStringValue("activity", this.getActivity());
         writer.writeStringValue("availability", this.getAvailability());
-        writer.writePeriodValue("expirationDuration", this.getExpirationDuration());
+        writer.writePeriodAndDurationValue("expirationDuration", this.getExpirationDuration());
         writer.writeStringValue("sessionId", this.getSessionId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -125,7 +125,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -147,7 +147,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setExpirationDuration(@javax.annotation.Nullable final Period value) {
+    public void setExpirationDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.expirationDuration = value;
     }
     /**

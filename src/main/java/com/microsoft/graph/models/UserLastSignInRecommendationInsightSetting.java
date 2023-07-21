@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +11,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     /**
      * Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
      */
-    private Period recommendationLookBackDuration;
+    private PeriodAndDuration recommendationLookBackDuration;
     /**
      * Indicates whether inactivity is calculated based on the user's inactivity in the tenant or in the application. The possible values are tenant, application, unknownFutureValue. application is only relevant when the access review is a review of an assignment to an application.
      */
@@ -42,16 +42,16 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodValue()); });
+        deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("signInScope", (n) -> { this.setSignInScope(n.getEnumValue(UserSignInRecommendationScope.class)); });
         return deserializerMap;
     }
     /**
      * Gets the recommendationLookBackDuration property value. Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getRecommendationLookBackDuration() {
+    public PeriodAndDuration getRecommendationLookBackDuration() {
         return this.recommendationLookBackDuration;
     }
     /**
@@ -71,7 +71,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("recommendationLookBackDuration", this.getRecommendationLookBackDuration());
+        writer.writePeriodAndDurationValue("recommendationLookBackDuration", this.getRecommendationLookBackDuration());
         writer.writeEnumValue("signInScope", this.getSignInScope());
     }
     /**
@@ -80,7 +80,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
+    public void setRecommendationLookBackDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.recommendationLookBackDuration = value;
     }
     /**

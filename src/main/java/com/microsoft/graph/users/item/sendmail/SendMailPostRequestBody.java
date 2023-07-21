@@ -59,7 +59,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The Message property
+     * Gets the Message property value. The Message property
      * @return a message
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
         return this.message;
     }
     /**
-     * Gets the saveToSentItems property value. The SaveToSentItems property
+     * Gets the SaveToSentItems property value. The SaveToSentItems property
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the message property value. The Message property
+     * Sets the Message property value. The Message property
      * @param value Value to set for the Message property.
      * @return a void
      */
@@ -105,7 +105,7 @@ public class SendMailPostRequestBody implements AdditionalDataHolder, Parsable {
         this.message = value;
     }
     /**
-     * Sets the saveToSentItems property value. The SaveToSentItems property
+     * Sets the SaveToSentItems property value. The SaveToSentItems property
      * @param value Value to set for the SaveToSentItems property.
      * @return a void
      */

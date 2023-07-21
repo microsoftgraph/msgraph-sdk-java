@@ -13,11 +13,11 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Collection of the certification controls associated with certification
+     * Collection of the certification controls associated with the certification.
      */
     private java.util.List<CertificationControl> certificationControls;
     /**
-     * Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     * The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      */
     private String certificationName;
     /**
@@ -51,7 +51,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the certificationControls property value. Collection of the certification controls associated with certification
+     * Gets the certificationControls property value. Collection of the certification controls associated with the certification.
      * @return a certificationControl
      */
     @javax.annotation.Nullable
@@ -59,7 +59,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         return this.certificationControls;
     }
     /**
-     * Gets the certificationName property value. Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     * Gets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the certificationControls property value. Collection of the certification controls associated with certification
+     * Sets the certificationControls property value. Collection of the certification controls associated with the certification.
      * @param value Value to set for the certificationControls property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
         this.certificationControls = value;
     }
     /**
-     * Sets the certificationName property value. Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
+     * Sets the certificationName property value. The name of the compliance certification, for example, ISO 27018:2014, GDPR, FedRAMP, and NIST 800-171.
      * @param value Value to set for the certificationName property.
      * @return a void
      */
@@ -128,7 +128,7 @@ public class ComplianceInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

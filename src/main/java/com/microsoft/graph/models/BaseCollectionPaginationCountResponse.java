@@ -87,7 +87,7 @@ public class BaseCollectionPaginationCountResponse implements AdditionalDataHold
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class BaseCollectionPaginationCountResponse implements AdditionalDataHold
     }
     /**
      * Sets the @odata.count property value. The OdataCount property
-     * @param value Value to set for the OdataCount property.
+     * @param value Value to set for the @odata.count property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -105,7 +105,7 @@ public class BaseCollectionPaginationCountResponse implements AdditionalDataHold
     }
     /**
      * Sets the @odata.nextLink property value. The OdataNextLink property
-     * @param value Value to set for the OdataNextLink property.
+     * @param value Value to set for the @odata.nextLink property.
      * @return a void
      */
     @javax.annotation.Nonnull

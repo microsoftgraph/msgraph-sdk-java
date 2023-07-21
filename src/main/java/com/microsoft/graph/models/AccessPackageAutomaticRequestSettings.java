@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     /**
      * The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
      */
-    private Period gracePeriodBeforeAccessRemoval;
+    private PeriodAndDuration gracePeriodBeforeAccessRemoval;
     /**
      * The OdataType property
      */
@@ -62,7 +62,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("gracePeriodBeforeAccessRemoval", (n) -> { this.setGracePeriodBeforeAccessRemoval(n.getPeriodValue()); });
+        deserializerMap.put("gracePeriodBeforeAccessRemoval", (n) -> { this.setGracePeriodBeforeAccessRemoval(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("removeAccessWhenTargetLeavesAllowedTargets", (n) -> { this.setRemoveAccessWhenTargetLeavesAllowedTargets(n.getBooleanValue()); });
         deserializerMap.put("requestAccessForAllowedTargets", (n) -> { this.setRequestAccessForAllowedTargets(n.getBooleanValue()); });
@@ -70,10 +70,10 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     }
     /**
      * Gets the gracePeriodBeforeAccessRemoval property value. The duration for which access must be retained before the target's access is revoked once they leave the allowed target scope.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getGracePeriodBeforeAccessRemoval() {
+    public PeriodAndDuration getGracePeriodBeforeAccessRemoval() {
         return this.gracePeriodBeforeAccessRemoval;
     }
     /**
@@ -108,7 +108,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writePeriodValue("gracePeriodBeforeAccessRemoval", this.getGracePeriodBeforeAccessRemoval());
+        writer.writePeriodAndDurationValue("gracePeriodBeforeAccessRemoval", this.getGracePeriodBeforeAccessRemoval());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("removeAccessWhenTargetLeavesAllowedTargets", this.getRemoveAccessWhenTargetLeavesAllowedTargets());
         writer.writeBooleanValue("requestAccessForAllowedTargets", this.getRequestAccessForAllowedTargets());
@@ -116,7 +116,7 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -129,12 +129,12 @@ public class AccessPackageAutomaticRequestSettings implements AdditionalDataHold
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setGracePeriodBeforeAccessRemoval(@javax.annotation.Nullable final Period value) {
+    public void setGracePeriodBeforeAccessRemoval(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.gracePeriodBeforeAccessRemoval = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

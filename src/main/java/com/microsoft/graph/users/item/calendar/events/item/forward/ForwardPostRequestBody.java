@@ -48,7 +48,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the comment property value. The Comment property
+     * Gets the Comment property value. The Comment property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the toRecipients property value. The ToRecipients property
+     * Gets the ToRecipients property value. The ToRecipients property
      * @return a recipient
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the comment property value. The Comment property
+     * Sets the Comment property value. The Comment property
      * @param value Value to set for the Comment property.
      * @return a void
      */
@@ -105,7 +105,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
         this.comment = value;
     }
     /**
-     * Sets the toRecipients property value. The ToRecipients property
+     * Sets the ToRecipients property value. The ToRecipients property
      * @param value Value to set for the ToRecipients property.
      * @return a void
      */

@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +11,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     /**
      * If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
      */
-    private Period durationUntilExternalUserDeletedAfterBlocked;
+    private PeriodAndDuration durationUntilExternalUserDeletedAfterBlocked;
     /**
      * Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
      */
@@ -36,10 +36,10 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     }
     /**
      * Gets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDurationUntilExternalUserDeletedAfterBlocked() {
+    public PeriodAndDuration getDurationUntilExternalUserDeletedAfterBlocked() {
         return this.durationUntilExternalUserDeletedAfterBlocked;
     }
     /**
@@ -57,7 +57,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { this.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodValue()); });
+        deserializerMap.put("durationUntilExternalUserDeletedAfterBlocked", (n) -> { this.setDurationUntilExternalUserDeletedAfterBlocked(n.getPeriodAndDurationValue()); });
         deserializerMap.put("externalUserLifecycleAction", (n) -> { this.setExternalUserLifecycleAction(n.getEnumValue(AccessPackageExternalUserLifecycleAction.class)); });
         return deserializerMap;
     }
@@ -70,7 +70,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("durationUntilExternalUserDeletedAfterBlocked", this.getDurationUntilExternalUserDeletedAfterBlocked());
+        writer.writePeriodAndDurationValue("durationUntilExternalUserDeletedAfterBlocked", this.getDurationUntilExternalUserDeletedAfterBlocked());
         writer.writeEnumValue("externalUserLifecycleAction", this.getExternalUserLifecycleAction());
     }
     /**
@@ -79,7 +79,7 @@ public class EntitlementManagementSettings extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDurationUntilExternalUserDeletedAfterBlocked(@javax.annotation.Nullable final Period value) {
+    public void setDurationUntilExternalUserDeletedAfterBlocked(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.durationUntilExternalUserDeletedAfterBlocked = value;
     }
     /**

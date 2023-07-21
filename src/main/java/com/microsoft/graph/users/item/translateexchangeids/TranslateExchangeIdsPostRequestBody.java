@@ -64,7 +64,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         return deserializerMap;
     }
     /**
-     * Gets the inputIds property value. The InputIds property
+     * Gets the InputIds property value. The InputIds property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         return this.inputIds;
     }
     /**
-     * Gets the sourceIdType property value. The SourceIdType property
+     * Gets the SourceIdType property value. The SourceIdType property
      * @return a exchangeIdFormat
      */
     @javax.annotation.Nullable
@@ -80,7 +80,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         return this.sourceIdType;
     }
     /**
-     * Gets the targetIdType property value. The TargetIdType property
+     * Gets the TargetIdType property value. The TargetIdType property
      * @return a exchangeIdFormat
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -110,7 +110,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         this.additionalData = value;
     }
     /**
-     * Sets the inputIds property value. The InputIds property
+     * Sets the InputIds property value. The InputIds property
      * @param value Value to set for the InputIds property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         this.inputIds = value;
     }
     /**
-     * Sets the sourceIdType property value. The SourceIdType property
+     * Sets the SourceIdType property value. The SourceIdType property
      * @param value Value to set for the SourceIdType property.
      * @return a void
      */
@@ -128,7 +128,7 @@ public class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder
         this.sourceIdType = value;
     }
     /**
-     * Sets the targetIdType property value. The TargetIdType property
+     * Sets the TargetIdType property value. The TargetIdType property
      * @param value Value to set for the TargetIdType property.
      * @return a void
      */

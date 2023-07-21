@@ -86,8 +86,9 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a CompletableFuture of intelligenceProfileIndicator
+     * @see <a href="https://docs.microsoft.com/graph/api/security-intelligenceprofileindicator-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> get() {
@@ -104,9 +105,10 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of intelligenceProfileIndicator
+     * @see <a href="https://docs.microsoft.com/graph/api/security-intelligenceprofileindicator-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -190,7 +192,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +200,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -256,7 +258,7 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      */
     public class GetQueryParameters {
         /**

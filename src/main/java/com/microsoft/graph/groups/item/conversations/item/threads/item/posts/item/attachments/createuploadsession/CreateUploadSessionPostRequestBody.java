@@ -44,7 +44,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
         return this.additionalData;
     }
     /**
-     * Gets the attachmentItem property value. The AttachmentItem property
+     * Gets the AttachmentItem property value. The AttachmentItem property
      * @return a attachmentItem
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -82,7 +82,7 @@ public class CreateUploadSessionPostRequestBody implements AdditionalDataHolder,
         this.additionalData = value;
     }
     /**
-     * Sets the attachmentItem property value. The AttachmentItem property
+     * Sets the AttachmentItem property value. The AttachmentItem property
      * @param value Value to set for the AttachmentItem property.
      * @return a void
      */

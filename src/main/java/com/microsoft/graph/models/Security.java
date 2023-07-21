@@ -201,7 +201,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Sets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
-     * @param value Value to set for the alertsV2 property.
+     * @param value Value to set for the alerts_v2 property.
      * @return a void
      */
     @javax.annotation.Nonnull

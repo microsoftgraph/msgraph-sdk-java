@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     /**
      * Duration of the call recording.
      */
-    private Period callRecordingDuration;
+    private PeriodAndDuration callRecordingDuration;
     /**
      * Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      */
@@ -73,10 +73,10 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     }
     /**
      * Gets the callRecordingDuration property value. Duration of the call recording.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getCallRecordingDuration() {
+    public PeriodAndDuration getCallRecordingDuration() {
         return this.callRecordingDuration;
     }
     /**
@@ -104,7 +104,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callRecordingDisplayName", (n) -> { this.setCallRecordingDisplayName(n.getStringValue()); });
-        deserializerMap.put("callRecordingDuration", (n) -> { this.setCallRecordingDuration(n.getPeriodValue()); });
+        deserializerMap.put("callRecordingDuration", (n) -> { this.setCallRecordingDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("callRecordingStatus", (n) -> { this.setCallRecordingStatus(n.getEnumValue(CallRecordingStatus.class)); });
         deserializerMap.put("callRecordingUrl", (n) -> { this.setCallRecordingUrl(n.getStringValue()); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -138,7 +138,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
         super.serialize(writer);
         writer.writeStringValue("callId", this.getCallId());
         writer.writeStringValue("callRecordingDisplayName", this.getCallRecordingDisplayName());
-        writer.writePeriodValue("callRecordingDuration", this.getCallRecordingDuration());
+        writer.writePeriodAndDurationValue("callRecordingDuration", this.getCallRecordingDuration());
         writer.writeEnumValue("callRecordingStatus", this.getCallRecordingStatus());
         writer.writeStringValue("callRecordingUrl", this.getCallRecordingUrl());
         writer.writeObjectValue("initiator", this.getInitiator());
@@ -168,7 +168,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setCallRecordingDuration(@javax.annotation.Nullable final Period value) {
+    public void setCallRecordingDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.callRecordingDuration = value;
     }
     /**

@@ -1,11 +1,11 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     /**
      * The maxLifetime property
      */
-    private Period maxLifetime;
+    private PeriodAndDuration maxLifetime;
     /**
      * The OdataType property
      */
@@ -63,7 +63,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodValue()); });
+        deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppCredentialRestrictionType.class)); });
@@ -71,10 +71,10 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the maxLifetime property value. The maxLifetime property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaxLifetime() {
+    public PeriodAndDuration getMaxLifetime() {
         return this.maxLifetime;
     }
     /**
@@ -109,7 +109,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writePeriodValue("maxLifetime", this.getMaxLifetime());
+        writer.writePeriodAndDurationValue("maxLifetime", this.getMaxLifetime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restrictForAppsCreatedAfterDateTime", this.getRestrictForAppsCreatedAfterDateTime());
         writer.writeEnumValue("restrictionType", this.getRestrictionType());
@@ -117,7 +117,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -130,12 +130,12 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Pa
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaxLifetime(@javax.annotation.Nullable final Period value) {
+    public void setMaxLifetime(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maxLifetime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

@@ -54,7 +54,7 @@ public class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Pars
         return deserializerMap;
     }
     /**
-     * Gets the newReminderTime property value. The NewReminderTime property
+     * Gets the NewReminderTime property value. The NewReminderTime property
      * @return a dateTimeTimeZone
      */
     @javax.annotation.Nullable
@@ -74,7 +74,7 @@ public class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -82,7 +82,7 @@ public class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Pars
         this.additionalData = value;
     }
     /**
-     * Sets the newReminderTime property value. The NewReminderTime property
+     * Sets the NewReminderTime property value. The NewReminderTime property
      * @param value Value to set for the NewReminderTime property.
      * @return a void
      */

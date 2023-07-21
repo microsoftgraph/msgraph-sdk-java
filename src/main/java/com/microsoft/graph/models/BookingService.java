@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public class BookingService extends Entity implements Parsable {
     /**
      * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
      */
-    private Period defaultDuration;
+    private PeriodAndDuration defaultDuration;
     /**
      * The default physical location for the service.
      */
@@ -74,11 +74,11 @@ public class BookingService extends Entity implements Parsable {
     /**
      * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
      */
-    private Period postBuffer;
+    private PeriodAndDuration postBuffer;
     /**
      * The time to buffer before an appointment for this service can start.
      */
-    private Period preBuffer;
+    private PeriodAndDuration preBuffer;
     /**
      * The set of policies that determine how appointments for this type of service should be created and managed.
      */
@@ -131,10 +131,10 @@ public class BookingService extends Entity implements Parsable {
     }
     /**
      * Gets the defaultDuration property value. The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDefaultDuration() {
+    public PeriodAndDuration getDefaultDuration() {
         return this.defaultDuration;
     }
     /**
@@ -194,7 +194,7 @@ public class BookingService extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
         deserializerMap.put("customQuestions", (n) -> { this.setCustomQuestions(n.getCollectionOfObjectValues(BookingQuestionAssignment::createFromDiscriminatorValue)); });
-        deserializerMap.put("defaultDuration", (n) -> { this.setDefaultDuration(n.getPeriodValue()); });
+        deserializerMap.put("defaultDuration", (n) -> { this.setDefaultDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("defaultLocation", (n) -> { this.setDefaultLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultPrice", (n) -> { this.setDefaultPrice(n.getDoubleValue()); });
         deserializerMap.put("defaultPriceType", (n) -> { this.setDefaultPriceType(n.getEnumValue(BookingPriceType.class)); });
@@ -207,8 +207,8 @@ public class BookingService extends Entity implements Parsable {
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
         deserializerMap.put("maximumAttendeesCount", (n) -> { this.setMaximumAttendeesCount(n.getIntegerValue()); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
-        deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodValue()); });
-        deserializerMap.put("preBuffer", (n) -> { this.setPreBuffer(n.getPeriodValue()); });
+        deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("preBuffer", (n) -> { this.setPreBuffer(n.getPeriodAndDurationValue()); });
         deserializerMap.put("schedulingPolicy", (n) -> { this.setSchedulingPolicy(n.getObjectValue(BookingSchedulingPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("smsNotificationsEnabled", (n) -> { this.setSmsNotificationsEnabled(n.getBooleanValue()); });
         deserializerMap.put("staffMemberIds", (n) -> { this.setStaffMemberIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -265,18 +265,18 @@ public class BookingService extends Entity implements Parsable {
     }
     /**
      * Gets the postBuffer property value. The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPostBuffer() {
+    public PeriodAndDuration getPostBuffer() {
         return this.postBuffer;
     }
     /**
      * Gets the preBuffer property value. The time to buffer before an appointment for this service can start.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPreBuffer() {
+    public PeriodAndDuration getPreBuffer() {
         return this.preBuffer;
     }
     /**
@@ -322,7 +322,7 @@ public class BookingService extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
         writer.writeCollectionOfObjectValues("customQuestions", this.getCustomQuestions());
-        writer.writePeriodValue("defaultDuration", this.getDefaultDuration());
+        writer.writePeriodAndDurationValue("defaultDuration", this.getDefaultDuration());
         writer.writeObjectValue("defaultLocation", this.getDefaultLocation());
         writer.writeDoubleValue("defaultPrice", this.getDefaultPrice());
         writer.writeEnumValue("defaultPriceType", this.getDefaultPriceType());
@@ -335,8 +335,8 @@ public class BookingService extends Entity implements Parsable {
         writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeIntegerValue("maximumAttendeesCount", this.getMaximumAttendeesCount());
         writer.writeStringValue("notes", this.getNotes());
-        writer.writePeriodValue("postBuffer", this.getPostBuffer());
-        writer.writePeriodValue("preBuffer", this.getPreBuffer());
+        writer.writePeriodAndDurationValue("postBuffer", this.getPostBuffer());
+        writer.writePeriodAndDurationValue("preBuffer", this.getPreBuffer());
         writer.writeObjectValue("schedulingPolicy", this.getSchedulingPolicy());
         writer.writeBooleanValue("smsNotificationsEnabled", this.getSmsNotificationsEnabled());
         writer.writeCollectionOfPrimitiveValues("staffMemberIds", this.getStaffMemberIds());
@@ -365,7 +365,7 @@ public class BookingService extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDefaultDuration(@javax.annotation.Nullable final Period value) {
+    public void setDefaultDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.defaultDuration = value;
     }
     /**
@@ -482,7 +482,7 @@ public class BookingService extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPostBuffer(@javax.annotation.Nullable final Period value) {
+    public void setPostBuffer(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.postBuffer = value;
     }
     /**
@@ -491,7 +491,7 @@ public class BookingService extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPreBuffer(@javax.annotation.Nullable final Period value) {
+    public void setPreBuffer(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.preBuffer = value;
     }
     /**

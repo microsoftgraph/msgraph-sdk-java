@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,11 +16,11 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     /**
      * The number of days that a request can be pending a response before it is automatically denied.
      */
-    private Period durationBeforeAutomaticDenial;
+    private PeriodAndDuration durationBeforeAutomaticDenial;
     /**
      * If escalation is required, the time a request can be pending a response from a primary approver.
      */
-    private Period durationBeforeEscalation;
+    private PeriodAndDuration durationBeforeEscalation;
     /**
      * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
      */
@@ -77,18 +77,18 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDurationBeforeAutomaticDenial() {
+    public PeriodAndDuration getDurationBeforeAutomaticDenial() {
         return this.durationBeforeAutomaticDenial;
     }
     /**
      * Gets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDurationBeforeEscalation() {
+    public PeriodAndDuration getDurationBeforeEscalation() {
         return this.durationBeforeEscalation;
     }
     /**
@@ -122,8 +122,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
-        deserializerMap.put("durationBeforeAutomaticDenial", (n) -> { this.setDurationBeforeAutomaticDenial(n.getPeriodValue()); });
-        deserializerMap.put("durationBeforeEscalation", (n) -> { this.setDurationBeforeEscalation(n.getPeriodValue()); });
+        deserializerMap.put("durationBeforeAutomaticDenial", (n) -> { this.setDurationBeforeAutomaticDenial(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("durationBeforeEscalation", (n) -> { this.setDurationBeforeEscalation(n.getPeriodAndDurationValue()); });
         deserializerMap.put("escalationApprovers", (n) -> { this.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
         deserializerMap.put("fallbackEscalationApprovers", (n) -> { this.setFallbackEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
         deserializerMap.put("fallbackPrimaryApprovers", (n) -> { this.setFallbackPrimaryApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
@@ -173,8 +173,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writePeriodValue("durationBeforeAutomaticDenial", this.getDurationBeforeAutomaticDenial());
-        writer.writePeriodValue("durationBeforeEscalation", this.getDurationBeforeEscalation());
+        writer.writePeriodAndDurationValue("durationBeforeAutomaticDenial", this.getDurationBeforeAutomaticDenial());
+        writer.writePeriodAndDurationValue("durationBeforeEscalation", this.getDurationBeforeEscalation());
         writer.writeCollectionOfObjectValues("escalationApprovers", this.getEscalationApprovers());
         writer.writeCollectionOfObjectValues("fallbackEscalationApprovers", this.getFallbackEscalationApprovers());
         writer.writeCollectionOfObjectValues("fallbackPrimaryApprovers", this.getFallbackPrimaryApprovers());
@@ -186,7 +186,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -199,7 +199,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDurationBeforeAutomaticDenial(@javax.annotation.Nullable final Period value) {
+    public void setDurationBeforeAutomaticDenial(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.durationBeforeAutomaticDenial = value;
     }
     /**
@@ -208,7 +208,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDurationBeforeEscalation(@javax.annotation.Nullable final Period value) {
+    public void setDurationBeforeEscalation(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.durationBeforeEscalation = value;
     }
     /**
@@ -258,7 +258,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

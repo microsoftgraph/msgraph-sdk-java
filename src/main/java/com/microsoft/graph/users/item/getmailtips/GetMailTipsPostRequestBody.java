@@ -48,7 +48,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
         return this.additionalData;
     }
     /**
-     * Gets the emailAddresses property value. The EmailAddresses property
+     * Gets the EmailAddresses property value. The EmailAddresses property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the mailTipsOptions property value. The MailTipsOptions property
+     * Gets the MailTipsOptions property value. The MailTipsOptions property
      * @return a mailTipsType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
         this.additionalData = value;
     }
     /**
-     * Sets the emailAddresses property value. The EmailAddresses property
+     * Sets the EmailAddresses property value. The EmailAddresses property
      * @param value Value to set for the EmailAddresses property.
      * @return a void
      */
@@ -105,7 +105,7 @@ public class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsabl
         this.emailAddresses = value;
     }
     /**
-     * Sets the mailTipsOptions property value. The MailTipsOptions property
+     * Sets the MailTipsOptions property value. The MailTipsOptions property
      * @param value Value to set for the MailTipsOptions property.
      * @return a void
      */

@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public class LearningContent extends Entity implements Parsable {
     /**
      * The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
      */
-    private Period duration;
+    private PeriodAndDuration duration;
     /**
      * Unique external content ID for the learning content. Required.
      */
@@ -141,10 +141,10 @@ public class LearningContent extends Entity implements Parsable {
     }
     /**
      * Gets the duration property value. The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDuration() {
+    public PeriodAndDuration getDuration() {
         return this.duration;
     }
     /**
@@ -167,7 +167,7 @@ public class LearningContent extends Entity implements Parsable {
         deserializerMap.put("contributors", (n) -> { this.setContributors(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         deserializerMap.put("format", (n) -> { this.setFormat(n.getStringValue()); });
         deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
@@ -284,7 +284,7 @@ public class LearningContent extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("contributors", this.getContributors());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
-        writer.writePeriodValue("duration", this.getDuration());
+        writer.writePeriodAndDurationValue("duration", this.getDuration());
         writer.writeStringValue("externalId", this.getExternalId());
         writer.writeStringValue("format", this.getFormat());
         writer.writeBooleanValue("isActive", this.getIsActive());
@@ -349,7 +349,7 @@ public class LearningContent extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final Period value) {
+    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
     /**

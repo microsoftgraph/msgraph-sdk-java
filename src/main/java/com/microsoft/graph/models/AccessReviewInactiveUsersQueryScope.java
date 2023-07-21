@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +11,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
     /**
      * Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
      */
-    private Period inactiveDuration;
+    private PeriodAndDuration inactiveDuration;
     /**
      * Instantiates a new accessReviewInactiveUsersQueryScope and sets the default values.
      * @return a void
@@ -38,15 +38,15 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("inactiveDuration", (n) -> { this.setInactiveDuration(n.getPeriodValue()); });
+        deserializerMap.put("inactiveDuration", (n) -> { this.setInactiveDuration(n.getPeriodAndDurationValue()); });
         return deserializerMap;
     }
     /**
      * Gets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getInactiveDuration() {
+    public PeriodAndDuration getInactiveDuration() {
         return this.inactiveDuration;
     }
     /**
@@ -58,7 +58,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("inactiveDuration", this.getInactiveDuration());
+        writer.writePeriodAndDurationValue("inactiveDuration", this.getInactiveDuration());
     }
     /**
      * Sets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
@@ -66,7 +66,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setInactiveDuration(@javax.annotation.Nullable final Period value) {
+    public void setInactiveDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.inactiveDuration = value;
     }
 }

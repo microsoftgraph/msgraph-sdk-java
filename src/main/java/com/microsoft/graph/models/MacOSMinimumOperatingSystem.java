@@ -244,7 +244,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -253,7 +253,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -262,7 +262,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v1010 property.
+     * @param value Value to set for the v10_10 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -271,7 +271,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v1011 property.
+     * @param value Value to set for the v10_11 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -280,7 +280,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v1012 property.
+     * @param value Value to set for the v10_12 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -289,7 +289,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v1013 property.
+     * @param value Value to set for the v10_13 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -298,7 +298,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v1014 property.
+     * @param value Value to set for the v10_14 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -307,7 +307,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v1015 property.
+     * @param value Value to set for the v10_15 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -316,7 +316,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v107 property.
+     * @param value Value to set for the v10_7 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -325,7 +325,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v108 property.
+     * @param value Value to set for the v10_8 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -334,7 +334,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v109 property.
+     * @param value Value to set for the v10_9 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -343,7 +343,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v110 property.
+     * @param value Value to set for the v11_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -352,7 +352,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v120 property.
+     * @param value Value to set for the v12_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -361,7 +361,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     * @param value Value to set for the v130 property.
+     * @param value Value to set for the v13_0 property.
      * @return a void
      */
     @javax.annotation.Nonnull
