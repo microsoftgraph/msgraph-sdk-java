@@ -30,7 +30,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Account Id.
-     * 
+     * The unique ID of the account this SKU belongs to.
      */
     @SerializedName(value = "accountId", alternate = {"AccountId"})
     @Expose
@@ -39,7 +39,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Account Name.
-     * 
+     * The name of the account this SKU belongs to.
      */
     @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
@@ -48,7 +48,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Applies To.
-     * For example, 'User' or 'Company'.
+     * The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
@@ -57,7 +57,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
+     * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      */
     @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose
@@ -84,7 +84,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plans.
-     * Information about the service plans that are available with the SKU. Not nullable
+     * Information about the service plans that are available with the SKU. Not nullable.
      */
     @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
     @Expose

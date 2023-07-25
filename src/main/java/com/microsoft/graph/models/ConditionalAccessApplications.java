@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ConditionalAccessFilter;
 
 
 import com.google.gson.JsonObject;
@@ -37,6 +38,15 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Application Filter.
+     * 
+     */
+    @SerializedName(value = "applicationFilter", alternate = {"ApplicationFilter"})
+    @Expose
+	@Nullable
+    public ConditionalAccessFilter applicationFilter;
 
     /**
      * The Exclude Applications.

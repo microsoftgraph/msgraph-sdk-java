@@ -48,7 +48,7 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Locked Out.
-     * 
+     * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      */
     @SerializedName(value = "lockedOut", alternate = {"LockedOut"})
     @Expose

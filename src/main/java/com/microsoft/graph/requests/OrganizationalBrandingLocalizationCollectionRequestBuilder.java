@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.models.OrganizationalBranding;
 import com.microsoft.graph.models.OrganizationalBrandingLocalization;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -27,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class OrganizationalBrandingLocalizationCollectionRequestBuilder extends BaseCollectionRequestBuilder<OrganizationalBrandingLocalization, OrganizationalBrandingLocalizationRequestBuilder, OrganizationalBrandingLocalizationCollectionResponse, OrganizationalBrandingLocalizationCollectionPage, OrganizationalBrandingLocalizationCollectionRequest> {
 
     /**
-     * The request builder for this collection of OrganizationalBrandingLocalization
+     * The request builder for this collection of OrganizationalBranding
      *
      * @param requestUrl     the request URL
      * @param client         the service client
