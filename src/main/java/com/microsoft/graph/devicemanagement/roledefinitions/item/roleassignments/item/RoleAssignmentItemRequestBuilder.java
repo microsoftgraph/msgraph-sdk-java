@@ -49,8 +49,9 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}/roleAssignments/{roleAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -67,9 +68,10 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -86,8 +88,9 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> get() {
@@ -104,9 +107,10 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,9 +127,10 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@javax.annotation.Nonnull final RoleAssignment body) {
@@ -142,10 +147,11 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roleassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@javax.annotation.Nonnull final RoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -163,7 +169,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -171,7 +177,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a roleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -190,7 +196,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +204,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -219,7 +225,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -228,7 +234,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a roleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -256,7 +262,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of Role assignments for this role definition.
+     * Read properties and relationships of the roleAssignment object.
      */
     public class GetQueryParameters {
         /**

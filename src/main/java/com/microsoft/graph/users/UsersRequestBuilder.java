@@ -134,10 +134,10 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.
+     * Create a new user object.
      * @param body The request body
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> post(@javax.annotation.Nonnull final User body) {
@@ -154,11 +154,11 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.
+     * Create a new user object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-user-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> post(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -205,7 +205,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.
+     * Create a new user object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -214,7 +214,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.
+     * Create a new user object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

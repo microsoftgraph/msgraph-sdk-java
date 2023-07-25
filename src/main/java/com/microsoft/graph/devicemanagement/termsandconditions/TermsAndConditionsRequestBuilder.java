@@ -63,8 +63,9 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * List properties and relationships of the termsAndConditions objects.
      * @return a CompletableFuture of termsAndConditionsCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * List properties and relationships of the termsAndConditions objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditionsCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to termsAndConditions for deviceManagement
+     * Create a new termsAndConditions object.
      * @param body The request body
      * @return a CompletableFuture of termsAndConditions
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> post(@javax.annotation.Nonnull final TermsAndConditions body) {
@@ -119,10 +122,11 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to termsAndConditions for deviceManagement
+     * Create a new termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditions
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> post(@javax.annotation.Nonnull final TermsAndConditions body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * List properties and relationships of the termsAndConditions objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * List properties and relationships of the termsAndConditions objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to termsAndConditions for deviceManagement
+     * Create a new termsAndConditions object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to termsAndConditions for deviceManagement
+     * Create a new termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * List properties and relationships of the termsAndConditions objects.
      */
     public class GetQueryParameters {
         /**

@@ -57,8 +57,9 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -75,9 +76,10 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -94,8 +96,9 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @return a CompletableFuture of termsAndConditions
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> get() {
@@ -112,9 +115,10 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditions
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,9 +135,10 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @return a CompletableFuture of termsAndConditions
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> patch(@javax.annotation.Nonnull final TermsAndConditions body) {
@@ -150,10 +155,11 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditions
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> patch(@javax.annotation.Nonnull final TermsAndConditions body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -171,7 +177,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -179,7 +185,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property termsAndConditions for deviceManagement
+     * Deletes a termsAndConditions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -198,7 +204,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -206,7 +212,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -227,7 +233,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -236,7 +242,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property termsAndConditions in deviceManagement
+     * Update the properties of a termsAndConditions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -264,7 +270,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The terms and conditions associated with device management of the company.
+     * Read properties and relationships of the termsAndConditions object.
      */
     public class GetQueryParameters {
         /**

@@ -49,8 +49,9 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property roleDefinitions for deviceManagement
+     * Deletes a roleDefinition.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -67,9 +68,10 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property roleDefinitions for deviceManagement
+     * Deletes a roleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -86,8 +88,9 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Role Definitions.
+     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
      * @return a CompletableFuture of roleDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> get() {
@@ -104,9 +107,10 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Role Definitions.
+     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,9 +127,10 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property roleDefinitions in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleDefinition object.
      * @param body The request body
      * @return a CompletableFuture of roleDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> patch(@javax.annotation.Nonnull final RoleDefinition body) {
@@ -142,10 +147,11 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property roleDefinitions in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleDefinition
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> patch(@javax.annotation.Nonnull final RoleDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -163,7 +169,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property roleDefinitions for deviceManagement
+     * Deletes a roleDefinition.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -171,7 +177,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property roleDefinitions for deviceManagement
+     * Deletes a roleDefinition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -190,7 +196,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The Role Definitions.
+     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +204,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Role Definitions.
+     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -219,7 +225,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property roleDefinitions in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -228,7 +234,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property roleDefinitions in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -256,7 +262,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Role Definitions.
+     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
      */
     public class GetQueryParameters {
         /**

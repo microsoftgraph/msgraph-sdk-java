@@ -501,7 +501,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Read properties and relationships of the deviceManagement object.
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-raimportcerts-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get() {
@@ -521,7 +521,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Read properties and relationships of the deviceManagement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-raimportcerts-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-devicemanagement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -551,7 +551,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceManagement object.
      * @param body The request body
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-gpanalyticsservice-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-androidforwork-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@javax.annotation.Nonnull final DeviceManagement body) {
@@ -572,7 +572,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagement
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-gpanalyticsservice-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-androidforwork-devicemanagement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@javax.annotation.Nonnull final DeviceManagement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

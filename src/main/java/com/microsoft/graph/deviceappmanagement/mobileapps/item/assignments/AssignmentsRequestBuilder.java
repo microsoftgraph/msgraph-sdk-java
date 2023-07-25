@@ -63,8 +63,9 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The list of group assignments for this mobile app.
+     * List properties and relationships of the mobileAppAssignment objects.
      * @return a CompletableFuture of mobileAppAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignmentCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of group assignments for this mobile app.
+     * List properties and relationships of the mobileAppAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignments for deviceAppManagement
+     * Create a new mobileAppAssignment object.
      * @param body The request body
      * @return a CompletableFuture of mobileAppAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> post(@javax.annotation.Nonnull final MobileAppAssignment body) {
@@ -119,10 +122,11 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignments for deviceAppManagement
+     * Create a new mobileAppAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> post(@javax.annotation.Nonnull final MobileAppAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of group assignments for this mobile app.
+     * List properties and relationships of the mobileAppAssignment objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of group assignments for this mobile app.
+     * List properties and relationships of the mobileAppAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to assignments for deviceAppManagement
+     * Create a new mobileAppAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to assignments for deviceAppManagement
+     * Create a new mobileAppAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of group assignments for this mobile app.
+     * List properties and relationships of the mobileAppAssignment objects.
      */
     public class GetQueryParameters {
         /**

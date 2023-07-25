@@ -41,8 +41,9 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection%2Did}/apps/{managedMobileApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property apps for deviceAppManagement
+     * Deletes a managedMobileApp.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property apps for deviceAppManagement
+     * Deletes a managedMobileApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of apps to which the policy is deployed.
+     * Read properties and relationships of the managedMobileApp object.
      * @return a CompletableFuture of managedMobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> get() {
@@ -96,9 +99,10 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of apps to which the policy is deployed.
+     * Read properties and relationships of the managedMobileApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedMobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property apps in deviceAppManagement
+     * Update the properties of a managedMobileApp object.
      * @param body The request body
      * @return a CompletableFuture of managedMobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> patch(@javax.annotation.Nonnull final ManagedMobileApp body) {
@@ -134,10 +139,11 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property apps in deviceAppManagement
+     * Update the properties of a managedMobileApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedMobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedmobileapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> patch(@javax.annotation.Nonnull final ManagedMobileApp body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property apps for deviceAppManagement
+     * Deletes a managedMobileApp.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property apps for deviceAppManagement
+     * Deletes a managedMobileApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of apps to which the policy is deployed.
+     * Read properties and relationships of the managedMobileApp object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of apps to which the policy is deployed.
+     * Read properties and relationships of the managedMobileApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property apps in deviceAppManagement
+     * Update the properties of a managedMobileApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property apps in deviceAppManagement
+     * Update the properties of a managedMobileApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class ManagedMobileAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of apps to which the policy is deployed.
+     * Read properties and relationships of the managedMobileApp object.
      */
     public class GetQueryParameters {
         /**

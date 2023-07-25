@@ -63,8 +63,9 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the managedEBook objects.
      * @return a CompletableFuture of managedEBookCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-managedebook-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the managedEBook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedEBookCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-managedebook-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @return a CompletableFuture of managedEBook
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> post(@javax.annotation.Nonnull final ManagedEBook body) {
@@ -119,10 +122,11 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedEBook
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> post(@javax.annotation.Nonnull final ManagedEBook body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the managedEBook objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the managedEBook objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to managedEBooks for deviceAppManagement
+     * Create a new iosVppEBook object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The Managed eBook.
+     * List properties and relationships of the managedEBook objects.
      */
     public class GetQueryParameters {
         /**

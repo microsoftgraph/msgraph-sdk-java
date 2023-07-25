@@ -41,8 +41,9 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCategories/{deviceCategory%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceCategories for deviceManagement
+     * Deletes a deviceCategory.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceCategories for deviceManagement
+     * Deletes a deviceCategory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of device categories with the tenant.
+     * Read properties and relationships of the deviceCategory object.
      * @return a CompletableFuture of deviceCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> get() {
@@ -96,9 +99,10 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of device categories with the tenant.
+     * Read properties and relationships of the deviceCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deviceCategories in deviceManagement
+     * Update the properties of a deviceCategory object.
      * @param body The request body
      * @return a CompletableFuture of deviceCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> patch(@javax.annotation.Nonnull final DeviceCategory body) {
@@ -134,10 +139,11 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deviceCategories in deviceManagement
+     * Update the properties of a deviceCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCategory
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> patch(@javax.annotation.Nonnull final DeviceCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceCategories for deviceManagement
+     * Deletes a deviceCategory.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceCategories for deviceManagement
+     * Deletes a deviceCategory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of device categories with the tenant.
+     * Read properties and relationships of the deviceCategory object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of device categories with the tenant.
+     * Read properties and relationships of the deviceCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceCategories in deviceManagement
+     * Update the properties of a deviceCategory object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceCategories in deviceManagement
+     * Update the properties of a deviceCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of device categories with the tenant.
+     * Read properties and relationships of the deviceCategory object.
      */
     public class GetQueryParameters {
         /**

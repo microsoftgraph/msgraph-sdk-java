@@ -41,8 +41,9 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsInformationProtectionNetworkLearningSummaries/{windowsInformationProtectionNetworkLearningSummary%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionNetworkLearningSummary.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         }
     }
     /**
-     * Delete navigation property windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionNetworkLearningSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         }
     }
     /**
-     * The windows information protection network learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionNetworkLearningSummary object.
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> get() {
@@ -96,9 +99,10 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         }
     }
     /**
-     * The windows information protection network learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionNetworkLearningSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         }
     }
     /**
-     * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> patch(@javax.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body) {
@@ -134,10 +139,11 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         }
     }
     /**
-     * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> patch(@javax.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         }
     }
     /**
-     * Delete navigation property windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionNetworkLearningSummary.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Deletes a windowsInformationProtectionNetworkLearningSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         return requestInfo;
     }
     /**
-     * The windows information protection network learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionNetworkLearningSummary object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The windows information protection network learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionNetworkLearningSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
+     * Update the properties of a windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The windows information protection network learning summaries.
+     * Read properties and relationships of the windowsInformationProtectionNetworkLearningSummary object.
      */
     public class GetQueryParameters {
         /**

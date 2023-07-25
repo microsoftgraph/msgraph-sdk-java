@@ -41,8 +41,9 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceManagement/complianceManagementPartners/{complianceManagementPartner%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property complianceManagementPartners for deviceManagement
+     * Deletes a complianceManagementPartner.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property complianceManagementPartners for deviceManagement
+     * Deletes a complianceManagementPartner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * Read properties and relationships of the complianceManagementPartner object.
      * @return a CompletableFuture of complianceManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> get() {
@@ -96,9 +99,10 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * Read properties and relationships of the complianceManagementPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of complianceManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property complianceManagementPartners in deviceManagement
+     * Update the properties of a complianceManagementPartner object.
      * @param body The request body
      * @return a CompletableFuture of complianceManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> patch(@javax.annotation.Nonnull final ComplianceManagementPartner body) {
@@ -134,10 +139,11 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property complianceManagementPartners in deviceManagement
+     * Update the properties of a complianceManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of complianceManagementPartner
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> patch(@javax.annotation.Nonnull final ComplianceManagementPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property complianceManagementPartners for deviceManagement
+     * Deletes a complianceManagementPartner.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property complianceManagementPartners for deviceManagement
+     * Deletes a complianceManagementPartner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * Read properties and relationships of the complianceManagementPartner object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * Read properties and relationships of the complianceManagementPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property complianceManagementPartners in deviceManagement
+     * Update the properties of a complianceManagementPartner object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property complianceManagementPartners in deviceManagement
+     * Update the properties of a complianceManagementPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * Read properties and relationships of the complianceManagementPartner object.
      */
     public class GetQueryParameters {
         /**

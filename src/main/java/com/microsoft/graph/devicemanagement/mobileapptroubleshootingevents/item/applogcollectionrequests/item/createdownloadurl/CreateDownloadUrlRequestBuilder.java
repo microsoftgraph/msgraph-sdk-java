@@ -40,8 +40,9 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEvent%2Did}/appLogCollectionRequests/{appLogCollectionRequest%2Did}/createDownloadUrl", rawUrl);
     }
     /**
-     * Invoke action createDownloadUrl
+     * Not yet documented
      * @return a CompletableFuture of appLogCollectionDownloadDetails
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-applogcollectionrequest-createdownloadurl?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionDownloadDetails> post() {
@@ -58,9 +59,10 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action createDownloadUrl
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appLogCollectionDownloadDetails
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-applogcollectionrequest-createdownloadurl?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionDownloadDetails> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -77,7 +79,7 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action createDownloadUrl
+     * Not yet documented
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +87,7 @@ public class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action createDownloadUrl
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

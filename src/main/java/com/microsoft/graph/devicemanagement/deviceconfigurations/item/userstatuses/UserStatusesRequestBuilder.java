@@ -63,8 +63,9 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/userStatuses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Device configuration installation status by user.
+     * List properties and relationships of the deviceConfigurationUserStatus objects.
      * @return a CompletableFuture of deviceConfigurationUserStatusCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationUserStatusCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Device configuration installation status by user.
+     * List properties and relationships of the deviceConfigurationUserStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfigurationUserStatusCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationUserStatusCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceConfigurationUserStatus object.
      * @param body The request body
      * @return a CompletableFuture of deviceConfigurationUserStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationUserStatus> post(@javax.annotation.Nonnull final DeviceConfigurationUserStatus body) {
@@ -119,10 +122,11 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceConfigurationUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfigurationUserStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationUserStatus> post(@javax.annotation.Nonnull final DeviceConfigurationUserStatus body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Device configuration installation status by user.
+     * List properties and relationships of the deviceConfigurationUserStatus objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Device configuration installation status by user.
+     * List properties and relationships of the deviceConfigurationUserStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceConfigurationUserStatus object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userStatuses for deviceManagement
+     * Create a new deviceConfigurationUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Device configuration installation status by user.
+     * List properties and relationships of the deviceConfigurationUserStatus objects.
      */
     public class GetQueryParameters {
         /**

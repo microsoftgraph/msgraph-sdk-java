@@ -40,9 +40,10 @@ public class GetConfigurationSettingNonComplianceReportRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/deviceManagement/reports/getConfigurationSettingNonComplianceReport", rawUrl);
     }
     /**
-     * Invoke action getConfigurationSettingNonComplianceReport
+     * Not yet documented
      * @param body The request body
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getconfigurationsettingnoncompliancereport?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetConfigurationSettingNonComplianceReportPostRequestBody body) {
@@ -59,10 +60,11 @@ public class GetConfigurationSettingNonComplianceReportRequestBuilder extends Ba
         }
     }
     /**
-     * Invoke action getConfigurationSettingNonComplianceReport
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getconfigurationsettingnoncompliancereport?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetConfigurationSettingNonComplianceReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +82,7 @@ public class GetConfigurationSettingNonComplianceReportRequestBuilder extends Ba
         }
     }
     /**
-     * Invoke action getConfigurationSettingNonComplianceReport
+     * Not yet documented
      * @param body The request body
      * @return a RequestInformation
      */
@@ -89,7 +91,7 @@ public class GetConfigurationSettingNonComplianceReportRequestBuilder extends Ba
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getConfigurationSettingNonComplianceReport
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

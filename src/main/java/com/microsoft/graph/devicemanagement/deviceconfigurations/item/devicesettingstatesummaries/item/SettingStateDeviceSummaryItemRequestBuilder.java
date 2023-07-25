@@ -41,8 +41,9 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/deviceSettingStateSummaries/{settingStateDeviceSummary%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceSettingStateSummaries for deviceManagement
+     * Deletes a settingStateDeviceSummary.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property deviceSettingStateSummaries for deviceManagement
+     * Deletes a settingStateDeviceSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * Read properties and relationships of the settingStateDeviceSummary object.
      * @return a CompletableFuture of settingStateDeviceSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> get() {
@@ -96,9 +99,10 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * Read properties and relationships of the settingStateDeviceSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of settingStateDeviceSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the navigation property deviceSettingStateSummaries in deviceManagement
+     * Update the properties of a settingStateDeviceSummary object.
      * @param body The request body
      * @return a CompletableFuture of settingStateDeviceSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> patch(@javax.annotation.Nonnull final SettingStateDeviceSummary body) {
@@ -134,10 +139,11 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update the navigation property deviceSettingStateSummaries in deviceManagement
+     * Update the properties of a settingStateDeviceSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of settingStateDeviceSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-settingstatedevicesummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> patch(@javax.annotation.Nonnull final SettingStateDeviceSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Delete navigation property deviceSettingStateSummaries for deviceManagement
+     * Deletes a settingStateDeviceSummary.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceSettingStateSummaries for deviceManagement
+     * Deletes a settingStateDeviceSummary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * Read properties and relationships of the settingStateDeviceSummary object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * Read properties and relationships of the settingStateDeviceSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceSettingStateSummaries in deviceManagement
+     * Update the properties of a settingStateDeviceSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceSettingStateSummaries in deviceManagement
+     * Update the properties of a settingStateDeviceSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Device Configuration Setting State Device Summary
+     * Read properties and relationships of the settingStateDeviceSummary object.
      */
     public class GetQueryParameters {
         /**

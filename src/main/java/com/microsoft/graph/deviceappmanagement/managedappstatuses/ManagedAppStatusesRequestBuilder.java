@@ -63,8 +63,9 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppStatuses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The managed app statuses.
+     * List properties and relationships of the managedAppStatus objects.
      * @return a CompletableFuture of managedAppStatusCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatusCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The managed app statuses.
+     * List properties and relationships of the managedAppStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppStatusCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappstatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatusCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The managed app statuses.
+     * List properties and relationships of the managedAppStatus objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +150,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The managed app statuses.
+     * List properties and relationships of the managedAppStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +203,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The managed app statuses.
+     * List properties and relationships of the managedAppStatus objects.
      */
     public class GetQueryParameters {
         /**

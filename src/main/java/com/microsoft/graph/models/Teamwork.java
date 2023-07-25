@@ -12,6 +12,10 @@ public class Teamwork extends Entity implements Parsable {
      */
     private java.util.List<DeletedTeam> deletedTeams;
     /**
+     * The teamsAppSettings property
+     */
+    private TeamsAppSettings teamsAppSettings;
+    /**
      * The workforceIntegrations property
      */
     private java.util.List<WorkforceIntegration> workforceIntegrations;
@@ -49,8 +53,17 @@ public class Teamwork extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deletedTeams", (n) -> { this.setDeletedTeams(n.getCollectionOfObjectValues(DeletedTeam::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsAppSettings", (n) -> { this.setTeamsAppSettings(n.getObjectValue(TeamsAppSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("workforceIntegrations", (n) -> { this.setWorkforceIntegrations(n.getCollectionOfObjectValues(WorkforceIntegration::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the teamsAppSettings property value. The teamsAppSettings property
+     * @return a teamsAppSettings
+     */
+    @javax.annotation.Nullable
+    public TeamsAppSettings getTeamsAppSettings() {
+        return this.teamsAppSettings;
     }
     /**
      * Gets the workforceIntegrations property value. The workforceIntegrations property
@@ -70,6 +83,7 @@ public class Teamwork extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("deletedTeams", this.getDeletedTeams());
+        writer.writeObjectValue("teamsAppSettings", this.getTeamsAppSettings());
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
     }
     /**
@@ -80,6 +94,15 @@ public class Teamwork extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setDeletedTeams(@javax.annotation.Nullable final java.util.List<DeletedTeam> value) {
         this.deletedTeams = value;
+    }
+    /**
+     * Sets the teamsAppSettings property value. The teamsAppSettings property
+     * @param value Value to set for the teamsAppSettings property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTeamsAppSettings(@javax.annotation.Nullable final TeamsAppSettings value) {
+        this.teamsAppSettings = value;
     }
     /**
      * Sets the workforceIntegrations property value. The workforceIntegrations property

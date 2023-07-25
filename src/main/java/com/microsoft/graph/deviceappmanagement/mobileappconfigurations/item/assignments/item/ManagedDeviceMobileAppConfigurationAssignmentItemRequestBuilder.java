@@ -41,8 +41,9 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}/assignments/{managedDeviceMobileAppConfigurationAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationAssignment.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         }
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         }
     }
     /**
-     * The list of group assignemenets for app configration.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> get() {
@@ -96,9 +99,10 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         }
     }
     /**
-     * The list of group assignemenets for app configration.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         }
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationAssignment body) {
@@ -134,10 +139,11 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         }
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         }
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationAssignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         return requestInfo;
     }
     /**
-     * The list of group assignemenets for app configration.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         return toGetRequestInformation(null);
     }
     /**
-     * The list of group assignemenets for app configration.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         return requestInfo;
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder ext
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of group assignemenets for app configration.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      */
     public class GetQueryParameters {
         /**

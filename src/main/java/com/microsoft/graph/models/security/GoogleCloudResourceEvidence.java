@@ -38,6 +38,7 @@ public class GoogleCloudResourceEvidence extends AlertEvidence implements Parsab
     @javax.annotation.Nullable
     public GoogleCloudResourceEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.googleCloudResourceEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

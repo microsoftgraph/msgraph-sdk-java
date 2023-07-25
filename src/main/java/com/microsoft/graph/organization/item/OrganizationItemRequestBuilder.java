@@ -189,10 +189,10 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @return a CompletableFuture of organization
-     * @see <a href="https://docs.microsoft.com/graph/api/organization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-organization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> patch(@javax.annotation.Nonnull final Organization body) {
@@ -209,11 +209,11 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organization
-     * @see <a href="https://docs.microsoft.com/graph/api/organization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-onboarding-organization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Organization> patch(@javax.annotation.Nonnull final Organization body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -287,7 +287,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -296,7 +296,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of the currently authenticated organization. In this case, `organization` is defined as a collection of exactly one record, and so its **ID** must be specified in the request.  The **ID** is also known as the **tenantId** of the organization.
+     * Update the properties of a organization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

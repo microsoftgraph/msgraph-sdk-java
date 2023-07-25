@@ -78,8 +78,9 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @return a CompletableFuture of managedAppStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> get() {
@@ -96,9 +97,10 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedAppStatus
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-mam-managedappstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,7 +184,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +192,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +250,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      */
     public class GetQueryParameters {
         /**

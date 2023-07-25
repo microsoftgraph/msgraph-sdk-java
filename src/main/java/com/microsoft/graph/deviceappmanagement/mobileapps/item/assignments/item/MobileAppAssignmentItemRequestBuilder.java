@@ -41,8 +41,9 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/assignments/{mobileAppAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a mobileAppAssignment.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a mobileAppAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of group assignments for this mobile app.
+     * Read properties and relationships of the mobileAppAssignment object.
      * @return a CompletableFuture of mobileAppAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> get() {
@@ -96,9 +99,10 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of group assignments for this mobile app.
+     * Read properties and relationships of the mobileAppAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a mobileAppAssignment object.
      * @param body The request body
      * @return a CompletableFuture of mobileAppAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> patch(@javax.annotation.Nonnull final MobileAppAssignment body) {
@@ -134,10 +139,11 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a mobileAppAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-mobileappassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> patch(@javax.annotation.Nonnull final MobileAppAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a mobileAppAssignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a mobileAppAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of group assignments for this mobile app.
+     * Read properties and relationships of the mobileAppAssignment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of group assignments for this mobile app.
+     * Read properties and relationships of the mobileAppAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a mobileAppAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a mobileAppAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of group assignments for this mobile app.
+     * Read properties and relationships of the mobileAppAssignment object.
      */
     public class GetQueryParameters {
         /**

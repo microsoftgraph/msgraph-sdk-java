@@ -230,8 +230,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reports singleton
+     * Read properties and relationships of the deviceManagementReports object.
      * @return a CompletableFuture of deviceManagementReports
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> get() {
@@ -248,9 +249,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Reports singleton
+     * Read properties and relationships of the deviceManagementReports object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementReports
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -267,9 +269,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property reports in deviceManagement
+     * Update the properties of a deviceManagementReports object.
      * @param body The request body
      * @return a CompletableFuture of deviceManagementReports
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> patch(@javax.annotation.Nonnull final DeviceManagementReports body) {
@@ -286,10 +289,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property reports in deviceManagement
+     * Update the properties of a deviceManagementReports object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementReports
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-reporting-devicemanagementreports-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> patch(@javax.annotation.Nonnull final DeviceManagementReports body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -334,7 +338,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Reports singleton
+     * Read properties and relationships of the deviceManagementReports object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -342,7 +346,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Reports singleton
+     * Read properties and relationships of the deviceManagementReports object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -363,7 +367,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property reports in deviceManagement
+     * Update the properties of a deviceManagementReports object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -372,7 +376,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property reports in deviceManagement
+     * Update the properties of a deviceManagementReports object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -400,7 +404,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Reports singleton
+     * Read properties and relationships of the deviceManagementReports object.
      */
     public class GetQueryParameters {
         /**

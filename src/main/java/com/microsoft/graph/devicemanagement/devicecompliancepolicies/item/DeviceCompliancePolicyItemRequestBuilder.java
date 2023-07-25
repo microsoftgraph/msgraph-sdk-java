@@ -113,8 +113,9 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windowsPhone81CompliancePolicy.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windowsphone81compliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -131,9 +132,10 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windowsPhone81CompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-windowsphone81compliancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -150,8 +152,9 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the macOSCompliancePolicy object.
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> get() {
@@ -168,9 +171,10 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the macOSCompliancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -187,9 +191,10 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a macOSCompliancePolicy object.
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> patch(@javax.annotation.Nonnull final DeviceCompliancePolicy body) {
@@ -206,10 +211,11 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a macOSCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-macoscompliancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> patch(@javax.annotation.Nonnull final DeviceCompliancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -227,7 +233,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         }
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windowsPhone81CompliancePolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -235,7 +241,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windowsPhone81CompliancePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -254,7 +260,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the macOSCompliancePolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -262,7 +268,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the macOSCompliancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -283,7 +289,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a macOSCompliancePolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -292,7 +298,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a macOSCompliancePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -320,7 +326,7 @@ public class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the macOSCompliancePolicy object.
      */
     public class GetQueryParameters {
         /**

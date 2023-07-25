@@ -63,8 +63,9 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * List properties and relationships of the deviceCompliancePolicyAssignment objects.
      * @return a CompletableFuture of deviceCompliancePolicyAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignmentCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * List properties and relationships of the deviceCompliancePolicyAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicyAssignmentCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignments for deviceManagement
+     * Create a new deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicyAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> post(@javax.annotation.Nonnull final DeviceCompliancePolicyAssignment body) {
@@ -119,10 +122,11 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to assignments for deviceManagement
+     * Create a new deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicyAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> post(@javax.annotation.Nonnull final DeviceCompliancePolicyAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * List properties and relationships of the deviceCompliancePolicyAssignment objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * List properties and relationships of the deviceCompliancePolicyAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to assignments for deviceManagement
+     * Create a new deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to assignments for deviceManagement
+     * Create a new deviceCompliancePolicyAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of assignments for this compliance policy.
+     * List properties and relationships of the deviceCompliancePolicyAssignment objects.
      */
     public class GetQueryParameters {
         /**

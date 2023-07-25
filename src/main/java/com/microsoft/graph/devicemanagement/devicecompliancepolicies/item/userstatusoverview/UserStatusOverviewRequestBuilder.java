@@ -78,8 +78,9 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Device compliance users status overview
+     * Read properties and relationships of the deviceComplianceUserOverview object.
      * @return a CompletableFuture of deviceComplianceUserOverview
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuseroverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> get() {
@@ -96,9 +97,10 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Device compliance users status overview
+     * Read properties and relationships of the deviceComplianceUserOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceComplianceUserOverview
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuseroverview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property userStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceUserOverview object.
      * @param body The request body
      * @return a CompletableFuture of deviceComplianceUserOverview
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuseroverview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> patch(@javax.annotation.Nonnull final DeviceComplianceUserOverview body) {
@@ -134,10 +137,11 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property userStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceUserOverview object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceComplianceUserOverview
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuseroverview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> patch(@javax.annotation.Nonnull final DeviceComplianceUserOverview body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Device compliance users status overview
+     * Read properties and relationships of the deviceComplianceUserOverview object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Device compliance users status overview
+     * Read properties and relationships of the deviceComplianceUserOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property userStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceUserOverview object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property userStatusOverview in deviceManagement
+     * Update the properties of a deviceComplianceUserOverview object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Device compliance users status overview
+     * Read properties and relationships of the deviceComplianceUserOverview object.
      */
     public class GetQueryParameters {
         /**

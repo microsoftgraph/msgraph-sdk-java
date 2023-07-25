@@ -58,7 +58,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public ChildFoldersRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders{?includeHiddenFolders*,%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new ChildFoldersRequestBuilder and sets the default values.
@@ -68,10 +68,10 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      */
     @javax.annotation.Nullable
     public ChildFoldersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders{?%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders{?includeHiddenFolders*,%24top,%24skip,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @return a CompletableFuture of mailFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
@@ -90,7 +90,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolderCollectionResponse
      * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
@@ -152,7 +152,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -160,7 +160,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+     * The collection of child folders in the mailFolder.
      */
     public class GetQueryParameters {
         /**
@@ -234,6 +234,11 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
         @QueryParameter(name = "%24filter")
         @javax.annotation.Nullable
         public String filter;
+        /**
+         * Include Hidden Folders
+         */
+        @javax.annotation.Nullable
+        public String includeHiddenFolders;
         /**
          * Order items by property values
          */

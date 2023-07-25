@@ -41,8 +41,9 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/assignments/{termsAndConditionsAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @return a CompletableFuture of termsAndConditionsAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> get() {
@@ -96,9 +99,10 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditionsAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @return a CompletableFuture of termsAndConditionsAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> patch(@javax.annotation.Nonnull final TermsAndConditionsAssignment body) {
@@ -134,10 +139,11 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditionsAssignment
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> patch(@javax.annotation.Nonnull final TermsAndConditionsAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      */
     public class GetQueryParameters {
         /**

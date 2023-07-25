@@ -41,8 +41,9 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/users{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @return a CompletableFuture of userCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -59,9 +60,10 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-devices-user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +80,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +88,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +109,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The primary users associated with the managed device.
+     * List properties and relationships of the user objects.
      */
     public class GetQueryParameters {
         /**

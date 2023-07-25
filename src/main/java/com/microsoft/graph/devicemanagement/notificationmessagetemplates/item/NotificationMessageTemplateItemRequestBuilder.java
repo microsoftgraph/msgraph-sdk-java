@@ -57,8 +57,9 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -75,9 +76,10 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -94,8 +96,9 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> get() {
@@ -112,9 +115,10 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,9 +135,10 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@javax.annotation.Nonnull final NotificationMessageTemplate body) {
@@ -150,10 +155,11 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@javax.annotation.Nonnull final NotificationMessageTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -171,7 +177,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -179,7 +185,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -198,7 +204,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -206,7 +212,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -227,7 +233,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -236,7 +242,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -264,7 +270,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      */
     public class GetQueryParameters {
         /**

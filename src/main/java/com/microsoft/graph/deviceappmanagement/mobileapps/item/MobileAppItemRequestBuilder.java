@@ -81,8 +81,9 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property mobileApps for deviceAppManagement
+     * Deletes a androidStoreApp.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-androidstoreapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -99,9 +100,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property mobileApps for deviceAppManagement
+     * Deletes a androidStoreApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-androidstoreapp-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -118,8 +120,9 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile apps.
+     * Read properties and relationships of the iosLobApp object.
      * @return a CompletableFuture of mobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-ioslobapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get() {
@@ -136,9 +139,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile apps.
+     * Read properties and relationships of the iosLobApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-ioslobapp-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,9 +159,10 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property mobileApps in deviceAppManagement
+     * Update the properties of a managedIOSLobApp object.
      * @param body The request body
      * @return a CompletableFuture of mobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-managedioslobapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@javax.annotation.Nonnull final MobileApp body) {
@@ -174,10 +179,11 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property mobileApps in deviceAppManagement
+     * Update the properties of a managedIOSLobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-apps-managedioslobapp-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@javax.annotation.Nonnull final MobileApp body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -195,7 +201,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property mobileApps for deviceAppManagement
+     * Deletes a androidStoreApp.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -203,7 +209,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property mobileApps for deviceAppManagement
+     * Deletes a androidStoreApp.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -222,7 +228,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The mobile apps.
+     * Read properties and relationships of the iosLobApp object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -230,7 +236,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The mobile apps.
+     * Read properties and relationships of the iosLobApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -251,7 +257,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property mobileApps in deviceAppManagement
+     * Update the properties of a managedIOSLobApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -260,7 +266,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property mobileApps in deviceAppManagement
+     * Update the properties of a managedIOSLobApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -288,7 +294,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The mobile apps.
+     * Read properties and relationships of the iosLobApp object.
      */
     public class GetQueryParameters {
         /**

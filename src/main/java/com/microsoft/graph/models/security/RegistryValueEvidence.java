@@ -38,6 +38,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public RegistryValueEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.registryValueEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -63,8 +63,9 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsInformationProtectionNetworkLearningSummaries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The windows information protection network learning summaries.
+     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummaryCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummaryCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         }
     }
     /**
-     * The windows information protection network learning summaries.
+     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummaryCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummaryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         }
     }
     /**
-     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Create a new windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> post(@javax.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body) {
@@ -119,10 +122,11 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         }
     }
     /**
-     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Create a new windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @see <a href="https://docs.microsoft.com/graph/api/intune-wip-windowsinformationprotectionnetworklearningsummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> post(@javax.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         }
     }
     /**
-     * The windows information protection network learning summaries.
+     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The windows information protection network learning summaries.
+     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return requestInfo;
     }
     /**
-     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Create a new windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to windowsInformationProtectionNetworkLearningSummaries for deviceManagement
+     * Create a new windowsInformationProtectionNetworkLearningSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class WindowsInformationProtectionNetworkLearningSummariesRequestBuilder 
         return requestInfo;
     }
     /**
-     * The windows information protection network learning summaries.
+     * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
      */
     public class GetQueryParameters {
         /**
