@@ -11,6 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.66.0] - 2023-07-28
+
+### Added 
+
+- Added TeamsAppSettings model and requests.
+- Several Evidence models added to the Security namespace. This includes but is not limited to:
+- BlobEvidence.
+- ContainerEvidence.
+- ContainerRegistryEvidence.
+- KubernetesClusterEvidence.
+- ContainerPortProtocol model.
+- Dictionary model.
+- FileHashAlgorithm model.
+- FileHash model.
+
 ## [5.65.0] - 2023-07-20
 
 ### Added 

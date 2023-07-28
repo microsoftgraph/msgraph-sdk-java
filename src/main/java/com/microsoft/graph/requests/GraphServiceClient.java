@@ -537,27 +537,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
-     * Gets the collection of Localizations objects
-     *
-     * @return the request builder for the collection of Localizations objects
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionRequestBuilder localizations() {
-        return new com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionRequestBuilder(getServiceRoot() + "/localizations", this, null);
-    }
-
-    /**
-     * Gets a single Localizations
-     *
-     * @param id the id of the Localizations to retrieve
-     * @return the request builder for the Localizations object
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.OrganizationalBrandingLocalizationRequestBuilder localizations(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.OrganizationalBrandingLocalizationRequestBuilder(getServiceRoot() + "/localizations/" + id, this, null);
-    }
-
-    /**
      * Gets the collection of Oauth2PermissionGrants objects
      *
      * @return the request builder for the collection of Oauth2PermissionGrants objects

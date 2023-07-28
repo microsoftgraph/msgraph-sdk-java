@@ -103,6 +103,16 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder<Teamwork> {
     }
 
     /**
+     * Gets the request builder for TeamsAppSettings
+     *
+     * @return the TeamsAppSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.TeamsAppSettingsRequestBuilder teamsAppSettings() {
+        return new com.microsoft.graph.requests.TeamsAppSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppSettings"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
