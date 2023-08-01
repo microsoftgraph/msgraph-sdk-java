@@ -40,7 +40,7 @@ public class CustomExtensionCalloutInstance implements IJsonBackedObject {
 
     /**
      * The Custom Extension Id.
-     * 
+     * Identification of the custom extension that was triggered at this instance.
      */
     @SerializedName(value = "customExtensionId", alternate = {"CustomExtensionId"})
     @Expose
@@ -49,7 +49,7 @@ public class CustomExtensionCalloutInstance implements IJsonBackedObject {
 
     /**
      * The Detail.
-     * 
+     * Details provided by the logic app during the callback of the request instance.
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -58,7 +58,7 @@ public class CustomExtensionCalloutInstance implements IJsonBackedObject {
 
     /**
      * The External Correlation Id.
-     * 
+     * The unique run identifier for the logic app.
      */
     @SerializedName(value = "externalCorrelationId", alternate = {"ExternalCorrelationId"})
     @Expose
@@ -67,7 +67,7 @@ public class CustomExtensionCalloutInstance implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Unique identifier for the callout instance. Read-only.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -76,7 +76,7 @@ public class CustomExtensionCalloutInstance implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

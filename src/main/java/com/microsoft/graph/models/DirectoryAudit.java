@@ -32,7 +32,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and $orderby.
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Display Name.
-     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities.
+     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
      */
     @SerializedName(value = "activityDisplayName", alternate = {"ActivityDisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
+     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
      */
     @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
@@ -77,7 +77,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Initiated By.
-     * Indicates information about the user or app initiated the activity.
+     * Indicates information about the user or app initiated the activity. Supports $filter (eq) for user/id, user/displayName, user/userPrincipalName, app/appId, app/displayName; and $filter (startswith) for user/userPrincipalName.
      */
     @SerializedName(value = "initiatedBy", alternate = {"InitiatedBy"})
     @Expose
@@ -86,7 +86,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Logged By Service.
-     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
+     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
      */
     @SerializedName(value = "loggedByService", alternate = {"LoggedByService"})
     @Expose
@@ -122,7 +122,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Resources.
-     * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
+     * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
      */
     @SerializedName(value = "targetResources", alternate = {"TargetResources"})
     @Expose

@@ -28,7 +28,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
 
     /**
      * The Custom Extension Stage Instance Detail.
-     * 
+     * Details for the callback.
      */
     @SerializedName(value = "customExtensionStageInstanceDetail", alternate = {"CustomExtensionStageInstanceDetail"})
     @Expose
@@ -37,7 +37,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
 
     /**
      * The Custom Extension Stage Instance Id.
-     * 
+     * Unique identifier of the callout to the custom extension.
      */
     @SerializedName(value = "customExtensionStageInstanceId", alternate = {"CustomExtensionStageInstanceId"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
 
     /**
      * The Stage.
-     * 
+     * Indicates the stage at which the custom callout extension will be executed. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      */
     @SerializedName(value = "stage", alternate = {"Stage"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessPackageAssignmentRequestCallbackData extends CustomExtensionD
 
     /**
      * The State.
-     * 
+     * Allow the extension to be able to deny or cancel the request submitted by the requestor. The supported values are Denied and Canceled. This property can only be set for an assignmentRequestCreated stage.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

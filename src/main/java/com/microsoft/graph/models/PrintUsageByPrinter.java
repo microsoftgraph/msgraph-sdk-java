@@ -34,6 +34,15 @@ public class PrintUsageByPrinter extends PrintUsage implements IJsonBackedObject
 	@Nullable
     public String printerId;
 
+    /**
+     * The Printer Name.
+     * The name of the printer represented by these statistics.
+     */
+    @SerializedName(value = "printerName", alternate = {"PrinterName"})
+    @Expose
+	@Nullable
+    public String printerName;
+
 
     /**
      * Sets the raw JSON object

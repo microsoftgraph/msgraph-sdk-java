@@ -29,7 +29,7 @@ public class CustomExtensionStageSetting extends Entity implements IJsonBackedOb
 
     /**
      * The Stage.
-     * 
+     * Indicates the stage of the access package assignment request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      */
     @SerializedName(value = "stage", alternate = {"Stage"})
     @Expose
@@ -38,7 +38,7 @@ public class CustomExtensionStageSetting extends Entity implements IJsonBackedOb
 
     /**
      * The Custom Extension.
-     * 
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      */
     @SerializedName(value = "customExtension", alternate = {"CustomExtension"})
     @Expose

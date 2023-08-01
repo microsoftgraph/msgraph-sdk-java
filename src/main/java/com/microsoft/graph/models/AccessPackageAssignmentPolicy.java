@@ -138,7 +138,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Package.
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose
@@ -156,7 +156,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Custom Extension Stage Settings.
-     * 
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      */
     @SerializedName(value = "customExtensionStageSettings", alternate = {"CustomExtensionStageSettings"})
     @Expose

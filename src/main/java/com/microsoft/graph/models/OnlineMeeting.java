@@ -74,6 +74,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public MeetingChatMode allowMeetingChat;
 
     /**
+     * The Allow Participants To Change Name.
+     * 
+     */
+    @SerializedName(value = "allowParticipantsToChangeName", alternate = {"AllowParticipantsToChangeName"})
+    @Expose
+	@Nullable
+    public Boolean allowParticipantsToChangeName;
+
+    /**
      * The Allow Teamwork Reactions.
      * Indicates whether Teams reactions are enabled for the meeting.
      */

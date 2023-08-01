@@ -27,7 +27,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Id.
-     * The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose

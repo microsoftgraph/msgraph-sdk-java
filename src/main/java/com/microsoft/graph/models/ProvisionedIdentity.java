@@ -37,7 +37,7 @@ public class ProvisionedIdentity extends Identity implements IJsonBackedObject {
 
     /**
      * The Identity Type.
-     * Type of identity that has been provisioned, such as 'user' or 'group'.
+     * Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
      */
     @SerializedName(value = "identityType", alternate = {"IdentityType"})
     @Expose
