@@ -9,19 +9,19 @@ import java.util.Objects;
 import java.util.UUID;
 public class SubscribedSku extends Entity implements Parsable {
     /**
-     * The accountId property
+     * The unique ID of the account this SKU belongs to.
      */
     private String accountId;
     /**
-     * The accountName property
+     * The name of the account this SKU belongs to.
      */
     private String accountName;
     /**
-     * For example, 'User' or 'Company'.
+     * The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
      */
     private String appliesTo;
     /**
-     * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
+     * Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      */
     private String capabilityStatus;
     /**
@@ -33,7 +33,7 @@ public class SubscribedSku extends Entity implements Parsable {
      */
     private LicenseUnitsDetail prepaidUnits;
     /**
-     * Information about the service plans that are available with the SKU. Not nullable
+     * Information about the service plans that are available with the SKU. Not nullable.
      */
     private java.util.List<ServicePlanInfo> servicePlans;
     /**
@@ -67,7 +67,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return new SubscribedSku();
     }
     /**
-     * Gets the accountId property value. The accountId property
+     * Gets the accountId property value. The unique ID of the account this SKU belongs to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.accountId;
     }
     /**
-     * Gets the accountName property value. The accountName property
+     * Gets the accountName property value. The name of the account this SKU belongs to.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.accountName;
     }
     /**
-     * Gets the appliesTo property value. For example, 'User' or 'Company'.
+     * Gets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.appliesTo;
     }
     /**
-     * Gets the capabilityStatus property value. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
+     * Gets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class SubscribedSku extends Entity implements Parsable {
         return this.prepaidUnits;
     }
     /**
-     * Gets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable
+     * Gets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable.
      * @return a servicePlanInfo
      */
     @javax.annotation.Nullable
@@ -186,7 +186,7 @@ public class SubscribedSku extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("subscriptionIds", this.getSubscriptionIds());
     }
     /**
-     * Sets the accountId property value. The accountId property
+     * Sets the accountId property value. The unique ID of the account this SKU belongs to.
      * @param value Value to set for the accountId property.
      * @return a void
      */
@@ -195,7 +195,7 @@ public class SubscribedSku extends Entity implements Parsable {
         this.accountId = value;
     }
     /**
-     * Sets the accountName property value. The accountName property
+     * Sets the accountName property value. The name of the account this SKU belongs to.
      * @param value Value to set for the accountName property.
      * @return a void
      */
@@ -204,7 +204,7 @@ public class SubscribedSku extends Entity implements Parsable {
         this.accountName = value;
     }
     /**
-     * Sets the appliesTo property value. For example, 'User' or 'Company'.
+     * Sets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
@@ -213,7 +213,7 @@ public class SubscribedSku extends Entity implements Parsable {
         this.appliesTo = value;
     }
     /**
-     * Sets the capabilityStatus property value. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
+     * Sets the capabilityStatus property value. Enabled indicates that the prepaidUnits property has at least one unit that is enabled. LockedOut indicates that the customer cancelled their subscription. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      * @param value Value to set for the capabilityStatus property.
      * @return a void
      */
@@ -240,7 +240,7 @@ public class SubscribedSku extends Entity implements Parsable {
         this.prepaidUnits = value;
     }
     /**
-     * Sets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable
+     * Sets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable.
      * @param value Value to set for the servicePlans property.
      * @return a void
      */

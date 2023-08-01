@@ -45,7 +45,6 @@ import com.microsoft.graph.identityprotection.IdentityProtectionRequestBuilder;
 import com.microsoft.graph.identityproviders.IdentityProvidersRequestBuilder;
 import com.microsoft.graph.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.invitations.InvitationsRequestBuilder;
-import com.microsoft.graph.localizations.LocalizationsRequestBuilder;
 import com.microsoft.graph.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.organization.OrganizationRequestBuilder;
 import com.microsoft.graph.permissiongrants.PermissionGrantsRequestBuilder;
@@ -382,13 +381,6 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public InvitationsRequestBuilder invitations() {
         return new InvitationsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
-     */
-    @javax.annotation.Nonnull
-    public LocalizationsRequestBuilder localizations() {
-        return new LocalizationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of oAuth2PermissionGrant entities.

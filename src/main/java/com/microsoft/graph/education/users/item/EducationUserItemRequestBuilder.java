@@ -91,7 +91,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a user.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -111,7 +111,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * Delete a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an educationUser object.
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> get() {
@@ -150,7 +150,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an educationUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -170,7 +170,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationUser object.
      * @param body The request body
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body) {
@@ -191,7 +191,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

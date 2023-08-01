@@ -39,10 +39,10 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}/microsoft.graph.security.export", rawUrl);
     }
     /**
-     * Initiate an export from a microsoft.graph.security.ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewsetquery-export?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-export?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ExportPostRequestBody body) {
@@ -59,11 +59,11 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Initiate an export from a microsoft.graph.security.ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewsetquery-export?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-export?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ExportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Initiate an export from a microsoft.graph.security.ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Initiate an export from a microsoft.graph.security.ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a ediscoveryReviewSetQuery. For details, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

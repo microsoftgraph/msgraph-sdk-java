@@ -89,8 +89,9 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property mobileAppConfigurations for deviceAppManagement
+     * Deletes a iosMobileAppConfiguration.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -107,9 +108,10 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Delete navigation property mobileAppConfigurations for deviceAppManagement
+     * Deletes a iosMobileAppConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -126,8 +128,9 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * The Managed Device Mobile Application Configurations.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> get() {
@@ -144,9 +147,10 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * The Managed Device Mobile Application Configurations.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -163,9 +167,10 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Update the navigation property mobileAppConfigurations in deviceAppManagement
+     * Update the properties of a iosMobileAppConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body) {
@@ -182,10 +187,11 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Update the navigation property mobileAppConfigurations in deviceAppManagement
+     * Update the properties of a iosMobileAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -203,7 +209,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         }
     }
     /**
-     * Delete navigation property mobileAppConfigurations for deviceAppManagement
+     * Deletes a iosMobileAppConfiguration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -211,7 +217,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property mobileAppConfigurations for deviceAppManagement
+     * Deletes a iosMobileAppConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -230,7 +236,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * The Managed Device Mobile Application Configurations.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -238,7 +244,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * The Managed Device Mobile Application Configurations.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -259,7 +265,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Update the navigation property mobileAppConfigurations in deviceAppManagement
+     * Update the properties of a iosMobileAppConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -268,7 +274,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property mobileAppConfigurations in deviceAppManagement
+     * Update the properties of a iosMobileAppConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -296,7 +302,7 @@ public class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Managed Device Mobile Application Configurations.
+     * Read properties and relationships of the managedDeviceMobileAppConfiguration object.
      */
     public class GetQueryParameters {
         /**

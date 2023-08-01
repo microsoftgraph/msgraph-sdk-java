@@ -51,7 +51,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     /**
      * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     /**
      * Read the properties and relationships of a partner-specific configuration.
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> get() {
@@ -110,7 +110,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      * Read the properties and relationships of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      * Update the properties of a partner-specific configuration.
      * @param body The request body
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> patch(@javax.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body) {
@@ -151,7 +151,7 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantAccessPolicyConfigurationPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantAccessPolicyConfigurationPartner> patch(@javax.annotation.Nonnull final CrossTenantAccessPolicyConfigurationPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

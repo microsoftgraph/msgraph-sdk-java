@@ -88,7 +88,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     /**
      * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
      * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> get() {
@@ -108,7 +108,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
      * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -43,7 +43,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete (unregister) a printConnector.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
      * Delete (unregister) a printConnector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -80,9 +80,9 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **printConnector** object.
+     * Retrieve the properties and relationships of a printConnector object.
      * @return a CompletableFuture of printConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/printconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> get() {
@@ -99,10 +99,10 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **printConnector** object.
+     * Retrieve the properties and relationships of a printConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/printconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,10 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a **printConnector** object.
+     * Update the properties of a printConnector object.
      * @param body The request body
      * @return a CompletableFuture of printConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/printconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> patch(@javax.annotation.Nonnull final PrintConnector body) {
@@ -139,11 +139,11 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties of a **printConnector** object.
+     * Update the properties of a printConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/printconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnector> patch(@javax.annotation.Nonnull final PrintConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -188,7 +188,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a **printConnector** object.
+     * Retrieve the properties and relationships of a printConnector object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -196,7 +196,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a **printConnector** object.
+     * Retrieve the properties and relationships of a printConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a **printConnector** object.
+     * Update the properties of a printConnector object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a **printConnector** object.
+     * Update the properties of a printConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -254,7 +254,7 @@ public class PrintConnectorItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a **printConnector** object.
+     * Retrieve the properties and relationships of a printConnector object.
      */
     public class GetQueryParameters {
         /**

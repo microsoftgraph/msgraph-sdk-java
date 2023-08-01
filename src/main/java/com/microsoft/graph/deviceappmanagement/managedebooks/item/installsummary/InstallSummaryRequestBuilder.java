@@ -78,8 +78,9 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mobile App Install Summary.
+     * Read properties and relationships of the eBookInstallSummary object.
      * @return a CompletableFuture of eBookInstallSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-ebookinstallsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EBookInstallSummary> get() {
@@ -96,9 +97,10 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mobile App Install Summary.
+     * Read properties and relationships of the eBookInstallSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of eBookInstallSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-ebookinstallsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EBookInstallSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +117,10 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property installSummary in deviceAppManagement
+     * Update the properties of a eBookInstallSummary object.
      * @param body The request body
      * @return a CompletableFuture of eBookInstallSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-ebookinstallsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EBookInstallSummary> patch(@javax.annotation.Nonnull final EBookInstallSummary body) {
@@ -134,10 +137,11 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property installSummary in deviceAppManagement
+     * Update the properties of a eBookInstallSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of eBookInstallSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-ebookinstallsummary-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EBookInstallSummary> patch(@javax.annotation.Nonnull final EBookInstallSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -182,7 +186,7 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Mobile App Install Summary.
+     * Read properties and relationships of the eBookInstallSummary object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +194,7 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Mobile App Install Summary.
+     * Read properties and relationships of the eBookInstallSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +215,7 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property installSummary in deviceAppManagement
+     * Update the properties of a eBookInstallSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +224,7 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property installSummary in deviceAppManagement
+     * Update the properties of a eBookInstallSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +252,7 @@ public class InstallSummaryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Mobile App Install Summary.
+     * Read properties and relationships of the eBookInstallSummary object.
      */
     public class GetQueryParameters {
         /**

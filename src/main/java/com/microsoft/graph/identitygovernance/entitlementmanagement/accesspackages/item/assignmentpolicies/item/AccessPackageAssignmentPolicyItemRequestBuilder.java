@@ -110,7 +110,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of accessPackageAssignmentPolicy
      */
     @javax.annotation.Nonnull
@@ -128,7 +128,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentPolicy
      */
@@ -214,7 +214,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -222,7 +222,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -280,7 +280,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get assignmentPolicies from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /**

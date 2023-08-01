@@ -41,7 +41,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}/accessPackage{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      * @return a CompletableFuture of accessPackage
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackage
      */
@@ -78,7 +78,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      */
     public class GetQueryParameters {
         /**

@@ -65,7 +65,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of schedulingGroups in this schedule.
      * @return a CompletableFuture of schedulingGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroupCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
      * Get the list of schedulingGroups in this schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schedulingGroupCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroupCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new schedulingGroup.
      * @param body The request body
      * @return a CompletableFuture of schedulingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> post(@javax.annotation.Nonnull final SchedulingGroup body) {
@@ -126,7 +126,7 @@ public class SchedulingGroupsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schedulingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> post(@javax.annotation.Nonnull final SchedulingGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

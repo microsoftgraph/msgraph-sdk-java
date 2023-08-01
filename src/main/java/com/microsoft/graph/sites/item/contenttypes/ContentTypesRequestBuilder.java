@@ -89,7 +89,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of [contentType][contentType] resources in a [site][].
      * @return a CompletableFuture of contentTypeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentTypeCollectionResponse> get() {
@@ -109,7 +109,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
      * Get the collection of [contentType][contentType] resources in a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentTypeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentTypeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,7 +129,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
      * Create a new [contentType][] in a [site][].
      * @param body The request body
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final ContentType body) {
@@ -150,7 +150,7 @@ public class ContentTypesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final ContentType body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

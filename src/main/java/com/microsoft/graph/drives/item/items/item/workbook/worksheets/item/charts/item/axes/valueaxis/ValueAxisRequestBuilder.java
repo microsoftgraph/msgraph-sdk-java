@@ -112,7 +112,7 @@ public class ValueAxisRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of chartaxis object.
      * @return a CompletableFuture of workbookChartAxis
-     * @see <a href="https://docs.microsoft.com/graph/api/chartaxis-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartaxis-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> get() {
@@ -132,7 +132,7 @@ public class ValueAxisRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of chartaxis object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartAxis
-     * @see <a href="https://docs.microsoft.com/graph/api/chartaxis-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartaxis-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -152,7 +152,7 @@ public class ValueAxisRequestBuilder extends BaseRequestBuilder {
      * Update the properties of chartaxis object.
      * @param body The request body
      * @return a CompletableFuture of workbookChartAxis
-     * @see <a href="https://docs.microsoft.com/graph/api/chartaxis-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartaxis-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> patch(@javax.annotation.Nonnull final WorkbookChartAxis body) {
@@ -173,7 +173,7 @@ public class ValueAxisRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartAxis
-     * @see <a href="https://docs.microsoft.com/graph/api/chartaxis-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartaxis-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartAxis> patch(@javax.annotation.Nonnull final WorkbookChartAxis body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

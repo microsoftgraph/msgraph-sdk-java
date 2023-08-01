@@ -65,7 +65,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @return a CompletableFuture of columnDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinitionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
      * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
      * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
      * @param body The request body
      * @return a CompletableFuture of columnDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> post(@javax.annotation.Nonnull final ColumnDefinition body) {
@@ -126,7 +126,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of columnDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> post(@javax.annotation.Nonnull final ColumnDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

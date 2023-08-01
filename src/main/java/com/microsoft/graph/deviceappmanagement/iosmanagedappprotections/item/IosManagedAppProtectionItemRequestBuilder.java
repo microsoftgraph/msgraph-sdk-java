@@ -65,8 +65,9 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property iosManagedAppProtections for deviceAppManagement
+     * Deletes a iosManagedAppProtection.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -83,9 +84,10 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Delete navigation property iosManagedAppProtections for deviceAppManagement
+     * Deletes a iosManagedAppProtection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -102,8 +104,9 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * iOS managed app policies.
+     * Read properties and relationships of the iosManagedAppProtection object.
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> get() {
@@ -120,9 +123,10 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * iOS managed app policies.
+     * Read properties and relationships of the iosManagedAppProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -139,9 +143,10 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * Update the properties of a iosManagedAppProtection object.
      * @param body The request body
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> patch(@javax.annotation.Nonnull final IosManagedAppProtection body) {
@@ -158,10 +163,11 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * Update the properties of a iosManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> patch(@javax.annotation.Nonnull final IosManagedAppProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -179,7 +185,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * Delete navigation property iosManagedAppProtections for deviceAppManagement
+     * Deletes a iosManagedAppProtection.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -187,7 +193,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property iosManagedAppProtections for deviceAppManagement
+     * Deletes a iosManagedAppProtection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +212,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * iOS managed app policies.
+     * Read properties and relationships of the iosManagedAppProtection object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +220,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * iOS managed app policies.
+     * Read properties and relationships of the iosManagedAppProtection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +241,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * Update the properties of a iosManagedAppProtection object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -244,7 +250,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * Update the properties of a iosManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -272,7 +278,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * iOS managed app policies.
+     * Read properties and relationships of the iosManagedAppProtection object.
      */
     public class GetQueryParameters {
         /**

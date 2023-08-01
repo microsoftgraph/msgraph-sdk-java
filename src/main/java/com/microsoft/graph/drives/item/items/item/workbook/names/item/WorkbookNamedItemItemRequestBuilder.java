@@ -96,7 +96,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of nameditem object.
      * @return a CompletableFuture of workbookNamedItem
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> get() {
@@ -116,7 +116,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of nameditem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookNamedItem
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of nameditem object.
      * @param body The request body
      * @return a CompletableFuture of workbookNamedItem
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> patch(@javax.annotation.Nonnull final WorkbookNamedItem body) {
@@ -157,7 +157,7 @@ public class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookNamedItem
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> patch(@javax.annotation.Nonnull final WorkbookNamedItem body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

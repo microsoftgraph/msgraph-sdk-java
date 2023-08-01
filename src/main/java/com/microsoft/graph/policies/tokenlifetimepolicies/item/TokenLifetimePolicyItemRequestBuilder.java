@@ -51,7 +51,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a tokenLifetimePolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Delete a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @return a CompletableFuture of tokenLifetimePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> get() {
@@ -110,7 +110,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a tokenLifetimePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenLifetimePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a tokenLifetimePolicy object.
      * @param body The request body
      * @return a CompletableFuture of tokenLifetimePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> patch(@javax.annotation.Nonnull final TokenLifetimePolicy body) {
@@ -151,7 +151,7 @@ public class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenLifetimePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> patch(@javax.annotation.Nonnull final TokenLifetimePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

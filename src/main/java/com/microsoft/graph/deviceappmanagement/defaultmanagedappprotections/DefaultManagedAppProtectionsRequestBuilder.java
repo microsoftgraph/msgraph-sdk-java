@@ -63,8 +63,9 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceAppManagement/defaultManagedAppProtections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @return a CompletableFuture of defaultManagedAppProtectionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtectionCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of defaultManagedAppProtectionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @return a CompletableFuture of defaultManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> post(@javax.annotation.Nonnull final DefaultManagedAppProtection body) {
@@ -119,10 +122,11 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of defaultManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> post(@javax.annotation.Nonnull final DefaultManagedAppProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
+     * Create a new defaultManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Default managed app policies.
+     * List properties and relationships of the defaultManagedAppProtection objects.
      */
     public class GetQueryParameters {
         /**

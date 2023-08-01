@@ -76,7 +76,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleCollectionResponse> get() {
@@ -96,7 +96,7 @@ public class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder {
      * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleEligibilityScheduleCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilityScheduleCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -112,7 +112,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Retrieve the schedule for a role eligibility operation.
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> get() {
@@ -132,7 +132,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Retrieve the schedule for a role eligibility operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

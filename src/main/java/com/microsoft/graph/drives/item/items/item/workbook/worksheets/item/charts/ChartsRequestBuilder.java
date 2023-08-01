@@ -75,7 +75,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of chart objects.
      * @return a CompletableFuture of workbookChartCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartCollectionResponse> get() {
@@ -95,7 +95,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of chart objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,7 +135,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new Chart.
      * @param body The request body
      * @return a CompletableFuture of workbookChart
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> post(@javax.annotation.Nonnull final WorkbookChart body) {
@@ -156,7 +156,7 @@ public class ChartsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChart
-     * @see <a href="https://docs.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> post(@javax.annotation.Nonnull final WorkbookChart body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of identityUserFlowAttribute objects.
      * @return a CompletableFuture of identityUserFlowAttributeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of identityUserFlowAttribute objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttributeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
      * Create a new identityUserFlowAttribute object.
      * @param body The request body
      * @return a CompletableFuture of identityUserFlowAttribute
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> post(@javax.annotation.Nonnull final IdentityUserFlowAttribute body) {
@@ -126,7 +126,7 @@ public class UserFlowAttributesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityUserFlowAttribute
-     * @see <a href="https://docs.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttribute> post(@javax.annotation.Nonnull final IdentityUserFlowAttribute body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

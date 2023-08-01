@@ -39,9 +39,10 @@ public class TargetAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedAppRegistrations/{managedAppRegistration%2Did}/appliedPolicies/{managedAppPolicy%2Did}/targetApps", rawUrl);
     }
     /**
-     * Invoke action targetApps
+     * Not yet documented
      * @param body The request body
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-targetapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final TargetAppsPostRequestBody body) {
@@ -58,10 +59,11 @@ public class TargetAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action targetApps
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappprotection-targetapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final TargetAppsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class TargetAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action targetApps
+     * Not yet documented
      * @param body The request body
      * @return a RequestInformation
      */
@@ -88,7 +90,7 @@ public class TargetAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action targetApps
+     * Not yet documented
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

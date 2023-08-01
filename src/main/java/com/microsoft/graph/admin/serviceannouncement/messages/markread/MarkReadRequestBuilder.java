@@ -39,10 +39,10 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/markRead", rawUrl);
     }
     /**
-     * Mark a list of serviceUpdateMessages as **read** for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param body The request body
      * @return a CompletableFuture of markReadResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MarkReadResponse> post(@javax.annotation.Nonnull final MarkReadPostRequestBody body) {
@@ -59,11 +59,11 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mark a list of serviceUpdateMessages as **read** for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of markReadResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MarkReadResponse> post(@javax.annotation.Nonnull final MarkReadPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mark a list of serviceUpdateMessages as **read** for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class MarkReadRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Mark a list of serviceUpdateMessages as **read** for the signed in user.
+     * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

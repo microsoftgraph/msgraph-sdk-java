@@ -66,7 +66,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/callRecords{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
      * @return a CompletableFuture of callRecordCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of callRecordCollectionResponse
      */
@@ -167,7 +167,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -175,7 +175,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -228,7 +228,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
+     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
      */
     public class GetQueryParameters {
         /**

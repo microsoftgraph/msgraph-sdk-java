@@ -102,7 +102,7 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get resources from identityGovernance
+     * The resources associated with the catalogs.
      * @return a CompletableFuture of accessPackageResource
      */
     @javax.annotation.Nonnull
@@ -120,7 +120,7 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
         }
     }
     /**
-     * Get resources from identityGovernance
+     * The resources associated with the catalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResource
      */
@@ -206,7 +206,7 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get resources from identityGovernance
+     * The resources associated with the catalogs.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +214,7 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get resources from identityGovernance
+     * The resources associated with the catalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -272,7 +272,7 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get resources from identityGovernance
+     * The resources associated with the catalogs.
      */
     public class GetQueryParameters {
         /**

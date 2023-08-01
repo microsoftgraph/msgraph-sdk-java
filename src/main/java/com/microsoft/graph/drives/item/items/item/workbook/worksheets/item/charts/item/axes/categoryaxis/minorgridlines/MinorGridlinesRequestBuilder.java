@@ -88,7 +88,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of chartgridlines object.
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> get() {
@@ -108,7 +108,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of chartgridlines object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
      * Update the properties of chartgridlines object.
      * @param body The request body
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patch(@javax.annotation.Nonnull final WorkbookChartGridlines body) {
@@ -149,7 +149,7 @@ public class MinorGridlinesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartGridlines
-     * @see <a href="https://docs.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patch(@javax.annotation.Nonnull final WorkbookChartGridlines body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -43,7 +43,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
      * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @return a CompletableFuture of scopedRoleMembership
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> get() {
@@ -102,7 +102,7 @@ public class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder {
      * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of scopedRoleMembership
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ScopedRoleMembership> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

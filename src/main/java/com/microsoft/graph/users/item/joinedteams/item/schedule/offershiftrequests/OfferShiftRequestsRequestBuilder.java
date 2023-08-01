@@ -65,7 +65,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @return a CompletableFuture of offerShiftRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfferShiftRequestCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of offerShiftRequestCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfferShiftRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
      * Create an instance of an offerShiftRequest.
      * @param body The request body
      * @return a CompletableFuture of offerShiftRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfferShiftRequest> post(@javax.annotation.Nonnull final OfferShiftRequest body) {
@@ -126,7 +126,7 @@ public class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of offerShiftRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OfferShiftRequest> post(@javax.annotation.Nonnull final OfferShiftRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

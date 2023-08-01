@@ -51,7 +51,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a featureRolloutPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Delete a featureRolloutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @return a CompletableFuture of featureRolloutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> get() {
@@ -110,7 +110,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of featureRolloutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of featureRolloutPolicy object.
      * @param body The request body
      * @return a CompletableFuture of featureRolloutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> patch(@javax.annotation.Nonnull final FeatureRolloutPolicy body) {
@@ -151,7 +151,7 @@ public class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of featureRolloutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FeatureRolloutPolicy> patch(@javax.annotation.Nonnull final FeatureRolloutPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

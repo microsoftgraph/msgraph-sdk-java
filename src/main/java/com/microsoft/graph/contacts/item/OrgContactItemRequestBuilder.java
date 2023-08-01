@@ -152,7 +152,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an organizational contact.
      * @return a CompletableFuture of orgContact
-     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> get() {
@@ -172,7 +172,7 @@ public class OrgContactItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of an organizational contact.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of orgContact
-     * @see <a href="https://docs.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrgContact> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

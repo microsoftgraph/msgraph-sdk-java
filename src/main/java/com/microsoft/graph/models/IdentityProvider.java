@@ -12,7 +12,7 @@ public class IdentityProvider extends Entity implements Parsable {
      */
     private String clientId;
     /**
-     * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
+     * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      */
     private String clientSecret;
     /**
@@ -50,7 +50,7 @@ public class IdentityProvider extends Entity implements Parsable {
         return this.clientId;
     }
     /**
-     * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
+     * Gets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class IdentityProvider extends Entity implements Parsable {
         this.clientId = value;
     }
     /**
-     * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
+     * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      * @param value Value to set for the clientSecret property.
      * @return a void
      */

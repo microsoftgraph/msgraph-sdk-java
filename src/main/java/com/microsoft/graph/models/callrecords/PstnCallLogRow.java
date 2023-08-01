@@ -103,7 +103,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userDisplayName;
     /**
-     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      */
     private String userId;
     /**
@@ -346,7 +346,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * Gets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -603,7 +603,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * Sets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @param value Value to set for the userId property.
      * @return a void
      */

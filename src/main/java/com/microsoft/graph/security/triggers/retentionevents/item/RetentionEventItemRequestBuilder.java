@@ -51,7 +51,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a retentionEvent object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
      * Delete a retentionEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a retentionEvent object.
      * @return a CompletableFuture of retentionEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEvent> get() {
@@ -110,7 +110,7 @@ public class RetentionEventItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a retentionEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of retentionEvent
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEvent> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -233,8 +233,9 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property managedDevices for deviceManagement
+     * Deletes a managedDevice.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -251,9 +252,10 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property managedDevices for deviceManagement
+     * Deletes a managedDevice.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -270,8 +272,9 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of managed devices.
+     * Read properties and relationships of the managedDevice object.
      * @return a CompletableFuture of managedDevice
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get() {
@@ -288,9 +291,10 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of managed devices.
+     * Read properties and relationships of the managedDevice object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDevice
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -307,9 +311,10 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property managedDevices in deviceManagement
+     * Update the properties of a managedDevice object.
      * @param body The request body
      * @return a CompletableFuture of managedDevice
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@javax.annotation.Nonnull final ManagedDevice body) {
@@ -326,10 +331,11 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property managedDevices in deviceManagement
+     * Update the properties of a managedDevice object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDevice
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> patch(@javax.annotation.Nonnull final ManagedDevice body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -347,7 +353,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property managedDevices for deviceManagement
+     * Deletes a managedDevice.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -355,7 +361,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property managedDevices for deviceManagement
+     * Deletes a managedDevice.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -374,7 +380,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of managed devices.
+     * Read properties and relationships of the managedDevice object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -382,7 +388,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of managed devices.
+     * Read properties and relationships of the managedDevice object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -403,7 +409,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property managedDevices in deviceManagement
+     * Update the properties of a managedDevice object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -412,7 +418,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property managedDevices in deviceManagement
+     * Update the properties of a managedDevice object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -440,7 +446,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of managed devices.
+     * Read properties and relationships of the managedDevice object.
      */
     public class GetQueryParameters {
         /**

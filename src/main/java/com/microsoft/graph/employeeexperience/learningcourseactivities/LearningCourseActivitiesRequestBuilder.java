@@ -63,7 +63,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/learningCourseActivities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an **externalCourseActivityId** of the learning provider, or a **courseActivityId** of a user.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @return a CompletableFuture of learningCourseActivityCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an **externalCourseActivityId** of the learning provider, or a **courseActivityId** of a user.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningCourseActivityCollectionResponse
      */
@@ -140,7 +140,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an **externalCourseActivityId** of the learning provider, or a **courseActivityId** of a user.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an **externalCourseActivityId** of the learning provider, or a **courseActivityId** of a user.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the specified learningCourseActivity object using either an ID or an **externalCourseActivityId** of the learning provider, or a **courseActivityId** of a user.
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      */
     public class GetQueryParameters {
         /**

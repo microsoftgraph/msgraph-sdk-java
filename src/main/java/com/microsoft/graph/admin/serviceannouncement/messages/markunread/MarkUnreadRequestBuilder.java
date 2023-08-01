@@ -39,10 +39,10 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/serviceAnnouncement/messages/markUnread", rawUrl);
     }
     /**
-     * Mark a list of serviceUpdateMessages as **unread** for the signed in user.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @return a CompletableFuture of markUnreadResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MarkUnreadResponse> post(@javax.annotation.Nonnull final MarkUnreadPostRequestBody body) {
@@ -59,11 +59,11 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mark a list of serviceUpdateMessages as **unread** for the signed in user.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of markUnreadResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MarkUnreadResponse> post(@javax.annotation.Nonnull final MarkUnreadPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mark a list of serviceUpdateMessages as **unread** for the signed in user.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -90,7 +90,7 @@ public class MarkUnreadRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Mark a list of serviceUpdateMessages as **unread** for the signed in user.
+     * Mark a list of serviceUpdateMessages as unread for the signed in user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

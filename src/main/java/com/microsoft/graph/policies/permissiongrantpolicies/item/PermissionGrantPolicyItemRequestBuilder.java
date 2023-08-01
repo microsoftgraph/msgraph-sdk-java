@@ -59,7 +59,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete a permissionGrantPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
      * Delete a permissionGrantPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve a single permissionGrantPolicy object.
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> get() {
@@ -118,7 +118,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
      * Retrieve a single permissionGrantPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
      * Update properties of a  permissionGrantPolicy.
      * @param body The request body
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patch(@javax.annotation.Nonnull final PermissionGrantPolicy body) {
@@ -159,7 +159,7 @@ public class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patch(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

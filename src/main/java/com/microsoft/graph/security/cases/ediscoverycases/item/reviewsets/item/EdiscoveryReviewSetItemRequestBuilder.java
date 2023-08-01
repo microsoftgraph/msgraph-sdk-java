@@ -104,7 +104,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an ediscoveryReviewSet object.
      * @return a CompletableFuture of ediscoveryReviewSet
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSet> get() {
@@ -124,7 +124,7 @@ public class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an ediscoveryReviewSet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSet
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSet> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

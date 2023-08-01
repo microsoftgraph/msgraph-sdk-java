@@ -65,7 +65,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of shift instances in a schedule.
      * @return a CompletableFuture of shiftCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShiftCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
      * Get the list of shift instances in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shiftCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShiftCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
      * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> post(@javax.annotation.Nonnull final Shift body) {
@@ -126,7 +126,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> post(@javax.annotation.Nonnull final Shift body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

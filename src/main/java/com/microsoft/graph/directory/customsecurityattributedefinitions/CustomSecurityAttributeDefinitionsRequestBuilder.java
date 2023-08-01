@@ -65,7 +65,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
     /**
      * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @return a CompletableFuture of customSecurityAttributeDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinitionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
      * Get a list of the customSecurityAttributeDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customSecurityAttributeDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
      * Create a new customSecurityAttributeDefinition object.
      * @param body The request body
      * @return a CompletableFuture of customSecurityAttributeDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> post(@javax.annotation.Nonnull final CustomSecurityAttributeDefinition body) {
@@ -126,7 +126,7 @@ public class CustomSecurityAttributeDefinitionsRequestBuilder extends BaseReques
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customSecurityAttributeDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-post-customsecurityattributedefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeDefinition> post(@javax.annotation.Nonnull final CustomSecurityAttributeDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of page objects.
      * @return a CompletableFuture of onenotePageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of page objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenotePageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/onenote-list-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onenote-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the `sectionName` query parameter.  Example: `../onenote/pages?sectionName=My%20section` The `POST /onenote/pages` operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
+     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the sectionName query parameter.  Example: ../onenote/pages?sectionName=My%20section The POST /onenote/pages operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
      * @param body The request body
      * @return a CompletableFuture of onenotePage
-     * @see <a href="https://docs.microsoft.com/graph/api/onenote-post-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onenote-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@javax.annotation.Nonnull final OnenotePage body) {
@@ -122,11 +122,11 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the `sectionName` query parameter.  Example: `../onenote/pages?sectionName=My%20section` The `POST /onenote/pages` operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
+     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the sectionName query parameter.  Example: ../onenote/pages?sectionName=My%20section The POST /onenote/pages operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenotePage
-     * @see <a href="https://docs.microsoft.com/graph/api/onenote-post-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onenote-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@javax.annotation.Nonnull final OnenotePage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -173,7 +173,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the `sectionName` query parameter.  Example: `../onenote/pages?sectionName=My%20section` The `POST /onenote/pages` operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
+     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the sectionName query parameter.  Example: ../onenote/pages?sectionName=My%20section The POST /onenote/pages operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the `sectionName` query parameter.  Example: `../onenote/pages?sectionName=My%20section` The `POST /onenote/pages` operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
+     * Create a new OneNote page in the default section of the default notebook. To create a page in a different section in the default notebook, you can use the sectionName query parameter.  Example: ../onenote/pages?sectionName=My%20section The POST /onenote/pages operation is used only to create pages in the current user's default notebook. If you're targeting other notebooks, you can create pages in a specified section.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

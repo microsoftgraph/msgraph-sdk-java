@@ -65,7 +65,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the members of a standard tag in a team and their properties.
      * @return a CompletableFuture of teamworkTagMemberCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMemberCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * Get a list of the members of a standard tag in a team and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTagMemberCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMemberCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * Create a new teamworkTagMember object in a team.
      * @param body The request body
      * @return a CompletableFuture of teamworkTagMember
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> post(@javax.annotation.Nonnull final TeamworkTagMember body) {
@@ -126,7 +126,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTagMember
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> post(@javax.annotation.Nonnull final TeamworkTagMember body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

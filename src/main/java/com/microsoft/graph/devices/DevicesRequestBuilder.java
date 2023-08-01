@@ -97,7 +97,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of device objects registered in the organization.
      * @return a CompletableFuture of deviceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get() {
@@ -117,7 +117,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of device objects registered in the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -137,7 +137,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * Create and register a new device in the organization.
      * @param body The request body
      * @return a CompletableFuture of device
-     * @see <a href="https://docs.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> post(@javax.annotation.Nonnull final Device body) {
@@ -158,7 +158,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of device
-     * @see <a href="https://docs.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> post(@javax.annotation.Nonnull final Device body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

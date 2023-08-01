@@ -13,6 +13,10 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     private Map<String, Object> additionalData;
     /**
+     * The applicationFilter property
+     */
+    private ConditionalAccessFilter applicationFilter;
+    /**
      * Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
      */
     private java.util.List<String> excludeApplications;
@@ -59,6 +63,14 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
         return this.additionalData;
     }
     /**
+     * Gets the applicationFilter property value. The applicationFilter property
+     * @return a conditionalAccessFilter
+     */
+    @javax.annotation.Nullable
+    public ConditionalAccessFilter getApplicationFilter() {
+        return this.applicationFilter;
+    }
+    /**
      * Gets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365
      * @return a string
      */
@@ -72,7 +84,8 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("applicationFilter", (n) -> { this.setApplicationFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
         deserializerMap.put("excludeApplications", (n) -> { this.setExcludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeApplications", (n) -> { this.setIncludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeAuthenticationContextClassReferences", (n) -> { this.setIncludeAuthenticationContextClassReferences(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -120,6 +133,7 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("applicationFilter", this.getApplicationFilter());
         writer.writeCollectionOfPrimitiveValues("excludeApplications", this.getExcludeApplications());
         writer.writeCollectionOfPrimitiveValues("includeApplications", this.getIncludeApplications());
         writer.writeCollectionOfPrimitiveValues("includeAuthenticationContextClassReferences", this.getIncludeAuthenticationContextClassReferences());
@@ -135,6 +149,15 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
+    }
+    /**
+     * Sets the applicationFilter property value. The applicationFilter property
+     * @param value Value to set for the applicationFilter property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setApplicationFilter(@javax.annotation.Nullable final ConditionalAccessFilter value) {
+        this.applicationFilter = value;
     }
     /**
      * Sets the excludeApplications property value. Can be one of the following:  The list of client IDs (appId) explicitly excluded from the policy. Office365 - For the list of apps included in Office365, see Conditional Access target apps: Office 365

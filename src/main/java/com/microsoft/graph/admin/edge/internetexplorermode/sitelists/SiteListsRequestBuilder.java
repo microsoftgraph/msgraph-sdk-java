@@ -65,7 +65,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the browserSiteList objects and their properties.
      * @return a CompletableFuture of browserSiteListCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteListCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the browserSiteList objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteListCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteListCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
      * Create a new browserSiteList object to support Internet Explorer mode.
      * @param body The request body
      * @return a CompletableFuture of browserSiteList
-     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@javax.annotation.Nonnull final BrowserSiteList body) {
@@ -126,7 +126,7 @@ public class SiteListsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteList
-     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> post(@javax.annotation.Nonnull final BrowserSiteList body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

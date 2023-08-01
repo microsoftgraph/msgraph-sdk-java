@@ -1,5 +1,6 @@
 package com.microsoft.graph.identity.b2xuserflows.item;
 
+import com.microsoft.graph.identity.b2xuserflows.item.apiconnectorconfiguration.ApiConnectorConfigurationRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.identityproviders.IdentityProvidersRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.languages.LanguagesRequestBuilder;
 import com.microsoft.graph.identity.b2xuserflows.item.userattributeassignments.UserAttributeAssignmentsRequestBuilder;
@@ -24,6 +25,13 @@ import java.util.Objects;
  * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
  */
 public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * The apiConnectorConfiguration property
+     */
+    @javax.annotation.Nonnull
+    public ApiConnectorConfigurationRequestBuilder apiConnectorConfiguration() {
+        return new ApiConnectorConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
      */
@@ -75,7 +83,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a b2xIdentityUserFlow object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,7 +103,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Delete a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,7 +122,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @return a CompletableFuture of b2xIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> get() {
@@ -134,7 +142,7 @@ public class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2xIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2xIdentityUserFlow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

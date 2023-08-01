@@ -73,7 +73,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the teams in Microsoft Teams that the user is a direct member of.
      * @return a CompletableFuture of teamCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class JoinedTeamsRequestBuilder extends BaseRequestBuilder {
      * Get the teams in Microsoft Teams that the user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-joinedteams?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

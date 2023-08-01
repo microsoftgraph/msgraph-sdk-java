@@ -43,7 +43,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Deletes a user's emailAuthenticationMethod object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Deletes a user's emailAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve a user's single email authentication method object.
      * @return a CompletableFuture of emailAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> get() {
@@ -102,7 +102,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Retrieve a user's single email authentication method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Update a user's email address represented by an emailAuthenticationMethod object.
      * @param body The request body
      * @return a CompletableFuture of emailAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> patch(@javax.annotation.Nonnull final EmailAuthenticationMethod body) {
@@ -143,7 +143,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> patch(@javax.annotation.Nonnull final EmailAuthenticationMethod body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

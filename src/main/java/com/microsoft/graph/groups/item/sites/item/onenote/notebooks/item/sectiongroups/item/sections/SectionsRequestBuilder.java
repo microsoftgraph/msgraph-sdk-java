@@ -65,7 +65,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of onenoteSection objects from the specified section group.
      * @return a CompletableFuture of onenoteSectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSectionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of onenoteSection objects from the specified section group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenoteSectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
      * Create a new onenoteSection in the specified section group.
      * @param body The request body
      * @return a CompletableFuture of onenoteSection
-     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> post(@javax.annotation.Nonnull final OnenoteSection body) {
@@ -126,7 +126,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenoteSection
-     * @see <a href="https://docs.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenoteSection> post(@javax.annotation.Nonnull final OnenoteSection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

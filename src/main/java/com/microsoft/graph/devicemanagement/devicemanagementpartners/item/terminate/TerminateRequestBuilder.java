@@ -39,8 +39,9 @@ public class TerminateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceManagementPartners/{deviceManagementPartner%2Did}/terminate", rawUrl);
     }
     /**
-     * Invoke action terminate
+     * Not yet documented
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-terminate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class TerminateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action terminate
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-terminate?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class TerminateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Invoke action terminate
+     * Not yet documented
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class TerminateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action terminate
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

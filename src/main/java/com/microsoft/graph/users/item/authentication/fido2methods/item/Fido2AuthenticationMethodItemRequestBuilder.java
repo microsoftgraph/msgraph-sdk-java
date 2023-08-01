@@ -43,7 +43,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @return a CompletableFuture of fido2AuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Fido2AuthenticationMethod> get() {
@@ -102,7 +102,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuil
      * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of fido2AuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Fido2AuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

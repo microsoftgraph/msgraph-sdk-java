@@ -115,7 +115,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a bookingBusiness object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -135,7 +135,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a bookingBusiness object.
      * @return a CompletableFuture of bookingBusiness
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingBusiness> get() {
@@ -174,7 +174,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingBusiness
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingBusiness> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +194,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a bookingBusiness object.
      * @param body The request body
      * @return a CompletableFuture of bookingBusiness
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingBusiness> patch(@javax.annotation.Nonnull final BookingBusiness body) {
@@ -215,7 +215,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingBusiness
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingBusiness> patch(@javax.annotation.Nonnull final BookingBusiness body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

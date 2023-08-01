@@ -8,23 +8,23 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageResourceScope extends Entity implements Parsable {
     /**
-     * The description property
+     * The description of the scope.
      */
     private String description;
     /**
-     * The displayName property
+     * The display name of the scope.
      */
     private String displayName;
     /**
-     * The isRootScope property
+     * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      */
     private Boolean isRootScope;
     /**
-     * The originId property
+     * The unique identifier for the scope in the resource as defined in the origin system.
      */
     private String originId;
     /**
-     * The originSystem property
+     * The origin system for the scope.
      */
     private String originSystem;
     /**
@@ -50,7 +50,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return new AccessPackageResourceScope();
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the scope.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the scope.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isRootScope property value. The isRootScope property
+     * Gets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return this.isRootScope;
     }
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return this.originId;
     }
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The origin system for the scope.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the scope.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -138,7 +138,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the scope.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -147,7 +147,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the isRootScope property value. The isRootScope property
+     * Sets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @param value Value to set for the isRootScope property.
      * @return a void
      */
@@ -156,7 +156,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         this.isRootScope = value;
     }
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @param value Value to set for the originId property.
      * @return a void
      */
@@ -165,7 +165,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         this.originId = value;
     }
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The origin system for the scope.
      * @param value Value to set for the originSystem property.
      * @return a void
      */

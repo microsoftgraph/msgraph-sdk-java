@@ -63,7 +63,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/dataPolicyOperations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of a **dataPolicyOperation** object.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @return a CompletableFuture of dataPolicyOperationCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of a **dataPolicyOperation** object.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of dataPolicyOperationCollectionResponse
      */
@@ -140,7 +140,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties of a **dataPolicyOperation** object.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a **dataPolicyOperation** object.
+     * Retrieve the properties of a dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a **dataPolicyOperation** object.
+     * Retrieve the properties of a dataPolicyOperation object.
      */
     public class GetQueryParameters {
         /**

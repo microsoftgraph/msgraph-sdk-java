@@ -75,7 +75,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a printer share (unshare the associated printer). This action cannot be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer will need to discover and reinstall it.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,7 +95,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
      * Delete a printer share (unshare the associated printer). This action cannot be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer will need to discover and reinstall it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a printer share.
      * @return a CompletableFuture of printerShare
-     * @see <a href="https://docs.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> get() {
@@ -134,7 +134,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a printer share.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printerShare
-     * @see <a href="https://docs.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a printer share. This method can be used to swap printers. For example, if a physical printer device breaks, an administrator can register a new printer device and update this printerShare to point to the new printer without requiring users to take any action.
      * @param body The request body
      * @return a CompletableFuture of printerShare
-     * @see <a href="https://docs.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> patch(@javax.annotation.Nonnull final PrinterShare body) {
@@ -175,7 +175,7 @@ public class PrinterShareItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printerShare
-     * @see <a href="https://docs.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShare> patch(@javax.annotation.Nonnull final PrinterShare body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

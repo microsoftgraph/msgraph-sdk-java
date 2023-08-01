@@ -62,9 +62,9 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/informationProtection/bitlocker/recoveryKeys{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @return a CompletableFuture of bitlockerRecoveryKeyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BitlockerRecoveryKeyCollectionResponse> get() {
@@ -81,10 +81,10 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bitlockerRecoveryKeyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bitlocker-list-recoverykeys?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BitlockerRecoveryKeyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +101,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -130,7 +130,7 @@ public class RecoveryKeysRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the **key** property. For information about how to read the **key** property, see Get bitlockerRecoveryKey.
+     * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
      */
     public class GetQueryParameters {
         /**

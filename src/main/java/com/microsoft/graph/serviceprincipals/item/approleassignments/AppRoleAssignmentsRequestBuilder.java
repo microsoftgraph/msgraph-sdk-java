@@ -65,7 +65,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * App role assignment for another app or service, granted to this service principal. Supports $expand.
      * @return a CompletableFuture of appRoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * App role assignment for another app or service, granted to this service principal. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appRoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Assign an app role to a client service principal. App roles that are assigned to service principals are also known as application permissions. Application permissions can be granted directly with app role assignments, or through a consent experience. To grant an app role assignment to a client service principal, you need three identifiers:
      * @param body The request body
      * @return a CompletableFuture of appRoleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> post(@javax.annotation.Nonnull final AppRoleAssignment body) {
@@ -126,7 +126,7 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appRoleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-approleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppRoleAssignment> post(@javax.annotation.Nonnull final AppRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

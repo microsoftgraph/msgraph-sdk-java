@@ -51,7 +51,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a calendar group other than the default calendar group.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
      * Delete a calendar group other than the default calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a calendar group object.
      * @return a CompletableFuture of calendarGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroup> get() {
@@ -110,7 +110,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a calendar group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of calendargroup object.
      * @param body The request body
      * @return a CompletableFuture of calendarGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroup> patch(@javax.annotation.Nonnull final CalendarGroup body) {
@@ -151,7 +151,7 @@ public class CalendarGroupItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarGroup> patch(@javax.annotation.Nonnull final CalendarGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

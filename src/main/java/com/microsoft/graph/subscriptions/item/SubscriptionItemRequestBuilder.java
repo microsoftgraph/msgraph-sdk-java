@@ -51,7 +51,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/subscription-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
      * Delete a subscription. For the list of resources that support subscribing to change notifications, see the table in the Permissions section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/subscription-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @return a CompletableFuture of subscription
-     * @see <a href="https://docs.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subscription> get() {
@@ -110,7 +110,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subscription
-     * @see <a href="https://docs.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subscription> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
      * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
      * @param body The request body
      * @return a CompletableFuture of subscription
-     * @see <a href="https://docs.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subscription> patch(@javax.annotation.Nonnull final Subscription body) {
@@ -151,7 +151,7 @@ public class SubscriptionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of subscription
-     * @see <a href="https://docs.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subscription> patch(@javax.annotation.Nonnull final Subscription body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

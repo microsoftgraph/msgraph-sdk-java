@@ -65,7 +65,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of plannerTask objects associated to a plannerBucket object.
      * @return a CompletableFuture of plannerTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-list-tasks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of plannerTask objects associated to a plannerBucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerTaskCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-list-tasks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-list-tasks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerTaskCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

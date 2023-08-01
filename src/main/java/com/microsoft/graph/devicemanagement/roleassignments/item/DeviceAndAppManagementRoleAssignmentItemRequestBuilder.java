@@ -49,8 +49,9 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/deviceManagement/roleAssignments/{deviceAndAppManagementRoleAssignment%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a deviceAndAppManagementRoleAssignment.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -67,9 +68,10 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         }
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a deviceAndAppManagementRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -86,8 +88,9 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         }
     }
     /**
-     * The Role Assignments.
+     * Read properties and relationships of the deviceAndAppManagementRoleAssignment object.
      * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> get() {
@@ -104,9 +107,10 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         }
     }
     /**
-     * The Role Assignments.
+     * Read properties and relationships of the deviceAndAppManagementRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,9 +127,10 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         }
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> patch(@javax.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body) {
@@ -142,10 +147,11 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         }
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> patch(@javax.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -163,7 +169,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         }
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a deviceAndAppManagementRoleAssignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -171,7 +177,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a deviceAndAppManagementRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -190,7 +196,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * The Role Assignments.
+     * Read properties and relationships of the deviceAndAppManagementRoleAssignment object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +204,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * The Role Assignments.
+     * Read properties and relationships of the deviceAndAppManagementRoleAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -219,7 +225,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -228,7 +234,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleAssignment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -256,7 +262,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Role Assignments.
+     * Read properties and relationships of the deviceAndAppManagementRoleAssignment object.
      */
     public class GetQueryParameters {
         /**

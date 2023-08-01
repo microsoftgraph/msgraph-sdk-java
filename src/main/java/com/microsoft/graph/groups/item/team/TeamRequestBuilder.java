@@ -10,6 +10,7 @@ import com.microsoft.graph.groups.item.team.incomingchannels.IncomingChannelsReq
 import com.microsoft.graph.groups.item.team.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.groups.item.team.members.MembersRequestBuilder;
 import com.microsoft.graph.groups.item.team.operations.OperationsRequestBuilder;
+import com.microsoft.graph.groups.item.team.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.groups.item.team.photo.PhotoRequestBuilder;
 import com.microsoft.graph.groups.item.team.primarychannel.PrimaryChannelRequestBuilder;
 import com.microsoft.graph.groups.item.team.schedule.ScheduleRequestBuilder;
@@ -106,6 +107,13 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.team entity.
+     */
+    @javax.annotation.Nonnull
+    public PermissionGrantsRequestBuilder permissionGrants() {
+        return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.team entity.

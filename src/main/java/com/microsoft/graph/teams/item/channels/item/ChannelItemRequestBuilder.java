@@ -115,7 +115,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete the channel.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -135,7 +135,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * Delete the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @return a CompletableFuture of channel
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get() {
@@ -174,7 +174,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of channel
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +194,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified channel.
      * @param body The request body
      * @return a CompletableFuture of channel
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> patch(@javax.annotation.Nonnull final Channel body) {
@@ -215,7 +215,7 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of channel
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Channel> patch(@javax.annotation.Nonnull final Channel body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

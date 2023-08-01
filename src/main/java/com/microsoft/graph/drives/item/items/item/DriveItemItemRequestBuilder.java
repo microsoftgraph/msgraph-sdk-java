@@ -262,7 +262,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a DriveItem by using its ID or path.Note that deleting items using this method will move the items to the recycle bin instead of permanently deleting the item.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -282,7 +282,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
      * Delete a DriveItem by using its ID or path.Note that deleting items using this method will move the items to the recycle bin instead of permanently deleting the item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -360,10 +360,10 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's **parentReference** property.
+     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
      * @param body The request body
      * @return a CompletableFuture of driveItem
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> patch(@javax.annotation.Nonnull final DriveItem body) {
@@ -380,11 +380,11 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's **parentReference** property.
+     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> patch(@javax.annotation.Nonnull final DriveItem body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -468,7 +468,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's **parentReference** property.
+     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -477,7 +477,7 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's **parentReference** property.
+     * Update the metadata for a driveItem by ID or path. You can also use update to move an item to another parent by updating the item's parentReference property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

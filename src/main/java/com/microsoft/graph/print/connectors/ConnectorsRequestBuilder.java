@@ -65,7 +65,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of print connectors.
      * @return a CompletableFuture of printConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnectorCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ConnectorsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of print connectors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/print-list-connectors?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintConnectorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

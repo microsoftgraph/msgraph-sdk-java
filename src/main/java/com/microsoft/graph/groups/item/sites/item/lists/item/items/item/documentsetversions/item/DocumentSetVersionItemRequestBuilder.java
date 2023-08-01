@@ -59,7 +59,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a version of a document set in a list.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
      * Delete a version of a document set in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a documentSetVersion object.
      * @return a CompletableFuture of documentSetVersion
-     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersion> get() {
@@ -118,7 +118,7 @@ public class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a documentSetVersion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of documentSetVersion
-     * @see <a href="https://docs.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersion> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

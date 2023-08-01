@@ -9,15 +9,15 @@ import java.util.Map;
 import java.util.Objects;
 public class ProvisioningObjectSummary extends Entity implements Parsable {
     /**
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  SUpports $filter (eq, gt, lt) and orderby.
      */
     private OffsetDateTime activityDateTime;
     /**
-     * Unique ID of this change in this cycle.
+     * Unique ID of this change in this cycle. Supports $filter (eq, contains).
      */
     private String changeId;
     /**
-     * Unique ID per job iteration.
+     * Unique ID per job iteration. Supports $filter (eq, contains).
      */
     private String cycleId;
     /**
@@ -25,11 +25,11 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     private Integer durationInMilliseconds;
     /**
-     * Details of who initiated this provisioning.
+     * Details of who initiated this provisioning. Supports $filter (eq, contains).
      */
     private Initiator initiatedBy;
     /**
-     * The unique ID for the whole provisioning job.
+     * The unique ID for the whole provisioning job. Supports $filter (eq, contains).
      */
     private String jobId;
     /**
@@ -37,7 +37,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     private java.util.List<ModifiedProperty> modifiedProperties;
     /**
-     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
      */
     private ProvisioningAction provisioningAction;
     /**
@@ -49,27 +49,27 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     private java.util.List<ProvisioningStep> provisioningSteps;
     /**
-     * Represents the service principal used for provisioning.
+     * Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
      */
     private ProvisioningServicePrincipal servicePrincipal;
     /**
-     * Details of source object being provisioned.
+     * Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      */
     private ProvisionedIdentity sourceIdentity;
     /**
-     * Details of source system of the object being provisioned.
+     * Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      */
     private ProvisioningSystem sourceSystem;
     /**
-     * Details of target object being provisioned.
+     * Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      */
     private ProvisionedIdentity targetIdentity;
     /**
-     * Details of target system of the object being provisioned.
+     * Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      */
     private ProvisioningSystem targetSystem;
     /**
-     * Unique Azure AD tenant ID.
+     * Unique Azure AD tenant ID. Supports $filter (eq, contains).
      */
     private String tenantId;
     /**
@@ -91,7 +91,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return new ProvisioningObjectSummary();
     }
     /**
-     * Gets the activityDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the activityDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  SUpports $filter (eq, gt, lt) and orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.activityDateTime;
     }
     /**
-     * Gets the changeId property value. Unique ID of this change in this cycle.
+     * Gets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.changeId;
     }
     /**
-     * Gets the cycleId property value. Unique ID per job iteration.
+     * Gets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the initiatedBy property value. Details of who initiated this provisioning.
+     * Gets the initiatedBy property value. Details of who initiated this provisioning. Supports $filter (eq, contains).
      * @return a initiator
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.initiatedBy;
     }
     /**
-     * Gets the jobId property value. The unique ID for the whole provisioning job.
+     * Gets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.modifiedProperties;
     }
     /**
-     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
      * @return a provisioningAction
      */
     @javax.annotation.Nullable
@@ -196,7 +196,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.provisioningSteps;
     }
     /**
-     * Gets the servicePrincipal property value. Represents the service principal used for provisioning.
+     * Gets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
      * @return a provisioningServicePrincipal
      */
     @javax.annotation.Nullable
@@ -204,7 +204,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.servicePrincipal;
     }
     /**
-     * Gets the sourceIdentity property value. Details of source object being provisioned.
+     * Gets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @return a provisionedIdentity
      */
     @javax.annotation.Nullable
@@ -212,7 +212,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.sourceIdentity;
     }
     /**
-     * Gets the sourceSystem property value. Details of source system of the object being provisioned.
+     * Gets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @return a provisioningSystem
      */
     @javax.annotation.Nullable
@@ -220,7 +220,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.sourceSystem;
     }
     /**
-     * Gets the targetIdentity property value. Details of target object being provisioned.
+     * Gets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @return a provisionedIdentity
      */
     @javax.annotation.Nullable
@@ -228,7 +228,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.targetIdentity;
     }
     /**
-     * Gets the targetSystem property value. Details of target system of the object being provisioned.
+     * Gets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @return a provisioningSystem
      */
     @javax.annotation.Nullable
@@ -236,7 +236,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.targetSystem;
     }
     /**
-     * Gets the tenantId property value. Unique Azure AD tenant ID.
+     * Gets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -270,7 +270,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the activityDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the activityDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  SUpports $filter (eq, gt, lt) and orderby.
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
@@ -279,7 +279,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.activityDateTime = value;
     }
     /**
-     * Sets the changeId property value. Unique ID of this change in this cycle.
+     * Sets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
      * @param value Value to set for the changeId property.
      * @return a void
      */
@@ -288,7 +288,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.changeId = value;
     }
     /**
-     * Sets the cycleId property value. Unique ID per job iteration.
+     * Sets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
      * @param value Value to set for the cycleId property.
      * @return a void
      */
@@ -306,7 +306,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.durationInMilliseconds = value;
     }
     /**
-     * Sets the initiatedBy property value. Details of who initiated this provisioning.
+     * Sets the initiatedBy property value. Details of who initiated this provisioning. Supports $filter (eq, contains).
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
@@ -315,7 +315,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.initiatedBy = value;
     }
     /**
-     * Sets the jobId property value. The unique ID for the whole provisioning job.
+     * Sets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
      * @param value Value to set for the jobId property.
      * @return a void
      */
@@ -333,7 +333,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.modifiedProperties = value;
     }
     /**
-     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
      * @param value Value to set for the provisioningAction property.
      * @return a void
      */
@@ -360,7 +360,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.provisioningSteps = value;
     }
     /**
-     * Sets the servicePrincipal property value. Represents the service principal used for provisioning.
+     * Sets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
      * @param value Value to set for the servicePrincipal property.
      * @return a void
      */
@@ -369,7 +369,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.servicePrincipal = value;
     }
     /**
-     * Sets the sourceIdentity property value. Details of source object being provisioned.
+     * Sets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @param value Value to set for the sourceIdentity property.
      * @return a void
      */
@@ -378,7 +378,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.sourceIdentity = value;
     }
     /**
-     * Sets the sourceSystem property value. Details of source system of the object being provisioned.
+     * Sets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @param value Value to set for the sourceSystem property.
      * @return a void
      */
@@ -387,7 +387,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.sourceSystem = value;
     }
     /**
-     * Sets the targetIdentity property value. Details of target object being provisioned.
+     * Sets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @param value Value to set for the targetIdentity property.
      * @return a void
      */
@@ -396,7 +396,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.targetIdentity = value;
     }
     /**
-     * Sets the targetSystem property value. Details of target system of the object being provisioned.
+     * Sets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @param value Value to set for the targetSystem property.
      * @return a void
      */
@@ -405,7 +405,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.targetSystem = value;
     }
     /**
-     * Sets the tenantId property value. Unique Azure AD tenant ID.
+     * Sets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
      * @param value Value to set for the tenantId property.
      * @return a void
      */

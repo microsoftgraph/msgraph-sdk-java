@@ -63,7 +63,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}/customExtensionStageSettings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get customExtensionStageSettings from identityGovernance
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return a CompletableFuture of customExtensionStageSettingCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Get customExtensionStageSettings from identityGovernance
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customExtensionStageSettingCollectionResponse
      */
@@ -140,7 +140,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Get customExtensionStageSettings from identityGovernance
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get customExtensionStageSettings from identityGovernance
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get customExtensionStageSettings from identityGovernance
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      */
     public class GetQueryParameters {
         /**

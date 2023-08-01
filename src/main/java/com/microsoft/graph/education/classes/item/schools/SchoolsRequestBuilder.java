@@ -64,7 +64,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of schools in which the class is taught.
      * @return a CompletableFuture of educationSchoolCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-schools?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-schools?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchoolCollectionResponse> get() {
@@ -84,7 +84,7 @@ public class SchoolsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of schools in which the class is taught.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSchoolCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-schools?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-schools?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSchoolCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -63,7 +63,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @return a CompletableFuture of accessPackageResourceRoleScopeCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRoleScopeCollectionResponse
      */
@@ -100,9 +100,10 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to resourceRoleScopes for identityGovernance
+     * Create a new accessPackageResourceRoleScope for adding a resource role to an access package. The access package resource, for a group, an app, or a SharePoint Online site, must already exist in the access package catalog, and the originId for the resource role retrieved from the list of the resource roles. Once you add the resource role scope to the access package, the user will receive this resource role through any current and future access package assignments.
      * @param body The request body
      * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-post-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> post(@javax.annotation.Nonnull final AccessPackageResourceRoleScope body) {
@@ -119,10 +120,11 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to resourceRoleScopes for identityGovernance
+     * Create a new accessPackageResourceRoleScope for adding a resource role to an access package. The access package resource, for a group, an app, or a SharePoint Online site, must already exist in the access package catalog, and the originId for the resource role retrieved from the list of the resource roles. Once you add the resource role scope to the access package, the user will receive this resource role through any current and future access package assignments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRoleScope
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-post-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRoleScope> post(@javax.annotation.Nonnull final AccessPackageResourceRoleScope body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +150,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +171,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to resourceRoleScopes for identityGovernance
+     * Create a new accessPackageResourceRoleScope for adding a resource role to an access package. The access package resource, for a group, an app, or a SharePoint Online site, must already exist in the access package catalog, and the originId for the resource role retrieved from the list of the resource roles. Once you add the resource role scope to the access package, the user will receive this resource role through any current and future access package assignments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +180,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to resourceRoleScopes for identityGovernance
+     * Create a new accessPackageResourceRoleScope for adding a resource role to an access package. The access package resource, for a group, an app, or a SharePoint Online site, must already exist in the access package catalog, and the originId for the resource role retrieved from the list of the resource roles. Once you add the resource role scope to the access package, the user will receive this resource role through any current and future access package assignments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +203,7 @@ public class ResourceRoleScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      */
     public class GetQueryParameters {
         /**

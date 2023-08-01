@@ -115,10 +115,10 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties on a **[listItem][]**.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @return a CompletableFuture of fieldValueSet
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FieldValueSet> patch(@javax.annotation.Nonnull final FieldValueSet body) {
@@ -135,11 +135,11 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the properties on a **[listItem][]**.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of fieldValueSet
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FieldValueSet> patch(@javax.annotation.Nonnull final FieldValueSet body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -213,7 +213,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties on a **[listItem][]**.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @return a RequestInformation
      */
@@ -222,7 +222,7 @@ public class FieldsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties on a **[listItem][]**.
+     * Update the properties on a [listItem][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

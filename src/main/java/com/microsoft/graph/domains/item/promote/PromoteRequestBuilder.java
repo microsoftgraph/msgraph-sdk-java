@@ -39,9 +39,9 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/promote", rawUrl);
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @return a CompletableFuture of promoteResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PromoteResponse> post() {
@@ -58,10 +58,10 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of promoteResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PromoteResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +78,7 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class PromoteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Promote a verified subdomain to the root domain. A verified domain has its **isVerified** property set to `true`.
+     * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

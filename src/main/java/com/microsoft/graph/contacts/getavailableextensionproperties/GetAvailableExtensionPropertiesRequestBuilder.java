@@ -42,7 +42,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:+ user+ group+ administrativeUnit+ application+ device+ organization
      * @param body The request body
      * @return a CompletableFuture of getAvailableExtensionPropertiesResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body) {
@@ -63,7 +63,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBu
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getAvailableExtensionPropertiesResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

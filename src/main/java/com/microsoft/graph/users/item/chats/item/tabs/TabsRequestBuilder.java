@@ -65,7 +65,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of tabs in the specified chat.
      * @return a CompletableFuture of teamsTabCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of tabs in the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTabCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
      * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
      * @param body The request body
      * @return a CompletableFuture of teamsTab
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> post(@javax.annotation.Nonnull final TeamsTab body) {
@@ -126,7 +126,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTab
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> post(@javax.annotation.Nonnull final TeamsTab body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

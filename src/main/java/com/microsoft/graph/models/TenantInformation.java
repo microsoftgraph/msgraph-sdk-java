@@ -13,15 +13,15 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The defaultDomainName property
+     * Primary domain name of an Azure AD tenant.
      */
     private String defaultDomainName;
     /**
-     * The displayName property
+     * Display name of an Azure AD tenant.
      */
     private String displayName;
     /**
-     * The federationBrandName property
+     * Name shown to users that sign in to an Azure AD tenant.
      */
     private String federationBrandName;
     /**
@@ -29,7 +29,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The tenantId property
+     * Unique identifier of an Azure AD tenant.
      */
     private String tenantId;
     /**
@@ -59,7 +59,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the defaultDomainName property value. The defaultDomainName property
+     * Gets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.defaultDomainName;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of an Azure AD tenant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.displayName;
     }
     /**
-     * Gets the federationBrandName property value. The federationBrandName property
+     * Gets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Unique identifier of an Azure AD tenant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the defaultDomainName property value. The defaultDomainName property
+     * Sets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
      * @param value Value to set for the defaultDomainName property.
      * @return a void
      */
@@ -146,7 +146,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         this.defaultDomainName = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of an Azure AD tenant.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -155,7 +155,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the federationBrandName property value. The federationBrandName property
+     * Sets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
      * @param value Value to set for the federationBrandName property.
      * @return a void
      */
@@ -173,7 +173,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Unique identifier of an Azure AD tenant.
      * @param value Value to set for the tenantId property.
      * @return a void
      */

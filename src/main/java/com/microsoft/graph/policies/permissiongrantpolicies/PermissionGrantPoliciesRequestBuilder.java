@@ -65,7 +65,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of permissionGrantPolicy objects.
      * @return a CompletableFuture of permissionGrantPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicyCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of permissionGrantPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
      * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
      * @param body The request body
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> post(@javax.annotation.Nonnull final PermissionGrantPolicy body) {
@@ -126,7 +126,7 @@ public class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> post(@javax.annotation.Nonnull final PermissionGrantPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

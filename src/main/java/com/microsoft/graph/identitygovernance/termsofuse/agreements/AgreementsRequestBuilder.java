@@ -65,7 +65,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of agreement objects.
      * @return a CompletableFuture of agreementCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of agreement objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreementCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgreementCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
      * Create a new agreement object.
      * @param body The request body
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> post(@javax.annotation.Nonnull final Agreement body) {
@@ -126,7 +126,7 @@ public class AgreementsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> post(@javax.annotation.Nonnull final Agreement body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -72,7 +72,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @return a CompletableFuture of eventCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/event-list-instances?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/event-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get() {
@@ -92,7 +92,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
      * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of eventCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/event-list-instances?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/event-list-instances?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

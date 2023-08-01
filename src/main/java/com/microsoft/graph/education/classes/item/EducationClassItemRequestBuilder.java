@@ -107,7 +107,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -127,7 +127,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> get() {
@@ -166,7 +166,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -186,7 +186,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationClass object.
      * @param body The request body
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> patch(@javax.annotation.Nonnull final EducationClass body) {
@@ -207,7 +207,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationClass
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationClass> patch(@javax.annotation.Nonnull final EducationClass body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

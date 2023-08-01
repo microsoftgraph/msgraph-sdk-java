@@ -65,8 +65,9 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -83,9 +84,10 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -102,8 +104,9 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> get() {
@@ -120,9 +123,10 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -139,9 +143,10 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body) {
@@ -158,10 +163,11 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -179,7 +185,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -187,7 +193,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -206,7 +212,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -214,7 +220,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +241,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -244,7 +250,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -272,7 +278,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      */
     public class GetQueryParameters {
         /**

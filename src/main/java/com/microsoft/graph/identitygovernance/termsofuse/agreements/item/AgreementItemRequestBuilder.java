@@ -67,7 +67,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an agreement object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * Delete an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an agreement object.
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get() {
@@ -126,7 +126,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an agreement object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an agreement object.
      * @param body The request body
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> patch(@javax.annotation.Nonnull final Agreement body) {
@@ -167,7 +167,7 @@ public class AgreementItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of agreement
-     * @see <a href="https://docs.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Agreement> patch(@javax.annotation.Nonnull final Agreement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

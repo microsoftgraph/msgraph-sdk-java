@@ -86,8 +86,9 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device protection status. This property is read-only.
+     * Read properties and relationships of the windowsProtectionState object.
      * @return a CompletableFuture of windowsProtectionState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> get() {
@@ -104,9 +105,10 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device protection status. This property is read-only.
+     * Read properties and relationships of the windowsProtectionState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsProtectionState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,9 +125,10 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property windowsProtectionState in users
+     * Update the properties of a windowsProtectionState object.
      * @param body The request body
      * @return a CompletableFuture of windowsProtectionState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> patch(@javax.annotation.Nonnull final WindowsProtectionState body) {
@@ -142,10 +145,11 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property windowsProtectionState in users
+     * Update the properties of a windowsProtectionState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of windowsProtectionState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> patch(@javax.annotation.Nonnull final WindowsProtectionState body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -190,7 +194,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The device protection status. This property is read-only.
+     * Read properties and relationships of the windowsProtectionState object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +202,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The device protection status. This property is read-only.
+     * Read properties and relationships of the windowsProtectionState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -219,7 +223,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property windowsProtectionState in users
+     * Update the properties of a windowsProtectionState object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -228,7 +232,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property windowsProtectionState in users
+     * Update the properties of a windowsProtectionState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -256,7 +260,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The device protection status. This property is read-only.
+     * Read properties and relationships of the windowsProtectionState object.
      */
     public class GetQueryParameters {
         /**

@@ -67,7 +67,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
      * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -104,9 +104,9 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **participant** object.
+     * Retrieve the properties and relationships of a participant object.
      * @return a CompletableFuture of participant
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Participant> get() {
@@ -123,10 +123,10 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the properties and relationships of a **participant** object.
+     * Retrieve the properties and relationships of a participant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of participant
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Participant> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -210,7 +210,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a **participant** object.
+     * Retrieve the properties and relationships of a participant object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -218,7 +218,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a **participant** object.
+     * Retrieve the properties and relationships of a participant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -276,7 +276,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a **participant** object.
+     * Retrieve the properties and relationships of a participant object.
      */
     public class GetQueryParameters {
         /**

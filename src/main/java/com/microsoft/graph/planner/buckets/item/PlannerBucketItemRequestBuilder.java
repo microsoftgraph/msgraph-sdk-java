@@ -49,9 +49,9 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/buckets/{plannerBucket%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete **plannerBucket**.
+     * Delete plannerBucket.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -68,10 +68,10 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete **plannerBucket**.
+     * Delete plannerBucket.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a plannerBucket object.
      * @return a CompletableFuture of plannerBucket
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> get() {
@@ -110,7 +110,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a plannerBucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerBucket
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property buckets in planner
      * @param body The request body
      * @return a CompletableFuture of plannerBucket
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> patch(@javax.annotation.Nonnull final PlannerBucket body) {
@@ -151,7 +151,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerBucket
-     * @see <a href="https://docs.microsoft.com/graph/api/plannerbucket-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerbucket-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerBucket> patch(@javax.annotation.Nonnull final PlannerBucket body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete **plannerBucket**.
+     * Delete plannerBucket.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -177,7 +177,7 @@ public class PlannerBucketItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete **plannerBucket**.
+     * Delete plannerBucket.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

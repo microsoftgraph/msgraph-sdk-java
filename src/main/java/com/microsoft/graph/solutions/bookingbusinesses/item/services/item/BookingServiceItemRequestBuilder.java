@@ -43,7 +43,7 @@ public class BookingServiceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a bookingService object in the specified bookingBusiness.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingservice-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingservice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class BookingServiceItemRequestBuilder extends BaseRequestBuilder {
      * Delete a bookingService object in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingservice-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingservice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class BookingServiceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a bookingService object in the specified bookingBusiness.
      * @return a CompletableFuture of bookingService
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingservice-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingservice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingService> get() {
@@ -102,7 +102,7 @@ public class BookingServiceItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of a bookingService object in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingService
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingservice-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingservice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingService> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class BookingServiceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a bookingService object in the specified bookingBusiness. The following are some examples you can customize for a service:- Price- Typical length of an appointment- Reminders- Any time buffer to set up before or finish up after the service- Scheduling policy parameters, such as minimum notice to book or cancel, and whether customers can select specific staff members for an appointment.
      * @param body The request body
      * @return a CompletableFuture of bookingService
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingservice-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingservice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingService> patch(@javax.annotation.Nonnull final BookingService body) {
@@ -143,7 +143,7 @@ public class BookingServiceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingService
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingservice-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingservice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingService> patch(@javax.annotation.Nonnull final BookingService body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

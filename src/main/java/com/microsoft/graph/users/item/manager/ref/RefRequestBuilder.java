@@ -42,7 +42,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove a user's manager.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -62,7 +62,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove a user's manager.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @return a CompletableFuture of string
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<String> get() {
@@ -101,7 +101,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of string
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<String> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +121,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Assign a user's manager.
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdate body) {
@@ -142,7 +142,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdate body, @javax.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the categories that have been defined for the user.
      * @return a CompletableFuture of outlookCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * Get all the categories that have been defined for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookCategoryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create an outlookCategory object in the user's master list of categories.
      * @param body The request body
      * @return a CompletableFuture of outlookCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> post(@javax.annotation.Nonnull final OutlookCategory body) {
@@ -126,7 +126,7 @@ public class MasterCategoriesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of outlookCategory
-     * @see <a href="https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutlookCategory> post(@javax.annotation.Nonnull final OutlookCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -80,7 +80,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of an entitlementManagementSettings object.
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> get() {
@@ -100,7 +100,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties of an entitlementManagementSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param body The request body
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> patch(@javax.annotation.Nonnull final EntitlementManagementSettings body) {
@@ -141,7 +141,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of entitlementManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EntitlementManagementSettings> patch(@javax.annotation.Nonnull final EntitlementManagementSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

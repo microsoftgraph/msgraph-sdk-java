@@ -17,7 +17,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     private AccessPackageAssignmentPolicy assignmentPolicy;
     /**
-     * The customExtensionCalloutInstances property
+     * Information about all the custom extension calls that were made during the access package assignment workflow.
      */
     private java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
     /**
@@ -75,7 +75,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         return this.assignmentPolicy;
     }
     /**
-     * Gets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @return a customExtensionCalloutInstance
      */
     @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         this.assignmentPolicy = value;
     }
     /**
-     * Sets the customExtensionCalloutInstances property value. The customExtensionCalloutInstances property
+     * Sets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @param value Value to set for the customExtensionCalloutInstances property.
      * @return a void
      */

@@ -241,8 +241,9 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @return a CompletableFuture of reportRoot
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get() {
@@ -259,9 +260,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of reportRoot
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -1236,9 +1238,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @return a CompletableFuture of reportRoot
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body) {
@@ -1255,10 +1258,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of reportRoot
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-reportroot-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReportRoot> patch(@javax.annotation.Nonnull final ReportRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -1276,7 +1280,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -1284,7 +1288,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -1305,7 +1309,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -1314,7 +1318,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update reports
+     * Update the properties of a reportRoot object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -1337,7 +1341,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get reports
+     * Read properties and relationships of the reportRoot object.
      */
     public class GetQueryParameters {
         /**

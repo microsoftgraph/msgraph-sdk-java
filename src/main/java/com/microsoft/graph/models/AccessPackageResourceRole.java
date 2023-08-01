@@ -8,19 +8,19 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
-     * The description property
+     * A description for the resource role.
      */
     private String description;
     /**
-     * The displayName property
+     * The display name of the resource role such as the role defined by the application.
      */
     private String displayName;
     /**
-     * The originId property
+     * The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      */
     private String originId;
     /**
-     * The originSystem property
+     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      */
     private String originSystem;
     /**
@@ -46,7 +46,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         return new AccessPackageResourceRole();
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description for the resource role.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -54,7 +54,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         return this.originId;
     }
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description for the resource role.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -124,7 +124,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -133,7 +133,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @param value Value to set for the originId property.
      * @return a void
      */
@@ -142,7 +142,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         this.originId = value;
     }
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
      * @return a void
      */

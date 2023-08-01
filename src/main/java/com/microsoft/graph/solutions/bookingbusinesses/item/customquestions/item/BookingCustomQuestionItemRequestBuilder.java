@@ -43,7 +43,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete a bookingCustomQuestion object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
      * Delete a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of a bookingCustomQuestion object.
      * @return a CompletableFuture of bookingCustomQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> get() {
@@ -102,7 +102,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
      * Read the properties and relationships of a bookingCustomQuestion object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCustomQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
      * Update the properties of a bookingCustomQuestion object.
      * @param body The request body
      * @return a CompletableFuture of bookingCustomQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> patch(@javax.annotation.Nonnull final BookingCustomQuestion body) {
@@ -143,7 +143,7 @@ public class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCustomQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCustomQuestion> patch(@javax.annotation.Nonnull final BookingCustomQuestion body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

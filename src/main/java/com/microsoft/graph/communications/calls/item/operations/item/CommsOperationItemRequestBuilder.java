@@ -80,7 +80,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the status of an operation that adds the large gallery view to a call.
      * @return a CompletableFuture of commsOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> get() {
@@ -100,7 +100,7 @@ public class CommsOperationItemRequestBuilder extends BaseRequestBuilder {
      * Get the status of an operation that adds the large gallery view to a call.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of commsOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

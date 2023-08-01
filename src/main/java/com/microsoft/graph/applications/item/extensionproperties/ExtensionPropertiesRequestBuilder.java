@@ -65,7 +65,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @return a CompletableFuture of extensionPropertyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extensionPropertyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
      * Create a new directory extension definition, represented by an extensionProperty object.
      * @param body The request body
      * @return a CompletableFuture of extensionProperty
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> post(@javax.annotation.Nonnull final ExtensionProperty body) {
@@ -126,7 +126,7 @@ public class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of extensionProperty
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExtensionProperty> post(@javax.annotation.Nonnull final ExtensionProperty body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

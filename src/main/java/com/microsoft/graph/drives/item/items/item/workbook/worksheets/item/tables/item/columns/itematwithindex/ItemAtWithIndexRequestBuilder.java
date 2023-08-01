@@ -44,7 +44,7 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function itemAt
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumncollection-itemat?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumncollection-itemat?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> get() {
@@ -64,7 +64,7 @@ public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
      * Invoke function itemAt
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumncollection-itemat?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumncollection-itemat?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

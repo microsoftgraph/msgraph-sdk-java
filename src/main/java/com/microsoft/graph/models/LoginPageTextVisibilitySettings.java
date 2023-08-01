@@ -13,27 +13,27 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     private Map<String, Object> additionalData;
     /**
-     * The hideAccountResetCredentials property
+     * Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      */
     private Boolean hideAccountResetCredentials;
     /**
-     * The hideCannotAccessYourAccount property
+     * Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      */
     private Boolean hideCannotAccessYourAccount;
     /**
-     * The hideForgotMyPassword property
+     * Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      */
     private Boolean hideForgotMyPassword;
     /**
-     * The hidePrivacyAndCookies property
+     * Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      */
     private Boolean hidePrivacyAndCookies;
     /**
-     * The hideResetItNow property
+     * Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      */
     private Boolean hideResetItNow;
     /**
-     * The hideTermsOfUse property
+     * Option to hide the 'Terms of Use' hyperlink in the footer.
      */
     private Boolean hideTermsOfUse;
     /**
@@ -83,7 +83,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         return deserializerMap;
     }
     /**
-     * Gets the hideAccountResetCredentials property value. The hideAccountResetCredentials property
+     * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         return this.hideAccountResetCredentials;
     }
     /**
-     * Gets the hideCannotAccessYourAccount property value. The hideCannotAccessYourAccount property
+     * Gets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         return this.hideCannotAccessYourAccount;
     }
     /**
-     * Gets the hideForgotMyPassword property value. The hideForgotMyPassword property
+     * Gets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         return this.hideForgotMyPassword;
     }
     /**
-     * Gets the hidePrivacyAndCookies property value. The hidePrivacyAndCookies property
+     * Gets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -115,7 +115,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         return this.hidePrivacyAndCookies;
     }
     /**
-     * Gets the hideResetItNow property value. The hideResetItNow property
+     * Gets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         return this.hideResetItNow;
     }
     /**
-     * Gets the hideTermsOfUse property value. The hideTermsOfUse property
+     * Gets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -165,7 +165,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         this.additionalData = value;
     }
     /**
-     * Sets the hideAccountResetCredentials property value. The hideAccountResetCredentials property
+     * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @param value Value to set for the hideAccountResetCredentials property.
      * @return a void
      */
@@ -174,7 +174,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         this.hideAccountResetCredentials = value;
     }
     /**
-     * Sets the hideCannotAccessYourAccount property value. The hideCannotAccessYourAccount property
+     * Sets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      * @param value Value to set for the hideCannotAccessYourAccount property.
      * @return a void
      */
@@ -183,7 +183,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         this.hideCannotAccessYourAccount = value;
     }
     /**
-     * Sets the hideForgotMyPassword property value. The hideForgotMyPassword property
+     * Sets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      * @param value Value to set for the hideForgotMyPassword property.
      * @return a void
      */
@@ -192,7 +192,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         this.hideForgotMyPassword = value;
     }
     /**
-     * Sets the hidePrivacyAndCookies property value. The hidePrivacyAndCookies property
+     * Sets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      * @param value Value to set for the hidePrivacyAndCookies property.
      * @return a void
      */
@@ -201,7 +201,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         this.hidePrivacyAndCookies = value;
     }
     /**
-     * Sets the hideResetItNow property value. The hideResetItNow property
+     * Sets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      * @param value Value to set for the hideResetItNow property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
         this.hideResetItNow = value;
     }
     /**
-     * Sets the hideTermsOfUse property value. The hideTermsOfUse property
+     * Sets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
      * @param value Value to set for the hideTermsOfUse property.
      * @return a void
      */

@@ -59,7 +59,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
     /**
      * Deletes a remoteAssistancePartner.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
      * Deletes a remoteAssistancePartner.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
     /**
      * Read properties and relationships of the remoteAssistancePartner object.
      * @return a CompletableFuture of remoteAssistancePartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> get() {
@@ -118,7 +118,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
      * Read properties and relationships of the remoteAssistancePartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of remoteAssistancePartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
      * Update the properties of a remoteAssistancePartner object.
      * @param body The request body
      * @return a CompletableFuture of remoteAssistancePartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> patch(@javax.annotation.Nonnull final RemoteAssistancePartner body) {
@@ -159,7 +159,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of remoteAssistancePartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> patch(@javax.annotation.Nonnull final RemoteAssistancePartner body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

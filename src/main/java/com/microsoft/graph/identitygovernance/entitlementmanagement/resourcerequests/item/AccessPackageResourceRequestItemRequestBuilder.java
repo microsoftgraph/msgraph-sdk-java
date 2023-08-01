@@ -94,7 +94,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get resourceRequests from identityGovernance
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      * @return a CompletableFuture of accessPackageResourceRequest
      */
     @javax.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
         }
     }
     /**
-     * Get resourceRequests from identityGovernance
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRequest
      */
@@ -198,7 +198,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get resourceRequests from identityGovernance
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -206,7 +206,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get resourceRequests from identityGovernance
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -264,7 +264,7 @@ public class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get resourceRequests from identityGovernance
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      */
     public class GetQueryParameters {
         /**

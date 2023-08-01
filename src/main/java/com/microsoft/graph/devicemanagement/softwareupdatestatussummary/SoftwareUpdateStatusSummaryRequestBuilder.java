@@ -41,8 +41,9 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/softwareUpdateStatusSummary{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @return a CompletableFuture of softwareUpdateStatusSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-softwareupdatestatussummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> get() {
@@ -59,9 +60,10 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of softwareUpdateStatusSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-softwareupdatestatussummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +80,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         }
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +88,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +109,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The software update status summary.
+     * Read properties and relationships of the softwareUpdateStatusSummary object.
      */
     public class GetQueryParameters {
         /**

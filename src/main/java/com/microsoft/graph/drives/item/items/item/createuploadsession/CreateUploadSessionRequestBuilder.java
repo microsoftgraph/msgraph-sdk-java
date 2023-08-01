@@ -40,10 +40,9 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/createUploadSession", rawUrl);
     }
     /**
-     * Create an upload session to allow your app to upload files up to the maximum file size.An upload session allows your app to upload ranges of the file in sequential API requests, which allows the transfer to be resumed if a connection is dropped while the upload is in progress. To upload a file using an upload session, there are two steps:
+     * Invoke action createUploadSession
      * @param body The request body
      * @return a CompletableFuture of uploadSession
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-createuploadsession?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UploadSession> post(@javax.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
@@ -60,11 +59,10 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an upload session to allow your app to upload files up to the maximum file size.An upload session allows your app to upload ranges of the file in sequential API requests, which allows the transfer to be resumed if a connection is dropped while the upload is in progress. To upload a file using an upload session, there are two steps:
+     * Invoke action createUploadSession
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of uploadSession
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-createuploadsession?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UploadSession> post(@javax.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -82,7 +80,7 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create an upload session to allow your app to upload files up to the maximum file size.An upload session allows your app to upload ranges of the file in sequential API requests, which allows the transfer to be resumed if a connection is dropped while the upload is in progress. To upload a file using an upload session, there are two steps:
+     * Invoke action createUploadSession
      * @param body The request body
      * @return a RequestInformation
      */
@@ -91,7 +89,7 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an upload session to allow your app to upload files up to the maximum file size.An upload session allows your app to upload ranges of the file in sequential API requests, which allows the transfer to be resumed if a connection is dropped while the upload is in progress. To upload a file using an upload session, there are two steps:
+     * Invoke action createUploadSession
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

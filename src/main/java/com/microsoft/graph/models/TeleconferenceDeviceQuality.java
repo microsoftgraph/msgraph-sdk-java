@@ -26,7 +26,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     private String cloudServiceDeploymentId;
     /**
-     * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * The Azure deployed cloud service instance name, such as FrontEndIN3.
      */
     private String cloudServiceInstanceName;
     /**
@@ -108,7 +108,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
         return this.cloudServiceDeploymentId;
     }
     /**
-     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
         this.cloudServiceDeploymentId = value;
     }
     /**
-     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @param value Value to set for the cloudServiceInstanceName property.
      * @return a void
      */

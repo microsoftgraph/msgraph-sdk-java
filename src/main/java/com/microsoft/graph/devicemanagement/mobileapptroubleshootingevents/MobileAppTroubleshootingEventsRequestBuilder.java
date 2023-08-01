@@ -63,8 +63,9 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/mobileAppTroubleshootingEvents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @return a CompletableFuture of mobileAppTroubleshootingEventCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEventCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppTroubleshootingEventCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> post(@javax.annotation.Nonnull final MobileAppTroubleshootingEvent body) {
@@ -119,10 +122,11 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> post(@javax.annotation.Nonnull final MobileAppTroubleshootingEvent body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
+     * Create a new mobileAppTroubleshootingEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * The collection property of MobileAppTroubleshootingEvent.
+     * List properties and relationships of the mobileAppTroubleshootingEvent objects.
      */
     public class GetQueryParameters {
         /**

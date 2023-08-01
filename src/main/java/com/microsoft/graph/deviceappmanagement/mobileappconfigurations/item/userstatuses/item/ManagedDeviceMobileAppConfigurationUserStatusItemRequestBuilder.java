@@ -41,8 +41,9 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}/userStatuses/{managedDeviceMobileAppConfigurationUserStatus%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property userStatuses for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationUserStatus.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         }
     }
     /**
-     * Delete navigation property userStatuses for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationUserStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         }
     }
     /**
-     * List of ManagedDeviceMobileAppConfigurationUserStatus.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserStatus object.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> get() {
@@ -96,9 +99,10 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         }
     }
     /**
-     * List of ManagedDeviceMobileAppConfigurationUserStatus.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         }
     }
     /**
-     * Update the navigation property userStatuses in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserStatus object.
      * @param body The request body
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body) {
@@ -134,10 +139,11 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         }
     }
     /**
-     * Update the navigation property userStatuses in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> patch(@javax.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         }
     }
     /**
-     * Delete navigation property userStatuses for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationUserStatus.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property userStatuses for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationUserStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         return requestInfo;
     }
     /**
-     * List of ManagedDeviceMobileAppConfigurationUserStatus.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserStatus object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         return toGetRequestInformation(null);
     }
     /**
-     * List of ManagedDeviceMobileAppConfigurationUserStatus.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserStatus object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         return requestInfo;
     }
     /**
-     * Update the navigation property userStatuses in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserStatus object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property userStatuses in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder ext
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of ManagedDeviceMobileAppConfigurationUserStatus.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserStatus object.
      */
     public class GetQueryParameters {
         /**

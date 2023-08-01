@@ -42,7 +42,7 @@ public class SendActivityNotificationRequestBuilder extends BaseRequestBuilder {
      * Send an activity feed notification to a user. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/userteamwork-sendactivitynotification?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-sendactivitynotification?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SendActivityNotificationPostRequestBody body) {
@@ -63,7 +63,7 @@ public class SendActivityNotificationRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/userteamwork-sendactivitynotification?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-sendactivitynotification?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final SendActivityNotificationPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

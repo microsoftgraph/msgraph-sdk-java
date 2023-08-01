@@ -65,7 +65,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a CompletableFuture of printTaskDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinitionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTaskDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @return a CompletableFuture of printTaskDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinition> post(@javax.annotation.Nonnull final PrintTaskDefinition body) {
@@ -126,7 +126,7 @@ public class TaskDefinitionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTaskDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskDefinition> post(@javax.annotation.Nonnull final PrintTaskDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

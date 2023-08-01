@@ -41,7 +41,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}/customExtensionStageSettings/{customExtensionStageSetting%2Did}/customExtension{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get customExtension from identityGovernance
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @return a CompletableFuture of customCalloutExtension
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get customExtension from identityGovernance
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customCalloutExtension
      */
@@ -78,7 +78,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get customExtension from identityGovernance
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get customExtension from identityGovernance
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get customExtension from identityGovernance
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /**

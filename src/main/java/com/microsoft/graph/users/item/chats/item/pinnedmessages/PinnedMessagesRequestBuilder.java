@@ -65,7 +65,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of pinnedChatMessages in a chat.
      * @return a CompletableFuture of pinnedChatMessageInfoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfoCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
      * Get a list of pinnedChatMessages in a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of pinnedChatMessageInfoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfoCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
      * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
      * @param body The request body
      * @return a CompletableFuture of pinnedChatMessageInfo
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfo> post(@javax.annotation.Nonnull final PinnedChatMessageInfo body) {
@@ -126,7 +126,7 @@ public class PinnedMessagesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of pinnedChatMessageInfo
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-pinnedmessages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PinnedChatMessageInfo> post(@javax.annotation.Nonnull final PinnedChatMessageInfo body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

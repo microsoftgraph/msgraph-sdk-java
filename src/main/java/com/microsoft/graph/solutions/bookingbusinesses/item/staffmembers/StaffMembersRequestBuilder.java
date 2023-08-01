@@ -65,7 +65,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @return a CompletableFuture of bookingStaffMemberBaseCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBaseCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
      * Get a list of bookingStaffMember objects in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingStaffMemberBaseCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBaseCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
      * Create a new bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> post(@javax.annotation.Nonnull final BookingStaffMemberBase body) {
@@ -126,7 +126,7 @@ public class StaffMembersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> post(@javax.annotation.Nonnull final BookingStaffMemberBase body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

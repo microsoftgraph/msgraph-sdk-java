@@ -65,7 +65,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
      * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSourceCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
      * @param body The request body
      * @return a CompletableFuture of unifiedGroupSource
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSource> post(@javax.annotation.Nonnull final UnifiedGroupSource body) {
@@ -126,7 +126,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedGroupSource
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedGroupSource> post(@javax.annotation.Nonnull final UnifiedGroupSource body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

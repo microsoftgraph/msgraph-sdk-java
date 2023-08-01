@@ -98,8 +98,9 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a macOSDeviceFeaturesConfiguration.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosdevicefeaturesconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -116,9 +117,10 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a macOSDeviceFeaturesConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosdevicefeaturesconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -135,8 +137,9 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the sharedPCConfiguration object.
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get() {
@@ -153,9 +156,10 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the sharedPCConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -182,9 +186,10 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(pathParameters, requestAdapter, secretReferenceValueId);
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@javax.annotation.Nonnull final DeviceConfiguration body) {
@@ -201,10 +206,11 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-macosgeneraldeviceconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@javax.annotation.Nonnull final DeviceConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -222,7 +228,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a macOSDeviceFeaturesConfiguration.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -230,7 +236,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceConfigurations for deviceManagement
+     * Deletes a macOSDeviceFeaturesConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -249,7 +255,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the sharedPCConfiguration object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -257,7 +263,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the sharedPCConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -278,7 +284,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -287,7 +293,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceConfigurations in deviceManagement
+     * Update the properties of a macOSGeneralDeviceConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -315,7 +321,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The device configurations.
+     * Read properties and relationships of the sharedPCConfiguration object.
      */
     public class GetQueryParameters {
         /**

@@ -63,8 +63,9 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The list of managed devices.
+     * List properties and relationships of the managedDevice objects.
      * @return a CompletableFuture of managedDeviceCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of managed devices.
+     * List properties and relationships of the managedDevice objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDeviceCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to managedDevices for deviceManagement
+     * Create a new managedDevice object.
      * @param body The request body
      * @return a CompletableFuture of managedDevice
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> post(@javax.annotation.Nonnull final ManagedDevice body) {
@@ -119,10 +122,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to managedDevices for deviceManagement
+     * Create a new managedDevice object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedDevice
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> post(@javax.annotation.Nonnull final ManagedDevice body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of managed devices.
+     * List properties and relationships of the managedDevice objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of managed devices.
+     * List properties and relationships of the managedDevice objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to managedDevices for deviceManagement
+     * Create a new managedDevice object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to managedDevices for deviceManagement
+     * Create a new managedDevice object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of managed devices.
+     * List properties and relationships of the managedDevice objects.
      */
     public class GetQueryParameters {
         /**

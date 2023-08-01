@@ -43,7 +43,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a member from a standard tag in a team.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
      * Delete a member from a standard tag in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a member of a standard tag in a team.
      * @return a CompletableFuture of teamworkTagMember
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> get() {
@@ -102,7 +102,7 @@ public class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of a member of a standard tag in a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTagMember
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagMember> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -13,15 +13,15 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
      */
     private Map<String, Object> additionalData;
     /**
-     * The isFooterShown property
+     * Option to show the footer on the sign-in page.
      */
     private Boolean isFooterShown;
     /**
-     * The isHeaderShown property
+     * Option to show the header on the sign-in page.
      */
     private Boolean isHeaderShown;
     /**
-     * The layoutTemplateType property
+     * Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      */
     private LayoutTemplateType layoutTemplateType;
     /**
@@ -68,7 +68,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the isFooterShown property value. The isFooterShown property
+     * Gets the isFooterShown property value. Option to show the footer on the sign-in page.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         return this.isFooterShown;
     }
     /**
-     * Gets the isHeaderShown property value. The isHeaderShown property
+     * Gets the isHeaderShown property value. Option to show the header on the sign-in page.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         return this.isHeaderShown;
     }
     /**
-     * Gets the layoutTemplateType property value. The layoutTemplateType property
+     * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      * @return a layoutTemplateType
      */
     @javax.annotation.Nullable
@@ -123,7 +123,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         this.additionalData = value;
     }
     /**
-     * Sets the isFooterShown property value. The isFooterShown property
+     * Sets the isFooterShown property value. Option to show the footer on the sign-in page.
      * @param value Value to set for the isFooterShown property.
      * @return a void
      */
@@ -132,7 +132,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         this.isFooterShown = value;
     }
     /**
-     * Sets the isHeaderShown property value. The isHeaderShown property
+     * Sets the isHeaderShown property value. Option to show the header on the sign-in page.
      * @param value Value to set for the isHeaderShown property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         this.isHeaderShown = value;
     }
     /**
-     * Sets the layoutTemplateType property value. The layoutTemplateType property
+     * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a backgound on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      * @param value Value to set for the layoutTemplateType property.
      * @return a void
      */

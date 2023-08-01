@@ -63,8 +63,9 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection%2Did}/apps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List of apps to which the policy is deployed.
+     * List properties and relationships of the managedMobileApp objects.
      * @return a CompletableFuture of managedMobileAppCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedmobileapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileAppCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of apps to which the policy is deployed.
+     * List properties and relationships of the managedMobileApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedMobileAppCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedmobileapp-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileAppCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to apps for deviceAppManagement
+     * Create a new managedMobileApp object.
      * @param body The request body
      * @return a CompletableFuture of managedMobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedmobileapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> post(@javax.annotation.Nonnull final ManagedMobileApp body) {
@@ -119,10 +122,11 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to apps for deviceAppManagement
+     * Create a new managedMobileApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedMobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-managedmobileapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedMobileApp> post(@javax.annotation.Nonnull final ManagedMobileApp body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * List of apps to which the policy is deployed.
+     * List properties and relationships of the managedMobileApp objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of apps to which the policy is deployed.
+     * List properties and relationships of the managedMobileApp objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to apps for deviceAppManagement
+     * Create a new managedMobileApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to apps for deviceAppManagement
+     * Create a new managedMobileApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class AppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of apps to which the policy is deployed.
+     * List properties and relationships of the managedMobileApp objects.
      */
     public class GetQueryParameters {
         /**

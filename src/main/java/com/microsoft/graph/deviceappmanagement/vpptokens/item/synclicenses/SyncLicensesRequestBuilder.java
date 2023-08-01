@@ -42,6 +42,7 @@ public class SyncLicensesRequestBuilder extends BaseRequestBuilder {
     /**
      * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
      * @return a CompletableFuture of vppToken
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-synclicenses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> post() {
@@ -61,6 +62,7 @@ public class SyncLicensesRequestBuilder extends BaseRequestBuilder {
      * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of vppToken
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-vpptoken-synclicenses?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

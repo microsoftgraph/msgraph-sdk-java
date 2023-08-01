@@ -12,7 +12,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     private DetailsInfo details;
     /**
-     * Type of identity that has been provisioned, such as 'user' or 'group'.
+     * Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
      */
     private String identityType;
     /**
@@ -54,7 +54,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
+     * Gets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
         this.details = value;
     }
     /**
-     * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
+     * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
      * @param value Value to set for the identityType property.
      * @return a void
      */

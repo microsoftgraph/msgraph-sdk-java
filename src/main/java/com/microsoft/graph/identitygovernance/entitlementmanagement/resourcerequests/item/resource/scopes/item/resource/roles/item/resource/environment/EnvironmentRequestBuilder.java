@@ -41,7 +41,7 @@ public class EnvironmentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/resourceRequests/{accessPackageResourceRequest%2Did}/resource/scopes/{accessPackageResourceScope%2Did}/resource/roles/{accessPackageResourceRole%2Did}/resource/environment{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get environment from identityGovernance
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @return a CompletableFuture of accessPackageResourceEnvironment
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class EnvironmentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get environment from identityGovernance
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceEnvironment
      */
@@ -78,7 +78,7 @@ public class EnvironmentRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get environment from identityGovernance
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class EnvironmentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get environment from identityGovernance
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class EnvironmentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get environment from identityGovernance
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      */
     public class GetQueryParameters {
         /**

@@ -25,6 +25,10 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private MeetingChatMode allowMeetingChat;
     /**
+     * The allowParticipantsToChangeName property
+     */
+    private Boolean allowParticipantsToChangeName;
+    /**
      * Indicates whether Teams reactions are enabled for the meeting.
      */
     private Boolean allowTeamworkReactions;
@@ -159,6 +163,14 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this.allowMeetingChat;
     }
     /**
+     * Gets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowParticipantsToChangeName() {
+        return this.allowParticipantsToChangeName;
+    }
+    /**
      * Gets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
      * @return a boolean
      */
@@ -241,6 +253,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
         deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
         deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
+        deserializerMap.put("allowParticipantsToChangeName", (n) -> { this.setAllowParticipantsToChangeName(n.getBooleanValue()); });
         deserializerMap.put("allowTeamworkReactions", (n) -> { this.setAllowTeamworkReactions(n.getBooleanValue()); });
         deserializerMap.put("attendanceReports", (n) -> { this.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
         deserializerMap.put("attendeeReport", (n) -> { this.setAttendeeReport(n.getByteArrayValue()); });
@@ -373,6 +386,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
         writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
+        writer.writeBooleanValue("allowParticipantsToChangeName", this.getAllowParticipantsToChangeName());
         writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
         writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
@@ -430,6 +444,15 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAllowMeetingChat(@javax.annotation.Nullable final MeetingChatMode value) {
         this.allowMeetingChat = value;
+    }
+    /**
+     * Sets the allowParticipantsToChangeName property value. The allowParticipantsToChangeName property
+     * @param value Value to set for the allowParticipantsToChangeName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAllowParticipantsToChangeName(@javax.annotation.Nullable final Boolean value) {
+        this.allowParticipantsToChangeName = value;
     }
     /**
      * Sets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.

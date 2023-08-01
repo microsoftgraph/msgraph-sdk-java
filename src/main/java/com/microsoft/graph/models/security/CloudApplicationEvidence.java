@@ -34,6 +34,7 @@ public class CloudApplicationEvidence extends AlertEvidence implements Parsable 
     @javax.annotation.Nullable
     public CloudApplicationEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.cloudApplicationEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

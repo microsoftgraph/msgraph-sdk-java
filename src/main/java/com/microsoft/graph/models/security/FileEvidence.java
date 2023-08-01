@@ -26,6 +26,7 @@ public class FileEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public FileEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.fileEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

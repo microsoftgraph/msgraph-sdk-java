@@ -63,8 +63,9 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEvent%2Did}/appLogCollectionRequests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * List properties and relationships of the appLogCollectionRequest objects.
      * @return a CompletableFuture of appLogCollectionRequestCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequestCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * List properties and relationships of the appLogCollectionRequest objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appLogCollectionRequestCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequestCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appLogCollectionRequests for deviceManagement
+     * Create a new appLogCollectionRequest object.
      * @param body The request body
      * @return a CompletableFuture of appLogCollectionRequest
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> post(@javax.annotation.Nonnull final AppLogCollectionRequest body) {
@@ -119,10 +122,11 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to appLogCollectionRequests for deviceManagement
+     * Create a new appLogCollectionRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appLogCollectionRequest
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> post(@javax.annotation.Nonnull final AppLogCollectionRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * List properties and relationships of the appLogCollectionRequest objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * List properties and relationships of the appLogCollectionRequest objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to appLogCollectionRequests for deviceManagement
+     * Create a new appLogCollectionRequest object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to appLogCollectionRequests for deviceManagement
+     * Create a new appLogCollectionRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * List properties and relationships of the appLogCollectionRequest objects.
      */
     public class GetQueryParameters {
         /**

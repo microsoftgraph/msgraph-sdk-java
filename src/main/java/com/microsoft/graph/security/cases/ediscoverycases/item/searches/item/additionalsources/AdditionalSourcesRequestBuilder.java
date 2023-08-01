@@ -65,7 +65,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of additional sources associated with an eDiscovery search.
      * @return a CompletableFuture of dataSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSourceCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
      * Get the list of additional sources associated with an eDiscovery search.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of dataSourceCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSourceCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new additional source associated with an eDiscovery search.
      * @param body The request body
      * @return a CompletableFuture of dataSource
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> post(@javax.annotation.Nonnull final DataSource body) {
@@ -126,7 +126,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of dataSource
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> post(@javax.annotation.Nonnull final DataSource body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

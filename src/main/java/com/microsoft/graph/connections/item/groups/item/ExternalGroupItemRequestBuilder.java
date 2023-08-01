@@ -51,7 +51,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an externalGroup object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
      * Delete an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an externalGroup object.
      * @return a CompletableFuture of externalGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> get() {
@@ -110,7 +110,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
      * Get an externalGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an externalGroup object.
      * @param body The request body
      * @return a CompletableFuture of externalGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> patch(@javax.annotation.Nonnull final ExternalGroup body) {
@@ -151,7 +151,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> patch(@javax.annotation.Nonnull final ExternalGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

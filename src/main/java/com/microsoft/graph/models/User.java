@@ -113,6 +113,10 @@ public class User extends DirectoryObject implements Parsable {
      */
     private String creationType;
     /**
+     * The customSecurityAttributes property
+     */
+    private CustomSecurityAttributeValue customSecurityAttributes;
+    /**
      * The name for the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
      */
     private String department;
@@ -724,6 +728,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.creationType;
     }
     /**
+     * Gets the customSecurityAttributes property value. The customSecurityAttributes property
+     * @return a customSecurityAttributeValue
+     */
+    @javax.annotation.Nullable
+    public CustomSecurityAttributeValue getCustomSecurityAttributes() {
+        return this.customSecurityAttributes;
+    }
+    /**
      * Gets the department property value. The name for the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
      * @return a string
      */
@@ -900,6 +912,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdObjects", (n) -> { this.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("creationType", (n) -> { this.setCreationType(n.getStringValue()); });
+        deserializerMap.put("customSecurityAttributes", (n) -> { this.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
         deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
         deserializerMap.put("deviceEnrollmentLimit", (n) -> { this.setDeviceEnrollmentLimit(n.getIntegerValue()); });
         deserializerMap.put("deviceManagementTroubleshootingEvents", (n) -> { this.setDeviceManagementTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
@@ -1657,6 +1670,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("createdObjects", this.getCreatedObjects());
         writer.writeStringValue("creationType", this.getCreationType());
+        writer.writeObjectValue("customSecurityAttributes", this.getCustomSecurityAttributes());
         writer.writeStringValue("department", this.getDepartment());
         writer.writeIntegerValue("deviceEnrollmentLimit", this.getDeviceEnrollmentLimit());
         writer.writeCollectionOfObjectValues("deviceManagementTroubleshootingEvents", this.getDeviceManagementTroubleshootingEvents());
@@ -1987,6 +2001,15 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setCreationType(@javax.annotation.Nullable final String value) {
         this.creationType = value;
+    }
+    /**
+     * Sets the customSecurityAttributes property value. The customSecurityAttributes property
+     * @param value Value to set for the customSecurityAttributes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomSecurityAttributes(@javax.annotation.Nullable final CustomSecurityAttributeValue value) {
+        this.customSecurityAttributes = value;
     }
     /**
      * Sets the department property value. The name for the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).

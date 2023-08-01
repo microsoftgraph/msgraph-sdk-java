@@ -45,7 +45,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     private java.util.List<AccessPackageResourceRole> resourceRoles;
     /**
-     * The resources property
+     * Access package resources in this catalog.
      */
     private java.util.List<AccessPackageResource> resources;
     /**
@@ -168,7 +168,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         return this.resourceRoles;
     }
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. Access package resources in this catalog.
      * @return a accessPackageResource
      */
     @javax.annotation.Nullable
@@ -295,7 +295,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         this.resourceRoles = value;
     }
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. Access package resources in this catalog.
      * @param value Value to set for the resources property.
      * @return a void
      */

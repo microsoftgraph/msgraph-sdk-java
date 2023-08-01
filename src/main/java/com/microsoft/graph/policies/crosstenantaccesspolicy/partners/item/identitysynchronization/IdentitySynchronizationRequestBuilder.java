@@ -43,7 +43,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete the user synchronization policy for a partner-specific configuration.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * Delete the user synchronization policy for a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the user synchronization policy of a partner-specific configuration.
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> get() {
@@ -102,7 +102,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * Get the user synchronization policy of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * Update the user synchronization policy of a partner-specific configuration.
      * @param body The request body
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@javax.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
@@ -143,7 +143,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@javax.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

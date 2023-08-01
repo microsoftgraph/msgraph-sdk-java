@@ -65,7 +65,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
     /**
      * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @return a CompletableFuture of servicePrincipalRiskDetectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalRiskDetectionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBui
      * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of servicePrincipalRiskDetectionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalRiskDetectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

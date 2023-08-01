@@ -26,6 +26,7 @@ public class AzureResourceEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public AzureResourceEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.azureResourceEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

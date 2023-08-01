@@ -72,7 +72,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
      * @return a CompletableFuture of accessPackageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get() {
@@ -92,7 +92,7 @@ public class IncompatibleAccessPackagesRequestBuilder extends BaseRequestBuilder
      * Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

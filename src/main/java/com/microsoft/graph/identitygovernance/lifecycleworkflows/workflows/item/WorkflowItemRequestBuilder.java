@@ -131,7 +131,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -151,7 +151,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -170,7 +170,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a workflow object.
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workflow> get() {
@@ -190,7 +190,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workflow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -210,7 +210,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param body The request body
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workflow> patch(@javax.annotation.Nonnull final Workflow body) {
@@ -231,7 +231,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workflow> patch(@javax.annotation.Nonnull final Workflow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

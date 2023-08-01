@@ -9,39 +9,39 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageResource extends Entity implements Parsable {
     /**
-     * The createdDateTime property
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The description property
+     * A description for the resource.
      */
     private String description;
     /**
-     * The displayName property
+     * The display name of the resource, such as the application name, group name or site name.
      */
     private String displayName;
     /**
-     * The environment property
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      */
     private AccessPackageResourceEnvironment environment;
     /**
-     * The modifiedDateTime property
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime modifiedDateTime;
     /**
-     * The originId property
+     * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
      */
     private String originId;
     /**
-     * The originSystem property
+     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      */
     private String originSystem;
     /**
-     * The roles property
+     * Read-only. Nullable. Supports $expand.
      */
     private java.util.List<AccessPackageResourceRole> roles;
     /**
-     * The scopes property
+     * Read-only. Nullable. Supports $expand.
      */
     private java.util.List<AccessPackageResourceScope> scopes;
     /**
@@ -63,7 +63,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return new AccessPackageResource();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description for the resource.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the resource, such as the application name, group name or site name.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.displayName;
     }
     /**
-     * Gets the environment property value. The environment property
+     * Gets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @return a accessPackageResourceEnvironment
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.modifiedDateTime;
     }
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.originId;
     }
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.originSystem;
     }
     /**
-     * Gets the roles property value. The roles property
+     * Gets the roles property value. Read-only. Nullable. Supports $expand.
      * @return a accessPackageResourceRole
      */
     @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.roles;
     }
     /**
-     * Gets the scopes property value. The scopes property
+     * Gets the scopes property value. Read-only. Nullable. Supports $expand.
      * @return a accessPackageResourceScope
      */
     @javax.annotation.Nullable
@@ -172,7 +172,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("scopes", this.getScopes());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -181,7 +181,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description for the resource.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -190,7 +190,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the resource, such as the application name, group name or site name.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -199,7 +199,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the environment property value. The environment property
+     * Sets the environment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param value Value to set for the environment property.
      * @return a void
      */
@@ -208,7 +208,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.environment = value;
     }
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
@@ -217,7 +217,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.modifiedDateTime = value;
     }
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
      * @param value Value to set for the originId property.
      * @return a void
      */
@@ -226,7 +226,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.originId = value;
     }
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
      * @return a void
      */
@@ -235,7 +235,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.originSystem = value;
     }
     /**
-     * Sets the roles property value. The roles property
+     * Sets the roles property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the roles property.
      * @return a void
      */
@@ -244,7 +244,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.roles = value;
     }
     /**
-     * Sets the scopes property value. The scopes property
+     * Sets the scopes property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the scopes property.
      * @return a void
      */

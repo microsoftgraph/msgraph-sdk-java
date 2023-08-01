@@ -187,7 +187,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -207,7 +207,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Delete or hang up an active call. For group calls, this will only delete your call leg and the underlying group call will still continue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -226,7 +226,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a call object.
      * @return a CompletableFuture of call
-     * @see <a href="https://docs.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> get() {
@@ -246,7 +246,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a call object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of call
-     * @see <a href="https://docs.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/call-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -13,11 +13,11 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     private AccessPackageCatalog catalog;
     /**
-     * The createdDateTime property
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The requestType property
+     * The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      */
     private AccessPackageRequestType requestType;
     /**
@@ -25,7 +25,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     private AccessPackageResource resource;
     /**
-     * The state property
+     * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      */
     private AccessPackageRequestState state;
     /**
@@ -55,7 +55,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return this.catalog;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -77,7 +77,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the requestType property value. The requestType property
+     * Gets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @return a accessPackageRequestType
      */
     @javax.annotation.Nullable
@@ -93,7 +93,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return this.resource;
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      * @return a accessPackageRequestState
      */
     @javax.annotation.Nullable
@@ -125,7 +125,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         this.catalog = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -134,7 +134,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the requestType property value. The requestType property
+     * Sets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @param value Value to set for the requestType property.
      * @return a void
      */
@@ -152,7 +152,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         this.resource = value;
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      * @param value Value to set for the state property.
      * @return a void
      */

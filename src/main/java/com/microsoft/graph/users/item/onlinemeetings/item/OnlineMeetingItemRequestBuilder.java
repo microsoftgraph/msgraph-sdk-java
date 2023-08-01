@@ -67,7 +67,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an onlineMeeting object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Delete an onlineMeeting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get() {
@@ -126,7 +126,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@javax.annotation.Nonnull final OnlineMeeting body) {
@@ -167,7 +167,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> patch(@javax.annotation.Nonnull final OnlineMeeting body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

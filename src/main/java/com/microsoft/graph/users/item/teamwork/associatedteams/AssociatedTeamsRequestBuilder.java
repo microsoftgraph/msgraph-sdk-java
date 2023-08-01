@@ -65,7 +65,7 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways:* A user can be a direct member of a team.* A user can be a member of a shared channel that is hosted inside a team.
      * @return a CompletableFuture of associatedTeamInfoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/associatedteaminfo-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/associatedteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssociatedTeamInfoCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways:* A user can be a direct member of a team.* A user can be a member of a shared channel that is hosted inside a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of associatedTeamInfoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/associatedteaminfo-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/associatedteaminfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssociatedTeamInfoCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

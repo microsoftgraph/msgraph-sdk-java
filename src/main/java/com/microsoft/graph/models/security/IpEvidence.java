@@ -22,6 +22,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public IpEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.ipEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

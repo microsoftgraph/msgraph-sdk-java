@@ -65,7 +65,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the tag objects and their properties.
      * @return a CompletableFuture of teamworkTagCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the tag objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTagCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTagCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
      * Create a standard tag for members in a team.
      * @param body The request body
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> post(@javax.annotation.Nonnull final TeamworkTag body) {
@@ -126,7 +126,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> post(@javax.annotation.Nonnull final TeamworkTag body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

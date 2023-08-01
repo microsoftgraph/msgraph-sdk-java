@@ -63,8 +63,9 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/acceptanceStatuses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatusCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatusCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatusCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatusCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to acceptanceStatuses for deviceManagement
+     * Create a new termsAndConditionsAcceptanceStatus object.
      * @param body The request body
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> post(@javax.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body) {
@@ -119,10 +122,11 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to acceptanceStatuses for deviceManagement
+     * Create a new termsAndConditionsAcceptanceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsacceptancestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> post(@javax.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to acceptanceStatuses for deviceManagement
+     * Create a new termsAndConditionsAcceptanceStatus object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to acceptanceStatuses for deviceManagement
+     * Create a new termsAndConditionsAcceptanceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
      */
     public class GetQueryParameters {
         /**

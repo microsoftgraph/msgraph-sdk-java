@@ -43,7 +43,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a shift from the schedule.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * Delete a shift from the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a shift object by ID.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> get() {
@@ -102,7 +102,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a shift object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,10 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> patch(@javax.annotation.Nonnull final Shift body) {
@@ -139,11 +139,11 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of shift
-     * @see <a href="https://docs.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/shift-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Shift> patch(@javax.annotation.Nonnull final Shift body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -217,7 +217,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class ShiftItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns `404 Not found`. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

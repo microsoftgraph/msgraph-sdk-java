@@ -40,9 +40,9 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}/squareLogoDark", rawUrl);
     }
     /**
-     * Get squareLogoDark for the navigation property localizations from organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
@@ -59,10 +59,10 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get squareLogoDark for the navigation property localizations from organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update squareLogoDark for the navigation property localizations in organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -98,7 +98,7 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update squareLogoDark for the navigation property localizations in organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -119,7 +119,7 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get squareLogoDark for the navigation property localizations from organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get squareLogoDark for the navigation property localizations from organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update squareLogoDark for the navigation property localizations in organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -155,7 +155,7 @@ public class SquareLogoDarkRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update squareLogoDark for the navigation property localizations in organization
+     * A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

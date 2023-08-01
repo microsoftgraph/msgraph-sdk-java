@@ -51,7 +51,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a tokenIssuancePolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Delete a tokenIssuancePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a tokenIssuancePolicy object.
      * @param body The request body
      * @return a CompletableFuture of tokenIssuancePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> patch(@javax.annotation.Nonnull final TokenIssuancePolicy body) {
@@ -149,7 +149,7 @@ public class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tokenIssuancePolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> patch(@javax.annotation.Nonnull final TokenIssuancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

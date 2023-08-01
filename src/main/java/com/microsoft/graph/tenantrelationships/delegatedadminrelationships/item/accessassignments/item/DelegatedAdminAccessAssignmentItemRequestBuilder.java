@@ -43,7 +43,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
     /**
      * Delete a delegatedAdminAccessAssignment object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
      * Delete a delegatedAdminAccessAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
     /**
      * Read the properties of a delegatedAdminAccessAssignment object.
      * @return a CompletableFuture of delegatedAdminAccessAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignment> get() {
@@ -102,7 +102,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
      * Read the properties of a delegatedAdminAccessAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminAccessAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignment> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
      * Update the properties of a delegatedAdminAccessAssignment object.
      * @param body The request body
      * @return a CompletableFuture of delegatedAdminAccessAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignment> patch(@javax.annotation.Nonnull final DelegatedAdminAccessAssignment body) {
@@ -143,7 +143,7 @@ public class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseReques
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminAccessAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminAccessAssignment> patch(@javax.annotation.Nonnull final DelegatedAdminAccessAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

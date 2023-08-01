@@ -73,7 +73,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
      * @return a CompletableFuture of messageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of messageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new Message in a mailfolder.
      * @param body The request body
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final Message body) {
@@ -134,7 +134,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of message
-     * @see <a href="https://docs.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> post(@javax.annotation.Nonnull final Message body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

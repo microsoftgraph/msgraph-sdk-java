@@ -83,7 +83,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes the column from the table.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -103,7 +103,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
      * Deletes the column from the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of tablecolumn object.
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> get() {
@@ -142,7 +142,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of tablecolumn object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -162,7 +162,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of tablecolumn object.
      * @param body The request body
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> patch(@javax.annotation.Nonnull final WorkbookTableColumn body) {
@@ -183,7 +183,7 @@ public class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableColumn
-     * @see <a href="https://docs.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableColumn> patch(@javax.annotation.Nonnull final WorkbookTableColumn body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
