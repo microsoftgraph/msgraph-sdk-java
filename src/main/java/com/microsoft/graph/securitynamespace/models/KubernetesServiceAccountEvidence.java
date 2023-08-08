@@ -28,7 +28,7 @@ public class KubernetesServiceAccountEvidence extends AlertEvidence implements I
 
     /**
      * The Name.
-     * 
+     * The service account name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -37,7 +37,7 @@ public class KubernetesServiceAccountEvidence extends AlertEvidence implements I
 
     /**
      * The Namespace.
-     * 
+     * The service account namespace.
      */
     @SerializedName(value = "namespace", alternate = {"Namespace"})
     @Expose

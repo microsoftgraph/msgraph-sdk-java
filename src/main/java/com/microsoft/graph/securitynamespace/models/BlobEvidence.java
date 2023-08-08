@@ -30,7 +30,7 @@ public class BlobEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Blob Container.
-     * 
+     * The container which the blob belongs to.
      */
     @SerializedName(value = "blobContainer", alternate = {"BlobContainer"})
     @Expose
@@ -39,7 +39,7 @@ public class BlobEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Etag.
-     * 
+     * The Etag associated with this blob.
      */
     @SerializedName(value = "etag", alternate = {"Etag"})
     @Expose
@@ -48,7 +48,7 @@ public class BlobEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The File Hashes.
-     * 
+     * The file hashes associated with this blob.
      */
     @SerializedName(value = "fileHashes", alternate = {"FileHashes"})
     @Expose
@@ -57,7 +57,7 @@ public class BlobEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the blob.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -66,7 +66,7 @@ public class BlobEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Url.
-     * 
+     * The full URL representation of the blob.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

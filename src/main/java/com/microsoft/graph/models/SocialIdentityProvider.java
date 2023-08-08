@@ -36,7 +36,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements IJso
 
     /**
      * The Client Secret.
-     * The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
+     * The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
      */
     @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose

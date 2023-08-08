@@ -123,7 +123,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources.
-     * 
+     * Access package resources in this catalog.
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose

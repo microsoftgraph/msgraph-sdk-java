@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AddIn;
 import com.microsoft.graph.models.AppRole;
+import com.microsoft.graph.models.CustomSecurityAttributeValue;
 import com.microsoft.graph.models.InformationalUrl;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PermissionScope;
@@ -133,6 +134,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     @Expose
 	@Nullable
     public java.util.List<AppRole> appRoles;
+
+    /**
+     * The Custom Security Attributes.
+     * 
+     */
+    @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
+    @Expose
+	@Nullable
+    public CustomSecurityAttributeValue customSecurityAttributes;
 
     /**
      * The Description.
@@ -298,7 +308,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Service Principal Type.
-     * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
+     * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.SocialIdp - For internal use.
      */
     @SerializedName(value = "servicePrincipalType", alternate = {"ServicePrincipalType"})
     @Expose

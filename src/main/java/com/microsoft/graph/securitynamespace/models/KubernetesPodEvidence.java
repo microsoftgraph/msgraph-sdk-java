@@ -34,7 +34,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Containers.
-     * 
+     * The list of pod containers which are not init or ephemeral containers.
      */
     @SerializedName(value = "containers", alternate = {"Containers"})
     @Expose
@@ -43,7 +43,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Controller.
-     * 
+     * The pod controller.
      */
     @SerializedName(value = "controller", alternate = {"Controller"})
     @Expose
@@ -52,7 +52,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Ephemeral Containers.
-     * 
+     * The list of pod ephemeral containers.
      */
     @SerializedName(value = "ephemeralContainers", alternate = {"EphemeralContainers"})
     @Expose
@@ -61,7 +61,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Init Containers.
-     * 
+     * The list of pod init containers.
      */
     @SerializedName(value = "initContainers", alternate = {"InitContainers"})
     @Expose
@@ -70,7 +70,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Labels.
-     * 
+     * The pod labels.
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
@@ -79,7 +79,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Name.
-     * 
+     * The pod name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -88,7 +88,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Namespace.
-     * 
+     * The pod namespace.
      */
     @SerializedName(value = "namespace", alternate = {"Namespace"})
     @Expose
@@ -97,7 +97,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Pod Ip.
-     * 
+     * The pod IP.
      */
     @SerializedName(value = "podIp", alternate = {"PodIp"})
     @Expose
@@ -106,7 +106,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Service Account.
-     * 
+     * The pod service account.
      */
     @SerializedName(value = "serviceAccount", alternate = {"ServiceAccount"})
     @Expose

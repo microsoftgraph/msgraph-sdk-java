@@ -27,7 +27,7 @@ public class ContainerRegistryEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Registry.
-     * 
+     * The registry URI.
      */
     @SerializedName(value = "registry", alternate = {"Registry"})
     @Expose

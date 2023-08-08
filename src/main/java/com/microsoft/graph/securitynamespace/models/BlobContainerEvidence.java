@@ -28,7 +28,7 @@ public class BlobContainerEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Name.
-     * 
+     * The name of the blob container.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -37,7 +37,7 @@ public class BlobContainerEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Storage Resource.
-     * 
+     * The storage which the blob container belongs to.
      */
     @SerializedName(value = "storageResource", alternate = {"StorageResource"})
     @Expose
@@ -46,7 +46,7 @@ public class BlobContainerEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Url.
-     * 
+     * The full URL representation of the blob container.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

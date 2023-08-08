@@ -79,7 +79,7 @@ public class DeviceEvidence extends AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Ip Interfaces.
-     * 
+     * Ip interfaces of the device during the time of the alert.
      */
     @SerializedName(value = "ipInterfaces", alternate = {"IpInterfaces"})
     @Expose

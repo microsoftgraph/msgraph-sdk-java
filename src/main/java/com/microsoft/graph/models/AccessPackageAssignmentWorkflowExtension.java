@@ -28,7 +28,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
 
     /**
      * The Callback Configuration.
-     * 
+     * The callback configuration for a custom extension.
      */
     @SerializedName(value = "callbackConfiguration", alternate = {"CallbackConfiguration"})
     @Expose
@@ -37,7 +37,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
 
     /**
      * The Created By.
-     * 
+     * The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
 
     /**
      * The Created Date Time.
-     * 
+     * When the entity was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
 
     /**
      * The Last Modified By.
-     * 
+     * The userPrincipalName of the identity that last modified the entity.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -64,7 +64,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
 
     /**
      * The Last Modified Date Time.
-     * 
+     * When the entity was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

@@ -229,7 +229,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

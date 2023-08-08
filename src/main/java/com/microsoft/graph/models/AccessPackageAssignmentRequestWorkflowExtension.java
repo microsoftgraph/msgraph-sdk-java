@@ -28,7 +28,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
 
     /**
      * The Callback Configuration.
-     * 
+     * The callback configuration for a custom extension.
      */
     @SerializedName(value = "callbackConfiguration", alternate = {"CallbackConfiguration"})
     @Expose
@@ -37,7 +37,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
 
     /**
      * The Created By.
-     * 
+     * The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
 
     /**
      * The Created Date Time.
-     * 
+     * When the object was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
 
     /**
      * The Last Modified By.
-     * 
+     * The userPrincipalName of the identity that last modified the object.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -64,7 +64,7 @@ public class AccessPackageAssignmentRequestWorkflowExtension extends CustomCallo
 
     /**
      * The Last Modified Date Time.
-     * 
+     * When the object was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

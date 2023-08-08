@@ -28,7 +28,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
 
     /**
      * The Description.
-     * 
+     * The description of the scope.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -37,7 +37,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
 
     /**
      * The Display Name.
-     * 
+     * The display name of the scope.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
 
     /**
      * The Is Root Scope.
-     * 
+     * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      */
     @SerializedName(value = "isRootScope", alternate = {"IsRootScope"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
 
     /**
      * The Origin Id.
-     * 
+     * The unique identifier for the scope in the resource as defined in the origin system.
      */
     @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
@@ -64,7 +64,7 @@ public class AccessPackageResourceScope extends Entity implements IJsonBackedObj
 
     /**
      * The Origin System.
-     * 
+     * The origin system for the scope.
      */
     @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose

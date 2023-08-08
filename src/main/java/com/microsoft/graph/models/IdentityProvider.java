@@ -38,7 +38,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Secret.
-     * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
+     * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return .  Required. Not nullable.
      */
     @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose

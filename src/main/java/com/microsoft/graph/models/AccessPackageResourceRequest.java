@@ -31,7 +31,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Created Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -40,7 +40,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request Type.
-     * 
+     * The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
@@ -49,7 +49,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The State.
-     * 
+     * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

@@ -63,7 +63,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Custom Extension Callout Instances.
-     * 
+     * Information about all the custom extension calls that were made during the access package assignment workflow.
      */
     @SerializedName(value = "customExtensionCalloutInstances", alternate = {"CustomExtensionCalloutInstances"})
     @Expose

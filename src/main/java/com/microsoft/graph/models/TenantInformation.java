@@ -39,7 +39,7 @@ public class TenantInformation implements IJsonBackedObject {
 
     /**
      * The Default Domain Name.
-     * 
+     * Primary domain name of an Azure AD tenant.
      */
     @SerializedName(value = "defaultDomainName", alternate = {"DefaultDomainName"})
     @Expose
@@ -48,7 +48,7 @@ public class TenantInformation implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of an Azure AD tenant.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class TenantInformation implements IJsonBackedObject {
 
     /**
      * The Federation Brand Name.
-     * 
+     * Name shown to users that sign in to an Azure AD tenant.
      */
     @SerializedName(value = "federationBrandName", alternate = {"FederationBrandName"})
     @Expose
@@ -66,7 +66,7 @@ public class TenantInformation implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * Unique identifier of an Azure AD tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

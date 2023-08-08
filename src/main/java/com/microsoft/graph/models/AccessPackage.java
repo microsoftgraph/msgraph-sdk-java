@@ -50,7 +50,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the access package. Supports $filter (eq, contains).
+     * Required. The display name of the access package. Supports $filter (eq, contains).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -84,7 +84,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Policies.
-     * 
+     * Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "assignmentPolicies", alternate = {"AssignmentPolicies"})
     @Expose
@@ -93,7 +93,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog.
-     * 
+     * Required when creating the access package. Read-only. Nullable.
      */
     @SerializedName(value = "catalog", alternate = {"Catalog"})
     @Expose
@@ -118,7 +118,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Role Scopes.
-     * 
+     * The resource roles and scopes in this access package.
      */
     @SerializedName(value = "resourceRoleScopes", alternate = {"ResourceRoleScopes"})
     @Expose
