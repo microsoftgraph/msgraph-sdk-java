@@ -16,8 +16,8 @@ import com.microsoft.kiota.authentication.AzureIdentityAuthenticationProvider;
 
 import okhttp3.OkHttpClient;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 
 public class GraphServiceClient extends com.microsoft.graph.BaseGraphServiceClient implements IBaseClient {
     private RequestAdapter requestAdapter;
