@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class OAuth2PermissionGrant extends Entity implements Parsable {
     /**
-     * The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      */
     private String clientId;
     /**
@@ -31,7 +31,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * Instantiates a new oAuth2PermissionGrant and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OAuth2PermissionGrant() {
         super();
     }
@@ -40,16 +40,16 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a oAuth2PermissionGrant
      */
-    @javax.annotation.Nonnull
-    public static OAuth2PermissionGrant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OAuth2PermissionGrant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OAuth2PermissionGrant();
     }
     /**
-     * Gets the clientId property value. The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * Gets the clientId property value. The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientId() {
         return this.clientId;
     }
@@ -57,7 +57,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * Gets the consentType property value. Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConsentType() {
         return this.consentType;
     }
@@ -65,7 +65,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("clientId", (n) -> { this.setClientId(n.getStringValue()); });
@@ -79,7 +79,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * Gets the principalId property value. The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal. Supports $filter (eq only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -87,7 +87,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * Gets the resourceId property value. The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user. Supports $filter (eq only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.resourceId;
     }
@@ -95,7 +95,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * Gets the scope property value. A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the oauth2PermissionScopes property of the resource service principal. Must not exceed 3850 characters in length.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScope() {
         return this.scope;
     }
@@ -104,8 +104,8 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("clientId", this.getClientId());
@@ -115,12 +115,12 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
         writer.writeStringValue("scope", this.getScope());
     }
     /**
-     * Sets the clientId property value. The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * Sets the clientId property value. The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      * @param value Value to set for the clientId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.clientId = value;
     }
     /**
@@ -128,8 +128,8 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * @param value Value to set for the consentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConsentType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConsentType(@jakarta.annotation.Nullable final String value) {
         this.consentType = value;
     }
     /**
@@ -137,8 +137,8 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * @param value Value to set for the principalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
     /**
@@ -146,8 +146,8 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
@@ -155,8 +155,8 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
 }

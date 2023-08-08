@@ -67,7 +67,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Instantiates a new workbookTable and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookTable() {
         super();
     }
@@ -76,8 +76,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookTable
      */
-    @javax.annotation.Nonnull
-    public static WorkbookTable createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookTable createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookTable();
     }
@@ -85,7 +85,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the columns property value. Represents a collection of all the columns in the table. Read-only.
      * @return a workbookTableColumn
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookTableColumn> getColumns() {
         return this.columns;
     }
@@ -93,7 +93,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
@@ -116,7 +116,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the highlightFirstColumn property value. Indicates whether the first column contains special formatting.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHighlightFirstColumn() {
         return this.highlightFirstColumn;
     }
@@ -124,7 +124,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the highlightLastColumn property value. Indicates whether the last column contains special formatting.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHighlightLastColumn() {
         return this.highlightLastColumn;
     }
@@ -132,7 +132,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the legacyId property value. Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLegacyId() {
         return this.legacyId;
     }
@@ -140,7 +140,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the name property value. Name of the table.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -148,7 +148,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the rows property value. Represents a collection of all the rows in the table. Read-only.
      * @return a workbookTableRow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookTableRow> getRows() {
         return this.rows;
     }
@@ -156,7 +156,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the showBandedColumns property value. Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowBandedColumns() {
         return this.showBandedColumns;
     }
@@ -164,7 +164,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the showBandedRows property value. Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowBandedRows() {
         return this.showBandedRows;
     }
@@ -172,7 +172,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the showFilterButton property value. Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowFilterButton() {
         return this.showFilterButton;
     }
@@ -180,7 +180,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the showHeaders property value. Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowHeaders() {
         return this.showHeaders;
     }
@@ -188,7 +188,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the showTotals property value. Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowTotals() {
         return this.showTotals;
     }
@@ -196,7 +196,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the sort property value. Represents the sorting for the table. Read-only.
      * @return a workbookTableSort
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookTableSort getSort() {
         return this.sort;
     }
@@ -204,7 +204,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStyle() {
         return this.style;
     }
@@ -212,7 +212,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * Gets the worksheet property value. The worksheet containing the current table. Read-only.
      * @return a workbookWorksheet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
         return this.worksheet;
     }
@@ -221,8 +221,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("columns", this.getColumns());
@@ -245,8 +245,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the columns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColumns(@javax.annotation.Nullable final java.util.List<WorkbookTableColumn> value) {
+    @jakarta.annotation.Nonnull
+    public void setColumns(@jakarta.annotation.Nullable final java.util.List<WorkbookTableColumn> value) {
         this.columns = value;
     }
     /**
@@ -254,8 +254,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the highlightFirstColumn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHighlightFirstColumn(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHighlightFirstColumn(@jakarta.annotation.Nullable final Boolean value) {
         this.highlightFirstColumn = value;
     }
     /**
@@ -263,8 +263,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the highlightLastColumn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHighlightLastColumn(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHighlightLastColumn(@jakarta.annotation.Nullable final Boolean value) {
         this.highlightLastColumn = value;
     }
     /**
@@ -272,8 +272,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the legacyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLegacyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLegacyId(@jakarta.annotation.Nullable final String value) {
         this.legacyId = value;
     }
     /**
@@ -281,8 +281,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -290,8 +290,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the rows property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRows(@javax.annotation.Nullable final java.util.List<WorkbookTableRow> value) {
+    @jakarta.annotation.Nonnull
+    public void setRows(@jakarta.annotation.Nullable final java.util.List<WorkbookTableRow> value) {
         this.rows = value;
     }
     /**
@@ -299,8 +299,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showBandedColumns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowBandedColumns(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowBandedColumns(@jakarta.annotation.Nullable final Boolean value) {
         this.showBandedColumns = value;
     }
     /**
@@ -308,8 +308,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showBandedRows property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowBandedRows(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowBandedRows(@jakarta.annotation.Nullable final Boolean value) {
         this.showBandedRows = value;
     }
     /**
@@ -317,8 +317,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showFilterButton property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowFilterButton(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowFilterButton(@jakarta.annotation.Nullable final Boolean value) {
         this.showFilterButton = value;
     }
     /**
@@ -326,8 +326,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showHeaders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowHeaders(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowHeaders(@jakarta.annotation.Nullable final Boolean value) {
         this.showHeaders = value;
     }
     /**
@@ -335,8 +335,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showTotals property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowTotals(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowTotals(@jakarta.annotation.Nullable final Boolean value) {
         this.showTotals = value;
     }
     /**
@@ -344,8 +344,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the sort property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSort(@javax.annotation.Nullable final WorkbookTableSort value) {
+    @jakarta.annotation.Nonnull
+    public void setSort(@jakarta.annotation.Nullable final WorkbookTableSort value) {
         this.sort = value;
     }
     /**
@@ -353,8 +353,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the style property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStyle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStyle(@jakarta.annotation.Nullable final String value) {
         this.style = value;
     }
     /**
@@ -362,8 +362,8 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the worksheet property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
+    @jakarta.annotation.Nonnull
+    public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
         this.worksheet = value;
     }
 }

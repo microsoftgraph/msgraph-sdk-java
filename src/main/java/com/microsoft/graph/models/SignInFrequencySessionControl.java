@@ -27,7 +27,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * Instantiates a new signInFrequencySessionControl and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInFrequencySessionControl() {
         super();
         this.setOdataType("#microsoft.graph.signInFrequencySessionControl");
@@ -37,8 +37,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a signInFrequencySessionControl
      */
-    @javax.annotation.Nonnull
-    public static SignInFrequencySessionControl createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SignInFrequencySessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SignInFrequencySessionControl();
     }
@@ -46,7 +46,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * Gets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
      * @return a signInFrequencyAuthenticationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInFrequencyAuthenticationType getAuthenticationType() {
         return this.authenticationType;
     }
@@ -54,7 +54,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(SignInFrequencyAuthenticationType.class)); });
@@ -67,7 +67,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * Gets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
      * @return a signInFrequencyInterval
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInFrequencyInterval getFrequencyInterval() {
         return this.frequencyInterval;
     }
@@ -75,7 +75,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * Gets the type property value. Possible values are: days, hours.
      * @return a signinFrequencyType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SigninFrequencyType getType() {
         return this.type;
     }
@@ -83,7 +83,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * Gets the value property value. The number of days or hours.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getValue() {
         return this.value;
     }
@@ -92,8 +92,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationType", this.getAuthenticationType());
@@ -106,8 +106,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the authenticationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationType(@javax.annotation.Nullable final SignInFrequencyAuthenticationType value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationType(@jakarta.annotation.Nullable final SignInFrequencyAuthenticationType value) {
         this.authenticationType = value;
     }
     /**
@@ -115,8 +115,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the frequencyInterval property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrequencyInterval(@javax.annotation.Nullable final SignInFrequencyInterval value) {
+    @jakarta.annotation.Nonnull
+    public void setFrequencyInterval(@jakarta.annotation.Nullable final SignInFrequencyInterval value) {
         this.frequencyInterval = value;
     }
     /**
@@ -124,8 +124,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final SigninFrequencyType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final SigninFrequencyType value) {
         this.type = value;
     }
     /**
@@ -133,8 +133,8 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final Integer value) {
         this.value = value;
     }
 }

@@ -79,7 +79,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Instantiates a new windowsAutopilotDeviceIdentity and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsAutopilotDeviceIdentity() {
         super();
     }
@@ -88,8 +88,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsAutopilotDeviceIdentity
      */
-    @javax.annotation.Nonnull
-    public static WindowsAutopilotDeviceIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsAutopilotDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsAutopilotDeviceIdentity();
     }
@@ -97,7 +97,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the addressableUserName property value. Addressable user name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAddressableUserName() {
         return this.addressableUserName;
     }
@@ -105,7 +105,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the azureActiveDirectoryDeviceId property value. AAD Device ID - to be deprecated
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureActiveDirectoryDeviceId() {
         return this.azureActiveDirectoryDeviceId;
     }
@@ -113,7 +113,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the displayName property value. Display Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -121,7 +121,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
         return this.enrollmentState;
     }
@@ -129,7 +129,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addressableUserName", (n) -> { this.setAddressableUserName(n.getStringValue()); });
@@ -154,7 +154,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the groupTag property value. Group Tag of the Windows autopilot device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupTag() {
         return this.groupTag;
     }
@@ -162,7 +162,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the lastContactedDateTime property value. Intune Last Contacted Date Time of the Windows autopilot device.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
         return this.lastContactedDateTime;
     }
@@ -170,7 +170,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the managedDeviceId property value. Managed Device ID
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
         return this.managedDeviceId;
     }
@@ -178,7 +178,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the manufacturer property value. Oem manufacturer of the Windows autopilot device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -186,7 +186,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the model property value. Model name of the Windows autopilot device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -194,7 +194,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the productKey property value. Product Key of the Windows autopilot device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductKey() {
         return this.productKey;
     }
@@ -202,7 +202,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the purchaseOrderIdentifier property value. Purchase Order Identifier of the Windows autopilot device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPurchaseOrderIdentifier() {
         return this.purchaseOrderIdentifier;
     }
@@ -210,7 +210,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the resourceName property value. Resource Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceName() {
         return this.resourceName;
     }
@@ -218,7 +218,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the serialNumber property value. Serial number of the Windows autopilot device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -226,7 +226,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the skuNumber property value. SKU Number
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSkuNumber() {
         return this.skuNumber;
     }
@@ -234,7 +234,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the systemFamily property value. System Family
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSystemFamily() {
         return this.systemFamily;
     }
@@ -242,7 +242,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Gets the userPrincipalName property value. User Principal Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -251,8 +251,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("addressableUserName", this.getAddressableUserName());
@@ -277,8 +277,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the addressableUserName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddressableUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAddressableUserName(@jakarta.annotation.Nullable final String value) {
         this.addressableUserName = value;
     }
     /**
@@ -286,8 +286,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the azureActiveDirectoryDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureActiveDirectoryDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureActiveDirectoryDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureActiveDirectoryDeviceId = value;
     }
     /**
@@ -295,8 +295,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -304,8 +304,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
         this.enrollmentState = value;
     }
     /**
@@ -313,8 +313,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the groupTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupTag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupTag(@jakarta.annotation.Nullable final String value) {
         this.groupTag = value;
     }
     /**
@@ -322,8 +322,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the lastContactedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastContactedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastContactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastContactedDateTime = value;
     }
     /**
@@ -331,8 +331,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceId = value;
     }
     /**
@@ -340,8 +340,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
@@ -349,8 +349,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
@@ -358,8 +358,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the productKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProductKey(@jakarta.annotation.Nullable final String value) {
         this.productKey = value;
     }
     /**
@@ -367,8 +367,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the purchaseOrderIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPurchaseOrderIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPurchaseOrderIdentifier(@jakarta.annotation.Nullable final String value) {
         this.purchaseOrderIdentifier = value;
     }
     /**
@@ -376,8 +376,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the resourceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
     /**
@@ -385,8 +385,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
@@ -394,8 +394,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the skuNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkuNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSkuNumber(@jakarta.annotation.Nullable final String value) {
         this.skuNumber = value;
     }
     /**
@@ -403,8 +403,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the systemFamily property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemFamily(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSystemFamily(@jakarta.annotation.Nullable final String value) {
         this.systemFamily = value;
     }
     /**
@@ -412,8 +412,8 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

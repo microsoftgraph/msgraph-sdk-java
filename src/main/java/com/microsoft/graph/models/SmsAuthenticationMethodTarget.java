@@ -15,7 +15,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * Instantiates a new smsAuthenticationMethodTarget and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SmsAuthenticationMethodTarget() {
         super();
     }
@@ -24,8 +24,8 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a smsAuthenticationMethodTarget
      */
-    @javax.annotation.Nonnull
-    public static SmsAuthenticationMethodTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SmsAuthenticationMethodTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SmsAuthenticationMethodTarget();
     }
@@ -33,7 +33,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isUsableForSignIn", (n) -> { this.setIsUsableForSignIn(n.getBooleanValue()); });
@@ -43,7 +43,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * Gets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsUsableForSignIn() {
         return this.isUsableForSignIn;
     }
@@ -52,8 +52,8 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isUsableForSignIn", this.getIsUsableForSignIn());
@@ -63,8 +63,8 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * @param value Value to set for the isUsableForSignIn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsUsableForSignIn(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsUsableForSignIn(@jakarta.annotation.Nullable final Boolean value) {
         this.isUsableForSignIn = value;
     }
 }

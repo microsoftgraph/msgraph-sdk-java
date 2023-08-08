@@ -36,7 +36,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * Instantiates a new availabilityItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AvailabilityItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a availabilityItem
      */
-    @javax.annotation.Nonnull
-    public static AvailabilityItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AvailabilityItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AvailabilityItem();
     }
@@ -54,7 +54,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * Gets the endDateTime property value. The endDateTime property
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
         return this.endDateTime;
     }
@@ -70,7 +70,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
@@ -84,7 +84,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -92,7 +92,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * Gets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServiceId() {
         return this.serviceId;
     }
@@ -100,7 +100,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * Gets the startDateTime property value. The startDateTime property
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
         return this.startDateTime;
     }
@@ -108,7 +108,7 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      * @return a bookingsAvailabilityStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingsAvailabilityStatus getStatus() {
         return this.status;
     }
@@ -117,8 +117,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -132,8 +132,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.endDateTime = value;
     }
     /**
@@ -150,8 +150,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -159,8 +159,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServiceId(@jakarta.annotation.Nullable final String value) {
         this.serviceId = value;
     }
     /**
@@ -168,8 +168,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.startDateTime = value;
     }
     /**
@@ -177,8 +177,8 @@ public class AvailabilityItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final BookingsAvailabilityStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final BookingsAvailabilityStatus value) {
         this.status = value;
     }
 }

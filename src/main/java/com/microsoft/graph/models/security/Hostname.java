@@ -19,7 +19,7 @@ public class Hostname extends Host implements Parsable {
      * Instantiates a new hostname and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Hostname() {
         super();
         this.setOdataType("#microsoft.graph.security.hostname");
@@ -29,8 +29,8 @@ public class Hostname extends Host implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hostname
      */
-    @javax.annotation.Nonnull
-    public static Hostname createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Hostname createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Hostname();
     }
@@ -38,7 +38,7 @@ public class Hostname extends Host implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("registrant", (n) -> { this.setRegistrant(n.getStringValue()); });
@@ -49,7 +49,7 @@ public class Hostname extends Host implements Parsable {
      * Gets the registrant property value. The company or individual who registered this hostname, from WHOIS data.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegistrant() {
         return this.registrant;
     }
@@ -57,7 +57,7 @@ public class Hostname extends Host implements Parsable {
      * Gets the registrar property value. The registrar for this hostname, from WHOIS data.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegistrar() {
         return this.registrar;
     }
@@ -66,8 +66,8 @@ public class Hostname extends Host implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("registrant", this.getRegistrant());
@@ -78,8 +78,8 @@ public class Hostname extends Host implements Parsable {
      * @param value Value to set for the registrant property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegistrant(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRegistrant(@jakarta.annotation.Nullable final String value) {
         this.registrant = value;
     }
     /**
@@ -87,8 +87,8 @@ public class Hostname extends Host implements Parsable {
      * @param value Value to set for the registrar property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegistrar(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRegistrar(@jakarta.annotation.Nullable final String value) {
         this.registrar = value;
     }
 }

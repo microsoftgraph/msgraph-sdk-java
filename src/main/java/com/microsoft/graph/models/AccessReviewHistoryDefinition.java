@@ -52,7 +52,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Instantiates a new accessReviewHistoryDefinition and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewHistoryDefinition() {
         super();
     }
@@ -61,8 +61,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewHistoryDefinition
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewHistoryDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewHistoryDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewHistoryDefinition();
     }
@@ -70,7 +70,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a userIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -78,7 +78,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the createdDateTime property value. Timestamp when the access review definition was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -86,7 +86,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      * @return a accessReviewHistoryDecisionFilter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryDecisionFilter> getDecisions() {
         return this.decisions;
     }
@@ -94,7 +94,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the displayName property value. Name for the access review history data collection. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -102,7 +102,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
@@ -121,7 +121,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
      * @return a accessReviewHistoryInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryInstance> getInstances() {
         return this.instances;
     }
@@ -129,7 +129,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the reviewHistoryPeriodEndDateTime property value. A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime;
     }
@@ -137,7 +137,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime;
     }
@@ -145,7 +145,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
      * @return a accessReviewHistoryScheduleSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewHistoryScheduleSettings getScheduleSettings() {
         return this.scheduleSettings;
     }
@@ -153,7 +153,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the scopes property value. Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required.
      * @return a accessReviewScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getScopes() {
         return this.scopes;
     }
@@ -161,7 +161,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
      * @return a accessReviewHistoryStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewHistoryStatus getStatus() {
         return this.status;
     }
@@ -170,8 +170,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -190,8 +190,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.createdBy = value;
     }
     /**
@@ -199,8 +199,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -208,8 +208,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryDecisionFilter> value) {
+    @jakarta.annotation.Nonnull
+    public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDecisionFilter> value) {
         this.decisions = value;
     }
     /**
@@ -217,8 +217,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -226,8 +226,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the instances property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstances(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryInstance> value) {
+    @jakarta.annotation.Nonnull
+    public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryInstance> value) {
         this.instances = value;
     }
     /**
@@ -235,8 +235,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewHistoryPeriodEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewHistoryPeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodEndDateTime = value;
     }
     /**
@@ -244,8 +244,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewHistoryPeriodStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewHistoryPeriodStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodStartDateTime = value;
     }
     /**
@@ -253,8 +253,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the scheduleSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleSettings(@javax.annotation.Nullable final AccessReviewHistoryScheduleSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setScheduleSettings(@jakarta.annotation.Nullable final AccessReviewHistoryScheduleSettings value) {
         this.scheduleSettings = value;
     }
     /**
@@ -262,8 +262,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the scopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this.scopes = value;
     }
     /**
@@ -271,8 +271,8 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final AccessReviewHistoryStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryStatus value) {
         this.status = value;
     }
 }

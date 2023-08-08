@@ -22,7 +22,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * Instantiates a new iosMobileAppConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosMobileAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosMobileAppConfiguration");
@@ -32,8 +32,8 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosMobileAppConfiguration
      */
-    @javax.annotation.Nonnull
-    public static IosMobileAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosMobileAppConfiguration();
     }
@@ -41,7 +41,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * Gets the encodedSettingXml property value. mdm app configuration Base64 binary.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getEncodedSettingXml() {
         return this.encodedSettingXml;
     }
@@ -49,7 +49,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("encodedSettingXml", (n) -> { this.setEncodedSettingXml(n.getByteArrayValue()); });
@@ -60,7 +60,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * Gets the settings property value. app configuration setting items.
      * @return a appConfigurationSettingItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppConfigurationSettingItem> getSettings() {
         return this.settings;
     }
@@ -69,8 +69,8 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("encodedSettingXml", this.getEncodedSettingXml());
@@ -81,8 +81,8 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param value Value to set for the encodedSettingXml property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncodedSettingXml(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setEncodedSettingXml(@jakarta.annotation.Nullable final byte[] value) {
         this.encodedSettingXml = value;
     }
     /**
@@ -90,8 +90,8 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * @param value Value to set for the settings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final java.util.List<AppConfigurationSettingItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setSettings(@jakarta.annotation.Nullable final java.util.List<AppConfigurationSettingItem> value) {
         this.settings = value;
     }
 }

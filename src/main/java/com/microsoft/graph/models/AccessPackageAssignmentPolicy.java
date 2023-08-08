@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      */
     private AccessPackage accessPackage;
     /**
@@ -29,7 +29,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The customExtensionStageSettings property
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      */
     private java.util.List<CustomExtensionStageSetting> customExtensionStageSettings;
     /**
@@ -72,7 +72,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy() {
         super();
     }
@@ -81,16 +81,16 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAssignmentPolicy
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAssignmentPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAssignmentPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageAssignmentPolicy();
     }
     /**
-     * Gets the accessPackage property value. Access package containing this policy. Read-only.
+     * Gets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
      * @return a accessPackage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
         return this.accessPackage;
     }
@@ -98,7 +98,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
      * @return a allowedTargetScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AllowedTargetScope getAllowedTargetScope() {
         return this.allowedTargetScope;
     }
@@ -106,7 +106,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
      * @return a accessPackageAutomaticRequestSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAutomaticRequestSettings getAutomaticRequestSettings() {
         return this.automaticRequestSettings;
     }
@@ -114,7 +114,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the catalog property value. Catalog of the access package containing this policy. Read-only.
      * @return a accessPackageCatalog
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
         return this.catalog;
     }
@@ -122,15 +122,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
-     * Gets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * Gets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return a customExtensionStageSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionStageSetting> getCustomExtensionStageSettings() {
         return this.customExtensionStageSettings;
     }
@@ -138,7 +138,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the description property value. The description of the policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -146,7 +146,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -154,7 +154,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the expiration property value. The expiration date for assignments created in this policy.
      * @return a expirationPattern
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExpirationPattern getExpiration() {
         return this.expiration;
     }
@@ -162,7 +162,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
@@ -186,7 +186,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
@@ -194,7 +194,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the questions property value. Questions that are posed to the  requestor.
      * @return a accessPackageQuestion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
         return this.questions;
     }
@@ -202,7 +202,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
      * @return a accessPackageAssignmentApprovalSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentApprovalSettings getRequestApprovalSettings() {
         return this.requestApprovalSettings;
     }
@@ -210,7 +210,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
      * @return a accessPackageAssignmentRequestorSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentRequestorSettings getRequestorSettings() {
         return this.requestorSettings;
     }
@@ -218,7 +218,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the reviewSettings property value. Settings for access reviews of assignments through this policy.
      * @return a accessPackageAssignmentReviewSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentReviewSettings getReviewSettings() {
         return this.reviewSettings;
     }
@@ -226,7 +226,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * Gets the specificAllowedTargets property value. The principals that can be assigned access from an access package through this policy.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getSpecificAllowedTargets() {
         return this.specificAllowedTargets;
     }
@@ -235,8 +235,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("accessPackage", this.getAccessPackage());
@@ -256,12 +256,12 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("specificAllowedTargets", this.getSpecificAllowedTargets());
     }
     /**
-     * Sets the accessPackage property value. Access package containing this policy. Read-only.
+     * Sets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
         this.accessPackage = value;
     }
     /**
@@ -269,8 +269,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the allowedTargetScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedTargetScope(@javax.annotation.Nullable final AllowedTargetScope value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowedTargetScope(@jakarta.annotation.Nullable final AllowedTargetScope value) {
         this.allowedTargetScope = value;
     }
     /**
@@ -278,8 +278,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the automaticRequestSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutomaticRequestSettings(@javax.annotation.Nullable final AccessPackageAutomaticRequestSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setAutomaticRequestSettings(@jakarta.annotation.Nullable final AccessPackageAutomaticRequestSettings value) {
         this.automaticRequestSettings = value;
     }
     /**
@@ -287,8 +287,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the catalog property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCatalog(@javax.annotation.Nullable final AccessPackageCatalog value) {
+    @jakarta.annotation.Nonnull
+    public void setCatalog(@jakarta.annotation.Nullable final AccessPackageCatalog value) {
         this.catalog = value;
     }
     /**
@@ -296,17 +296,17 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * Sets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param value Value to set for the customExtensionStageSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomExtensionStageSettings(@javax.annotation.Nullable final java.util.List<CustomExtensionStageSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomExtensionStageSettings(@jakarta.annotation.Nullable final java.util.List<CustomExtensionStageSetting> value) {
         this.customExtensionStageSettings = value;
     }
     /**
@@ -314,8 +314,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -323,8 +323,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -332,8 +332,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the expiration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpiration(@javax.annotation.Nullable final ExpirationPattern value) {
+    @jakarta.annotation.Nonnull
+    public void setExpiration(@jakarta.annotation.Nullable final ExpirationPattern value) {
         this.expiration = value;
     }
     /**
@@ -341,8 +341,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
@@ -350,8 +350,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the questions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQuestions(@javax.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
+    @jakarta.annotation.Nonnull
+    public void setQuestions(@jakarta.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
         this.questions = value;
     }
     /**
@@ -359,8 +359,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the requestApprovalSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestApprovalSettings(@javax.annotation.Nullable final AccessPackageAssignmentApprovalSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestApprovalSettings(@jakarta.annotation.Nullable final AccessPackageAssignmentApprovalSettings value) {
         this.requestApprovalSettings = value;
     }
     /**
@@ -368,8 +368,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the requestorSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestorSettings(@javax.annotation.Nullable final AccessPackageAssignmentRequestorSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestorSettings(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestorSettings value) {
         this.requestorSettings = value;
     }
     /**
@@ -377,8 +377,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the reviewSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewSettings(@javax.annotation.Nullable final AccessPackageAssignmentReviewSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewSettings(@jakarta.annotation.Nullable final AccessPackageAssignmentReviewSettings value) {
         this.reviewSettings = value;
     }
     /**
@@ -386,8 +386,8 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      * @param value Value to set for the specificAllowedTargets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpecificAllowedTargets(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setSpecificAllowedTargets(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.specificAllowedTargets = value;
     }
 }

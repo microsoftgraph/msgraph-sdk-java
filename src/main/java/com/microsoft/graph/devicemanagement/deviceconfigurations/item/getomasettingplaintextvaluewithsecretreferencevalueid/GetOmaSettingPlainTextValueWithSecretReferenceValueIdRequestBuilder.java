@@ -25,8 +25,8 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      * @param secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String secretReferenceValueId) {
+    @jakarta.annotation.Nullable
+    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String secretReferenceValueId) {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/getOmaSettingPlainTextValue(secretReferenceValueId='{secretReferenceValueId}')", pathParameters);
         this.pathParameters.put("secretReferenceValueId", secretReferenceValueId);
     }
@@ -36,15 +36,15 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/getOmaSettingPlainTextValue(secretReferenceValueId='{secretReferenceValueId}')", rawUrl);
     }
     /**
      * Invoke function getOmaSettingPlainTextValue
      * @return a CompletableFuture of getOmaSettingPlainTextValueWithSecretReferenceValueIdResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -63,8 +63,8 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getOmaSettingPlainTextValueWithSecretReferenceValueIdResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GetOmaSettingPlainTextValueWithSecretReferenceValueIdResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -81,7 +81,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      * Invoke function getOmaSettingPlainTextValue
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -90,8 +90,8 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;

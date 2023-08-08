@@ -33,7 +33,7 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new BinomDistRangePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BinomDistRangePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a BinomDistRangePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static BinomDistRangePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BinomDistRangePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BinomDistRangePostRequestBody();
     }
@@ -51,7 +51,7 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("numberS", (n) -> { this.setNumberS(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -72,7 +72,7 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the numberS property value. The numberS property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNumberS() {
         return this.numberS;
     }
@@ -80,7 +80,7 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the numberS2 property value. The numberS2 property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNumberS2() {
         return this.numberS2;
     }
@@ -88,7 +88,7 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the probabilityS property value. The probabilityS property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getProbabilityS() {
         return this.probabilityS;
     }
@@ -96,7 +96,7 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the trials property value. The trials property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getTrials() {
         return this.trials;
     }
@@ -105,8 +105,8 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("numberS", this.getNumberS());
         writer.writeObjectValue("numberS2", this.getNumberS2());
@@ -119,8 +119,8 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the numberS property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumberS(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setNumberS(@jakarta.annotation.Nullable final Json value) {
         this.numberS = value;
     }
     /**
@@ -137,8 +137,8 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the numberS2 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumberS2(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setNumberS2(@jakarta.annotation.Nullable final Json value) {
         this.numberS2 = value;
     }
     /**
@@ -146,8 +146,8 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the probabilityS property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProbabilityS(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setProbabilityS(@jakarta.annotation.Nullable final Json value) {
         this.probabilityS = value;
     }
     /**
@@ -155,8 +155,8 @@ public class BinomDistRangePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the trials property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrials(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setTrials(@jakarta.annotation.Nullable final Json value) {
         this.trials = value;
     }
 }

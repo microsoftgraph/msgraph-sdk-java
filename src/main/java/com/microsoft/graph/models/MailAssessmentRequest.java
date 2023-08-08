@@ -23,7 +23,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Instantiates a new mailAssessmentRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MailAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.mailAssessmentRequest");
@@ -33,8 +33,8 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mailAssessmentRequest
      */
-    @javax.annotation.Nonnull
-    public static MailAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MailAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MailAssessmentRequest();
     }
@@ -42,7 +42,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @return a mailDestinationRoutingReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
         return this.destinationRoutingReason;
     }
@@ -50,7 +50,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("destinationRoutingReason", (n) -> { this.setDestinationRoutingReason(n.getEnumValue(MailDestinationRoutingReason.class)); });
@@ -62,7 +62,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Gets the messageUri property value. The resource URI of the mail message for assessment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessageUri() {
         return this.messageUri;
     }
@@ -70,7 +70,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecipientEmail() {
         return this.recipientEmail;
     }
@@ -79,8 +79,8 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("destinationRoutingReason", this.getDestinationRoutingReason());
@@ -92,8 +92,8 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the destinationRoutingReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationRoutingReason(@javax.annotation.Nullable final MailDestinationRoutingReason value) {
+    @jakarta.annotation.Nonnull
+    public void setDestinationRoutingReason(@jakarta.annotation.Nullable final MailDestinationRoutingReason value) {
         this.destinationRoutingReason = value;
     }
     /**
@@ -101,8 +101,8 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the messageUri property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageUri(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMessageUri(@jakarta.annotation.Nullable final String value) {
         this.messageUri = value;
     }
     /**
@@ -110,8 +110,8 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param value Value to set for the recipientEmail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipientEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecipientEmail(@jakarta.annotation.Nullable final String value) {
         this.recipientEmail = value;
     }
 }

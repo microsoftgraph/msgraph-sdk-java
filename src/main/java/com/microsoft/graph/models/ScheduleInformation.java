@@ -40,7 +40,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Instantiates a new scheduleInformation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ScheduleInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a scheduleInformation
      */
-    @javax.annotation.Nonnull
-    public static ScheduleInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ScheduleInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ScheduleInformation();
     }
@@ -58,7 +58,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Gets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAvailabilityView() {
         return this.availabilityView;
     }
@@ -74,7 +74,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Gets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
      * @return a freeBusyError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FreeBusyError getError() {
         return this.error;
     }
@@ -82,7 +82,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("availabilityView", (n) -> { this.setAvailabilityView(n.getStringValue()); });
@@ -97,7 +97,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +105,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Gets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScheduleId() {
         return this.scheduleId;
     }
@@ -113,7 +113,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Gets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
      * @return a scheduleItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ScheduleItem> getScheduleItems() {
         return this.scheduleItems;
     }
@@ -121,7 +121,7 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * Gets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
      * @return a workingHours
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkingHours getWorkingHours() {
         return this.workingHours;
     }
@@ -130,8 +130,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("availabilityView", this.getAvailabilityView());
         writer.writeObjectValue("error", this.getError());
@@ -146,8 +146,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the availabilityView property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAvailabilityView(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAvailabilityView(@jakarta.annotation.Nullable final String value) {
         this.availabilityView = value;
     }
     /**
@@ -164,8 +164,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final FreeBusyError value) {
+    @jakarta.annotation.Nonnull
+    public void setError(@jakarta.annotation.Nullable final FreeBusyError value) {
         this.error = value;
     }
     /**
@@ -173,8 +173,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scheduleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScheduleId(@jakarta.annotation.Nullable final String value) {
         this.scheduleId = value;
     }
     /**
@@ -191,8 +191,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scheduleItems property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleItems(@javax.annotation.Nullable final java.util.List<ScheduleItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setScheduleItems(@jakarta.annotation.Nullable final java.util.List<ScheduleItem> value) {
         this.scheduleItems = value;
     }
     /**
@@ -200,8 +200,8 @@ public class ScheduleInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the workingHours property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkingHours(@javax.annotation.Nullable final WorkingHours value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkingHours(@jakarta.annotation.Nullable final WorkingHours value) {
         this.workingHours = value;
     }
 }

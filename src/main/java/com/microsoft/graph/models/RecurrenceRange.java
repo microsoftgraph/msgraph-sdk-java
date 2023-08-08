@@ -41,7 +41,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Instantiates a new recurrenceRange and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecurrenceRange() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +50,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a recurrenceRange
      */
-    @javax.annotation.Nonnull
-    public static RecurrenceRange createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RecurrenceRange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RecurrenceRange();
     }
@@ -59,7 +59,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +67,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Gets the endDate property value. The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
         return this.endDate;
     }
@@ -75,7 +75,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
@@ -90,7 +90,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Gets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNumberOfOccurrences() {
         return this.numberOfOccurrences;
     }
@@ -98,7 +98,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -106,7 +106,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Gets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecurrenceTimeZone() {
         return this.recurrenceTimeZone;
     }
@@ -114,7 +114,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Gets the startDate property value. The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
         return this.startDate;
     }
@@ -122,7 +122,7 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      * @return a recurrenceRangeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecurrenceRangeType getType() {
         return this.type;
     }
@@ -131,8 +131,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("endDate", this.getEndDate());
         writer.writeIntegerValue("numberOfOccurrences", this.getNumberOfOccurrences());
@@ -147,8 +147,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -156,8 +156,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.endDate = value;
     }
     /**
@@ -165,8 +165,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the numberOfOccurrences property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumberOfOccurrences(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNumberOfOccurrences(@jakarta.annotation.Nullable final Integer value) {
         this.numberOfOccurrences = value;
     }
     /**
@@ -174,8 +174,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -183,8 +183,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recurrenceTimeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecurrenceTimeZone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecurrenceTimeZone(@jakarta.annotation.Nullable final String value) {
         this.recurrenceTimeZone = value;
     }
     /**
@@ -192,8 +192,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.startDate = value;
     }
     /**
@@ -201,8 +201,8 @@ public class RecurrenceRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final RecurrenceRangeType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final RecurrenceRangeType value) {
         this.type = value;
     }
 }

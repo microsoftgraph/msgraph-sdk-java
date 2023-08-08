@@ -15,7 +15,7 @@ public class EducationFileResource extends EducationResource implements Parsable
      * Instantiates a new educationFileResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationFileResource() {
         super();
         this.setOdataType("#microsoft.graph.educationFileResource");
@@ -25,8 +25,8 @@ public class EducationFileResource extends EducationResource implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationFileResource
      */
-    @javax.annotation.Nonnull
-    public static EducationFileResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationFileResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationFileResource();
     }
@@ -34,7 +34,7 @@ public class EducationFileResource extends EducationResource implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fileUrl", (n) -> { this.setFileUrl(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class EducationFileResource extends EducationResource implements Parsable
      * Gets the fileUrl property value. Location on disk of the file resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileUrl() {
         return this.fileUrl;
     }
@@ -53,8 +53,8 @@ public class EducationFileResource extends EducationResource implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("fileUrl", this.getFileUrl());
@@ -64,8 +64,8 @@ public class EducationFileResource extends EducationResource implements Parsable
      * @param value Value to set for the fileUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileUrl(@jakarta.annotation.Nullable final String value) {
         this.fileUrl = value;
     }
 }

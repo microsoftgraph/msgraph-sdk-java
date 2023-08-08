@@ -16,7 +16,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * Instantiates a new accessReviewInactiveUsersQueryScope and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewInactiveUsersQueryScope() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInactiveUsersQueryScope");
@@ -26,8 +26,8 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewInactiveUsersQueryScope
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewInactiveUsersQueryScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewInactiveUsersQueryScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewInactiveUsersQueryScope();
     }
@@ -35,7 +35,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("inactiveDuration", (n) -> { this.setInactiveDuration(n.getPeriodAndDurationValue()); });
@@ -45,7 +45,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * Gets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getInactiveDuration() {
         return this.inactiveDuration;
     }
@@ -54,8 +54,8 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writePeriodAndDurationValue("inactiveDuration", this.getInactiveDuration());
@@ -65,8 +65,8 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
      * @param value Value to set for the inactiveDuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInactiveDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setInactiveDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.inactiveDuration = value;
     }
 }

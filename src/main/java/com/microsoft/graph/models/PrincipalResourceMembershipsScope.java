@@ -19,7 +19,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * Instantiates a new principalResourceMembershipsScope and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrincipalResourceMembershipsScope() {
         super();
         this.setOdataType("#microsoft.graph.principalResourceMembershipsScope");
@@ -29,8 +29,8 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a principalResourceMembershipsScope
      */
-    @javax.annotation.Nonnull
-    public static PrincipalResourceMembershipsScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrincipalResourceMembershipsScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrincipalResourceMembershipsScope();
     }
@@ -38,7 +38,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("principalScopes", (n) -> { this.setPrincipalScopes(n.getCollectionOfObjectValues(AccessReviewScope::createFromDiscriminatorValue)); });
@@ -49,7 +49,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * Gets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
      * @return a accessReviewScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getPrincipalScopes() {
         return this.principalScopes;
     }
@@ -57,7 +57,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
      * @return a accessReviewScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScope> getResourceScopes() {
         return this.resourceScopes;
     }
@@ -66,8 +66,8 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("principalScopes", this.getPrincipalScopes());
@@ -78,8 +78,8 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param value Value to set for the principalScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this.principalScopes = value;
     }
     /**
@@ -87,8 +87,8 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
      * @param value Value to set for the resourceScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceScopes(@javax.annotation.Nullable final java.util.List<AccessReviewScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<AccessReviewScope> value) {
         this.resourceScopes = value;
     }
 }

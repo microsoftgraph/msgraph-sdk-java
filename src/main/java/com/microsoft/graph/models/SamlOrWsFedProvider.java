@@ -31,7 +31,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Instantiates a new samlOrWsFedProvider and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SamlOrWsFedProvider() {
         super();
         this.setOdataType("#microsoft.graph.samlOrWsFedProvider");
@@ -41,8 +41,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a samlOrWsFedProvider
      */
-    @javax.annotation.Nonnull
-    public static SamlOrWsFedProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SamlOrWsFedProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -58,7 +58,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("issuerUri", (n) -> { this.setIssuerUri(n.getStringValue()); });
@@ -72,7 +72,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Gets the issuerUri property value. Issuer URI of the federation server.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIssuerUri() {
         return this.issuerUri;
     }
@@ -80,7 +80,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Gets the metadataExchangeUri property value. URI of the metadata exchange endpoint used for authentication from rich client applications.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMetadataExchangeUri() {
         return this.metadataExchangeUri;
     }
@@ -88,7 +88,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Gets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPassiveSignInUri() {
         return this.passiveSignInUri;
     }
@@ -96,7 +96,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Gets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      * @return a authenticationProtocol
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationProtocol getPreferredAuthenticationProtocol() {
         return this.preferredAuthenticationProtocol;
     }
@@ -104,7 +104,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * Gets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSigningCertificate() {
         return this.signingCertificate;
     }
@@ -113,8 +113,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("issuerUri", this.getIssuerUri());
@@ -128,8 +128,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the issuerUri property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssuerUri(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIssuerUri(@jakarta.annotation.Nullable final String value) {
         this.issuerUri = value;
     }
     /**
@@ -137,8 +137,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the metadataExchangeUri property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadataExchangeUri(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMetadataExchangeUri(@jakarta.annotation.Nullable final String value) {
         this.metadataExchangeUri = value;
     }
     /**
@@ -146,8 +146,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the passiveSignInUri property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassiveSignInUri(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPassiveSignInUri(@jakarta.annotation.Nullable final String value) {
         this.passiveSignInUri = value;
     }
     /**
@@ -155,8 +155,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the preferredAuthenticationProtocol property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreferredAuthenticationProtocol(@javax.annotation.Nullable final AuthenticationProtocol value) {
+    @jakarta.annotation.Nonnull
+    public void setPreferredAuthenticationProtocol(@jakarta.annotation.Nullable final AuthenticationProtocol value) {
         this.preferredAuthenticationProtocol = value;
     }
     /**
@@ -164,8 +164,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      * @param value Value to set for the signingCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSigningCertificate(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSigningCertificate(@jakarta.annotation.Nullable final String value) {
         this.signingCertificate = value;
     }
 }

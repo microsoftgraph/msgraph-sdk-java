@@ -44,7 +44,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Instantiates a new reportRoot and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReportRoot() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a reportRoot
      */
-    @javax.annotation.Nonnull
-    public static ReportRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ReportRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ReportRoot();
     }
@@ -62,7 +62,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the authenticationMethods property value. Container for navigation properties for Azure AD authentication methods resources.
      * @return a authenticationMethodsRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodsRoot getAuthenticationMethods() {
         return this.authenticationMethods;
     }
@@ -78,7 +78,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the dailyPrintUsageByPrinter property value. Retrieve a list of daily print usage summaries, grouped by printer.
      * @return a printUsageByPrinter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByPrinter> getDailyPrintUsageByPrinter() {
         return this.dailyPrintUsageByPrinter;
     }
@@ -86,7 +86,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the dailyPrintUsageByUser property value. Retrieve a list of daily print usage summaries, grouped by user.
      * @return a printUsageByUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByUser> getDailyPrintUsageByUser() {
         return this.dailyPrintUsageByUser;
     }
@@ -94,7 +94,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("authenticationMethods", (n) -> { this.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
@@ -110,7 +110,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
      * @return a printUsageByPrinter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByPrinter> getMonthlyPrintUsageByPrinter() {
         return this.monthlyPrintUsageByPrinter;
     }
@@ -118,7 +118,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the monthlyPrintUsageByUser property value. Retrieve a list of monthly print usage summaries, grouped by user.
      * @return a printUsageByUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByUser> getMonthlyPrintUsageByUser() {
         return this.monthlyPrintUsageByUser;
     }
@@ -126,7 +126,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -134,7 +134,7 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * Gets the security property value. Represents an abstract type that contains resources for attack simulation and training reports.
      * @return a securityReportsRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityReportsRoot getSecurity() {
         return this.security;
     }
@@ -143,8 +143,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationMethods", this.getAuthenticationMethods());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByPrinter", this.getDailyPrintUsageByPrinter());
@@ -160,8 +160,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationMethods property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethods(@javax.annotation.Nullable final AuthenticationMethodsRoot value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethods(@jakarta.annotation.Nullable final AuthenticationMethodsRoot value) {
         this.authenticationMethods = value;
     }
     /**
@@ -178,8 +178,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dailyPrintUsageByPrinter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDailyPrintUsageByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
+    @jakarta.annotation.Nonnull
+    public void setDailyPrintUsageByPrinter(@jakarta.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this.dailyPrintUsageByPrinter = value;
     }
     /**
@@ -187,8 +187,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dailyPrintUsageByUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDailyPrintUsageByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
+    @jakarta.annotation.Nonnull
+    public void setDailyPrintUsageByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this.dailyPrintUsageByUser = value;
     }
     /**
@@ -196,8 +196,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the monthlyPrintUsageByPrinter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMonthlyPrintUsageByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
+    @jakarta.annotation.Nonnull
+    public void setMonthlyPrintUsageByPrinter(@jakarta.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this.monthlyPrintUsageByPrinter = value;
     }
     /**
@@ -205,8 +205,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the monthlyPrintUsageByUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMonthlyPrintUsageByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
+    @jakarta.annotation.Nonnull
+    public void setMonthlyPrintUsageByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this.monthlyPrintUsageByUser = value;
     }
     /**
@@ -214,8 +214,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -223,8 +223,8 @@ public class ReportRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the security property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurity(@javax.annotation.Nullable final SecurityReportsRoot value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurity(@jakarta.annotation.Nullable final SecurityReportsRoot value) {
         this.security = value;
     }
 }

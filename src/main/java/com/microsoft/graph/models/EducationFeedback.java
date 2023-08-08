@@ -33,7 +33,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * Instantiates a new educationFeedback and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationFeedback() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationFeedback
      */
-    @javax.annotation.Nonnull
-    public static EducationFeedback createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationFeedback createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationFeedback();
     }
@@ -51,7 +51,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * Gets the feedbackBy property value. User who created the feedback.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getFeedbackBy() {
         return this.feedbackBy;
     }
@@ -67,7 +67,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * Gets the feedbackDateTime property value. Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFeedbackDateTime() {
         return this.feedbackDateTime;
     }
@@ -75,7 +75,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("feedbackBy", (n) -> { this.setFeedbackBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -88,7 +88,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -96,7 +96,7 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * Gets the text property value. Feedback.
      * @return a educationItemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationItemBody getText() {
         return this.text;
     }
@@ -105,8 +105,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("feedbackBy", this.getFeedbackBy());
         writer.writeOffsetDateTimeValue("feedbackDateTime", this.getFeedbackDateTime());
@@ -119,8 +119,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the feedbackBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedbackBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setFeedbackBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.feedbackBy = value;
     }
     /**
@@ -137,8 +137,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the feedbackDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedbackDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFeedbackDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.feedbackDateTime = value;
     }
     /**
@@ -146,8 +146,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -155,8 +155,8 @@ public class EducationFeedback implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setText(@javax.annotation.Nullable final EducationItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setText(@jakarta.annotation.Nullable final EducationItemBody value) {
         this.text = value;
     }
 }

@@ -59,7 +59,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new iosNotificationSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosNotificationSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -68,8 +68,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosNotificationSettings
      */
-    @javax.annotation.Nonnull
-    public static IosNotificationSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosNotificationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosNotificationSettings();
     }
@@ -77,7 +77,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -85,7 +85,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the alertType property value. Notification Settings Alert Type.
      * @return a iosNotificationAlertType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosNotificationAlertType getAlertType() {
         return this.alertType;
     }
@@ -93,7 +93,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the appName property value. Application name to be associated with the bundleID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppName() {
         return this.appName;
     }
@@ -101,7 +101,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the badgesEnabled property value. Indicates whether badges are allowed for this app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBadgesEnabled() {
         return this.badgesEnabled;
     }
@@ -109,7 +109,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the bundleID property value. Bundle id of app to which to apply these notification settings.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBundleID() {
         return this.bundleID;
     }
@@ -117,7 +117,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the enabled property value. Indicates whether notifications are allowed for this app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -125,7 +125,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("alertType", (n) -> { this.setAlertType(n.getEnumValue(IosNotificationAlertType.class)); });
@@ -144,7 +144,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -152,7 +152,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the publisher property value. Publisher to be associated with the bundleID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
@@ -160,7 +160,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowInNotificationCenter() {
         return this.showInNotificationCenter;
     }
@@ -168,7 +168,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowOnLockScreen() {
         return this.showOnLockScreen;
     }
@@ -176,7 +176,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * Gets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSoundsEnabled() {
         return this.soundsEnabled;
     }
@@ -185,8 +185,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("alertType", this.getAlertType());
         writer.writeStringValue("appName", this.getAppName());
@@ -205,8 +205,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -214,8 +214,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alertType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertType(@javax.annotation.Nullable final IosNotificationAlertType value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertType(@jakarta.annotation.Nullable final IosNotificationAlertType value) {
         this.alertType = value;
     }
     /**
@@ -223,8 +223,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
@@ -232,8 +232,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the badgesEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBadgesEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBadgesEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.badgesEnabled = value;
     }
     /**
@@ -241,8 +241,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bundleID property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBundleID(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBundleID(@jakarta.annotation.Nullable final String value) {
         this.bundleID = value;
     }
     /**
@@ -250,8 +250,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
@@ -259,8 +259,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -268,8 +268,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
@@ -277,8 +277,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showInNotificationCenter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowInNotificationCenter(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowInNotificationCenter(@jakarta.annotation.Nullable final Boolean value) {
         this.showInNotificationCenter = value;
     }
     /**
@@ -286,8 +286,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showOnLockScreen property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowOnLockScreen(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowOnLockScreen(@jakarta.annotation.Nullable final Boolean value) {
         this.showOnLockScreen = value;
     }
     /**
@@ -295,8 +295,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the soundsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSoundsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSoundsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.soundsEnabled = value;
     }
 }

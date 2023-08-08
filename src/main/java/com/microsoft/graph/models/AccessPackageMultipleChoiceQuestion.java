@@ -19,7 +19,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * Instantiates a new accessPackageMultipleChoiceQuestion and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageMultipleChoiceQuestion() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageMultipleChoiceQuestion");
@@ -29,8 +29,8 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageMultipleChoiceQuestion
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageMultipleChoiceQuestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageMultipleChoiceQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageMultipleChoiceQuestion();
     }
@@ -38,7 +38,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * Gets the choices property value. List of answer choices.
      * @return a accessPackageAnswerChoice
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAnswerChoice> getChoices() {
         return this.choices;
     }
@@ -46,7 +46,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("choices", (n) -> { this.setChoices(n.getCollectionOfObjectValues(AccessPackageAnswerChoice::createFromDiscriminatorValue)); });
@@ -57,7 +57,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * Gets the isMultipleSelectionAllowed property value. Indicates whether requestor can select multiple choices as their answer.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMultipleSelectionAllowed() {
         return this.isMultipleSelectionAllowed;
     }
@@ -66,8 +66,8 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("choices", this.getChoices());
@@ -78,8 +78,8 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * @param value Value to set for the choices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChoices(@javax.annotation.Nullable final java.util.List<AccessPackageAnswerChoice> value) {
+    @jakarta.annotation.Nonnull
+    public void setChoices(@jakarta.annotation.Nullable final java.util.List<AccessPackageAnswerChoice> value) {
         this.choices = value;
     }
     /**
@@ -87,8 +87,8 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * @param value Value to set for the isMultipleSelectionAllowed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMultipleSelectionAllowed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMultipleSelectionAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isMultipleSelectionAllowed = value;
     }
 }

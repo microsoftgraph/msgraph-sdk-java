@@ -13,10 +13,10 @@ public enum OnlineMeetingRole implements ValuedEnum {
     OnlineMeetingRole(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static OnlineMeetingRole forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static OnlineMeetingRole forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "attendee": return Attendee;

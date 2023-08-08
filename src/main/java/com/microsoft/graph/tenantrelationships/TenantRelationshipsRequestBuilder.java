@@ -27,14 +27,14 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the delegatedAdminCustomers property of the microsoft.graph.tenantRelationship entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DelegatedAdminCustomersRequestBuilder delegatedAdminCustomers() {
         return new DelegatedAdminCustomersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the delegatedAdminRelationships property of the microsoft.graph.tenantRelationship entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DelegatedAdminRelationshipsRequestBuilder delegatedAdminRelationships() {
         return new DelegatedAdminRelationshipsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -44,8 +44,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TenantRelationshipsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TenantRelationshipsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/tenantRelationships{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -54,8 +54,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TenantRelationshipsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TenantRelationshipsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/tenantRelationships{?%24select,%24expand}", rawUrl);
     }
     /**
@@ -63,8 +63,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param domainName Usage: domainName='{domainName}'
      * @return a findTenantInformationByDomainNameWithDomainNameRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public FindTenantInformationByDomainNameWithDomainNameRequestBuilder findTenantInformationByDomainNameWithDomainName(@javax.annotation.Nonnull final String domainName) {
+    @jakarta.annotation.Nonnull
+    public FindTenantInformationByDomainNameWithDomainNameRequestBuilder findTenantInformationByDomainNameWithDomainName(@jakarta.annotation.Nonnull final String domainName) {
         Objects.requireNonNull(domainName);
         return new FindTenantInformationByDomainNameWithDomainNameRequestBuilder(pathParameters, requestAdapter, domainName);
     }
@@ -73,8 +73,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param tenantId Usage: tenantId='{tenantId}'
      * @return a findTenantInformationByTenantIdWithTenantIdRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public FindTenantInformationByTenantIdWithTenantIdRequestBuilder findTenantInformationByTenantIdWithTenantId(@javax.annotation.Nonnull final String tenantId) {
+    @jakarta.annotation.Nonnull
+    public FindTenantInformationByTenantIdWithTenantIdRequestBuilder findTenantInformationByTenantIdWithTenantId(@jakarta.annotation.Nonnull final String tenantId) {
         Objects.requireNonNull(tenantId);
         return new FindTenantInformationByTenantIdWithTenantIdRequestBuilder(pathParameters, requestAdapter, tenantId);
     }
@@ -82,7 +82,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * Get tenantRelationships
      * @return a CompletableFuture of tenantRelationship
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantRelationship> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -101,8 +101,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantRelationship
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantRelationship> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TenantRelationship> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -120,8 +120,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of tenantRelationship
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@javax.annotation.Nonnull final TenantRelationship body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@jakarta.annotation.Nonnull final TenantRelationship body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -140,8 +140,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of tenantRelationship
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@javax.annotation.Nonnull final TenantRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<TenantRelationship> patch(@jakarta.annotation.Nonnull final TenantRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -159,7 +159,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * Get tenantRelationships
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -168,8 +168,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -189,8 +189,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final TenantRelationship body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TenantRelationship body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -199,8 +199,8 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final TenantRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TenantRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -224,13 +224,13 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -240,7 +240,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

@@ -32,7 +32,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * Instantiates a new x509CertificateUserBinding and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public X509CertificateUserBinding() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a x509CertificateUserBinding
      */
-    @javax.annotation.Nonnull
-    public static X509CertificateUserBinding createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static X509CertificateUserBinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new X509CertificateUserBinding();
     }
@@ -50,7 +50,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -71,7 +71,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -79,7 +79,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * Gets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -87,7 +87,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * Gets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserProperty() {
         return this.userProperty;
     }
@@ -95,7 +95,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * Gets the x509CertificateField property value. The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getX509CertificateField() {
         return this.x509CertificateField;
     }
@@ -104,8 +104,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("priority", this.getPriority());
@@ -118,8 +118,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -136,8 +136,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the priority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
@@ -145,8 +145,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the userProperty property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserProperty(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserProperty(@jakarta.annotation.Nullable final String value) {
         this.userProperty = value;
     }
     /**
@@ -154,8 +154,8 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the x509CertificateField property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setX509CertificateField(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setX509CertificateField(@jakarta.annotation.Nullable final String value) {
         this.x509CertificateField = value;
     }
 }

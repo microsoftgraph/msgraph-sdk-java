@@ -18,7 +18,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * Instantiates a new microsoftStoreForBusinessAppAssignmentSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftStoreForBusinessAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.microsoftStoreForBusinessAppAssignmentSettings");
@@ -28,8 +28,8 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftStoreForBusinessAppAssignmentSettings
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftStoreForBusinessAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftStoreForBusinessAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftStoreForBusinessAppAssignmentSettings();
     }
@@ -37,7 +37,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("useDeviceContext", (n) -> { this.setUseDeviceContext(n.getBooleanValue()); });
@@ -47,7 +47,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * Gets the useDeviceContext property value. Whether or not to use device execution context for Microsoft Store for Business mobile app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
         return this.useDeviceContext;
     }
@@ -56,8 +56,8 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("useDeviceContext", this.getUseDeviceContext());
@@ -67,8 +67,8 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * @param value Value to set for the useDeviceContext property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
         this.useDeviceContext = value;
     }
 }

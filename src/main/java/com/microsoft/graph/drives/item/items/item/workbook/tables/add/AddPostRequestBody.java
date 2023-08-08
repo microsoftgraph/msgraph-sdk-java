@@ -24,7 +24,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new addPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AddPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -33,8 +33,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a addPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static AddPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AddPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AddPostRequestBody();
     }
@@ -42,7 +42,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -50,7 +50,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the address property value. The address property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAddress() {
         return this.address;
     }
@@ -58,7 +58,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
@@ -69,7 +69,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the hasHeaders property value. The hasHeaders property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasHeaders() {
         return this.hasHeaders;
     }
@@ -78,8 +78,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
         writer.writeBooleanValue("hasHeaders", this.getHasHeaders());
@@ -90,8 +90,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -99,8 +99,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAddress(@jakarta.annotation.Nullable final String value) {
         this.address = value;
     }
     /**
@@ -108,8 +108,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hasHeaders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasHeaders(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasHeaders(@jakarta.annotation.Nullable final Boolean value) {
         this.hasHeaders = value;
     }
 }

@@ -12,10 +12,10 @@ public enum ServiceUpdateCategory implements ValuedEnum {
     ServiceUpdateCategory(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ServiceUpdateCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ServiceUpdateCategory forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "preventOrFixIssue": return PreventOrFixIssue;

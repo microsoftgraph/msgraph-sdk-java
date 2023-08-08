@@ -32,7 +32,7 @@ public class HostTracker extends Artifact implements Parsable {
      * Instantiates a new hostTracker and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HostTracker() {
         super();
         this.setOdataType("#microsoft.graph.security.hostTracker");
@@ -42,8 +42,8 @@ public class HostTracker extends Artifact implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hostTracker
      */
-    @javax.annotation.Nonnull
-    public static HostTracker createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HostTracker createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HostTracker();
     }
@@ -51,7 +51,7 @@ public class HostTracker extends Artifact implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
@@ -65,7 +65,7 @@ public class HostTracker extends Artifact implements Parsable {
      * Gets the firstSeenDateTime property value. The first date and time when this hostTracker was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -73,7 +73,7 @@ public class HostTracker extends Artifact implements Parsable {
      * Gets the host property value. The host property
      * @return a host
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Host getHost() {
         return this.host;
     }
@@ -81,7 +81,7 @@ public class HostTracker extends Artifact implements Parsable {
      * Gets the kind property value. The kind of hostTracker that was detected. For example, GoogleAnalyticsID or JarmHash.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKind() {
         return this.kind;
     }
@@ -89,7 +89,7 @@ public class HostTracker extends Artifact implements Parsable {
      * Gets the lastSeenDateTime property value. The most recent date and time when this hostTracker was observed by Microsoft Defender Threat Intelligence. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -97,7 +97,7 @@ public class HostTracker extends Artifact implements Parsable {
      * Gets the value property value. The identification value for the hostTracker.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -106,8 +106,8 @@ public class HostTracker extends Artifact implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
@@ -121,8 +121,8 @@ public class HostTracker extends Artifact implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
@@ -130,8 +130,8 @@ public class HostTracker extends Artifact implements Parsable {
      * @param value Value to set for the host property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHost(@javax.annotation.Nullable final Host value) {
+    @jakarta.annotation.Nonnull
+    public void setHost(@jakarta.annotation.Nullable final Host value) {
         this.host = value;
     }
     /**
@@ -139,8 +139,8 @@ public class HostTracker extends Artifact implements Parsable {
      * @param value Value to set for the kind property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKind(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKind(@jakarta.annotation.Nullable final String value) {
         this.kind = value;
     }
     /**
@@ -148,8 +148,8 @@ public class HostTracker extends Artifact implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
@@ -157,8 +157,8 @@ public class HostTracker extends Artifact implements Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

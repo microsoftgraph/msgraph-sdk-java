@@ -80,7 +80,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Instantiates a new searchRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchRequest() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -89,8 +89,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a searchRequest
      */
-    @javax.annotation.Nonnull
-    public static SearchRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SearchRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SearchRequest();
     }
@@ -98,7 +98,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -106,7 +106,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAggregationFilters() {
         return this.aggregationFilters;
     }
@@ -114,7 +114,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
      * @return a aggregationOption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AggregationOption> getAggregations() {
         return this.aggregations;
     }
@@ -122,7 +122,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the collapseProperties property value. Contains the ordered collection of fields and limit to collapse results. Optional.
      * @return a collapseProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CollapseProperty> getCollapseProperties() {
         return this.collapseProperties;
     }
@@ -130,7 +130,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the contentSources property value. Contains the connection to be targeted.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getContentSources() {
         return this.contentSources;
     }
@@ -138,7 +138,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the enableTopResults property value. This triggers hybrid sort for messages : the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableTopResults() {
         return this.enableTopResults;
     }
@@ -146,7 +146,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: event, message, driveItem, externalItem, site, list, listItem, drive, chatMessage, person, acronym, bookmark.  Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum:chatMessage, person, acronym, bookmark. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
      * @return a entityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EntityType> getEntityTypes() {
         return this.entityTypes;
     }
@@ -154,7 +154,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("aggregationFilters", (n) -> { this.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -179,7 +179,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default; otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from the content that Microsoft Graph connectors bring in. The fields property can use the semantic labels applied to properties. For example, if a property is labeled as title, you can retrieve it using the following syntax: label_title. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getFields() {
         return this.fields;
     }
@@ -187,7 +187,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFrom() {
         return this.from;
     }
@@ -195,7 +195,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -203,7 +203,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the query property value. The query property
      * @return a searchQuery
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchQuery getQuery() {
         return this.query;
     }
@@ -211,7 +211,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the queryAlterationOptions property value. Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
      * @return a searchAlterationOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchAlterationOptions getQueryAlterationOptions() {
         return this.queryAlterationOptions;
     }
@@ -219,7 +219,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the region property value. The geographic location for the search. Required for searches that use application permissions. For details, see Get the region value.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegion() {
         return this.region;
     }
@@ -227,7 +227,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the resultTemplateOptions property value. Provides the search result template options to render search results from connectors.
      * @return a resultTemplateOption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultTemplateOption getResultTemplateOptions() {
         return this.resultTemplateOptions;
     }
@@ -235,7 +235,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
      * @return a sharePointOneDriveOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharePointOneDriveOptions getSharePointOneDriveOptions() {
         return this.sharePointOneDriveOptions;
     }
@@ -243,7 +243,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the size property value. The size of the page to be retrieved. The maximum value is 500. Optional.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSize() {
         return this.size;
     }
@@ -251,7 +251,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
      * @return a sortProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SortProperty> getSortProperties() {
         return this.sortProperties;
     }
@@ -260,8 +260,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aggregationFilters", this.getAggregationFilters());
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
@@ -286,8 +286,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -295,8 +295,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aggregationFilters property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAggregationFilters(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAggregationFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.aggregationFilters = value;
     }
     /**
@@ -304,8 +304,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the aggregations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAggregations(@javax.annotation.Nullable final java.util.List<AggregationOption> value) {
+    @jakarta.annotation.Nonnull
+    public void setAggregations(@jakarta.annotation.Nullable final java.util.List<AggregationOption> value) {
         this.aggregations = value;
     }
     /**
@@ -313,8 +313,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the collapseProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCollapseProperties(@javax.annotation.Nullable final java.util.List<CollapseProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setCollapseProperties(@jakarta.annotation.Nullable final java.util.List<CollapseProperty> value) {
         this.collapseProperties = value;
     }
     /**
@@ -322,8 +322,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentSources(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setContentSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.contentSources = value;
     }
     /**
@@ -331,8 +331,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enableTopResults property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableTopResults(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableTopResults(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTopResults = value;
     }
     /**
@@ -340,8 +340,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the entityTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<EntityType> value) {
+    @jakarta.annotation.Nonnull
+    public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {
         this.entityTypes = value;
     }
     /**
@@ -349,8 +349,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fields property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFields(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fields = value;
     }
     /**
@@ -358,8 +358,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrom(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFrom(@jakarta.annotation.Nullable final Integer value) {
         this.from = value;
     }
     /**
@@ -367,8 +367,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -376,8 +376,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the query property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQuery(@javax.annotation.Nullable final SearchQuery value) {
+    @jakarta.annotation.Nonnull
+    public void setQuery(@jakarta.annotation.Nullable final SearchQuery value) {
         this.query = value;
     }
     /**
@@ -385,8 +385,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the queryAlterationOptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQueryAlterationOptions(@javax.annotation.Nullable final SearchAlterationOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setQueryAlterationOptions(@jakarta.annotation.Nullable final SearchAlterationOptions value) {
         this.queryAlterationOptions = value;
     }
     /**
@@ -394,8 +394,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the region property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRegion(@jakarta.annotation.Nullable final String value) {
         this.region = value;
     }
     /**
@@ -403,8 +403,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resultTemplateOptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultTemplateOptions(@javax.annotation.Nullable final ResultTemplateOption value) {
+    @jakarta.annotation.Nonnull
+    public void setResultTemplateOptions(@jakarta.annotation.Nullable final ResultTemplateOption value) {
         this.resultTemplateOptions = value;
     }
     /**
@@ -412,8 +412,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharePointOneDriveOptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharePointOneDriveOptions(@javax.annotation.Nullable final SharePointOneDriveOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setSharePointOneDriveOptions(@jakarta.annotation.Nullable final SharePointOneDriveOptions value) {
         this.sharePointOneDriveOptions = value;
     }
     /**
@@ -421,8 +421,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSize(@jakarta.annotation.Nullable final Integer value) {
         this.size = value;
     }
     /**
@@ -430,8 +430,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sortProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSortProperties(@javax.annotation.Nullable final java.util.List<SortProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setSortProperties(@jakarta.annotation.Nullable final java.util.List<SortProperty> value) {
         this.sortProperties = value;
     }
 }

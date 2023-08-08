@@ -35,7 +35,7 @@ public class Directory extends Entity implements Parsable {
      * Instantiates a new directory and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Directory() {
         super();
     }
@@ -44,8 +44,8 @@ public class Directory extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directory
      */
-    @javax.annotation.Nonnull
-    public static Directory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Directory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Directory();
     }
@@ -53,7 +53,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the administrativeUnits property value. Conceptual container for user and group directory objects.
      * @return a administrativeUnit
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AdministrativeUnit> getAdministrativeUnits() {
         return this.administrativeUnits;
     }
@@ -61,7 +61,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the attributeSets property value. Group of related custom security attribute definitions.
      * @return a attributeSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AttributeSet> getAttributeSets() {
         return this.attributeSets;
     }
@@ -69,7 +69,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @return a customSecurityAttributeDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
         return this.customSecurityAttributeDefinitions;
     }
@@ -77,7 +77,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the deletedItems property value. Recently deleted items. Read-only. Nullable.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDeletedItems() {
         return this.deletedItems;
     }
@@ -85,7 +85,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @return a identityProviderBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getFederationConfigurations() {
         return this.federationConfigurations;
     }
@@ -93,7 +93,7 @@ public class Directory extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("administrativeUnits", (n) -> { this.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
@@ -108,7 +108,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
      * @return a onPremisesDirectorySynchronization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
         return this.onPremisesSynchronization;
     }
@@ -117,8 +117,8 @@ public class Directory extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("administrativeUnits", this.getAdministrativeUnits());
@@ -133,8 +133,8 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnits property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdministrativeUnits(@javax.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdministrativeUnits(@jakarta.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
         this.administrativeUnits = value;
     }
     /**
@@ -142,8 +142,8 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the attributeSets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttributeSets(@javax.annotation.Nullable final java.util.List<AttributeSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setAttributeSets(@jakarta.annotation.Nullable final java.util.List<AttributeSet> value) {
         this.attributeSets = value;
     }
     /**
@@ -151,8 +151,8 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the customSecurityAttributeDefinitions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomSecurityAttributeDefinitions(@javax.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomSecurityAttributeDefinitions(@jakarta.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
         this.customSecurityAttributeDefinitions = value;
     }
     /**
@@ -160,8 +160,8 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the deletedItems property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedItems(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeletedItems(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.deletedItems = value;
     }
     /**
@@ -169,8 +169,8 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the federationConfigurations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFederationConfigurations(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
+    @jakarta.annotation.Nonnull
+    public void setFederationConfigurations(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this.federationConfigurations = value;
     }
     /**
@@ -178,8 +178,8 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the onPremisesSynchronization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesSynchronization(@javax.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesSynchronization(@jakarta.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
         this.onPremisesSynchronization = value;
     }
 }

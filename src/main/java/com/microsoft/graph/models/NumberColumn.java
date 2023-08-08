@@ -36,7 +36,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * Instantiates a new numberColumn and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NumberColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a numberColumn
      */
-    @javax.annotation.Nonnull
-    public static NumberColumn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static NumberColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new NumberColumn();
     }
@@ -54,7 +54,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * Gets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDecimalPlaces() {
         return this.decimalPlaces;
     }
@@ -70,7 +70,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * Gets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayAs() {
         return this.displayAs;
     }
@@ -78,7 +78,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("decimalPlaces", (n) -> { this.setDecimalPlaces(n.getStringValue()); });
@@ -92,7 +92,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * Gets the maximum property value. The maximum permitted value.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getMaximum() {
         return this.maximum;
     }
@@ -100,7 +100,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * Gets the minimum property value. The minimum permitted value.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getMinimum() {
         return this.minimum;
     }
@@ -108,7 +108,7 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -117,8 +117,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("decimalPlaces", this.getDecimalPlaces());
         writer.writeStringValue("displayAs", this.getDisplayAs());
@@ -132,8 +132,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the decimalPlaces property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDecimalPlaces(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDecimalPlaces(@jakarta.annotation.Nullable final String value) {
         this.decimalPlaces = value;
     }
     /**
@@ -150,8 +150,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayAs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayAs(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
         this.displayAs = value;
     }
     /**
@@ -159,8 +159,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maximum property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximum(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximum(@jakarta.annotation.Nullable final Double value) {
         this.maximum = value;
     }
     /**
@@ -168,8 +168,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the minimum property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimum(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimum(@jakarta.annotation.Nullable final Double value) {
         this.minimum = value;
     }
     /**
@@ -177,8 +177,8 @@ public class NumberColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

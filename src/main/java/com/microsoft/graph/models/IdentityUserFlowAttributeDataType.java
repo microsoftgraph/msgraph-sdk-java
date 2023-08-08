@@ -14,10 +14,10 @@ public enum IdentityUserFlowAttributeDataType implements ValuedEnum {
     IdentityUserFlowAttributeDataType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IdentityUserFlowAttributeDataType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IdentityUserFlowAttributeDataType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "string": return String;

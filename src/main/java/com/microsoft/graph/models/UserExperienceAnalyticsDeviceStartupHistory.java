@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Instantiates a new userExperienceAnalyticsDeviceStartupHistory and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupHistory() {
         super();
     }
@@ -88,8 +88,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsDeviceStartupHistory
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsDeviceStartupHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsDeviceStartupHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsDeviceStartupHistory();
     }
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the coreBootTimeInMs property value. The device core boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCoreBootTimeInMs() {
         return this.coreBootTimeInMs;
     }
@@ -105,7 +105,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the coreLoginTimeInMs property value. The device core login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCoreLoginTimeInMs() {
         return this.coreLoginTimeInMs;
     }
@@ -113,7 +113,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the featureUpdateBootTimeInMs property value. The impact of device feature updates on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFeatureUpdateBootTimeInMs() {
         return this.featureUpdateBootTimeInMs;
     }
@@ -129,7 +129,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("coreBootTimeInMs", (n) -> { this.setCoreBootTimeInMs(n.getIntegerValue()); });
@@ -154,7 +154,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the groupPolicyBootTimeInMs property value. The impact of device group policy client on boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGroupPolicyBootTimeInMs() {
         return this.groupPolicyBootTimeInMs;
     }
@@ -162,7 +162,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the groupPolicyLoginTimeInMs property value. The impact of device group policy client on login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGroupPolicyLoginTimeInMs() {
         return this.groupPolicyLoginTimeInMs;
     }
@@ -170,7 +170,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the isFeatureUpdate property value. When TRUE, indicates the device boot record is associated with feature updates. When FALSE, indicates the device boot record is not associated with feature updates. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFeatureUpdate() {
         return this.isFeatureUpdate;
     }
@@ -178,7 +178,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the isFirstLogin property value. When TRUE, indicates the device login is the first login after a reboot. When FALSE, indicates the device login is not the first login after a reboot. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFirstLogin() {
         return this.isFirstLogin;
     }
@@ -186,7 +186,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the operatingSystemVersion property value. The user experience analytics device boot record's operating system version. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
         return this.operatingSystemVersion;
     }
@@ -194,7 +194,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the responsiveDesktopTimeInMs property value. The time for desktop to become responsive during login process in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getResponsiveDesktopTimeInMs() {
         return this.responsiveDesktopTimeInMs;
     }
@@ -202,7 +202,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the restartCategory property value. Operating System restart category.
      * @return a userExperienceAnalyticsOperatingSystemRestartCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsOperatingSystemRestartCategory getRestartCategory() {
         return this.restartCategory;
     }
@@ -210,7 +210,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the restartFaultBucket property value. OS restart fault bucket. The fault bucket is used to find additional information about a system crash. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRestartFaultBucket() {
         return this.restartFaultBucket;
     }
@@ -218,7 +218,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the restartStopCode property value. OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRestartStopCode() {
         return this.restartStopCode;
     }
@@ -226,7 +226,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the startTime property value. The device boot start time. The value cannot be modified and is automatically populated when the device performs a reboot. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartTime() {
         return this.startTime;
     }
@@ -234,7 +234,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the totalBootTimeInMs property value. The device total boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalBootTimeInMs() {
         return this.totalBootTimeInMs;
     }
@@ -242,7 +242,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * Gets the totalLoginTimeInMs property value. The device total login time in milliseconds. Supports: $select, $OrderBy. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalLoginTimeInMs() {
         return this.totalLoginTimeInMs;
     }
@@ -251,8 +251,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("coreBootTimeInMs", this.getCoreBootTimeInMs());
@@ -277,8 +277,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the coreBootTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCoreBootTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCoreBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.coreBootTimeInMs = value;
     }
     /**
@@ -286,8 +286,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the coreLoginTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCoreLoginTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCoreLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.coreLoginTimeInMs = value;
     }
     /**
@@ -295,8 +295,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -304,8 +304,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the featureUpdateBootTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdateBootTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFeatureUpdateBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.featureUpdateBootTimeInMs = value;
     }
     /**
@@ -313,8 +313,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the groupPolicyBootTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyBootTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupPolicyBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.groupPolicyBootTimeInMs = value;
     }
     /**
@@ -322,8 +322,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the groupPolicyLoginTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyLoginTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupPolicyLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.groupPolicyLoginTimeInMs = value;
     }
     /**
@@ -331,8 +331,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the isFeatureUpdate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFeatureUpdate(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFeatureUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.isFeatureUpdate = value;
     }
     /**
@@ -340,8 +340,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the isFirstLogin property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFirstLogin(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFirstLogin(@jakarta.annotation.Nullable final Boolean value) {
         this.isFirstLogin = value;
     }
     /**
@@ -349,8 +349,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the operatingSystemVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystemVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemVersion = value;
     }
     /**
@@ -358,8 +358,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the responsiveDesktopTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponsiveDesktopTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setResponsiveDesktopTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.responsiveDesktopTimeInMs = value;
     }
     /**
@@ -367,8 +367,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the restartCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestartCategory(@javax.annotation.Nullable final UserExperienceAnalyticsOperatingSystemRestartCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setRestartCategory(@jakarta.annotation.Nullable final UserExperienceAnalyticsOperatingSystemRestartCategory value) {
         this.restartCategory = value;
     }
     /**
@@ -376,8 +376,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the restartFaultBucket property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestartFaultBucket(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRestartFaultBucket(@jakarta.annotation.Nullable final String value) {
         this.restartFaultBucket = value;
     }
     /**
@@ -385,8 +385,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the restartStopCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestartStopCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRestartStopCode(@jakarta.annotation.Nullable final String value) {
         this.restartStopCode = value;
     }
     /**
@@ -394,8 +394,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the startTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startTime = value;
     }
     /**
@@ -403,8 +403,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the totalBootTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalBootTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.totalBootTimeInMs = value;
     }
     /**
@@ -412,8 +412,8 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
      * @param value Value to set for the totalLoginTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalLoginTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.totalLoginTimeInMs = value;
     }
 }

@@ -43,7 +43,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new createOrGetPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CreateOrGetPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,8 +52,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a createOrGetPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static CreateOrGetPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CreateOrGetPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CreateOrGetPostRequestBody();
     }
@@ -61,7 +61,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -69,7 +69,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the chatInfo property value. The chatInfo property
      * @return a chatInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
         return this.chatInfo;
     }
@@ -77,7 +77,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the endDateTime property value. The endDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -85,7 +85,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the externalId property value. The externalId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -93,7 +93,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
@@ -108,7 +108,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the participants property value. The participants property
      * @return a meetingParticipants
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingParticipants getParticipants() {
         return this.participants;
     }
@@ -116,7 +116,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the startDateTime property value. The startDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -124,7 +124,7 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -133,8 +133,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -149,8 +149,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -158,8 +158,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the chatInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
         this.chatInfo = value;
     }
     /**
@@ -167,8 +167,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -176,8 +176,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the externalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
@@ -185,8 +185,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the participants property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipants(@javax.annotation.Nullable final MeetingParticipants value) {
+    @jakarta.annotation.Nonnull
+    public void setParticipants(@jakarta.annotation.Nullable final MeetingParticipants value) {
         this.participants = value;
     }
     /**
@@ -194,8 +194,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
@@ -203,8 +203,8 @@ public class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

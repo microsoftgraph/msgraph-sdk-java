@@ -23,7 +23,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * Instantiates a new meetingPolicyUpdatedEventMessageDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingPolicyUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.meetingPolicyUpdatedEventMessageDetail");
@@ -33,8 +33,8 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a meetingPolicyUpdatedEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static MeetingPolicyUpdatedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MeetingPolicyUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MeetingPolicyUpdatedEventMessageDetail();
     }
@@ -42,7 +42,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -54,7 +54,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -62,7 +62,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * Gets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMeetingChatEnabled() {
         return this.meetingChatEnabled;
     }
@@ -70,7 +70,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * Gets the meetingChatId property value. Unique identifier of the meeting chat.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMeetingChatId() {
         return this.meetingChatId;
     }
@@ -79,8 +79,8 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("initiator", this.getInitiator());
@@ -92,8 +92,8 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * @param value Value to set for the initiator property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
@@ -101,8 +101,8 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * @param value Value to set for the meetingChatEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingChatEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMeetingChatEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.meetingChatEnabled = value;
     }
     /**
@@ -110,8 +110,8 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
      * @param value Value to set for the meetingChatId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingChatId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMeetingChatId(@jakarta.annotation.Nullable final String value) {
         this.meetingChatId = value;
     }
 }

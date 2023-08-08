@@ -19,7 +19,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * Instantiates a new delegatedAdminServiceManagementDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DelegatedAdminServiceManagementDetail() {
         super();
     }
@@ -28,8 +28,8 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a delegatedAdminServiceManagementDetail
      */
-    @javax.annotation.Nonnull
-    public static DelegatedAdminServiceManagementDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DelegatedAdminServiceManagementDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DelegatedAdminServiceManagementDetail();
     }
@@ -37,7 +37,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("serviceManagementUrl", (n) -> { this.setServiceManagementUrl(n.getStringValue()); });
@@ -48,7 +48,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * Gets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServiceManagementUrl() {
         return this.serviceManagementUrl;
     }
@@ -56,7 +56,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * Gets the serviceName property value. The name of a managed service. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServiceName() {
         return this.serviceName;
     }
@@ -65,8 +65,8 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("serviceManagementUrl", this.getServiceManagementUrl());
@@ -77,8 +77,8 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceManagementUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceManagementUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServiceManagementUrl(@jakarta.annotation.Nullable final String value) {
         this.serviceManagementUrl = value;
     }
     /**
@@ -86,8 +86,8 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServiceName(@jakarta.annotation.Nullable final String value) {
         this.serviceName = value;
     }
 }

@@ -56,7 +56,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Instantiates a new printUsage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintUsage() {
         super();
     }
@@ -65,8 +65,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printUsage
      */
-    @javax.annotation.Nonnull
-    public static PrintUsage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrintUsage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -82,7 +82,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the blackAndWhitePageCount property value. The blackAndWhitePageCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getBlackAndWhitePageCount() {
         return this.blackAndWhitePageCount;
     }
@@ -90,7 +90,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the colorPageCount property value. The colorPageCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getColorPageCount() {
         return this.colorPageCount;
     }
@@ -98,7 +98,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCompletedBlackAndWhiteJobCount() {
         return this.completedBlackAndWhiteJobCount;
     }
@@ -106,7 +106,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the completedColorJobCount property value. The completedColorJobCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCompletedColorJobCount() {
         return this.completedColorJobCount;
     }
@@ -114,7 +114,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the completedJobCount property value. The completedJobCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCompletedJobCount() {
         return this.completedJobCount;
     }
@@ -122,7 +122,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the doubleSidedSheetCount property value. The doubleSidedSheetCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getDoubleSidedSheetCount() {
         return this.doubleSidedSheetCount;
     }
@@ -130,7 +130,7 @@ public class PrintUsage extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("blackAndWhitePageCount", (n) -> { this.setBlackAndWhitePageCount(n.getLongValue()); });
@@ -150,7 +150,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the incompleteJobCount property value. The incompleteJobCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getIncompleteJobCount() {
         return this.incompleteJobCount;
     }
@@ -158,7 +158,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the mediaSheetCount property value. The mediaSheetCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getMediaSheetCount() {
         return this.mediaSheetCount;
     }
@@ -166,7 +166,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the pageCount property value. The pageCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getPageCount() {
         return this.pageCount;
     }
@@ -174,7 +174,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the singleSidedSheetCount property value. The singleSidedSheetCount property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSingleSidedSheetCount() {
         return this.singleSidedSheetCount;
     }
@@ -182,7 +182,7 @@ public class PrintUsage extends Entity implements Parsable {
      * Gets the usageDate property value. The usageDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getUsageDate() {
         return this.usageDate;
     }
@@ -191,8 +191,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("blackAndWhitePageCount", this.getBlackAndWhitePageCount());
@@ -212,8 +212,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the blackAndWhitePageCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlackAndWhitePageCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setBlackAndWhitePageCount(@jakarta.annotation.Nullable final Long value) {
         this.blackAndWhitePageCount = value;
     }
     /**
@@ -221,8 +221,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the colorPageCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColorPageCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setColorPageCount(@jakarta.annotation.Nullable final Long value) {
         this.colorPageCount = value;
     }
     /**
@@ -230,8 +230,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the completedBlackAndWhiteJobCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedBlackAndWhiteJobCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedBlackAndWhiteJobCount(@jakarta.annotation.Nullable final Long value) {
         this.completedBlackAndWhiteJobCount = value;
     }
     /**
@@ -239,8 +239,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the completedColorJobCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedColorJobCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedColorJobCount(@jakarta.annotation.Nullable final Long value) {
         this.completedColorJobCount = value;
     }
     /**
@@ -248,8 +248,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the completedJobCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedJobCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedJobCount(@jakarta.annotation.Nullable final Long value) {
         this.completedJobCount = value;
     }
     /**
@@ -257,8 +257,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the doubleSidedSheetCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDoubleSidedSheetCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setDoubleSidedSheetCount(@jakarta.annotation.Nullable final Long value) {
         this.doubleSidedSheetCount = value;
     }
     /**
@@ -266,8 +266,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the incompleteJobCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncompleteJobCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setIncompleteJobCount(@jakarta.annotation.Nullable final Long value) {
         this.incompleteJobCount = value;
     }
     /**
@@ -275,8 +275,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the mediaSheetCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaSheetCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaSheetCount(@jakarta.annotation.Nullable final Long value) {
         this.mediaSheetCount = value;
     }
     /**
@@ -284,8 +284,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the pageCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPageCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setPageCount(@jakarta.annotation.Nullable final Long value) {
         this.pageCount = value;
     }
     /**
@@ -293,8 +293,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the singleSidedSheetCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleSidedSheetCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleSidedSheetCount(@jakarta.annotation.Nullable final Long value) {
         this.singleSidedSheetCount = value;
     }
     /**
@@ -302,8 +302,8 @@ public class PrintUsage extends Entity implements Parsable {
      * @param value Value to set for the usageDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsageDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setUsageDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.usageDate = value;
     }
 }

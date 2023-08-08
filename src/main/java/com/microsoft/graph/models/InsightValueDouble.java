@@ -18,7 +18,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
      * Instantiates a new insightValueDouble and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InsightValueDouble() {
         super();
         this.setOdataType("#microsoft.graph.insightValueDouble");
@@ -28,8 +28,8 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a insightValueDouble
      */
-    @javax.annotation.Nonnull
-    public static InsightValueDouble createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InsightValueDouble createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InsightValueDouble();
     }
@@ -37,7 +37,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getDoubleValue()); });
@@ -47,7 +47,7 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
      * Gets the value property value. The double value of the user experience analytics insight.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getValue() {
         return this.value;
     }
@@ -56,8 +56,8 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeDoubleValue("value", this.getValue());
@@ -67,8 +67,8 @@ public class InsightValueDouble extends UserExperienceAnalyticsInsightValue impl
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final Double value) {
         this.value = value;
     }
 }

@@ -42,7 +42,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Instantiates a new iosManagedAppProtection and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.iosManagedAppProtection");
@@ -52,8 +52,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosManagedAppProtection
      */
-    @javax.annotation.Nonnull
-    public static IosManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosManagedAppProtection();
     }
@@ -61,7 +61,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @return a managedAppDataEncryptionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
         return this.appDataEncryptionType;
     }
@@ -69,7 +69,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Gets the apps property value. List of apps to which the policy is deployed.
      * @return a managedMobileApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
         return this.apps;
     }
@@ -77,7 +77,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomBrowserProtocol() {
         return this.customBrowserProtocol;
     }
@@ -85,7 +85,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
         return this.deployedAppCount;
     }
@@ -93,7 +93,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @return a managedAppPolicyDeploymentSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
         return this.deploymentSummary;
     }
@@ -101,7 +101,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFaceIdBlocked() {
         return this.faceIdBlocked;
     }
@@ -109,7 +109,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDataEncryptionType", (n) -> { this.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType.class)); });
@@ -125,7 +125,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
         return this.minimumRequiredSdkVersion;
     }
@@ -134,8 +134,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("appDataEncryptionType", this.getAppDataEncryptionType());
@@ -151,8 +151,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the appDataEncryptionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDataEncryptionType(@javax.annotation.Nullable final ManagedAppDataEncryptionType value) {
+    @jakarta.annotation.Nonnull
+    public void setAppDataEncryptionType(@jakarta.annotation.Nullable final ManagedAppDataEncryptionType value) {
         this.appDataEncryptionType = value;
     }
     /**
@@ -160,8 +160,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the apps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
+    @jakarta.annotation.Nonnull
+    public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this.apps = value;
     }
     /**
@@ -169,8 +169,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the customBrowserProtocol property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomBrowserProtocol(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomBrowserProtocol(@jakarta.annotation.Nullable final String value) {
         this.customBrowserProtocol = value;
     }
     /**
@@ -178,8 +178,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.deployedAppCount = value;
     }
     /**
@@ -187,8 +187,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
+    @jakarta.annotation.Nonnull
+    public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this.deploymentSummary = value;
     }
     /**
@@ -196,8 +196,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the faceIdBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFaceIdBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFaceIdBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.faceIdBlocked = value;
     }
     /**
@@ -205,8 +205,8 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * @param value Value to set for the minimumRequiredSdkVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumRequiredSdkVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumRequiredSdkVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumRequiredSdkVersion = value;
     }
 }

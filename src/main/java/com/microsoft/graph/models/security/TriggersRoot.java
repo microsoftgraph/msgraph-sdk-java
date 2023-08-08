@@ -16,7 +16,7 @@ public class TriggersRoot extends Entity implements Parsable {
      * Instantiates a new triggersRoot and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TriggersRoot() {
         super();
     }
@@ -25,8 +25,8 @@ public class TriggersRoot extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a triggersRoot
      */
-    @javax.annotation.Nonnull
-    public static TriggersRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TriggersRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TriggersRoot();
     }
@@ -34,7 +34,7 @@ public class TriggersRoot extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("retentionEvents", (n) -> { this.setRetentionEvents(n.getCollectionOfObjectValues(RetentionEvent::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class TriggersRoot extends Entity implements Parsable {
      * Gets the retentionEvents property value. The retentionEvents property
      * @return a retentionEvent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RetentionEvent> getRetentionEvents() {
         return this.retentionEvents;
     }
@@ -53,8 +53,8 @@ public class TriggersRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("retentionEvents", this.getRetentionEvents());
@@ -64,8 +64,8 @@ public class TriggersRoot extends Entity implements Parsable {
      * @param value Value to set for the retentionEvents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetentionEvents(@javax.annotation.Nullable final java.util.List<RetentionEvent> value) {
+    @jakarta.annotation.Nonnull
+    public void setRetentionEvents(@jakarta.annotation.Nullable final java.util.List<RetentionEvent> value) {
         this.retentionEvents = value;
     }
 }

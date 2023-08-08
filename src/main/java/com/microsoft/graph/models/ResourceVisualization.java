@@ -52,7 +52,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Instantiates a new resourceVisualization and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceVisualization() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a resourceVisualization
      */
-    @javax.annotation.Nonnull
-    public static ResourceVisualization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ResourceVisualization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ResourceVisualization();
     }
@@ -70,7 +70,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContainerDisplayName() {
         return this.containerDisplayName;
     }
@@ -86,7 +86,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContainerType() {
         return this.containerType;
     }
@@ -94,7 +94,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the containerWebUrl property value. A path leading to the folder in which the item is stored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContainerWebUrl() {
         return this.containerWebUrl;
     }
@@ -102,7 +102,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("containerDisplayName", (n) -> { this.setContainerDisplayName(n.getStringValue()); });
@@ -120,7 +120,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMediaType() {
         return this.mediaType;
     }
@@ -128,7 +128,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -136,7 +136,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the previewImageUrl property value. A URL leading to the preview image for the item.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreviewImageUrl() {
         return this.previewImageUrl;
     }
@@ -144,7 +144,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the previewText property value. A preview text for the item.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreviewText() {
         return this.previewText;
     }
@@ -152,7 +152,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the title property value. The item's title text.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -160,7 +160,7 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -169,8 +169,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("containerDisplayName", this.getContainerDisplayName());
         writer.writeStringValue("containerType", this.getContainerType());
@@ -188,8 +188,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -197,8 +197,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the containerDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainerDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContainerDisplayName(@jakarta.annotation.Nullable final String value) {
         this.containerDisplayName = value;
     }
     /**
@@ -206,8 +206,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the containerType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainerType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContainerType(@jakarta.annotation.Nullable final String value) {
         this.containerType = value;
     }
     /**
@@ -215,8 +215,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the containerWebUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainerWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContainerWebUrl(@jakarta.annotation.Nullable final String value) {
         this.containerWebUrl = value;
     }
     /**
@@ -224,8 +224,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaType(@jakarta.annotation.Nullable final String value) {
         this.mediaType = value;
     }
     /**
@@ -233,8 +233,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -242,8 +242,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the previewImageUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviewImageUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviewImageUrl(@jakarta.annotation.Nullable final String value) {
         this.previewImageUrl = value;
     }
     /**
@@ -251,8 +251,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the previewText property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviewText(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviewText(@jakarta.annotation.Nullable final String value) {
         this.previewText = value;
     }
     /**
@@ -260,8 +260,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
@@ -269,8 +269,8 @@ public class ResourceVisualization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

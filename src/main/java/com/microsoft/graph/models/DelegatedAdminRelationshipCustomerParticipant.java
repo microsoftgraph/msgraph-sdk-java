@@ -28,7 +28,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * Instantiates a new delegatedAdminRelationshipCustomerParticipant and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipCustomerParticipant() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a delegatedAdminRelationshipCustomerParticipant
      */
-    @javax.annotation.Nonnull
-    public static DelegatedAdminRelationshipCustomerParticipant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DelegatedAdminRelationshipCustomerParticipant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DelegatedAdminRelationshipCustomerParticipant();
     }
@@ -46,7 +46,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * Gets the displayName property value. The display name of the customer tenant as set by Azure AD. Read-only
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -62,7 +62,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -74,7 +74,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * Gets the tenantId property value. The Azure AD-assigned tenant ID of the customer tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -91,8 +91,8 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -122,8 +122,8 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class DelegatedAdminRelationshipCustomerParticipant implements Additional
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

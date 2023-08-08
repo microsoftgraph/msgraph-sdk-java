@@ -42,7 +42,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Instantiates a new taskProcessingResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TaskProcessingResult() {
         super();
     }
@@ -51,8 +51,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a taskProcessingResult
      */
-    @javax.annotation.Nonnull
-    public static TaskProcessingResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TaskProcessingResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TaskProcessingResult();
     }
@@ -60,7 +60,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Gets the completedDateTime property value. The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -68,7 +68,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date time when the taskProcessingResult was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -76,7 +76,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Gets the failureReason property value. Describes why the taskProcessingResult has failed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFailureReason() {
         return this.failureReason;
     }
@@ -84,7 +84,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
@@ -100,7 +100,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Gets the processingStatus property value. The processingStatus property
      * @return a lifecycleWorkflowProcessingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
         return this.processingStatus;
     }
@@ -108,7 +108,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Gets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
         return this.startedDateTime;
     }
@@ -116,7 +116,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Gets the subject property value. The subject property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getSubject() {
         return this.subject;
     }
@@ -124,7 +124,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Gets the task property value. The task property
      * @return a task
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Task getTask() {
         return this.task;
     }
@@ -133,8 +133,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
@@ -150,8 +150,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -159,8 +159,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -168,8 +168,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the failureReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailureReason(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.failureReason = value;
     }
     /**
@@ -177,8 +177,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the processingStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessingStatus(@javax.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
         this.processingStatus = value;
     }
     /**
@@ -186,8 +186,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
@@ -195,8 +195,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final User value) {
         this.subject = value;
     }
     /**
@@ -204,8 +204,8 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the task property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTask(@javax.annotation.Nullable final Task value) {
+    @jakarta.annotation.Nonnull
+    public void setTask(@jakarta.annotation.Nullable final Task value) {
         this.task = value;
     }
 }

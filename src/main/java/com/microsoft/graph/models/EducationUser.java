@@ -164,7 +164,7 @@ public class EducationUser extends Entity implements Parsable {
      * Instantiates a new educationUser and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationUser() {
         super();
     }
@@ -173,8 +173,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationUser
      */
-    @javax.annotation.Nonnull
-    public static EducationUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationUser();
     }
@@ -182,7 +182,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAccountEnabled() {
         return this.accountEnabled;
     }
@@ -190,7 +190,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the assignedLicenses property value. The licenses that are assigned to the user. Not nullable.
      * @return a assignedLicense
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
         return this.assignedLicenses;
     }
@@ -198,7 +198,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.
      * @return a assignedPlan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
         return this.assignedPlans;
     }
@@ -206,7 +206,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the assignments property value. Assignments belonging to the user.
      * @return a educationAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationAssignment> getAssignments() {
         return this.assignments;
     }
@@ -214,7 +214,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the businessPhones property value. The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
         return this.businessPhones;
     }
@@ -222,7 +222,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the classes property value. Classes to which the user belongs. Nullable.
      * @return a educationClass
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationClass> getClasses() {
         return this.classes;
     }
@@ -230,7 +230,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the createdBy property value. The entity who created the user.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -238,7 +238,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the department property value. The name for the department in which the user works. Supports $filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDepartment() {
         return this.department;
     }
@@ -246,7 +246,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -254,7 +254,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
      * @return a educationExternalSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
         return this.externalSource;
     }
@@ -262,7 +262,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the externalSourceDetail property value. The name of the external source this resource was generated from.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
         return this.externalSourceDetail;
     }
@@ -270,7 +270,7 @@ public class EducationUser extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
@@ -317,7 +317,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the givenName property value. The given name (first name) of the user. Supports $filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGivenName() {
         return this.givenName;
     }
@@ -325,7 +325,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMail() {
         return this.mail;
     }
@@ -333,7 +333,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the mailingAddress property value. The mail address of the user.
      * @return a physicalAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhysicalAddress getMailingAddress() {
         return this.mailingAddress;
     }
@@ -341,7 +341,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports $filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMailNickname() {
         return this.mailNickname;
     }
@@ -349,7 +349,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the middleName property value. The middle name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMiddleName() {
         return this.middleName;
     }
@@ -357,7 +357,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the mobilePhone property value. The primary cellular telephone number for the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMobilePhone() {
         return this.mobilePhone;
     }
@@ -365,7 +365,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the officeLocation property value. The officeLocation property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOfficeLocation() {
         return this.officeLocation;
     }
@@ -373,7 +373,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      * @return a educationOnPremisesInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationOnPremisesInfo getOnPremisesInfo() {
         return this.onPremisesInfo;
     }
@@ -381,7 +381,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPasswordPolicies() {
         return this.passwordPolicies;
     }
@@ -389,7 +389,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      * @return a passwordProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PasswordProfile getPasswordProfile() {
         return this.passwordProfile;
     }
@@ -397,7 +397,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the preferredLanguage property value. The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreferredLanguage() {
         return this.preferredLanguage;
     }
@@ -405,7 +405,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the primaryRole property value. The primaryRole property
      * @return a educationUserRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationUserRole getPrimaryRole() {
         return this.primaryRole;
     }
@@ -413,7 +413,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable.
      * @return a provisionedPlan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
         return this.provisionedPlans;
     }
@@ -421,7 +421,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRefreshTokensValidFromDateTime() {
         return this.refreshTokensValidFromDateTime;
     }
@@ -429,7 +429,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the relatedContacts property value. Related records associated with the user. Read-only.
      * @return a relatedContact
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RelatedContact> getRelatedContacts() {
         return this.relatedContacts;
     }
@@ -437,7 +437,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the residenceAddress property value. The address where the user lives.
      * @return a physicalAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhysicalAddress getResidenceAddress() {
         return this.residenceAddress;
     }
@@ -445,7 +445,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the rubrics property value. When set, the grading rubric attached to the assignment.
      * @return a educationRubric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationRubric> getRubrics() {
         return this.rubrics;
     }
@@ -453,7 +453,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the schools property value. Schools to which the user belongs. Nullable.
      * @return a educationSchool
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
         return this.schools;
     }
@@ -461,7 +461,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the showInAddressList property value. True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowInAddressList() {
         return this.showInAddressList;
     }
@@ -469,7 +469,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the student property value. If the primary role is student, this block will contain student specific data.
      * @return a educationStudent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationStudent getStudent() {
         return this.student;
     }
@@ -477,7 +477,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the surname property value. The user's surname (family name or last name). Supports $filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSurname() {
         return this.surname;
     }
@@ -485,7 +485,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the taughtClasses property value. Classes for which the user is a teacher.
      * @return a educationClass
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationClass> getTaughtClasses() {
         return this.taughtClasses;
     }
@@ -493,7 +493,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
      * @return a educationTeacher
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationTeacher getTeacher() {
         return this.teacher;
     }
@@ -501,7 +501,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the usageLocation property value. A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUsageLocation() {
         return this.usageLocation;
     }
@@ -509,7 +509,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the user property value. The directory user that corresponds to this user.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getUser() {
         return this.user;
     }
@@ -517,7 +517,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -525,7 +525,7 @@ public class EducationUser extends Entity implements Parsable {
      * Gets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserType() {
         return this.userType;
     }
@@ -534,8 +534,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountEnabled", this.getAccountEnabled());
@@ -582,8 +582,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAccountEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.accountEnabled = value;
     }
     /**
@@ -591,8 +591,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedLicenses(@jakarta.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this.assignedLicenses = value;
     }
     /**
@@ -600,8 +600,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedPlans(@jakarta.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this.assignedPlans = value;
     }
     /**
@@ -609,8 +609,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<EducationAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EducationAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -618,8 +618,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.businessPhones = value;
     }
     /**
@@ -627,8 +627,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the classes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
+    @jakarta.annotation.Nonnull
+    public void setClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
         this.classes = value;
     }
     /**
@@ -636,8 +636,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -645,8 +645,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDepartment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.department = value;
     }
     /**
@@ -654,8 +654,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -663,8 +663,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the externalSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
         this.externalSource = value;
     }
     /**
@@ -672,8 +672,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the externalSourceDetail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
         this.externalSourceDetail = value;
     }
     /**
@@ -681,8 +681,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGivenName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.givenName = value;
     }
     /**
@@ -690,8 +690,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMail(@jakarta.annotation.Nullable final String value) {
         this.mail = value;
     }
     /**
@@ -699,8 +699,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mailingAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMailingAddress(@javax.annotation.Nullable final PhysicalAddress value) {
+    @jakarta.annotation.Nonnull
+    public void setMailingAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.mailingAddress = value;
     }
     /**
@@ -708,8 +708,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMailNickname(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
@@ -717,8 +717,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the middleName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMiddleName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMiddleName(@jakarta.annotation.Nullable final String value) {
         this.middleName = value;
     }
     /**
@@ -726,8 +726,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMobilePhone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
         this.mobilePhone = value;
     }
     /**
@@ -735,8 +735,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOfficeLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
         this.officeLocation = value;
     }
     /**
@@ -744,8 +744,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the onPremisesInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesInfo(@javax.annotation.Nullable final EducationOnPremisesInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesInfo(@jakarta.annotation.Nullable final EducationOnPremisesInfo value) {
         this.onPremisesInfo = value;
     }
     /**
@@ -753,8 +753,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the passwordPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordPolicies(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordPolicies(@jakarta.annotation.Nullable final String value) {
         this.passwordPolicies = value;
     }
     /**
@@ -762,8 +762,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the passwordProfile property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordProfile(@javax.annotation.Nullable final PasswordProfile value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
         this.passwordProfile = value;
     }
     /**
@@ -771,8 +771,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
         this.preferredLanguage = value;
     }
     /**
@@ -780,8 +780,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the primaryRole property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrimaryRole(@javax.annotation.Nullable final EducationUserRole value) {
+    @jakarta.annotation.Nonnull
+    public void setPrimaryRole(@jakarta.annotation.Nullable final EducationUserRole value) {
         this.primaryRole = value;
     }
     /**
@@ -789,8 +789,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
+    @jakarta.annotation.Nonnull
+    public void setProvisionedPlans(@jakarta.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this.provisionedPlans = value;
     }
     /**
@@ -798,8 +798,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the refreshTokensValidFromDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRefreshTokensValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRefreshTokensValidFromDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.refreshTokensValidFromDateTime = value;
     }
     /**
@@ -807,8 +807,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the relatedContacts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRelatedContacts(@javax.annotation.Nullable final java.util.List<RelatedContact> value) {
+    @jakarta.annotation.Nonnull
+    public void setRelatedContacts(@jakarta.annotation.Nullable final java.util.List<RelatedContact> value) {
         this.relatedContacts = value;
     }
     /**
@@ -816,8 +816,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the residenceAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResidenceAddress(@javax.annotation.Nullable final PhysicalAddress value) {
+    @jakarta.annotation.Nonnull
+    public void setResidenceAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.residenceAddress = value;
     }
     /**
@@ -825,8 +825,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the rubrics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRubrics(@javax.annotation.Nullable final java.util.List<EducationRubric> value) {
+    @jakarta.annotation.Nonnull
+    public void setRubrics(@jakarta.annotation.Nullable final java.util.List<EducationRubric> value) {
         this.rubrics = value;
     }
     /**
@@ -834,8 +834,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the schools property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchools(@javax.annotation.Nullable final java.util.List<EducationSchool> value) {
+    @jakarta.annotation.Nonnull
+    public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
         this.schools = value;
     }
     /**
@@ -843,8 +843,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the showInAddressList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowInAddressList(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowInAddressList(@jakarta.annotation.Nullable final Boolean value) {
         this.showInAddressList = value;
     }
     /**
@@ -852,8 +852,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the student property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStudent(@javax.annotation.Nullable final EducationStudent value) {
+    @jakarta.annotation.Nonnull
+    public void setStudent(@jakarta.annotation.Nullable final EducationStudent value) {
         this.student = value;
     }
     /**
@@ -861,8 +861,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSurname(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.surname = value;
     }
     /**
@@ -870,8 +870,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the taughtClasses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaughtClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
+    @jakarta.annotation.Nonnull
+    public void setTaughtClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
         this.taughtClasses = value;
     }
     /**
@@ -879,8 +879,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the teacher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeacher(@javax.annotation.Nullable final EducationTeacher value) {
+    @jakarta.annotation.Nonnull
+    public void setTeacher(@jakarta.annotation.Nullable final EducationTeacher value) {
         this.teacher = value;
     }
     /**
@@ -888,8 +888,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the usageLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsageLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUsageLocation(@jakarta.annotation.Nullable final String value) {
         this.usageLocation = value;
     }
     /**
@@ -897,8 +897,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the user property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUser(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setUser(@jakarta.annotation.Nullable final User value) {
         this.user = value;
     }
     /**
@@ -906,8 +906,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
@@ -915,8 +915,8 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserType(@jakarta.annotation.Nullable final String value) {
         this.userType = value;
     }
 }

@@ -18,7 +18,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * Instantiates a new locateDeviceActionResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocateDeviceActionResult() {
         super();
     }
@@ -27,8 +27,8 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a locateDeviceActionResult
      */
-    @javax.annotation.Nonnull
-    public static LocateDeviceActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LocateDeviceActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LocateDeviceActionResult();
     }
@@ -36,7 +36,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * Gets the deviceLocation property value. device location
      * @return a deviceGeoLocation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceGeoLocation getDeviceLocation() {
         return this.deviceLocation;
     }
@@ -44,7 +44,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceLocation", (n) -> { this.setDeviceLocation(n.getObjectValue(DeviceGeoLocation::createFromDiscriminatorValue)); });
@@ -55,8 +55,8 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("deviceLocation", this.getDeviceLocation());
@@ -66,8 +66,8 @@ public class LocateDeviceActionResult extends DeviceActionResult implements Pars
      * @param value Value to set for the deviceLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceLocation(@javax.annotation.Nullable final DeviceGeoLocation value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceLocation(@jakarta.annotation.Nullable final DeviceGeoLocation value) {
         this.deviceLocation = value;
     }
 }

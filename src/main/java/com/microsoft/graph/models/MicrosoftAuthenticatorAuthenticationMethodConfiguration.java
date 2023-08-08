@@ -23,7 +23,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * Instantiates a new microsoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration");
@@ -33,8 +33,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftAuthenticatorAuthenticationMethodConfiguration
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftAuthenticatorAuthenticationMethodConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftAuthenticatorAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
     }
@@ -42,7 +42,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * Gets the featureSettings property value. A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
      * @return a microsoftAuthenticatorFeatureSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorFeatureSettings getFeatureSettings() {
         return this.featureSettings;
     }
@@ -50,7 +50,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("featureSettings", (n) -> { this.setFeatureSettings(n.getObjectValue(MicrosoftAuthenticatorFeatureSettings::createFromDiscriminatorValue)); });
@@ -62,7 +62,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
      * @return a microsoftAuthenticatorAuthenticationMethodTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> getIncludeTargets() {
         return this.includeTargets;
     }
@@ -70,7 +70,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * Gets the isSoftwareOathEnabled property value. The isSoftwareOathEnabled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSoftwareOathEnabled() {
         return this.isSoftwareOathEnabled;
     }
@@ -79,8 +79,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("featureSettings", this.getFeatureSettings());
@@ -92,8 +92,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param value Value to set for the featureSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureSettings(@javax.annotation.Nullable final MicrosoftAuthenticatorFeatureSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setFeatureSettings(@jakarta.annotation.Nullable final MicrosoftAuthenticatorFeatureSettings value) {
         this.featureSettings = value;
     }
     /**
@@ -101,8 +101,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> value) {
+    @jakarta.annotation.Nonnull
+    public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethodTarget> value) {
         this.includeTargets = value;
     }
     /**
@@ -110,8 +110,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Aut
      * @param value Value to set for the isSoftwareOathEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSoftwareOathEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSoftwareOathEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSoftwareOathEnabled = value;
     }
 }

@@ -47,7 +47,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId() {
         super();
     }
@@ -56,8 +56,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId();
     }
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the appCrashCount property value. The number of crashes for the app. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
         return this.appCrashCount;
     }
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the appDisplayName property value. The friendly name of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the appName property value. The name of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppName() {
         return this.appName;
     }
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the appPublisher property value. The publisher of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppPublisher() {
         return this.appPublisher;
     }
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the appVersion property value. The version of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppVersion() {
         return this.appVersion;
     }
@@ -105,7 +105,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the deviceDisplayName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
         return this.deviceDisplayName;
     }
@@ -113,7 +113,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appCrashCount", (n) -> { this.setAppCrashCount(n.getIntegerValue()); });
@@ -138,7 +138,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * Gets the processedDateTime property value. The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getProcessedDateTime() {
         return this.processedDateTime;
     }
@@ -147,8 +147,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("appCrashCount", this.getAppCrashCount());
@@ -165,8 +165,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the appCrashCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppCrashCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
         this.appCrashCount = value;
     }
     /**
@@ -174,8 +174,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
@@ -183,8 +183,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the appName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
@@ -192,8 +192,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppPublisher(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
         this.appPublisher = value;
     }
     /**
@@ -201,8 +201,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the appVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
@@ -210,8 +210,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
@@ -219,8 +219,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -228,8 +228,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId 
      * @param value Value to set for the processedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.processedDateTime = value;
     }
 }

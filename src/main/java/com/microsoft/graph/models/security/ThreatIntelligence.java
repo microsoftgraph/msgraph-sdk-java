@@ -52,7 +52,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Instantiates a new threatIntelligence and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatIntelligence() {
         super();
     }
@@ -61,8 +61,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a threatIntelligence
      */
-    @javax.annotation.Nonnull
-    public static ThreatIntelligence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ThreatIntelligence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ThreatIntelligence();
     }
@@ -70,7 +70,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
      * @return a articleIndicator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ArticleIndicator> getArticleIndicators() {
         return this.articleIndicators;
     }
@@ -78,7 +78,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the articles property value. A list of article objects.
      * @return a article
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Article> getArticles() {
         return this.articles;
     }
@@ -86,7 +86,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("articleIndicators", (n) -> { this.setArticleIndicators(n.getCollectionOfObjectValues(ArticleIndicator::createFromDiscriminatorValue)); });
@@ -105,7 +105,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the hostComponents property value. Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
      * @return a hostComponent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getHostComponents() {
         return this.hostComponents;
     }
@@ -113,7 +113,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the hostCookies property value. Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
      * @return a hostCookie
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getHostCookies() {
         return this.hostCookies;
     }
@@ -121,7 +121,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @return a host
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Host> getHosts() {
         return this.hosts;
     }
@@ -129,7 +129,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
      * @return a hostTracker
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getHostTrackers() {
         return this.hostTrackers;
     }
@@ -137,7 +137,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the intelligenceProfileIndicators property value. The intelligenceProfileIndicators property
      * @return a intelligenceProfileIndicator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileIndicator> getIntelligenceProfileIndicators() {
         return this.intelligenceProfileIndicators;
     }
@@ -145,7 +145,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the intelProfiles property value. A list of intelligenceProfile objects.
      * @return a intelligenceProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfile> getIntelProfiles() {
         return this.intelProfiles;
     }
@@ -153,7 +153,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the passiveDnsRecords property value. Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @return a passiveDnsRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsRecords() {
         return this.passiveDnsRecords;
     }
@@ -161,7 +161,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * Gets the vulnerabilities property value. Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
      * @return a vulnerability
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Vulnerability> getVulnerabilities() {
         return this.vulnerabilities;
     }
@@ -170,8 +170,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("articleIndicators", this.getArticleIndicators());
@@ -190,8 +190,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the articleIndicators property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setArticleIndicators(@javax.annotation.Nullable final java.util.List<ArticleIndicator> value) {
+    @jakarta.annotation.Nonnull
+    public void setArticleIndicators(@jakarta.annotation.Nullable final java.util.List<ArticleIndicator> value) {
         this.articleIndicators = value;
     }
     /**
@@ -199,8 +199,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the articles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setArticles(@javax.annotation.Nullable final java.util.List<Article> value) {
+    @jakarta.annotation.Nonnull
+    public void setArticles(@jakarta.annotation.Nullable final java.util.List<Article> value) {
         this.articles = value;
     }
     /**
@@ -208,8 +208,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the hostComponents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostComponents(@javax.annotation.Nullable final java.util.List<HostComponent> value) {
+    @jakarta.annotation.Nonnull
+    public void setHostComponents(@jakarta.annotation.Nullable final java.util.List<HostComponent> value) {
         this.hostComponents = value;
     }
     /**
@@ -217,8 +217,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the hostCookies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostCookies(@javax.annotation.Nullable final java.util.List<HostCookie> value) {
+    @jakarta.annotation.Nonnull
+    public void setHostCookies(@jakarta.annotation.Nullable final java.util.List<HostCookie> value) {
         this.hostCookies = value;
     }
     /**
@@ -226,8 +226,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the hosts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHosts(@javax.annotation.Nullable final java.util.List<Host> value) {
+    @jakarta.annotation.Nonnull
+    public void setHosts(@jakarta.annotation.Nullable final java.util.List<Host> value) {
         this.hosts = value;
     }
     /**
@@ -235,8 +235,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the hostTrackers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostTrackers(@javax.annotation.Nullable final java.util.List<HostTracker> value) {
+    @jakarta.annotation.Nonnull
+    public void setHostTrackers(@jakarta.annotation.Nullable final java.util.List<HostTracker> value) {
         this.hostTrackers = value;
     }
     /**
@@ -244,8 +244,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the intelligenceProfileIndicators property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntelligenceProfileIndicators(@javax.annotation.Nullable final java.util.List<IntelligenceProfileIndicator> value) {
+    @jakarta.annotation.Nonnull
+    public void setIntelligenceProfileIndicators(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileIndicator> value) {
         this.intelligenceProfileIndicators = value;
     }
     /**
@@ -253,8 +253,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the intelProfiles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntelProfiles(@javax.annotation.Nullable final java.util.List<IntelligenceProfile> value) {
+    @jakarta.annotation.Nonnull
+    public void setIntelProfiles(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfile> value) {
         this.intelProfiles = value;
     }
     /**
@@ -262,8 +262,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the passiveDnsRecords property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassiveDnsRecords(@javax.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
+    @jakarta.annotation.Nonnull
+    public void setPassiveDnsRecords(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDnsRecords = value;
     }
     /**
@@ -271,8 +271,8 @@ public class ThreatIntelligence extends Entity implements Parsable {
      * @param value Value to set for the vulnerabilities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVulnerabilities(@javax.annotation.Nullable final java.util.List<Vulnerability> value) {
+    @jakarta.annotation.Nonnull
+    public void setVulnerabilities(@jakarta.annotation.Nullable final java.util.List<Vulnerability> value) {
         this.vulnerabilities = value;
     }
 }

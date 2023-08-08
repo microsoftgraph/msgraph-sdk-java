@@ -23,7 +23,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * Instantiates a new workbookChartAxes and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartAxes() {
         super();
     }
@@ -32,8 +32,8 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookChartAxes
      */
-    @javax.annotation.Nonnull
-    public static WorkbookChartAxes createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookChartAxes createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookChartAxes();
     }
@@ -41,7 +41,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * Gets the categoryAxis property value. Represents the category axis in a chart. Read-only.
      * @return a workbookChartAxis
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartAxis getCategoryAxis() {
         return this.categoryAxis;
     }
@@ -49,7 +49,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categoryAxis", (n) -> { this.setCategoryAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
@@ -61,7 +61,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * Gets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
      * @return a workbookChartAxis
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartAxis getSeriesAxis() {
         return this.seriesAxis;
     }
@@ -69,7 +69,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * Gets the valueAxis property value. Represents the value axis in an axis. Read-only.
      * @return a workbookChartAxis
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartAxis getValueAxis() {
         return this.valueAxis;
     }
@@ -78,8 +78,8 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("categoryAxis", this.getCategoryAxis());
@@ -91,8 +91,8 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the categoryAxis property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategoryAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
+    @jakarta.annotation.Nonnull
+    public void setCategoryAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
         this.categoryAxis = value;
     }
     /**
@@ -100,8 +100,8 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the seriesAxis property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeriesAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
+    @jakarta.annotation.Nonnull
+    public void setSeriesAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
         this.seriesAxis = value;
     }
     /**
@@ -109,8 +109,8 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the valueAxis property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValueAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
+    @jakarta.annotation.Nonnull
+    public void setValueAxis(@jakarta.annotation.Nullable final WorkbookChartAxis value) {
         this.valueAxis = value;
     }
 }

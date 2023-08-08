@@ -36,7 +36,7 @@ public class Conversation extends Entity implements Parsable {
      * Instantiates a new conversation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Conversation() {
         super();
     }
@@ -45,8 +45,8 @@ public class Conversation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a conversation
      */
-    @javax.annotation.Nonnull
-    public static Conversation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Conversation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Conversation();
     }
@@ -54,7 +54,7 @@ public class Conversation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
@@ -69,7 +69,7 @@ public class Conversation extends Entity implements Parsable {
      * Gets the hasAttachments property value. Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
         return this.hasAttachments;
     }
@@ -77,7 +77,7 @@ public class Conversation extends Entity implements Parsable {
      * Gets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastDeliveredDateTime() {
         return this.lastDeliveredDateTime;
     }
@@ -85,7 +85,7 @@ public class Conversation extends Entity implements Parsable {
      * Gets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreview() {
         return this.preview;
     }
@@ -93,7 +93,7 @@ public class Conversation extends Entity implements Parsable {
      * Gets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      * @return a conversationThread
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConversationThread> getThreads() {
         return this.threads;
     }
@@ -101,7 +101,7 @@ public class Conversation extends Entity implements Parsable {
      * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTopic() {
         return this.topic;
     }
@@ -109,7 +109,7 @@ public class Conversation extends Entity implements Parsable {
      * Gets the uniqueSenders property value. All the users that sent a message to this Conversation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getUniqueSenders() {
         return this.uniqueSenders;
     }
@@ -118,8 +118,8 @@ public class Conversation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("hasAttachments", this.getHasAttachments());
@@ -134,8 +134,8 @@ public class Conversation extends Entity implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
@@ -143,8 +143,8 @@ public class Conversation extends Entity implements Parsable {
      * @param value Value to set for the lastDeliveredDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastDeliveredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastDeliveredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastDeliveredDateTime = value;
     }
     /**
@@ -152,8 +152,8 @@ public class Conversation extends Entity implements Parsable {
      * @param value Value to set for the preview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreview(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreview(@jakarta.annotation.Nullable final String value) {
         this.preview = value;
     }
     /**
@@ -161,8 +161,8 @@ public class Conversation extends Entity implements Parsable {
      * @param value Value to set for the threads property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreads(@javax.annotation.Nullable final java.util.List<ConversationThread> value) {
+    @jakarta.annotation.Nonnull
+    public void setThreads(@jakarta.annotation.Nullable final java.util.List<ConversationThread> value) {
         this.threads = value;
     }
     /**
@@ -170,8 +170,8 @@ public class Conversation extends Entity implements Parsable {
      * @param value Value to set for the topic property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTopic(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTopic(@jakarta.annotation.Nullable final String value) {
         this.topic = value;
     }
     /**
@@ -179,8 +179,8 @@ public class Conversation extends Entity implements Parsable {
      * @param value Value to set for the uniqueSenders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUniqueSenders(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setUniqueSenders(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.uniqueSenders = value;
     }
 }

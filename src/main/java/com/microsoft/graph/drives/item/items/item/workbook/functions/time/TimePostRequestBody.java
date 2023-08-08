@@ -29,7 +29,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new timePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a timePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static TimePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TimePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TimePostRequestBody();
     }
@@ -47,7 +47,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("hour", (n) -> { this.setHour(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -67,7 +67,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the hour property value. The hour property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getHour() {
         return this.hour;
     }
@@ -75,7 +75,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the minute property value. The minute property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getMinute() {
         return this.minute;
     }
@@ -83,7 +83,7 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the second property value. The second property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getSecond() {
         return this.second;
     }
@@ -92,8 +92,8 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("hour", this.getHour());
         writer.writeObjectValue("minute", this.getMinute());
@@ -105,8 +105,8 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hour property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHour(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setHour(@jakarta.annotation.Nullable final Json value) {
         this.hour = value;
     }
     /**
@@ -123,8 +123,8 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the minute property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinute(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setMinute(@jakarta.annotation.Nullable final Json value) {
         this.minute = value;
     }
     /**
@@ -132,8 +132,8 @@ public class TimePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the second property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecond(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setSecond(@jakarta.annotation.Nullable final Json value) {
         this.second = value;
     }
 }

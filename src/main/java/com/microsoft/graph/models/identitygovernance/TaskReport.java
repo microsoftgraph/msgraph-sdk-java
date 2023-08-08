@@ -61,7 +61,7 @@ public class TaskReport extends Entity implements Parsable {
      * Instantiates a new taskReport and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TaskReport() {
         super();
     }
@@ -70,8 +70,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a taskReport
      */
-    @javax.annotation.Nonnull
-    public static TaskReport createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TaskReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TaskReport();
     }
@@ -79,7 +79,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the completedDateTime property value. The date time that the associated run completed. Value is null if the run has not completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -87,7 +87,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the failedUsersCount property value. The number of users in the run execution for which the associated task failed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedUsersCount() {
         return this.failedUsersCount;
     }
@@ -95,7 +95,7 @@ public class TaskReport extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
@@ -116,7 +116,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. The date and time that the task report was last updated.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -124,7 +124,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the processingStatus property value. The processingStatus property
      * @return a lifecycleWorkflowProcessingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
         return this.processingStatus;
     }
@@ -132,7 +132,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the runId property value. The unique identifier of the associated run.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRunId() {
         return this.runId;
     }
@@ -140,7 +140,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the startedDateTime property value. The date time that the associated run started. Value is null if the run has not started.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
         return this.startedDateTime;
     }
@@ -148,7 +148,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the successfulUsersCount property value. The number of users in the run execution for which the associated task succeeded.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessfulUsersCount() {
         return this.successfulUsersCount;
     }
@@ -156,7 +156,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the task property value. The task property
      * @return a task
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Task getTask() {
         return this.task;
     }
@@ -164,7 +164,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the taskDefinition property value. The taskDefinition property
      * @return a taskDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TaskDefinition getTaskDefinition() {
         return this.taskDefinition;
     }
@@ -172,7 +172,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the taskProcessingResults property value. The related lifecycle workflow taskProcessingResults.
      * @return a taskProcessingResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {
         return this.taskProcessingResults;
     }
@@ -180,7 +180,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the totalUsersCount property value. The total number of users in the run execution for which the associated task was scheduled to execute.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalUsersCount() {
         return this.totalUsersCount;
     }
@@ -188,7 +188,7 @@ public class TaskReport extends Entity implements Parsable {
      * Gets the unprocessedUsersCount property value. The number of users in the run execution for which the associated task is queued, in progress, or canceled.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnprocessedUsersCount() {
         return this.unprocessedUsersCount;
     }
@@ -197,8 +197,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
@@ -219,8 +219,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -228,8 +228,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the failedUsersCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedUsersCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedUsersCount = value;
     }
     /**
@@ -237,8 +237,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -246,8 +246,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the processingStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessingStatus(@javax.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
         this.processingStatus = value;
     }
     /**
@@ -255,8 +255,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the runId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRunId(@jakarta.annotation.Nullable final String value) {
         this.runId = value;
     }
     /**
@@ -264,8 +264,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
@@ -273,8 +273,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the successfulUsersCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulUsersCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.successfulUsersCount = value;
     }
     /**
@@ -282,8 +282,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the task property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTask(@javax.annotation.Nullable final Task value) {
+    @jakarta.annotation.Nonnull
+    public void setTask(@jakarta.annotation.Nullable final Task value) {
         this.task = value;
     }
     /**
@@ -291,8 +291,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the taskDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaskDefinition(@javax.annotation.Nullable final TaskDefinition value) {
+    @jakarta.annotation.Nonnull
+    public void setTaskDefinition(@jakarta.annotation.Nullable final TaskDefinition value) {
         this.taskDefinition = value;
     }
     /**
@@ -300,8 +300,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the taskProcessingResults property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaskProcessingResults(@javax.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
+    @jakarta.annotation.Nonnull
+    public void setTaskProcessingResults(@jakarta.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
         this.taskProcessingResults = value;
     }
     /**
@@ -309,8 +309,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the totalUsersCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUsersCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalUsersCount = value;
     }
     /**
@@ -318,8 +318,8 @@ public class TaskReport extends Entity implements Parsable {
      * @param value Value to set for the unprocessedUsersCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnprocessedUsersCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnprocessedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.unprocessedUsersCount = value;
     }
 }

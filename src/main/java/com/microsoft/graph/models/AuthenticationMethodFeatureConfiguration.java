@@ -32,7 +32,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * Instantiates a new authenticationMethodFeatureConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationMethodFeatureConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationMethodFeatureConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationMethodFeatureConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationMethodFeatureConfiguration();
     }
@@ -50,7 +50,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * Gets the excludeTarget property value. A single entity that is excluded from this feature.
      * @return a featureTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FeatureTarget getExcludeTarget() {
         return this.excludeTarget;
     }
@@ -66,7 +66,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("excludeTarget", (n) -> { this.setExcludeTarget(n.getObjectValue(FeatureTarget::createFromDiscriminatorValue)); });
@@ -79,7 +79,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * Gets the includeTarget property value. A single entity that is included in this feature.
      * @return a featureTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FeatureTarget getIncludeTarget() {
         return this.includeTarget;
     }
@@ -87,7 +87,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,7 +95,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
      * @return a advancedConfigState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
         return this.state;
     }
@@ -104,8 +104,8 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("excludeTarget", this.getExcludeTarget());
         writer.writeObjectValue("includeTarget", this.getIncludeTarget());
@@ -118,8 +118,8 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * @param value Value to set for the excludeTarget property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludeTarget(@javax.annotation.Nullable final FeatureTarget value) {
+    @jakarta.annotation.Nonnull
+    public void setExcludeTarget(@jakarta.annotation.Nullable final FeatureTarget value) {
         this.excludeTarget = value;
     }
     /**
@@ -136,8 +136,8 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * @param value Value to set for the includeTarget property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeTarget(@javax.annotation.Nullable final FeatureTarget value) {
+    @jakarta.annotation.Nonnull
+    public void setIncludeTarget(@jakarta.annotation.Nullable final FeatureTarget value) {
         this.includeTarget = value;
     }
     /**
@@ -145,8 +145,8 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -154,8 +154,8 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final AdvancedConfigState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
         this.state = value;
     }
 }

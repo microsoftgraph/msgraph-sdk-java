@@ -32,7 +32,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * Instantiates a new callRoute and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallRoute() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a callRoute
      */
-    @javax.annotation.Nonnull
-    public static CallRoute createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CallRoute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CallRoute();
     }
@@ -50,7 +50,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("final", (n) -> { this.setFinal(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -71,7 +71,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * Gets the final property value. The final property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getFinal() {
         return this.finalEscaped;
     }
@@ -79,7 +79,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -87,7 +87,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * Gets the original property value. The original property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getOriginal() {
         return this.original;
     }
@@ -95,7 +95,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * Gets the routingType property value. The routingType property
      * @return a routingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RoutingType getRoutingType() {
         return this.routingType;
     }
@@ -104,8 +104,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("final", this.getFinal());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,8 +118,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the final property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFinal(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setFinal(@jakarta.annotation.Nullable final IdentitySet value) {
         this.finalEscaped = value;
     }
     /**
@@ -136,8 +136,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -145,8 +145,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the original property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginal(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginal(@jakarta.annotation.Nullable final IdentitySet value) {
         this.original = value;
     }
     /**
@@ -154,8 +154,8 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the routingType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoutingType(@javax.annotation.Nullable final RoutingType value) {
+    @jakarta.annotation.Nonnull
+    public void setRoutingType(@jakarta.annotation.Nullable final RoutingType value) {
         this.routingType = value;
     }
 }

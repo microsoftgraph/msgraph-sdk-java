@@ -35,7 +35,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * Instantiates a new onenoteSection and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnenoteSection() {
         super();
         this.setOdataType("#microsoft.graph.onenoteSection");
@@ -45,8 +45,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onenoteSection
      */
-    @javax.annotation.Nonnull
-    public static OnenoteSection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnenoteSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnenoteSection();
     }
@@ -54,7 +54,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
@@ -69,7 +69,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * Gets the isDefault property value. Indicates whether this is the user's default section. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -77,7 +77,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * Gets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
      * @return a sectionLinks
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SectionLinks getLinks() {
         return this.links;
     }
@@ -85,7 +85,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * Gets the pages property value. The collection of pages in the section.  Read-only. Nullable.
      * @return a onenotePage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnenotePage> getPages() {
         return this.pages;
     }
@@ -93,7 +93,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * Gets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPagesUrl() {
         return this.pagesUrl;
     }
@@ -101,7 +101,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * Gets the parentNotebook property value. The notebook that contains the section.  Read-only.
      * @return a notebook
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
         return this.parentNotebook;
     }
@@ -109,7 +109,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * Gets the parentSectionGroup property value. The section group that contains the section.  Read-only.
      * @return a sectionGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SectionGroup getParentSectionGroup() {
         return this.parentSectionGroup;
     }
@@ -118,8 +118,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isDefault", this.getIsDefault());
@@ -134,8 +134,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the isDefault property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
@@ -143,8 +143,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the links property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLinks(@javax.annotation.Nullable final SectionLinks value) {
+    @jakarta.annotation.Nonnull
+    public void setLinks(@jakarta.annotation.Nullable final SectionLinks value) {
         this.links = value;
     }
     /**
@@ -152,8 +152,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the pages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPages(@javax.annotation.Nullable final java.util.List<OnenotePage> value) {
+    @jakarta.annotation.Nonnull
+    public void setPages(@jakarta.annotation.Nullable final java.util.List<OnenotePage> value) {
         this.pages = value;
     }
     /**
@@ -161,8 +161,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the pagesUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPagesUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPagesUrl(@jakarta.annotation.Nullable final String value) {
         this.pagesUrl = value;
     }
     /**
@@ -170,8 +170,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the parentNotebook property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentNotebook(@javax.annotation.Nullable final Notebook value) {
+    @jakarta.annotation.Nonnull
+    public void setParentNotebook(@jakarta.annotation.Nullable final Notebook value) {
         this.parentNotebook = value;
     }
     /**
@@ -179,8 +179,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsa
      * @param value Value to set for the parentSectionGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentSectionGroup(@javax.annotation.Nullable final SectionGroup value) {
+    @jakarta.annotation.Nonnull
+    public void setParentSectionGroup(@jakarta.annotation.Nullable final SectionGroup value) {
         this.parentSectionGroup = value;
     }
 }

@@ -30,49 +30,49 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
     /**
      * Provides operations to manage the appHealthMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AppHealthMetricsRequestBuilder appHealthMetrics() {
         return new AppHealthMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the batteryHealthMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public BatteryHealthMetricsRequestBuilder batteryHealthMetrics() {
         return new BatteryHealthMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the bestPracticesMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public BestPracticesMetricsRequestBuilder bestPracticesMetrics() {
         return new BestPracticesMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceBootPerformanceMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeviceBootPerformanceMetricsRequestBuilder deviceBootPerformanceMetrics() {
         return new DeviceBootPerformanceMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the rebootAnalyticsMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RebootAnalyticsMetricsRequestBuilder rebootAnalyticsMetrics() {
         return new RebootAnalyticsMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the resourcePerformanceMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ResourcePerformanceMetricsRequestBuilder resourcePerformanceMetrics() {
         return new ResourcePerformanceMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the workFromAnywhereMetrics property of the microsoft.graph.userExperienceAnalyticsBaseline entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public WorkFromAnywhereMetricsRequestBuilder workFromAnywhereMetrics() {
         return new WorkFromAnywhereMetricsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -82,8 +82,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public UserExperienceAnalyticsBaselineItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsBaselineItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -92,15 +92,15 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public UserExperienceAnalyticsBaselineItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public UserExperienceAnalyticsBaselineItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines/{userExperienceAnalyticsBaseline%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property userExperienceAnalyticsBaselines for deviceManagement
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -119,8 +119,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -137,7 +137,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * User experience analytics baselines
      * @return a CompletableFuture of userExperienceAnalyticsBaseline
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -156,8 +156,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userExperienceAnalyticsBaseline
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -175,8 +175,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param body The request body
      * @return a CompletableFuture of userExperienceAnalyticsBaseline
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> patch(@javax.annotation.Nonnull final UserExperienceAnalyticsBaseline body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -195,8 +195,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userExperienceAnalyticsBaseline
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> patch(@javax.annotation.Nonnull final UserExperienceAnalyticsBaseline body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBaseline> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -214,7 +214,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * Delete navigation property userExperienceAnalyticsBaselines for deviceManagement
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -223,8 +223,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -241,7 +241,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * User experience analytics baselines
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -250,8 +250,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -271,8 +271,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final UserExperienceAnalyticsBaseline body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -281,8 +281,8 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final UserExperienceAnalyticsBaseline body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBaseline body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -311,13 +311,13 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -327,7 +327,7 @@ public class UserExperienceAnalyticsBaselineItemRequestBuilder extends BaseReque
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

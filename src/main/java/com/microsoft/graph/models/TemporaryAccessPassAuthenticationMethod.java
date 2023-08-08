@@ -40,7 +40,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Instantiates a new temporaryAccessPassAuthenticationMethod and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.temporaryAccessPassAuthenticationMethod");
@@ -50,8 +50,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a temporaryAccessPassAuthenticationMethod
      */
-    @javax.annotation.Nonnull
-    public static TemporaryAccessPassAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TemporaryAccessPassAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TemporaryAccessPassAuthenticationMethod();
     }
@@ -59,7 +59,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Gets the createdDateTime property value. The date and time when the Temporary Access Pass was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -67,7 +67,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -83,7 +83,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Gets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsUsable() {
         return this.isUsable;
     }
@@ -91,7 +91,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Gets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsUsableOnce() {
         return this.isUsableOnce;
     }
@@ -99,7 +99,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Gets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLifetimeInMinutes() {
         return this.lifetimeInMinutes;
     }
@@ -107,7 +107,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Gets the methodUsabilityReason property value. Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMethodUsabilityReason() {
         return this.methodUsabilityReason;
     }
@@ -115,7 +115,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Gets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -123,7 +123,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * Gets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTemporaryAccessPass() {
         return this.temporaryAccessPass;
     }
@@ -132,8 +132,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -149,8 +149,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -158,8 +158,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the isUsable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsUsable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsUsable(@jakarta.annotation.Nullable final Boolean value) {
         this.isUsable = value;
     }
     /**
@@ -167,8 +167,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the isUsableOnce property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsUsableOnce(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsUsableOnce(@jakarta.annotation.Nullable final Boolean value) {
         this.isUsableOnce = value;
     }
     /**
@@ -176,8 +176,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the lifetimeInMinutes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.lifetimeInMinutes = value;
     }
     /**
@@ -185,8 +185,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the methodUsabilityReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMethodUsabilityReason(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMethodUsabilityReason(@jakarta.annotation.Nullable final String value) {
         this.methodUsabilityReason = value;
     }
     /**
@@ -194,8 +194,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
@@ -203,8 +203,8 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      * @param value Value to set for the temporaryAccessPass property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemporaryAccessPass(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTemporaryAccessPass(@jakarta.annotation.Nullable final String value) {
         this.temporaryAccessPass = value;
     }
 }

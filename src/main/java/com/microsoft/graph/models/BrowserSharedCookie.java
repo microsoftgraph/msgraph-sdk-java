@@ -60,7 +60,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Instantiates a new browserSharedCookie and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSharedCookie() {
         super();
     }
@@ -69,8 +69,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a browserSharedCookie
      */
-    @javax.annotation.Nonnull
-    public static BrowserSharedCookie createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BrowserSharedCookie createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BrowserSharedCookie();
     }
@@ -78,7 +78,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the comment property value. The comment for the shared cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComment() {
         return this.comment;
     }
@@ -86,7 +86,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the shared cookie was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -94,7 +94,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the deletedDateTime property value. The date and time when the shared cookie was deleted.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
         return this.deletedDateTime;
     }
@@ -102,7 +102,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the displayName property value. The name of the cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -110,7 +110,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
@@ -131,7 +131,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the history property value. The history of modifications applied to the cookie.
      * @return a browserSharedCookieHistory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookieHistory> getHistory() {
         return this.history;
     }
@@ -139,7 +139,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHostOnly() {
         return this.hostOnly;
     }
@@ -147,7 +147,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the hostOrDomain property value. The URL of the cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHostOrDomain() {
         return this.hostOrDomain;
     }
@@ -155,7 +155,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The user who last modified the cookie.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -163,7 +163,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -171,7 +171,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the path property value. The path of the cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPath() {
         return this.path;
     }
@@ -179,7 +179,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the sourceEnvironment property value. The sourceEnvironment property
      * @return a browserSharedCookieSourceEnvironment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
         return this.sourceEnvironment;
     }
@@ -187,7 +187,7 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a browserSharedCookieStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSharedCookieStatus getStatus() {
         return this.status;
     }
@@ -196,8 +196,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("comment", this.getComment());
@@ -218,8 +218,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
@@ -227,8 +227,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -236,8 +236,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deletedDateTime = value;
     }
     /**
@@ -245,8 +245,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -254,8 +254,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHistory(@javax.annotation.Nullable final java.util.List<BrowserSharedCookieHistory> value) {
+    @jakarta.annotation.Nonnull
+    public void setHistory(@jakarta.annotation.Nullable final java.util.List<BrowserSharedCookieHistory> value) {
         this.history = value;
     }
     /**
@@ -263,8 +263,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the hostOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHostOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.hostOnly = value;
     }
     /**
@@ -272,8 +272,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the hostOrDomain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostOrDomain(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHostOrDomain(@jakarta.annotation.Nullable final String value) {
         this.hostOrDomain = value;
     }
     /**
@@ -281,8 +281,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -290,8 +290,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -299,8 +299,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the path property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPath(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPath(@jakarta.annotation.Nullable final String value) {
         this.path = value;
     }
     /**
@@ -308,8 +308,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the sourceEnvironment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceEnvironment(@javax.annotation.Nullable final BrowserSharedCookieSourceEnvironment value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceEnvironment(@jakarta.annotation.Nullable final BrowserSharedCookieSourceEnvironment value) {
         this.sourceEnvironment = value;
     }
     /**
@@ -317,8 +317,8 @@ public class BrowserSharedCookie extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final BrowserSharedCookieStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final BrowserSharedCookieStatus value) {
         this.status = value;
     }
 }

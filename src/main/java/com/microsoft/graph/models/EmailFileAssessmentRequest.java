@@ -23,7 +23,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * Instantiates a new emailFileAssessmentRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailFileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.emailFileAssessmentRequest");
@@ -33,8 +33,8 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a emailFileAssessmentRequest
      */
-    @javax.annotation.Nonnull
-    public static EmailFileAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EmailFileAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EmailFileAssessmentRequest();
     }
@@ -42,7 +42,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * Gets the contentData property value. Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentData() {
         return this.contentData;
     }
@@ -50,7 +50,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @return a mailDestinationRoutingReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MailDestinationRoutingReason getDestinationRoutingReason() {
         return this.destinationRoutingReason;
     }
@@ -58,7 +58,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentData", (n) -> { this.setContentData(n.getStringValue()); });
@@ -70,7 +70,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * Gets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecipientEmail() {
         return this.recipientEmail;
     }
@@ -79,8 +79,8 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("contentData", this.getContentData());
@@ -92,8 +92,8 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the contentData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentData(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentData(@jakarta.annotation.Nullable final String value) {
         this.contentData = value;
     }
     /**
@@ -101,8 +101,8 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the destinationRoutingReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationRoutingReason(@javax.annotation.Nullable final MailDestinationRoutingReason value) {
+    @jakarta.annotation.Nonnull
+    public void setDestinationRoutingReason(@jakarta.annotation.Nullable final MailDestinationRoutingReason value) {
         this.destinationRoutingReason = value;
     }
     /**
@@ -110,8 +110,8 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * @param value Value to set for the recipientEmail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipientEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecipientEmail(@jakarta.annotation.Nullable final String value) {
         this.recipientEmail = value;
     }
 }

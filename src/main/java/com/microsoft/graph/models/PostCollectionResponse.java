@@ -15,7 +15,7 @@ public class PostCollectionResponse extends BaseCollectionPaginationCountRespons
      * Instantiates a new postCollectionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostCollectionResponse() {
         super();
     }
@@ -24,8 +24,8 @@ public class PostCollectionResponse extends BaseCollectionPaginationCountRespons
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a postCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static PostCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PostCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PostCollectionResponse();
     }
@@ -33,7 +33,7 @@ public class PostCollectionResponse extends BaseCollectionPaginationCountRespons
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(Post::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class PostCollectionResponse extends BaseCollectionPaginationCountRespons
      * Gets the value property value. The value property
      * @return a post
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Post> getValue() {
         return this.value;
     }
@@ -52,8 +52,8 @@ public class PostCollectionResponse extends BaseCollectionPaginationCountRespons
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -63,8 +63,8 @@ public class PostCollectionResponse extends BaseCollectionPaginationCountRespons
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<Post> value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<Post> value) {
         this.value = value;
     }
 }

@@ -12,6 +12,7 @@ import com.microsoft.graph.teams.item.incomingchannels.IncomingChannelsRequestBu
 import com.microsoft.graph.teams.item.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.teams.item.members.MembersRequestBuilder;
 import com.microsoft.graph.teams.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.teams.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.teams.item.photo.PhotoRequestBuilder;
 import com.microsoft.graph.teams.item.primarychannel.PrimaryChannelRequestBuilder;
 import com.microsoft.graph.teams.item.schedule.ScheduleRequestBuilder;
@@ -40,119 +41,126 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AllChannelsRequestBuilder allChannels() {
         return new AllChannelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the archive method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
         return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ChannelsRequestBuilder channels() {
         return new ChannelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the clone method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CloneRequestBuilder clone() {
         return new CloneRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the completeMigration method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
         return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the group property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public IncomingChannelsRequestBuilder incomingChannels() {
         return new IncomingChannelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.team entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionGrantsRequestBuilder permissionGrants() {
+        return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the photo property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PhotoRequestBuilder photo() {
         return new PhotoRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the primaryChannel property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PrimaryChannelRequestBuilder primaryChannel() {
         return new PrimaryChannelRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the schedule property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ScheduleRequestBuilder schedule() {
         return new ScheduleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the sendActivityNotification method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TagsRequestBuilder tags() {
         return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the template property of the microsoft.graph.team entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TemplateRequestBuilder template() {
         return new TemplateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unarchive method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
@@ -162,8 +170,8 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TeamItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TeamItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -172,15 +180,15 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TeamItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TeamItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete entity from teams
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -199,8 +207,8 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -216,9 +224,9 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of the specified team.
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -236,10 +244,10 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Team> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Team> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -256,10 +264,10 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified team.
      * @param body The request body
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Team> patch(@javax.annotation.Nonnull final Team body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Team> patch(@jakarta.annotation.Nonnull final Team body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -277,10 +285,10 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Team> patch(@javax.annotation.Nonnull final Team body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Team> patch(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -298,7 +306,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Delete entity from teams
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -307,8 +315,8 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -325,7 +333,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of the specified team.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -334,8 +342,8 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -355,8 +363,8 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Team body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Team body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -365,8 +373,8 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Team body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -395,13 +403,13 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -411,7 +419,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

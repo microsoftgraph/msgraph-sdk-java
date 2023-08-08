@@ -64,7 +64,7 @@ public class Post extends OutlookItem implements Parsable {
      * Instantiates a new post and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Post() {
         super();
         this.setOdataType("#microsoft.graph.post");
@@ -74,8 +74,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a post
      */
-    @javax.annotation.Nonnull
-    public static Post createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Post createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Post();
     }
@@ -83,7 +83,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the attachments property value. Read-only. Nullable. Supports $expand.
      * @return a attachment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
         return this.attachments;
     }
@@ -91,7 +91,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the body property value. The contents of the post. This is a default property. This property can be null.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getBody() {
         return this.body;
     }
@@ -99,7 +99,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the conversationId property value. Unique ID of the conversation. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConversationId() {
         return this.conversationId;
     }
@@ -107,7 +107,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the conversationThreadId property value. Unique ID of the conversation thread. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConversationThreadId() {
         return this.conversationThreadId;
     }
@@ -115,7 +115,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the extensions property value. The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
      * @return a extension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
         return this.extensions;
     }
@@ -123,7 +123,7 @@ public class Post extends OutlookItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
@@ -145,7 +145,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the from property value. The from property
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Recipient getFrom() {
         return this.from;
     }
@@ -153,7 +153,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the hasAttachments property value. Indicates whether the post has at least one attachment. This is a default property.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
         return this.hasAttachments;
     }
@@ -161,7 +161,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the inReplyTo property value. Read-only. Supports $expand.
      * @return a post
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Post getInReplyTo() {
         return this.inReplyTo;
     }
@@ -169,7 +169,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      * @return a multiValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
         return this.multiValueExtendedProperties;
     }
@@ -177,7 +177,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the newParticipants property value. Conversation participants that were added to the thread as part of this post.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getNewParticipants() {
         return this.newParticipants;
     }
@@ -185,7 +185,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the receivedDateTime property value. Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
         return this.receivedDateTime;
     }
@@ -193,7 +193,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Recipient getSender() {
         return this.sender;
     }
@@ -201,7 +201,7 @@ public class Post extends OutlookItem implements Parsable {
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the post. Read-only. Nullable.
      * @return a singleValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
         return this.singleValueExtendedProperties;
     }
@@ -210,8 +210,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
@@ -233,8 +233,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
         this.attachments = value;
     }
     /**
@@ -242,8 +242,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBody(@javax.annotation.Nullable final ItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
@@ -251,8 +251,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the conversationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConversationId(@jakarta.annotation.Nullable final String value) {
         this.conversationId = value;
     }
     /**
@@ -260,8 +260,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the conversationThreadId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationThreadId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConversationThreadId(@jakarta.annotation.Nullable final String value) {
         this.conversationThreadId = value;
     }
     /**
@@ -269,8 +269,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
+    @jakarta.annotation.Nonnull
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
@@ -278,8 +278,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrom(@javax.annotation.Nullable final Recipient value) {
+    @jakarta.annotation.Nonnull
+    public void setFrom(@jakarta.annotation.Nullable final Recipient value) {
         this.from = value;
     }
     /**
@@ -287,8 +287,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
@@ -296,8 +296,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the inReplyTo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInReplyTo(@javax.annotation.Nullable final Post value) {
+    @jakarta.annotation.Nonnull
+    public void setInReplyTo(@jakarta.annotation.Nullable final Post value) {
         this.inReplyTo = value;
     }
     /**
@@ -305,8 +305,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
@@ -314,8 +314,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the newParticipants property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNewParticipants(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    @jakarta.annotation.Nonnull
+    public void setNewParticipants(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.newParticipants = value;
     }
     /**
@@ -323,8 +323,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTime = value;
     }
     /**
@@ -332,8 +332,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the sender property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSender(@javax.annotation.Nullable final Recipient value) {
+    @jakarta.annotation.Nonnull
+    public void setSender(@jakarta.annotation.Nullable final Recipient value) {
         this.sender = value;
     }
     /**
@@ -341,8 +341,8 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
 }

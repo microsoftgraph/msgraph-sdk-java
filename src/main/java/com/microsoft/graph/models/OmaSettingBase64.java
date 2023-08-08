@@ -22,7 +22,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * Instantiates a new omaSettingBase64 and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OmaSettingBase64() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingBase64");
@@ -32,8 +32,8 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a omaSettingBase64
      */
-    @javax.annotation.Nonnull
-    public static OmaSettingBase64 createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OmaSettingBase64 createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OmaSettingBase64();
     }
@@ -41,7 +41,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
@@ -52,7 +52,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * Gets the fileName property value. File name associated with the Value property (.cer
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
@@ -60,7 +60,7 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * Gets the value property value. Value. (Base64 encoded string)
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -69,8 +69,8 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("fileName", this.getFileName());
@@ -81,8 +81,8 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
@@ -90,8 +90,8 @@ public class OmaSettingBase64 extends OmaSetting implements Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

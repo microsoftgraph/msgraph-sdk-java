@@ -39,7 +39,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Instantiates a new listItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ListItem() {
         super();
         this.setOdataType("#microsoft.graph.listItem");
@@ -49,8 +49,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a listItem
      */
-    @javax.annotation.Nonnull
-    public static ListItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ListItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ListItem();
     }
@@ -58,7 +58,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Gets the analytics property value. Analytics about the view activities that took place on this item.
      * @return a itemAnalytics
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
         return this.analytics;
     }
@@ -66,7 +66,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Gets the contentType property value. The content type of this list item
      * @return a contentTypeInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
         return this.contentType;
     }
@@ -74,7 +74,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Gets the documentSetVersions property value. Version information for a document set version created by a user.
      * @return a documentSetVersion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersion> getDocumentSetVersions() {
         return this.documentSetVersions;
     }
@@ -82,7 +82,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      * @return a driveItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
         return this.driveItem;
     }
@@ -90,7 +90,7 @@ public class ListItem extends BaseItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
@@ -106,7 +106,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Gets the fields property value. The values of the columns set on this list item.
      * @return a fieldValueSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FieldValueSet getFields() {
         return this.fields;
     }
@@ -114,7 +114,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @return a sharepointIds
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
         return this.sharepointIds;
     }
@@ -122,7 +122,7 @@ public class ListItem extends BaseItem implements Parsable {
      * Gets the versions property value. The list of previous versions of the list item.
      * @return a listItemVersion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ListItemVersion> getVersions() {
         return this.versions;
     }
@@ -131,8 +131,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("analytics", this.getAnalytics());
@@ -148,8 +148,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the analytics property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnalytics(@javax.annotation.Nullable final ItemAnalytics value) {
+    @jakarta.annotation.Nonnull
+    public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
         this.analytics = value;
     }
     /**
@@ -157,8 +157,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentType(@javax.annotation.Nullable final ContentTypeInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setContentType(@jakarta.annotation.Nullable final ContentTypeInfo value) {
         this.contentType = value;
     }
     /**
@@ -166,8 +166,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the documentSetVersions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDocumentSetVersions(@javax.annotation.Nullable final java.util.List<DocumentSetVersion> value) {
+    @jakarta.annotation.Nonnull
+    public void setDocumentSetVersions(@jakarta.annotation.Nullable final java.util.List<DocumentSetVersion> value) {
         this.documentSetVersions = value;
     }
     /**
@@ -175,8 +175,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the driveItem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
+    @jakarta.annotation.Nonnull
+    public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
         this.driveItem = value;
     }
     /**
@@ -184,8 +184,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the fields property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFields(@javax.annotation.Nullable final FieldValueSet value) {
+    @jakarta.annotation.Nonnull
+    public void setFields(@jakarta.annotation.Nullable final FieldValueSet value) {
         this.fields = value;
     }
     /**
@@ -193,8 +193,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
+    @jakarta.annotation.Nonnull
+    public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
@@ -202,8 +202,8 @@ public class ListItem extends BaseItem implements Parsable {
      * @param value Value to set for the versions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersions(@javax.annotation.Nullable final java.util.List<ListItemVersion> value) {
+    @jakarta.annotation.Nonnull
+    public void setVersions(@jakarta.annotation.Nullable final java.util.List<ListItemVersion> value) {
         this.versions = value;
     }
 }

@@ -52,7 +52,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Instantiates a new itemReference and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemReference() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemReference
      */
-    @javax.annotation.Nonnull
-    public static ItemReference createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemReference();
     }
@@ -70,7 +70,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the driveId property value. Unique identifier of the drive instance that contains the driveItem. Only returned if the item is located in a [drive][]. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDriveId() {
         return this.driveId;
     }
@@ -86,7 +86,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the driveType property value. Identifies the type of drive. Only returned if the item is located in a [drive][]. See [drive][] resource for values.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDriveType() {
         return this.driveType;
     }
@@ -94,7 +94,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("driveId", (n) -> { this.setDriveId(n.getStringValue()); });
@@ -112,7 +112,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the id property value. Unique identifier of the driveItem in the drive or a listItem in a list. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -120,7 +120,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The name of the item being referenced. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -128,7 +128,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -136,7 +136,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the path property value. Path that can be used to navigate to the item. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPath() {
         return this.path;
     }
@@ -144,7 +144,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the shareId property value. A unique identifier for a shared resource that can be accessed via the [Shares][] API.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getShareId() {
         return this.shareId;
     }
@@ -152,7 +152,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @return a sharepointIds
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
         return this.sharepointIds;
     }
@@ -160,7 +160,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Gets the siteId property value. For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSiteId() {
         return this.siteId;
     }
@@ -169,8 +169,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("driveId", this.getDriveId());
         writer.writeStringValue("driveType", this.getDriveType());
@@ -188,8 +188,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -197,8 +197,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the driveId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDriveId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDriveId(@jakarta.annotation.Nullable final String value) {
         this.driveId = value;
     }
     /**
@@ -206,8 +206,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the driveType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDriveType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDriveType(@jakarta.annotation.Nullable final String value) {
         this.driveType = value;
     }
     /**
@@ -215,8 +215,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -224,8 +224,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -233,8 +233,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -242,8 +242,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the path property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPath(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPath(@jakarta.annotation.Nullable final String value) {
         this.path = value;
     }
     /**
@@ -251,8 +251,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shareId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShareId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setShareId(@jakarta.annotation.Nullable final String value) {
         this.shareId = value;
     }
     /**
@@ -260,8 +260,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
+    @jakarta.annotation.Nonnull
+    public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
@@ -269,8 +269,8 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the siteId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSiteId(@jakarta.annotation.Nullable final String value) {
         this.siteId = value;
     }
 }

@@ -112,7 +112,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Instantiates a new plannerTask and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerTask() {
         super();
     }
@@ -121,8 +121,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerTask
      */
-    @javax.annotation.Nonnull
-    public static PlannerTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerTask();
     }
@@ -130,7 +130,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the activeChecklistItemCount property value. Number of checklist items with value set to false, representing incomplete items.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActiveChecklistItemCount() {
         return this.activeChecklistItemCount;
     }
@@ -138,7 +138,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
      * @return a plannerAppliedCategories
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerAppliedCategories getAppliedCategories() {
         return this.appliedCategories;
     }
@@ -146,7 +146,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
      * @return a plannerAssignedToTaskBoardTaskFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat getAssignedToTaskBoardFormat() {
         return this.assignedToTaskBoardFormat;
     }
@@ -154,7 +154,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the assigneePriority property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneePriority() {
         return this.assigneePriority;
     }
@@ -162,7 +162,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the assignments property value. The set of assignees the task is assigned to.
      * @return a plannerAssignments
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerAssignments getAssignments() {
         return this.assignments;
     }
@@ -170,7 +170,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBucketId() {
         return this.bucketId;
     }
@@ -178,7 +178,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the bucketTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @return a plannerBucketTaskBoardTaskFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat getBucketTaskBoardFormat() {
         return this.bucketTaskBoardFormat;
     }
@@ -186,7 +186,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the checklistItemCount property value. Number of checklist items that are present on the task.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getChecklistItemCount() {
         return this.checklistItemCount;
     }
@@ -194,7 +194,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the completedBy property value. Identity of the user that completed the task.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCompletedBy() {
         return this.completedBy;
     }
@@ -202,7 +202,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the completedDateTime property value. Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -210,7 +210,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the conversationThreadId property value. Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConversationThreadId() {
         return this.conversationThreadId;
     }
@@ -218,7 +218,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the createdBy property value. Identity of the user that created the task.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -226,7 +226,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the createdDateTime property value. Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -234,7 +234,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the details property value. Read-only. Nullable. Additional details about the task.
      * @return a plannerTaskDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerTaskDetails getDetails() {
         return this.details;
     }
@@ -242,7 +242,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the dueDateTime property value. Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDueDateTime() {
         return this.dueDateTime;
     }
@@ -250,7 +250,7 @@ public class PlannerTask extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeChecklistItemCount", (n) -> { this.setActiveChecklistItemCount(n.getIntegerValue()); });
@@ -284,7 +284,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasDescription() {
         return this.hasDescription;
     }
@@ -292,7 +292,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrderHint() {
         return this.orderHint;
     }
@@ -300,7 +300,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the percentComplete property value. Percentage of task completion. When set to 100, the task is considered completed.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPercentComplete() {
         return this.percentComplete;
     }
@@ -308,7 +308,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the planId property value. Plan ID to which the task belongs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPlanId() {
         return this.planId;
     }
@@ -316,7 +316,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      * @return a plannerPreviewType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
         return this.previewType;
     }
@@ -324,7 +324,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the priority property value. Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -332,7 +332,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the progressTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @return a plannerProgressTaskBoardTaskFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat getProgressTaskBoardFormat() {
         return this.progressTaskBoardFormat;
     }
@@ -340,7 +340,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the referenceCount property value. Number of external references that exist on the task.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getReferenceCount() {
         return this.referenceCount;
     }
@@ -348,7 +348,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the startDateTime property value. Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -356,7 +356,7 @@ public class PlannerTask extends Entity implements Parsable {
      * Gets the title property value. Title of the task.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -365,8 +365,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("activeChecklistItemCount", this.getActiveChecklistItemCount());
@@ -400,8 +400,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the activeChecklistItemCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActiveChecklistItemCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setActiveChecklistItemCount(@jakarta.annotation.Nullable final Integer value) {
         this.activeChecklistItemCount = value;
     }
     /**
@@ -409,8 +409,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the appliedCategories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliedCategories(@javax.annotation.Nullable final PlannerAppliedCategories value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerAppliedCategories value) {
         this.appliedCategories = value;
     }
     /**
@@ -418,8 +418,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the assignedToTaskBoardFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedToTaskBoardFormat(@javax.annotation.Nullable final PlannerAssignedToTaskBoardTaskFormat value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedToTaskBoardFormat(@jakarta.annotation.Nullable final PlannerAssignedToTaskBoardTaskFormat value) {
         this.assignedToTaskBoardFormat = value;
     }
     /**
@@ -427,8 +427,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the assigneePriority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneePriority(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneePriority(@jakarta.annotation.Nullable final String value) {
         this.assigneePriority = value;
     }
     /**
@@ -436,8 +436,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final PlannerAssignments value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final PlannerAssignments value) {
         this.assignments = value;
     }
     /**
@@ -445,8 +445,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the bucketId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBucketId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBucketId(@jakarta.annotation.Nullable final String value) {
         this.bucketId = value;
     }
     /**
@@ -454,8 +454,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the bucketTaskBoardFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBucketTaskBoardFormat(@javax.annotation.Nullable final PlannerBucketTaskBoardTaskFormat value) {
+    @jakarta.annotation.Nonnull
+    public void setBucketTaskBoardFormat(@jakarta.annotation.Nullable final PlannerBucketTaskBoardTaskFormat value) {
         this.bucketTaskBoardFormat = value;
     }
     /**
@@ -463,8 +463,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the checklistItemCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChecklistItemCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setChecklistItemCount(@jakarta.annotation.Nullable final Integer value) {
         this.checklistItemCount = value;
     }
     /**
@@ -472,8 +472,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the completedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.completedBy = value;
     }
     /**
@@ -481,8 +481,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -490,8 +490,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the conversationThreadId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationThreadId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConversationThreadId(@jakarta.annotation.Nullable final String value) {
         this.conversationThreadId = value;
     }
     /**
@@ -499,8 +499,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -508,8 +508,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -517,8 +517,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetails(@javax.annotation.Nullable final PlannerTaskDetails value) {
+    @jakarta.annotation.Nonnull
+    public void setDetails(@jakarta.annotation.Nullable final PlannerTaskDetails value) {
         this.details = value;
     }
     /**
@@ -526,8 +526,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.dueDateTime = value;
     }
     /**
@@ -535,8 +535,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the hasDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasDescription(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasDescription(@jakarta.annotation.Nullable final Boolean value) {
         this.hasDescription = value;
     }
     /**
@@ -544,8 +544,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the orderHint property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrderHint(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOrderHint(@jakarta.annotation.Nullable final String value) {
         this.orderHint = value;
     }
     /**
@@ -553,8 +553,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the percentComplete property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPercentComplete(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPercentComplete(@jakarta.annotation.Nullable final Integer value) {
         this.percentComplete = value;
     }
     /**
@@ -562,8 +562,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the planId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlanId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPlanId(@jakarta.annotation.Nullable final String value) {
         this.planId = value;
     }
     /**
@@ -571,8 +571,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the previewType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
         this.previewType = value;
     }
     /**
@@ -580,8 +580,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
@@ -589,8 +589,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the progressTaskBoardFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProgressTaskBoardFormat(@javax.annotation.Nullable final PlannerProgressTaskBoardTaskFormat value) {
+    @jakarta.annotation.Nonnull
+    public void setProgressTaskBoardFormat(@jakarta.annotation.Nullable final PlannerProgressTaskBoardTaskFormat value) {
         this.progressTaskBoardFormat = value;
     }
     /**
@@ -598,8 +598,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the referenceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferenceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setReferenceCount(@jakarta.annotation.Nullable final Integer value) {
         this.referenceCount = value;
     }
     /**
@@ -607,8 +607,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
@@ -616,8 +616,8 @@ public class PlannerTask extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

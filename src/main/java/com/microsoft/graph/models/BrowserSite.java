@@ -63,7 +63,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Instantiates a new browserSite and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSite() {
         super();
     }
@@ -72,8 +72,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a browserSite
      */
-    @javax.annotation.Nonnull
-    public static BrowserSite createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BrowserSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BrowserSite();
     }
@@ -81,7 +81,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowRedirect() {
         return this.allowRedirect;
     }
@@ -89,7 +89,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the comment property value. The comment for the site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComment() {
         return this.comment;
     }
@@ -97,7 +97,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the compatibilityMode property value. The compatibilityMode property
      * @return a browserSiteCompatibilityMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSiteCompatibilityMode getCompatibilityMode() {
         return this.compatibilityMode;
     }
@@ -105,7 +105,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the site was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -113,7 +113,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the deletedDateTime property value. The date and time when the site was deleted.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
         return this.deletedDateTime;
     }
@@ -121,7 +121,7 @@ public class BrowserSite extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowRedirect", (n) -> { this.setAllowRedirect(n.getBooleanValue()); });
@@ -142,7 +142,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the history property value. The history of modifications applied to the site.
      * @return a browserSiteHistory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BrowserSiteHistory> getHistory() {
         return this.history;
     }
@@ -150,7 +150,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The user who last modified the site.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -158,7 +158,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the site was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -166,7 +166,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the mergeType property value. The mergeType property
      * @return a browserSiteMergeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSiteMergeType getMergeType() {
         return this.mergeType;
     }
@@ -174,7 +174,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a browserSiteStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSiteStatus getStatus() {
         return this.status;
     }
@@ -182,7 +182,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the targetEnvironment property value. The targetEnvironment property
      * @return a browserSiteTargetEnvironment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSiteTargetEnvironment getTargetEnvironment() {
         return this.targetEnvironment;
     }
@@ -190,7 +190,7 @@ public class BrowserSite extends Entity implements Parsable {
      * Gets the webUrl property value. The URL of the site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -199,8 +199,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowRedirect", this.getAllowRedirect());
@@ -221,8 +221,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the allowRedirect property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowRedirect(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowRedirect(@jakarta.annotation.Nullable final Boolean value) {
         this.allowRedirect = value;
     }
     /**
@@ -230,8 +230,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
@@ -239,8 +239,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the compatibilityMode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompatibilityMode(@javax.annotation.Nullable final BrowserSiteCompatibilityMode value) {
+    @jakarta.annotation.Nonnull
+    public void setCompatibilityMode(@jakarta.annotation.Nullable final BrowserSiteCompatibilityMode value) {
         this.compatibilityMode = value;
     }
     /**
@@ -248,8 +248,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -257,8 +257,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deletedDateTime = value;
     }
     /**
@@ -266,8 +266,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHistory(@javax.annotation.Nullable final java.util.List<BrowserSiteHistory> value) {
+    @jakarta.annotation.Nonnull
+    public void setHistory(@jakarta.annotation.Nullable final java.util.List<BrowserSiteHistory> value) {
         this.history = value;
     }
     /**
@@ -275,8 +275,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -284,8 +284,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -293,8 +293,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the mergeType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMergeType(@javax.annotation.Nullable final BrowserSiteMergeType value) {
+    @jakarta.annotation.Nonnull
+    public void setMergeType(@jakarta.annotation.Nullable final BrowserSiteMergeType value) {
         this.mergeType = value;
     }
     /**
@@ -302,8 +302,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final BrowserSiteStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final BrowserSiteStatus value) {
         this.status = value;
     }
     /**
@@ -311,8 +311,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the targetEnvironment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetEnvironment(@javax.annotation.Nullable final BrowserSiteTargetEnvironment value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetEnvironment(@jakarta.annotation.Nullable final BrowserSiteTargetEnvironment value) {
         this.targetEnvironment = value;
     }
     /**
@@ -320,8 +320,8 @@ public class BrowserSite extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

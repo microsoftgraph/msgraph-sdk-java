@@ -24,7 +24,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * Instantiates a new BaseDeltaFunctionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BaseDeltaFunctionResponse() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -33,8 +33,8 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a BaseDeltaFunctionResponse
      */
-    @javax.annotation.Nonnull
-    public static BaseDeltaFunctionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BaseDeltaFunctionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BaseDeltaFunctionResponse();
     }
@@ -42,7 +42,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -50,7 +50,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.deltaLink", (n) -> { this.setOdataDeltaLink(n.getStringValue()); });
@@ -61,7 +61,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * Gets the @odata.deltaLink property value. The OdataDeltaLink property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataDeltaLink() {
         return this.odataDeltaLink;
     }
@@ -69,7 +69,7 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * Gets the @odata.nextLink property value. The OdataNextLink property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataNextLink() {
         return this.odataNextLink;
     }
@@ -78,8 +78,8 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.deltaLink", this.getOdataDeltaLink());
         writer.writeStringValue("@odata.nextLink", this.getOdataNextLink());
@@ -90,8 +90,8 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -99,8 +99,8 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * @param value Value to set for the @odata.deltaLink property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataDeltaLink(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataDeltaLink(@jakarta.annotation.Nullable final String value) {
         this.odataDeltaLink = value;
     }
     /**
@@ -108,8 +108,8 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
      * @param value Value to set for the @odata.nextLink property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataNextLink(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataNextLink(@jakarta.annotation.Nullable final String value) {
         this.odataNextLink = value;
     }
 }

@@ -37,7 +37,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new accrIntMPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccrIntMPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,8 +46,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accrIntMPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static AccrIntMPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccrIntMPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccrIntMPostRequestBody();
     }
@@ -55,7 +55,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -63,7 +63,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the basis property value. The basis property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getBasis() {
         return this.basis;
     }
@@ -71,7 +71,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("basis", (n) -> { this.setBasis(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -85,7 +85,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the issue property value. The issue property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getIssue() {
         return this.issue;
     }
@@ -93,7 +93,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the par property value. The par property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getPar() {
         return this.par;
     }
@@ -101,7 +101,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the rate property value. The rate property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getRate() {
         return this.rate;
     }
@@ -109,7 +109,7 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the settlement property value. The settlement property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getSettlement() {
         return this.settlement;
     }
@@ -118,8 +118,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("basis", this.getBasis());
         writer.writeObjectValue("issue", this.getIssue());
@@ -133,8 +133,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -142,8 +142,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the basis property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBasis(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setBasis(@jakarta.annotation.Nullable final Json value) {
         this.basis = value;
     }
     /**
@@ -151,8 +151,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the issue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssue(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setIssue(@jakarta.annotation.Nullable final Json value) {
         this.issue = value;
     }
     /**
@@ -160,8 +160,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the par property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPar(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setPar(@jakarta.annotation.Nullable final Json value) {
         this.par = value;
     }
     /**
@@ -169,8 +169,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the rate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRate(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setRate(@jakarta.annotation.Nullable final Json value) {
         this.rate = value;
     }
     /**
@@ -178,8 +178,8 @@ public class AccrIntMPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the settlement property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettlement(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setSettlement(@jakarta.annotation.Nullable final Json value) {
         this.settlement = value;
     }
 }

@@ -68,7 +68,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Instantiates a new mailTips and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MailTips() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,8 +77,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mailTips
      */
-    @javax.annotation.Nonnull
-    public static MailTips createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MailTips createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MailTips();
     }
@@ -86,7 +86,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -94,7 +94,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the automaticReplies property value. Mail tips for automatic reply if it has been set up by the recipient.
      * @return a automaticRepliesMailTips
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AutomaticRepliesMailTips getAutomaticReplies() {
         return this.automaticReplies;
     }
@@ -102,7 +102,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the customMailTip property value. A custom mail tip that can be set on the recipient's mailbox.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomMailTip() {
         return this.customMailTip;
     }
@@ -110,7 +110,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the deliveryRestricted property value. Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeliveryRestricted() {
         return this.deliveryRestricted;
     }
@@ -118,7 +118,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the emailAddress property value. The email address of the recipient to get mailtips for.
      * @return a emailAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailAddress getEmailAddress() {
         return this.emailAddress;
     }
@@ -126,7 +126,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the error property value. Errors that occur during the getMailTips action.
      * @return a mailTipsError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MailTipsError getError() {
         return this.error;
     }
@@ -134,7 +134,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the externalMemberCount property value. The number of external members if the recipient is a distribution list.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getExternalMemberCount() {
         return this.externalMemberCount;
     }
@@ -142,7 +142,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("automaticReplies", (n) -> { this.setAutomaticReplies(n.getObjectValue(AutomaticRepliesMailTips::createFromDiscriminatorValue)); });
@@ -164,7 +164,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsModerated() {
         return this.isModerated;
     }
@@ -172,7 +172,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the mailboxFull property value. The mailbox full status of the recipient.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMailboxFull() {
         return this.mailboxFull;
     }
@@ -180,7 +180,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the maxMessageSize property value. The maximum message size that has been configured for the recipient's organization or mailbox.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxMessageSize() {
         return this.maxMessageSize;
     }
@@ -188,7 +188,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -196,7 +196,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @return a recipientScopeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecipientScopeType getRecipientScope() {
         return this.recipientScope;
     }
@@ -204,7 +204,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the recipientSuggestions property value. Recipients suggested based on previous contexts where they appear in the same message.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getRecipientSuggestions() {
         return this.recipientSuggestions;
     }
@@ -212,7 +212,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Gets the totalMemberCount property value. The number of members if the recipient is a distribution list.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalMemberCount() {
         return this.totalMemberCount;
     }
@@ -221,8 +221,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("automaticReplies", this.getAutomaticReplies());
         writer.writeStringValue("customMailTip", this.getCustomMailTip());
@@ -244,8 +244,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -253,8 +253,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the automaticReplies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutomaticReplies(@javax.annotation.Nullable final AutomaticRepliesMailTips value) {
+    @jakarta.annotation.Nonnull
+    public void setAutomaticReplies(@jakarta.annotation.Nullable final AutomaticRepliesMailTips value) {
         this.automaticReplies = value;
     }
     /**
@@ -262,8 +262,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customMailTip property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomMailTip(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomMailTip(@jakarta.annotation.Nullable final String value) {
         this.customMailTip = value;
     }
     /**
@@ -271,8 +271,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deliveryRestricted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeliveryRestricted(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeliveryRestricted(@jakarta.annotation.Nullable final Boolean value) {
         this.deliveryRestricted = value;
     }
     /**
@@ -280,8 +280,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailAddress(@jakarta.annotation.Nullable final EmailAddress value) {
         this.emailAddress = value;
     }
     /**
@@ -289,8 +289,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final MailTipsError value) {
+    @jakarta.annotation.Nonnull
+    public void setError(@jakarta.annotation.Nullable final MailTipsError value) {
         this.error = value;
     }
     /**
@@ -298,8 +298,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalMemberCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalMemberCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalMemberCount(@jakarta.annotation.Nullable final Integer value) {
         this.externalMemberCount = value;
     }
     /**
@@ -307,8 +307,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isModerated property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsModerated(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsModerated(@jakarta.annotation.Nullable final Boolean value) {
         this.isModerated = value;
     }
     /**
@@ -316,8 +316,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mailboxFull property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMailboxFull(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMailboxFull(@jakarta.annotation.Nullable final Boolean value) {
         this.mailboxFull = value;
     }
     /**
@@ -325,8 +325,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxMessageSize property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxMessageSize(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxMessageSize(@jakarta.annotation.Nullable final Integer value) {
         this.maxMessageSize = value;
     }
     /**
@@ -334,8 +334,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -343,8 +343,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recipientScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipientScope(@javax.annotation.Nullable final RecipientScopeType value) {
+    @jakarta.annotation.Nonnull
+    public void setRecipientScope(@jakarta.annotation.Nullable final RecipientScopeType value) {
         this.recipientScope = value;
     }
     /**
@@ -352,8 +352,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recipientSuggestions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipientSuggestions(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    @jakarta.annotation.Nonnull
+    public void setRecipientSuggestions(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.recipientSuggestions = value;
     }
     /**
@@ -361,8 +361,8 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalMemberCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalMemberCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalMemberCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalMemberCount = value;
     }
 }

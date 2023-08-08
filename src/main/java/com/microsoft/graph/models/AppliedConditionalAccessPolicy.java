@@ -40,7 +40,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Instantiates a new appliedConditionalAccessPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppliedConditionalAccessPolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appliedConditionalAccessPolicy
      */
-    @javax.annotation.Nonnull
-    public static AppliedConditionalAccessPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppliedConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppliedConditionalAccessPolicy();
     }
@@ -58,7 +58,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,7 +74,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedGrantControls() {
         return this.enforcedGrantControls;
     }
@@ -82,7 +82,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedSessionControls() {
         return this.enforcedSessionControls;
     }
@@ -90,7 +90,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -105,7 +105,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the id property value. An identifier of the conditional access policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -113,7 +113,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -121,7 +121,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue.
      * @return a appliedConditionalAccessPolicyResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppliedConditionalAccessPolicyResult getResult() {
         return this.result;
     }
@@ -130,8 +130,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("enforcedGrantControls", this.getEnforcedGrantControls());
@@ -146,8 +146,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -164,8 +164,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the enforcedGrantControls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforcedGrantControls(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setEnforcedGrantControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enforcedGrantControls = value;
     }
     /**
@@ -173,8 +173,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the enforcedSessionControls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforcedSessionControls(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setEnforcedSessionControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enforcedSessionControls = value;
     }
     /**
@@ -182,8 +182,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -191,8 +191,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -200,8 +200,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the result property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResult(@javax.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
+    @jakarta.annotation.Nonnull
+    public void setResult(@jakarta.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
         this.result = value;
     }
 }

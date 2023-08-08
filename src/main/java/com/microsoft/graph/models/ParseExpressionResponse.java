@@ -40,7 +40,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Instantiates a new parseExpressionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParseExpressionResponse() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a parseExpressionResponse
      */
-    @javax.annotation.Nonnull
-    public static ParseExpressionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ParseExpressionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ParseExpressionResponse();
     }
@@ -58,7 +58,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Gets the error property value. Error details, if expression evaluation resulted in an error.
      * @return a publicError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PublicError getError() {
         return this.error;
     }
@@ -74,7 +74,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Gets the evaluationResult property value. A collection of values produced by the evaluation of the expression.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEvaluationResult() {
         return this.evaluationResult;
     }
@@ -82,7 +82,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Gets the evaluationSucceeded property value. true if the evaluation was successful.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEvaluationSucceeded() {
         return this.evaluationSucceeded;
     }
@@ -90,7 +90,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
@@ -105,7 +105,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -113,7 +113,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Gets the parsedExpression property value. An attributeMappingSource object representing the parsed expression.
      * @return a attributeMappingSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttributeMappingSource getParsedExpression() {
         return this.parsedExpression;
     }
@@ -121,7 +121,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Gets the parsingSucceeded property value. true if the expression was parsed successfully.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getParsingSucceeded() {
         return this.parsingSucceeded;
     }
@@ -130,8 +130,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
         writer.writeCollectionOfPrimitiveValues("evaluationResult", this.getEvaluationResult());
@@ -146,8 +146,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final PublicError value) {
+    @jakarta.annotation.Nonnull
+    public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.error = value;
     }
     /**
@@ -164,8 +164,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEvaluationResult(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setEvaluationResult(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.evaluationResult = value;
     }
     /**
@@ -173,8 +173,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the evaluationSucceeded property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEvaluationSucceeded(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEvaluationSucceeded(@jakarta.annotation.Nullable final Boolean value) {
         this.evaluationSucceeded = value;
     }
     /**
@@ -182,8 +182,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -191,8 +191,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parsedExpression property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParsedExpression(@javax.annotation.Nullable final AttributeMappingSource value) {
+    @jakarta.annotation.Nonnull
+    public void setParsedExpression(@jakarta.annotation.Nullable final AttributeMappingSource value) {
         this.parsedExpression = value;
     }
     /**
@@ -200,8 +200,8 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parsingSucceeded property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParsingSucceeded(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setParsingSucceeded(@jakarta.annotation.Nullable final Boolean value) {
         this.parsingSucceeded = value;
     }
 }

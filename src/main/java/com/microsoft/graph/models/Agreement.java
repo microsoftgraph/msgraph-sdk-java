@@ -44,7 +44,7 @@ public class Agreement extends Entity implements Parsable {
      * Instantiates a new agreement and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Agreement() {
         super();
     }
@@ -53,8 +53,8 @@ public class Agreement extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a agreement
      */
-    @javax.annotation.Nonnull
-    public static Agreement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Agreement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Agreement();
     }
@@ -62,7 +62,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the acceptances property value. Read-only. Information about acceptances of this agreement.
      * @return a agreementAcceptance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAcceptances() {
         return this.acceptances;
     }
@@ -70,7 +70,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -78,7 +78,7 @@ public class Agreement extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acceptances", (n) -> { this.setAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
@@ -95,7 +95,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the file property value. Default PDF linked to this agreement.
      * @return a agreementFile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AgreementFile getFile() {
         return this.file;
     }
@@ -103,7 +103,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
      * @return a agreementFileLocalization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AgreementFileLocalization> getFiles() {
         return this.files;
     }
@@ -111,7 +111,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPerDeviceAcceptanceRequired() {
         return this.isPerDeviceAcceptanceRequired;
     }
@@ -119,7 +119,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the isViewingBeforeAcceptanceRequired property value. Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsViewingBeforeAcceptanceRequired() {
         return this.isViewingBeforeAcceptanceRequired;
     }
@@ -127,7 +127,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
      * @return a termsExpiration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TermsExpiration getTermsExpiration() {
         return this.termsExpiration;
     }
@@ -135,7 +135,7 @@ public class Agreement extends Entity implements Parsable {
      * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getUserReacceptRequiredFrequency() {
         return this.userReacceptRequiredFrequency;
     }
@@ -144,8 +144,8 @@ public class Agreement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("acceptances", this.getAcceptances());
@@ -162,8 +162,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the acceptances property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcceptances(@javax.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
+    @jakarta.annotation.Nonnull
+    public void setAcceptances(@jakarta.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this.acceptances = value;
     }
     /**
@@ -171,8 +171,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -180,8 +180,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the file property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFile(@javax.annotation.Nullable final AgreementFile value) {
+    @jakarta.annotation.Nonnull
+    public void setFile(@jakarta.annotation.Nullable final AgreementFile value) {
         this.file = value;
     }
     /**
@@ -189,8 +189,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the files property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFiles(@javax.annotation.Nullable final java.util.List<AgreementFileLocalization> value) {
+    @jakarta.annotation.Nonnull
+    public void setFiles(@jakarta.annotation.Nullable final java.util.List<AgreementFileLocalization> value) {
         this.files = value;
     }
     /**
@@ -198,8 +198,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the isPerDeviceAcceptanceRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPerDeviceAcceptanceRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPerDeviceAcceptanceRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isPerDeviceAcceptanceRequired = value;
     }
     /**
@@ -207,8 +207,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the isViewingBeforeAcceptanceRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsViewingBeforeAcceptanceRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsViewingBeforeAcceptanceRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isViewingBeforeAcceptanceRequired = value;
     }
     /**
@@ -216,8 +216,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the termsExpiration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTermsExpiration(@javax.annotation.Nullable final TermsExpiration value) {
+    @jakarta.annotation.Nonnull
+    public void setTermsExpiration(@jakarta.annotation.Nullable final TermsExpiration value) {
         this.termsExpiration = value;
     }
     /**
@@ -225,8 +225,8 @@ public class Agreement extends Entity implements Parsable {
      * @param value Value to set for the userReacceptRequiredFrequency property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserReacceptRequiredFrequency(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setUserReacceptRequiredFrequency(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.userReacceptRequiredFrequency = value;
     }
 }

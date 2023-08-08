@@ -28,7 +28,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * Instantiates a new onlineMeetingRestricted and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingRestricted() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onlineMeetingRestricted
      */
-    @javax.annotation.Nonnull
-    public static OnlineMeetingRestricted createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnlineMeetingRestricted createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnlineMeetingRestricted();
     }
@@ -46,7 +46,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * Gets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @return a onlineMeetingContentSharingDisabledReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingContentSharingDisabledReason getContentSharingDisabled() {
         return this.contentSharingDisabled;
     }
@@ -62,7 +62,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("contentSharingDisabled", (n) -> { this.setContentSharingDisabled(n.getEnumValue(OnlineMeetingContentSharingDisabledReason.class)); });
@@ -74,7 +74,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * Gets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      * @return a onlineMeetingVideoDisabledReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingVideoDisabledReason getVideoDisabled() {
         return this.videoDisabled;
     }
@@ -91,8 +91,8 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("contentSharingDisabled", this.getContentSharingDisabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentSharingDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentSharingDisabled(@javax.annotation.Nullable final OnlineMeetingContentSharingDisabledReason value) {
+    @jakarta.annotation.Nonnull
+    public void setContentSharingDisabled(@jakarta.annotation.Nullable final OnlineMeetingContentSharingDisabledReason value) {
         this.contentSharingDisabled = value;
     }
     /**
@@ -122,8 +122,8 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class OnlineMeetingRestricted implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the videoDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVideoDisabled(@javax.annotation.Nullable final OnlineMeetingVideoDisabledReason value) {
+    @jakarta.annotation.Nonnull
+    public void setVideoDisabled(@jakarta.annotation.Nullable final OnlineMeetingVideoDisabledReason value) {
         this.videoDisabled = value;
     }
 }

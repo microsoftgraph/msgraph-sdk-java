@@ -23,7 +23,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * Instantiates a new sharePointIdentitySet and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharePointIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.sharePointIdentitySet");
@@ -33,8 +33,8 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sharePointIdentitySet
      */
-    @javax.annotation.Nonnull
-    public static SharePointIdentitySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SharePointIdentitySet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SharePointIdentitySet();
     }
@@ -42,7 +42,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -54,7 +54,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * Gets the group property value. The group associated with this action. Optional.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getGroup() {
         return this.group;
     }
@@ -62,7 +62,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * Gets the siteGroup property value. The SharePoint group associated with this action. Optional.
      * @return a sharePointIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharePointIdentity getSiteGroup() {
         return this.siteGroup;
     }
@@ -70,7 +70,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * Gets the siteUser property value. The SharePoint user associated with this action. Optional.
      * @return a sharePointIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharePointIdentity getSiteUser() {
         return this.siteUser;
     }
@@ -79,8 +79,8 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("group", this.getGroup());
@@ -92,8 +92,8 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the group property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroup(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setGroup(@jakarta.annotation.Nullable final Identity value) {
         this.group = value;
     }
     /**
@@ -101,8 +101,8 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the siteGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteGroup(@javax.annotation.Nullable final SharePointIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setSiteGroup(@jakarta.annotation.Nullable final SharePointIdentity value) {
         this.siteGroup = value;
     }
     /**
@@ -110,8 +110,8 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the siteUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteUser(@javax.annotation.Nullable final SharePointIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setSiteUser(@jakarta.annotation.Nullable final SharePointIdentity value) {
         this.siteUser = value;
     }
 }

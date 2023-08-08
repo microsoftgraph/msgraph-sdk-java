@@ -17,10 +17,10 @@ public enum SynchronizationMetadata implements ValuedEnum {
     SynchronizationMetadata(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SynchronizationMetadata forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SynchronizationMetadata forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "GalleryApplicationIdentifier": return GalleryApplicationIdentifier;

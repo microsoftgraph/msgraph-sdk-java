@@ -24,7 +24,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Provides operations to call the sync method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SyncRequestBuilder sync() {
         return new SyncRequestBuilder(pathParameters, requestAdapter);
     }
@@ -34,8 +34,8 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceManagementExchangeConnectorItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExchangeConnectorItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/exchangeConnectors/{deviceManagementExchangeConnector%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -44,15 +44,16 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceManagementExchangeConnectorItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementExchangeConnectorItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/exchangeConnectors/{deviceManagementExchangeConnector%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property exchangeConnectors for deviceManagement
+     * Deletes a deviceManagementExchangeConnector.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -67,12 +68,13 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Delete navigation property exchangeConnectors for deviceManagement
+     * Deletes a deviceManagementExchangeConnector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,10 +88,11 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * The list of Exchange Connectors configured by the tenant.
+     * Read properties and relationships of the deviceManagementExchangeConnector object.
      * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -104,12 +107,13 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * The list of Exchange Connectors configured by the tenant.
+     * Read properties and relationships of the deviceManagementExchangeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -123,12 +127,13 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the navigation property exchangeConnectors in deviceManagement
+     * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
      * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@javax.annotation.Nonnull final DeviceManagementExchangeConnector body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -142,13 +147,14 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Update the navigation property exchangeConnectors in deviceManagement
+     * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@javax.annotation.Nonnull final DeviceManagementExchangeConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -163,20 +169,20 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         }
     }
     /**
-     * Delete navigation property exchangeConnectors for deviceManagement
+     * Deletes a deviceManagementExchangeConnector.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property exchangeConnectors for deviceManagement
+     * Deletes a deviceManagementExchangeConnector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -190,20 +196,20 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * The list of Exchange Connectors configured by the tenant.
+     * Read properties and relationships of the deviceManagementExchangeConnector object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of Exchange Connectors configured by the tenant.
+     * Read properties and relationships of the deviceManagementExchangeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -219,22 +225,22 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Update the navigation property exchangeConnectors in deviceManagement
+     * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceManagementExchangeConnector body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property exchangeConnectors in deviceManagement
+     * Update the properties of a deviceManagementExchangeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceManagementExchangeConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -256,20 +262,20 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of Exchange Connectors configured by the tenant.
+     * Read properties and relationships of the deviceManagementExchangeConnector object.
      */
     public class GetQueryParameters {
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -279,7 +285,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

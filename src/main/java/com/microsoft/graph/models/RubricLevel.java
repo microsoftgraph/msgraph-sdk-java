@@ -36,7 +36,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * Instantiates a new rubricLevel and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RubricLevel() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a rubricLevel
      */
-    @javax.annotation.Nonnull
-    public static RubricLevel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RubricLevel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RubricLevel();
     }
@@ -54,7 +54,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * Gets the description property value. The description of this rubric level.
      * @return a educationItemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationItemBody getDescription() {
         return this.description;
     }
@@ -70,7 +70,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The name of this rubric level.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -78,7 +78,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
@@ -92,7 +92,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * Gets the grading property value. Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
      * @return a educationAssignmentGradeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
         return this.grading;
     }
@@ -100,7 +100,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * Gets the levelId property value. The ID of this resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLevelId() {
         return this.levelId;
     }
@@ -108,7 +108,7 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -117,8 +117,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -132,8 +132,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final EducationItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final EducationItemBody value) {
         this.description = value;
     }
     /**
@@ -150,8 +150,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -159,8 +159,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the grading property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrading(@javax.annotation.Nullable final EducationAssignmentGradeType value) {
+    @jakarta.annotation.Nonnull
+    public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {
         this.grading = value;
     }
     /**
@@ -168,8 +168,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the levelId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLevelId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLevelId(@jakarta.annotation.Nullable final String value) {
         this.levelId = value;
     }
     /**
@@ -177,8 +177,8 @@ public class RubricLevel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

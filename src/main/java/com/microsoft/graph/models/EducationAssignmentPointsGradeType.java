@@ -15,7 +15,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * Instantiates a new educationAssignmentPointsGradeType and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentPointsGradeType() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentPointsGradeType");
@@ -25,8 +25,8 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationAssignmentPointsGradeType
      */
-    @javax.annotation.Nonnull
-    public static EducationAssignmentPointsGradeType createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationAssignmentPointsGradeType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationAssignmentPointsGradeType();
     }
@@ -34,7 +34,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("maxPoints", (n) -> { this.setMaxPoints(n.getFloatValue()); });
@@ -44,7 +44,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * Gets the maxPoints property value. Max points possible for this assignment.
      * @return a float
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Float getMaxPoints() {
         return this.maxPoints;
     }
@@ -53,8 +53,8 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeFloatValue("maxPoints", this.getMaxPoints());
@@ -64,8 +64,8 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
      * @param value Value to set for the maxPoints property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxPoints(@javax.annotation.Nullable final Float value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxPoints(@jakarta.annotation.Nullable final Float value) {
         this.maxPoints = value;
     }
 }

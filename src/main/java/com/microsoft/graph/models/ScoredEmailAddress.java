@@ -36,7 +36,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Instantiates a new scoredEmailAddress and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ScoredEmailAddress() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a scoredEmailAddress
      */
-    @javax.annotation.Nonnull
-    public static ScoredEmailAddress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ScoredEmailAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ScoredEmailAddress();
     }
@@ -54,7 +54,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Gets the address property value. The email address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAddress() {
         return this.address;
     }
@@ -70,7 +70,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
@@ -84,7 +84,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Gets the itemId property value. The itemId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getItemId() {
         return this.itemId;
     }
@@ -92,7 +92,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the users communication and collaboration patterns and business relationships.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getRelevanceScore() {
         return this.relevanceScore;
     }
@@ -108,7 +108,7 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * Gets the selectionLikelihood property value. The selectionLikelihood property
      * @return a selectionLikelihoodInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SelectionLikelihoodInfo getSelectionLikelihood() {
         return this.selectionLikelihood;
     }
@@ -117,8 +117,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
         writer.writeStringValue("itemId", this.getItemId());
@@ -132,8 +132,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAddress(@jakarta.annotation.Nullable final String value) {
         this.address = value;
     }
     /**
@@ -150,8 +150,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the itemId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setItemId(@jakarta.annotation.Nullable final String value) {
         this.itemId = value;
     }
     /**
@@ -159,8 +159,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the relevanceScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRelevanceScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setRelevanceScore(@jakarta.annotation.Nullable final Double value) {
         this.relevanceScore = value;
     }
     /**
@@ -177,8 +177,8 @@ public class ScoredEmailAddress implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the selectionLikelihood property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelectionLikelihood(@javax.annotation.Nullable final SelectionLikelihoodInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setSelectionLikelihood(@jakarta.annotation.Nullable final SelectionLikelihoodInfo value) {
         this.selectionLikelihood = value;
     }
 }

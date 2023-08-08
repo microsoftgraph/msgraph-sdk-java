@@ -29,7 +29,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * Instantiates a new assignSensitivityLabelPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AssignSensitivityLabelPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a assignSensitivityLabelPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static AssignSensitivityLabelPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AssignSensitivityLabelPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AssignSensitivityLabelPostRequestBody();
     }
@@ -47,7 +47,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * Gets the assignmentMethod property value. The assignmentMethod property
      * @return a sensitivityLabelAssignmentMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SensitivityLabelAssignmentMethod getAssignmentMethod() {
         return this.assignmentMethod;
     }
@@ -63,7 +63,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("assignmentMethod", (n) -> { this.setAssignmentMethod(n.getEnumValue(SensitivityLabelAssignmentMethod.class)); });
@@ -75,7 +75,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * Gets the justificationText property value. The justificationText property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustificationText() {
         return this.justificationText;
     }
@@ -83,7 +83,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * Gets the sensitivityLabelId property value. The sensitivityLabelId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {
         return this.sensitivityLabelId;
     }
@@ -92,8 +92,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
         writer.writeStringValue("justificationText", this.getJustificationText());
@@ -105,8 +105,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the assignmentMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentMethod(@javax.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentMethod(@jakarta.annotation.Nullable final SensitivityLabelAssignmentMethod value) {
         this.assignmentMethod = value;
     }
     /**
@@ -123,8 +123,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the justificationText property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustificationText(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustificationText(@jakarta.annotation.Nullable final String value) {
         this.justificationText = value;
     }
     /**
@@ -132,8 +132,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the sensitivityLabelId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitivityLabelId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
         this.sensitivityLabelId = value;
     }
 }

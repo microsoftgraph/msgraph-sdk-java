@@ -8,23 +8,23 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageResourceScope extends Entity implements Parsable {
     /**
-     * The description property
+     * The description of the scope.
      */
     private String description;
     /**
-     * The displayName property
+     * The display name of the scope.
      */
     private String displayName;
     /**
-     * The isRootScope property
+     * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      */
     private Boolean isRootScope;
     /**
-     * The originId property
+     * The unique identifier for the scope in the resource as defined in the origin system.
      */
     private String originId;
     /**
-     * The originSystem property
+     * The origin system for the scope.
      */
     private String originSystem;
     /**
@@ -35,7 +35,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * Instantiates a new accessPackageResourceScope and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResourceScope() {
         super();
     }
@@ -44,24 +44,24 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageResourceScope
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageResourceScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageResourceScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageResourceScope();
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the scope.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the scope.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +69,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -81,26 +81,26 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isRootScope property value. The isRootScope property
+     * Gets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRootScope() {
         return this.isRootScope;
     }
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginId() {
         return this.originId;
     }
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The origin system for the scope.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginSystem() {
         return this.originSystem;
     }
@@ -108,7 +108,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * Gets the resource property value. The resource property
      * @return a accessPackageResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResource getResource() {
         return this.resource;
     }
@@ -117,8 +117,8 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -129,48 +129,48 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the scope.
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the scope.
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the isRootScope property value. The isRootScope property
+     * Sets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
      * @param value Value to set for the isRootScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRootScope(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRootScope(@jakarta.annotation.Nullable final Boolean value) {
         this.isRootScope = value;
     }
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @param value Value to set for the originId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.originId = value;
     }
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The origin system for the scope.
      * @param value Value to set for the originSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginSystem(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.originSystem = value;
     }
     /**
@@ -178,8 +178,8 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final AccessPackageResource value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
         this.resource = value;
     }
 }

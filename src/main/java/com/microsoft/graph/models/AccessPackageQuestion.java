@@ -31,7 +31,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * Instantiates a new accessPackageQuestion and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageQuestion() {
         super();
     }
@@ -40,8 +40,8 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageQuestion
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageQuestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -57,7 +57,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isAnswerEditable", (n) -> { this.setIsAnswerEditable(n.getBooleanValue()); });
@@ -71,7 +71,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * Gets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions for an assignment by posting an update to accessPackageAssignmentRequest.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAnswerEditable() {
         return this.isAnswerEditable;
     }
@@ -79,7 +79,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * Gets the isRequired property value. Whether the requestor is required to supply an answer or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
         return this.isRequired;
     }
@@ -87,7 +87,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * Gets the localizations property value. The text of the question represented in a format for a specific locale.
      * @return a accessPackageLocalizedText
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageLocalizedText> getLocalizations() {
         return this.localizations;
     }
@@ -95,7 +95,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSequence() {
         return this.sequence;
     }
@@ -103,7 +103,7 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * Gets the text property value. The text of the question to show to the requestor.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getText() {
         return this.text;
     }
@@ -112,8 +112,8 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isAnswerEditable", this.getIsAnswerEditable());
@@ -127,8 +127,8 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param value Value to set for the isAnswerEditable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAnswerEditable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAnswerEditable(@jakarta.annotation.Nullable final Boolean value) {
         this.isAnswerEditable = value;
     }
     /**
@@ -136,8 +136,8 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param value Value to set for the isRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
@@ -145,8 +145,8 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param value Value to set for the localizations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocalizations(@javax.annotation.Nullable final java.util.List<AccessPackageLocalizedText> value) {
+    @jakarta.annotation.Nonnull
+    public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<AccessPackageLocalizedText> value) {
         this.localizations = value;
     }
     /**
@@ -154,8 +154,8 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param value Value to set for the sequence property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSequence(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSequence(@jakarta.annotation.Nullable final Integer value) {
         this.sequence = value;
     }
     /**
@@ -163,8 +163,8 @@ public class AccessPackageQuestion extends Entity implements Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setText(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }
 }

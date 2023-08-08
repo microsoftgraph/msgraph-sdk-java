@@ -32,7 +32,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new convertIdResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConvertIdResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a convertIdResult
      */
-    @javax.annotation.Nonnull
-    public static ConvertIdResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConvertIdResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConvertIdResult();
     }
@@ -50,7 +50,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * Gets the errorDetails property value. An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
      * @return a genericError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GenericError getErrorDetails() {
         return this.errorDetails;
     }
@@ -66,7 +66,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("errorDetails", (n) -> { this.setErrorDetails(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });
@@ -79,7 +79,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -87,7 +87,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * Gets the sourceId property value. The identifier that was converted. This value is the original, un-converted identifier.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceId() {
         return this.sourceId;
     }
@@ -95,7 +95,7 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * Gets the targetId property value. The converted identifier. This value is not present if the conversion failed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetId() {
         return this.targetId;
     }
@@ -104,8 +104,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("errorDetails", this.getErrorDetails());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,8 +118,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the errorDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDetails(@javax.annotation.Nullable final GenericError value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorDetails(@jakarta.annotation.Nullable final GenericError value) {
         this.errorDetails = value;
     }
     /**
@@ -136,8 +136,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -145,8 +145,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceId(@jakarta.annotation.Nullable final String value) {
         this.sourceId = value;
     }
     /**
@@ -154,8 +154,8 @@ public class ConvertIdResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetId(@jakarta.annotation.Nullable final String value) {
         this.targetId = value;
     }
 }

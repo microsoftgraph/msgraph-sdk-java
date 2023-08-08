@@ -40,7 +40,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Instantiates a new informationalUrl and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InformationalUrl() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a informationalUrl
      */
-    @javax.annotation.Nonnull
-    public static InformationalUrl createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InformationalUrl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InformationalUrl();
     }
@@ -58,7 +58,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("logoUrl", (n) -> { this.setLogoUrl(n.getStringValue()); });
@@ -81,7 +81,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Gets the logoUrl property value. CDN URL to the application's logo, Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLogoUrl() {
         return this.logoUrl;
     }
@@ -89,7 +89,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Gets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMarketingUrl() {
         return this.marketingUrl;
     }
@@ -97,7 +97,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +105,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Gets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrivacyStatementUrl() {
         return this.privacyStatementUrl;
     }
@@ -113,7 +113,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Gets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSupportUrl() {
         return this.supportUrl;
     }
@@ -121,7 +121,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Gets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTermsOfServiceUrl() {
         return this.termsOfServiceUrl;
     }
@@ -130,8 +130,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("logoUrl", this.getLogoUrl());
         writer.writeStringValue("marketingUrl", this.getMarketingUrl());
@@ -146,8 +146,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logoUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLogoUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLogoUrl(@jakarta.annotation.Nullable final String value) {
         this.logoUrl = value;
     }
     /**
@@ -164,8 +164,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the marketingUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMarketingUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMarketingUrl(@jakarta.annotation.Nullable final String value) {
         this.marketingUrl = value;
     }
     /**
@@ -173,8 +173,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the privacyStatementUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivacyStatementUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrivacyStatementUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyStatementUrl = value;
     }
     /**
@@ -191,8 +191,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportUrl(@jakarta.annotation.Nullable final String value) {
         this.supportUrl = value;
     }
     /**
@@ -200,8 +200,8 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the termsOfServiceUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTermsOfServiceUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTermsOfServiceUrl(@jakarta.annotation.Nullable final String value) {
         this.termsOfServiceUrl = value;
     }
 }

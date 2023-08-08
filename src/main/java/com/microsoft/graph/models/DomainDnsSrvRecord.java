@@ -35,7 +35,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Instantiates a new domainDnsSrvRecord and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DomainDnsSrvRecord() {
         super();
     }
@@ -44,8 +44,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a domainDnsSrvRecord
      */
-    @javax.annotation.Nonnull
-    public static DomainDnsSrvRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DomainDnsSrvRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DomainDnsSrvRecord();
     }
@@ -53,7 +53,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("nameTarget", (n) -> { this.setNameTarget(n.getStringValue()); });
@@ -68,7 +68,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Gets the nameTarget property value. Value to use when configuring the Target property of the SRV record at the DNS host.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNameTarget() {
         return this.nameTarget;
     }
@@ -76,7 +76,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Gets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPort() {
         return this.port;
     }
@@ -84,7 +84,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Gets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -92,7 +92,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Gets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProtocol() {
         return this.protocol;
     }
@@ -100,7 +100,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Gets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getService() {
         return this.service;
     }
@@ -108,7 +108,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * Gets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWeight() {
         return this.weight;
     }
@@ -117,8 +117,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("nameTarget", this.getNameTarget());
@@ -133,8 +133,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the nameTarget property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNameTarget(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNameTarget(@jakarta.annotation.Nullable final String value) {
         this.nameTarget = value;
     }
     /**
@@ -142,8 +142,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the port property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPort(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.port = value;
     }
     /**
@@ -151,8 +151,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
@@ -160,8 +160,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the protocol property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProtocol(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProtocol(@jakarta.annotation.Nullable final String value) {
         this.protocol = value;
     }
     /**
@@ -169,8 +169,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setService(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setService(@jakarta.annotation.Nullable final String value) {
         this.service = value;
     }
     /**
@@ -178,8 +178,8 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the weight property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWeight(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setWeight(@jakarta.annotation.Nullable final Integer value) {
         this.weight = value;
     }
 }

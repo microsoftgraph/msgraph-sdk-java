@@ -12,10 +12,10 @@ public enum AppLogDecryptionAlgorithm implements ValuedEnum {
     AppLogDecryptionAlgorithm(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AppLogDecryptionAlgorithm forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AppLogDecryptionAlgorithm forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "aes256": return Aes256;

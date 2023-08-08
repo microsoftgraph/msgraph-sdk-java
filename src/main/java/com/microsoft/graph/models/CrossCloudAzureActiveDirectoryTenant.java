@@ -23,7 +23,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * Instantiates a new crossCloudAzureActiveDirectoryTenant and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossCloudAzureActiveDirectoryTenant() {
         super();
         this.setOdataType("#microsoft.graph.crossCloudAzureActiveDirectoryTenant");
@@ -33,8 +33,8 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a crossCloudAzureActiveDirectoryTenant
      */
-    @javax.annotation.Nonnull
-    public static CrossCloudAzureActiveDirectoryTenant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CrossCloudAzureActiveDirectoryTenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CrossCloudAzureActiveDirectoryTenant();
     }
@@ -42,7 +42,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * Gets the cloudInstance property value. The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCloudInstance() {
         return this.cloudInstance;
     }
@@ -50,7 +50,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * Gets the displayName property value. The name of the Azure Active Directory tenant. Read only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -58,7 +58,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cloudInstance", (n) -> { this.setCloudInstance(n.getStringValue()); });
@@ -70,7 +70,7 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -79,8 +79,8 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("cloudInstance", this.getCloudInstance());
@@ -92,8 +92,8 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * @param value Value to set for the cloudInstance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudInstance(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudInstance(@jakarta.annotation.Nullable final String value) {
         this.cloudInstance = value;
     }
     /**
@@ -101,8 +101,8 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -110,8 +110,8 @@ public class CrossCloudAzureActiveDirectoryTenant extends IdentitySource impleme
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

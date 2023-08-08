@@ -150,7 +150,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevice and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereDevice() {
         super();
     }
@@ -159,8 +159,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsWorkFromAnywhereDevice
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsWorkFromAnywhereDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsWorkFromAnywhereDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsWorkFromAnywhereDevice();
     }
@@ -168,7 +168,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the autoPilotProfileAssigned property value. When TRUE, indicates the intune device's autopilot profile is assigned. When FALSE, indicates it's not Assigned. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAutoPilotProfileAssigned() {
         return this.autoPilotProfileAssigned;
     }
@@ -176,7 +176,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the autoPilotRegistered property value. When TRUE, indicates the intune device's autopilot is registered. When FALSE, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAutoPilotRegistered() {
         return this.autoPilotRegistered;
     }
@@ -184,7 +184,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the azureAdDeviceId property value. The Azure Active Directory (Azure AD) device Id. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
         return this.azureAdDeviceId;
     }
@@ -192,7 +192,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the azureAdJoinType property value. The work from anywhere device's Azure Active Directory (Azure AD) join type. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureAdJoinType() {
         return this.azureAdJoinType;
     }
@@ -200,7 +200,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the azureAdRegistered property value. When TRUE, indicates the device's Azure Active Directory (Azure AD) is registered. When False, indicates it's not registered. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAzureAdRegistered() {
         return this.azureAdRegistered;
     }
@@ -208,7 +208,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the cloudIdentityScore property value. Indicates per device cloud identity score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getCloudIdentityScore() {
         return this.cloudIdentityScore;
     }
@@ -216,7 +216,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the cloudManagementScore property value. Indicates per device cloud management score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getCloudManagementScore() {
         return this.cloudManagementScore;
     }
@@ -224,7 +224,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the cloudProvisioningScore property value. Indicates per device cloud provisioning score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getCloudProvisioningScore() {
         return this.cloudProvisioningScore;
     }
@@ -232,7 +232,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the compliancePolicySetToIntune property value. When TRUE, indicates the device's compliance policy is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCompliancePolicySetToIntune() {
         return this.compliancePolicySetToIntune;
     }
@@ -240,7 +240,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the deviceId property value. The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -248,7 +248,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the deviceName property value. The name of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -256,7 +256,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("autoPilotProfileAssigned", (n) -> { this.setAutoPilotProfileAssigned(n.getBooleanValue()); });
@@ -299,7 +299,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
         return this.healthStatus;
     }
@@ -307,7 +307,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the isCloudManagedGatewayEnabled property value. When TRUE, indicates the device's Cloud Management Gateway for Configuration Manager is enabled. When FALSE, indicates it's not enabled. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCloudManagedGatewayEnabled() {
         return this.isCloudManagedGatewayEnabled;
     }
@@ -315,7 +315,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the managedBy property value. The management agent of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedBy() {
         return this.managedBy;
     }
@@ -323,7 +323,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the manufacturer property value. The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -331,7 +331,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -339,7 +339,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the osCheckFailed property value. When TRUE, indicates OS check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOsCheckFailed() {
         return this.osCheckFailed;
     }
@@ -347,7 +347,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the osDescription property value. The OS description of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsDescription() {
         return this.osDescription;
     }
@@ -355,7 +355,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the osVersion property value. The OS version of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -363,7 +363,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the otherWorkloadsSetToIntune property value. When TRUE, indicates the device's other workloads is set to intune. When FALSE, indicates it's not set to intune. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOtherWorkloadsSetToIntune() {
         return this.otherWorkloadsSetToIntune;
     }
@@ -371,7 +371,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the ownership property value. Ownership of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOwnership() {
         return this.ownership;
     }
@@ -379,7 +379,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the processor64BitCheckFailed property value. When TRUE, indicates processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getProcessor64BitCheckFailed() {
         return this.processor64BitCheckFailed;
     }
@@ -387,7 +387,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the processorCoreCountCheckFailed property value. When TRUE, indicates processor hardware core count check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getProcessorCoreCountCheckFailed() {
         return this.processorCoreCountCheckFailed;
     }
@@ -395,7 +395,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the processorFamilyCheckFailed property value. When TRUE, indicates processor hardware family check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getProcessorFamilyCheckFailed() {
         return this.processorFamilyCheckFailed;
     }
@@ -403,7 +403,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the processorSpeedCheckFailed property value. When TRUE, indicates processor hardware speed check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getProcessorSpeedCheckFailed() {
         return this.processorSpeedCheckFailed;
     }
@@ -411,7 +411,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the ramCheckFailed property value. When TRUE, indicates RAM hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRamCheckFailed() {
         return this.ramCheckFailed;
     }
@@ -419,7 +419,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the secureBootCheckFailed property value. When TRUE, indicates secure boot hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecureBootCheckFailed() {
         return this.secureBootCheckFailed;
     }
@@ -427,7 +427,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the serialNumber property value. The serial number of the device. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -435,7 +435,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the storageCheckFailed property value. When TRUE, indicates storage hardware check failed for device to upgrade to the latest version of windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageCheckFailed() {
         return this.storageCheckFailed;
     }
@@ -443,7 +443,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the tenantAttached property value. When TRUE, indicates the device is Tenant Attached. When FALSE, indicates it's not Tenant Attached. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTenantAttached() {
         return this.tenantAttached;
     }
@@ -451,7 +451,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the tpmCheckFailed property value. When TRUE, indicates Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows. When FALSE, indicates the check succeeded. Supports: $select, $OrderBy. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTpmCheckFailed() {
         return this.tpmCheckFailed;
     }
@@ -459,7 +459,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the upgradeEligibility property value. Work From Anywhere windows device upgrade eligibility status.
      * @return a operatingSystemUpgradeEligibility
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OperatingSystemUpgradeEligibility getUpgradeEligibility() {
         return this.upgradeEligibility;
     }
@@ -467,7 +467,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the windowsScore property value. Indicates per device windows score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getWindowsScore() {
         return this.windowsScore;
     }
@@ -475,7 +475,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Gets the workFromAnywhereScore property value. Indicates work from anywhere per device overall score. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getWorkFromAnywhereScore() {
         return this.workFromAnywhereScore;
     }
@@ -484,8 +484,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("autoPilotProfileAssigned", this.getAutoPilotProfileAssigned());
@@ -528,8 +528,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the autoPilotProfileAssigned property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutoPilotProfileAssigned(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAutoPilotProfileAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.autoPilotProfileAssigned = value;
     }
     /**
@@ -537,8 +537,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the autoPilotRegistered property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutoPilotRegistered(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAutoPilotRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.autoPilotRegistered = value;
     }
     /**
@@ -546,8 +546,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureAdDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureAdDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureAdDeviceId = value;
     }
     /**
@@ -555,8 +555,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the azureAdJoinType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureAdJoinType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureAdJoinType(@jakarta.annotation.Nullable final String value) {
         this.azureAdJoinType = value;
     }
     /**
@@ -564,8 +564,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the azureAdRegistered property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.azureAdRegistered = value;
     }
     /**
@@ -573,8 +573,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the cloudIdentityScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudIdentityScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudIdentityScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudIdentityScore = value;
     }
     /**
@@ -582,8 +582,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the cloudManagementScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudManagementScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudManagementScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudManagementScore = value;
     }
     /**
@@ -591,8 +591,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the cloudProvisioningScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudProvisioningScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudProvisioningScore(@jakarta.annotation.Nullable final Double value) {
         this.cloudProvisioningScore = value;
     }
     /**
@@ -600,8 +600,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the compliancePolicySetToIntune property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliancePolicySetToIntune(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliancePolicySetToIntune(@jakarta.annotation.Nullable final Boolean value) {
         this.compliancePolicySetToIntune = value;
     }
     /**
@@ -609,8 +609,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -618,8 +618,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -627,8 +627,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this.healthStatus = value;
     }
     /**
@@ -636,8 +636,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the isCloudManagedGatewayEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCloudManagedGatewayEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCloudManagedGatewayEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCloudManagedGatewayEnabled = value;
     }
     /**
@@ -645,8 +645,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the managedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedBy(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedBy(@jakarta.annotation.Nullable final String value) {
         this.managedBy = value;
     }
     /**
@@ -654,8 +654,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
@@ -663,8 +663,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the model property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
@@ -672,8 +672,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the osCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOsCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.osCheckFailed = value;
     }
     /**
@@ -681,8 +681,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the osDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsDescription(@jakarta.annotation.Nullable final String value) {
         this.osDescription = value;
     }
     /**
@@ -690,8 +690,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the osVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
@@ -699,8 +699,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the otherWorkloadsSetToIntune property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOtherWorkloadsSetToIntune(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOtherWorkloadsSetToIntune(@jakarta.annotation.Nullable final Boolean value) {
         this.otherWorkloadsSetToIntune = value;
     }
     /**
@@ -708,8 +708,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the ownership property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwnership(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOwnership(@jakarta.annotation.Nullable final String value) {
         this.ownership = value;
     }
     /**
@@ -717,8 +717,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processor64BitCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessor64BitCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessor64BitCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processor64BitCheckFailed = value;
     }
     /**
@@ -726,8 +726,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processorCoreCountCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessorCoreCountCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessorCoreCountCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processorCoreCountCheckFailed = value;
     }
     /**
@@ -735,8 +735,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processorFamilyCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessorFamilyCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessorFamilyCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processorFamilyCheckFailed = value;
     }
     /**
@@ -744,8 +744,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processorSpeedCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessorSpeedCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessorSpeedCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.processorSpeedCheckFailed = value;
     }
     /**
@@ -753,8 +753,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the ramCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRamCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRamCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.ramCheckFailed = value;
     }
     /**
@@ -762,8 +762,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the secureBootCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecureBootCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecureBootCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.secureBootCheckFailed = value;
     }
     /**
@@ -771,8 +771,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
@@ -780,8 +780,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the storageCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.storageCheckFailed = value;
     }
     /**
@@ -789,8 +789,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the tenantAttached property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantAttached(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantAttached(@jakarta.annotation.Nullable final Boolean value) {
         this.tenantAttached = value;
     }
     /**
@@ -798,8 +798,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the tpmCheckFailed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTpmCheckFailed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setTpmCheckFailed(@jakarta.annotation.Nullable final Boolean value) {
         this.tpmCheckFailed = value;
     }
     /**
@@ -807,8 +807,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the upgradeEligibility property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpgradeEligibility(@javax.annotation.Nullable final OperatingSystemUpgradeEligibility value) {
+    @jakarta.annotation.Nonnull
+    public void setUpgradeEligibility(@jakarta.annotation.Nullable final OperatingSystemUpgradeEligibility value) {
         this.upgradeEligibility = value;
     }
     /**
@@ -816,8 +816,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the windowsScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setWindowsScore(@jakarta.annotation.Nullable final Double value) {
         this.windowsScore = value;
     }
     /**
@@ -825,8 +825,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the workFromAnywhereScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkFromAnywhereScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkFromAnywhereScore(@jakarta.annotation.Nullable final Double value) {
         this.workFromAnywhereScore = value;
     }
 }

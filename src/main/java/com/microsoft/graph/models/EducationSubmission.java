@@ -68,7 +68,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Instantiates a new educationSubmission and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSubmission() {
         super();
     }
@@ -77,8 +77,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSubmission
      */
-    @javax.annotation.Nonnull
-    public static EducationSubmission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSubmission();
     }
@@ -86,7 +86,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("outcomes", (n) -> { this.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
@@ -109,7 +109,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the outcomes property value. The outcomes property
      * @return a educationOutcome
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationOutcome> getOutcomes() {
         return this.outcomes;
     }
@@ -117,7 +117,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the reassignedBy property value. User who moved the status of this submission to reassigned.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getReassignedBy() {
         return this.reassignedBy;
     }
@@ -125,7 +125,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the reassignedDateTime property value. Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReassignedDateTime() {
         return this.reassignedDateTime;
     }
@@ -133,7 +133,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the recipient property value. Who this submission is assigned to.
      * @return a educationSubmissionRecipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSubmissionRecipient getRecipient() {
         return this.recipient;
     }
@@ -141,7 +141,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the resources property value. The resources property
      * @return a educationSubmissionResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getResources() {
         return this.resources;
     }
@@ -149,7 +149,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the resourcesFolderUrl property value. Folder where all file resources for this submission need to be stored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
         return this.resourcesFolderUrl;
     }
@@ -157,7 +157,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the returnedBy property value. User who moved the status of this submission to returned.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getReturnedBy() {
         return this.returnedBy;
     }
@@ -165,7 +165,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the returnedDateTime property value. Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReturnedDateTime() {
         return this.returnedDateTime;
     }
@@ -173,7 +173,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
      * @return a educationSubmissionStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSubmissionStatus getStatus() {
         return this.status;
     }
@@ -181,7 +181,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the submittedBy property value. User who moved the resource into the submitted state.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getSubmittedBy() {
         return this.submittedBy;
     }
@@ -189,7 +189,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSubmittedDateTime() {
         return this.submittedDateTime;
     }
@@ -197,7 +197,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the submittedResources property value. The submittedResources property
      * @return a educationSubmissionResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getSubmittedResources() {
         return this.submittedResources;
     }
@@ -205,7 +205,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the unsubmittedBy property value. User who moved the resource from submitted into the working state.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getUnsubmittedBy() {
         return this.unsubmittedBy;
     }
@@ -213,7 +213,7 @@ public class EducationSubmission extends Entity implements Parsable {
      * Gets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getUnsubmittedDateTime() {
         return this.unsubmittedDateTime;
     }
@@ -222,8 +222,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("outcomes", this.getOutcomes());
@@ -236,8 +236,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the outcomes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutcomes(@javax.annotation.Nullable final java.util.List<EducationOutcome> value) {
+    @jakarta.annotation.Nonnull
+    public void setOutcomes(@jakarta.annotation.Nullable final java.util.List<EducationOutcome> value) {
         this.outcomes = value;
     }
     /**
@@ -245,8 +245,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the reassignedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReassignedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setReassignedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.reassignedBy = value;
     }
     /**
@@ -254,8 +254,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the reassignedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReassignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReassignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reassignedDateTime = value;
     }
     /**
@@ -263,8 +263,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the recipient property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipient(@javax.annotation.Nullable final EducationSubmissionRecipient value) {
+    @jakarta.annotation.Nonnull
+    public void setRecipient(@jakarta.annotation.Nullable final EducationSubmissionRecipient value) {
         this.recipient = value;
     }
     /**
@@ -272,8 +272,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResources(@javax.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
         this.resources = value;
     }
     /**
@@ -281,8 +281,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the resourcesFolderUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourcesFolderUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourcesFolderUrl(@jakarta.annotation.Nullable final String value) {
         this.resourcesFolderUrl = value;
     }
     /**
@@ -290,8 +290,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the returnedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReturnedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setReturnedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.returnedBy = value;
     }
     /**
@@ -299,8 +299,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the returnedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReturnedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReturnedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.returnedDateTime = value;
     }
     /**
@@ -308,8 +308,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final EducationSubmissionStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final EducationSubmissionStatus value) {
         this.status = value;
     }
     /**
@@ -317,8 +317,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the submittedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubmittedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setSubmittedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.submittedBy = value;
     }
     /**
@@ -326,8 +326,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the submittedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubmittedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setSubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.submittedDateTime = value;
     }
     /**
@@ -335,8 +335,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the submittedResources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubmittedResources(@javax.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setSubmittedResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
         this.submittedResources = value;
     }
     /**
@@ -344,8 +344,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the unsubmittedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnsubmittedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setUnsubmittedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.unsubmittedBy = value;
     }
     /**
@@ -353,8 +353,8 @@ public class EducationSubmission extends Entity implements Parsable {
      * @param value Value to set for the unsubmittedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnsubmittedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setUnsubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.unsubmittedDateTime = value;
     }
 }

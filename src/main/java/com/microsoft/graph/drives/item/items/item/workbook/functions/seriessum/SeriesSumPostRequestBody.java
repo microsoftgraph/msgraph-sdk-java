@@ -33,7 +33,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * Instantiates a new seriesSumPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SeriesSumPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a seriesSumPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SeriesSumPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SeriesSumPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SeriesSumPostRequestBody();
     }
@@ -51,7 +51,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the coefficients property value. The coefficients property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getCoefficients() {
         return this.coefficients;
     }
@@ -67,7 +67,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("coefficients", (n) -> { this.setCoefficients(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -80,7 +80,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the m property value. The m property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getM() {
         return this.m;
     }
@@ -88,7 +88,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the n property value. The n property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getN() {
         return this.n;
     }
@@ -96,7 +96,7 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the x property value. The x property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getX() {
         return this.x;
     }
@@ -105,8 +105,8 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("coefficients", this.getCoefficients());
         writer.writeObjectValue("m", this.getM());
@@ -119,8 +119,8 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the coefficients property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCoefficients(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setCoefficients(@jakarta.annotation.Nullable final Json value) {
         this.coefficients = value;
     }
     /**
@@ -137,8 +137,8 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the m property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setM(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setM(@jakarta.annotation.Nullable final Json value) {
         this.m = value;
     }
     /**
@@ -146,8 +146,8 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the n property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setN(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setN(@jakarta.annotation.Nullable final Json value) {
         this.n = value;
     }
     /**
@@ -155,8 +155,8 @@ public class SeriesSumPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the x property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setX(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setX(@jakarta.annotation.Nullable final Json value) {
         this.x = value;
     }
 }

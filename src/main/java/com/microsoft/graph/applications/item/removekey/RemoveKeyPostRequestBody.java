@@ -25,7 +25,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * Instantiates a new removeKeyPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RemoveKeyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -34,8 +34,8 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a removeKeyPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static RemoveKeyPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RemoveKeyPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RemoveKeyPostRequestBody();
     }
@@ -43,7 +43,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -51,7 +51,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getUUIDValue()); });
@@ -62,7 +62,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the keyId property value. The keyId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getKeyId() {
         return this.keyId;
     }
@@ -70,7 +70,7 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the proof property value. The proof property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProof() {
         return this.proof;
     }
@@ -79,8 +79,8 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeUUIDValue("keyId", this.getKeyId());
         writer.writeStringValue("proof", this.getProof());
@@ -91,8 +91,8 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -100,8 +100,8 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the keyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
         this.keyId = value;
     }
     /**
@@ -109,8 +109,8 @@ public class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the proof property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProof(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProof(@jakarta.annotation.Nullable final String value) {
         this.proof = value;
     }
 }

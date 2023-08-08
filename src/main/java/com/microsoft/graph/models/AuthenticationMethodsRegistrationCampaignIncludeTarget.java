@@ -32,7 +32,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * Instantiates a new authenticationMethodsRegistrationCampaignIncludeTarget and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodsRegistrationCampaignIncludeTarget() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationMethodsRegistrationCampaignIncludeTarget
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationMethodsRegistrationCampaignIncludeTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationMethodsRegistrationCampaignIncludeTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationMethodsRegistrationCampaignIncludeTarget();
     }
@@ -50,7 +50,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
@@ -71,7 +71,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * Gets the id property value. The object identifier of an Azure Active Directory user or group.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -79,7 +79,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -87,7 +87,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * Gets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetedAuthenticationMethod() {
         return this.targetedAuthenticationMethod;
     }
@@ -95,7 +95,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * Gets the targetType property value. The targetType property
      * @return a authenticationMethodTargetType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodTargetType getTargetType() {
         return this.targetType;
     }
@@ -104,8 +104,8 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,8 +118,8 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -136,8 +136,8 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -145,8 +145,8 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * @param value Value to set for the targetedAuthenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedAuthenticationMethod(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetedAuthenticationMethod(@jakarta.annotation.Nullable final String value) {
         this.targetedAuthenticationMethod = value;
     }
     /**
@@ -154,8 +154,8 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements A
      * @param value Value to set for the targetType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetType(@javax.annotation.Nullable final AuthenticationMethodTargetType value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetType(@jakarta.annotation.Nullable final AuthenticationMethodTargetType value) {
         this.targetType = value;
     }
 }

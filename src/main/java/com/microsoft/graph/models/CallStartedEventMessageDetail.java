@@ -23,7 +23,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * Instantiates a new callStartedEventMessageDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallStartedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callStartedEventMessageDetail");
@@ -33,8 +33,8 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a callStartedEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static CallStartedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CallStartedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CallStartedEventMessageDetail();
     }
@@ -42,7 +42,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      * @return a teamworkCallEventType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkCallEventType getCallEventType() {
         return this.callEventType;
     }
@@ -50,7 +50,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * Gets the callId property value. Unique identifier of the call.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallId() {
         return this.callId;
     }
@@ -58,7 +58,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
@@ -70,7 +70,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -79,8 +79,8 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("callEventType", this.getCallEventType());
@@ -92,8 +92,8 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the callEventType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallEventType(@javax.annotation.Nullable final TeamworkCallEventType value) {
+    @jakarta.annotation.Nonnull
+    public void setCallEventType(@jakarta.annotation.Nullable final TeamworkCallEventType value) {
         this.callEventType = value;
     }
     /**
@@ -101,8 +101,8 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the callId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallId(@jakarta.annotation.Nullable final String value) {
         this.callId = value;
     }
     /**
@@ -110,8 +110,8 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
      * @param value Value to set for the initiator property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
 }

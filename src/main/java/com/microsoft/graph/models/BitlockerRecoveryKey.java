@@ -28,7 +28,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * Instantiates a new bitlockerRecoveryKey and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BitlockerRecoveryKey() {
         super();
     }
@@ -37,8 +37,8 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bitlockerRecoveryKey
      */
-    @javax.annotation.Nonnull
-    public static BitlockerRecoveryKey createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BitlockerRecoveryKey createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BitlockerRecoveryKey();
     }
@@ -46,7 +46,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -54,7 +54,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * Gets the deviceId property value. Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -62,7 +62,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -75,7 +75,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * Gets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKey() {
         return this.key;
     }
@@ -83,7 +83,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
      * @return a volumeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VolumeType getVolumeType() {
         return this.volumeType;
     }
@@ -92,8 +92,8 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -106,8 +106,8 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -115,8 +115,8 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -124,8 +124,8 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the key property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKey(@jakarta.annotation.Nullable final String value) {
         this.key = value;
     }
     /**
@@ -133,8 +133,8 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the volumeType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVolumeType(@javax.annotation.Nullable final VolumeType value) {
+    @jakarta.annotation.Nonnull
+    public void setVolumeType(@jakarta.annotation.Nullable final VolumeType value) {
         this.volumeType = value;
     }
 }

@@ -28,7 +28,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     private String permissionClassification;
     /**
-     * The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
+     * The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
      */
     private java.util.List<String> permissions;
     /**
@@ -43,7 +43,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Instantiates a new permissionGrantConditionSet and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PermissionGrantConditionSet() {
         super();
     }
@@ -52,8 +52,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a permissionGrantConditionSet
      */
-    @javax.annotation.Nonnull
-    public static PermissionGrantConditionSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PermissionGrantConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PermissionGrantConditionSet();
     }
@@ -61,7 +61,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Gets the clientApplicationIds property value. A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationIds() {
         return this.clientApplicationIds;
     }
@@ -69,7 +69,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Gets the clientApplicationPublisherIds property value. A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationPublisherIds() {
         return this.clientApplicationPublisherIds;
     }
@@ -77,7 +77,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getClientApplicationsFromVerifiedPublisherOnly() {
         return this.clientApplicationsFromVerifiedPublisherOnly;
     }
@@ -85,7 +85,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Gets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationTenantIds() {
         return this.clientApplicationTenantIds;
     }
@@ -93,7 +93,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("clientApplicationIds", (n) -> { this.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -110,15 +110,15 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPermissionClassification() {
         return this.permissionClassification;
     }
     /**
-     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
+     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getPermissions() {
         return this.permissions;
     }
@@ -126,7 +126,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
      * @return a permissionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PermissionType getPermissionType() {
         return this.permissionType;
     }
@@ -134,7 +134,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Gets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceApplication() {
         return this.resourceApplication;
     }
@@ -143,8 +143,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("clientApplicationIds", this.getClientApplicationIds());
@@ -161,8 +161,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientApplicationIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setClientApplicationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.clientApplicationIds = value;
     }
     /**
@@ -170,8 +170,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationPublisherIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientApplicationPublisherIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setClientApplicationPublisherIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.clientApplicationPublisherIds = value;
     }
     /**
@@ -179,8 +179,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientApplicationsFromVerifiedPublisherOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setClientApplicationsFromVerifiedPublisherOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.clientApplicationsFromVerifiedPublisherOnly = value;
     }
     /**
@@ -188,8 +188,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationTenantIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientApplicationTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setClientApplicationTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.clientApplicationTenantIds = value;
     }
     /**
@@ -197,17 +197,17 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the permissionClassification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissionClassification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissionClassification(@jakarta.annotation.Nullable final String value) {
         this.permissionClassification = value;
     }
     /**
-     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
+     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
      * @param value Value to set for the permissions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.permissions = value;
     }
     /**
@@ -215,8 +215,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the permissionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissionType(@javax.annotation.Nullable final PermissionType value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissionType(@jakarta.annotation.Nullable final PermissionType value) {
         this.permissionType = value;
     }
     /**
@@ -224,8 +224,8 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the resourceApplication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceApplication(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceApplication(@jakarta.annotation.Nullable final String value) {
         this.resourceApplication = value;
     }
 }

@@ -32,7 +32,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * Instantiates a new subjectRightsRequestStageDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestStageDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a subjectRightsRequestStageDetail
      */
-    @javax.annotation.Nonnull
-    public static SubjectRightsRequestStageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SubjectRightsRequestStageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SubjectRightsRequestStageDetail();
     }
@@ -50,7 +50,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * Gets the error property value. Describes the error, if any, for the current stage.
      * @return a publicError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PublicError getError() {
         return this.error;
     }
@@ -66,7 +66,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
@@ -79,7 +79,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -87,7 +87,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
      * @return a subjectRightsRequestStage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestStage getStage() {
         return this.stage;
     }
@@ -95,7 +95,7 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * Gets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @return a subjectRightsRequestStageStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestStageStatus getStatus() {
         return this.status;
     }
@@ -104,8 +104,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,8 +118,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the error property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final PublicError value) {
+    @jakarta.annotation.Nonnull
+    public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.error = value;
     }
     /**
@@ -136,8 +136,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -145,8 +145,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the stage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStage(@javax.annotation.Nullable final SubjectRightsRequestStage value) {
+    @jakarta.annotation.Nonnull
+    public void setStage(@jakarta.annotation.Nullable final SubjectRightsRequestStage value) {
         this.stage = value;
     }
     /**
@@ -154,8 +154,8 @@ public class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Pa
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStageStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStageStatus value) {
         this.status = value;
     }
 }

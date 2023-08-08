@@ -19,7 +19,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * Instantiates a new educationFeedbackOutcome and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationFeedbackOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackOutcome");
@@ -29,8 +29,8 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationFeedbackOutcome
      */
-    @javax.annotation.Nonnull
-    public static EducationFeedbackOutcome createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationFeedbackOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationFeedbackOutcome();
     }
@@ -38,7 +38,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * Gets the feedback property value. Teacher's written feedback to the student.
      * @return a educationFeedback
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationFeedback getFeedback() {
         return this.feedback;
     }
@@ -46,7 +46,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getObjectValue(EducationFeedback::createFromDiscriminatorValue)); });
@@ -57,7 +57,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * Gets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
      * @return a educationFeedback
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationFeedback getPublishedFeedback() {
         return this.publishedFeedback;
     }
@@ -66,8 +66,8 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("feedback", this.getFeedback());
@@ -78,8 +78,8 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param value Value to set for the feedback property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedback(@javax.annotation.Nullable final EducationFeedback value) {
+    @jakarta.annotation.Nonnull
+    public void setFeedback(@jakarta.annotation.Nullable final EducationFeedback value) {
         this.feedback = value;
     }
     /**
@@ -87,8 +87,8 @@ public class EducationFeedbackOutcome extends EducationOutcome implements Parsab
      * @param value Value to set for the publishedFeedback property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedFeedback(@javax.annotation.Nullable final EducationFeedback value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishedFeedback(@jakarta.annotation.Nullable final EducationFeedback value) {
         this.publishedFeedback = value;
     }
 }

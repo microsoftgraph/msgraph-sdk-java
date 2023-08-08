@@ -13,15 +13,15 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The defaultDomainName property
+     * Primary domain name of an Azure AD tenant.
      */
     private String defaultDomainName;
     /**
-     * The displayName property
+     * Display name of an Azure AD tenant.
      */
     private String displayName;
     /**
-     * The federationBrandName property
+     * Name shown to users that sign in to an Azure AD tenant.
      */
     private String federationBrandName;
     /**
@@ -29,14 +29,14 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The tenantId property
+     * Unique identifier of an Azure AD tenant.
      */
     private String tenantId;
     /**
      * Instantiates a new tenantInformation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tenantInformation
      */
-    @javax.annotation.Nonnull
-    public static TenantInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TenantInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TenantInformation();
     }
@@ -54,31 +54,31 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
     /**
-     * Gets the defaultDomainName property value. The defaultDomainName property
+     * Gets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultDomainName() {
         return this.defaultDomainName;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of an Azure AD tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
     /**
-     * Gets the federationBrandName property value. The federationBrandName property
+     * Gets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFederationBrandName() {
         return this.federationBrandName;
     }
@@ -86,7 +86,7 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("defaultDomainName", (n) -> { this.setDefaultDomainName(n.getStringValue()); });
@@ -100,15 +100,15 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Unique identifier of an Azure AD tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -117,8 +117,8 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultDomainName", this.getDefaultDomainName());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -132,35 +132,35 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the defaultDomainName property value. The defaultDomainName property
+     * Sets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
      * @param value Value to set for the defaultDomainName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultDomainName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
         this.defaultDomainName = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of an Azure AD tenant.
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the federationBrandName property value. The federationBrandName property
+     * Sets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
      * @param value Value to set for the federationBrandName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFederationBrandName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFederationBrandName(@jakarta.annotation.Nullable final String value) {
         this.federationBrandName = value;
     }
     /**
@@ -168,17 +168,17 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Unique identifier of an Azure AD tenant.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

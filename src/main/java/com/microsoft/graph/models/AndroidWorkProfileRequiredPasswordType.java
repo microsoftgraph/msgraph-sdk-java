@@ -27,10 +27,10 @@ public enum AndroidWorkProfileRequiredPasswordType implements ValuedEnum {
     AndroidWorkProfileRequiredPasswordType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidWorkProfileRequiredPasswordType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidWorkProfileRequiredPasswordType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

@@ -30,7 +30,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new parseExpressionPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParseExpressionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,8 +39,8 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a parseExpressionPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ParseExpressionPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ParseExpressionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ParseExpressionPostRequestBody();
     }
@@ -48,7 +48,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -56,7 +56,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * Gets the expression property value. The expression property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExpression() {
         return this.expression;
     }
@@ -64,7 +64,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("expression", (n) -> { this.setExpression(n.getStringValue()); });
@@ -76,7 +76,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * Gets the targetAttributeDefinition property value. The targetAttributeDefinition property
      * @return a attributeDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttributeDefinition getTargetAttributeDefinition() {
         return this.targetAttributeDefinition;
     }
@@ -84,7 +84,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * Gets the testInputObject property value. The testInputObject property
      * @return a expressionInputObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExpressionInputObject getTestInputObject() {
         return this.testInputObject;
     }
@@ -93,8 +93,8 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
         writer.writeObjectValue("targetAttributeDefinition", this.getTargetAttributeDefinition());
@@ -106,8 +106,8 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -115,8 +115,8 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the expression property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpression(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExpression(@jakarta.annotation.Nullable final String value) {
         this.expression = value;
     }
     /**
@@ -124,8 +124,8 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the targetAttributeDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetAttributeDefinition(@javax.annotation.Nullable final AttributeDefinition value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetAttributeDefinition(@jakarta.annotation.Nullable final AttributeDefinition value) {
         this.targetAttributeDefinition = value;
     }
     /**
@@ -133,8 +133,8 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the testInputObject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTestInputObject(@javax.annotation.Nullable final ExpressionInputObject value) {
+    @jakarta.annotation.Nonnull
+    public void setTestInputObject(@jakarta.annotation.Nullable final ExpressionInputObject value) {
         this.testInputObject = value;
     }
 }

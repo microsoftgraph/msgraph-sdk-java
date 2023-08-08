@@ -15,7 +15,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * Instantiates a new fido2CombinationConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Fido2CombinationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.fido2CombinationConfiguration");
@@ -25,8 +25,8 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a fido2CombinationConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Fido2CombinationConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Fido2CombinationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Fido2CombinationConfiguration();
     }
@@ -34,7 +34,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * Gets the allowedAAGUIDs property value. A list of AAGUIDs allowed to be used as part of the specified authentication method combinations.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAAGUIDs() {
         return this.allowedAAGUIDs;
     }
@@ -42,7 +42,7 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedAAGUIDs", (n) -> { this.setAllowedAAGUIDs(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -53,8 +53,8 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("allowedAAGUIDs", this.getAllowedAAGUIDs());
@@ -64,8 +64,8 @@ public class Fido2CombinationConfiguration extends AuthenticationCombinationConf
      * @param value Value to set for the allowedAAGUIDs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedAAGUIDs(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowedAAGUIDs(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.allowedAAGUIDs = value;
     }
 }

@@ -44,7 +44,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new teamMemberSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamMemberSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamMemberSettings
      */
-    @javax.annotation.Nonnull
-    public static TeamMemberSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamMemberSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamMemberSettings();
     }
@@ -62,7 +62,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowAddRemoveApps() {
         return this.allowAddRemoveApps;
     }
@@ -78,7 +78,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowCreatePrivateChannels() {
         return this.allowCreatePrivateChannels;
     }
@@ -86,7 +86,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateChannels() {
         return this.allowCreateUpdateChannels;
     }
@@ -94,7 +94,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveConnectors() {
         return this.allowCreateUpdateRemoveConnectors;
     }
@@ -102,7 +102,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateRemoveTabs() {
         return this.allowCreateUpdateRemoveTabs;
     }
@@ -110,7 +110,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowDeleteChannels property value. If set to true, members can delete channels.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowDeleteChannels() {
         return this.allowDeleteChannels;
     }
@@ -118,7 +118,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("allowAddRemoveApps", (n) -> { this.setAllowAddRemoveApps(n.getBooleanValue()); });
@@ -134,7 +134,7 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -143,8 +143,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowAddRemoveApps", this.getAllowAddRemoveApps());
         writer.writeBooleanValue("allowCreatePrivateChannels", this.getAllowCreatePrivateChannels());
@@ -160,8 +160,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowAddRemoveApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowAddRemoveApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowAddRemoveApps(@jakarta.annotation.Nullable final Boolean value) {
         this.allowAddRemoveApps = value;
     }
     /**
@@ -178,8 +178,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowCreatePrivateChannels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowCreatePrivateChannels(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowCreatePrivateChannels(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreatePrivateChannels = value;
     }
     /**
@@ -187,8 +187,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowCreateUpdateChannels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowCreateUpdateChannels(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowCreateUpdateChannels(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreateUpdateChannels = value;
     }
     /**
@@ -196,8 +196,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowCreateUpdateRemoveConnectors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowCreateUpdateRemoveConnectors(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowCreateUpdateRemoveConnectors(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreateUpdateRemoveConnectors = value;
     }
     /**
@@ -205,8 +205,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowCreateUpdateRemoveTabs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowCreateUpdateRemoveTabs(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowCreateUpdateRemoveTabs(@jakarta.annotation.Nullable final Boolean value) {
         this.allowCreateUpdateRemoveTabs = value;
     }
     /**
@@ -214,8 +214,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowDeleteChannels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowDeleteChannels(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowDeleteChannels(@jakarta.annotation.Nullable final Boolean value) {
         this.allowDeleteChannels = value;
     }
     /**
@@ -223,8 +223,8 @@ public class TeamMemberSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

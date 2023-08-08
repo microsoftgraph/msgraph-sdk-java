@@ -28,7 +28,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * Instantiates a new simulationAutomationRun and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAutomationRun() {
         super();
     }
@@ -37,8 +37,8 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a simulationAutomationRun
      */
-    @javax.annotation.Nonnull
-    public static SimulationAutomationRun createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SimulationAutomationRun createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SimulationAutomationRun();
     }
@@ -46,7 +46,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * Gets the endDateTime property value. Date and time when the run ends in an attack simulation automation.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -54,7 +54,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -67,7 +67,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * Gets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSimulationId() {
         return this.simulationId;
     }
@@ -75,7 +75,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * Gets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -83,7 +83,7 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * Gets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
      * @return a simulationAutomationRunStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAutomationRunStatus getStatus() {
         return this.status;
     }
@@ -92,8 +92,8 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -106,8 +106,8 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -115,8 +115,8 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * @param value Value to set for the simulationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimulationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSimulationId(@jakarta.annotation.Nullable final String value) {
         this.simulationId = value;
     }
     /**
@@ -124,8 +124,8 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
@@ -133,8 +133,8 @@ public class SimulationAutomationRun extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SimulationAutomationRunStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final SimulationAutomationRunStatus value) {
         this.status = value;
     }
 }

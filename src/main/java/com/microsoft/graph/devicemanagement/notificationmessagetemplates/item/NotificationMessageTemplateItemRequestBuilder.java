@@ -25,14 +25,14 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public LocalizedNotificationMessagesRequestBuilder localizedNotificationMessages() {
         return new LocalizedNotificationMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the sendTestMessage method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SendTestMessageRequestBuilder sendTestMessage() {
         return new SendTestMessageRequestBuilder(pathParameters, requestAdapter);
     }
@@ -42,8 +42,8 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public NotificationMessageTemplateItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public NotificationMessageTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -52,15 +52,16 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public NotificationMessageTemplateItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public NotificationMessageTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -75,12 +76,13 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -94,10 +96,11 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -112,12 +115,13 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -131,12 +135,13 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@javax.annotation.Nonnull final NotificationMessageTemplate body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@jakarta.annotation.Nonnull final NotificationMessageTemplate body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -150,13 +155,14 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of notificationMessageTemplate
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@javax.annotation.Nonnull final NotificationMessageTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@jakarta.annotation.Nonnull final NotificationMessageTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -171,20 +177,20 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property notificationMessageTemplates for deviceManagement
+     * Deletes a notificationMessageTemplate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -198,20 +204,20 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -227,22 +233,22 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final NotificationMessageTemplate body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final NotificationMessageTemplate body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property notificationMessageTemplates in deviceManagement
+     * Update the properties of a notificationMessageTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final NotificationMessageTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final NotificationMessageTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -264,20 +270,20 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The Notification Message Templates.
+     * Read properties and relationships of the notificationMessageTemplate object.
      */
     public class GetQueryParameters {
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -287,7 +293,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

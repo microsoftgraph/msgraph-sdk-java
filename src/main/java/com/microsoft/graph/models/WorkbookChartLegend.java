@@ -27,7 +27,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * Instantiates a new workbookChartLegend and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartLegend() {
         super();
     }
@@ -36,8 +36,8 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookChartLegend
      */
-    @javax.annotation.Nonnull
-    public static WorkbookChartLegend createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookChartLegend createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookChartLegend();
     }
@@ -45,7 +45,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartLegendFormat::createFromDiscriminatorValue)); });
@@ -58,7 +58,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * Gets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
      * @return a workbookChartLegendFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookChartLegendFormat getFormat() {
         return this.format;
     }
@@ -66,7 +66,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * Gets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOverlay() {
         return this.overlay;
     }
@@ -74,7 +74,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * Gets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPosition() {
         return this.position;
     }
@@ -82,7 +82,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * Gets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getVisible() {
         return this.visible;
     }
@@ -91,8 +91,8 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("format", this.getFormat());
@@ -105,8 +105,8 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final WorkbookChartLegendFormat value) {
+    @jakarta.annotation.Nonnull
+    public void setFormat(@jakarta.annotation.Nullable final WorkbookChartLegendFormat value) {
         this.format = value;
     }
     /**
@@ -114,8 +114,8 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the overlay property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOverlay(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOverlay(@jakarta.annotation.Nullable final Boolean value) {
         this.overlay = value;
     }
     /**
@@ -123,8 +123,8 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the position property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPosition(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPosition(@jakarta.annotation.Nullable final String value) {
         this.position = value;
     }
     /**
@@ -132,8 +132,8 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the visible property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVisible(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setVisible(@jakarta.annotation.Nullable final Boolean value) {
         this.visible = value;
     }
 }

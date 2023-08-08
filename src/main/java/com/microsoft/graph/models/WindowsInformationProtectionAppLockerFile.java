@@ -30,7 +30,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * Instantiates a new windowsInformationProtectionAppLockerFile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile() {
         super();
     }
@@ -39,8 +39,8 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsInformationProtectionAppLockerFile
      */
-    @javax.annotation.Nonnull
-    public static WindowsInformationProtectionAppLockerFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsInformationProtectionAppLockerFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsInformationProtectionAppLockerFile();
     }
@@ -48,7 +48,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * Gets the displayName property value. The friendly name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -56,7 +56,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -69,7 +69,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * Gets the file property value. File as a byte array
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getFile() {
         return this.file;
     }
@@ -77,7 +77,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * Gets the fileHash property value. SHA256 hash of the file
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileHash() {
         return this.fileHash;
     }
@@ -85,7 +85,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * Gets the version property value. Version of the entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -94,8 +94,8 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -108,8 +108,8 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -117,8 +117,8 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the file property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFile(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setFile(@jakarta.annotation.Nullable final byte[] value) {
         this.file = value;
     }
     /**
@@ -126,8 +126,8 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the fileHash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileHash(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileHash(@jakarta.annotation.Nullable final String value) {
         this.fileHash = value;
     }
     /**
@@ -135,8 +135,8 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

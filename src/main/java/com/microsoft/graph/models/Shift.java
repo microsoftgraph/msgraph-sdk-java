@@ -27,7 +27,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * Instantiates a new shift and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Shift() {
         super();
         this.setOdataType("#microsoft.graph.shift");
@@ -37,8 +37,8 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a shift
      */
-    @javax.annotation.Nonnull
-    public static Shift createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Shift createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Shift();
     }
@@ -46,7 +46,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * Gets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
      * @return a shiftItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ShiftItem getDraftShift() {
         return this.draftShift;
     }
@@ -54,7 +54,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftShift", (n) -> { this.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
@@ -67,7 +67,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
         return this.schedulingGroupId;
     }
@@ -75,7 +75,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
      * @return a shiftItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ShiftItem getSharedShift() {
         return this.sharedShift;
     }
@@ -83,7 +83,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * Gets the userId property value. ID of the user assigned to the shift. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -92,8 +92,8 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("draftShift", this.getDraftShift());
@@ -106,8 +106,8 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftShift property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDraftShift(@javax.annotation.Nullable final ShiftItem value) {
+    @jakarta.annotation.Nonnull
+    public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
         this.draftShift = value;
     }
     /**
@@ -115,8 +115,8 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the schedulingGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedulingGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {
         this.schedulingGroupId = value;
     }
     /**
@@ -124,8 +124,8 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the sharedShift property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedShift(@javax.annotation.Nullable final ShiftItem value) {
+    @jakarta.annotation.Nonnull
+    public void setSharedShift(@jakarta.annotation.Nullable final ShiftItem value) {
         this.sharedShift = value;
     }
     /**
@@ -133,8 +133,8 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

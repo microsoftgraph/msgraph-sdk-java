@@ -85,7 +85,7 @@ public class LearningContent extends Entity implements Parsable {
      * Instantiates a new learningContent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LearningContent() {
         super();
     }
@@ -94,8 +94,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a learningContent
      */
-    @javax.annotation.Nonnull
-    public static LearningContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LearningContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LearningContent();
     }
@@ -103,7 +103,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the additionalTags property value. Keywords, topics, and other tags associated with the learning content. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAdditionalTags() {
         return this.additionalTags;
     }
@@ -111,7 +111,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the contentWebUrl property value. The content web URL for the learning content. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentWebUrl() {
         return this.contentWebUrl;
     }
@@ -119,7 +119,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the contributors property value. The authors, creators, or contributors of the learning content. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getContributors() {
         return this.contributors;
     }
@@ -127,7 +127,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -135,7 +135,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the description property value. The description or summary for the learning content. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -143,7 +143,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the duration property value. The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
         return this.duration;
     }
@@ -151,7 +151,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the externalId property value. Unique external content ID for the learning content. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -159,7 +159,7 @@ public class LearningContent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalTags", (n) -> { this.setAdditionalTags(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -186,7 +186,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the format property value. The format of the learning content. For example, Course, Video, Book, Book Summary, Audiobook Summary. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFormat() {
         return this.format;
     }
@@ -194,7 +194,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the isActive property value. Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -202,7 +202,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the isPremium property value. Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is false. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPremium() {
         return this.isPremium;
     }
@@ -210,7 +210,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the isSearchable property value. Indicates whether the learning content is searchable or not. The default value is true. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
         return this.isSearchable;
     }
@@ -218,7 +218,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the languageTag property value. The language of the learning content, for example, en-us or fr-fr. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.languageTag;
     }
@@ -226,7 +226,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -234,7 +234,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNumberOfPages() {
         return this.numberOfPages;
     }
@@ -242,7 +242,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the skillTags property value. The skills tags associated with the learning content. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSkillTags() {
         return this.skillTags;
     }
@@ -250,7 +250,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the sourceName property value. The source name of the learning content, such as LinkedIn Learning or Coursera. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceName() {
         return this.sourceName;
     }
@@ -258,7 +258,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the thumbnailWebUrl property value. The URL of learning content thumbnail image. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailWebUrl() {
         return this.thumbnailWebUrl;
     }
@@ -266,7 +266,7 @@ public class LearningContent extends Entity implements Parsable {
      * Gets the title property value. The title of the learning content. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -275,8 +275,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("additionalTags", this.getAdditionalTags());
@@ -303,8 +303,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the additionalTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.additionalTags = value;
     }
     /**
@@ -312,8 +312,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the contentWebUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentWebUrl(@jakarta.annotation.Nullable final String value) {
         this.contentWebUrl = value;
     }
     /**
@@ -321,8 +321,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the contributors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContributors(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setContributors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.contributors = value;
     }
     /**
@@ -330,8 +330,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -339,8 +339,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -348,8 +348,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the duration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
     /**
@@ -357,8 +357,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
@@ -366,8 +366,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFormat(@jakarta.annotation.Nullable final String value) {
         this.format = value;
     }
     /**
@@ -375,8 +375,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsActive(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
@@ -384,8 +384,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the isPremium property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPremium(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPremium(@jakarta.annotation.Nullable final Boolean value) {
         this.isPremium = value;
     }
     /**
@@ -393,8 +393,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
         this.isSearchable = value;
     }
     /**
@@ -402,8 +402,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the languageTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.languageTag = value;
     }
     /**
@@ -411,8 +411,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -420,8 +420,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the numberOfPages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumberOfPages(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNumberOfPages(@jakarta.annotation.Nullable final Integer value) {
         this.numberOfPages = value;
     }
     /**
@@ -429,8 +429,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the skillTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkillTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSkillTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.skillTags = value;
     }
     /**
@@ -438,8 +438,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the sourceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceName(@jakarta.annotation.Nullable final String value) {
         this.sourceName = value;
     }
     /**
@@ -447,8 +447,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the thumbnailWebUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setThumbnailWebUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailWebUrl = value;
     }
     /**
@@ -456,8 +456,8 @@ public class LearningContent extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

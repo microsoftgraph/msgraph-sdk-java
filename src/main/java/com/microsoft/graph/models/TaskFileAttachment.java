@@ -15,7 +15,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * Instantiates a new taskFileAttachment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TaskFileAttachment() {
         super();
         this.setOdataType("#microsoft.graph.taskFileAttachment");
@@ -25,8 +25,8 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a taskFileAttachment
      */
-    @javax.annotation.Nonnull
-    public static TaskFileAttachment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TaskFileAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TaskFileAttachment();
     }
@@ -34,7 +34,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * Gets the contentBytes property value. The base64-encoded contents of the file.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getContentBytes() {
         return this.contentBytes;
     }
@@ -42,7 +42,7 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getByteArrayValue()); });
@@ -53,8 +53,8 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("contentBytes", this.getContentBytes());
@@ -64,8 +64,8 @@ public class TaskFileAttachment extends AttachmentBase implements Parsable {
      * @param value Value to set for the contentBytes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentBytes(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setContentBytes(@jakarta.annotation.Nullable final byte[] value) {
         this.contentBytes = value;
     }
 }

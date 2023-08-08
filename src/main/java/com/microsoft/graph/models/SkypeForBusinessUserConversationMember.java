@@ -19,7 +19,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * Instantiates a new skypeForBusinessUserConversationMember and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SkypeForBusinessUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.skypeForBusinessUserConversationMember");
@@ -29,8 +29,8 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a skypeForBusinessUserConversationMember
      */
-    @javax.annotation.Nonnull
-    public static SkypeForBusinessUserConversationMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SkypeForBusinessUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SkypeForBusinessUserConversationMember();
     }
@@ -38,7 +38,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
@@ -49,7 +49,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * Gets the tenantId property value. ID of the tenant that the user belongs to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -57,7 +57,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * Gets the userId property value. Azure Active Directory ID of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -66,8 +66,8 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("tenantId", this.getTenantId());
@@ -78,8 +78,8 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -87,8 +87,8 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

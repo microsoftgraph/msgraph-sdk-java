@@ -15,7 +15,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * Instantiates a new softwareOathAuthenticationMethod and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SoftwareOathAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.softwareOathAuthenticationMethod");
@@ -25,8 +25,8 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a softwareOathAuthenticationMethod
      */
-    @javax.annotation.Nonnull
-    public static SoftwareOathAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SoftwareOathAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SoftwareOathAuthenticationMethod();
     }
@@ -34,7 +34,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("secretKey", (n) -> { this.setSecretKey(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * Gets the secretKey property value. The secret key of the method. Always returns null.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSecretKey() {
         return this.secretKey;
     }
@@ -53,8 +53,8 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("secretKey", this.getSecretKey());
@@ -64,8 +64,8 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
      * @param value Value to set for the secretKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecretKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSecretKey(@jakarta.annotation.Nullable final String value) {
         this.secretKey = value;
     }
 }

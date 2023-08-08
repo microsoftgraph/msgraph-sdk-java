@@ -26,21 +26,21 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.windowsInformationProtection entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the exemptAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ExemptAppLockerFilesRequestBuilder exemptAppLockerFiles() {
         return new ExemptAppLockerFilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the protectedAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ProtectedAppLockerFilesRequestBuilder protectedAppLockerFiles() {
         return new ProtectedAppLockerFilesRequestBuilder(pathParameters, requestAdapter);
     }
@@ -50,8 +50,8 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MdmWindowsInformationProtectionPolicyItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MdmWindowsInformationProtectionPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -60,15 +60,16 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public MdmWindowsInformationProtectionPolicyItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public MdmWindowsInformationProtectionPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -83,12 +84,13 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -102,10 +104,11 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -120,12 +123,13 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -139,12 +143,13 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -158,13 +163,14 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -179,20 +185,20 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         }
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Deletes a mdmWindowsInformationProtectionPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -206,20 +212,20 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -235,22 +241,22 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
+     * Update the properties of a mdmWindowsInformationProtectionPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -272,20 +278,20 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * Read properties and relationships of the mdmWindowsInformationProtectionPolicy object.
      */
     public class GetQueryParameters {
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -295,7 +301,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

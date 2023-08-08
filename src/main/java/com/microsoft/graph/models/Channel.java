@@ -64,7 +64,7 @@ public class Channel extends Entity implements Parsable {
      * Instantiates a new channel and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Channel() {
         super();
     }
@@ -73,8 +73,8 @@ public class Channel extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a channel
      */
-    @javax.annotation.Nonnull
-    public static Channel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Channel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Channel();
     }
@@ -82,7 +82,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -90,7 +90,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the description property value. Optional textual description for the channel.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -98,7 +98,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -106,7 +106,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the email property value. The email address for sending messages to the channel. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -114,7 +114,7 @@ public class Channel extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -136,7 +136,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the filesFolder property value. Metadata for the location where the channel's files are stored.
      * @return a driveItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DriveItem getFilesFolder() {
         return this.filesFolder;
     }
@@ -144,7 +144,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFavoriteByDefault() {
         return this.isFavoriteByDefault;
     }
@@ -152,7 +152,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the members property value. A collection of membership records associated with the channel.
      * @return a conversationMember
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
         return this.members;
     }
@@ -160,7 +160,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
      * @return a channelMembershipType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChannelMembershipType getMembershipType() {
         return this.membershipType;
     }
@@ -168,7 +168,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
      * @return a chatMessage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ChatMessage> getMessages() {
         return this.messages;
     }
@@ -176,7 +176,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
      * @return a sharedWithChannelTeamInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SharedWithChannelTeamInfo> getSharedWithTeams() {
         return this.sharedWithTeams;
     }
@@ -184,7 +184,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @return a teamsTab
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
         return this.tabs;
     }
@@ -192,7 +192,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -200,7 +200,7 @@ public class Channel extends Entity implements Parsable {
      * Gets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -209,8 +209,8 @@ public class Channel extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -232,8 +232,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -241,8 +241,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -250,8 +250,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -259,8 +259,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -268,8 +268,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the filesFolder property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilesFolder(@javax.annotation.Nullable final DriveItem value) {
+    @jakarta.annotation.Nonnull
+    public void setFilesFolder(@jakarta.annotation.Nullable final DriveItem value) {
         this.filesFolder = value;
     }
     /**
@@ -277,8 +277,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the isFavoriteByDefault property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFavoriteByDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFavoriteByDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isFavoriteByDefault = value;
     }
     /**
@@ -286,8 +286,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
+    @jakarta.annotation.Nonnull
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.members = value;
     }
     /**
@@ -295,8 +295,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the membershipType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembershipType(@javax.annotation.Nullable final ChannelMembershipType value) {
+    @jakarta.annotation.Nonnull
+    public void setMembershipType(@jakarta.annotation.Nullable final ChannelMembershipType value) {
         this.membershipType = value;
     }
     /**
@@ -304,8 +304,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessages(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
+    @jakarta.annotation.Nonnull
+    public void setMessages(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
         this.messages = value;
     }
     /**
@@ -313,8 +313,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the sharedWithTeams property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedWithTeams(@javax.annotation.Nullable final java.util.List<SharedWithChannelTeamInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setSharedWithTeams(@jakarta.annotation.Nullable final java.util.List<SharedWithChannelTeamInfo> value) {
         this.sharedWithTeams = value;
     }
     /**
@@ -322,8 +322,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the tabs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTabs(@javax.annotation.Nullable final java.util.List<TeamsTab> value) {
+    @jakarta.annotation.Nonnull
+    public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
         this.tabs = value;
     }
     /**
@@ -331,8 +331,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -340,8 +340,8 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

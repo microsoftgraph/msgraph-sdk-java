@@ -15,17 +15,18 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new urlEvidence and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UrlEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.urlEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a urlEvidence
      */
-    @javax.annotation.Nonnull
-    public static UrlEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UrlEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UrlEvidence();
     }
@@ -33,7 +34,7 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
@@ -43,7 +44,7 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      * Gets the url property value. The Unique Resource Locator (URL).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
@@ -52,8 +53,8 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("url", this.getUrl());
@@ -63,8 +64,8 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
 }

@@ -20,7 +20,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new forceDeletePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ForceDeletePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -29,8 +29,8 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a forceDeletePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ForceDeletePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ForceDeletePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ForceDeletePostRequestBody();
     }
@@ -38,7 +38,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -46,7 +46,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the disableUserAccounts property value. The disableUserAccounts property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableUserAccounts() {
         return this.disableUserAccounts;
     }
@@ -54,7 +54,7 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("disableUserAccounts", (n) -> { this.setDisableUserAccounts(n.getBooleanValue()); });
@@ -65,8 +65,8 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("disableUserAccounts", this.getDisableUserAccounts());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -76,8 +76,8 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -85,8 +85,8 @@ public class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the disableUserAccounts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableUserAccounts(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDisableUserAccounts(@jakarta.annotation.Nullable final Boolean value) {
         this.disableUserAccounts = value;
     }
 }

@@ -52,7 +52,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Instantiates a new simulationAutomation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAutomation() {
         super();
     }
@@ -61,8 +61,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a simulationAutomation
      */
-    @javax.annotation.Nonnull
-    public static SimulationAutomation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SimulationAutomation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SimulationAutomation();
     }
@@ -70,7 +70,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the createdBy property value. Identity of the user who created the attack simulation automation.
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -78,7 +78,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time when the attack simulation automation was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -86,7 +86,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the description property value. Description of the attack simulation automation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -94,7 +94,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the attack simulation automation. Supports $filter and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -102,7 +102,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
@@ -121,7 +121,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation automation.
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -129,7 +129,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Date and time when the attack simulation automation was most recently modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -137,7 +137,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the lastRunDateTime property value. Date and time of the latest run of the attack simulation automation.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastRunDateTime() {
         return this.lastRunDateTime;
     }
@@ -145,7 +145,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the nextRunDateTime property value. Date and time of the upcoming run of the attack simulation automation.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getNextRunDateTime() {
         return this.nextRunDateTime;
     }
@@ -153,7 +153,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the runs property value. A collection of simulation automation runs.
      * @return a simulationAutomationRun
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SimulationAutomationRun> getRuns() {
         return this.runs;
     }
@@ -161,7 +161,7 @@ public class SimulationAutomation extends Entity implements Parsable {
      * Gets the status property value. Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
      * @return a simulationAutomationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAutomationStatus getStatus() {
         return this.status;
     }
@@ -170,8 +170,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -190,8 +190,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
@@ -199,8 +199,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -208,8 +208,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -217,8 +217,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -226,8 +226,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -235,8 +235,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -244,8 +244,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the lastRunDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRunDateTime = value;
     }
     /**
@@ -253,8 +253,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the nextRunDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNextRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setNextRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.nextRunDateTime = value;
     }
     /**
@@ -262,8 +262,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the runs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRuns(@javax.annotation.Nullable final java.util.List<SimulationAutomationRun> value) {
+    @jakarta.annotation.Nonnull
+    public void setRuns(@jakarta.annotation.Nullable final java.util.List<SimulationAutomationRun> value) {
         this.runs = value;
     }
     /**
@@ -271,8 +271,8 @@ public class SimulationAutomation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SimulationAutomationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final SimulationAutomationStatus value) {
         this.status = value;
     }
 }

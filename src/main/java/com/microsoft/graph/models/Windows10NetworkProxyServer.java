@@ -35,7 +35,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * Instantiates a new windows10NetworkProxyServer and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10NetworkProxyServer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,8 +44,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10NetworkProxyServer
      */
-    @javax.annotation.Nonnull
-    public static Windows10NetworkProxyServer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10NetworkProxyServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10NetworkProxyServer();
     }
@@ -53,7 +53,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -61,7 +61,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * Gets the address property value. Address to the proxy server. Specify an address in the format [':']
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAddress() {
         return this.address;
     }
@@ -69,7 +69,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * Gets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getExceptions() {
         return this.exceptions;
     }
@@ -77,7 +77,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
@@ -90,7 +90,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -98,7 +98,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * Gets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseForLocalAddresses() {
         return this.useForLocalAddresses;
     }
@@ -107,8 +107,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
         writer.writeCollectionOfPrimitiveValues("exceptions", this.getExceptions());
@@ -121,8 +121,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -130,8 +130,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * @param value Value to set for the address property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAddress(@jakarta.annotation.Nullable final String value) {
         this.address = value;
     }
     /**
@@ -139,8 +139,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * @param value Value to set for the exceptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExceptions(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setExceptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.exceptions = value;
     }
     /**
@@ -148,8 +148,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -157,8 +157,8 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
      * @param value Value to set for the useForLocalAddresses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseForLocalAddresses(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUseForLocalAddresses(@jakarta.annotation.Nullable final Boolean value) {
         this.useForLocalAddresses = value;
     }
 }

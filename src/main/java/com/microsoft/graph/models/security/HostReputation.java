@@ -24,7 +24,7 @@ public class HostReputation extends Entity implements Parsable {
      * Instantiates a new hostReputation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HostReputation() {
         super();
     }
@@ -33,8 +33,8 @@ public class HostReputation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hostReputation
      */
-    @javax.annotation.Nonnull
-    public static HostReputation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HostReputation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HostReputation();
     }
@@ -42,7 +42,7 @@ public class HostReputation extends Entity implements Parsable {
      * Gets the classification property value. The classification property
      * @return a hostReputationClassification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HostReputationClassification getClassification() {
         return this.classification;
     }
@@ -50,7 +50,7 @@ public class HostReputation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(HostReputationClassification.class)); });
@@ -62,7 +62,7 @@ public class HostReputation extends Entity implements Parsable {
      * Gets the rules property value. A collection of rules that have been used to calculate the classification and score.
      * @return a hostReputationRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostReputationRule> getRules() {
         return this.rules;
     }
@@ -70,7 +70,7 @@ public class HostReputation extends Entity implements Parsable {
      * Gets the score property value. The calculated score (0-100) of the requested host. A higher value indicates that this host is more likely to be suspicious or malicious.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getScore() {
         return this.score;
     }
@@ -79,8 +79,8 @@ public class HostReputation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("classification", this.getClassification());
@@ -92,8 +92,8 @@ public class HostReputation extends Entity implements Parsable {
      * @param value Value to set for the classification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassification(@javax.annotation.Nullable final HostReputationClassification value) {
+    @jakarta.annotation.Nonnull
+    public void setClassification(@jakarta.annotation.Nullable final HostReputationClassification value) {
         this.classification = value;
     }
     /**
@@ -101,8 +101,8 @@ public class HostReputation extends Entity implements Parsable {
      * @param value Value to set for the rules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRules(@javax.annotation.Nullable final java.util.List<HostReputationRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setRules(@jakarta.annotation.Nullable final java.util.List<HostReputationRule> value) {
         this.rules = value;
     }
     /**
@@ -110,8 +110,8 @@ public class HostReputation extends Entity implements Parsable {
      * @param value Value to set for the score property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScore(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setScore(@jakarta.annotation.Nullable final Integer value) {
         this.score = value;
     }
 }

@@ -44,7 +44,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Instantiates a new sendActivityNotificationPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SendActivityNotificationPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sendActivityNotificationPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SendActivityNotificationPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SendActivityNotificationPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SendActivityNotificationPostRequestBody();
     }
@@ -62,7 +62,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Gets the activityType property value. The activityType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityType() {
         return this.activityType;
     }
@@ -70,7 +70,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Gets the chainId property value. The chainId property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getChainId() {
         return this.chainId;
     }
@@ -86,7 +86,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("activityType", (n) -> { this.setActivityType(n.getStringValue()); });
@@ -101,7 +101,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Gets the previewText property value. The previewText property
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getPreviewText() {
         return this.previewText;
     }
@@ -109,7 +109,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Gets the recipient property value. The recipient property
      * @return a teamworkNotificationRecipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkNotificationRecipient getRecipient() {
         return this.recipient;
     }
@@ -117,7 +117,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Gets the templateParameters property value. The templateParameters property
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getTemplateParameters() {
         return this.templateParameters;
     }
@@ -125,7 +125,7 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * Gets the topic property value. The topic property
      * @return a teamworkActivityTopic
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkActivityTopic getTopic() {
         return this.topic;
     }
@@ -134,8 +134,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityType", this.getActivityType());
         writer.writeLongValue("chainId", this.getChainId());
@@ -150,8 +150,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the activityType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityType(@jakarta.annotation.Nullable final String value) {
         this.activityType = value;
     }
     /**
@@ -159,8 +159,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -168,8 +168,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the chainId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChainId(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setChainId(@jakarta.annotation.Nullable final Long value) {
         this.chainId = value;
     }
     /**
@@ -177,8 +177,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the previewText property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviewText(@javax.annotation.Nullable final ItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviewText(@jakarta.annotation.Nullable final ItemBody value) {
         this.previewText = value;
     }
     /**
@@ -186,8 +186,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the recipient property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipient(@javax.annotation.Nullable final TeamworkNotificationRecipient value) {
+    @jakarta.annotation.Nonnull
+    public void setRecipient(@jakarta.annotation.Nullable final TeamworkNotificationRecipient value) {
         this.recipient = value;
     }
     /**
@@ -195,8 +195,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the templateParameters property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateParameters(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplateParameters(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.templateParameters = value;
     }
     /**
@@ -204,8 +204,8 @@ public class SendActivityNotificationPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the topic property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTopic(@javax.annotation.Nullable final TeamworkActivityTopic value) {
+    @jakarta.annotation.Nonnull
+    public void setTopic(@jakarta.annotation.Nullable final TeamworkActivityTopic value) {
         this.topic = value;
     }
 }

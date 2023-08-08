@@ -88,7 +88,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Instantiates a new subjectRightsRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequest() {
         super();
     }
@@ -97,8 +97,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a subjectRightsRequest
      */
-    @javax.annotation.Nonnull
-    public static SubjectRightsRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SubjectRightsRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SubjectRightsRequest();
     }
@@ -106,7 +106,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the assignedTo property value. Identity that the request is assigned to.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getAssignedTo() {
         return this.assignedTo;
     }
@@ -114,7 +114,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
         return this.closedDateTime;
     }
@@ -122,7 +122,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the createdBy property value. Identity information for the entity that created the request.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -130,7 +130,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -138,7 +138,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the dataSubject property value. Information about the data subject.
      * @return a dataSubject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataSubject getDataSubject() {
         return this.dataSubject;
     }
@@ -146,7 +146,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @return a dataSubjectType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataSubjectType getDataSubjectType() {
         return this.dataSubjectType;
     }
@@ -154,7 +154,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the description property value. Description for the request.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -162,7 +162,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the displayName property value. The name of the request.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -170,7 +170,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -198,7 +198,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the history property value. Collection of history change events.
      * @return a subjectRightsRequestHistory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequestHistory> getHistory() {
         return this.history;
     }
@@ -206,7 +206,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the insight property value. Insight about the request.
      * @return a subjectRightsRequestDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestDetail getInsight() {
         return this.insight;
     }
@@ -214,7 +214,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getInternalDueDateTime() {
         return this.internalDueDateTime;
     }
@@ -222,7 +222,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Identity information for the entity that last modified the request.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -230,7 +230,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -238,7 +238,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the notes property value. List of notes associcated with the request.
      * @return a authoredNote
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuthoredNote> getNotes() {
         return this.notes;
     }
@@ -246,7 +246,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the regulations property value. List of regulations that this request will fulfill.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRegulations() {
         return this.regulations;
     }
@@ -254,7 +254,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the stages property value. Information about the different stages for the request.
      * @return a subjectRightsRequestStageDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequestStageDetail> getStages() {
         return this.stages;
     }
@@ -262,7 +262,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
      * @return a subjectRightsRequestStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestStatus getStatus() {
         return this.status;
     }
@@ -270,7 +270,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the team property value. Information about the Microsoft Teams team that was created for the request.
      * @return a team
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Team getTeam() {
         return this.team;
     }
@@ -278,7 +278,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
      * @return a subjectRightsRequestType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestType getType() {
         return this.type;
     }
@@ -287,8 +287,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("assignedTo", this.getAssignedTo());
@@ -316,8 +316,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedTo(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedTo(@jakarta.annotation.Nullable final Identity value) {
         this.assignedTo = value;
     }
     /**
@@ -325,8 +325,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setClosedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.closedDateTime = value;
     }
     /**
@@ -334,8 +334,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -343,8 +343,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -352,8 +352,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the dataSubject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataSubject(@javax.annotation.Nullable final DataSubject value) {
+    @jakarta.annotation.Nonnull
+    public void setDataSubject(@jakarta.annotation.Nullable final DataSubject value) {
         this.dataSubject = value;
     }
     /**
@@ -361,8 +361,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the dataSubjectType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataSubjectType(@javax.annotation.Nullable final DataSubjectType value) {
+    @jakarta.annotation.Nonnull
+    public void setDataSubjectType(@jakarta.annotation.Nullable final DataSubjectType value) {
         this.dataSubjectType = value;
     }
     /**
@@ -370,8 +370,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -379,8 +379,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -388,8 +388,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHistory(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
+    @jakarta.annotation.Nonnull
+    public void setHistory(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
         this.history = value;
     }
     /**
@@ -397,8 +397,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the insight property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInsight(@javax.annotation.Nullable final SubjectRightsRequestDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setInsight(@jakarta.annotation.Nullable final SubjectRightsRequestDetail value) {
         this.insight = value;
     }
     /**
@@ -406,8 +406,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the internalDueDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternalDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setInternalDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.internalDueDateTime = value;
     }
     /**
@@ -415,8 +415,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -424,8 +424,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -433,8 +433,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final java.util.List<AuthoredNote> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final java.util.List<AuthoredNote> value) {
         this.notes = value;
     }
     /**
@@ -442,8 +442,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the regulations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegulations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRegulations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.regulations = value;
     }
     /**
@@ -451,8 +451,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the stages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStages(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
+    @jakarta.annotation.Nonnull
+    public void setStages(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
         this.stages = value;
     }
     /**
@@ -460,8 +460,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStatus value) {
         this.status = value;
     }
     /**
@@ -469,8 +469,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the team property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeam(@javax.annotation.Nullable final Team value) {
+    @jakarta.annotation.Nonnull
+    public void setTeam(@jakarta.annotation.Nullable final Team value) {
         this.team = value;
     }
     /**
@@ -478,8 +478,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final SubjectRightsRequestType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final SubjectRightsRequestType value) {
         this.type = value;
     }
 }

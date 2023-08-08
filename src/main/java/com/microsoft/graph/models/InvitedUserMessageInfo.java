@@ -32,7 +32,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new invitedUserMessageInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InvitedUserMessageInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a invitedUserMessageInfo
      */
-    @javax.annotation.Nonnull
-    public static InvitedUserMessageInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InvitedUserMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InvitedUserMessageInfo();
     }
@@ -50,7 +50,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
         return this.ccRecipients;
     }
@@ -66,7 +66,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomizedMessageBody() {
         return this.customizedMessageBody;
     }
@@ -74,7 +74,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("ccRecipients", (n) -> { this.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
@@ -87,7 +87,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * Gets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessageLanguage() {
         return this.messageLanguage;
     }
@@ -95,7 +95,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,8 +104,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("ccRecipients", this.getCcRecipients());
         writer.writeStringValue("customizedMessageBody", this.getCustomizedMessageBody());
@@ -118,8 +118,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ccRecipients property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCcRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    @jakarta.annotation.Nonnull
+    public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.ccRecipients = value;
     }
     /**
@@ -136,8 +136,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customizedMessageBody property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomizedMessageBody(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomizedMessageBody(@jakarta.annotation.Nullable final String value) {
         this.customizedMessageBody = value;
     }
     /**
@@ -145,8 +145,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the messageLanguage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMessageLanguage(@jakarta.annotation.Nullable final String value) {
         this.messageLanguage = value;
     }
     /**
@@ -154,8 +154,8 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

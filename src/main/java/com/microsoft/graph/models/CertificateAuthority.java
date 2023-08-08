@@ -44,7 +44,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Instantiates a new certificateAuthority and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateAuthority() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a certificateAuthority
      */
-    @javax.annotation.Nonnull
-    public static CertificateAuthority createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CertificateAuthority createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CertificateAuthority();
     }
@@ -62,7 +62,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the certificate property value. Required. The base64 encoded string representing the public certificate.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getCertificate() {
         return this.certificate;
     }
@@ -78,7 +78,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the certificateRevocationListUrl property value. The URL of the certificate revocation list.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateRevocationListUrl() {
         return this.certificateRevocationListUrl;
     }
@@ -86,7 +86,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the deltaCertificateRevocationListUrl property value. The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeltaCertificateRevocationListUrl() {
         return this.deltaCertificateRevocationListUrl;
     }
@@ -94,7 +94,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getByteArrayValue()); });
@@ -110,7 +110,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the isRootAuthority property value. Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRootAuthority() {
         return this.isRootAuthority;
     }
@@ -118,7 +118,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the issuer property value. The issuer of the certificate, calculated from the certificate value. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIssuer() {
         return this.issuer;
     }
@@ -126,7 +126,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the issuerSki property value. The subject key identifier of the certificate, calculated from the certificate value. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIssuerSki() {
         return this.issuerSki;
     }
@@ -134,7 +134,7 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -143,8 +143,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("certificate", this.getCertificate());
         writer.writeStringValue("certificateRevocationListUrl", this.getCertificateRevocationListUrl());
@@ -160,8 +160,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificate(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
         this.certificate = value;
     }
     /**
@@ -178,8 +178,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the certificateRevocationListUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateRevocationListUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
         this.certificateRevocationListUrl = value;
     }
     /**
@@ -187,8 +187,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deltaCertificateRevocationListUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeltaCertificateRevocationListUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeltaCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
         this.deltaCertificateRevocationListUrl = value;
     }
     /**
@@ -196,8 +196,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRootAuthority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRootAuthority(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRootAuthority(@jakarta.annotation.Nullable final Boolean value) {
         this.isRootAuthority = value;
     }
     /**
@@ -205,8 +205,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the issuer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssuer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIssuer(@jakarta.annotation.Nullable final String value) {
         this.issuer = value;
     }
     /**
@@ -214,8 +214,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the issuerSki property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssuerSki(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIssuerSki(@jakarta.annotation.Nullable final String value) {
         this.issuerSki = value;
     }
     /**
@@ -223,8 +223,8 @@ public class CertificateAuthority implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

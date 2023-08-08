@@ -130,7 +130,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Instantiates a new windowsPhone81GeneralConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsPhone81GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81GeneralConfiguration");
@@ -140,8 +140,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsPhone81GeneralConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsPhone81GeneralConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsPhone81GeneralConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsPhone81GeneralConfiguration();
     }
@@ -149,7 +149,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the applyOnlyToWindowsPhone81 property value. Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindowsPhone81() {
         return this.applyOnlyToWindowsPhone81;
     }
@@ -157,7 +157,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the appsBlockCopyPaste property value. Indicates whether or not to block copy paste.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppsBlockCopyPaste() {
         return this.appsBlockCopyPaste;
     }
@@ -165,7 +165,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the bluetoothBlocked property value. Indicates whether or not to block bluetooth.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBluetoothBlocked() {
         return this.bluetoothBlocked;
     }
@@ -173,7 +173,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the cameraBlocked property value. Indicates whether or not to block camera.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
         return this.cameraBlocked;
     }
@@ -181,7 +181,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the cellularBlockWifiTethering property value. Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCellularBlockWifiTethering() {
         return this.cellularBlockWifiTethering;
     }
@@ -189,7 +189,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
         return this.compliantAppListType;
     }
@@ -197,7 +197,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      * @return a appListItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
         return this.compliantAppsList;
     }
@@ -205,7 +205,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
         return this.diagnosticDataBlockSubmission;
     }
@@ -213,7 +213,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the emailBlockAddingAccounts property value. Indicates whether or not to block custom email accounts.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEmailBlockAddingAccounts() {
         return this.emailBlockAddingAccounts;
     }
@@ -221,7 +221,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applyOnlyToWindowsPhone81", (n) -> { this.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
@@ -259,7 +259,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the locationServicesBlocked property value. Indicates whether or not to block location services.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getLocationServicesBlocked() {
         return this.locationServicesBlocked;
     }
@@ -267,7 +267,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the microsoftAccountBlocked property value. Indicates whether or not to block using a Microsoft Account.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMicrosoftAccountBlocked() {
         return this.microsoftAccountBlocked;
     }
@@ -275,7 +275,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getNfcBlocked() {
         return this.nfcBlocked;
     }
@@ -283,7 +283,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordBlockSimple property value. Indicates whether or not to block syncing the calendar.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
         return this.passwordBlockSimple;
     }
@@ -291,7 +291,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
         return this.passwordExpirationDays;
     }
@@ -299,7 +299,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
         return this.passwordMinimumCharacterSetCount;
     }
@@ -307,7 +307,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -315,7 +315,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before screen timeout.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
         return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
@@ -323,7 +323,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
         return this.passwordPreviousPasswordBlockCount;
     }
@@ -331,7 +331,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordRequired property value. Indicates whether or not to require a password.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
         return this.passwordRequired;
     }
@@ -339,7 +339,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -347,7 +347,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
         return this.passwordSignInFailureCountBeforeFactoryReset;
     }
@@ -355,7 +355,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
         return this.screenCaptureBlocked;
     }
@@ -363,7 +363,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageBlockRemovableStorage() {
         return this.storageBlockRemovableStorage;
     }
@@ -371,7 +371,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the storageRequireEncryption property value. Indicates whether or not to require encryption.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
         return this.storageRequireEncryption;
     }
@@ -379,7 +379,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWebBrowserBlocked() {
         return this.webBrowserBlocked;
     }
@@ -387,7 +387,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the wifiBlockAutomaticConnectHotspots property value. Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWifiBlockAutomaticConnectHotspots() {
         return this.wifiBlockAutomaticConnectHotspots;
     }
@@ -395,7 +395,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the wifiBlocked property value. Indicates whether or not to block Wi-Fi.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWifiBlocked() {
         return this.wifiBlocked;
     }
@@ -403,7 +403,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the wifiBlockHotspotReporting property value. Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWifiBlockHotspotReporting() {
         return this.wifiBlockHotspotReporting;
     }
@@ -411,7 +411,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Gets the windowsStoreBlocked property value. Indicates whether or not to block the Windows Store.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWindowsStoreBlocked() {
         return this.windowsStoreBlocked;
     }
@@ -420,8 +420,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("appsBlockCopyPaste", this.getAppsBlockCopyPaste());
@@ -458,8 +458,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the applyOnlyToWindowsPhone81 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplyOnlyToWindowsPhone81(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setApplyOnlyToWindowsPhone81(@jakarta.annotation.Nullable final Boolean value) {
         this.applyOnlyToWindowsPhone81 = value;
     }
     /**
@@ -467,8 +467,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the appsBlockCopyPaste property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppsBlockCopyPaste(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppsBlockCopyPaste(@jakarta.annotation.Nullable final Boolean value) {
         this.appsBlockCopyPaste = value;
     }
     /**
@@ -476,8 +476,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the bluetoothBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBluetoothBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBluetoothBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlocked = value;
     }
     /**
@@ -485,8 +485,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCameraBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.cameraBlocked = value;
     }
     /**
@@ -494,8 +494,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the cellularBlockWifiTethering property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularBlockWifiTethering(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCellularBlockWifiTethering(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockWifiTethering = value;
     }
     /**
@@ -503,8 +503,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantAppListType(@jakarta.annotation.Nullable final AppListType value) {
         this.compliantAppListType = value;
     }
     /**
@@ -512,8 +512,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantAppsList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.compliantAppsList = value;
     }
     /**
@@ -521,8 +521,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiagnosticDataBlockSubmission(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDiagnosticDataBlockSubmission(@jakarta.annotation.Nullable final Boolean value) {
         this.diagnosticDataBlockSubmission = value;
     }
     /**
@@ -530,8 +530,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the emailBlockAddingAccounts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailBlockAddingAccounts(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailBlockAddingAccounts(@jakarta.annotation.Nullable final Boolean value) {
         this.emailBlockAddingAccounts = value;
     }
     /**
@@ -539,8 +539,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the locationServicesBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocationServicesBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setLocationServicesBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.locationServicesBlocked = value;
     }
     /**
@@ -548,8 +548,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the microsoftAccountBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrosoftAccountBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMicrosoftAccountBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.microsoftAccountBlocked = value;
     }
     /**
@@ -557,8 +557,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the nfcBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNfcBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setNfcBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.nfcBlocked = value;
     }
     /**
@@ -566,8 +566,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
@@ -575,8 +575,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
@@ -584,8 +584,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
@@ -593,8 +593,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
@@ -602,8 +602,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
@@ -611,8 +611,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
@@ -620,8 +620,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
@@ -629,8 +629,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
@@ -638,8 +638,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
@@ -647,8 +647,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.screenCaptureBlocked = value;
     }
     /**
@@ -656,8 +656,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the storageBlockRemovableStorage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageBlockRemovableStorage(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageBlockRemovableStorage(@jakarta.annotation.Nullable final Boolean value) {
         this.storageBlockRemovableStorage = value;
     }
     /**
@@ -665,8 +665,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }
     /**
@@ -674,8 +674,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the webBrowserBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebBrowserBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWebBrowserBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.webBrowserBlocked = value;
     }
     /**
@@ -683,8 +683,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the wifiBlockAutomaticConnectHotspots property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiBlockAutomaticConnectHotspots(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWifiBlockAutomaticConnectHotspots(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiBlockAutomaticConnectHotspots = value;
     }
     /**
@@ -692,8 +692,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the wifiBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWifiBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiBlocked = value;
     }
     /**
@@ -701,8 +701,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the wifiBlockHotspotReporting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiBlockHotspotReporting(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWifiBlockHotspotReporting(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiBlockHotspotReporting = value;
     }
     /**
@@ -710,8 +710,8 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the windowsStoreBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsStoreBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWindowsStoreBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsStoreBlocked = value;
     }
 }

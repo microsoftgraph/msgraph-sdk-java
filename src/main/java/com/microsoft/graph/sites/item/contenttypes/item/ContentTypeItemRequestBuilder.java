@@ -33,70 +33,70 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the associateWithHubSites method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssociateWithHubSitesRequestBuilder associateWithHubSites() {
         return new AssociateWithHubSitesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the base property of the microsoft.graph.contentType entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public BaseRequestBuilderEscaped base() {
         return new BaseRequestBuilderEscaped(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public BaseTypesRequestBuilder baseTypes() {
         return new BaseTypesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ColumnLinksRequestBuilder columnLinks() {
         return new ColumnLinksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ColumnPositionsRequestBuilder columnPositions() {
         return new ColumnPositionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the copyToDefaultContentLocation method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CopyToDefaultContentLocationRequestBuilder copyToDefaultContentLocation() {
         return new CopyToDefaultContentLocationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the isPublished method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public IsPublishedRequestBuilder isPublished() {
         return new IsPublishedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the publish method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unpublish method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public UnpublishRequestBuilder unpublish() {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
     }
@@ -106,8 +106,8 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ContentTypeItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public ContentTypeItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/contentTypes/{contentType%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -116,16 +116,16 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public ContentTypeItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public ContentTypeItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/contentTypes/{contentType%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Remove a [content type][contentType] from a [list][] or a [site][].
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -143,10 +143,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -162,9 +162,9 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -182,10 +182,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -202,10 +202,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Update a [content type][contentType].
      * @param body The request body
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> patch(@javax.annotation.Nonnull final ContentType body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> patch(@jakarta.annotation.Nonnull final ContentType body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -223,10 +223,10 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> patch(@javax.annotation.Nonnull final ContentType body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> patch(@jakarta.annotation.Nonnull final ContentType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -244,7 +244,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Remove a [content type][contentType] from a [list][] or a [site][].
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -253,8 +253,8 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -271,7 +271,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -280,8 +280,8 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -301,8 +301,8 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ContentType body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ContentType body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -311,8 +311,8 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ContentType body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ContentType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -341,13 +341,13 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -357,7 +357,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

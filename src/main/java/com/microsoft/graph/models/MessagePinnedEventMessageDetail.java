@@ -20,7 +20,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * Instantiates a new messagePinnedEventMessageDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MessagePinnedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.messagePinnedEventMessageDetail");
@@ -30,8 +30,8 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a messagePinnedEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static MessagePinnedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MessagePinnedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MessagePinnedEventMessageDetail();
     }
@@ -39,7 +39,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * Gets the eventDateTime property value. Date and time when the event occurred.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
         return this.eventDateTime;
     }
@@ -47,7 +47,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
@@ -58,7 +58,7 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -67,8 +67,8 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
@@ -79,8 +79,8 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
@@ -88,8 +88,8 @@ public class MessagePinnedEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the initiator property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
 }

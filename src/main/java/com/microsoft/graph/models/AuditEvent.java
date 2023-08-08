@@ -60,7 +60,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Instantiates a new auditEvent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuditEvent() {
         super();
     }
@@ -69,8 +69,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a auditEvent
      */
-    @javax.annotation.Nonnull
-    public static AuditEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuditEvent();
     }
@@ -78,7 +78,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activity property value. Friendly name of the activity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivity() {
         return this.activity;
     }
@@ -86,7 +86,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activityDateTime property value. The date time in UTC when the activity was performed.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
         return this.activityDateTime;
     }
@@ -94,7 +94,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activityOperationType property value. The HTTP operation type of the activity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityOperationType() {
         return this.activityOperationType;
     }
@@ -102,7 +102,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activityResult property value. The result of the activity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityResult() {
         return this.activityResult;
     }
@@ -110,7 +110,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activityType property value. The type of activity that was being performed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityType() {
         return this.activityType;
     }
@@ -118,7 +118,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the actor property value. AAD user and application that are associated with the audit event.
      * @return a auditActor
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuditActor getActor() {
         return this.actor;
     }
@@ -126,7 +126,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the category property value. Audit category.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory() {
         return this.category;
     }
@@ -134,7 +134,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the componentName property value. Component name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComponentName() {
         return this.componentName;
     }
@@ -142,7 +142,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the correlationId property value. The client request Id that is used to correlate activity within the system.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCorrelationId() {
         return this.correlationId;
     }
@@ -150,7 +150,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the displayName property value. Event display name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -158,7 +158,7 @@ public class AuditEvent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
@@ -178,7 +178,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the resources property value. Resources being modified.
      * @return a auditResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuditResource> getResources() {
         return this.resources;
     }
@@ -187,8 +187,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("activity", this.getActivity());
@@ -208,8 +208,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivity(@jakarta.annotation.Nullable final String value) {
         this.activity = value;
     }
     /**
@@ -217,8 +217,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
@@ -226,8 +226,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activityOperationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityOperationType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityOperationType(@jakarta.annotation.Nullable final String value) {
         this.activityOperationType = value;
     }
     /**
@@ -235,8 +235,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activityResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityResult(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityResult(@jakarta.annotation.Nullable final String value) {
         this.activityResult = value;
     }
     /**
@@ -244,8 +244,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activityType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityType(@jakarta.annotation.Nullable final String value) {
         this.activityType = value;
     }
     /**
@@ -253,8 +253,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the actor property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActor(@javax.annotation.Nullable final AuditActor value) {
+    @jakarta.annotation.Nonnull
+    public void setActor(@jakarta.annotation.Nullable final AuditActor value) {
         this.actor = value;
     }
     /**
@@ -262,8 +262,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.category = value;
     }
     /**
@@ -271,8 +271,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the componentName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComponentName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setComponentName(@jakarta.annotation.Nullable final String value) {
         this.componentName = value;
     }
     /**
@@ -280,8 +280,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationId(@jakarta.annotation.Nullable final UUID value) {
         this.correlationId = value;
     }
     /**
@@ -289,8 +289,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -298,8 +298,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResources(@javax.annotation.Nullable final java.util.List<AuditResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<AuditResource> value) {
         this.resources = value;
     }
 }

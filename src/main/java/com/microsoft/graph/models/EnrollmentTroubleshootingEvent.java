@@ -46,7 +46,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Instantiates a new enrollmentTroubleshootingEvent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentTroubleshootingEvent() {
         super();
     }
@@ -55,8 +55,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a enrollmentTroubleshootingEvent
      */
-    @javax.annotation.Nonnull
-    public static EnrollmentTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EnrollmentTroubleshootingEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EnrollmentTroubleshootingEvent();
     }
@@ -64,7 +64,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the deviceId property value. Azure AD device identifier.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -72,7 +72,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the enrollmentType property value. Possible ways of adding a mobile device to management.
      * @return a deviceEnrollmentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentType getEnrollmentType() {
         return this.enrollmentType;
     }
@@ -80,7 +80,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the failureCategory property value. Top level failure categories for enrollment.
      * @return a deviceEnrollmentFailureReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentFailureReason getFailureCategory() {
         return this.failureCategory;
     }
@@ -88,7 +88,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the failureReason property value. Detailed failure reason.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFailureReason() {
         return this.failureReason;
     }
@@ -96,7 +96,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
@@ -113,7 +113,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceIdentifier() {
         return this.managedDeviceIdentifier;
     }
@@ -121,7 +121,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the operatingSystem property value. Operating System.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
@@ -129,7 +129,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the osVersion property value. OS Version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -137,7 +137,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -146,8 +146,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -164,8 +164,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -173,8 +173,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentType(@javax.annotation.Nullable final DeviceEnrollmentType value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentType(@jakarta.annotation.Nullable final DeviceEnrollmentType value) {
         this.enrollmentType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the failureCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailureCategory(@javax.annotation.Nullable final DeviceEnrollmentFailureReason value) {
+    @jakarta.annotation.Nonnull
+    public void setFailureCategory(@jakarta.annotation.Nullable final DeviceEnrollmentFailureReason value) {
         this.failureCategory = value;
     }
     /**
@@ -191,8 +191,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the failureReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailureReason(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.failureReason = value;
     }
     /**
@@ -200,8 +200,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the managedDeviceIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceIdentifier = value;
     }
     /**
@@ -209,8 +209,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystem(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
@@ -218,8 +218,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the osVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
@@ -227,8 +227,8 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

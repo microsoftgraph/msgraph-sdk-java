@@ -13,11 +13,11 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     private AccessPackageCatalog catalog;
     /**
-     * The createdDateTime property
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The requestType property
+     * The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      */
     private AccessPackageRequestType requestType;
     /**
@@ -25,14 +25,14 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     private AccessPackageResource resource;
     /**
-     * The state property
+     * The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      */
     private AccessPackageRequestState state;
     /**
      * Instantiates a new accessPackageResourceRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResourceRequest() {
         super();
     }
@@ -41,8 +41,8 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageResourceRequest
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageResourceRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageResourceRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageResourceRequest();
     }
@@ -50,15 +50,15 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * Gets the catalog property value. The catalog property
      * @return a accessPackageCatalog
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
         return this.catalog;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -66,7 +66,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
@@ -77,10 +77,10 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the requestType property value. The requestType property
+     * Gets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @return a accessPackageRequestType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageRequestType getRequestType() {
         return this.requestType;
     }
@@ -88,15 +88,15 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * Gets the resource property value. The resource property
      * @return a accessPackageResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResource getResource() {
         return this.resource;
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      * @return a accessPackageRequestState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageRequestState getState() {
         return this.state;
     }
@@ -105,8 +105,8 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("catalog", this.getCatalog());
@@ -120,26 +120,26 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the catalog property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCatalog(@javax.annotation.Nullable final AccessPackageCatalog value) {
+    @jakarta.annotation.Nonnull
+    public void setCatalog(@jakarta.annotation.Nullable final AccessPackageCatalog value) {
         this.catalog = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the requestType property value. The requestType property
+     * Sets the requestType property value. The type of the request. Use adminAdd to add a resource, if the caller is an administrator or resource owner, adminUpdate to update a resource, or adminRemove to remove a resource.
      * @param value Value to set for the requestType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestType(@javax.annotation.Nullable final AccessPackageRequestType value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestType(@jakarta.annotation.Nullable final AccessPackageRequestType value) {
         this.requestType = value;
     }
     /**
@@ -147,17 +147,17 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final AccessPackageResource value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
         this.resource = value;
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The outcome of whether the service was able to add the resource to the catalog.  The value is delivered if the resource was added or removed. Read-only.
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final AccessPackageRequestState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final AccessPackageRequestState value) {
         this.state = value;
     }
 }

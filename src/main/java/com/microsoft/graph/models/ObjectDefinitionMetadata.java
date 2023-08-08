@@ -15,10 +15,10 @@ public enum ObjectDefinitionMetadata implements ValuedEnum {
     ObjectDefinitionMetadata(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ObjectDefinitionMetadata forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ObjectDefinitionMetadata forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "PropertyNameAccountEnabled": return PropertyNameAccountEnabled;

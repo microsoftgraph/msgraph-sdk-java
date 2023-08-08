@@ -40,7 +40,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new userSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userSummary
      */
-    @javax.annotation.Nonnull
-    public static UserSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserSummary();
     }
@@ -58,7 +58,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Gets the failedTasks property value. The number of failed tasks for users in a user summary.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedTasks() {
         return this.failedTasks;
     }
@@ -74,7 +74,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Gets the failedUsers property value. The number of failed users in a user summary.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedUsers() {
         return this.failedUsers;
     }
@@ -82,7 +82,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("failedTasks", (n) -> { this.setFailedTasks(n.getIntegerValue()); });
@@ -97,7 +97,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +105,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Gets the successfulUsers property value. The number of successful users in a user summary.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessfulUsers() {
         return this.successfulUsers;
     }
@@ -113,7 +113,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Gets the totalTasks property value. The total tasks of users in a user summary.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalTasks() {
         return this.totalTasks;
     }
@@ -121,7 +121,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * Gets the totalUsers property value. The total number of users in a user summary
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalUsers() {
         return this.totalUsers;
     }
@@ -130,8 +130,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedTasks", this.getFailedTasks());
         writer.writeIntegerValue("failedUsers", this.getFailedUsers());
@@ -146,8 +146,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the failedTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedTasks(@jakarta.annotation.Nullable final Integer value) {
         this.failedTasks = value;
     }
     /**
@@ -164,8 +164,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the failedUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedUsers(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedUsers(@jakarta.annotation.Nullable final Integer value) {
         this.failedUsers = value;
     }
     /**
@@ -173,8 +173,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the successfulUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulUsers(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulUsers(@jakarta.annotation.Nullable final Integer value) {
         this.successfulUsers = value;
     }
     /**
@@ -191,8 +191,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalTasks(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalTasks(@jakarta.annotation.Nullable final Integer value) {
         this.totalTasks = value;
     }
     /**
@@ -200,8 +200,8 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUsers(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalUsers(@jakarta.annotation.Nullable final Integer value) {
         this.totalUsers = value;
     }
 }

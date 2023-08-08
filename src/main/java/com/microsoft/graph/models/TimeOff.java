@@ -23,7 +23,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * Instantiates a new timeOff and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimeOff() {
         super();
         this.setOdataType("#microsoft.graph.timeOff");
@@ -33,8 +33,8 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a timeOff
      */
-    @javax.annotation.Nonnull
-    public static TimeOff createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TimeOff createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TimeOff();
     }
@@ -42,7 +42,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * Gets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
      * @return a timeOffItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimeOffItem getDraftTimeOff() {
         return this.draftTimeOff;
     }
@@ -50,7 +50,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("draftTimeOff", (n) -> { this.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
@@ -62,7 +62,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
      * @return a timeOffItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimeOffItem getSharedTimeOff() {
         return this.sharedTimeOff;
     }
@@ -70,7 +70,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * Gets the userId property value. ID of the user assigned to the timeOff. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -79,8 +79,8 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("draftTimeOff", this.getDraftTimeOff());
@@ -92,8 +92,8 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftTimeOff property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDraftTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
+    @jakarta.annotation.Nonnull
+    public void setDraftTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
         this.draftTimeOff = value;
     }
     /**
@@ -101,8 +101,8 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the sharedTimeOff property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
+    @jakarta.annotation.Nonnull
+    public void setSharedTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
         this.sharedTimeOff = value;
     }
     /**
@@ -110,8 +110,8 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

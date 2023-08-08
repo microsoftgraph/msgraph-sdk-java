@@ -55,7 +55,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Instantiates a new browserSiteList and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSiteList() {
         super();
     }
@@ -64,8 +64,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a browserSiteList
      */
-    @javax.annotation.Nonnull
-    public static BrowserSiteList createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BrowserSiteList createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BrowserSiteList();
     }
@@ -73,7 +73,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the description property value. The description of the site list.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -81,7 +81,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the displayName property value. The name of the site list.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -89,7 +89,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -108,7 +108,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The user who last modified the site list.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -116,7 +116,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the site list was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -124,7 +124,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the publishedBy property value. The user who published the site list.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getPublishedBy() {
         return this.publishedBy;
     }
@@ -132,7 +132,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the publishedDateTime property value. The date and time when the site list was published.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
         return this.publishedDateTime;
     }
@@ -140,7 +140,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the revision property value. The current revision of the site list.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRevision() {
         return this.revision;
     }
@@ -148,7 +148,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the sharedCookies property value. A collection of shared cookies defined for the site list.
      * @return a browserSharedCookie
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BrowserSharedCookie> getSharedCookies() {
         return this.sharedCookies;
     }
@@ -156,7 +156,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the sites property value. A collection of sites defined for the site list.
      * @return a browserSite
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BrowserSite> getSites() {
         return this.sites;
     }
@@ -164,7 +164,7 @@ public class BrowserSiteList extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a browserSiteListStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSiteListStatus getStatus() {
         return this.status;
     }
@@ -173,8 +173,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -193,8 +193,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -202,8 +202,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -211,8 +211,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -220,8 +220,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -229,8 +229,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the publishedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.publishedBy = value;
     }
     /**
@@ -238,8 +238,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the publishedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.publishedDateTime = value;
     }
     /**
@@ -247,8 +247,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the revision property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRevision(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRevision(@jakarta.annotation.Nullable final String value) {
         this.revision = value;
     }
     /**
@@ -256,8 +256,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the sharedCookies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedCookies(@javax.annotation.Nullable final java.util.List<BrowserSharedCookie> value) {
+    @jakarta.annotation.Nonnull
+    public void setSharedCookies(@jakarta.annotation.Nullable final java.util.List<BrowserSharedCookie> value) {
         this.sharedCookies = value;
     }
     /**
@@ -265,8 +265,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the sites property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSites(@javax.annotation.Nullable final java.util.List<BrowserSite> value) {
+    @jakarta.annotation.Nonnull
+    public void setSites(@jakarta.annotation.Nullable final java.util.List<BrowserSite> value) {
         this.sites = value;
     }
     /**
@@ -274,8 +274,8 @@ public class BrowserSiteList extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final BrowserSiteListStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final BrowserSiteListStatus value) {
         this.status = value;
     }
 }

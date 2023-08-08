@@ -10,10 +10,10 @@ public enum WorkforceIntegrationEncryptionProtocol implements ValuedEnum {
     WorkforceIntegrationEncryptionProtocol(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WorkforceIntegrationEncryptionProtocol forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WorkforceIntegrationEncryptionProtocol forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "sharedSecret": return SharedSecret;

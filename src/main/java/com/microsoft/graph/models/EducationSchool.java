@@ -67,7 +67,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Instantiates a new educationSchool and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSchool() {
         super();
         this.setOdataType("#microsoft.graph.educationSchool");
@@ -77,8 +77,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSchool
      */
-    @javax.annotation.Nonnull
-    public static EducationSchool createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSchool createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSchool();
     }
@@ -86,7 +86,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the address property value. Address of the school.
      * @return a physicalAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
         return this.address;
     }
@@ -94,7 +94,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the administrativeUnit property value. The underlying administrativeUnit for this school.
      * @return a administrativeUnit
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdministrativeUnit getAdministrativeUnit() {
         return this.administrativeUnit;
     }
@@ -102,7 +102,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the classes property value. Classes taught at the school. Nullable.
      * @return a educationClass
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationClass> getClasses() {
         return this.classes;
     }
@@ -110,7 +110,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the createdBy property value. Entity who created the school.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -118,7 +118,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the externalId property value. ID of school in syncing system.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -126,7 +126,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the externalPrincipalId property value. ID of principal in syncing system.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalPrincipalId() {
         return this.externalPrincipalId;
     }
@@ -134,7 +134,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the fax property value. The fax property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFax() {
         return this.fax;
     }
@@ -142,7 +142,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
@@ -165,7 +165,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the highestGrade property value. Highest grade taught.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHighestGrade() {
         return this.highestGrade;
     }
@@ -173,7 +173,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the lowestGrade property value. Lowest grade taught.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLowestGrade() {
         return this.lowestGrade;
     }
@@ -181,7 +181,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the phone property value. Phone number of school.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhone() {
         return this.phone;
     }
@@ -189,7 +189,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the principalEmail property value. Email address of the principal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalEmail() {
         return this.principalEmail;
     }
@@ -197,7 +197,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the principalName property value. Name of the principal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalName() {
         return this.principalName;
     }
@@ -205,7 +205,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the schoolNumber property value. School Number.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSchoolNumber() {
         return this.schoolNumber;
     }
@@ -213,7 +213,7 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * Gets the users property value. Users in the school. Nullable.
      * @return a educationUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getUsers() {
         return this.users;
     }
@@ -222,8 +222,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("address", this.getAddress());
@@ -246,8 +246,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
+    @jakarta.annotation.Nonnull
+    public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
@@ -255,8 +255,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the administrativeUnit property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdministrativeUnit(@javax.annotation.Nullable final AdministrativeUnit value) {
+    @jakarta.annotation.Nonnull
+    public void setAdministrativeUnit(@jakarta.annotation.Nullable final AdministrativeUnit value) {
         this.administrativeUnit = value;
     }
     /**
@@ -264,8 +264,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the classes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
+    @jakarta.annotation.Nonnull
+    public void setClasses(@jakarta.annotation.Nullable final java.util.List<EducationClass> value) {
         this.classes = value;
     }
     /**
@@ -273,8 +273,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -282,8 +282,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
@@ -291,8 +291,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the externalPrincipalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalPrincipalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.externalPrincipalId = value;
     }
     /**
@@ -300,8 +300,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the fax property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFax(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFax(@jakarta.annotation.Nullable final String value) {
         this.fax = value;
     }
     /**
@@ -309,8 +309,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the highestGrade property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHighestGrade(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHighestGrade(@jakarta.annotation.Nullable final String value) {
         this.highestGrade = value;
     }
     /**
@@ -318,8 +318,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the lowestGrade property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLowestGrade(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLowestGrade(@jakarta.annotation.Nullable final String value) {
         this.lowestGrade = value;
     }
     /**
@@ -327,8 +327,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the phone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.phone = value;
     }
     /**
@@ -336,8 +336,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the principalEmail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalEmail(@jakarta.annotation.Nullable final String value) {
         this.principalEmail = value;
     }
     /**
@@ -345,8 +345,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the principalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.principalName = value;
     }
     /**
@@ -354,8 +354,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the schoolNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchoolNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSchoolNumber(@jakarta.annotation.Nullable final String value) {
         this.schoolNumber = value;
     }
     /**
@@ -363,8 +363,8 @@ public class EducationSchool extends EducationOrganization implements Parsable {
      * @param value Value to set for the users property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
+    @jakarta.annotation.Nonnull
+    public void setUsers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.users = value;
     }
 }

@@ -82,7 +82,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Instantiates a new macOSCompliancePolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.macOSCompliancePolicy");
@@ -92,8 +92,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public static MacOSCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSCompliancePolicy();
     }
@@ -101,7 +101,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
         return this.deviceThreatProtectionEnabled;
     }
@@ -109,7 +109,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
         return this.deviceThreatProtectionRequiredSecurityLevel;
     }
@@ -117,7 +117,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
@@ -143,7 +143,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFirewallBlockAllIncoming() {
         return this.firewallBlockAllIncoming;
     }
@@ -151,7 +151,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the firewallEnabled property value. Whether the firewall should be enabled or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFirewallEnabled() {
         return this.firewallEnabled;
     }
@@ -159,7 +159,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFirewallEnableStealthMode() {
         return this.firewallEnableStealthMode;
     }
@@ -167,7 +167,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the osMaximumVersion property value. Maximum MacOS version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
         return this.osMaximumVersion;
     }
@@ -175,7 +175,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the osMinimumVersion property value. Minimum MacOS version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
         return this.osMinimumVersion;
     }
@@ -183,7 +183,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
         return this.passwordBlockSimple;
     }
@@ -191,7 +191,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
         return this.passwordExpirationDays;
     }
@@ -199,7 +199,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
         return this.passwordMinimumCharacterSetCount;
     }
@@ -207,7 +207,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -215,7 +215,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
         return this.passwordMinutesOfInactivityBeforeLock;
     }
@@ -223,7 +223,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
         return this.passwordPreviousPasswordBlockCount;
     }
@@ -231,7 +231,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordRequired property value. Whether or not to require a password.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
         return this.passwordRequired;
     }
@@ -239,7 +239,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -247,7 +247,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the storageRequireEncryption property value. Require encryption on Mac OS devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
         return this.storageRequireEncryption;
     }
@@ -255,7 +255,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Gets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSystemIntegrityProtectionEnabled() {
         return this.systemIntegrityProtectionEnabled;
     }
@@ -264,8 +264,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("deviceThreatProtectionEnabled", this.getDeviceThreatProtectionEnabled());
@@ -291,8 +291,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceThreatProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceThreatProtectionEnabled = value;
     }
     /**
@@ -300,8 +300,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
@@ -309,8 +309,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the firewallBlockAllIncoming property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirewallBlockAllIncoming(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFirewallBlockAllIncoming(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallBlockAllIncoming = value;
     }
     /**
@@ -318,8 +318,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the firewallEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirewallEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFirewallEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallEnabled = value;
     }
     /**
@@ -327,8 +327,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the firewallEnableStealthMode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirewallEnableStealthMode(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFirewallEnableStealthMode(@jakarta.annotation.Nullable final Boolean value) {
         this.firewallEnableStealthMode = value;
     }
     /**
@@ -336,8 +336,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
@@ -345,8 +345,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
@@ -354,8 +354,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
@@ -363,8 +363,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
@@ -372,8 +372,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
@@ -381,8 +381,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
@@ -390,8 +390,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
@@ -399,8 +399,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
@@ -408,8 +408,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
@@ -417,8 +417,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
@@ -426,8 +426,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }
     /**
@@ -435,8 +435,8 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the systemIntegrityProtectionEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemIntegrityProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSystemIntegrityProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.systemIntegrityProtectionEnabled = value;
     }
 }

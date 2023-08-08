@@ -48,7 +48,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Instantiates a new unifiedRoleManagementPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleManagementPolicy() {
         super();
     }
@@ -57,8 +57,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleManagementPolicy
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleManagementPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleManagementPolicy();
     }
@@ -66,7 +66,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the description property value. Description for the policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -74,7 +74,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the displayName property value. Display name for the policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -82,7 +82,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      * @return a unifiedRoleManagementPolicyRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getEffectiveRules() {
         return this.effectiveRules;
     }
@@ -90,7 +90,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -108,7 +108,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOrganizationDefault() {
         return this.isOrganizationDefault;
     }
@@ -116,7 +116,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The identity who last modified the role setting.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -124,7 +124,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The time when the role setting was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -132,7 +132,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
      * @return a unifiedRoleManagementPolicyRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyRule> getRules() {
         return this.rules;
     }
@@ -140,7 +140,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScopeId() {
         return this.scopeId;
     }
@@ -148,7 +148,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * Gets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScopeType() {
         return this.scopeType;
     }
@@ -157,8 +157,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -176,8 +176,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -185,8 +185,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -194,8 +194,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the effectiveRules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEffectiveRules(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setEffectiveRules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
         this.effectiveRules = value;
     }
     /**
@@ -203,8 +203,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the isOrganizationDefault property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOrganizationDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsOrganizationDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isOrganizationDefault = value;
     }
     /**
@@ -212,8 +212,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final Identity value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -221,8 +221,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -230,8 +230,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the rules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRules(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setRules(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
         this.rules = value;
     }
     /**
@@ -239,8 +239,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the scopeId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopeId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScopeId(@jakarta.annotation.Nullable final String value) {
         this.scopeId = value;
     }
     /**
@@ -248,8 +248,8 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the scopeType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopeType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScopeType(@jakarta.annotation.Nullable final String value) {
         this.scopeType = value;
     }
 }

@@ -44,7 +44,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Instantiates a new media and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Media() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a media
      */
-    @javax.annotation.Nonnull
-    public static Media createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Media createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Media();
     }
@@ -62,7 +62,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the calleeDevice property value. Device information associated with the callee endpoint of this media.
      * @return a deviceInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceInfo getCalleeDevice() {
         return this.calleeDevice;
     }
@@ -78,7 +78,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the calleeNetwork property value. Network information associated with the callee endpoint of this media.
      * @return a networkInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NetworkInfo getCalleeNetwork() {
         return this.calleeNetwork;
     }
@@ -86,7 +86,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the callerDevice property value. Device information associated with the caller endpoint of this media.
      * @return a deviceInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceInfo getCallerDevice() {
         return this.callerDevice;
     }
@@ -94,7 +94,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the callerNetwork property value. Network information associated with the caller endpoint of this media.
      * @return a networkInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NetworkInfo getCallerNetwork() {
         return this.callerNetwork;
     }
@@ -102,7 +102,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("calleeDevice", (n) -> { this.setCalleeDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
@@ -118,7 +118,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the label property value. How the media was identified during media negotiation stage.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabel() {
         return this.label;
     }
@@ -126,7 +126,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -134,7 +134,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Gets the streams property value. Network streams associated with this media.
      * @return a mediaStream
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MediaStream> getStreams() {
         return this.streams;
     }
@@ -143,8 +143,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("calleeDevice", this.getCalleeDevice());
         writer.writeObjectValue("calleeNetwork", this.getCalleeNetwork());
@@ -160,8 +160,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calleeDevice property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalleeDevice(@javax.annotation.Nullable final DeviceInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setCalleeDevice(@jakarta.annotation.Nullable final DeviceInfo value) {
         this.calleeDevice = value;
     }
     /**
@@ -178,8 +178,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calleeNetwork property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalleeNetwork(@javax.annotation.Nullable final NetworkInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setCalleeNetwork(@jakarta.annotation.Nullable final NetworkInfo value) {
         this.calleeNetwork = value;
     }
     /**
@@ -187,8 +187,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callerDevice property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallerDevice(@javax.annotation.Nullable final DeviceInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setCallerDevice(@jakarta.annotation.Nullable final DeviceInfo value) {
         this.callerDevice = value;
     }
     /**
@@ -196,8 +196,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callerNetwork property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallerNetwork(@javax.annotation.Nullable final NetworkInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setCallerNetwork(@jakarta.annotation.Nullable final NetworkInfo value) {
         this.callerNetwork = value;
     }
     /**
@@ -205,8 +205,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
@@ -214,8 +214,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -223,8 +223,8 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the streams property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
+    @jakarta.annotation.Nonnull
+    public void setStreams(@jakarta.annotation.Nullable final java.util.List<MediaStream> value) {
         this.streams = value;
     }
 }

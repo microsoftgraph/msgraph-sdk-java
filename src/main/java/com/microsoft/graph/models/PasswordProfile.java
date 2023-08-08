@@ -25,14 +25,14 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required.
+     * The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      */
     private String password;
     /**
      * Instantiates a new passwordProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PasswordProfile() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a passwordProfile
      */
-    @javax.annotation.Nonnull
-    public static PasswordProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PasswordProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PasswordProfile();
     }
@@ -50,7 +50,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("forceChangePasswordNextSignIn", (n) -> { this.setForceChangePasswordNextSignIn(n.getBooleanValue()); });
@@ -71,7 +71,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getForceChangePasswordNextSignIn() {
         return this.forceChangePasswordNextSignIn;
     }
@@ -79,7 +79,7 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * Gets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getForceChangePasswordNextSignInWithMfa() {
         return this.forceChangePasswordNextSignInWithMfa;
     }
@@ -87,15 +87,15 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required.
+     * Gets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPassword() {
         return this.password;
     }
@@ -104,8 +104,8 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("forceChangePasswordNextSignIn", this.getForceChangePasswordNextSignIn());
         writer.writeBooleanValue("forceChangePasswordNextSignInWithMfa", this.getForceChangePasswordNextSignInWithMfa());
@@ -118,8 +118,8 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the forceChangePasswordNextSignIn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForceChangePasswordNextSignIn(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setForceChangePasswordNextSignIn(@jakarta.annotation.Nullable final Boolean value) {
         this.forceChangePasswordNextSignIn = value;
     }
     /**
@@ -136,8 +136,8 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the forceChangePasswordNextSignInWithMfa property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForceChangePasswordNextSignInWithMfa(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setForceChangePasswordNextSignInWithMfa(@jakarta.annotation.Nullable final Boolean value) {
         this.forceChangePasswordNextSignInWithMfa = value;
     }
     /**
@@ -145,17 +145,17 @@ public class PasswordProfile implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
-     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the users passwordPolicies property. By default, a strong password is required.
+     * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user's passwordPolicies property. By default, a strong password is required.
      * @param value Value to set for the password property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassword(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }
 }

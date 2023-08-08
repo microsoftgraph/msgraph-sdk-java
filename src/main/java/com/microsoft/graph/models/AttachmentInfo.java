@@ -36,7 +36,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new attachmentInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttachmentInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a attachmentInfo
      */
-    @javax.annotation.Nonnull
-    public static AttachmentInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AttachmentInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AttachmentInfo();
     }
@@ -54,7 +54,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * Gets the attachmentType property value. The type of the attachment. The possible values are: file, item, reference. Required.
      * @return a attachmentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttachmentType getAttachmentType() {
         return this.attachmentType;
     }
@@ -70,7 +70,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * Gets the contentType property value. The nature of the data in the attachment. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentType() {
         return this.contentType;
     }
@@ -78,7 +78,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("attachmentType", (n) -> { this.setAttachmentType(n.getEnumValue(AttachmentType.class)); });
@@ -92,7 +92,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -100,7 +100,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * Gets the size property value. The length of the attachment in bytes. Required.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSize() {
         return this.size;
     }
@@ -117,8 +117,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("attachmentType", this.getAttachmentType());
         writer.writeStringValue("contentType", this.getContentType());
@@ -132,8 +132,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attachmentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttachmentType(@javax.annotation.Nullable final AttachmentType value) {
+    @jakarta.annotation.Nonnull
+    public void setAttachmentType(@jakarta.annotation.Nullable final AttachmentType value) {
         this.attachmentType = value;
     }
     /**
@@ -150,8 +150,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
@@ -159,8 +159,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -168,8 +168,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class AttachmentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }
 }

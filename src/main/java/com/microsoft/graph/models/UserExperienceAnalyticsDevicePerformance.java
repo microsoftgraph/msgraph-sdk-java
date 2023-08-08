@@ -94,7 +94,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Instantiates a new userExperienceAnalyticsDevicePerformance and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDevicePerformance() {
         super();
     }
@@ -103,8 +103,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsDevicePerformance
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsDevicePerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsDevicePerformance();
     }
@@ -112,7 +112,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAverageBlueScreens() {
         return this.averageBlueScreens;
     }
@@ -120,7 +120,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAverageRestarts() {
         return this.averageRestarts;
     }
@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the blueScreenCount property value. Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBlueScreenCount() {
         return this.blueScreenCount;
     }
@@ -136,7 +136,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the bootScore property value. The user experience analytics device boot score.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBootScore() {
         return this.bootScore;
     }
@@ -144,7 +144,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the coreBootTimeInMs property value. The user experience analytics device core boot time in milliseconds.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCoreBootTimeInMs() {
         return this.coreBootTimeInMs;
     }
@@ -152,7 +152,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the coreLoginTimeInMs property value. The user experience analytics device core login time in milliseconds.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCoreLoginTimeInMs() {
         return this.coreLoginTimeInMs;
     }
@@ -160,7 +160,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the deviceCount property value. User experience analytics summarized device count.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getDeviceCount() {
         return this.deviceCount;
     }
@@ -168,7 +168,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the deviceName property value. The user experience analytics device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -176,7 +176,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the diskType property value. The diskType property
      * @return a diskType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DiskType getDiskType() {
         return this.diskType;
     }
@@ -184,7 +184,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("averageBlueScreens", (n) -> { this.setAverageBlueScreens(n.getDoubleValue()); });
@@ -213,7 +213,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the groupPolicyBootTimeInMs property value. The user experience analytics device group policy boot time in milliseconds.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGroupPolicyBootTimeInMs() {
         return this.groupPolicyBootTimeInMs;
     }
@@ -221,7 +221,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the groupPolicyLoginTimeInMs property value. The user experience analytics device group policy login time in milliseconds.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGroupPolicyLoginTimeInMs() {
         return this.groupPolicyLoginTimeInMs;
     }
@@ -229,7 +229,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
         return this.healthStatus;
     }
@@ -237,7 +237,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the loginScore property value. The user experience analytics device login score.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLoginScore() {
         return this.loginScore;
     }
@@ -245,7 +245,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the manufacturer property value. The user experience analytics device manufacturer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -253,7 +253,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the model property value. The user experience analytics device model.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -261,7 +261,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the modelStartupPerformanceScore property value. The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getModelStartupPerformanceScore() {
         return this.modelStartupPerformanceScore;
     }
@@ -269,7 +269,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the operatingSystemVersion property value. The user experience analytics device Operating System version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
         return this.operatingSystemVersion;
     }
@@ -277,7 +277,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the responsiveDesktopTimeInMs property value. The user experience analytics responsive desktop time in milliseconds.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getResponsiveDesktopTimeInMs() {
         return this.responsiveDesktopTimeInMs;
     }
@@ -285,7 +285,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the restartCount property value. Number of Restarts in the last 30 days. Valid values 0 to 9999999
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRestartCount() {
         return this.restartCount;
     }
@@ -293,7 +293,7 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * Gets the startupPerformanceScore property value. The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {
         return this.startupPerformanceScore;
     }
@@ -302,8 +302,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeDoubleValue("averageBlueScreens", this.getAverageBlueScreens());
@@ -332,8 +332,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the averageBlueScreens property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAverageBlueScreens(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setAverageBlueScreens(@jakarta.annotation.Nullable final Double value) {
         this.averageBlueScreens = value;
     }
     /**
@@ -341,8 +341,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the averageRestarts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAverageRestarts(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setAverageRestarts(@jakarta.annotation.Nullable final Double value) {
         this.averageRestarts = value;
     }
     /**
@@ -350,8 +350,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the blueScreenCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlueScreenCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setBlueScreenCount(@jakarta.annotation.Nullable final Integer value) {
         this.blueScreenCount = value;
     }
     /**
@@ -359,8 +359,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the bootScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBootScore(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setBootScore(@jakarta.annotation.Nullable final Integer value) {
         this.bootScore = value;
     }
     /**
@@ -368,8 +368,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the coreBootTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCoreBootTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCoreBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.coreBootTimeInMs = value;
     }
     /**
@@ -377,8 +377,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the coreLoginTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCoreLoginTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCoreLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.coreLoginTimeInMs = value;
     }
     /**
@@ -386,8 +386,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceCount(@jakarta.annotation.Nullable final Long value) {
         this.deviceCount = value;
     }
     /**
@@ -395,8 +395,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -404,8 +404,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the diskType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiskType(@javax.annotation.Nullable final DiskType value) {
+    @jakarta.annotation.Nonnull
+    public void setDiskType(@jakarta.annotation.Nullable final DiskType value) {
         this.diskType = value;
     }
     /**
@@ -413,8 +413,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the groupPolicyBootTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyBootTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupPolicyBootTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.groupPolicyBootTimeInMs = value;
     }
     /**
@@ -422,8 +422,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the groupPolicyLoginTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyLoginTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupPolicyLoginTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.groupPolicyLoginTimeInMs = value;
     }
     /**
@@ -431,8 +431,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this.healthStatus = value;
     }
     /**
@@ -440,8 +440,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the loginScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoginScore(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLoginScore(@jakarta.annotation.Nullable final Integer value) {
         this.loginScore = value;
     }
     /**
@@ -449,8 +449,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
@@ -458,8 +458,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the model property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
@@ -467,8 +467,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the modelStartupPerformanceScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModelStartupPerformanceScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setModelStartupPerformanceScore(@jakarta.annotation.Nullable final Double value) {
         this.modelStartupPerformanceScore = value;
     }
     /**
@@ -476,8 +476,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the operatingSystemVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystemVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemVersion = value;
     }
     /**
@@ -485,8 +485,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the responsiveDesktopTimeInMs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponsiveDesktopTimeInMs(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setResponsiveDesktopTimeInMs(@jakarta.annotation.Nullable final Integer value) {
         this.responsiveDesktopTimeInMs = value;
     }
     /**
@@ -494,8 +494,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the restartCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestartCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRestartCount(@jakarta.annotation.Nullable final Integer value) {
         this.restartCount = value;
     }
     /**
@@ -503,8 +503,8 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
      * @param value Value to set for the startupPerformanceScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupPerformanceScore(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupPerformanceScore(@jakarta.annotation.Nullable final Double value) {
         this.startupPerformanceScore = value;
     }
 }

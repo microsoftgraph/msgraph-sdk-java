@@ -29,7 +29,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     private DeviceHealthStatus healthStatus;
     /**
-     * The ipInterfaces property
+     * Ip interfaces of the device during the time of the alert.
      */
     private java.util.List<String> ipInterfaces;
     /**
@@ -76,17 +76,18 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new deviceEvidence and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.deviceEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceEvidence
      */
-    @javax.annotation.Nonnull
-    public static DeviceEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceEvidence();
     }
@@ -94,7 +95,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the azureAdDeviceId property value. A unique identifier assigned to a device by Azure Active Directory (Azure AD) when device is Azure AD-joined.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
         return this.azureAdDeviceId;
     }
@@ -102,7 +103,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @return a defenderAvStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DefenderAvStatus getDefenderAvStatus() {
         return this.defenderAvStatus;
     }
@@ -110,7 +111,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the deviceDnsName property value. The fully qualified domain name (FQDN) for the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceDnsName() {
         return this.deviceDnsName;
     }
@@ -118,7 +119,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureAdDeviceId", (n) -> { this.setAzureAdDeviceId(n.getStringValue()); });
@@ -143,7 +144,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the firstSeenDateTime property value. The date and time when the device was first seen.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -151,15 +152,15 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the healthStatus property value. The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @return a deviceHealthStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceHealthStatus getHealthStatus() {
         return this.healthStatus;
     }
     /**
-     * Gets the ipInterfaces property value. The ipInterfaces property
+     * Gets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getIpInterfaces() {
         return this.ipInterfaces;
     }
@@ -167,7 +168,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the loggedOnUsers property value. Users that were logged on the machine during the time of the alert.
      * @return a loggedOnUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LoggedOnUser> getLoggedOnUsers() {
         return this.loggedOnUsers;
     }
@@ -175,7 +176,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMdeDeviceId() {
         return this.mdeDeviceId;
     }
@@ -183,7 +184,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @return a onboardingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnboardingStatus getOnboardingStatus() {
         return this.onboardingStatus;
     }
@@ -191,7 +192,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the osBuild property value. The build version for the operating system the device is running.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getOsBuild() {
         return this.osBuild;
     }
@@ -199,7 +200,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the osPlatform property value. The operating system platform the device is running.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsPlatform() {
         return this.osPlatform;
     }
@@ -207,7 +208,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the rbacGroupId property value. The ID of the role-based access control (RBAC) device group.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRbacGroupId() {
         return this.rbacGroupId;
     }
@@ -215,7 +216,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the rbacGroupName property value. The name of the RBAC device group.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRbacGroupName() {
         return this.rbacGroupName;
     }
@@ -223,7 +224,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
      * @return a deviceRiskScore
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceRiskScore getRiskScore() {
         return this.riskScore;
     }
@@ -231,7 +232,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the version property value. The version of the operating system platform.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -239,7 +240,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * Gets the vmMetadata property value. Metadata of the virtual machine (VM) on which Microsoft Defender for Endpoint is running.
      * @return a vmMetadata
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VmMetadata getVmMetadata() {
         return this.vmMetadata;
     }
@@ -248,8 +249,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("azureAdDeviceId", this.getAzureAdDeviceId());
@@ -274,8 +275,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureAdDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureAdDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureAdDeviceId = value;
     }
     /**
@@ -283,8 +284,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the defenderAvStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefenderAvStatus(@javax.annotation.Nullable final DefenderAvStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setDefenderAvStatus(@jakarta.annotation.Nullable final DefenderAvStatus value) {
         this.defenderAvStatus = value;
     }
     /**
@@ -292,8 +293,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the deviceDnsName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceDnsName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceDnsName(@jakarta.annotation.Nullable final String value) {
         this.deviceDnsName = value;
     }
     /**
@@ -301,8 +302,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
@@ -310,17 +311,17 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStatus(@javax.annotation.Nullable final DeviceHealthStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthStatus(@jakarta.annotation.Nullable final DeviceHealthStatus value) {
         this.healthStatus = value;
     }
     /**
-     * Sets the ipInterfaces property value. The ipInterfaces property
+     * Sets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
      * @param value Value to set for the ipInterfaces property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpInterfaces(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setIpInterfaces(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.ipInterfaces = value;
     }
     /**
@@ -328,8 +329,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the loggedOnUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoggedOnUsers(@javax.annotation.Nullable final java.util.List<LoggedOnUser> value) {
+    @jakarta.annotation.Nonnull
+    public void setLoggedOnUsers(@jakarta.annotation.Nullable final java.util.List<LoggedOnUser> value) {
         this.loggedOnUsers = value;
     }
     /**
@@ -337,8 +338,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdeDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMdeDeviceId(@jakarta.annotation.Nullable final String value) {
         this.mdeDeviceId = value;
     }
     /**
@@ -346,8 +347,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnboardingStatus(@javax.annotation.Nullable final OnboardingStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setOnboardingStatus(@jakarta.annotation.Nullable final OnboardingStatus value) {
         this.onboardingStatus = value;
     }
     /**
@@ -355,8 +356,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the osBuild property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsBuild(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setOsBuild(@jakarta.annotation.Nullable final Long value) {
         this.osBuild = value;
     }
     /**
@@ -364,8 +365,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the osPlatform property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsPlatform(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsPlatform(@jakarta.annotation.Nullable final String value) {
         this.osPlatform = value;
     }
     /**
@@ -373,8 +374,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the rbacGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRbacGroupId(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRbacGroupId(@jakarta.annotation.Nullable final Integer value) {
         this.rbacGroupId = value;
     }
     /**
@@ -382,8 +383,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the rbacGroupName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRbacGroupName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRbacGroupName(@jakarta.annotation.Nullable final String value) {
         this.rbacGroupName = value;
     }
     /**
@@ -391,8 +392,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskScore(@javax.annotation.Nullable final DeviceRiskScore value) {
+    @jakarta.annotation.Nonnull
+    public void setRiskScore(@jakarta.annotation.Nullable final DeviceRiskScore value) {
         this.riskScore = value;
     }
     /**
@@ -400,8 +401,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
     /**
@@ -409,8 +410,8 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the vmMetadata property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVmMetadata(@javax.annotation.Nullable final VmMetadata value) {
+    @jakarta.annotation.Nonnull
+    public void setVmMetadata(@jakarta.annotation.Nullable final VmMetadata value) {
         this.vmMetadata = value;
     }
 }

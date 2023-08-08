@@ -56,7 +56,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Instantiates a new hostSecurityState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HostSecurityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,8 +65,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hostSecurityState
      */
-    @javax.annotation.Nonnull
-    public static HostSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HostSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HostSecurityState();
     }
@@ -74,7 +74,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -82,7 +82,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("fqdn", (n) -> { this.setFqdn(n.getStringValue()); });
@@ -101,7 +101,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the fqdn property value. Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFqdn() {
         return this.fqdn;
     }
@@ -109,7 +109,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the isAzureAdJoined property value. The isAzureAdJoined property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAzureAdJoined() {
         return this.isAzureAdJoined;
     }
@@ -117,7 +117,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the isAzureAdRegistered property value. The isAzureAdRegistered property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAzureAdRegistered() {
         return this.isAzureAdRegistered;
     }
@@ -125,7 +125,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the isHybridAzureDomainJoined property value. True if the host is domain joined to an on-premises Active Directory domain.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsHybridAzureDomainJoined() {
         return this.isHybridAzureDomainJoined;
     }
@@ -133,7 +133,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the netBiosName property value. The local host name, without the DNS domain name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetBiosName() {
         return this.netBiosName;
     }
@@ -141,7 +141,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -149,7 +149,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOs() {
         return this.os;
     }
@@ -157,7 +157,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the privateIpAddress property value. Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
@@ -165,7 +165,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the publicIpAddress property value. Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublicIpAddress() {
         return this.publicIpAddress;
     }
@@ -173,7 +173,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the riskScore property value. Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRiskScore() {
         return this.riskScore;
     }
@@ -182,8 +182,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fqdn", this.getFqdn());
         writer.writeBooleanValue("isAzureAdJoined", this.getIsAzureAdJoined());
@@ -202,8 +202,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -211,8 +211,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fqdn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFqdn(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFqdn(@jakarta.annotation.Nullable final String value) {
         this.fqdn = value;
     }
     /**
@@ -220,8 +220,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAzureAdJoined property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAzureAdJoined(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAzureAdJoined(@jakarta.annotation.Nullable final Boolean value) {
         this.isAzureAdJoined = value;
     }
     /**
@@ -229,8 +229,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAzureAdRegistered property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAzureAdRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.isAzureAdRegistered = value;
     }
     /**
@@ -238,8 +238,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isHybridAzureDomainJoined property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsHybridAzureDomainJoined(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsHybridAzureDomainJoined(@jakarta.annotation.Nullable final Boolean value) {
         this.isHybridAzureDomainJoined = value;
     }
     /**
@@ -247,8 +247,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the netBiosName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetBiosName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetBiosName(@jakarta.annotation.Nullable final String value) {
         this.netBiosName = value;
     }
     /**
@@ -256,8 +256,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -265,8 +265,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the os property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOs(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOs(@jakarta.annotation.Nullable final String value) {
         this.os = value;
     }
     /**
@@ -274,8 +274,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the privateIpAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivateIpAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrivateIpAddress(@jakarta.annotation.Nullable final String value) {
         this.privateIpAddress = value;
     }
     /**
@@ -283,8 +283,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the publicIpAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublicIpAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublicIpAddress(@jakarta.annotation.Nullable final String value) {
         this.publicIpAddress = value;
     }
     /**
@@ -292,8 +292,8 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskScore(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRiskScore(@jakarta.annotation.Nullable final String value) {
         this.riskScore = value;
     }
 }

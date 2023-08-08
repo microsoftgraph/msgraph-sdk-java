@@ -28,7 +28,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * Instantiates a new onPremisesAccidentalDeletionPrevention and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesAccidentalDeletionPrevention() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesAccidentalDeletionPrevention
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesAccidentalDeletionPrevention createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesAccidentalDeletionPrevention createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesAccidentalDeletionPrevention();
     }
@@ -46,7 +46,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * Gets the alertThreshold property value. Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAlertThreshold() {
         return this.alertThreshold;
     }
@@ -62,7 +62,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("alertThreshold", (n) -> { this.setAlertThreshold(n.getIntegerValue()); });
@@ -74,7 +74,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * Gets the synchronizationPreventionType property value. The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
      * @return a onPremisesDirectorySynchronizationDeletionPreventionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationDeletionPreventionType getSynchronizationPreventionType() {
         return this.synchronizationPreventionType;
     }
@@ -91,8 +91,8 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("alertThreshold", this.getAlertThreshold());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * @param value Value to set for the alertThreshold property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertThreshold(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertThreshold(@jakarta.annotation.Nullable final Integer value) {
         this.alertThreshold = value;
     }
     /**
@@ -122,8 +122,8 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class OnPremisesAccidentalDeletionPrevention implements AdditionalDataHol
      * @param value Value to set for the synchronizationPreventionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSynchronizationPreventionType(@javax.annotation.Nullable final OnPremisesDirectorySynchronizationDeletionPreventionType value) {
+    @jakarta.annotation.Nonnull
+    public void setSynchronizationPreventionType(@jakarta.annotation.Nullable final OnPremisesDirectorySynchronizationDeletionPreventionType value) {
         this.synchronizationPreventionType = value;
     }
 }

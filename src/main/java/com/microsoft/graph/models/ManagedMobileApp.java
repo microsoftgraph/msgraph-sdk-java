@@ -22,7 +22,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * Instantiates a new managedMobileApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedMobileApp() {
         super();
     }
@@ -31,8 +31,8 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedMobileApp
      */
-    @javax.annotation.Nonnull
-    public static ManagedMobileApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedMobileApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedMobileApp();
     }
@@ -40,7 +40,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("mobileAppIdentifier", (n) -> { this.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
@@ -51,7 +51,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * Gets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
      * @return a mobileAppIdentifier
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppIdentifier getMobileAppIdentifier() {
         return this.mobileAppIdentifier;
     }
@@ -59,7 +59,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * Gets the version property value. Version of the entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -68,8 +68,8 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("mobileAppIdentifier", this.getMobileAppIdentifier());
@@ -80,8 +80,8 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param value Value to set for the mobileAppIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMobileAppIdentifier(@javax.annotation.Nullable final MobileAppIdentifier value) {
+    @jakarta.annotation.Nonnull
+    public void setMobileAppIdentifier(@jakarta.annotation.Nullable final MobileAppIdentifier value) {
         this.mobileAppIdentifier = value;
     }
     /**
@@ -89,8 +89,8 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

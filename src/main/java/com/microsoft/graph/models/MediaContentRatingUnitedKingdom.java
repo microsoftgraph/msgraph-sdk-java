@@ -28,7 +28,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * Instantiates a new mediaContentRatingUnitedKingdom and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaContentRatingUnitedKingdom() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mediaContentRatingUnitedKingdom
      */
-    @javax.annotation.Nonnull
-    public static MediaContentRatingUnitedKingdom createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MediaContentRatingUnitedKingdom createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MediaContentRatingUnitedKingdom();
     }
@@ -46,7 +46,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingUnitedKingdomMoviesType.class)); });
@@ -66,7 +66,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * Gets the movieRating property value. Movies rating labels in United Kingdom
      * @return a ratingUnitedKingdomMoviesType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RatingUnitedKingdomMoviesType getMovieRating() {
         return this.movieRating;
     }
@@ -74,7 +74,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * Gets the tvRating property value. TV content rating labels in United Kingdom
      * @return a ratingUnitedKingdomTelevisionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RatingUnitedKingdomTelevisionType getTvRating() {
         return this.tvRating;
     }
@@ -91,8 +91,8 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("movieRating", this.getMovieRating());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -104,8 +104,8 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * @param value Value to set for the movieRating property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMovieRating(@javax.annotation.Nullable final RatingUnitedKingdomMoviesType value) {
+    @jakarta.annotation.Nonnull
+    public void setMovieRating(@jakarta.annotation.Nullable final RatingUnitedKingdomMoviesType value) {
         this.movieRating = value;
     }
     /**
@@ -122,8 +122,8 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
      * @param value Value to set for the tvRating property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTvRating(@javax.annotation.Nullable final RatingUnitedKingdomTelevisionType value) {
+    @jakarta.annotation.Nonnull
+    public void setTvRating(@jakarta.annotation.Nullable final RatingUnitedKingdomTelevisionType value) {
         this.tvRating = value;
     }
 }

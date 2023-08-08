@@ -15,7 +15,7 @@ public class ProfilePhotoCollectionResponse extends BaseCollectionPaginationCoun
      * Instantiates a new profilePhotoCollectionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProfilePhotoCollectionResponse() {
         super();
     }
@@ -24,8 +24,8 @@ public class ProfilePhotoCollectionResponse extends BaseCollectionPaginationCoun
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a profilePhotoCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static ProfilePhotoCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProfilePhotoCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProfilePhotoCollectionResponse();
     }
@@ -33,7 +33,7 @@ public class ProfilePhotoCollectionResponse extends BaseCollectionPaginationCoun
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(ProfilePhoto::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class ProfilePhotoCollectionResponse extends BaseCollectionPaginationCoun
      * Gets the value property value. The value property
      * @return a profilePhoto
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ProfilePhoto> getValue() {
         return this.value;
     }
@@ -52,8 +52,8 @@ public class ProfilePhotoCollectionResponse extends BaseCollectionPaginationCoun
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -63,8 +63,8 @@ public class ProfilePhotoCollectionResponse extends BaseCollectionPaginationCoun
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<ProfilePhoto> value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<ProfilePhoto> value) {
         this.value = value;
     }
 }

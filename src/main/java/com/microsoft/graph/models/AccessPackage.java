@@ -13,11 +13,11 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private java.util.List<AccessPackage> accessPackagesIncompatibleWith;
     /**
-     * The assignmentPolicies property
+     * Read-only. Nullable. Supports $expand.
      */
     private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
     /**
-     * The catalog property
+     * Required when creating the access package. Read-only. Nullable.
      */
     private AccessPackageCatalog catalog;
     /**
@@ -29,7 +29,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private String description;
     /**
-     * The display name of the access package. Supports $filter (eq, contains).
+     * Required. The display name of the access package. Supports $filter (eq, contains).
      */
     private String displayName;
     /**
@@ -49,14 +49,14 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private OffsetDateTime modifiedDateTime;
     /**
-     * The resourceRoleScopes property
+     * The resource roles and scopes in this access package.
      */
     private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
     /**
      * Instantiates a new accessPackage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackage() {
         super();
     }
@@ -65,8 +65,8 @@ public class AccessPackage extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackage
      */
-    @javax.annotation.Nonnull
-    public static AccessPackage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackage();
     }
@@ -74,23 +74,23 @@ public class AccessPackage extends Entity implements Parsable {
      * Gets the accessPackagesIncompatibleWith property value. The access packages that are incompatible with this package. Read-only.
      * @return a accessPackage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackagesIncompatibleWith() {
         return this.accessPackagesIncompatibleWith;
     }
     /**
-     * Gets the assignmentPolicies property value. The assignmentPolicies property
+     * Gets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
      * @return a accessPackageAssignmentPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAssignmentPolicies() {
         return this.assignmentPolicies;
     }
     /**
-     * Gets the catalog property value. The catalog property
+     * Gets the catalog property value. Required when creating the access package. Read-only. Nullable.
      * @return a accessPackageCatalog
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageCatalog getCatalog() {
         return this.catalog;
     }
@@ -98,7 +98,7 @@ public class AccessPackage extends Entity implements Parsable {
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -106,15 +106,15 @@ public class AccessPackage extends Entity implements Parsable {
      * Gets the description property value. The description of the access package.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
+     * Gets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -122,7 +122,7 @@ public class AccessPackage extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackagesIncompatibleWith", (n) -> { this.setAccessPackagesIncompatibleWith(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
@@ -142,7 +142,7 @@ public class AccessPackage extends Entity implements Parsable {
      * Gets the incompatibleAccessPackages property value. The access packages whose assigned users are ineligible to be assigned this access package.
      * @return a accessPackage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getIncompatibleAccessPackages() {
         return this.incompatibleAccessPackages;
     }
@@ -150,7 +150,7 @@ public class AccessPackage extends Entity implements Parsable {
      * Gets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
      * @return a group
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Group> getIncompatibleGroups() {
         return this.incompatibleGroups;
     }
@@ -158,7 +158,7 @@ public class AccessPackage extends Entity implements Parsable {
      * Gets the isHidden property value. Whether the access package is hidden from the requestor.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsHidden() {
         return this.isHidden;
     }
@@ -166,15 +166,15 @@ public class AccessPackage extends Entity implements Parsable {
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
     /**
-     * Gets the resourceRoleScopes property value. The resourceRoleScopes property
+     * Gets the resourceRoleScopes property value. The resource roles and scopes in this access package.
      * @return a accessPackageResourceRoleScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRoleScope> getResourceRoleScopes() {
         return this.resourceRoleScopes;
     }
@@ -183,8 +183,8 @@ public class AccessPackage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("accessPackagesIncompatibleWith", this.getAccessPackagesIncompatibleWith());
@@ -204,26 +204,26 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the accessPackagesIncompatibleWith property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackagesIncompatibleWith(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackagesIncompatibleWith(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
         this.accessPackagesIncompatibleWith = value;
     }
     /**
-     * Sets the assignmentPolicies property value. The assignmentPolicies property
+     * Sets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the assignmentPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentPolicies(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentPolicies(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
         this.assignmentPolicies = value;
     }
     /**
-     * Sets the catalog property value. The catalog property
+     * Sets the catalog property value. Required when creating the access package. Read-only. Nullable.
      * @param value Value to set for the catalog property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCatalog(@javax.annotation.Nullable final AccessPackageCatalog value) {
+    @jakarta.annotation.Nonnull
+    public void setCatalog(@jakarta.annotation.Nullable final AccessPackageCatalog value) {
         this.catalog = value;
     }
     /**
@@ -231,8 +231,8 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -240,17 +240,17 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
+     * Sets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -258,8 +258,8 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the incompatibleAccessPackages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncompatibleAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
+    @jakarta.annotation.Nonnull
+    public void setIncompatibleAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
         this.incompatibleAccessPackages = value;
     }
     /**
@@ -267,8 +267,8 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the incompatibleGroups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncompatibleGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
+    @jakarta.annotation.Nonnull
+    public void setIncompatibleGroups(@jakarta.annotation.Nullable final java.util.List<Group> value) {
         this.incompatibleGroups = value;
     }
     /**
@@ -276,8 +276,8 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the isHidden property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsHidden(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.isHidden = value;
     }
     /**
@@ -285,17 +285,17 @@ public class AccessPackage extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
-     * Sets the resourceRoleScopes property value. The resourceRoleScopes property
+     * Sets the resourceRoleScopes property value. The resource roles and scopes in this access package.
      * @param value Value to set for the resourceRoleScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceRoleScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceRoleScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
         this.resourceRoleScopes = value;
     }
 }

@@ -44,7 +44,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Instantiates a new targetResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TargetResource() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a targetResource
      */
-    @javax.annotation.Nonnull
-    public static TargetResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TargetResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TargetResource();
     }
@@ -62,7 +62,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. Indicates the visible name defined for the resource. Typically specified when the resource is created.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -78,7 +78,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -94,7 +94,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      * @return a groupType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupType getGroupType() {
         return this.groupType;
     }
@@ -102,7 +102,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the id property value. Indicates the unique ID of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -110,7 +110,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the modifiedProperties property value. Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
      * @return a modifiedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
         return this.modifiedProperties;
     }
@@ -118,7 +118,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -126,7 +126,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -134,7 +134,7 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * Gets the userPrincipalName property value. When type is set to User, this includes the user name that initiated the action; null for other types.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -143,8 +143,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("groupType", this.getGroupType());
@@ -160,8 +160,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -178,8 +178,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the groupType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupType(@javax.annotation.Nullable final GroupType value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupType(@jakarta.annotation.Nullable final GroupType value) {
         this.groupType = value;
     }
     /**
@@ -187,8 +187,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -196,8 +196,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the modifiedProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<ModifiedProperty> value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedProperties(@jakarta.annotation.Nullable final java.util.List<ModifiedProperty> value) {
         this.modifiedProperties = value;
     }
     /**
@@ -205,8 +205,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -214,8 +214,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
@@ -223,8 +223,8 @@ public class TargetResource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

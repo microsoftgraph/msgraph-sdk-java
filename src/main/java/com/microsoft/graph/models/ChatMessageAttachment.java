@@ -48,7 +48,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Instantiates a new chatMessageAttachment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessageAttachment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +57,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a chatMessageAttachment
      */
-    @javax.annotation.Nonnull
-    public static ChatMessageAttachment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChatMessageAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChatMessageAttachment();
     }
@@ -66,7 +66,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +74,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the content property value. The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContent() {
         return this.content;
     }
@@ -82,7 +82,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentTypes supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentType() {
         return this.contentType;
     }
@@ -90,7 +90,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the contentUrl property value. URL for the content of the attachment. Supported protocols: http, https, file and data.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentUrl() {
         return this.contentUrl;
     }
@@ -98,7 +98,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
@@ -115,7 +115,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the id property value. Read-only. Unique id of the attachment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -123,7 +123,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the name property value. Name of the attachment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -131,7 +131,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -139,7 +139,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTeamsAppId() {
         return this.teamsAppId;
     }
@@ -147,7 +147,7 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * Gets the thumbnailUrl property value. URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
         return this.thumbnailUrl;
     }
@@ -156,8 +156,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("content", this.getContent());
         writer.writeStringValue("contentType", this.getContentType());
@@ -174,8 +174,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -183,8 +183,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
@@ -192,8 +192,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.contentType = value;
     }
     /**
@@ -201,8 +201,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentUrl(@jakarta.annotation.Nullable final String value) {
         this.contentUrl = value;
     }
     /**
@@ -210,8 +210,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -219,8 +219,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -228,8 +228,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -237,8 +237,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamsAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
         this.teamsAppId = value;
     }
     /**
@@ -246,8 +246,8 @@ public class ChatMessageAttachment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailUrl = value;
     }
 }

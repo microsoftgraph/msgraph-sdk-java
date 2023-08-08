@@ -29,7 +29,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new addPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AddPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a addPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static AddPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AddPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AddPostRequestBody();
     }
@@ -47,7 +47,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("seriesBy", (n) -> { this.setSeriesBy(n.getStringValue()); });
@@ -67,7 +67,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the seriesBy property value. The seriesBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSeriesBy() {
         return this.seriesBy;
     }
@@ -75,7 +75,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the sourceData property value. The sourceData property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getSourceData() {
         return this.sourceData;
     }
@@ -83,7 +83,7 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -92,8 +92,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("seriesBy", this.getSeriesBy());
         writer.writeObjectValue("sourceData", this.getSourceData());
@@ -105,8 +105,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the seriesBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeriesBy(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSeriesBy(@jakarta.annotation.Nullable final String value) {
         this.seriesBy = value;
     }
     /**
@@ -123,8 +123,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceData(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceData(@jakarta.annotation.Nullable final Json value) {
         this.sourceData = value;
     }
     /**
@@ -132,8 +132,8 @@ public class AddPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

@@ -28,7 +28,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * Instantiates a new windowsHelloForBusinessAuthenticationMethod and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsHelloForBusinessAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.windowsHelloForBusinessAuthenticationMethod");
@@ -38,8 +38,8 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsHelloForBusinessAuthenticationMethod
      */
-    @javax.annotation.Nonnull
-    public static WindowsHelloForBusinessAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsHelloForBusinessAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsHelloForBusinessAuthenticationMethod();
     }
@@ -47,7 +47,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * Gets the createdDateTime property value. The date and time that this Windows Hello for Business key was registered.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -55,7 +55,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * Gets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @return a device
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Device getDevice() {
         return this.device;
     }
@@ -63,7 +63,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * Gets the displayName property value. The name of the device on which Windows Hello for Business is registered
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -71,7 +71,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -84,7 +84,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
      * @return a authenticationMethodKeyStrength
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodKeyStrength getKeyStrength() {
         return this.keyStrength;
     }
@@ -93,8 +93,8 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -107,8 +107,8 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -116,8 +116,8 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the device property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDevice(@javax.annotation.Nullable final Device value) {
+    @jakarta.annotation.Nonnull
+    public void setDevice(@jakarta.annotation.Nullable final Device value) {
         this.device = value;
     }
     /**
@@ -125,8 +125,8 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -134,8 +134,8 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the keyStrength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyStrength(@javax.annotation.Nullable final AuthenticationMethodKeyStrength value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyStrength(@jakarta.annotation.Nullable final AuthenticationMethodKeyStrength value) {
         this.keyStrength = value;
     }
 }

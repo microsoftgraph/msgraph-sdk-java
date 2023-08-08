@@ -66,7 +66,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Instantiates a new workflowBase and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkflowBase() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -75,8 +75,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workflowBase
      */
-    @javax.annotation.Nonnull
-    public static WorkflowBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkflowBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -92,7 +92,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -100,7 +100,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the category property value. The category property
      * @return a lifecycleWorkflowCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LifecycleWorkflowCategory getCategory() {
         return this.category;
     }
@@ -108,7 +108,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the createdBy property value. The user who created the workflow.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getCreatedBy() {
         return this.createdBy;
     }
@@ -116,7 +116,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the createdDateTime property value. When a workflow was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -124,7 +124,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the description property value. A string that describes the purpose of the workflow.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -132,7 +132,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. A string to identify the workflow.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -140,7 +140,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the executionConditions property value. Defines when and for who the workflow will run.
      * @return a workflowExecutionConditions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkflowExecutionConditions getExecutionConditions() {
         return this.executionConditions;
     }
@@ -148,7 +148,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(LifecycleWorkflowCategory.class)); });
@@ -169,7 +169,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -177,7 +177,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSchedulingEnabled() {
         return this.isSchedulingEnabled;
     }
@@ -185,7 +185,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedBy property value. The unique identifier of the AAD identity that last modified the workflow.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -193,7 +193,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. When the workflow was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -201,7 +201,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -209,7 +209,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * Gets the tasks property value. The tasks in the workflow.
      * @return a task
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Task> getTasks() {
         return this.tasks;
     }
@@ -218,8 +218,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("category", this.getCategory());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -240,8 +240,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -249,8 +249,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final LifecycleWorkflowCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final LifecycleWorkflowCategory value) {
         this.category = value;
     }
     /**
@@ -258,8 +258,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final User value) {
         this.createdBy = value;
     }
     /**
@@ -267,8 +267,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -276,8 +276,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -285,8 +285,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -294,8 +294,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the executionConditions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExecutionConditions(@javax.annotation.Nullable final WorkflowExecutionConditions value) {
+    @jakarta.annotation.Nonnull
+    public void setExecutionConditions(@jakarta.annotation.Nullable final WorkflowExecutionConditions value) {
         this.executionConditions = value;
     }
     /**
@@ -303,8 +303,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
@@ -312,8 +312,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSchedulingEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSchedulingEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSchedulingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSchedulingEnabled = value;
     }
     /**
@@ -321,8 +321,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final User value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -330,8 +330,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -339,8 +339,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -348,8 +348,8 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTasks(@javax.annotation.Nullable final java.util.List<Task> value) {
+    @jakarta.annotation.Nonnull
+    public void setTasks(@jakarta.annotation.Nullable final java.util.List<Task> value) {
         this.tasks = value;
     }
 }

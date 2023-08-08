@@ -87,7 +87,7 @@ public class Schedule extends Entity implements Parsable {
      * Instantiates a new schedule and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Schedule() {
         super();
     }
@@ -96,8 +96,8 @@ public class Schedule extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a schedule
      */
-    @javax.annotation.Nonnull
-    public static Schedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Schedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Schedule();
     }
@@ -105,7 +105,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the enabled property value. Indicates whether the schedule is enabled for the team. Required.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -113,7 +113,7 @@ public class Schedule extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
@@ -141,7 +141,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the offerShiftRequests property value. The offer requests for shifts in the schedule.
      * @return a offerShiftRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OfferShiftRequest> getOfferShiftRequests() {
         return this.offerShiftRequests;
     }
@@ -149,7 +149,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the offerShiftRequestsEnabled property value. Indicates whether offer shift requests are enabled for the schedule.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOfferShiftRequestsEnabled() {
         return this.offerShiftRequestsEnabled;
     }
@@ -157,7 +157,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the openShiftChangeRequests property value. The open shift requests in the schedule.
      * @return a openShiftChangeRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OpenShiftChangeRequest> getOpenShiftChangeRequests() {
         return this.openShiftChangeRequests;
     }
@@ -165,7 +165,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the openShifts property value. The set of open shifts in a scheduling group in the schedule.
      * @return a openShift
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OpenShift> getOpenShifts() {
         return this.openShifts;
     }
@@ -173,7 +173,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the openShiftsEnabled property value. Indicates whether open shifts are enabled for the schedule.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOpenShiftsEnabled() {
         return this.openShiftsEnabled;
     }
@@ -181,7 +181,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
      * @return a operationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OperationStatus getProvisionStatus() {
         return this.provisionStatus;
     }
@@ -189,7 +189,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the provisionStatusCode property value. Additional information about why schedule provisioning failed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProvisionStatusCode() {
         return this.provisionStatusCode;
     }
@@ -197,7 +197,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the schedulingGroups property value. The logical grouping of users in the schedule (usually by role).
      * @return a schedulingGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SchedulingGroup> getSchedulingGroups() {
         return this.schedulingGroups;
     }
@@ -205,7 +205,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the shifts property value. The shifts in the schedule.
      * @return a shift
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Shift> getShifts() {
         return this.shifts;
     }
@@ -213,7 +213,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the swapShiftsChangeRequests property value. The swap requests for shifts in the schedule.
      * @return a swapShiftsChangeRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SwapShiftsChangeRequest> getSwapShiftsChangeRequests() {
         return this.swapShiftsChangeRequests;
     }
@@ -221,7 +221,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the swapShiftsRequestsEnabled property value. Indicates whether swap shifts requests are enabled for the schedule.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSwapShiftsRequestsEnabled() {
         return this.swapShiftsRequestsEnabled;
     }
@@ -229,7 +229,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the timeClockEnabled property value. Indicates whether time clock is enabled for the schedule.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTimeClockEnabled() {
         return this.timeClockEnabled;
     }
@@ -237,7 +237,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the timeOffReasons property value. The set of reasons for a time off in the schedule.
      * @return a timeOffReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TimeOffReason> getTimeOffReasons() {
         return this.timeOffReasons;
     }
@@ -245,7 +245,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the timeOffRequests property value. The time off requests in the schedule.
      * @return a timeOffRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TimeOffRequest> getTimeOffRequests() {
         return this.timeOffRequests;
     }
@@ -253,7 +253,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the timeOffRequestsEnabled property value. Indicates whether time off requests are enabled for the schedule.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTimeOffRequestsEnabled() {
         return this.timeOffRequestsEnabled;
     }
@@ -261,7 +261,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the timesOff property value. The instances of times off in the schedule.
      * @return a timeOff
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TimeOff> getTimesOff() {
         return this.timesOff;
     }
@@ -269,7 +269,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the timeZone property value. Indicates the time zone of the schedule team using tz database format. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTimeZone() {
         return this.timeZone;
     }
@@ -277,7 +277,7 @@ public class Schedule extends Entity implements Parsable {
      * Gets the workforceIntegrationIds property value. The workforceIntegrationIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getWorkforceIntegrationIds() {
         return this.workforceIntegrationIds;
     }
@@ -286,8 +286,8 @@ public class Schedule extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("enabled", this.getEnabled());
@@ -313,8 +313,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
@@ -322,8 +322,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the offerShiftRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOfferShiftRequests(@javax.annotation.Nullable final java.util.List<OfferShiftRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setOfferShiftRequests(@jakarta.annotation.Nullable final java.util.List<OfferShiftRequest> value) {
         this.offerShiftRequests = value;
     }
     /**
@@ -331,8 +331,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the offerShiftRequestsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOfferShiftRequestsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOfferShiftRequestsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.offerShiftRequestsEnabled = value;
     }
     /**
@@ -340,8 +340,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the openShiftChangeRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOpenShiftChangeRequests(@javax.annotation.Nullable final java.util.List<OpenShiftChangeRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setOpenShiftChangeRequests(@jakarta.annotation.Nullable final java.util.List<OpenShiftChangeRequest> value) {
         this.openShiftChangeRequests = value;
     }
     /**
@@ -349,8 +349,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the openShifts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOpenShifts(@javax.annotation.Nullable final java.util.List<OpenShift> value) {
+    @jakarta.annotation.Nonnull
+    public void setOpenShifts(@jakarta.annotation.Nullable final java.util.List<OpenShift> value) {
         this.openShifts = value;
     }
     /**
@@ -358,8 +358,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the openShiftsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOpenShiftsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOpenShiftsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.openShiftsEnabled = value;
     }
     /**
@@ -367,8 +367,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the provisionStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisionStatus(@javax.annotation.Nullable final OperationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setProvisionStatus(@jakarta.annotation.Nullable final OperationStatus value) {
         this.provisionStatus = value;
     }
     /**
@@ -376,8 +376,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the provisionStatusCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisionStatusCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProvisionStatusCode(@jakarta.annotation.Nullable final String value) {
         this.provisionStatusCode = value;
     }
     /**
@@ -385,8 +385,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the schedulingGroups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedulingGroups(@javax.annotation.Nullable final java.util.List<SchedulingGroup> value) {
+    @jakarta.annotation.Nonnull
+    public void setSchedulingGroups(@jakarta.annotation.Nullable final java.util.List<SchedulingGroup> value) {
         this.schedulingGroups = value;
     }
     /**
@@ -394,8 +394,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the shifts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShifts(@javax.annotation.Nullable final java.util.List<Shift> value) {
+    @jakarta.annotation.Nonnull
+    public void setShifts(@jakarta.annotation.Nullable final java.util.List<Shift> value) {
         this.shifts = value;
     }
     /**
@@ -403,8 +403,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the swapShiftsChangeRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSwapShiftsChangeRequests(@javax.annotation.Nullable final java.util.List<SwapShiftsChangeRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setSwapShiftsChangeRequests(@jakarta.annotation.Nullable final java.util.List<SwapShiftsChangeRequest> value) {
         this.swapShiftsChangeRequests = value;
     }
     /**
@@ -412,8 +412,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the swapShiftsRequestsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSwapShiftsRequestsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSwapShiftsRequestsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.swapShiftsRequestsEnabled = value;
     }
     /**
@@ -421,8 +421,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the timeClockEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeClockEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeClockEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.timeClockEnabled = value;
     }
     /**
@@ -430,8 +430,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the timeOffReasons property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeOffReasons(@javax.annotation.Nullable final java.util.List<TimeOffReason> value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeOffReasons(@jakarta.annotation.Nullable final java.util.List<TimeOffReason> value) {
         this.timeOffReasons = value;
     }
     /**
@@ -439,8 +439,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the timeOffRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeOffRequests(@javax.annotation.Nullable final java.util.List<TimeOffRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeOffRequests(@jakarta.annotation.Nullable final java.util.List<TimeOffRequest> value) {
         this.timeOffRequests = value;
     }
     /**
@@ -448,8 +448,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the timeOffRequestsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeOffRequestsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeOffRequestsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.timeOffRequestsEnabled = value;
     }
     /**
@@ -457,8 +457,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the timesOff property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimesOff(@javax.annotation.Nullable final java.util.List<TimeOff> value) {
+    @jakarta.annotation.Nonnull
+    public void setTimesOff(@jakarta.annotation.Nullable final java.util.List<TimeOff> value) {
         this.timesOff = value;
     }
     /**
@@ -466,8 +466,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the timeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeZone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeZone(@jakarta.annotation.Nullable final String value) {
         this.timeZone = value;
     }
     /**
@@ -475,8 +475,8 @@ public class Schedule extends Entity implements Parsable {
      * @param value Value to set for the workforceIntegrationIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkforceIntegrationIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkforceIntegrationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.workforceIntegrationIds = value;
     }
 }

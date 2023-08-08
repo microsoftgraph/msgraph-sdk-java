@@ -32,7 +32,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * Instantiates a new columnValidation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ColumnValidation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a columnValidation
      */
-    @javax.annotation.Nonnull
-    public static ColumnValidation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ColumnValidation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ColumnValidation();
     }
@@ -50,7 +50,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * Gets the defaultLanguage property value. Default BCP 47 language tag for the description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultLanguage() {
         return this.defaultLanguage;
     }
@@ -66,7 +66,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * Gets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
      * @return a displayNameLocalization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DisplayNameLocalization> getDescriptions() {
         return this.descriptions;
     }
@@ -74,7 +74,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("defaultLanguage", (n) -> { this.setDefaultLanguage(n.getStringValue()); });
@@ -87,7 +87,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * Gets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFormula() {
         return this.formula;
     }
@@ -95,7 +95,7 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,8 +104,8 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultLanguage", this.getDefaultLanguage());
         writer.writeCollectionOfObjectValues("descriptions", this.getDescriptions());
@@ -118,8 +118,8 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the defaultLanguage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultLanguage(@jakarta.annotation.Nullable final String value) {
         this.defaultLanguage = value;
     }
     /**
@@ -136,8 +136,8 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the descriptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescriptions(@javax.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {
+    @jakarta.annotation.Nonnull
+    public void setDescriptions(@jakarta.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {
         this.descriptions = value;
     }
     /**
@@ -145,8 +145,8 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the formula property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormula(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFormula(@jakarta.annotation.Nullable final String value) {
         this.formula = value;
     }
     /**
@@ -154,8 +154,8 @@ public class ColumnValidation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

@@ -11,10 +11,10 @@ public enum CountryLookupMethodType implements ValuedEnum {
     CountryLookupMethodType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CountryLookupMethodType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CountryLookupMethodType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "clientIpAddress": return ClientIpAddress;

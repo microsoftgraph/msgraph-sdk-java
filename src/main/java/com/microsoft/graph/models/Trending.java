@@ -32,7 +32,7 @@ public class Trending extends Entity implements Parsable {
      * Instantiates a new trending and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Trending() {
         super();
     }
@@ -41,8 +41,8 @@ public class Trending extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a trending
      */
-    @javax.annotation.Nonnull
-    public static Trending createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Trending createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Trending();
     }
@@ -50,7 +50,7 @@ public class Trending extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -64,7 +64,7 @@ public class Trending extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -72,7 +72,7 @@ public class Trending extends Entity implements Parsable {
      * Gets the resource property value. Used for navigating to the trending document.
      * @return a entity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Entity getResource() {
         return this.resource;
     }
@@ -80,7 +80,7 @@ public class Trending extends Entity implements Parsable {
      * Gets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
      * @return a resourceReference
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceReference getResourceReference() {
         return this.resourceReference;
     }
@@ -88,7 +88,7 @@ public class Trending extends Entity implements Parsable {
      * Gets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
      * @return a resourceVisualization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceVisualization getResourceVisualization() {
         return this.resourceVisualization;
     }
@@ -96,7 +96,7 @@ public class Trending extends Entity implements Parsable {
      * Gets the weight property value. Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getWeight() {
         return this.weight;
     }
@@ -105,8 +105,8 @@ public class Trending extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -118,8 +118,8 @@ public class Trending extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -127,8 +127,8 @@ public class Trending extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final Entity value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final Entity value) {
         this.resource = value;
     }
     /**
@@ -136,8 +136,8 @@ public class Trending extends Entity implements Parsable {
      * @param value Value to set for the resourceReference property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceReference(@javax.annotation.Nullable final ResourceReference value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
         this.resourceReference = value;
     }
     /**
@@ -145,8 +145,8 @@ public class Trending extends Entity implements Parsable {
      * @param value Value to set for the resourceVisualization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceVisualization(@javax.annotation.Nullable final ResourceVisualization value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceVisualization(@jakarta.annotation.Nullable final ResourceVisualization value) {
         this.resourceVisualization = value;
     }
     /**
@@ -154,8 +154,8 @@ public class Trending extends Entity implements Parsable {
      * @param value Value to set for the weight property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWeight(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setWeight(@jakarta.annotation.Nullable final Double value) {
         this.weight = value;
     }
 }

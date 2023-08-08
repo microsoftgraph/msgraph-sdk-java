@@ -53,7 +53,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Instantiates a new intelligenceProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntelligenceProfile() {
         super();
     }
@@ -62,8 +62,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a intelligenceProfile
      */
-    @javax.annotation.Nonnull
-    public static IntelligenceProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IntelligenceProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IntelligenceProfile();
     }
@@ -71,7 +71,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the aliases property value. A list of commonly-known aliases for the threat intelligence included in the intelligenceProfile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAliases() {
         return this.aliases;
     }
@@ -79,7 +79,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the countriesOrRegionsOfOrigin property value. The country/region of origin for the given actor or threat associated with this intelligenceProfile.
      * @return a intelligenceProfileCountryOrRegionOfOrigin
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> getCountriesOrRegionsOfOrigin() {
         return this.countriesOrRegionsOfOrigin;
     }
@@ -87,7 +87,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a formattedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FormattedContent getDescription() {
         return this.description;
     }
@@ -95,7 +95,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aliases", (n) -> { this.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -114,7 +114,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the firstActiveDateTime property value. The date and time when this intelligenceProfile was first active. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstActiveDateTime() {
         return this.firstActiveDateTime;
     }
@@ -122,7 +122,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the indicators property value. Includes an assemblage of high-fidelity network indicators of compromise.
      * @return a intelligenceProfileIndicator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IntelligenceProfileIndicator> getIndicators() {
         return this.indicators;
     }
@@ -130,7 +130,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the kind property value. The kind property
      * @return a intelligenceProfileKind
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntelligenceProfileKind getKind() {
         return this.kind;
     }
@@ -138,7 +138,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the summary property value. The summary property
      * @return a formattedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FormattedContent getSummary() {
         return this.summary;
     }
@@ -146,7 +146,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the targets property value. Known targets related to this intelligenceProfile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTargets() {
         return this.targets;
     }
@@ -154,7 +154,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the title property value. The title of this intelligenceProfile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -162,7 +162,7 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * Gets the tradecraft property value. Formatted information featuring a description of the distinctive tactics, techniques, and procedures (TTP) of the group, followed by a list of all known custom, commodity, and publicly available implants used by the group.
      * @return a formattedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FormattedContent getTradecraft() {
         return this.tradecraft;
     }
@@ -171,8 +171,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("aliases", this.getAliases());
@@ -191,8 +191,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the aliases property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAliases(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAliases(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.aliases = value;
     }
     /**
@@ -200,8 +200,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the countriesOrRegionsOfOrigin property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountriesOrRegionsOfOrigin(@javax.annotation.Nullable final java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> value) {
+    @jakarta.annotation.Nonnull
+    public void setCountriesOrRegionsOfOrigin(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileCountryOrRegionOfOrigin> value) {
         this.countriesOrRegionsOfOrigin = value;
     }
     /**
@@ -209,8 +209,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final FormattedContent value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final FormattedContent value) {
         this.description = value;
     }
     /**
@@ -218,8 +218,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the firstActiveDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstActiveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstActiveDateTime = value;
     }
     /**
@@ -227,8 +227,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the indicators property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIndicators(@javax.annotation.Nullable final java.util.List<IntelligenceProfileIndicator> value) {
+    @jakarta.annotation.Nonnull
+    public void setIndicators(@jakarta.annotation.Nullable final java.util.List<IntelligenceProfileIndicator> value) {
         this.indicators = value;
     }
     /**
@@ -236,8 +236,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the kind property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKind(@javax.annotation.Nullable final IntelligenceProfileKind value) {
+    @jakarta.annotation.Nonnull
+    public void setKind(@jakarta.annotation.Nullable final IntelligenceProfileKind value) {
         this.kind = value;
     }
     /**
@@ -245,8 +245,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the summary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSummary(@javax.annotation.Nullable final FormattedContent value) {
+    @jakarta.annotation.Nonnull
+    public void setSummary(@jakarta.annotation.Nullable final FormattedContent value) {
         this.summary = value;
     }
     /**
@@ -254,8 +254,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the targets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargets(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTargets(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.targets = value;
     }
     /**
@@ -263,8 +263,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
@@ -272,8 +272,8 @@ public class IntelligenceProfile extends Entity implements Parsable {
      * @param value Value to set for the tradecraft property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTradecraft(@javax.annotation.Nullable final FormattedContent value) {
+    @jakarta.annotation.Nonnull
+    public void setTradecraft(@jakarta.annotation.Nullable final FormattedContent value) {
         this.tradecraft = value;
     }
 }

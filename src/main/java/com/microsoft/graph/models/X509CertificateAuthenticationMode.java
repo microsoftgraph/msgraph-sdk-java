@@ -11,10 +11,10 @@ public enum X509CertificateAuthenticationMode implements ValuedEnum {
     X509CertificateAuthenticationMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static X509CertificateAuthenticationMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static X509CertificateAuthenticationMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "x509CertificateSingleFactor": return X509CertificateSingleFactor;

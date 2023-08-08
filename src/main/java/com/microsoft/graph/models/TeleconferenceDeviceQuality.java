@@ -26,7 +26,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      */
     private String cloudServiceDeploymentId;
     /**
-     * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * The Azure deployed cloud service instance name, such as FrontEndIN3.
      */
     private String cloudServiceInstanceName;
     /**
@@ -61,7 +61,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Instantiates a new teleconferenceDeviceQuality and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeleconferenceDeviceQuality() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -70,8 +70,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teleconferenceDeviceQuality
      */
-    @javax.annotation.Nonnull
-    public static TeleconferenceDeviceQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeleconferenceDeviceQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeleconferenceDeviceQuality();
     }
@@ -79,7 +79,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -87,7 +87,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCallChainId() {
         return this.callChainId;
     }
@@ -95,7 +95,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentEnvironment() {
         return this.cloudServiceDeploymentEnvironment;
     }
@@ -103,15 +103,15 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCloudServiceDeploymentId() {
         return this.cloudServiceDeploymentId;
     }
     /**
-     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Gets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCloudServiceInstanceName() {
         return this.cloudServiceInstanceName;
     }
@@ -119,7 +119,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCloudServiceName() {
         return this.cloudServiceName;
     }
@@ -127,7 +127,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceDescription() {
         return this.deviceDescription;
     }
@@ -135,7 +135,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the deviceName property value. The user media agent name, such as Cisco SX80.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -143,7 +143,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("callChainId", (n) -> { this.setCallChainId(n.getUUIDValue()); });
@@ -163,7 +163,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getMediaLegId() {
         return this.mediaLegId;
     }
@@ -171,7 +171,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
      * @return a teleconferenceDeviceMediaQuality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeleconferenceDeviceMediaQuality> getMediaQualityList() {
         return this.mediaQualityList;
     }
@@ -179,7 +179,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -187,7 +187,7 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * Gets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getParticipantId() {
         return this.participantId;
     }
@@ -196,8 +196,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeUUIDValue("callChainId", this.getCallChainId());
         writer.writeStringValue("cloudServiceDeploymentEnvironment", this.getCloudServiceDeploymentEnvironment());
@@ -217,8 +217,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -226,8 +226,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the callChainId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallChainId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setCallChainId(@jakarta.annotation.Nullable final UUID value) {
         this.callChainId = value;
     }
     /**
@@ -235,8 +235,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cloudServiceDeploymentEnvironment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudServiceDeploymentEnvironment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudServiceDeploymentEnvironment(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceDeploymentEnvironment = value;
     }
     /**
@@ -244,17 +244,17 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cloudServiceDeploymentId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudServiceDeploymentId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudServiceDeploymentId(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceDeploymentId = value;
     }
     /**
-     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEndIN3.
      * @param value Value to set for the cloudServiceInstanceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudServiceInstanceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudServiceInstanceName(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceInstanceName = value;
     }
     /**
@@ -262,8 +262,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cloudServiceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudServiceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudServiceName(@jakarta.annotation.Nullable final String value) {
         this.cloudServiceName = value;
     }
     /**
@@ -271,8 +271,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceDescription(@jakarta.annotation.Nullable final String value) {
         this.deviceDescription = value;
     }
     /**
@@ -280,8 +280,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -289,8 +289,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the mediaLegId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaLegId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaLegId(@jakarta.annotation.Nullable final UUID value) {
         this.mediaLegId = value;
     }
     /**
@@ -298,8 +298,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the mediaQualityList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaQualityList(@javax.annotation.Nullable final java.util.List<TeleconferenceDeviceMediaQuality> value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaQualityList(@jakarta.annotation.Nullable final java.util.List<TeleconferenceDeviceMediaQuality> value) {
         this.mediaQualityList = value;
     }
     /**
@@ -307,8 +307,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -316,8 +316,8 @@ public class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsab
      * @param value Value to set for the participantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipantId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setParticipantId(@jakarta.annotation.Nullable final UUID value) {
         this.participantId = value;
     }
 }

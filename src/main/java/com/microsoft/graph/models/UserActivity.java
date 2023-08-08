@@ -68,7 +68,7 @@ public class UserActivity extends Entity implements Parsable {
      * Instantiates a new userActivity and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserActivity() {
         super();
     }
@@ -77,8 +77,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userActivity
      */
-    @javax.annotation.Nonnull
-    public static UserActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserActivity();
     }
@@ -86,7 +86,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the activationUrl property value. Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivationUrl() {
         return this.activationUrl;
     }
@@ -94,7 +94,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivitySourceHost() {
         return this.activitySourceHost;
     }
@@ -102,7 +102,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppActivityId() {
         return this.appActivityId;
     }
@@ -110,7 +110,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the users local device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
@@ -118,7 +118,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getContentInfo() {
         return this.contentInfo;
     }
@@ -126,7 +126,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentUrl() {
         return this.contentUrl;
     }
@@ -134,7 +134,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -142,7 +142,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expired on the server.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -150,7 +150,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFallbackUrl() {
         return this.fallbackUrl;
     }
@@ -158,7 +158,7 @@ public class UserActivity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activationUrl", (n) -> { this.setActivationUrl(n.getStringValue()); });
@@ -181,7 +181,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      * @return a activityHistoryItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ActivityHistoryItem> getHistoryItems() {
         return this.historyItems;
     }
@@ -189,7 +189,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -197,7 +197,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @return a status
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Status getStatus() {
         return this.status;
     }
@@ -205,7 +205,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserTimezone() {
         return this.userTimezone;
     }
@@ -213,7 +213,7 @@ public class UserActivity extends Entity implements Parsable {
      * Gets the visualElements property value. The visualElements property
      * @return a visualInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VisualInfo getVisualElements() {
         return this.visualElements;
     }
@@ -222,8 +222,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("activationUrl", this.getActivationUrl());
@@ -246,8 +246,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the activationUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivationUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivationUrl(@jakarta.annotation.Nullable final String value) {
         this.activationUrl = value;
     }
     /**
@@ -255,8 +255,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the activitySourceHost property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivitySourceHost(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivitySourceHost(@jakarta.annotation.Nullable final String value) {
         this.activitySourceHost = value;
     }
     /**
@@ -264,8 +264,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the appActivityId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActivityId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppActivityId(@jakarta.annotation.Nullable final String value) {
         this.appActivityId = value;
     }
     /**
@@ -273,8 +273,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
@@ -282,8 +282,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentInfo(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setContentInfo(@jakarta.annotation.Nullable final Json value) {
         this.contentInfo = value;
     }
     /**
@@ -291,8 +291,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the contentUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentUrl(@jakarta.annotation.Nullable final String value) {
         this.contentUrl = value;
     }
     /**
@@ -300,8 +300,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -309,8 +309,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
@@ -318,8 +318,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the fallbackUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFallbackUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFallbackUrl(@jakarta.annotation.Nullable final String value) {
         this.fallbackUrl = value;
     }
     /**
@@ -327,8 +327,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the historyItems property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHistoryItems(@javax.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setHistoryItems(@jakarta.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {
         this.historyItems = value;
     }
     /**
@@ -336,8 +336,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -345,8 +345,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final Status value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final Status value) {
         this.status = value;
     }
     /**
@@ -354,8 +354,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the userTimezone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserTimezone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserTimezone(@jakarta.annotation.Nullable final String value) {
         this.userTimezone = value;
     }
     /**
@@ -363,8 +363,8 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the visualElements property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVisualElements(@javax.annotation.Nullable final VisualInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setVisualElements(@jakarta.annotation.Nullable final VisualInfo value) {
         this.visualElements = value;
     }
 }

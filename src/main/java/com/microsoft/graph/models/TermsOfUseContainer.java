@@ -19,7 +19,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * Instantiates a new termsOfUseContainer and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TermsOfUseContainer() {
         super();
     }
@@ -28,8 +28,8 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a termsOfUseContainer
      */
-    @javax.annotation.Nonnull
-    public static TermsOfUseContainer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TermsOfUseContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TermsOfUseContainer();
     }
@@ -37,7 +37,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * Gets the agreementAcceptances property value. Represents the current status of a user's response to a company's customizable terms of use agreement.
      * @return a agreementAcceptance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AgreementAcceptance> getAgreementAcceptances() {
         return this.agreementAcceptances;
     }
@@ -45,7 +45,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * Gets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
      * @return a agreement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Agreement> getAgreements() {
         return this.agreements;
     }
@@ -53,7 +53,7 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agreementAcceptances", (n) -> { this.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
@@ -65,8 +65,8 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("agreementAcceptances", this.getAgreementAcceptances());
@@ -77,8 +77,8 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param value Value to set for the agreementAcceptances property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgreementAcceptances(@javax.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
+    @jakarta.annotation.Nonnull
+    public void setAgreementAcceptances(@jakarta.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this.agreementAcceptances = value;
     }
     /**
@@ -86,8 +86,8 @@ public class TermsOfUseContainer extends Entity implements Parsable {
      * @param value Value to set for the agreements property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgreements(@javax.annotation.Nullable final java.util.List<Agreement> value) {
+    @jakarta.annotation.Nonnull
+    public void setAgreements(@jakarta.annotation.Nullable final java.util.List<Agreement> value) {
         this.agreements = value;
     }
 }

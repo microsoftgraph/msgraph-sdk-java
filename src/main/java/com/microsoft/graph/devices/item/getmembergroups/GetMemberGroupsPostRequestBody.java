@@ -20,7 +20,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new getMemberGroupsPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GetMemberGroupsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -29,8 +29,8 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a getMemberGroupsPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static GetMemberGroupsPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GetMemberGroupsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GetMemberGroupsPostRequestBody();
     }
@@ -38,7 +38,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -46,7 +46,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("securityEnabledOnly", (n) -> { this.setSecurityEnabledOnly(n.getBooleanValue()); });
@@ -56,7 +56,7 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * Gets the securityEnabledOnly property value. The securityEnabledOnly property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityEnabledOnly() {
         return this.securityEnabledOnly;
     }
@@ -65,8 +65,8 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("securityEnabledOnly", this.getSecurityEnabledOnly());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -76,8 +76,8 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -85,8 +85,8 @@ public class GetMemberGroupsPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the securityEnabledOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityEnabledOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityEnabledOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.securityEnabledOnly = value;
     }
 }

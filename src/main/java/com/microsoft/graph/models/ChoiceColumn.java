@@ -32,7 +32,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * Instantiates a new choiceColumn and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChoiceColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a choiceColumn
      */
-    @javax.annotation.Nonnull
-    public static ChoiceColumn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChoiceColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChoiceColumn();
     }
@@ -50,7 +50,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * Gets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowTextEntry() {
         return this.allowTextEntry;
     }
@@ -66,7 +66,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * Gets the choices property value. The list of values available for this column.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getChoices() {
         return this.choices;
     }
@@ -74,7 +74,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * Gets the displayAs property value. How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayAs() {
         return this.displayAs;
     }
@@ -82,7 +82,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("allowTextEntry", (n) -> { this.setAllowTextEntry(n.getBooleanValue()); });
@@ -95,7 +95,7 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,8 +104,8 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowTextEntry", this.getAllowTextEntry());
         writer.writeCollectionOfPrimitiveValues("choices", this.getChoices());
@@ -118,8 +118,8 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowTextEntry property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowTextEntry(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowTextEntry(@jakarta.annotation.Nullable final Boolean value) {
         this.allowTextEntry = value;
     }
     /**
@@ -136,8 +136,8 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the choices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChoices(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setChoices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.choices = value;
     }
     /**
@@ -145,8 +145,8 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayAs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayAs(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayAs(@jakarta.annotation.Nullable final String value) {
         this.displayAs = value;
     }
     /**
@@ -154,8 +154,8 @@ public class ChoiceColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

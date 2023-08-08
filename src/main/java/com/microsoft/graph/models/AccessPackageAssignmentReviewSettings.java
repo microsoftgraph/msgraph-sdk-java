@@ -52,7 +52,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Instantiates a new accessPackageAssignmentReviewSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAssignmentReviewSettings
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAssignmentReviewSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAssignmentReviewSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageAssignmentReviewSettings();
     }
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
      * @return a accessReviewExpirationBehavior
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewExpirationBehavior getExpirationBehavior() {
         return this.expirationBehavior;
     }
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getFallbackReviewers() {
         return this.fallbackReviewers;
     }
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("expirationBehavior", (n) -> { this.setExpirationBehavior(n.getEnumValue(AccessReviewExpirationBehavior.class)); });
@@ -112,7 +112,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the isEnabled property value. If true, access reviews are required for assignments through this policy.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -120,7 +120,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRecommendationEnabled() {
         return this.isRecommendationEnabled;
     }
@@ -128,7 +128,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsReviewerJustificationRequired() {
         return this.isReviewerJustificationRequired;
     }
@@ -136,7 +136,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the isSelfReview property value. Specifies whether the principals can review their own assignments.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSelfReview() {
         return this.isSelfReview;
     }
@@ -144,7 +144,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -152,7 +152,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectSet> getPrimaryReviewers() {
         return this.primaryReviewers;
     }
@@ -160,7 +160,7 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * Gets the schedule property value. When the first review should start and how often it should recur.
      * @return a entitlementManagementSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EntitlementManagementSchedule getSchedule() {
         return this.schedule;
     }
@@ -169,8 +169,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("expirationBehavior", this.getExpirationBehavior());
         writer.writeCollectionOfObjectValues("fallbackReviewers", this.getFallbackReviewers());
@@ -188,8 +188,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -197,8 +197,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the expirationBehavior property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationBehavior(@javax.annotation.Nullable final AccessReviewExpirationBehavior value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationBehavior(@jakarta.annotation.Nullable final AccessReviewExpirationBehavior value) {
         this.expirationBehavior = value;
     }
     /**
@@ -206,8 +206,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the fallbackReviewers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.fallbackReviewers = value;
     }
     /**
@@ -215,8 +215,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
@@ -224,8 +224,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the isRecommendationEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRecommendationEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRecommendationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isRecommendationEnabled = value;
     }
     /**
@@ -233,8 +233,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the isReviewerJustificationRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsReviewerJustificationRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsReviewerJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isReviewerJustificationRequired = value;
     }
     /**
@@ -242,8 +242,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the isSelfReview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSelfReview(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSelfReview(@jakarta.annotation.Nullable final Boolean value) {
         this.isSelfReview = value;
     }
     /**
@@ -251,8 +251,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -260,8 +260,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the primaryReviewers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrimaryReviewers(@javax.annotation.Nullable final java.util.List<SubjectSet> value) {
+    @jakarta.annotation.Nonnull
+    public void setPrimaryReviewers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
         this.primaryReviewers = value;
     }
     /**
@@ -269,8 +269,8 @@ public class AccessPackageAssignmentReviewSettings implements AdditionalDataHold
      * @param value Value to set for the schedule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedule(@javax.annotation.Nullable final EntitlementManagementSchedule value) {
+    @jakarta.annotation.Nonnull
+    public void setSchedule(@jakarta.annotation.Nullable final EntitlementManagementSchedule value) {
         this.schedule = value;
     }
 }

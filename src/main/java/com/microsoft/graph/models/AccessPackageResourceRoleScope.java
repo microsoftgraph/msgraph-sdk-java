@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
-     * The createdDateTime property
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     private OffsetDateTime createdDateTime;
     /**
@@ -24,7 +24,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * Instantiates a new accessPackageResourceRoleScope and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResourceRoleScope() {
         super();
     }
@@ -33,16 +33,16 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageResourceRoleScope
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageResourceRoleScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageResourceRoleScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageResourceRoleScope();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -50,7 +50,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -62,7 +62,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * Gets the role property value. The role property
      * @return a accessPackageResourceRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResourceRole getRole() {
         return this.role;
     }
@@ -70,7 +70,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * Gets the scope property value. The scope property
      * @return a accessPackageResourceScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResourceScope getScope() {
         return this.scope;
     }
@@ -79,8 +79,8 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -88,12 +88,12 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         writer.writeObjectValue("scope", this.getScope());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -101,8 +101,8 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRole(@javax.annotation.Nullable final AccessPackageResourceRole value) {
+    @jakarta.annotation.Nonnull
+    public void setRole(@jakarta.annotation.Nullable final AccessPackageResourceRole value) {
         this.role = value;
     }
     /**
@@ -110,8 +110,8 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final AccessPackageResourceScope value) {
+    @jakarta.annotation.Nonnull
+    public void setScope(@jakarta.annotation.Nullable final AccessPackageResourceScope value) {
         this.scope = value;
     }
 }

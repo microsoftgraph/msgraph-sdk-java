@@ -37,7 +37,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Instantiates a new workingHours and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkingHours() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,8 +46,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workingHours
      */
-    @javax.annotation.Nonnull
-    public static WorkingHours createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkingHours createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkingHours();
     }
@@ -55,7 +55,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -63,7 +63,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Gets the daysOfWeek property value. The days of the week on which the user works.
      * @return a dayOfWeek
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DayOfWeek> getDaysOfWeek() {
         return this.daysOfWeek;
     }
@@ -71,7 +71,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Gets the endTime property value. The time of the day that the user stops working.
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getEndTime() {
         return this.endTime;
     }
@@ -79,7 +79,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("daysOfWeek", (n) -> { this.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
@@ -93,7 +93,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -101,7 +101,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Gets the startTime property value. The time of the day that the user starts working.
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getStartTime() {
         return this.startTime;
     }
@@ -109,7 +109,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * Gets the timeZone property value. The time zone to which the working hours apply.
      * @return a timeZoneBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimeZoneBase getTimeZone() {
         return this.timeZone;
     }
@@ -118,8 +118,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
         writer.writeLocalTimeValue("endTime", this.getEndTime());
@@ -133,8 +133,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -142,8 +142,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the daysOfWeek property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDaysOfWeek(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
+    @jakarta.annotation.Nonnull
+    public void setDaysOfWeek(@jakarta.annotation.Nullable final java.util.List<DayOfWeek> value) {
         this.daysOfWeek = value;
     }
     /**
@@ -151,8 +151,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.endTime = value;
     }
     /**
@@ -160,8 +160,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -169,8 +169,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartTime(@javax.annotation.Nullable final LocalTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.startTime = value;
     }
     /**
@@ -178,8 +178,8 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeZone(@javax.annotation.Nullable final TimeZoneBase value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeZone(@jakarta.annotation.Nullable final TimeZoneBase value) {
         this.timeZone = value;
     }
 }

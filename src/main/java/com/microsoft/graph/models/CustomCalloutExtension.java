@@ -32,7 +32,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * Instantiates a new customCalloutExtension and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomCalloutExtension() {
         super();
     }
@@ -41,8 +41,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customCalloutExtension
      */
-    @javax.annotation.Nonnull
-    public static CustomCalloutExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomCalloutExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -59,7 +59,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * Gets the authenticationConfiguration property value. Configuration for securing the API call to the logic app. For example, using OAuth client credentials flow.
      * @return a customExtensionAuthenticationConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomExtensionAuthenticationConfiguration getAuthenticationConfiguration() {
         return this.authenticationConfiguration;
     }
@@ -67,7 +67,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * Gets the clientConfiguration property value. HTTP connection settings that define how long Azure AD can wait for a connection to a logic app, how many times you can retry a timed-out connection and the exception scenarios when retries are allowed.
      * @return a customExtensionClientConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomExtensionClientConfiguration getClientConfiguration() {
         return this.clientConfiguration;
     }
@@ -75,7 +75,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * Gets the description property value. Description for the customCalloutExtension object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -83,7 +83,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * Gets the displayName property value. Display name for the customCalloutExtension object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -91,7 +91,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * Gets the endpointConfiguration property value. The type and details for configuring the endpoint to call the logic app's workflow.
      * @return a customExtensionEndpointConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomExtensionEndpointConfiguration getEndpointConfiguration() {
         return this.endpointConfiguration;
     }
@@ -99,7 +99,7 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationConfiguration", (n) -> { this.setAuthenticationConfiguration(n.getObjectValue(CustomExtensionAuthenticationConfiguration::createFromDiscriminatorValue)); });
@@ -114,8 +114,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("authenticationConfiguration", this.getAuthenticationConfiguration());
@@ -129,8 +129,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the authenticationConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationConfiguration(@javax.annotation.Nullable final CustomExtensionAuthenticationConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationConfiguration(@jakarta.annotation.Nullable final CustomExtensionAuthenticationConfiguration value) {
         this.authenticationConfiguration = value;
     }
     /**
@@ -138,8 +138,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the clientConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientConfiguration(@javax.annotation.Nullable final CustomExtensionClientConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setClientConfiguration(@jakarta.annotation.Nullable final CustomExtensionClientConfiguration value) {
         this.clientConfiguration = value;
     }
     /**
@@ -147,8 +147,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -156,8 +156,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -165,8 +165,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
      * @param value Value to set for the endpointConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndpointConfiguration(@javax.annotation.Nullable final CustomExtensionEndpointConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setEndpointConfiguration(@jakarta.annotation.Nullable final CustomExtensionEndpointConfiguration value) {
         this.endpointConfiguration = value;
     }
 }
