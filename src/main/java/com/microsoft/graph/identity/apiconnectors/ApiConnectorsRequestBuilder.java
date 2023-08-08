@@ -65,7 +65,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties of an identityApiConnector object.
      * @return a CompletableFuture of identityApiConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnectorCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
      * Read the properties of an identityApiConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityApiConnectorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnectorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
      * Create a new identityApiConnector object.
      * @param body The request body
      * @return a CompletableFuture of identityApiConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final IdentityApiConnector body) {
@@ -126,7 +126,7 @@ public class ApiConnectorsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityApiConnector
-     * @see <a href="https://docs.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final IdentityApiConnector body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

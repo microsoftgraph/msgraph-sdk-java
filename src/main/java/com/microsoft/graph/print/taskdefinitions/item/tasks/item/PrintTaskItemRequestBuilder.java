@@ -96,7 +96,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a CompletableFuture of printTask
-     * @see <a href="https://docs.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> get() {
@@ -116,7 +116,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * Get details about a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTask
-     * @see <a href="https://docs.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printtask-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * Update a print task. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param body The request body
      * @return a CompletableFuture of printTask
-     * @see <a href="https://docs.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> patch(@javax.annotation.Nonnull final PrintTask body) {
@@ -157,7 +157,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTask
-     * @see <a href="https://docs.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printtaskdefinition-update-task?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTask> patch(@javax.annotation.Nonnull final PrintTask body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

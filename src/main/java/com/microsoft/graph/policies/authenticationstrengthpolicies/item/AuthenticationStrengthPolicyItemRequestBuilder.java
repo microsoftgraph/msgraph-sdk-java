@@ -67,7 +67,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     /**
      * Delete a custom authenticationStrengthPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
      * Delete a custom authenticationStrengthPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @return a CompletableFuture of authenticationStrengthPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> get() {
@@ -126,7 +126,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
      * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationStrengthPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
      * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
      * @param body The request body
      * @return a CompletableFuture of authenticationStrengthPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> patch(@javax.annotation.Nonnull final AuthenticationStrengthPolicy body) {
@@ -167,7 +167,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationStrengthPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> patch(@javax.annotation.Nonnull final AuthenticationStrengthPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

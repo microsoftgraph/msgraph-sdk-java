@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageResourceRoleScope extends Entity implements Parsable {
     /**
-     * The createdDateTime property
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     private OffsetDateTime createdDateTime;
     /**
@@ -39,7 +39,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         return new AccessPackageResourceRoleScope();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class AccessPackageResourceRoleScope extends Entity implements Parsable {
         writer.writeObjectValue("scope", this.getScope());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */

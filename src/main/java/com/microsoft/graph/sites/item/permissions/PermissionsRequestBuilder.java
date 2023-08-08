@@ -65,7 +65,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the permission resources from the permissions navigation property on a site.
      * @return a CompletableFuture of permissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
      * Get the permission resources from the permissions navigation property on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PermissionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
      * Create a new permission object on a site. 
      * @param body The request body
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final Permission body) {
@@ -126,7 +126,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
-     * @see <a href="https://docs.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final Permission body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

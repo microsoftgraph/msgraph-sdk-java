@@ -51,7 +51,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Delete an activityBasedTimeoutPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
      * Delete an activityBasedTimeoutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Get the properties of an activityBasedTimeoutPolicy object.
      * @return a CompletableFuture of activityBasedTimeoutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> get() {
@@ -110,7 +110,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
      * Get the properties of an activityBasedTimeoutPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of activityBasedTimeoutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
      * Update the properties of an activityBasedTimeoutPolicy object.
      * @param body The request body
      * @return a CompletableFuture of activityBasedTimeoutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> patch(@javax.annotation.Nonnull final ActivityBasedTimeoutPolicy body) {
@@ -151,7 +151,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of activityBasedTimeoutPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> patch(@javax.annotation.Nonnull final ActivityBasedTimeoutPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

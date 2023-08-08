@@ -80,7 +80,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @return a CompletableFuture of secureScoreControlProfile
-     * @see <a href="https://docs.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> get() {
@@ -100,7 +100,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
      * Retrieve the properties and relationships of an securescorecontrolprofile object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of secureScoreControlProfile
-     * @see <a href="https://docs.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,10 +117,10 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update an editable **secureScoreControlProfile** object within any integrated solution to change various properties, such as **assignedTo** or **tenantNote**.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @return a CompletableFuture of secureScoreControlProfile
-     * @see <a href="https://docs.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> patch(@javax.annotation.Nonnull final SecureScoreControlProfile body) {
@@ -137,11 +137,11 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Update an editable **secureScoreControlProfile** object within any integrated solution to change various properties, such as **assignedTo** or **tenantNote**.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of secureScoreControlProfile
-     * @see <a href="https://docs.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> patch(@javax.annotation.Nonnull final SecureScoreControlProfile body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -215,7 +215,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update an editable **secureScoreControlProfile** object within any integrated solution to change various properties, such as **assignedTo** or **tenantNote**.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -224,7 +224,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an editable **secureScoreControlProfile** object within any integrated solution to change various properties, such as **assignedTo** or **tenantNote**.
+     * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

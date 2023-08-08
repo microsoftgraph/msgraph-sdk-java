@@ -9,35 +9,35 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageResourceEnvironment extends Entity implements Parsable {
     /**
-     * The createdDateTime property
+     * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The description property
+     * The description of this object.
      */
     private String description;
     /**
-     * The displayName property
+     * The display name of this object.
      */
     private String displayName;
     /**
-     * The isDefaultEnvironment property
+     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      */
     private Boolean isDefaultEnvironment;
     /**
-     * The modifiedDateTime property
+     * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime modifiedDateTime;
     /**
-     * The originId property
+     * The unique identifier of this environment in the origin system.
      */
     private String originId;
     /**
-     * The originSystem property
+     * The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      */
     private String originSystem;
     /**
-     * The resources property
+     * Read-only. Required.
      */
     private java.util.List<AccessPackageResource> resources;
     /**
@@ -59,7 +59,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return new AccessPackageResourceEnvironment();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return this.createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of this object.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,7 +75,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of this object.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultEnvironment property value. The isDefaultEnvironment property
+     * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return this.isDefaultEnvironment;
     }
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return this.modifiedDateTime;
     }
     /**
-     * Gets the originId property value. The originId property
+     * Gets the originId property value. The unique identifier of this environment in the origin system.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return this.originId;
     }
     /**
-     * Gets the originSystem property value. The originSystem property
+     * Gets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         return this.originSystem;
     }
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. Read-only. Required.
      * @return a accessPackageResource
      */
     @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -167,7 +167,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of this object.
      * @param value Value to set for the description property.
      * @return a void
      */
@@ -176,7 +176,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of this object.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -185,7 +185,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.displayName = value;
     }
     /**
-     * Sets the isDefaultEnvironment property value. The isDefaultEnvironment property
+     * Sets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      * @param value Value to set for the isDefaultEnvironment property.
      * @return a void
      */
@@ -194,7 +194,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.isDefaultEnvironment = value;
     }
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
@@ -203,7 +203,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.modifiedDateTime = value;
     }
     /**
-     * Sets the originId property value. The originId property
+     * Sets the originId property value. The unique identifier of this environment in the origin system.
      * @param value Value to set for the originId property.
      * @return a void
      */
@@ -212,7 +212,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.originId = value;
     }
     /**
-     * Sets the originSystem property value. The originSystem property
+     * Sets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      * @param value Value to set for the originSystem property.
      * @return a void
      */
@@ -221,7 +221,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
         this.originSystem = value;
     }
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. Read-only. Required.
      * @param value Value to set for the resources property.
      * @return a void
      */

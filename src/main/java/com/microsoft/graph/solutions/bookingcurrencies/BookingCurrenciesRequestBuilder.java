@@ -65,7 +65,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @return a CompletableFuture of bookingCurrencyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCurrencyCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
      * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingCurrencyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingCurrencyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

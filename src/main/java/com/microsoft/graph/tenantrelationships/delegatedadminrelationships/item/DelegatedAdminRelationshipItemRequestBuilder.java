@@ -67,7 +67,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
     /**
      * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
      * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
     /**
      * Read the properties of a delegatedAdminRelationship object.
      * @return a CompletableFuture of delegatedAdminRelationship
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> get() {
@@ -126,7 +126,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
      * Read the properties of a delegatedAdminRelationship object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminRelationship
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -143,10 +143,10 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the `created` **status**.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
      * @param body The request body
      * @return a CompletableFuture of delegatedAdminRelationship
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> patch(@javax.annotation.Nonnull final DelegatedAdminRelationship body) {
@@ -163,11 +163,11 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the `created` **status**.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedAdminRelationship
-     * @see <a href="https://docs.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedAdminRelationship> patch(@javax.annotation.Nonnull final DelegatedAdminRelationship body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -241,7 +241,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the `created` **status**.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -250,7 +250,7 @@ public class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the `created` **status**.
+     * Update the properties of a delegatedAdminRelationship object. A relationship can only be updated if it's in the created status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -12,7 +12,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
      */
     private String clientId;
     /**
-     * The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
+     * The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
      */
     private String clientSecret;
     /**
@@ -47,7 +47,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
         return this.clientId;
     }
     /**
-     * Gets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
+     * Gets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements Pars
         this.clientId = value;
     }
     /**
-     * Sets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
+     * Sets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns . Required.
      * @param value Value to set for the clientSecret property.
      * @return a void
      */

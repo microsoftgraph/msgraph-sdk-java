@@ -51,7 +51,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a tag object permanently.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
      * Delete a tag object permanently.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a tag object.
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> get() {
@@ -110,7 +110,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a tag object.
      * @param body The request body
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> patch(@javax.annotation.Nonnull final TeamworkTag body) {
@@ -151,7 +151,7 @@ public class TeamworkTagItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamworkTag
-     * @see <a href="https://docs.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkTag> patch(@javax.annotation.Nonnull final TeamworkTag body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

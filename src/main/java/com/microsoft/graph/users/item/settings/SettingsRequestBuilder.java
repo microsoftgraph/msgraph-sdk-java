@@ -88,7 +88,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @return a CompletableFuture of userSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> get() {
@@ -108,7 +108,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
      * @param body The request body
      * @return a CompletableFuture of userSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> patch(@javax.annotation.Nonnull final UserSettings body) {
@@ -149,7 +149,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSettings> patch(@javax.annotation.Nonnull final UserSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

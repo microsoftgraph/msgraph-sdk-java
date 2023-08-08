@@ -43,7 +43,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
      * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param body The request body
      * @return a CompletableFuture of workbookNamedItem
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> post(@javax.annotation.Nonnull final AddFormulaLocalPostRequestBody body) {
@@ -64,7 +64,7 @@ public class AddFormulaLocalRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookNamedItem
-     * @see <a href="https://docs.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> post(@javax.annotation.Nonnull final AddFormulaLocalPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

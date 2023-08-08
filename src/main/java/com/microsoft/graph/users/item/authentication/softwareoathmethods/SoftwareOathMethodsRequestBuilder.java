@@ -64,7 +64,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @return a CompletableFuture of softwareOathAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareOathAuthenticationMethodCollectionResponse> get() {
@@ -84,7 +84,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of a user's software OATH token authentication method objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of softwareOathAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-softwareoathmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareOathAuthenticationMethodCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

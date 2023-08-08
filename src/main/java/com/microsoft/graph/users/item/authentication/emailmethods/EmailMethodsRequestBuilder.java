@@ -65,7 +65,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
      * @return a CompletableFuture of emailAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethodCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailAuthenticationMethodCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-list-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethodCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
      * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param body The request body
      * @return a CompletableFuture of emailAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> post(@javax.annotation.Nonnull final EmailAuthenticationMethod body) {
@@ -126,7 +126,7 @@ public class EmailMethodsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailAuthenticationMethod> post(@javax.annotation.Nonnull final EmailAuthenticationMethod body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

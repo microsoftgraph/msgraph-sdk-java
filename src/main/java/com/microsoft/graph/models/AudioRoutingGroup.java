@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AudioRoutingGroup extends Entity implements Parsable {
     /**
-     * The receivers property
+     * List of receiving participant ids.
      */
     private java.util.List<String> receivers;
     /**
@@ -16,7 +16,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     private RoutingMode routingMode;
     /**
-     * The sources property
+     * List of source participant ids.
      */
     private java.util.List<String> sources;
     /**
@@ -50,7 +50,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the receivers property value. The receivers property
+     * Gets the receivers property value. List of receiving participant ids.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -66,7 +66,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         return this.routingMode;
     }
     /**
-     * Gets the sources property value. The sources property
+     * Gets the sources property value. List of source participant ids.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("sources", this.getSources());
     }
     /**
-     * Sets the receivers property value. The receivers property
+     * Sets the receivers property value. List of receiving participant ids.
      * @param value Value to set for the receivers property.
      * @return a void
      */
@@ -105,7 +105,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         this.routingMode = value;
     }
     /**
-     * Sets the sources property value. The sources property
+     * Sets the sources property value. List of source participant ids.
      * @param value Value to set for the sources property.
      * @return a void
      */

@@ -63,8 +63,9 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/iosUpdateStatuses{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * List properties and relationships of the iosUpdateDeviceStatus objects.
      * @return a CompletableFuture of iosUpdateDeviceStatusCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatusCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * List properties and relationships of the iosUpdateDeviceStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosUpdateDeviceStatusCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatusCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to iosUpdateStatuses for deviceManagement
+     * Create a new iosUpdateDeviceStatus object.
      * @param body The request body
      * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> post(@javax.annotation.Nonnull final IosUpdateDeviceStatus body) {
@@ -119,10 +122,11 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to iosUpdateStatuses for deviceManagement
+     * Create a new iosUpdateDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> post(@javax.annotation.Nonnull final IosUpdateDeviceStatus body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * List properties and relationships of the iosUpdateDeviceStatus objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * List properties and relationships of the iosUpdateDeviceStatus objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to iosUpdateStatuses for deviceManagement
+     * Create a new iosUpdateDeviceStatus object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to iosUpdateStatuses for deviceManagement
+     * Create a new iosUpdateDeviceStatus object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The IOS software update installation statuses for this account.
+     * List properties and relationships of the iosUpdateDeviceStatus objects.
      */
     public class GetQueryParameters {
         /**

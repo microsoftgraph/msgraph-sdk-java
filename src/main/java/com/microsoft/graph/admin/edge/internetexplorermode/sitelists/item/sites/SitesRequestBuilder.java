@@ -65,7 +65,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the browserSite objects and their properties.
      * @return a CompletableFuture of browserSiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the browserSite objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
      * Create a new browserSite object in a browserSiteList.
      * @param body The request body
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> post(@javax.annotation.Nonnull final BrowserSite body) {
@@ -126,7 +126,7 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> post(@javax.annotation.Nonnull final BrowserSite body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

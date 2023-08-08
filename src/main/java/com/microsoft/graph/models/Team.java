@@ -77,6 +77,10 @@ public class Team extends Entity implements Parsable {
      */
     private java.util.List<TeamsAsyncOperation> operations;
     /**
+     * The permissionGrants property
+     */
+    private java.util.List<ResourceSpecificPermissionGrant> permissionGrants;
+    /**
      * The profile photo for the team.
      */
     private ProfilePhoto photo;
@@ -206,6 +210,7 @@ public class Team extends Entity implements Parsable {
         deserializerMap.put("memberSettings", (n) -> { this.setMemberSettings(n.getObjectValue(TeamMemberSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("messagingSettings", (n) -> { this.setMessagingSettings(n.getObjectValue(TeamMessagingSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(TeamsAsyncOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissionGrants", (n) -> { this.setPermissionGrants(n.getCollectionOfObjectValues(ResourceSpecificPermissionGrant::createFromDiscriminatorValue)); });
         deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
         deserializerMap.put("primaryChannel", (n) -> { this.setPrimaryChannel(n.getObjectValue(Channel::createFromDiscriminatorValue)); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(Schedule::createFromDiscriminatorValue)); });
@@ -305,6 +310,14 @@ public class Team extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getOperations() {
         return this.operations;
+    }
+    /**
+     * Gets the permissionGrants property value. The permissionGrants property
+     * @return a resourceSpecificPermissionGrant
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ResourceSpecificPermissionGrant> getPermissionGrants() {
+        return this.permissionGrants;
     }
     /**
      * Gets the photo property value. The profile photo for the team.
@@ -412,6 +425,7 @@ public class Team extends Entity implements Parsable {
         writer.writeObjectValue("memberSettings", this.getMemberSettings());
         writer.writeObjectValue("messagingSettings", this.getMessagingSettings());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeCollectionOfObjectValues("permissionGrants", this.getPermissionGrants());
         writer.writeObjectValue("photo", this.getPhoto());
         writer.writeObjectValue("primaryChannel", this.getPrimaryChannel());
         writer.writeObjectValue("schedule", this.getSchedule());
@@ -575,6 +589,15 @@ public class Team extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
         this.operations = value;
+    }
+    /**
+     * Sets the permissionGrants property value. The permissionGrants property
+     * @param value Value to set for the permissionGrants property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPermissionGrants(@javax.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
+        this.permissionGrants = value;
     }
     /**
      * Sets the photo property value. The profile photo for the team.

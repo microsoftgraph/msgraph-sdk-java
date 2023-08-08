@@ -86,7 +86,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * Get resourceEnvironments from identityGovernance
+     * A reference to the geolocation environments in which a resource is located.
      * @return a CompletableFuture of accessPackageResourceEnvironment
      */
     @javax.annotation.Nonnull
@@ -104,7 +104,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         }
     }
     /**
-     * Get resourceEnvironments from identityGovernance
+     * A reference to the geolocation environments in which a resource is located.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceEnvironment
      */
@@ -190,7 +190,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Get resourceEnvironments from identityGovernance
+     * A reference to the geolocation environments in which a resource is located.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +198,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Get resourceEnvironments from identityGovernance
+     * A reference to the geolocation environments in which a resource is located.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -256,7 +256,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get resourceEnvironments from identityGovernance
+     * A reference to the geolocation environments in which a resource is located.
      */
     public class GetQueryParameters {
         /**

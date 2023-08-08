@@ -57,8 +57,9 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/resourceRoleScopes/{accessPackageResourceRoleScope%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -75,9 +76,10 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -94,7 +96,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
     @javax.annotation.Nonnull
@@ -112,7 +114,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRoleScope
      */
@@ -171,7 +173,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         }
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -179,7 +181,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property resourceRoleScopes for identityGovernance
+     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -198,7 +200,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -206,7 +208,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -264,7 +266,7 @@ public class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get resourceRoleScopes from identityGovernance
+     * The resource roles and scopes in this access package.
      */
     public class GetQueryParameters {
         /**

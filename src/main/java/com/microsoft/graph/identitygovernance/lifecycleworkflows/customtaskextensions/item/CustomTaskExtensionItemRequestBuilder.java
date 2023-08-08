@@ -59,7 +59,7 @@ public class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a customTaskExtension object. A custom task extension  can only be deleted if it is not referenced in any task objects in a lifecycle workflow.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-customtaskextension-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder {
      * Delete a customTaskExtension object. A custom task extension  can only be deleted if it is not referenced in any task objects in a lifecycle workflow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-customtaskextension-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a customTaskExtension object.
      * @return a CompletableFuture of customTaskExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-customtaskextension-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomTaskExtension> get() {
@@ -118,7 +118,7 @@ public class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a customTaskExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customTaskExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-customtaskextension-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomTaskExtension> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a customTaskExtension object.
      * @param body The request body
      * @return a CompletableFuture of customTaskExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-customtaskextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomTaskExtension> patch(@javax.annotation.Nonnull final CustomTaskExtension body) {
@@ -159,7 +159,7 @@ public class CustomTaskExtensionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customTaskExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-customtaskextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-customtaskextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomTaskExtension> patch(@javax.annotation.Nonnull final CustomTaskExtension body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

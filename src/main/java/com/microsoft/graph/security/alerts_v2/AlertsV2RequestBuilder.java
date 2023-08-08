@@ -65,7 +65,7 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of alert resources that have been created to track suspicious activities in an organization. This operation lets you filter and sort through alerts to create an informed cyber security response. It exposes a collection of alerts that were flagged in your network, within the time range you specified in your environment retention policy. The most recent alerts are displayed at the top of the list.
      * @return a CompletableFuture of alertCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
      * Get a list of alert resources that have been created to track suspicious activities in an organization. This operation lets you filter and sort through alerts to create an informed cyber security response. It exposes a collection of alerts that were flagged in your network, within the time range you specified in your environment retention policy. The most recent alerts are displayed at the top of the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of alertCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -67,7 +67,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a browserSiteList object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * Delete a browserSiteList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
      * @return a CompletableFuture of browserSiteList
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> get() {
@@ -126,7 +126,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteList
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a browserSiteList object.
      * @param body The request body
      * @return a CompletableFuture of browserSiteList
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> patch(@javax.annotation.Nonnull final BrowserSiteList body) {
@@ -167,7 +167,7 @@ public class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSiteList
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSiteList> patch(@javax.annotation.Nonnull final BrowserSiteList body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

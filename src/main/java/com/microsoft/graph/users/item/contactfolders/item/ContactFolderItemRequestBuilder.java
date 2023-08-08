@@ -59,7 +59,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete contactFolder other than the default contactFolder.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
      * Delete contactFolder other than the default contactFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> get() {
@@ -118,7 +118,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
      * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of contactfolder object.
      * @param body The request body
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> patch(@javax.annotation.Nonnull final ContactFolder body) {
@@ -159,7 +159,7 @@ public class ContactFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> patch(@javax.annotation.Nonnull final ContactFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

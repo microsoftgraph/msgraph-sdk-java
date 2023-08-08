@@ -51,7 +51,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete a homeRealmDiscoveryPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
      * Delete a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get() {
@@ -110,7 +110,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
      * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
      * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param body The request body
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> patch(@javax.annotation.Nonnull final HomeRealmDiscoveryPolicy body) {
@@ -151,7 +151,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of homeRealmDiscoveryPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> patch(@javax.annotation.Nonnull final HomeRealmDiscoveryPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

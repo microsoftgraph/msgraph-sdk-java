@@ -40,9 +40,9 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/localizations/{organizationalBrandingLocalization%2Did}/favicon", rawUrl);
     }
     /**
-     * Get favicon for the navigation property localizations from organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get() {
@@ -59,10 +59,10 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get favicon for the navigation property localizations from organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update favicon for the navigation property localizations in organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -98,7 +98,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update favicon for the navigation property localizations in organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -119,7 +119,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get favicon for the navigation property localizations from organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get favicon for the navigation property localizations from organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update favicon for the navigation property localizations in organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -155,7 +155,7 @@ public class FaviconRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update favicon for the navigation property localizations in organization
+     * A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

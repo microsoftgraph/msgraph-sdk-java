@@ -43,7 +43,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete calendarPermission.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
      * Delete calendarPermission.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the specified permissions object of a user or group calendar that has been shared.
      * @return a CompletableFuture of calendarPermission
-     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> get() {
@@ -102,7 +102,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
      * Get the specified permissions object of a user or group calendar that has been shared.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarPermission
-     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
      * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param body The request body
      * @return a CompletableFuture of calendarPermission
-     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> patch(@javax.annotation.Nonnull final CalendarPermission body) {
@@ -143,7 +143,7 @@ public class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarPermission
-     * @see <a href="https://docs.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarPermission> patch(@javax.annotation.Nonnull final CalendarPermission body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

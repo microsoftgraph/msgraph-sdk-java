@@ -41,7 +41,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
     /**
      * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -61,7 +61,7 @@ public class UndoSoftDeleteRequestBuilder extends BaseRequestBuilder {
      * Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

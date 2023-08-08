@@ -73,7 +73,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of child folders under the specified contact folder.
      * @return a CompletableFuture of contactFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Get a collection of child folders under the specified contact folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
      * @param body The request body
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> post(@javax.annotation.Nonnull final ContactFolder body) {
@@ -134,7 +134,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> post(@javax.annotation.Nonnull final ContactFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

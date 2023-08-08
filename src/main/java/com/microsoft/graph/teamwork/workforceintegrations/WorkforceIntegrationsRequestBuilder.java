@@ -65,7 +65,7 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of workforceIntegration objects.
      * @return a CompletableFuture of workforceIntegrationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegrationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of workforceIntegration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workforceIntegrationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegrationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
      * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests.
      * @param body The request body
      * @return a CompletableFuture of workforceIntegration
-     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegration> post(@javax.annotation.Nonnull final WorkforceIntegration body) {
@@ -126,7 +126,7 @@ public class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workforceIntegration
-     * @see <a href="https://docs.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkforceIntegration> post(@javax.annotation.Nonnull final WorkforceIntegration body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

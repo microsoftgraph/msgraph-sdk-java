@@ -65,7 +65,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the threads of a group.
      * @return a CompletableFuture of conversationThreadCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-threads?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationThreadCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
      * Get all the threads of a group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationThreadCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-threads?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationThreadCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
      * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
      * @param body The request body
      * @return a CompletableFuture of conversationThread
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-threads?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationThread> post(@javax.annotation.Nonnull final ConversationThread body) {
@@ -126,7 +126,7 @@ public class ThreadsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationThread
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-threads?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-threads?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationThread> post(@javax.annotation.Nonnull final ConversationThread body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

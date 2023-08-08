@@ -80,7 +80,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an allowedValue object.
      * @return a CompletableFuture of allowedValue
-     * @see <a href="https://docs.microsoft.com/graph/api/allowedvalue-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/allowedvalue-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValue> get() {
@@ -100,7 +100,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an allowedValue object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of allowedValue
-     * @see <a href="https://docs.microsoft.com/graph/api/allowedvalue-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/allowedvalue-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValue> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an allowedValue object.
      * @param body The request body
      * @return a CompletableFuture of allowedValue
-     * @see <a href="https://docs.microsoft.com/graph/api/allowedvalue-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/allowedvalue-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValue> patch(@javax.annotation.Nonnull final AllowedValue body) {
@@ -141,7 +141,7 @@ public class AllowedValueItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of allowedValue
-     * @see <a href="https://docs.microsoft.com/graph/api/allowedvalue-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/allowedvalue-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedValue> patch(@javax.annotation.Nonnull final AllowedValue body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -51,7 +51,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove (unpin) a tab from the specified chat. 
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-delete-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
      * Remove (unpin) a tab from the specified chat. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-delete-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of the specified tab in a chat. 
      * @return a CompletableFuture of teamsTab
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> get() {
@@ -110,7 +110,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of the specified tab in a chat. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTab
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified tab in a chat. This can be used to configure the content of the tab.
      * @param body The request body
      * @return a CompletableFuture of teamsTab
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-patch-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> patch(@javax.annotation.Nonnull final TeamsTab body) {
@@ -151,7 +151,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTab
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-patch-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> patch(@javax.annotation.Nonnull final TeamsTab body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

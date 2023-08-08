@@ -65,7 +65,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @return a CompletableFuture of delegatedPermissionClassificationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassificationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedPermissionClassificationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassificationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param body The request body
      * @return a CompletableFuture of delegatedPermissionClassification
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> post(@javax.annotation.Nonnull final DelegatedPermissionClassification body) {
@@ -126,7 +126,7 @@ public class DelegatedPermissionClassificationsRequestBuilder extends BaseReques
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of delegatedPermissionClassification
-     * @see <a href="https://docs.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> post(@javax.annotation.Nonnull final DelegatedPermissionClassification body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

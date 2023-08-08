@@ -13,11 +13,11 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private java.util.List<AccessPackage> accessPackagesIncompatibleWith;
     /**
-     * The assignmentPolicies property
+     * Read-only. Nullable. Supports $expand.
      */
     private java.util.List<AccessPackageAssignmentPolicy> assignmentPolicies;
     /**
-     * The catalog property
+     * Required when creating the access package. Read-only. Nullable.
      */
     private AccessPackageCatalog catalog;
     /**
@@ -29,7 +29,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private String description;
     /**
-     * The display name of the access package. Supports $filter (eq, contains).
+     * Required. The display name of the access package. Supports $filter (eq, contains).
      */
     private String displayName;
     /**
@@ -49,7 +49,7 @@ public class AccessPackage extends Entity implements Parsable {
      */
     private OffsetDateTime modifiedDateTime;
     /**
-     * The resourceRoleScopes property
+     * The resource roles and scopes in this access package.
      */
     private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
     /**
@@ -79,7 +79,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this.accessPackagesIncompatibleWith;
     }
     /**
-     * Gets the assignmentPolicies property value. The assignmentPolicies property
+     * Gets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
      * @return a accessPackageAssignmentPolicy
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this.assignmentPolicies;
     }
     /**
-     * Gets the catalog property value. The catalog property
+     * Gets the catalog property value. Required when creating the access package. Read-only. Nullable.
      * @return a accessPackageCatalog
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
+     * Gets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this.modifiedDateTime;
     }
     /**
-     * Gets the resourceRoleScopes property value. The resourceRoleScopes property
+     * Gets the resourceRoleScopes property value. The resource roles and scopes in this access package.
      * @return a accessPackageResourceRoleScope
      */
     @javax.annotation.Nullable
@@ -209,7 +209,7 @@ public class AccessPackage extends Entity implements Parsable {
         this.accessPackagesIncompatibleWith = value;
     }
     /**
-     * Sets the assignmentPolicies property value. The assignmentPolicies property
+     * Sets the assignmentPolicies property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the assignmentPolicies property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class AccessPackage extends Entity implements Parsable {
         this.assignmentPolicies = value;
     }
     /**
-     * Sets the catalog property value. The catalog property
+     * Sets the catalog property value. Required when creating the access package. Read-only. Nullable.
      * @param value Value to set for the catalog property.
      * @return a void
      */
@@ -245,7 +245,7 @@ public class AccessPackage extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
+     * Sets the displayName property value. Required. The display name of the access package. Supports $filter (eq, contains).
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -290,7 +290,7 @@ public class AccessPackage extends Entity implements Parsable {
         this.modifiedDateTime = value;
     }
     /**
-     * Sets the resourceRoleScopes property value. The resourceRoleScopes property
+     * Sets the resourceRoleScopes property value. The resource roles and scopes in this access package.
      * @param value Value to set for the resourceRoleScopes property.
      * @return a void
      */

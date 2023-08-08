@@ -63,8 +63,9 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicySettingStateSummaries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummaryCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummaryCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         }
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummaryCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummaryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         }
     }
     /**
-     * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Create a new deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> post(@javax.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body) {
@@ -119,10 +122,11 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         }
     }
     /**
-     * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Create a new deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicysettingstatesummary-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> post(@javax.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         }
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Create a new deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
+     * Create a new deviceCompliancePolicySettingStateSummary object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * The summary states of compliance policy settings for this account.
+     * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
      */
     public class GetQueryParameters {
         /**

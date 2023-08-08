@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     /**
-     * The mdeDeviceId property
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      */
     private String mdeDeviceId;
     /**
@@ -38,6 +38,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public RegistryValueEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.registryValueEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +66,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mdeDeviceId property value. The mdeDeviceId property
+     * Gets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -129,7 +130,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
         writer.writeStringValue("registryValueType", this.getRegistryValueType());
     }
     /**
-     * Sets the mdeDeviceId property value. The mdeDeviceId property
+     * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */

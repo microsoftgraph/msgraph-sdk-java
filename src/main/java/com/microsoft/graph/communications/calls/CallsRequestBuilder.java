@@ -111,7 +111,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
      * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param body The request body
      * @return a CompletableFuture of call
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> post(@javax.annotation.Nonnull final Call body) {
@@ -132,7 +132,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of call
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> post(@javax.annotation.Nonnull final Call body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

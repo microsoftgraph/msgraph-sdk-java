@@ -83,7 +83,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a directory object, for example, a group, user, application, or service principal.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -103,7 +103,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * Delete a directory object, for example, a group, user, application, or service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a directoryObject object.
      * @return a CompletableFuture of directoryObject
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -142,7 +142,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a directoryObject object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryObject> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

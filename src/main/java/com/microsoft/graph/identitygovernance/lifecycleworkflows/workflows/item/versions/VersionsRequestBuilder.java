@@ -35,7 +35,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
      * @return a WorkflowVersionVersionNumberItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public WorkflowVersionVersionNumberItemRequestBuilder byWorkflowVersionVersionNumber(@javax.annotation.Nonnull final String workflowVersionVersionNumber) {
+    public WorkflowVersionVersionNumberItemRequestBuilder byWorkflowVersionVersionNumber(@javax.annotation.Nonnull final Integer workflowVersionVersionNumber) {
         Objects.requireNonNull(workflowVersionVersionNumber);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("workflowVersion%2DversionNumber", workflowVersionVersionNumber);
@@ -64,7 +64,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the workflowVersion objects and their properties.
      * @return a CompletableFuture of workflowVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkflowVersionCollectionResponse> get() {
@@ -84,7 +84,7 @@ public class VersionsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the workflowVersion objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflowVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-versions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkflowVersionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

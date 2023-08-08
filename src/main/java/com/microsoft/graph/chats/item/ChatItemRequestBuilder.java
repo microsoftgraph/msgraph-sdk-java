@@ -7,6 +7,7 @@ import com.microsoft.graph.chats.item.markchatreadforuser.MarkChatReadForUserReq
 import com.microsoft.graph.chats.item.markchatunreadforuser.MarkChatUnreadForUserRequestBuilder;
 import com.microsoft.graph.chats.item.members.MembersRequestBuilder;
 import com.microsoft.graph.chats.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.chats.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
 import com.microsoft.graph.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.graph.chats.item.tabs.TabsRequestBuilder;
@@ -79,6 +80,13 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.chat entity.
+     */
+    @javax.annotation.Nonnull
+    public PermissionGrantsRequestBuilder permissionGrants() {
+        return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
@@ -168,7 +176,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> get() {
@@ -188,7 +196,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -208,7 +216,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a chat object.
      * @param body The request body
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> patch(@javax.annotation.Nonnull final Chat body) {
@@ -229,7 +237,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chat
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Chat> patch(@javax.annotation.Nonnull final Chat body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

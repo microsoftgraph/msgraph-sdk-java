@@ -41,7 +41,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/catalog{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get catalog from identityGovernance
+     * Required when creating the access package. Read-only. Nullable.
      * @return a CompletableFuture of accessPackageCatalog
      */
     @javax.annotation.Nonnull
@@ -59,7 +59,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get catalog from identityGovernance
+     * Required when creating the access package. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageCatalog
      */
@@ -78,7 +78,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get catalog from identityGovernance
+     * Required when creating the access package. Read-only. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get catalog from identityGovernance
+     * Required when creating the access package. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get catalog from identityGovernance
+     * Required when creating the access package. Read-only. Nullable.
      */
     public class GetQueryParameters {
         /**

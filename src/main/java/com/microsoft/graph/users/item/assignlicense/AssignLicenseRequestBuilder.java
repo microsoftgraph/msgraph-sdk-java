@@ -43,7 +43,7 @@ public class AssignLicenseRequestBuilder extends BaseRequestBuilder {
      * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription.
      * @param body The request body
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-assignlicense?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-assignlicense?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> post(@javax.annotation.Nonnull final AssignLicensePostRequestBody body) {
@@ -64,7 +64,7 @@ public class AssignLicenseRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-assignlicense?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-assignlicense?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> post(@javax.annotation.Nonnull final AssignLicensePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

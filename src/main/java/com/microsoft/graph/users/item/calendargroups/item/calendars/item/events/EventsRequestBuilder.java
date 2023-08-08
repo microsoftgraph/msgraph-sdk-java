@@ -73,7 +73,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of events in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. The list of events contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event.
      * @return a CompletableFuture of eventCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-events?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of events in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. The list of events contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of eventCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-list-events?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendar-list-events?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new event in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. 
      * @param body The request body
      * @return a CompletableFuture of event
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> post(@javax.annotation.Nonnull final Event body) {
@@ -134,7 +134,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of event
-     * @see <a href="https://docs.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Event> post(@javax.annotation.Nonnull final Event body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

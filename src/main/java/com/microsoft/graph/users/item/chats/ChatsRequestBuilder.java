@@ -73,7 +73,7 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @return a CompletableFuture of chatCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

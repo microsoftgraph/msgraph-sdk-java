@@ -88,7 +88,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a hostCookie object.
      * @return a CompletableFuture of hostCookie
-     * @see <a href="https://docs.microsoft.com/graph/api/security-hostcookie-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-hostcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> get() {
@@ -108,7 +108,7 @@ public class HostCookieItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a hostCookie object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of hostCookie
-     * @see <a href="https://docs.microsoft.com/graph/api/security-hostcookie-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-hostcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostCookie> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

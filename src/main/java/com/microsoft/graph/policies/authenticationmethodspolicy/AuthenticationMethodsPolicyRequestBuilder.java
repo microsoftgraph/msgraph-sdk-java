@@ -88,7 +88,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
     /**
      * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> get() {
@@ -108,7 +108,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * Update the properties of an authenticationMethodsPolicy object.
      * @param body The request body
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> patch(@javax.annotation.Nonnull final AuthenticationMethodsPolicy body) {
@@ -149,7 +149,7 @@ public class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilde
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationMethodsPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationMethodsPolicy> patch(@javax.annotation.Nonnull final AuthenticationMethodsPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

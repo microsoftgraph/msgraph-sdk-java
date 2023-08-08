@@ -43,7 +43,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete a bookingStaffMember in the specified bookingBusiness.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
      * Delete a bookingStaffMember in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> get() {
@@ -102,7 +102,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
      * Get the properties and relationships of a bookingStaffMember in the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
      * Update the properties of a bookingStaffMember in the specified bookingBusiness.
      * @param body The request body
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> patch(@javax.annotation.Nonnull final BookingStaffMemberBase body) {
@@ -143,7 +143,7 @@ public class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingStaffMemberBase
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingStaffMemberBase> patch(@javax.annotation.Nonnull final BookingStaffMemberBase body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

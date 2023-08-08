@@ -63,8 +63,9 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosManagedAppProtections{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtectionCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtectionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@javax.annotation.Nonnull final IosManagedAppProtection body) {
@@ -119,10 +122,11 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of iosManagedAppProtection
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@javax.annotation.Nonnull final IosManagedAppProtection body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      */
     public class GetQueryParameters {
         /**

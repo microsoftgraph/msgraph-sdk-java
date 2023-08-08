@@ -18,7 +18,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The detailedRoles property
+     * Detailed description of the entity role/s in an alert. Values are free-form.
      */
     private java.util.List<String> detailedRoles;
     /**
@@ -34,11 +34,11 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     private String remediationStatusDetails;
     /**
-     * One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+     * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      */
     private java.util.List<EvidenceRole> roles;
     /**
-     * Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+     * Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      */
     private java.util.List<String> tags;
     /**
@@ -65,14 +65,25 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.amazonResourceEvidence": return new AmazonResourceEvidence();
                 case "#microsoft.graph.security.analyzedMessageEvidence": return new AnalyzedMessageEvidence();
                 case "#microsoft.graph.security.azureResourceEvidence": return new AzureResourceEvidence();
+                case "#microsoft.graph.security.blobContainerEvidence": return new BlobContainerEvidence();
+                case "#microsoft.graph.security.blobEvidence": return new BlobEvidence();
                 case "#microsoft.graph.security.cloudApplicationEvidence": return new CloudApplicationEvidence();
+                case "#microsoft.graph.security.containerEvidence": return new ContainerEvidence();
+                case "#microsoft.graph.security.containerImageEvidence": return new ContainerImageEvidence();
+                case "#microsoft.graph.security.containerRegistryEvidence": return new ContainerRegistryEvidence();
                 case "#microsoft.graph.security.deviceEvidence": return new DeviceEvidence();
                 case "#microsoft.graph.security.fileEvidence": return new FileEvidence();
                 case "#microsoft.graph.security.googleCloudResourceEvidence": return new GoogleCloudResourceEvidence();
                 case "#microsoft.graph.security.ipEvidence": return new IpEvidence();
+                case "#microsoft.graph.security.kubernetesClusterEvidence": return new KubernetesClusterEvidence();
+                case "#microsoft.graph.security.kubernetesControllerEvidence": return new KubernetesControllerEvidence();
+                case "#microsoft.graph.security.kubernetesNamespaceEvidence": return new KubernetesNamespaceEvidence();
+                case "#microsoft.graph.security.kubernetesPodEvidence": return new KubernetesPodEvidence();
+                case "#microsoft.graph.security.kubernetesSecretEvidence": return new KubernetesSecretEvidence();
+                case "#microsoft.graph.security.kubernetesServiceAccountEvidence": return new KubernetesServiceAccountEvidence();
+                case "#microsoft.graph.security.kubernetesServiceEvidence": return new KubernetesServiceEvidence();
                 case "#microsoft.graph.security.mailboxEvidence": return new MailboxEvidence();
                 case "#microsoft.graph.security.mailClusterEvidence": return new MailClusterEvidence();
                 case "#microsoft.graph.security.oauthApplicationEvidence": return new OauthApplicationEvidence();
@@ -103,7 +114,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the detailedRoles property value. The detailedRoles property
+     * Gets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -152,7 +163,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this.remediationStatusDetails;
     }
     /**
-     * Gets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+     * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      * @return a evidenceRole
      */
     @javax.annotation.Nullable
@@ -160,7 +171,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         return this.roles;
     }
     /**
-     * Gets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+     * Gets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -212,7 +223,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the detailedRoles property value. The detailedRoles property
+     * Sets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
      * @param value Value to set for the detailedRoles property.
      * @return a void
      */
@@ -248,7 +259,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this.remediationStatusDetails = value;
     }
     /**
-     * Sets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+     * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      * @param value Value to set for the roles property.
      * @return a void
      */
@@ -257,7 +268,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
         this.roles = value;
     }
     /**
-     * Sets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+     * Sets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      * @param value Value to set for the tags property.
      * @return a void
      */

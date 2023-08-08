@@ -43,7 +43,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a browserSite from a browserSiteList.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-delete-sites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
      * Delete a browserSite from a browserSiteList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-delete-sites?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sites?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a browserSite that resides on a browserSiteList.
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> get() {
@@ -102,7 +102,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
      * Get a browserSite that resides on a browserSiteList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a browserSite object.
      * @param body The request body
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> patch(@javax.annotation.Nonnull final BrowserSite body) {
@@ -143,7 +143,7 @@ public class BrowserSiteItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSite
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSite> patch(@javax.annotation.Nonnull final BrowserSite body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

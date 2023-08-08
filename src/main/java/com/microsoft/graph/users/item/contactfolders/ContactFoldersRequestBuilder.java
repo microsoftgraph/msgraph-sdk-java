@@ -73,7 +73,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the contact folder collection in the default Contacts folder of the signed-in user.
      * @return a CompletableFuture of contactFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
      * Get the contact folder collection in the default Contacts folder of the signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactFolderCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolderCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
      * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
      * @param body The request body
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> post(@javax.annotation.Nonnull final ContactFolder body) {
@@ -134,7 +134,7 @@ public class ContactFoldersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contactFolder
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContactFolder> post(@javax.annotation.Nonnull final ContactFolder body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

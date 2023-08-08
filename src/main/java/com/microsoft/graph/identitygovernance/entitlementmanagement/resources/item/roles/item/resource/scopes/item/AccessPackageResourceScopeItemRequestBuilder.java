@@ -86,7 +86,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of accessPackageResourceScope
      */
     @javax.annotation.Nonnull
@@ -104,7 +104,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceScope
      */
@@ -190,7 +190,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -198,7 +198,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -256,7 +256,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /**

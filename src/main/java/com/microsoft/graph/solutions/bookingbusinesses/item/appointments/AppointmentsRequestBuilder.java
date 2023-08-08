@@ -65,7 +65,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @return a CompletableFuture of bookingAppointmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
      * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingAppointmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new bookingAppointment for the specified bookingBusiness.
      * @param body The request body
      * @return a CompletableFuture of bookingAppointment
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> post(@javax.annotation.Nonnull final BookingAppointment body) {
@@ -126,7 +126,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookingAppointment
-     * @see <a href="https://docs.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookingAppointment> post(@javax.annotation.Nonnull final BookingAppointment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

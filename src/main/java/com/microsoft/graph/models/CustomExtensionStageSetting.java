@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 public class CustomExtensionStageSetting extends Entity implements Parsable {
     /**
-     * The customExtension property
+     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      */
     private CustomCalloutExtension customExtension;
     /**
@@ -34,7 +34,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
         return new CustomExtensionStageSetting();
     }
     /**
-     * Gets the customExtension property value. The customExtension property
+     * Gets the customExtension property value. Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @return a customCalloutExtension
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
         writer.writeEnumValue("stage", this.getStage());
     }
     /**
-     * Sets the customExtension property value. The customExtension property
+     * Sets the customExtension property value. Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
      * @param value Value to set for the customExtension property.
      * @return a void
      */

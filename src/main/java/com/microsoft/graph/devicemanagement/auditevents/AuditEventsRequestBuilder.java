@@ -72,8 +72,9 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/auditEvents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @return a CompletableFuture of auditEventCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEventCollectionResponse> get() {
@@ -90,9 +91,10 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of auditEventCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEventCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,9 +121,10 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return new GetAuditActivityTypesWithCategoryRequestBuilder(pathParameters, requestAdapter, category);
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @return a CompletableFuture of auditEvent
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> post(@javax.annotation.Nonnull final AuditEvent body) {
@@ -138,10 +141,11 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of auditEvent
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> post(@javax.annotation.Nonnull final AuditEvent body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -159,7 +163,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -167,7 +171,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +192,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -197,7 +201,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to auditEvents for deviceManagement
+     * Create a new auditEvent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -220,7 +224,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The Audit Events
+     * List properties and relationships of the auditEvent objects.
      */
     public class GetQueryParameters {
         /**

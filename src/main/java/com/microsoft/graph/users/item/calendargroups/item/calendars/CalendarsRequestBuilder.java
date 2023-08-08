@@ -65,7 +65,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of calendars belonging to a calendar group.
      * @return a CompletableFuture of calendarCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of calendars belonging to a calendar group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendarCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CalendarCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new calendar in a calendar group for a user.
      * @param body The request body
      * @return a CompletableFuture of calendar
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-post-calendars?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-post-calendars?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> post(@javax.annotation.Nonnull final Calendar body) {
@@ -126,7 +126,7 @@ public class CalendarsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of calendar
-     * @see <a href="https://docs.microsoft.com/graph/api/calendargroup-post-calendars?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/calendargroup-post-calendars?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Calendar> post(@javax.annotation.Nonnull final Calendar body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

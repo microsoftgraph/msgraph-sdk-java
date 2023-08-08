@@ -79,8 +79,9 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The mobile apps.
+     * List properties and relationships of the iosiPadOSWebClip objects.
      * @return a CompletableFuture of mobileAppCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosipadoswebclip-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get() {
@@ -97,9 +98,10 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile apps.
+     * List properties and relationships of the iosiPadOSWebClip objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosipadoswebclip-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,9 +118,10 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to mobileApps for deviceAppManagement
+     * Create a new iosVppApp object.
      * @param body The request body
      * @return a CompletableFuture of mobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@javax.annotation.Nonnull final MobileApp body) {
@@ -135,10 +138,11 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to mobileApps for deviceAppManagement
+     * Create a new iosVppApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileApp
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> post(@javax.annotation.Nonnull final MobileApp body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -156,7 +160,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile apps.
+     * List properties and relationships of the iosiPadOSWebClip objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -164,7 +168,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The mobile apps.
+     * List properties and relationships of the iosiPadOSWebClip objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -185,7 +189,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to mobileApps for deviceAppManagement
+     * Create a new iosVppApp object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -194,7 +198,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to mobileApps for deviceAppManagement
+     * Create a new iosVppApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -217,7 +221,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The mobile apps.
+     * List properties and relationships of the iosiPadOSWebClip objects.
      */
     public class GetQueryParameters {
         /**

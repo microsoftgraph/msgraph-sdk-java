@@ -65,7 +65,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of queries associated with an eDiscovery review set.
      * @return a CompletableFuture of ediscoveryReviewSetQueryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQueryCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
      * Get the list of queries associated with an eDiscovery review set.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSetQueryCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQueryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
      * Create a new ediscoveryReviewSetQuery object.
      * @param body The request body
      * @return a CompletableFuture of ediscoveryReviewSetQuery
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> post(@javax.annotation.Nonnull final EdiscoveryReviewSetQuery body) {
@@ -126,7 +126,7 @@ public class QueriesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ediscoveryReviewSetQuery
-     * @see <a href="https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryReviewSetQuery> post(@javax.annotation.Nonnull final EdiscoveryReviewSetQuery body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

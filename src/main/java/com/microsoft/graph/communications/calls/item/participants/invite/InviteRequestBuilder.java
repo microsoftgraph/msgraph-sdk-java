@@ -43,7 +43,7 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
      * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
      * @param body The request body
      * @return a CompletableFuture of inviteParticipantsOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> post(@javax.annotation.Nonnull final InvitePostRequestBody body) {
@@ -64,7 +64,7 @@ public class InviteRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inviteParticipantsOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> post(@javax.annotation.Nonnull final InvitePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

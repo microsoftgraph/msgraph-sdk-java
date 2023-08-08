@@ -65,7 +65,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of page objects from the specified section.
      * @return a CompletableFuture of onenotePageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of page objects from the specified section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenotePageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * Create a new page in the specified section.
      * @param body The request body
      * @return a CompletableFuture of onenotePage
-     * @see <a href="https://docs.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@javax.annotation.Nonnull final OnenotePage body) {
@@ -126,7 +126,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenotePage
-     * @see <a href="https://docs.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@javax.annotation.Nonnull final OnenotePage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

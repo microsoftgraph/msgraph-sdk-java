@@ -43,7 +43,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a lifecycleManagementSettings object.
      * @return a CompletableFuture of lifecycleManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> get() {
@@ -63,7 +63,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a lifecycleManagementSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of lifecycleManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a lifecycleManagementSettings object.
      * @param body The request body
      * @return a CompletableFuture of lifecycleManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> patch(@javax.annotation.Nonnull final LifecycleManagementSettings body) {
@@ -104,7 +104,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of lifecycleManagementSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LifecycleManagementSettings> patch(@javax.annotation.Nonnull final LifecycleManagementSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

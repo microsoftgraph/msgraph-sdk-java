@@ -29,7 +29,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
      */
     private Boolean allowedToReadBitlockerKeysForOwnedDevice;
     /**
-     * Indicates whether the default user role can read other users.
+     * Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      */
     private Boolean allowedToReadOtherUsers;
     /**
@@ -99,7 +99,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         return this.allowedToReadBitlockerKeysForOwnedDevice;
     }
     /**
-     * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
+     * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class DefaultUserRolePermissions implements AdditionalDataHolder, Parsabl
         this.allowedToReadBitlockerKeysForOwnedDevice = value;
     }
     /**
-     * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
+     * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      * @param value Value to set for the allowedToReadOtherUsers property.
      * @return a void
      */

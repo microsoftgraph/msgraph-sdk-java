@@ -65,7 +65,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of timeOff instances in a schedule.
      * @return a CompletableFuture of timeOffCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
      * Get the list of timeOff instances in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOffCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOffCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
      * Create a new timeOff instance in a schedule.
      * @param body The request body
      * @return a CompletableFuture of timeOff
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> post(@javax.annotation.Nonnull final TimeOff body) {
@@ -126,7 +126,7 @@ public class TimesOffRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of timeOff
-     * @see <a href="https://docs.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TimeOff> post(@javax.annotation.Nonnull final TimeOff body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -73,7 +73,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * List existing jobs for a given application instance (service principal).
      * @return a CompletableFuture of synchronizationJobCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJobCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * List existing jobs for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationJobCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJobCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a CompletableFuture of synchronizationJob
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> post(@javax.annotation.Nonnull final SynchronizationJob body) {
@@ -134,7 +134,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationJob
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationJob> post(@javax.annotation.Nonnull final SynchronizationJob body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

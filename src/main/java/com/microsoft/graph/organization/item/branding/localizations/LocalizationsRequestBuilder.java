@@ -65,7 +65,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve all localization branding objects, including the default branding.
      * @return a CompletableFuture of organizationalBrandingLocalizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalizationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Retrieve all localization branding objects, including the default branding.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organizationalBrandingLocalizationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalizationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
      * @param body The request body
      * @return a CompletableFuture of organizationalBrandingLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> post(@javax.annotation.Nonnull final OrganizationalBrandingLocalization body) {
@@ -126,7 +126,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organizationalBrandingLocalization
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationalBrandingLocalization> post(@javax.annotation.Nonnull final OrganizationalBrandingLocalization body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

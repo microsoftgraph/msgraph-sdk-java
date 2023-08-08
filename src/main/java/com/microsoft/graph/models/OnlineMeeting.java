@@ -25,6 +25,10 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private MeetingChatMode allowMeetingChat;
     /**
+     * Specifies if participants are allowed to rename themselves in an instance of the meeting.
+     */
+    private Boolean allowParticipantsToChangeName;
+    /**
      * Indicates whether Teams reactions are enabled for the meeting.
      */
     private Boolean allowTeamworkReactions;
@@ -93,6 +97,10 @@ public class OnlineMeeting extends Entity implements Parsable {
      */
     private Boolean recordAutomatically;
     /**
+     * Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+     */
+    private MeetingChatHistoryDefaultMode shareMeetingChatHistoryDefault;
+    /**
      * The meeting start time in UTC.
      */
     private OffsetDateTime startDateTime;
@@ -157,6 +165,14 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nullable
     public MeetingChatMode getAllowMeetingChat() {
         return this.allowMeetingChat;
+    }
+    /**
+     * Gets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getAllowParticipantsToChangeName() {
+        return this.allowParticipantsToChangeName;
     }
     /**
      * Gets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
@@ -241,6 +257,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
         deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
         deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
+        deserializerMap.put("allowParticipantsToChangeName", (n) -> { this.setAllowParticipantsToChangeName(n.getBooleanValue()); });
         deserializerMap.put("allowTeamworkReactions", (n) -> { this.setAllowTeamworkReactions(n.getBooleanValue()); });
         deserializerMap.put("attendanceReports", (n) -> { this.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
         deserializerMap.put("attendeeReport", (n) -> { this.setAttendeeReport(n.getByteArrayValue()); });
@@ -258,6 +275,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
         deserializerMap.put("recordAutomatically", (n) -> { this.setRecordAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(MeetingChatHistoryDefaultMode.class)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
@@ -329,6 +347,14 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this.recordAutomatically;
     }
     /**
+     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+     * @return a meetingChatHistoryDefaultMode
+     */
+    @javax.annotation.Nullable
+    public MeetingChatHistoryDefaultMode getShareMeetingChatHistoryDefault() {
+        return this.shareMeetingChatHistoryDefault;
+    }
+    /**
      * Gets the startDateTime property value. The meeting start time in UTC.
      * @return a OffsetDateTime
      */
@@ -373,6 +399,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
         writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
+        writer.writeBooleanValue("allowParticipantsToChangeName", this.getAllowParticipantsToChangeName());
         writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
         writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
@@ -390,6 +417,7 @@ public class OnlineMeeting extends Entity implements Parsable {
         writer.writeObjectValue("lobbyBypassSettings", this.getLobbyBypassSettings());
         writer.writeObjectValue("participants", this.getParticipants());
         writer.writeBooleanValue("recordAutomatically", this.getRecordAutomatically());
+        writer.writeEnumValue("shareMeetingChatHistoryDefault", this.getShareMeetingChatHistoryDefault());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("subject", this.getSubject());
         writer.writeStringValue("videoTeleconferenceId", this.getVideoTeleconferenceId());
@@ -430,6 +458,15 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setAllowMeetingChat(@javax.annotation.Nullable final MeetingChatMode value) {
         this.allowMeetingChat = value;
+    }
+    /**
+     * Sets the allowParticipantsToChangeName property value. Specifies if participants are allowed to rename themselves in an instance of the meeting.
+     * @param value Value to set for the allowParticipantsToChangeName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAllowParticipantsToChangeName(@javax.annotation.Nullable final Boolean value) {
+        this.allowParticipantsToChangeName = value;
     }
     /**
      * Sets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
@@ -583,6 +620,15 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setRecordAutomatically(@javax.annotation.Nullable final Boolean value) {
         this.recordAutomatically = value;
+    }
+    /**
+     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+     * @param value Value to set for the shareMeetingChatHistoryDefault property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setShareMeetingChatHistoryDefault(@javax.annotation.Nullable final MeetingChatHistoryDefaultMode value) {
+        this.shareMeetingChatHistoryDefault = value;
     }
     /**
      * Sets the startDateTime property value. The meeting start time in UTC.

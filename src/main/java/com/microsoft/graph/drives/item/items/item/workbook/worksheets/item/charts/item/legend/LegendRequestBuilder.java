@@ -88,7 +88,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of chartlegend object.
      * @return a CompletableFuture of workbookChartLegend
-     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> get() {
@@ -108,7 +108,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of chartlegend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartLegend
-     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
      * Update the properties of chartlegend object.
      * @param body The request body
      * @return a CompletableFuture of workbookChartLegend
-     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> patch(@javax.annotation.Nonnull final WorkbookChartLegend body) {
@@ -149,7 +149,7 @@ public class LegendRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChartLegend
-     * @see <a href="https://docs.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChartLegend> patch(@javax.annotation.Nonnull final WorkbookChartLegend body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

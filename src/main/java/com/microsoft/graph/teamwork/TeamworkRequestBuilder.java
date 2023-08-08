@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Teamwork;
 import com.microsoft.graph.teamwork.deletedteams.DeletedTeamsRequestBuilder;
 import com.microsoft.graph.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
+import com.microsoft.graph.teamwork.teamsappsettings.TeamsAppSettingsRequestBuilder;
 import com.microsoft.graph.teamwork.workforceintegrations.WorkforceIntegrationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -36,6 +37,13 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public SendActivityNotificationToRecipientsRequestBuilder sendActivityNotificationToRecipients() {
         return new SendActivityNotificationToRecipientsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the teamsAppSettings property of the microsoft.graph.teamwork entity.
+     */
+    @javax.annotation.Nonnull
+    public TeamsAppSettingsRequestBuilder teamsAppSettings() {
+        return new TeamsAppSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.

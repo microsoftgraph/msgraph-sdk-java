@@ -63,7 +63,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/resourceRequests/{accessPackageResourceRequest%2Did}/resource/roles/{accessPackageResourceRole%2Did}/resource/scopes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of accessPackageResourceScopeCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceScopeCollectionResponse
      */
@@ -140,7 +140,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class ScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get scopes from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /**

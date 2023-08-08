@@ -29,7 +29,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     private DeviceHealthStatus healthStatus;
     /**
-     * The ipInterfaces property
+     * Ip interfaces of the device during the time of the alert.
      */
     private java.util.List<String> ipInterfaces;
     /**
@@ -79,6 +79,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public DeviceEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.deviceEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -156,7 +157,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.healthStatus;
     }
     /**
-     * Gets the ipInterfaces property value. The ipInterfaces property
+     * Gets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -315,7 +316,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this.healthStatus = value;
     }
     /**
-     * Sets the ipInterfaces property value. The ipInterfaces property
+     * Sets the ipInterfaces property value. Ip interfaces of the device during the time of the alert.
      * @param value Value to set for the ipInterfaces property.
      * @return a void
      */

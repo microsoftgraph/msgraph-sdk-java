@@ -65,7 +65,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @return a CompletableFuture of unifiedRoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new unifiedRoleAssignment object.
      * @param body The request body
      * @return a CompletableFuture of unifiedRoleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> post(@javax.annotation.Nonnull final UnifiedRoleAssignment body) {
@@ -126,7 +126,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> post(@javax.annotation.Nonnull final UnifiedRoleAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

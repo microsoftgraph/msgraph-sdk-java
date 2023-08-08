@@ -12,6 +12,7 @@ import com.microsoft.graph.teams.item.incomingchannels.IncomingChannelsRequestBu
 import com.microsoft.graph.teams.item.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.teams.item.members.MembersRequestBuilder;
 import com.microsoft.graph.teams.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.teams.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.teams.item.photo.PhotoRequestBuilder;
 import com.microsoft.graph.teams.item.primarychannel.PrimaryChannelRequestBuilder;
 import com.microsoft.graph.teams.item.schedule.ScheduleRequestBuilder;
@@ -106,6 +107,13 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.team entity.
+     */
+    @javax.annotation.Nonnull
+    public PermissionGrantsRequestBuilder permissionGrants() {
+        return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.team entity.
@@ -216,7 +224,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of the specified team.
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> get() {
@@ -236,7 +244,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of the specified team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -256,7 +264,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified team.
      * @param body The request body
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> patch(@javax.annotation.Nonnull final Team body) {
@@ -277,7 +285,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
-     * @see <a href="https://docs.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/team-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> patch(@javax.annotation.Nonnull final Team body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

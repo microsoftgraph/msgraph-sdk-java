@@ -76,7 +76,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @return a CompletableFuture of accessReviewScheduleDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinitionCollectionResponse> get() {
@@ -96,7 +96,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewScheduleDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +116,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new accessReviewScheduleDefinition object.
      * @param body The request body
      * @return a CompletableFuture of accessReviewScheduleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> post(@javax.annotation.Nonnull final AccessReviewScheduleDefinition body) {
@@ -137,7 +137,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewScheduleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> post(@javax.annotation.Nonnull final AccessReviewScheduleDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

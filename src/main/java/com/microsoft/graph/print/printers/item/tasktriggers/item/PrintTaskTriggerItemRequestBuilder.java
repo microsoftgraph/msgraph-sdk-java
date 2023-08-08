@@ -51,7 +51,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete the task trigger of a printer to prevent related print events from triggering tasks on the specified printer.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
      * Delete the task trigger of a printer to prevent related print events from triggering tasks on the specified printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a task trigger from a printer. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @return a CompletableFuture of printTaskTrigger
-     * @see <a href="https://docs.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> get() {
@@ -110,7 +110,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
      * Get a task trigger from a printer. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of printTaskTrigger
-     * @see <a href="https://docs.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/printtasktrigger-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintTaskTrigger> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

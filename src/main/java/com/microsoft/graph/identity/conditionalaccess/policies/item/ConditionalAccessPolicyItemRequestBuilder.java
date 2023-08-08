@@ -43,7 +43,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete a conditionalAccessPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
      * Delete a conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
     /**
      * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      * @return a CompletableFuture of conditionalAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get() {
@@ -102,7 +102,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
      * Retrieve the properties and relationships of a conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
      * Update the properties of a conditionalAccessPolicy object.
      * @param body The request body
      * @return a CompletableFuture of conditionalAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@javax.annotation.Nonnull final ConditionalAccessPolicy body) {
@@ -143,7 +143,7 @@ public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilde
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patch(@javax.annotation.Nonnull final ConditionalAccessPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

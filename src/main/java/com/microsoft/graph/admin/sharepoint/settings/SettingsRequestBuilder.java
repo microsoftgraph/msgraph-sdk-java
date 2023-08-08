@@ -80,7 +80,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the tenant-level settings for SharePoint and OneDrive.
      * @return a CompletableFuture of sharepointSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> get() {
@@ -100,7 +100,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Get the tenant-level settings for SharePoint and OneDrive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sharepointSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update one or more tenant-level settings for SharePoint and OneDrive.
      * @param body The request body
      * @return a CompletableFuture of sharepointSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> patch(@javax.annotation.Nonnull final SharepointSettings body) {
@@ -141,7 +141,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sharepointSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharepointSettings> patch(@javax.annotation.Nonnull final SharepointSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -12,6 +12,7 @@ import com.microsoft.graph.users.item.joinedteams.item.incomingchannels.Incoming
 import com.microsoft.graph.users.item.joinedteams.item.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.members.MembersRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.users.item.joinedteams.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.photo.PhotoRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.primarychannel.PrimaryChannelRequestBuilder;
 import com.microsoft.graph.users.item.joinedteams.item.schedule.ScheduleRequestBuilder;
@@ -106,6 +107,13 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.team entity.
+     */
+    @javax.annotation.Nonnull
+    public PermissionGrantsRequestBuilder permissionGrants() {
+        return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.team entity.

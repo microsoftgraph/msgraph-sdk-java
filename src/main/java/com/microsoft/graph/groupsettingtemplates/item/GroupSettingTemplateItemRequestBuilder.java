@@ -120,7 +120,7 @@ public class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @return a CompletableFuture of groupSettingTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSettingTemplate> get() {
@@ -140,7 +140,7 @@ public class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder {
      * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSettingTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/groupsettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSettingTemplate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

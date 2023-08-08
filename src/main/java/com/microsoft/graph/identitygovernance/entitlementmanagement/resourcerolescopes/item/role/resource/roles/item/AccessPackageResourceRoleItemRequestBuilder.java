@@ -78,7 +78,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a CompletableFuture of accessPackageResourceRole
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
         }
     }
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceRole
      */
@@ -182,7 +182,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +190,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -248,7 +248,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get roles from identityGovernance
+     * Read-only. Nullable. Supports $expand.
      */
     public class GetQueryParameters {
         /**

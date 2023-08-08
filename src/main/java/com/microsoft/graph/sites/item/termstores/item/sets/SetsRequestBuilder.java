@@ -103,7 +103,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
      * Create a new set object.
      * @param body The request body
      * @return a CompletableFuture of set
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> post(@javax.annotation.Nonnull final Set body) {
@@ -124,7 +124,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of set
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Set> post(@javax.annotation.Nonnull final Set body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

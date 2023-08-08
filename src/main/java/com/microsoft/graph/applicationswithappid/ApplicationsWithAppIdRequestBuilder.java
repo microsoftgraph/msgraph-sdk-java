@@ -45,7 +45,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -65,7 +65,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
      * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -84,7 +84,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an application object.
      * @return a CompletableFuture of application
-     * @see <a href="https://docs.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Application> get() {
@@ -104,7 +104,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
      * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of application
-     * @see <a href="https://docs.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Application> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +124,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an application object.
      * @param body The request body
      * @return a CompletableFuture of application
-     * @see <a href="https://docs.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Application> patch(@javax.annotation.Nonnull final Application body) {
@@ -145,7 +145,7 @@ public class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of application
-     * @see <a href="https://docs.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Application> patch(@javax.annotation.Nonnull final Application body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

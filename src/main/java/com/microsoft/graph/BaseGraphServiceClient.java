@@ -45,7 +45,6 @@ import com.microsoft.graph.identityprotection.IdentityProtectionRequestBuilder;
 import com.microsoft.graph.identityproviders.IdentityProvidersRequestBuilder;
 import com.microsoft.graph.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.invitations.InvitationsRequestBuilder;
-import com.microsoft.graph.localizations.LocalizationsRequestBuilder;
 import com.microsoft.graph.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.organization.OrganizationRequestBuilder;
 import com.microsoft.graph.permissiongrants.PermissionGrantsRequestBuilder;
@@ -79,6 +78,7 @@ import com.microsoft.kiota.serialization.FormParseNodeFactory;
 import com.microsoft.kiota.serialization.FormSerializationWriterFactory;
 import com.microsoft.kiota.serialization.JsonParseNodeFactory;
 import com.microsoft.kiota.serialization.JsonSerializationWriterFactory;
+import com.microsoft.kiota.serialization.MultipartSerializationWriterFactory;
 import com.microsoft.kiota.serialization.ParseNodeFactoryRegistry;
 import com.microsoft.kiota.serialization.SerializationWriterFactoryRegistry;
 import com.microsoft.kiota.serialization.TextParseNodeFactory;
@@ -384,13 +384,6 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
         return new InvitationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
-     */
-    @javax.annotation.Nonnull
-    public LocalizationsRequestBuilder localizations() {
-        return new LocalizationsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the collection of oAuth2PermissionGrant entities.
      */
     @javax.annotation.Nonnull
@@ -587,6 +580,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
         ApiClientBuilder.registerDefaultSerializer(JsonSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultSerializer(TextSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultSerializer(FormSerializationWriterFactory.class);
+        ApiClientBuilder.registerDefaultSerializer(MultipartSerializationWriterFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(JsonParseNodeFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(FormParseNodeFactory.class);
         ApiClientBuilder.registerDefaultDeserializer(TextParseNodeFactory.class);

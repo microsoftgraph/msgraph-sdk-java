@@ -9,23 +9,23 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * The callbackConfiguration property
+     * The callback configuration for a custom extension.
      */
     private CustomExtensionCallbackConfiguration callbackConfiguration;
     /**
-     * The createdBy property
+     * The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      */
     private String createdBy;
     /**
-     * The createdDateTime property
+     * When the entity was created.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The lastModifiedBy property
+     * The userPrincipalName of the identity that last modified the entity.
      */
     private String lastModifiedBy;
     /**
-     * The lastModifiedDateTime property
+     * When the entity was last modified.
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
@@ -48,7 +48,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         return new AccessPackageAssignmentWorkflowExtension();
     }
     /**
-     * Gets the callbackConfiguration property value. The callbackConfiguration property
+     * Gets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @return a customExtensionCallbackConfiguration
      */
     @javax.annotation.Nullable
@@ -56,7 +56,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         return this.callbackConfiguration;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         return this.createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. When the entity was created.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The userPrincipalName of the identity that last modified the entity.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. When the entity was last modified.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the callbackConfiguration property value. The callbackConfiguration property
+     * Sets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @param value Value to set for the callbackConfiguration property.
      * @return a void
      */
@@ -126,7 +126,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         this.callbackConfiguration = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The userPrincipalName of the user or identity of the subject that created this resource. Read-only.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -135,7 +135,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         this.createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. When the entity was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
@@ -144,7 +144,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         this.createdDateTime = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The userPrincipalName of the identity that last modified the entity.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
@@ -153,7 +153,7 @@ public class AccessPackageAssignmentWorkflowExtension extends CustomCalloutExten
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. When the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */

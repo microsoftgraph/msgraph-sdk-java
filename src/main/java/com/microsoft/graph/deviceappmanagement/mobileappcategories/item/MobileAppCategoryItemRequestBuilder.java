@@ -41,8 +41,9 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppCategories/{mobileAppCategory%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property mobileAppCategories for deviceAppManagement
+     * Deletes a mobileAppCategory.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property mobileAppCategories for deviceAppManagement
+     * Deletes a mobileAppCategory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile app categories.
+     * Read properties and relationships of the mobileAppCategory object.
      * @return a CompletableFuture of mobileAppCategory
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> get() {
@@ -96,9 +99,10 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile app categories.
+     * Read properties and relationships of the mobileAppCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCategory
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property mobileAppCategories in deviceAppManagement
+     * Update the properties of a mobileAppCategory object.
      * @param body The request body
      * @return a CompletableFuture of mobileAppCategory
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> patch(@javax.annotation.Nonnull final MobileAppCategory body) {
@@ -134,10 +139,11 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property mobileAppCategories in deviceAppManagement
+     * Update the properties of a mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCategory
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> patch(@javax.annotation.Nonnull final MobileAppCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property mobileAppCategories for deviceAppManagement
+     * Deletes a mobileAppCategory.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property mobileAppCategories for deviceAppManagement
+     * Deletes a mobileAppCategory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The mobile app categories.
+     * Read properties and relationships of the mobileAppCategory object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The mobile app categories.
+     * Read properties and relationships of the mobileAppCategory object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property mobileAppCategories in deviceAppManagement
+     * Update the properties of a mobileAppCategory object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property mobileAppCategories in deviceAppManagement
+     * Update the properties of a mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The mobile app categories.
+     * Read properties and relationships of the mobileAppCategory object.
      */
     public class GetQueryParameters {
         /**

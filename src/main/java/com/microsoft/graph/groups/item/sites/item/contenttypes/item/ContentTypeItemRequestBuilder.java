@@ -123,7 +123,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove a [content type][contentType] from a [list][] or a [site][].
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -143,7 +143,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -162,7 +162,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get() {
@@ -182,7 +182,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -202,7 +202,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Update a [content type][contentType].
      * @param body The request body
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@javax.annotation.Nonnull final ContentType body) {
@@ -223,7 +223,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
-     * @see <a href="https://docs.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@javax.annotation.Nonnull final ContentType body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

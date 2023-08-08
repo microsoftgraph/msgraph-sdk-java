@@ -63,8 +63,9 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleDefinitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The Role Definitions.
+     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      * @return a CompletableFuture of roleDefinitionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinitionCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Role Definitions.
+     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleDefinitionCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to roleDefinitions for deviceManagement
+     * Create a new roleDefinition object.
      * @param body The request body
      * @return a CompletableFuture of roleDefinition
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> post(@javax.annotation.Nonnull final RoleDefinition body) {
@@ -119,10 +122,11 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to roleDefinitions for deviceManagement
+     * Create a new roleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of roleDefinition
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> post(@javax.annotation.Nonnull final RoleDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The Role Definitions.
+     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Role Definitions.
+     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to roleDefinitions for deviceManagement
+     * Create a new roleDefinition object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to roleDefinitions for deviceManagement
+     * Create a new roleDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The Role Definitions.
+     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      */
     public class GetQueryParameters {
         /**

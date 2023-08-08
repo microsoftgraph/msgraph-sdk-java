@@ -43,7 +43,7 @@ public class AssignLicenseRequestBuilder extends BaseRequestBuilder {
      * Add or remove licenses on the group. Licenses assigned to the group will be assigned to all users in the group. To learn more about group-based licensing, see What is group-based licensing in Azure Active Directory. To get the subscriptions available in the directory, perform a GET subscribedSkus request.
      * @param body The request body
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/group-assignlicense?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-assignlicense?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> post(@javax.annotation.Nonnull final AssignLicensePostRequestBody body) {
@@ -64,7 +64,7 @@ public class AssignLicenseRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
-     * @see <a href="https://docs.microsoft.com/graph/api/group-assignlicense?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-assignlicense?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Group> post(@javax.annotation.Nonnull final AssignLicensePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

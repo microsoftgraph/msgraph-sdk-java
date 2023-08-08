@@ -80,7 +80,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @return a CompletableFuture of adminConsentRequestPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> get() {
@@ -100,7 +100,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
      * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminConsentRequestPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
      * Update the properties of an adminConsentRequestPolicy object.
      * @param body The request body
      * @return a CompletableFuture of adminConsentRequestPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> patch(@javax.annotation.Nonnull final AdminConsentRequestPolicy body) {
@@ -141,7 +141,7 @@ public class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminConsentRequestPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminConsentRequestPolicy> patch(@javax.annotation.Nonnull final AdminConsentRequestPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

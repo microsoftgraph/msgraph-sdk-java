@@ -43,7 +43,7 @@ public class MuteRequestBuilder extends BaseRequestBuilder {
      * Mute a specific participant in the call. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more information about how to handle mute operations, see muteParticipantOperation.
      * @param body The request body
      * @return a CompletableFuture of muteParticipantOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MuteParticipantOperation> post(@javax.annotation.Nonnull final MutePostRequestBody body) {
@@ -64,7 +64,7 @@ public class MuteRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of muteParticipantOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-mute?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MuteParticipantOperation> post(@javax.annotation.Nonnull final MutePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

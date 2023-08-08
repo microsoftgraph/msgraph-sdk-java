@@ -65,7 +65,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of plannerPlan objects.
      * @return a CompletableFuture of plannerPlanCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
      * Get a list of plannerPlan objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlanCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlanCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new **plannerPlan**.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @return a CompletableFuture of plannerPlan
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> post(@javax.annotation.Nonnull final PlannerPlan body) {
@@ -122,11 +122,11 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Use this API to create a new **plannerPlan**.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of plannerPlan
-     * @see <a href="https://docs.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> post(@javax.annotation.Nonnull final PlannerPlan body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -173,7 +173,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new **plannerPlan**.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new **plannerPlan**.
+     * Use this API to create a new plannerPlan.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

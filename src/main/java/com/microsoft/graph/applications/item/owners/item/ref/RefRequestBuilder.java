@@ -42,7 +42,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove an owner from an application. As a recommended best practice, apps should have at least two owners.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/application-delete-owners?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-delete-owners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -62,7 +62,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove an owner from an application. As a recommended best practice, apps should have at least two owners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/application-delete-owners?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-delete-owners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {

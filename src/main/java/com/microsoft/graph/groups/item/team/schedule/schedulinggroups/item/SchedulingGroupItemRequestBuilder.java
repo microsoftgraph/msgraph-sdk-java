@@ -41,9 +41,9 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/schedulingGroups/{schedulingGroup%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Mark a schedulingGroup as inactive by setting its **isActive** property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/schedulinggroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -60,10 +60,10 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mark a schedulingGroup as inactive by setting its **isActive** property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/schedulinggroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a schedulingGroup by ID.
      * @return a CompletableFuture of schedulingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/schedulinggroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> get() {
@@ -102,7 +102,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a schedulingGroup by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schedulingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/schedulinggroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,10 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns `404 Not found`.
+     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns 404 Not found.
      * @param body The request body
      * @return a CompletableFuture of schedulingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/schedulinggroup-put?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> patch(@javax.annotation.Nonnull final SchedulingGroup body) {
@@ -139,11 +139,11 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns `404 Not found`.
+     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns 404 Not found.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schedulingGroup
-     * @see <a href="https://docs.microsoft.com/graph/api/schedulinggroup-put?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schedulinggroup-put?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SchedulingGroup> patch(@javax.annotation.Nonnull final SchedulingGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Mark a schedulingGroup as inactive by setting its **isActive** property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -169,7 +169,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Mark a schedulingGroup as inactive by setting its **isActive** property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns `404 Not found`.
+     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns 404 Not found.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -226,7 +226,7 @@ public class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns `404 Not found`.
+     * Replace an existing schedulingGroup. If the specified schedulingGroup doesn't exist, this method returns 404 Not found.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

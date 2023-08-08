@@ -73,7 +73,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
      * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of oAuth2PermissionGrantCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrantCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Create a delegated permission grant represented by an oAuth2PermissionGrant object. A delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.
      * @param body The request body
      * @return a CompletableFuture of oAuth2PermissionGrant
-     * @see <a href="https://docs.microsoft.com/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> post(@javax.annotation.Nonnull final OAuth2PermissionGrant body) {
@@ -134,7 +134,7 @@ public class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of oAuth2PermissionGrant
-     * @see <a href="https://docs.microsoft.com/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> post(@javax.annotation.Nonnull final OAuth2PermissionGrant body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

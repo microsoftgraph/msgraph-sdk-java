@@ -83,7 +83,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an accessPackageCatalog.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -103,7 +103,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
      * Delete an accessPackageCatalog.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @return a CompletableFuture of accessPackageCatalog
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> get() {
@@ -142,7 +142,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageCatalog
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -162,7 +162,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
      * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a CompletableFuture of accessPackageCatalog
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> patch(@javax.annotation.Nonnull final AccessPackageCatalog body) {
@@ -183,7 +183,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageCatalog
-     * @see <a href="https://docs.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> patch(@javax.annotation.Nonnull final AccessPackageCatalog body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

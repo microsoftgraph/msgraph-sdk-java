@@ -63,9 +63,9 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/callRecords/{callRecord%2Did}/sessions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of sessions associated with a callRecord object.
+     * Retrieve the list of sessions associated with a callRecord object. If the sessions list is truncated, a sessions@odata.nextLink value will be provided to retrieve the next page of sessions. The maximum page size for sessions is 60 entries.
      * @return a CompletableFuture of sessionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/callrecords-session-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-session-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SessionCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of sessions associated with a callRecord object.
+     * Retrieve the list of sessions associated with a callRecord object. If the sessions list is truncated, a sessions@odata.nextLink value will be provided to retrieve the next page of sessions. The maximum page size for sessions is 60 entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sessionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/callrecords-session-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-session-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SessionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +142,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Retrieve the list of sessions associated with a callRecord object.
+     * Retrieve the list of sessions associated with a callRecord object. If the sessions list is truncated, a sessions@odata.nextLink value will be provided to retrieve the next page of sessions. The maximum page size for sessions is 60 entries.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -150,7 +150,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of sessions associated with a callRecord object.
+     * Retrieve the list of sessions associated with a callRecord object. If the sessions list is truncated, a sessions@odata.nextLink value will be provided to retrieve the next page of sessions. The maximum page size for sessions is 60 entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the list of sessions associated with a callRecord object.
+     * Retrieve the list of sessions associated with a callRecord object. If the sessions list is truncated, a sessions@odata.nextLink value will be provided to retrieve the next page of sessions. The maximum page size for sessions is 60 entries.
      */
     public class GetQueryParameters {
         /**

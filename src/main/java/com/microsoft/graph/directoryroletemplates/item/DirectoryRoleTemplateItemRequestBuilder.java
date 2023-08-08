@@ -120,7 +120,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties and relationships of a directoryroletemplate object.
      * @return a CompletableFuture of directoryRoleTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryroletemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryroletemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> get() {
@@ -140,7 +140,7 @@ public class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder 
      * Retrieve the properties and relationships of a directoryroletemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryRoleTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/directoryroletemplate-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryroletemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

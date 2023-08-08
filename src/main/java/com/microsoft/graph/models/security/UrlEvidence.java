@@ -18,6 +18,7 @@ public class UrlEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public UrlEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.urlEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

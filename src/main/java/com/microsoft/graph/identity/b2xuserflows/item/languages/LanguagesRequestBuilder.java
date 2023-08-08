@@ -65,7 +65,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of languages supported for customization in a B2X user flow.
      * @return a CompletableFuture of userFlowLanguageConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfigurationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of languages supported for customization in a B2X user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userFlowLanguageConfigurationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/b2xidentityuserflow-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

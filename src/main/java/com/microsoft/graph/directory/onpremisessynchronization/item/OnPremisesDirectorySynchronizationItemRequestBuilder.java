@@ -80,7 +80,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @return a CompletableFuture of onPremisesDirectorySynchronization
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> get() {
@@ -100,7 +100,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesDirectorySynchronization
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
      * Update the properties of an onPremisesDirectorySynchronization object.
      * @param body The request body
      * @return a CompletableFuture of onPremisesDirectorySynchronization
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> patch(@javax.annotation.Nonnull final OnPremisesDirectorySynchronization body) {
@@ -141,7 +141,7 @@ public class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRe
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onPremisesDirectorySynchronization
-     * @see <a href="https://docs.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesDirectorySynchronization> patch(@javax.annotation.Nonnull final OnPremisesDirectorySynchronization body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

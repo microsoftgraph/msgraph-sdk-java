@@ -73,7 +73,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the todoTaskList objects and their properties.
      * @return a CompletableFuture of todoTaskListCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskListCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the todoTaskList objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of todoTaskListCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskListCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
      * Create a new lists object.
      * @param body The request body
      * @return a CompletableFuture of todoTaskList
-     * @see <a href="https://docs.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> post(@javax.annotation.Nonnull final TodoTaskList body) {
@@ -134,7 +134,7 @@ public class ListsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of todoTaskList
-     * @see <a href="https://docs.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> post(@javax.annotation.Nonnull final TodoTaskList body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

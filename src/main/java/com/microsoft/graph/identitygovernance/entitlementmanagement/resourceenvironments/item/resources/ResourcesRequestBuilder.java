@@ -63,7 +63,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/resourceEnvironments/{accessPackageResourceEnvironment%2Did}/resources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get resources from identityGovernance
+     * Read-only. Required.
      * @return a CompletableFuture of accessPackageResourceCollectionResponse
      */
     @javax.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get resources from identityGovernance
+     * Read-only. Required.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageResourceCollectionResponse
      */
@@ -140,7 +140,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get resources from identityGovernance
+     * Read-only. Required.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get resources from identityGovernance
+     * Read-only. Required.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get resources from identityGovernance
+     * Read-only. Required.
      */
     public class GetQueryParameters {
         /**

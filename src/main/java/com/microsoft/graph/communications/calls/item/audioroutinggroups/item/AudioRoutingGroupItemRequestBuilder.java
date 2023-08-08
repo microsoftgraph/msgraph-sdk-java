@@ -41,8 +41,9 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/audioRoutingGroups/{audioRoutingGroup%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property audioRoutingGroups for communications
+     * Delete the specified audioRoutingGroup.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property audioRoutingGroups for communications
+     * Delete the specified audioRoutingGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get audioRoutingGroups from communications
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @return a CompletableFuture of audioRoutingGroup
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> get() {
@@ -96,9 +99,10 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get audioRoutingGroups from communications
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of audioRoutingGroup
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property audioRoutingGroups in communications
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @return a CompletableFuture of audioRoutingGroup
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> patch(@javax.annotation.Nonnull final AudioRoutingGroup body) {
@@ -134,10 +139,11 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property audioRoutingGroups in communications
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of audioRoutingGroup
+     * @see <a href="https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AudioRoutingGroup> patch(@javax.annotation.Nonnull final AudioRoutingGroup body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property audioRoutingGroups for communications
+     * Delete the specified audioRoutingGroup.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property audioRoutingGroups for communications
+     * Delete the specified audioRoutingGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get audioRoutingGroups from communications
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get audioRoutingGroups from communications
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property audioRoutingGroups in communications
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property audioRoutingGroups in communications
+     * Modify sources and receivers of an audioRoutingGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get audioRoutingGroups from communications
+     * Retrieve the properties and relationships of an audioRoutingGroup object.
      */
     public class GetQueryParameters {
         /**

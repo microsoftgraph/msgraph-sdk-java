@@ -43,7 +43,7 @@ public class CreateOrGetRequestBuilder extends BaseRequestBuilder {
      * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
      * @param body The request body
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@javax.annotation.Nonnull final CreateOrGetPostRequestBody body) {
@@ -64,7 +64,7 @@ public class CreateOrGetRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onlineMeeting
-     * @see <a href="https://docs.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@javax.annotation.Nonnull final CreateOrGetPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the versions of a document set item in a list.
      * @return a CompletableFuture of documentSetVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the versions of a document set item in a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of documentSetVersionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
      * Create a new version of a document set item in a list.
      * @param body The request body
      * @return a CompletableFuture of documentSetVersion
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersion> post(@javax.annotation.Nonnull final DocumentSetVersion body) {
@@ -126,7 +126,7 @@ public class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of documentSetVersion
-     * @see <a href="https://docs.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DocumentSetVersion> post(@javax.annotation.Nonnull final DocumentSetVersion body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

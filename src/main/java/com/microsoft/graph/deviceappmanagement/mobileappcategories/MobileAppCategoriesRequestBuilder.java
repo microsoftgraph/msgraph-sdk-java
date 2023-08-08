@@ -63,8 +63,9 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppCategories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @return a CompletableFuture of mobileAppCategoryCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCategoryCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @return a CompletableFuture of mobileAppCategory
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> post(@javax.annotation.Nonnull final MobileAppCategory body) {
@@ -119,10 +122,11 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mobileAppCategory
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-apps-mobileappcategory-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> post(@javax.annotation.Nonnull final MobileAppCategory body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to mobileAppCategories for deviceAppManagement
+     * Create a new mobileAppCategory object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The mobile app categories.
+     * List properties and relationships of the mobileAppCategory objects.
      */
     public class GetQueryParameters {
         /**

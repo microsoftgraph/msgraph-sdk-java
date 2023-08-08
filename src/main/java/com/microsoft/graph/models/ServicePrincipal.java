@@ -69,6 +69,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     private java.util.List<DirectoryObject> createdObjects;
     /**
+     * The customSecurityAttributes property
+     */
+    private CustomSecurityAttributeValue customSecurityAttributes;
+    /**
      * The delegatedPermissionClassifications property
      */
     private java.util.List<DelegatedPermissionClassification> delegatedPermissionClassifications;
@@ -173,7 +177,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     private java.util.List<String> servicePrincipalNames;
     /**
-     * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
+     * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.SocialIdp - For internal use.
      */
     private String servicePrincipalType;
     /**
@@ -348,6 +352,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.createdObjects;
     }
     /**
+     * Gets the customSecurityAttributes property value. The customSecurityAttributes property
+     * @return a customSecurityAttributeValue
+     */
+    @javax.annotation.Nullable
+    public CustomSecurityAttributeValue getCustomSecurityAttributes() {
+        return this.customSecurityAttributes;
+    }
+    /**
      * Gets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
      * @return a delegatedPermissionClassification
      */
@@ -417,6 +429,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("appRoles", (n) -> { this.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("createdObjects", (n) -> { this.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("customSecurityAttributes", (n) -> { this.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
         deserializerMap.put("delegatedPermissionClassifications", (n) -> { this.setDelegatedPermissionClassifications(n.getCollectionOfObjectValues(DelegatedPermissionClassification::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("disabledByMicrosoftStatus", (n) -> { this.setDisabledByMicrosoftStatus(n.getStringValue()); });
@@ -615,7 +628,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.servicePrincipalNames;
     }
     /**
-     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
+     * Gets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.SocialIdp - For internal use.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -710,6 +723,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
         writer.writeCollectionOfObjectValues("createdObjects", this.getCreatedObjects());
+        writer.writeObjectValue("customSecurityAttributes", this.getCustomSecurityAttributes());
         writer.writeCollectionOfObjectValues("delegatedPermissionClassifications", this.getDelegatedPermissionClassifications());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("disabledByMicrosoftStatus", this.getDisabledByMicrosoftStatus());
@@ -880,6 +894,15 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setCreatedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.createdObjects = value;
+    }
+    /**
+     * Sets the customSecurityAttributes property value. The customSecurityAttributes property
+     * @param value Value to set for the customSecurityAttributes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomSecurityAttributes(@javax.annotation.Nullable final CustomSecurityAttributeValue value) {
+        this.customSecurityAttributes = value;
     }
     /**
      * Sets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
@@ -1116,7 +1139,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.servicePrincipalNames = value;
     }
     /**
-     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
+     * Sets the servicePrincipalType property value. Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.SocialIdp - For internal use.
      * @param value Value to set for the servicePrincipalType property.
      * @return a void
      */

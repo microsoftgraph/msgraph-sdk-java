@@ -51,7 +51,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete conversation.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
      * Delete conversation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -88,9 +88,9 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @return a CompletableFuture of conversation
-     * @see <a href="https://docs.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> get() {
@@ -107,10 +107,10 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversation
-     * @see <a href="https://docs.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -162,7 +162,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class ConversationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      */
     public class GetQueryParameters {
         /**

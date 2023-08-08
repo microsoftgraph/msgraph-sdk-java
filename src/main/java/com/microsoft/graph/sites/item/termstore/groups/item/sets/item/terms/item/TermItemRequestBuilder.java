@@ -67,7 +67,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a term object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
      * Delete a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a term object.
      * @return a CompletableFuture of term
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get() {
@@ -126,7 +126,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a term object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of term
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a term object.
      * @param body The request body
      * @return a CompletableFuture of term
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> patch(@javax.annotation.Nonnull final Term body) {
@@ -167,7 +167,7 @@ public class TermItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of term
-     * @see <a href="https://docs.microsoft.com/graph/api/termstore-term-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/termstore-term-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Term> patch(@javax.annotation.Nonnull final Term body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

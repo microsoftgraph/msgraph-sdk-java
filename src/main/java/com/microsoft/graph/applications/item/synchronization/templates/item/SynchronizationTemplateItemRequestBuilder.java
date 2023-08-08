@@ -126,7 +126,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
      * Update (override) the synchronization template associated with a given application.
      * @param body The request body
      * @return a CompletableFuture of synchronizationTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> patch(@javax.annotation.Nonnull final SynchronizationTemplate body) {
@@ -147,7 +147,7 @@ public class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilde
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of synchronizationTemplate
-     * @see <a href="https://docs.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SynchronizationTemplate> patch(@javax.annotation.Nonnull final SynchronizationTemplate body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

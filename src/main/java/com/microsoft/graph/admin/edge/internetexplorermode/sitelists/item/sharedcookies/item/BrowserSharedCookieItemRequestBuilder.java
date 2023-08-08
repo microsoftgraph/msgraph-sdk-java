@@ -43,7 +43,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a browserSharedCookie from a browserSiteList.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
      * Delete a browserSharedCookie from a browserSiteList.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      * @return a CompletableFuture of browserSharedCookie
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> get() {
@@ -102,7 +102,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
      * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSharedCookie
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a browserSharedCookie object.
      * @param body The request body
      * @return a CompletableFuture of browserSharedCookie
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> patch(@javax.annotation.Nonnull final BrowserSharedCookie body) {
@@ -143,7 +143,7 @@ public class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of browserSharedCookie
-     * @see <a href="https://docs.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BrowserSharedCookie> patch(@javax.annotation.Nonnull final BrowserSharedCookie body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

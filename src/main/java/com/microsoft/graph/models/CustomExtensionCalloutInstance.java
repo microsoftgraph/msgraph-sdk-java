@@ -13,19 +13,19 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
      */
     private Map<String, Object> additionalData;
     /**
-     * The customExtensionId property
+     * Identification of the custom extension that was triggered at this instance.
      */
     private String customExtensionId;
     /**
-     * The detail property
+     * Details provided by the logic app during the callback of the request instance.
      */
     private String detail;
     /**
-     * The externalCorrelationId property
+     * The unique run identifier for the logic app.
      */
     private String externalCorrelationId;
     /**
-     * The id property
+     * Unique identifier for the callout instance. Read-only.
      */
     private String id;
     /**
@@ -33,7 +33,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
      */
     private String odataType;
     /**
-     * The status property
+     * The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
      */
     private CustomExtensionCalloutInstanceStatus status;
     /**
@@ -63,7 +63,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         return this.additionalData;
     }
     /**
-     * Gets the customExtensionId property value. The customExtensionId property
+     * Gets the customExtensionId property value. Identification of the custom extension that was triggered at this instance.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -71,7 +71,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         return this.customExtensionId;
     }
     /**
-     * Gets the detail property value. The detail property
+     * Gets the detail property value. Details provided by the logic app during the callback of the request instance.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         return this.detail;
     }
     /**
-     * Gets the externalCorrelationId property value. The externalCorrelationId property
+     * Gets the externalCorrelationId property value. The unique run identifier for the logic app.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Unique identifier for the callout instance. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -118,7 +118,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         return this.odataType;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
      * @return a customExtensionCalloutInstanceStatus
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         this.additionalData = value;
     }
     /**
-     * Sets the customExtensionId property value. The customExtensionId property
+     * Sets the customExtensionId property value. Identification of the custom extension that was triggered at this instance.
      * @param value Value to set for the customExtensionId property.
      * @return a void
      */
@@ -160,7 +160,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         this.customExtensionId = value;
     }
     /**
-     * Sets the detail property value. The detail property
+     * Sets the detail property value. Details provided by the logic app during the callback of the request instance.
      * @param value Value to set for the detail property.
      * @return a void
      */
@@ -169,7 +169,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         this.detail = value;
     }
     /**
-     * Sets the externalCorrelationId property value. The externalCorrelationId property
+     * Sets the externalCorrelationId property value. The unique run identifier for the logic app.
      * @param value Value to set for the externalCorrelationId property.
      * @return a void
      */
@@ -178,7 +178,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         this.externalCorrelationId = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Unique identifier for the callout instance. Read-only.
      * @param value Value to set for the id property.
      * @return a void
      */
@@ -196,7 +196,7 @@ public class CustomExtensionCalloutInstance implements AdditionalDataHolder, Par
         this.odataType = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the request to the custom extension. The possible values are: calloutSent, callbackReceived, calloutFailed, callbackTimedOut, waitingForCallback, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */

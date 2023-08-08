@@ -42,7 +42,7 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Converts the table into a normal range of cells. All data is preserved.
      * @return a CompletableFuture of workbookRange
-     * @see <a href="https://docs.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> post() {
@@ -62,7 +62,7 @@ public class ConvertToRangeRequestBuilder extends BaseRequestBuilder {
      * Converts the table into a normal range of cells. All data is preserved.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookRange
-     * @see <a href="https://docs.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookRange> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

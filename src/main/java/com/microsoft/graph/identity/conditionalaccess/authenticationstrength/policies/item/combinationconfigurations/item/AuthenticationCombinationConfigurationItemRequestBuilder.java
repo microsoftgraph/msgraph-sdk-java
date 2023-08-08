@@ -43,7 +43,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
     /**
      * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-delete-combinationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
     /**
      * Read the properties and relationships of an authenticationCombinationConfiguration object.
      * @return a CompletableFuture of authenticationCombinationConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfiguration> get() {
@@ -102,7 +102,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * Read the properties and relationships of an authenticationCombinationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationCombinationConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfiguration> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they are the only type of authenticationCombinationConfiguration that may be created.
      * @param body The request body
      * @return a CompletableFuture of authenticationCombinationConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfiguration> patch(@javax.annotation.Nonnull final AuthenticationCombinationConfiguration body) {
@@ -143,7 +143,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationCombinationConfiguration
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationCombinationConfiguration> patch(@javax.annotation.Nonnull final AuthenticationCombinationConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

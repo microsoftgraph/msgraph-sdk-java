@@ -97,7 +97,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of applications in this organization.
      * @return a CompletableFuture of applicationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationCollectionResponse> get() {
@@ -117,7 +117,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * Get the list of applications in this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of applicationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -137,7 +137,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * Create a new application object.
      * @param body The request body
      * @return a CompletableFuture of application
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Application> post(@javax.annotation.Nonnull final Application body) {
@@ -158,7 +158,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of application
-     * @see <a href="https://docs.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Application> post(@javax.annotation.Nonnull final Application body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

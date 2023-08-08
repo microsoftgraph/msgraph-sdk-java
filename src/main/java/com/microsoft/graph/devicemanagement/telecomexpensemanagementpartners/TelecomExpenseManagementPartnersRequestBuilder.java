@@ -65,7 +65,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
     /**
      * List properties and relationships of the telecomExpenseManagementPartner objects.
      * @return a CompletableFuture of telecomExpenseManagementPartnerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartnerCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
      * List properties and relationships of the telecomExpenseManagementPartner objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of telecomExpenseManagementPartnerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartnerCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
      * Create a new telecomExpenseManagementPartner object.
      * @param body The request body
      * @return a CompletableFuture of telecomExpenseManagementPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> post(@javax.annotation.Nonnull final TelecomExpenseManagementPartner body) {
@@ -126,7 +126,7 @@ public class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestB
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of telecomExpenseManagementPartner
-     * @see <a href="https://docs.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> post(@javax.annotation.Nonnull final TelecomExpenseManagementPartner body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

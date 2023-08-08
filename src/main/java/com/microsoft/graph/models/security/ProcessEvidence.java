@@ -55,6 +55,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public ProcessEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.processEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

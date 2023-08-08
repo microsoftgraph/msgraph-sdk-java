@@ -65,7 +65,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of conversations in this group.
      * @return a CompletableFuture of conversationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of conversations in this group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConversationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
      * Use reply thread or reply post to further post to that conversation.
      * @param body The request body
      * @return a CompletableFuture of conversation
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> post(@javax.annotation.Nonnull final Conversation body) {
@@ -126,7 +126,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conversation
-     * @see <a href="https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> post(@javax.annotation.Nonnull final Conversation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

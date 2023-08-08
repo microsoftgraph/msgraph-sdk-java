@@ -39,8 +39,9 @@ public class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/windowsDefenderUpdateSignatures", rawUrl);
     }
     /**
-     * Invoke action windowsDefenderUpdateSignatures
+     * Not yet documented
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderupdatesignatures?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -57,9 +58,10 @@ public class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Invoke action windowsDefenderUpdateSignatures
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderupdatesignatures?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -76,7 +78,7 @@ public class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBu
         }
     }
     /**
-     * Invoke action windowsDefenderUpdateSignatures
+     * Not yet documented
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -84,7 +86,7 @@ public class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action windowsDefenderUpdateSignatures
+     * Not yet documented
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

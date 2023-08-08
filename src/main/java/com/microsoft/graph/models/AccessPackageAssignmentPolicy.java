@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
-     * Access package containing this policy. Read-only.
+     * Access package containing this policy. Read-only.  Supports $expand.
      */
     private AccessPackage accessPackage;
     /**
@@ -29,7 +29,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The customExtensionStageSettings property
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      */
     private java.util.List<CustomExtensionStageSetting> customExtensionStageSettings;
     /**
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return new AccessPackageAssignmentPolicy();
     }
     /**
-     * Gets the accessPackage property value. Access package containing this policy. Read-only.
+     * Gets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
      * @return a accessPackage
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * Gets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return a customExtensionStageSetting
      */
     @javax.annotation.Nullable
@@ -256,7 +256,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("specificAllowedTargets", this.getSpecificAllowedTargets());
     }
     /**
-     * Sets the accessPackage property value. Access package containing this policy. Read-only.
+     * Sets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
@@ -301,7 +301,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the customExtensionStageSettings property value. The customExtensionStageSettings property
+     * Sets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @param value Value to set for the customExtensionStageSettings property.
      * @return a void
      */

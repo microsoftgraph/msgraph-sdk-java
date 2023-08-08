@@ -64,7 +64,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @return a CompletableFuture of driveCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get() {
@@ -84,7 +84,7 @@ public class DrivesRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/drive-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

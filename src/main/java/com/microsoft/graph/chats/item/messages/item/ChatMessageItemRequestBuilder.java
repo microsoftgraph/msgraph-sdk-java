@@ -2,8 +2,10 @@ package com.microsoft.graph.chats.item.messages.item;
 
 import com.microsoft.graph.chats.item.messages.item.hostedcontents.HostedContentsRequestBuilder;
 import com.microsoft.graph.chats.item.messages.item.replies.RepliesRequestBuilder;
+import com.microsoft.graph.chats.item.messages.item.setreaction.SetReactionRequestBuilder;
 import com.microsoft.graph.chats.item.messages.item.softdelete.SoftDeleteRequestBuilder;
 import com.microsoft.graph.chats.item.messages.item.undosoftdelete.UndoSoftDeleteRequestBuilder;
+import com.microsoft.graph.chats.item.messages.item.unsetreaction.UnsetReactionRequestBuilder;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -39,6 +41,13 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return new RepliesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the setReaction method.
+     */
+    @javax.annotation.Nonnull
+    public SetReactionRequestBuilder setReaction() {
+        return new SetReactionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the softDelete method.
      */
     @javax.annotation.Nonnull
@@ -51,6 +60,13 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public UndoSoftDeleteRequestBuilder undoSoftDelete() {
         return new UndoSoftDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unsetReaction method.
+     */
+    @javax.annotation.Nonnull
+    public UnsetReactionRequestBuilder unsetReaction() {
+        return new UnsetReactionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ChatMessageItemRequestBuilder and sets the default values.
@@ -112,7 +128,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single message or a message reply in a channel or a chat.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> get() {
@@ -132,7 +148,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single message or a message reply in a channel or a chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of chatMessage
-     * @see <a href="https://docs.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

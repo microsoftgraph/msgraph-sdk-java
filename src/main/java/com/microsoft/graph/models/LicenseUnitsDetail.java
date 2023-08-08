@@ -17,7 +17,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     private Integer enabled;
     /**
-     * The lockedOut property
+     * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      */
     private Integer lockedOut;
     /**
@@ -81,7 +81,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lockedOut property value. The lockedOut property
+     * Gets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         this.enabled = value;
     }
     /**
-     * Sets the lockedOut property value. The lockedOut property
+     * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
      * @return a void
      */

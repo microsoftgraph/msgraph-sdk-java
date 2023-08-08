@@ -65,7 +65,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new custom unifiedRoleDefinition object. This feature requires an Azure AD Premium P1 or P2 license.
      * @param body The request body
      * @return a CompletableFuture of unifiedRoleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> post(@javax.annotation.Nonnull final UnifiedRoleDefinition body) {
@@ -126,7 +126,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> post(@javax.annotation.Nonnull final UnifiedRoleDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

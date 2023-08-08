@@ -126,7 +126,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes the chart object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -146,7 +146,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Deletes the chart object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -165,7 +165,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of chart object.
      * @return a CompletableFuture of workbookChart
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> get() {
@@ -185,7 +185,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of chart object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChart
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -241,7 +241,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of chart object.
      * @param body The request body
      * @return a CompletableFuture of workbookChart
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> patch(@javax.annotation.Nonnull final WorkbookChart body) {
@@ -262,7 +262,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookChart
-     * @see <a href="https://docs.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> patch(@javax.annotation.Nonnull final WorkbookChart body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

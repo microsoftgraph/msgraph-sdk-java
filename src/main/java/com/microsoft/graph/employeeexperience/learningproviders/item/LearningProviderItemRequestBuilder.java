@@ -59,7 +59,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
      * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a learningProvider object.
      * @return a CompletableFuture of learningProvider
-     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> get() {
@@ -118,7 +118,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a learningProvider object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningProvider
-     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a learningProvider object.
      * @param body The request body
      * @return a CompletableFuture of learningProvider
-     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> patch(@javax.annotation.Nonnull final LearningProvider body) {
@@ -159,7 +159,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of learningProvider
-     * @see <a href="https://docs.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LearningProvider> patch(@javax.annotation.Nonnull final LearningProvider body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

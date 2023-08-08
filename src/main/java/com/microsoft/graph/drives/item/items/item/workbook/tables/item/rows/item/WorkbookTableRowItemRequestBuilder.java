@@ -51,7 +51,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes the row from the table.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
      * Deletes the row from the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of tablerow object.
      * @return a CompletableFuture of workbookTableRow
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRow> get() {
@@ -110,7 +110,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of tablerow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableRow
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRow> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of tablerow object.
      * @param body The request body
      * @return a CompletableFuture of workbookTableRow
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRow> patch(@javax.annotation.Nonnull final WorkbookTableRow body) {
@@ -151,7 +151,7 @@ public class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookTableRow
-     * @see <a href="https://docs.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTableRow> patch(@javax.annotation.Nonnull final WorkbookTableRow body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

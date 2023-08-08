@@ -36,11 +36,11 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     private java.util.List<ConnectedOrganization> connectedOrganizations;
     /**
-     * The resourceEnvironments property
+     * A reference to the geolocation environments in which a resource is located.
      */
     private java.util.List<AccessPackageResourceEnvironment> resourceEnvironments;
     /**
-     * The resourceRequests property
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      */
     private java.util.List<AccessPackageResourceRequest> resourceRequests;
     /**
@@ -48,7 +48,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     private java.util.List<AccessPackageResourceRoleScope> resourceRoleScopes;
     /**
-     * The resources property
+     * The resources associated with the catalogs.
      */
     private java.util.List<AccessPackageResource> resources;
     /**
@@ -151,7 +151,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resourceEnvironments property value. The resourceEnvironments property
+     * Gets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.
      * @return a accessPackageResourceEnvironment
      */
     @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.resourceEnvironments;
     }
     /**
-     * Gets the resourceRequests property value. The resourceRequests property
+     * Gets the resourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
      * @return a accessPackageResourceRequest
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.resourceRoleScopes;
     }
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. The resources associated with the catalogs.
      * @return a accessPackageResource
      */
     @javax.annotation.Nullable
@@ -276,7 +276,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.connectedOrganizations = value;
     }
     /**
-     * Sets the resourceEnvironments property value. The resourceEnvironments property
+     * Sets the resourceEnvironments property value. A reference to the geolocation environments in which a resource is located.
      * @param value Value to set for the resourceEnvironments property.
      * @return a void
      */
@@ -285,7 +285,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.resourceEnvironments = value;
     }
     /**
-     * Sets the resourceRequests property value. The resourceRequests property
+     * Sets the resourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
      * @param value Value to set for the resourceRequests property.
      * @return a void
      */
@@ -303,7 +303,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.resourceRoleScopes = value;
     }
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. The resources associated with the catalogs.
      * @param value Value to set for the resources property.
      * @return a void
      */

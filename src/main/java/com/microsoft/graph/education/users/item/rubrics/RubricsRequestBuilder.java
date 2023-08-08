@@ -65,7 +65,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of educationRubric objects.
      * @return a CompletableFuture of educationRubricCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubricCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of educationRubric objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationRubricCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-list-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubricCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
      * Create a new educationRubric object.
      * @param body The request body
      * @return a CompletableFuture of educationRubric
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubric> post(@javax.annotation.Nonnull final EducationRubric body) {
@@ -126,7 +126,7 @@ public class RubricsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationRubric
-     * @see <a href="https://docs.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationRubric> post(@javax.annotation.Nonnull final EducationRubric body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -42,7 +42,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
      * Translate identifiers of Outlook-related resources between formats.
      * @param body The request body
      * @return a CompletableFuture of translateExchangeIdsResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TranslateExchangeIdsResponse> post(@javax.annotation.Nonnull final TranslateExchangeIdsPostRequestBody body) {
@@ -63,7 +63,7 @@ public class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of translateExchangeIdsResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TranslateExchangeIdsResponse> post(@javax.annotation.Nonnull final TranslateExchangeIdsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

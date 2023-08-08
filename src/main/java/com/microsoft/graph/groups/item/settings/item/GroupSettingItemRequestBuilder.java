@@ -80,7 +80,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @return a CompletableFuture of groupSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> get() {
@@ -100,7 +100,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body The request body
      * @return a CompletableFuture of groupSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> patch(@javax.annotation.Nonnull final GroupSetting body) {
@@ -141,7 +141,7 @@ public class GroupSettingItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSetting
-     * @see <a href="https://docs.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupSetting> patch(@javax.annotation.Nonnull final GroupSetting body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

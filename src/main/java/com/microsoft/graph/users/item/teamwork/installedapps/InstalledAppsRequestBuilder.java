@@ -65,7 +65,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of apps installed in the personal scope of the specified user.
      * @return a CompletableFuture of userScopeTeamsAppInstallationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of apps installed in the personal scope of the specified user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userScopeTeamsAppInstallationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
      * Install an app in the personal scope of the specified user.
      * @param body The request body
      * @return a CompletableFuture of userScopeTeamsAppInstallation
-     * @see <a href="https://docs.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> post(@javax.annotation.Nonnull final UserScopeTeamsAppInstallation body) {
@@ -126,7 +126,7 @@ public class InstalledAppsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userScopeTeamsAppInstallation
-     * @see <a href="https://docs.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> post(@javax.annotation.Nonnull final UserScopeTeamsAppInstallation body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

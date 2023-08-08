@@ -59,7 +59,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes a todoTaskList object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
      * Deletes a todoTaskList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a todoTaskList object.
      * @return a CompletableFuture of todoTaskList
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> get() {
@@ -118,7 +118,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a todoTaskList object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of todoTaskList
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a todoTaskList object.
      * @param body The request body
      * @return a CompletableFuture of todoTaskList
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> patch(@javax.annotation.Nonnull final TodoTaskList body) {
@@ -159,7 +159,7 @@ public class TodoTaskListItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of todoTaskList
-     * @see <a href="https://docs.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TodoTaskList> patch(@javax.annotation.Nonnull final TodoTaskList body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

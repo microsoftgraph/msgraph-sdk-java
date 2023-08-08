@@ -59,7 +59,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
     /**
      * Deletes an accessReviewScheduleDefinition object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -79,7 +79,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * Deletes an accessReviewScheduleDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
     /**
      * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @return a CompletableFuture of accessReviewScheduleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> get() {
@@ -118,7 +118,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewScheduleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
      * @param body The request body
      * @return a CompletableFuture of accessReviewScheduleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> patch(@javax.annotation.Nonnull final AccessReviewScheduleDefinition body) {
@@ -159,7 +159,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseReques
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewScheduleDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewScheduleDefinition> patch(@javax.annotation.Nonnull final AccessReviewScheduleDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

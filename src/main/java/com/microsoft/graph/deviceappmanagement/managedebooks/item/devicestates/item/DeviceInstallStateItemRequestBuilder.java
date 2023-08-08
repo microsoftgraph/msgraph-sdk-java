@@ -41,8 +41,9 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/deviceStates/{deviceInstallState%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property deviceStates for deviceAppManagement
+     * Deletes a deviceInstallState.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -59,9 +60,10 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceStates for deviceAppManagement
+     * Deletes a deviceInstallState.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -78,8 +80,9 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the deviceInstallState object.
      * @return a CompletableFuture of deviceInstallState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> get() {
@@ -96,9 +99,10 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the deviceInstallState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceInstallState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,9 +119,10 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deviceStates in deviceAppManagement
+     * Update the properties of a deviceInstallState object.
      * @param body The request body
      * @return a CompletableFuture of deviceInstallState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> patch(@javax.annotation.Nonnull final DeviceInstallState body) {
@@ -134,10 +139,11 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Update the navigation property deviceStates in deviceAppManagement
+     * Update the properties of a deviceInstallState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceInstallState
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceInstallState> patch(@javax.annotation.Nonnull final DeviceInstallState body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +161,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Delete navigation property deviceStates for deviceAppManagement
+     * Deletes a deviceInstallState.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -163,7 +169,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deviceStates for deviceAppManagement
+     * Deletes a deviceInstallState.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -182,7 +188,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the deviceInstallState object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -190,7 +196,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the deviceInstallState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +217,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deviceStates in deviceAppManagement
+     * Update the properties of a deviceInstallState object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +226,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deviceStates in deviceAppManagement
+     * Update the properties of a deviceInstallState object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -248,7 +254,7 @@ public class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of installation states for this eBook.
+     * Read properties and relationships of the deviceInstallState object.
      */
     public class GetQueryParameters {
         /**

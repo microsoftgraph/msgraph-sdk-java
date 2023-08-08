@@ -75,7 +75,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes an externalConnection object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -95,7 +95,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Deletes an externalConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an externalConnection object.
      * @return a CompletableFuture of externalConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> get() {
@@ -134,7 +134,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of an externalConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an externalConnection object.
      * @param body The request body
      * @return a CompletableFuture of externalConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> patch(@javax.annotation.Nonnull final ExternalConnection body) {
@@ -175,7 +175,7 @@ public class ExternalConnectionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalConnection
-     * @see <a href="https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalConnection> patch(@javax.annotation.Nonnull final ExternalConnection body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

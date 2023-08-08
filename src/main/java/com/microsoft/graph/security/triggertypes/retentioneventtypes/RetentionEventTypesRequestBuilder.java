@@ -65,7 +65,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the retentionEventType objects and their properties.
      * @return a CompletableFuture of retentionEventTypeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventTypeCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the retentionEventType objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of retentionEventTypeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventTypeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
      * Create a new retentionEventType object.
      * @param body The request body
      * @return a CompletableFuture of retentionEventType
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentioneventtype-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventType> post(@javax.annotation.Nonnull final RetentionEventType body) {
@@ -126,7 +126,7 @@ public class RetentionEventTypesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of retentionEventType
-     * @see <a href="https://docs.microsoft.com/graph/api/security-retentioneventtype-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-retentioneventtype-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionEventType> post(@javax.annotation.Nonnull final RetentionEventType body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

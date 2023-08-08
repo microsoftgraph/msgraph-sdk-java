@@ -80,7 +80,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of an authorizationPolicy object.
      * @return a CompletableFuture of authorizationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> get() {
@@ -100,7 +100,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties of an authorizationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authorizationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an authorizationPolicy object.
      * @param body The request body
      * @return a CompletableFuture of authorizationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authorizationpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authorizationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> patch(@javax.annotation.Nonnull final AuthorizationPolicy body) {
@@ -141,7 +141,7 @@ public class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authorizationPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authorizationpolicy-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authorizationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> patch(@javax.annotation.Nonnull final AuthorizationPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

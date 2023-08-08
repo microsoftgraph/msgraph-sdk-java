@@ -42,7 +42,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
      * Runs the query specified in the request body. Search results are provided in the response.
      * @param body The request body
      * @return a CompletableFuture of queryResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryPostRequestBody body) {
@@ -63,7 +63,7 @@ public class QueryRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of queryResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-query?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -43,7 +43,7 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
      * Create a new version of the workflow object.
      * @param body The request body
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workflow> post(@javax.annotation.Nonnull final CreateNewVersionPostRequestBody body) {
@@ -64,7 +64,7 @@ public class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder exte
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workflow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Workflow> post(@javax.annotation.Nonnull final CreateNewVersionPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

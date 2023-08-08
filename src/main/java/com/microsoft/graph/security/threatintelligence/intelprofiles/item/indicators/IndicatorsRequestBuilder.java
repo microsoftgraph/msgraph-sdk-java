@@ -62,9 +62,9 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/intelProfiles/{intelligenceProfile%2Did}/indicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the **indicators** navigation property of an intelligenceProfile.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicatorCollectionResponse> get() {
@@ -81,10 +81,10 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the **indicators** navigation property of an intelligenceProfile.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of intelligenceProfileIndicatorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicatorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +101,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the **indicators** navigation property of an intelligenceProfile.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the **indicators** navigation property of an intelligenceProfile.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -130,7 +130,7 @@ public class IndicatorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the intelligenceProfileIndicator resources from the **indicators** navigation property of an intelligenceProfile.
+     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
      */
     public class GetQueryParameters {
         /**

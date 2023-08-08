@@ -65,7 +65,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of appManagementPolicy objects.
      * @return a CompletableFuture of appManagementPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of appManagementPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appManagementPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create an appManagementPolicy object.
      * @param body The request body
      * @return a CompletableFuture of appManagementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body) {
@@ -126,7 +126,7 @@ public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appManagementPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

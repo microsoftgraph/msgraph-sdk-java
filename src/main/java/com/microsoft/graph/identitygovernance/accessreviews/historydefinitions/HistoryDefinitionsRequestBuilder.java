@@ -65,7 +65,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @return a CompletableFuture of accessReviewHistoryDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinitionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewHistoryDefinitionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinitionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create a new accessReviewHistoryDefinition object.
      * @param body The request body
      * @return a CompletableFuture of accessReviewHistoryDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinition> post(@javax.annotation.Nonnull final AccessReviewHistoryDefinition body) {
@@ -126,7 +126,7 @@ public class HistoryDefinitionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessReviewHistoryDefinition
-     * @see <a href="https://docs.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewHistoryDefinition> post(@javax.annotation.Nonnull final AccessReviewHistoryDefinition body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

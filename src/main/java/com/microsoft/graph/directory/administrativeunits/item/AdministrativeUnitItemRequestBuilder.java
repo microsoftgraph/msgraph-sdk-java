@@ -67,7 +67,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an administrativeUnit.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -87,7 +87,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an administrativeUnit object.
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get() {
@@ -126,7 +126,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an administrativeUnit object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> patch(@javax.annotation.Nonnull final AdministrativeUnit body) {
@@ -167,7 +167,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of administrativeUnit
-     * @see <a href="https://docs.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> patch(@javax.annotation.Nonnull final AdministrativeUnit body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -63,8 +63,9 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The device configurations.
+     * List properties and relationships of the sharedPCConfiguration objects.
      * @return a CompletableFuture of deviceConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationCollectionResponse> get() {
@@ -81,9 +82,10 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device configurations.
+     * List properties and relationships of the sharedPCConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-sharedpcconfiguration-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,9 +102,10 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to deviceConfigurations for deviceManagement
+     * Create a new androidCustomConfiguration object.
      * @param body The request body
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcustomconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> post(@javax.annotation.Nonnull final DeviceConfiguration body) {
@@ -119,10 +122,11 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create new navigation property to deviceConfigurations for deviceManagement
+     * Create a new androidCustomConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceConfiguration
+     * @see <a href="https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcustomconfiguration-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> post(@javax.annotation.Nonnull final DeviceConfiguration body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * The device configurations.
+     * List properties and relationships of the sharedPCConfiguration objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -148,7 +152,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The device configurations.
+     * List properties and relationships of the sharedPCConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +173,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceConfigurations for deviceManagement
+     * Create a new androidCustomConfiguration object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +182,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceConfigurations for deviceManagement
+     * Create a new androidCustomConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +205,7 @@ public class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The device configurations.
+     * List properties and relationships of the sharedPCConfiguration objects.
      */
     public class GetQueryParameters {
         /**

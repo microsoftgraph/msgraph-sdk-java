@@ -39,9 +39,9 @@ public class CheckoutRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/checkout", rawUrl);
     }
     /**
-     * Check out a **driveItem** resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
@@ -58,10 +58,10 @@ public class CheckoutRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Check out a **driveItem** resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-checkout?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +78,7 @@ public class CheckoutRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Check out a **driveItem** resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class CheckoutRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Check out a **driveItem** resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
+     * Check out a driveItem resource to prevent others from editing the document, and prevent your changes from being visible until the documented is checked in.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

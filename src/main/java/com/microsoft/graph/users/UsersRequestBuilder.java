@@ -97,7 +97,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of user objects.
      * @return a CompletableFuture of userCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get() {
@@ -117,7 +117,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of user objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -137,7 +137,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.
      * @param body The request body
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> post(@javax.annotation.Nonnull final User body) {
@@ -158,7 +158,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
-     * @see <a href="https://docs.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> post(@javax.annotation.Nonnull final User body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

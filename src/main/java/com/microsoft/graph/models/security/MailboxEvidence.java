@@ -26,6 +26,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nullable
     public MailboxEvidence() {
         super();
+        this.setOdataType("#microsoft.graph.security.mailboxEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

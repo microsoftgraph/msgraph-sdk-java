@@ -73,7 +73,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of assignment objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @return a CompletableFuture of educationAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of assignment objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application executing with application permissions can see all assignment objects for the class. Students can only see assignments that are assigned to them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignmentCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-list-assignments?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new assignment. Only teachers in a class can create an assignment. Assignments start in the Draft state, which means that students will not see the assignment until publication.
      * @param body The request body
      * @return a CompletableFuture of educationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post-assignment?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-assignment?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post(@javax.annotation.Nonnull final EducationAssignment body) {
@@ -134,7 +134,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationAssignment
-     * @see <a href="https://docs.microsoft.com/graph/api/educationclass-post-assignment?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-post-assignment?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignment> post(@javax.annotation.Nonnull final EducationAssignment body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
