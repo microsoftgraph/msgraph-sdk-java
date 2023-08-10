@@ -36,7 +36,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Activity Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  SUpports $filter (eq, gt, lt) and orderby.
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Change Id.
-     * Unique ID of this change in this cycle.
+     * Unique ID of this change in this cycle. Supports $filter (eq, contains).
      */
     @SerializedName(value = "changeId", alternate = {"ChangeId"})
     @Expose
@@ -54,7 +54,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Cycle Id.
-     * Unique ID per job iteration.
+     * Unique ID per job iteration. Supports $filter (eq, contains).
      */
     @SerializedName(value = "cycleId", alternate = {"CycleId"})
     @Expose
@@ -72,7 +72,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Initiated By.
-     * Details of who initiated this provisioning.
+     * Details of who initiated this provisioning. Supports $filter (eq, contains).
      */
     @SerializedName(value = "initiatedBy", alternate = {"InitiatedBy"})
     @Expose
@@ -81,7 +81,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Job Id.
-     * The unique ID for the whole provisioning job.
+     * The unique ID for the whole provisioning job. Supports $filter (eq, contains).
      */
     @SerializedName(value = "jobId", alternate = {"JobId"})
     @Expose
@@ -99,7 +99,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Action.
-     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
      */
     @SerializedName(value = "provisioningAction", alternate = {"ProvisioningAction"})
     @Expose
@@ -126,7 +126,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Service Principal.
-     * Represents the service principal used for provisioning.
+     * Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
      */
     @SerializedName(value = "servicePrincipal", alternate = {"ServicePrincipal"})
     @Expose
@@ -135,7 +135,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Source Identity.
-     * Details of source object being provisioned.
+     * Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      */
     @SerializedName(value = "sourceIdentity", alternate = {"SourceIdentity"})
     @Expose
@@ -144,7 +144,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Source System.
-     * Details of source system of the object being provisioned.
+     * Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      */
     @SerializedName(value = "sourceSystem", alternate = {"SourceSystem"})
     @Expose
@@ -153,7 +153,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Target Identity.
-     * Details of target object being provisioned.
+     * Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      */
     @SerializedName(value = "targetIdentity", alternate = {"TargetIdentity"})
     @Expose
@@ -162,7 +162,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Target System.
-     * Details of target system of the object being provisioned.
+     * Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      */
     @SerializedName(value = "targetSystem", alternate = {"TargetSystem"})
     @Expose
@@ -171,7 +171,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Tenant Id.
-     * Unique Azure AD tenant ID.
+     * Unique Azure AD tenant ID. Supports $filter (eq, contains).
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

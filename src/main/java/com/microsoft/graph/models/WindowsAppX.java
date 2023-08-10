@@ -83,7 +83,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system. Valid values for a WindowsAppX app include v8_0, v8_1 and v10_0. If the app is a bundle, the minimum supported OS has to be at least v8_1.
+     * The value for the minimum applicable operating system. Valid values for a WindowsAppX app include v80, v81 and v100. If the app is a bundle, the minimum supported OS has to be at least v81.
      */
     @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose

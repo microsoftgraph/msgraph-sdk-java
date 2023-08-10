@@ -27,7 +27,7 @@ public class RegistryValueEvidence extends AlertEvidence implements IJsonBackedO
 
     /**
      * The Mde Device Id.
-     * 
+     * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
      */
     @SerializedName(value = "mdeDeviceId", alternate = {"MdeDeviceId"})
     @Expose

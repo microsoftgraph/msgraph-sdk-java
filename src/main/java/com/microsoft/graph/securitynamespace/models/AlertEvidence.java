@@ -52,7 +52,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Detailed Roles.
-     * 
+     * Detailed description of the entity role/s in an alert. Values are free-form.
      */
     @SerializedName(value = "detailedRoles", alternate = {"DetailedRoles"})
     @Expose
@@ -79,7 +79,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
+     * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
@@ -88,7 +88,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
+     * Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose

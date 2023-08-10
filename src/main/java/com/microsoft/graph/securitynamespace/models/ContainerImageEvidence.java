@@ -29,7 +29,7 @@ public class ContainerImageEvidence extends AlertEvidence implements IJsonBacked
 
     /**
      * The Digest Image.
-     * 
+     * The digest image entity, in case this is a tag image.
      */
     @SerializedName(value = "digestImage", alternate = {"DigestImage"})
     @Expose
@@ -38,7 +38,7 @@ public class ContainerImageEvidence extends AlertEvidence implements IJsonBacked
 
     /**
      * The Image Id.
-     * 
+     * The unique identifier for the container image entity.
      */
     @SerializedName(value = "imageId", alternate = {"ImageId"})
     @Expose
@@ -47,7 +47,7 @@ public class ContainerImageEvidence extends AlertEvidence implements IJsonBacked
 
     /**
      * The Registry.
-     * 
+     * The container registry for this image.
      */
     @SerializedName(value = "registry", alternate = {"Registry"})
     @Expose

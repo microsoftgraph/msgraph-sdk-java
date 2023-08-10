@@ -76,7 +76,7 @@ public class DefaultUserRolePermissions implements IJsonBackedObject {
 
     /**
      * The Allowed To Read Other Users.
-     * Indicates whether the default user role can read other users.
+     * Indicates whether the default user role can read other users. DO NOT SET THIS VALUE TO false.
      */
     @SerializedName(value = "allowedToReadOtherUsers", alternate = {"AllowedToReadOtherUsers"})
     @Expose

@@ -103,7 +103,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Environments.
-     * 
+     * A reference to the geolocation environments in which a resource is located.
      */
     @SerializedName(value = "resourceEnvironments", alternate = {"ResourceEnvironments"})
     @Expose
@@ -112,7 +112,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Requests.
-     * 
+     * Represents a request to add or remove a resource to or from a catalog respectively.
      */
     @SerializedName(value = "resourceRequests", alternate = {"ResourceRequests"})
     @Expose
@@ -130,7 +130,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources.
-     * 
+     * The resources associated with the catalogs.
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose

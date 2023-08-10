@@ -18,6 +18,7 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.MeetingChatHistoryDefaultMode;
 import com.microsoft.graph.models.WatermarkProtectionValues;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
@@ -72,6 +73,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public MeetingChatMode allowMeetingChat;
+
+    /**
+     * The Allow Participants To Change Name.
+     * Specifies if participants are allowed to rename themselves in an instance of the meeting.
+     */
+    @SerializedName(value = "allowParticipantsToChangeName", alternate = {"AllowParticipantsToChangeName"})
+    @Expose
+	@Nullable
+    public Boolean allowParticipantsToChangeName;
 
     /**
      * The Allow Teamwork Reactions.
@@ -207,6 +217,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean recordAutomatically;
+
+    /**
+     * The Share Meeting Chat History Default.
+     * Specifies whether meeting chat history is shared with participants. Possible values are: all, none, unknownFutureValue.
+     */
+    @SerializedName(value = "shareMeetingChatHistoryDefault", alternate = {"ShareMeetingChatHistoryDefault"})
+    @Expose
+	@Nullable
+    public MeetingChatHistoryDefaultMode shareMeetingChatHistoryDefault;
 
     /**
      * The Start Date Time.

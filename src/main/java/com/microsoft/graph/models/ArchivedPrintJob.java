@@ -112,6 +112,15 @@ public class ArchivedPrintJob implements IJsonBackedObject {
     public String printerId;
 
     /**
+     * The Printer Name.
+     * The printer name that the job was queued for. Read-only.
+     */
+    @SerializedName(value = "printerName", alternate = {"PrinterName"})
+    @Expose
+	@Nullable
+    public String printerName;
+
+    /**
      * The Processing State.
      * The print job's final processing state. Read-only.
      */

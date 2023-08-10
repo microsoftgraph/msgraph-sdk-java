@@ -17,6 +17,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.ChatMessageCollectionPage;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage;
 import com.microsoft.graph.requests.PinnedChatMessageInfoCollectionPage;
 import com.microsoft.graph.requests.TeamsTabCollectionPage;
 
@@ -144,6 +145,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.ChatMessageCollectionPage messages;
 
     /**
+     * The Permission Grants.
+     * 
+     */
+    @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage permissionGrants;
+
+    /**
      * The Pinned Messages.
      * A collection of all the pinned messages in the chat. Nullable.
      */
@@ -181,6 +191,10 @@ public class Chat extends Entity implements IJsonBackedObject {
 
         if (json.has("messages")) {
             messages = serializer.deserializeObject(json.get("messages"), com.microsoft.graph.requests.ChatMessageCollectionPage.class);
+        }
+
+        if (json.has("permissionGrants")) {
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("pinnedMessages")) {

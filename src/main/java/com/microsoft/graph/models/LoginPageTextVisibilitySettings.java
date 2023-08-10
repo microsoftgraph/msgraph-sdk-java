@@ -39,7 +39,7 @@ public class LoginPageTextVisibilitySettings implements IJsonBackedObject {
 
     /**
      * The Hide Account Reset Credentials.
-     * 
+     * Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      */
     @SerializedName(value = "hideAccountResetCredentials", alternate = {"HideAccountResetCredentials"})
     @Expose
@@ -48,7 +48,7 @@ public class LoginPageTextVisibilitySettings implements IJsonBackedObject {
 
     /**
      * The Hide Cannot Access Your Account.
-     * 
+     * Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      */
     @SerializedName(value = "hideCannotAccessYourAccount", alternate = {"HideCannotAccessYourAccount"})
     @Expose
@@ -57,7 +57,7 @@ public class LoginPageTextVisibilitySettings implements IJsonBackedObject {
 
     /**
      * The Hide Forgot My Password.
-     * 
+     * Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      */
     @SerializedName(value = "hideForgotMyPassword", alternate = {"HideForgotMyPassword"})
     @Expose
@@ -66,7 +66,7 @@ public class LoginPageTextVisibilitySettings implements IJsonBackedObject {
 
     /**
      * The Hide Privacy And Cookies.
-     * 
+     * Option to hide the 'Privacy &amp; Cookies' hyperlink in the footer.
      */
     @SerializedName(value = "hidePrivacyAndCookies", alternate = {"HidePrivacyAndCookies"})
     @Expose
@@ -75,7 +75,7 @@ public class LoginPageTextVisibilitySettings implements IJsonBackedObject {
 
     /**
      * The Hide Reset It Now.
-     * 
+     * Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      */
     @SerializedName(value = "hideResetItNow", alternate = {"HideResetItNow"})
     @Expose
@@ -84,7 +84,7 @@ public class LoginPageTextVisibilitySettings implements IJsonBackedObject {
 
     /**
      * The Hide Terms Of Use.
-     * 
+     * Option to hide the 'Terms of Use' hyperlink in the footer.
      */
     @SerializedName(value = "hideTermsOfUse", alternate = {"HideTermsOfUse"})
     @Expose

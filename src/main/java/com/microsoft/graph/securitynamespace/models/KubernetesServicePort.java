@@ -40,7 +40,7 @@ public class KubernetesServicePort implements IJsonBackedObject {
 
     /**
      * The App Protocol.
-     * 
+     * The application protocol for this port.
      */
     @SerializedName(value = "appProtocol", alternate = {"AppProtocol"})
     @Expose
@@ -49,7 +49,7 @@ public class KubernetesServicePort implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of this port within the service.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -58,7 +58,7 @@ public class KubernetesServicePort implements IJsonBackedObject {
 
     /**
      * The Node Port.
-     * 
+     * The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
      */
     @SerializedName(value = "nodePort", alternate = {"NodePort"})
     @Expose
@@ -67,7 +67,7 @@ public class KubernetesServicePort implements IJsonBackedObject {
 
     /**
      * The Port.
-     * 
+     * The port that this service exposes.
      */
     @SerializedName(value = "port", alternate = {"Port"})
     @Expose
@@ -76,7 +76,7 @@ public class KubernetesServicePort implements IJsonBackedObject {
 
     /**
      * The Protocol.
-     * 
+     * The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      */
     @SerializedName(value = "protocol", alternate = {"Protocol"})
     @Expose
@@ -85,7 +85,7 @@ public class KubernetesServicePort implements IJsonBackedObject {
 
     /**
      * The Target Port.
-     * 
+     * The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
      */
     @SerializedName(value = "targetPort", alternate = {"TargetPort"})
     @Expose

@@ -28,7 +28,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Name.
-     * 
+     * The secret name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -37,7 +37,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Namespace.
-     * 
+     * The secret namespace.
      */
     @SerializedName(value = "namespace", alternate = {"Namespace"})
     @Expose
@@ -46,7 +46,7 @@ public class KubernetesSecretEvidence extends AlertEvidence implements IJsonBack
 
     /**
      * The Secret Type.
-     * 
+     * The secret type can include both built-in types and custom ones. Examples of built-in types are: Opaque, kubernetes.io/service-account-token, kubernetes.io/dockercfg, kubernetes.io/dockerconfigjson, kubernetes.io/basic-auth, kubernetes.io/ssh-auth, kubernetes.io/tls, bootstrap.kubernetes.io/token.
      */
     @SerializedName(value = "secretType", alternate = {"SecretType"})
     @Expose

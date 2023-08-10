@@ -68,7 +68,7 @@ public class TeleconferenceDeviceQuality implements IJsonBackedObject {
 
     /**
      * The Cloud Service Instance Name.
-     * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
+     * The Azure deployed cloud service instance name, such as FrontEndIN3.
      */
     @SerializedName(value = "cloudServiceInstanceName", alternate = {"CloudServiceInstanceName"})
     @Expose

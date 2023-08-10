@@ -29,7 +29,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements IJson
 
     /**
      * The Labels.
-     * 
+     * The labels for the Kubernetes pod.
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
@@ -38,7 +38,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements IJson
 
     /**
      * The Name.
-     * 
+     * The controller name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -47,7 +47,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements IJson
 
     /**
      * The Namespace.
-     * 
+     * The service account namespace.
      */
     @SerializedName(value = "namespace", alternate = {"Namespace"})
     @Expose
@@ -56,7 +56,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements IJson
 
     /**
      * The Type.
-     * 
+     * The controller type.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

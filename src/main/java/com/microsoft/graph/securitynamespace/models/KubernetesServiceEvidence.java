@@ -33,7 +33,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Cluster IP.
-     * 
+     * The service cluster IP.
      */
     @SerializedName(value = "clusterIP", alternate = {"ClusterIP"})
     @Expose
@@ -42,7 +42,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The External IPs.
-     * 
+     * The service external IPs.
      */
     @SerializedName(value = "externalIPs", alternate = {"ExternalIPs"})
     @Expose
@@ -51,7 +51,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Labels.
-     * 
+     * The service labels.
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
@@ -60,7 +60,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Name.
-     * 
+     * The service name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -69,7 +69,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Namespace.
-     * 
+     * The service namespace.
      */
     @SerializedName(value = "namespace", alternate = {"Namespace"})
     @Expose
@@ -78,7 +78,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Selector.
-     * 
+     * The service selector.
      */
     @SerializedName(value = "selector", alternate = {"Selector"})
     @Expose
@@ -87,7 +87,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Service Ports.
-     * 
+     * The list of service ports.
      */
     @SerializedName(value = "servicePorts", alternate = {"ServicePorts"})
     @Expose
@@ -96,7 +96,7 @@ public class KubernetesServiceEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Service Type.
-     * 
+     * The service type. Possible values are: unknown, clusterIP, externalName, nodePort, loadBalancer, unknownFutureValue.
      */
     @SerializedName(value = "serviceType", alternate = {"ServiceType"})
     @Expose

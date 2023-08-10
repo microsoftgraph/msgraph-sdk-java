@@ -29,7 +29,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements IJsonB
 
     /**
      * The Cluster.
-     * 
+     * The namespace cluster.
      */
     @SerializedName(value = "cluster", alternate = {"Cluster"})
     @Expose
@@ -38,7 +38,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements IJsonB
 
     /**
      * The Labels.
-     * 
+     * The labels for the Kubernetes pod.
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
@@ -47,7 +47,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements IJsonB
 
     /**
      * The Name.
-     * 
+     * The namespace name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

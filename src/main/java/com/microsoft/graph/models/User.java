@@ -13,6 +13,7 @@ import com.microsoft.graph.models.SignInActivity;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AssignedPlan;
 import com.microsoft.graph.models.AuthorizationInfo;
+import com.microsoft.graph.models.CustomSecurityAttributeValue;
 import com.microsoft.graph.models.EmployeeOrgData;
 import com.microsoft.graph.models.ObjectIdentity;
 import com.microsoft.graph.models.LicenseAssignmentState;
@@ -188,6 +189,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String creationType;
+
+    /**
+     * The Custom Security Attributes.
+     * 
+     */
+    @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
+    @Expose
+	@Nullable
+    public CustomSecurityAttributeValue customSecurityAttributes;
 
     /**
      * The Department.
@@ -497,7 +507,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
+     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values).
      */
     @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose

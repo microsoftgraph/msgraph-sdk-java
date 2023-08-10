@@ -28,7 +28,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Cloud Resource.
-     * 
+     * The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
      */
     @SerializedName(value = "cloudResource", alternate = {"CloudResource"})
     @Expose
@@ -37,7 +37,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Distribution.
-     * 
+     * The distribution type of the cluster.
      */
     @SerializedName(value = "distribution", alternate = {"Distribution"})
     @Expose
@@ -46,7 +46,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Name.
-     * 
+     * The cluster name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -55,7 +55,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Platform.
-     * 
+     * The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
@@ -64,7 +64,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements IJsonBac
 
     /**
      * The Version.
-     * 
+     * The kubernetes version of the cluster.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

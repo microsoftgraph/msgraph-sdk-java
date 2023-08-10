@@ -30,7 +30,7 @@ public class ContainerEvidence extends AlertEvidence implements IJsonBackedObjec
 
     /**
      * The Args.
-     * 
+     * The list of arguments.
      */
     @SerializedName(value = "args", alternate = {"Args"})
     @Expose
@@ -39,7 +39,7 @@ public class ContainerEvidence extends AlertEvidence implements IJsonBackedObjec
 
     /**
      * The Command.
-     * 
+     * The list of commands.
      */
     @SerializedName(value = "command", alternate = {"Command"})
     @Expose
@@ -48,7 +48,7 @@ public class ContainerEvidence extends AlertEvidence implements IJsonBackedObjec
 
     /**
      * The Container Id.
-     * 
+     * The container ID.
      */
     @SerializedName(value = "containerId", alternate = {"ContainerId"})
     @Expose
@@ -57,7 +57,7 @@ public class ContainerEvidence extends AlertEvidence implements IJsonBackedObjec
 
     /**
      * The Image.
-     * 
+     * The image used to run the container.
      */
     @SerializedName(value = "image", alternate = {"Image"})
     @Expose
@@ -66,7 +66,7 @@ public class ContainerEvidence extends AlertEvidence implements IJsonBackedObjec
 
     /**
      * The Is Privileged.
-     * 
+     * The privileged status.
      */
     @SerializedName(value = "isPrivileged", alternate = {"IsPrivileged"})
     @Expose
@@ -75,7 +75,7 @@ public class ContainerEvidence extends AlertEvidence implements IJsonBackedObjec
 
     /**
      * The Name.
-     * 
+     * The container name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -84,7 +84,7 @@ public class ContainerEvidence extends AlertEvidence implements IJsonBackedObjec
 
     /**
      * The Pod.
-     * 
+     * The pod this container belongs to.
      */
     @SerializedName(value = "pod", alternate = {"Pod"})
     @Expose
